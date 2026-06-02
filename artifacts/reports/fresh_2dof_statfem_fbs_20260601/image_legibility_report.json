@@ -252,7 +252,7 @@
       "figure": "figures/bayes_parameter_update.png",
       "width_px": 2210,
       "height_px": 1360,
-      "text_count": 85,
+      "text_count": 82,
       "min_font_pt_required": 7.0,
       "min_font_pt_observed": 7.0,
       "text_heavy": false,
@@ -274,7 +274,7 @@
       "figure": "figures/parameter_posterior_samples.png",
       "width_px": 2210,
       "height_px": 1360,
-      "text_count": 81,
+      "text_count": 80,
       "min_font_pt_required": 7.0,
       "min_font_pt_observed": 7.0,
       "text_heavy": false,
@@ -283,13 +283,13 @@
         "1.2",
         "100",
         "1.2",
-        "0.10"
+        "\u22120.02"
       ],
       "plain_math_text_examples": [],
       "overlap_examples": [],
       "issues": [],
       "warnings": [
-        "5 edge text/tick labels appear near the image boundary"
+        "6 edge text/tick labels appear near the image boundary"
       ],
       "pass": true
     },
@@ -297,7 +297,7 @@
       "figure": "figures/prior_predictive_vs_data.png",
       "width_px": 2210,
       "height_px": 1360,
-      "text_count": 74,
+      "text_count": 78,
       "min_font_pt_required": 7.0,
       "min_font_pt_observed": 7.0,
       "text_heavy": false,
@@ -337,6 +337,65 @@
       "warnings": [
         "7 edge text/tick labels appear near the image boundary"
       ],
+      "pass": true
+    },
+    {
+      "figure": "figures/full_vs_peak_feature_likelihood_comparison.png",
+      "width_px": 2295,
+      "height_px": 1530,
+      "text_count": 81,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "0.040",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{-13}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "4 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/peak_feature_mapping_benchmark.png",
+      "width_px": 2125,
+      "height_px": 1360,
+      "text_count": 99,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "70",
+        "100",
+        "70",
+        "100"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "4 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/peak_feature_sensitivity_matrix.png",
+      "width_px": 2210,
+      "height_px": 850,
+      "text_count": 95,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [],
       "pass": true
     },
     {

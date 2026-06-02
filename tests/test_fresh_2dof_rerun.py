@@ -29,6 +29,9 @@ def main() -> int:
         "figures/parameter_posterior_samples.png",
         "figures/prior_predictive_vs_data.png",
         "figures/posterior_predictive_spectra.png",
+        "figures/full_vs_peak_feature_likelihood_comparison.png",
+        "figures/peak_feature_mapping_benchmark.png",
+        "figures/peak_feature_sensitivity_matrix.png",
         "figures/sampler_diagnostics.png",
         "figures/qoi_samples.png",
         "figures/sensitivity_qoi.png",
@@ -45,6 +48,8 @@ def main() -> int:
         "fresh_2dof_dataset.json",
         "posterior_summary.json",
         "bayes_update_summary.json",
+        "peak_feature_likelihood_summary.json",
+        "peak_feature_mapping_benchmark.json",
         "sensitivity_summary.json",
         "reference_comparison.json",
         "image_legibility_report.json",
@@ -80,6 +85,8 @@ def main() -> int:
         "StatFEM-style noise/discrepancy model",
         "Central methodology",
         "Prior variance assumptions",
+        "MC prior histogram",
+        "analytic prior density",
         "Likelihood formulation",
         "not only resonance peak locations or magnitudes",
         "## Method Summary",
@@ -88,6 +95,11 @@ def main() -> int:
         "Fixed assumptions",
         "Not inferred",
         "Specific likelihood function",
+        "## Whole FRF vs Peak-Feature Likelihood Comparison",
+        "peak-feature likelihood",
+        "## Peak/Notch Feature Mapping Benchmark",
+        "predicted transfer-function feature",
+        "not directly compared with the true natural frequency",
         "Image legibility QA",
     ]
     missing_snippets = [snippet for snippet in required_snippets if snippet not in report_text]
@@ -218,7 +230,16 @@ def main() -> int:
         bayes.get("prior_model", {}).get("natural_frequency_prior", {}).get("sigma_log_frequency") == 0.09
         and bayes.get("prior_model", {}).get("damping_prior", {}).get("sigma_log_damping_ratio") == 0.35
         and bayes.get("likelihood_formulation", {}).get("uses_whole_frf_not_peak_summary") is True
+        and bayes.get("prior_visualization", {}).get("analytic_prior_density_plotted") is True
+        and bayes.get("prior_visualization", {}).get("mc_prior_histogram_plotted") is True
+        and int(bayes.get("prior_visualization", {}).get("mc_prior_histogram_samples", 0)) >= 50000
+        and int(bayes.get("prior_visualization", {}).get("prior_predictive_mc_samples", 0)) >= 3000
+        and bayes.get("prior_visualization", {}).get("prior_predictive_quantiles_smoothed_for_display") is True
+        and float(bayes.get("prior_visualization", {}).get("predictive_band_smoothing_sigma_points", 0.0)) > 0.0
         and "Likelihood formulation" in report_text
+        and "MC prior histogram" in report_text
+        and "analytic prior density" in report_text
+        and "smoothed MC predictive summaries" in report_text
         and "not only resonance peak locations or magnitudes" in report_text
     )
     method_summary_documented = (
@@ -229,6 +250,31 @@ def main() -> int:
         and "Not inferred" in report_text
         and "Specific likelihood function" in report_text
         and (OUT_DIR / "figures/statfem_likelihood_graphical_model_legible.png").exists()
+    )
+    peak_comp_path = OUT_DIR / "peak_feature_likelihood_summary.json"
+    peak_comp = json.loads(peak_comp_path.read_text()) if peak_comp_path.exists() else {}
+    peak_feature_comparison_present = (
+        bool(peak_comp.get("parameter_comparison"))
+        and bool(peak_comp.get("qoi_comparison"))
+        and peak_comp.get("feature_likelihood_assumptions", {}).get("description", "").startswith("Lossy comparison")
+        and (OUT_DIR / "figures/full_vs_peak_feature_likelihood_comparison.png").exists()
+        and "## Whole FRF vs Peak-Feature Likelihood Comparison" in report_text
+        and "peak-feature likelihood" in report_text
+    )
+    feature_benchmark_path = OUT_DIR / "peak_feature_mapping_benchmark.json"
+    feature_benchmark = json.loads(feature_benchmark_path.read_text()) if feature_benchmark_path.exists() else {}
+    feature_rows = feature_benchmark.get("feature_rows", {})
+    peak_feature_mapping_benchmark_present = (
+        feature_benchmark.get("description", "").startswith("Benchmark of feature likelihood mapping")
+        and bool(feature_rows)
+        and feature_rows.get("ch1_dome_notch", {}).get("interpretation") == "direct structural feature"
+        and feature_rows.get("ch2_primary_notch", {}).get("structural_frequency_mix") is True
+        and feature_rows.get("ch3_tray_notch", {}).get("structural_frequency_mix") is True
+        and feature_rows.get("ch5_response_psd_peak", {}).get("force_confounded") is True
+        and (OUT_DIR / "figures/peak_feature_mapping_benchmark.png").exists()
+        and (OUT_DIR / "figures/peak_feature_sensitivity_matrix.png").exists()
+        and "## Peak/Notch Feature Mapping Benchmark" in report_text
+        and "not directly compared with the true natural frequency" in report_text
     )
     image_legibility_path = OUT_DIR / "image_legibility_report.json"
     image_legibility = json.loads(image_legibility_path.read_text()) if image_legibility_path.exists() else {}
@@ -260,6 +306,8 @@ def main() -> int:
         "statfem_noise_model_documented": statfem_noise_documented,
         "prior_likelihood_methodology_documented": prior_likelihood_methodology_documented,
         "method_summary_documented": method_summary_documented,
+        "peak_feature_likelihood_comparison_present": peak_feature_comparison_present,
+        "peak_feature_mapping_benchmark_present": peak_feature_mapping_benchmark_present,
         "image_legibility_report_pass": image_legibility_pass,
         "checker_status_and_limitations_included": "## Checker Status" in report_text
         and "## Limitations" in report_text,

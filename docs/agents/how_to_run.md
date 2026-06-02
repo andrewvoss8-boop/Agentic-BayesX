@@ -53,3 +53,37 @@ Use the role prompts in:
 
 The helper should always say what files it read, what command output supports its claims, and what remains uncertain.
 
+## Competitive Full-Experiment Pressure Test
+
+For the sequential dome/tray vibe-modal-flight research question, the human may choose a pressure-test mode: multiple runners attempt the whole experiment independently. Failure is allowed and useful. The goal is to see what each agent does under pressure, then let reviewers catch mistakes and improve the harness.
+
+Planned runner set:
+
+- Cursor Composer 2.5 runner.
+- Claude Code Opus 4.8 runner.
+- Codex GPT-5.5 runner.
+
+Planned support agents:
+
+- Claude Code Opus 4.8 reader for literature and source review.
+- Claude Code Opus 4.8 reviewer for technical review.
+- Claude Code Opus 4.8 integrity reviewer for copied assets, hidden method swaps, fake success, and weak verification.
+- Claude Code Opus 4.8 checker for reproducing commands and reading reports.
+- Claude Code Opus 4.8 notes role after human approval.
+
+Runner rule: each runner should work in its own branch, worktree, or copied workspace and write its own packet under `artifacts/reports/runner_<tool>_<date>/`. Runners may implement the whole experiment, including NUTS/HMC, PSD-space dB handling, Matérn forcing, build/flight variability, staged tests, plots, and checks. Reviewers should expect mistakes and report them as evidence for better harness rules.
+
+Handoff rule: external tools cannot reliably hand work to each other automatically from this repo alone. Use file handoffs: each runner writes a manifest, report, commands, checker output, and review request. The master reads those files and assigns review agents.
+
+Automation that is reasonable now:
+
+- Claude Code can use project subagents for reader, reviewer, checker, and notes if the extension supports them.
+- The master can generate prompts for Cursor and Codex runners.
+- The master can create per-runner task cards and expected packet paths.
+- The master can aggregate runner reports after the human pastes paths or summaries back.
+
+Automation that is not assumed:
+
+- Claude Code cannot automatically control the Codex app or Cursor Composer unless a local CLI/API bridge is explicitly configured.
+- Model selection is manual in each app unless that app exposes a setting for it.
+- Cross-agent handoff is file-based and human-mediated for this proof of concept.

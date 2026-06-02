@@ -26,6 +26,10 @@ OUT_DIR = ROOT / "artifacts" / "reports" / "fresh_2dof_statfem_fbs_20260601"
 FIG_DIR = OUT_DIR / "figures"
 RUN_SEED = 260601
 G0_M_PER_S2 = 9.80665
+PRIOR_DENSITY_MC_SAMPLES = 80000
+PRIOR_DENSITY_MC_BINS = 90
+PRIOR_PREDICTIVE_MC_SAMPLES = 4000
+PREDICTIVE_BAND_SMOOTHING_SIGMA_POINTS = 1.8
 IMAGE_LEGIBILITY_RESULTS: list[dict[str, Any]] = []
 
 CHANNELS = [
@@ -723,16 +727,133 @@ def make_likelihood(data: dict[str, Any]) -> Any:
     return log_likelihood
 
 
-def run_mcmc(data: dict[str, Any]) -> dict[str, Any]:
+FEATURE_SPECS = [
+    ("ch1_dome_notch", "ch1_dome_only_reciprocal_inertance", "min", "FRF"),
+    ("ch2_primary_notch", "ch2_coupled_primary_reciprocal_inertance", "min", "FRF"),
+    ("ch3_tray_notch", "ch3_coupled_tray_reciprocal_inertance", "min", "FRF"),
+    ("ch4_tray_peak", "ch4_standalone_tray_accel_transmissibility", "max", "FRF"),
+    ("ch5_response_psd_peak", "response_psd", "max", "PSD"),
+]
+
+
+def extremum_feature(freqs_hz: np.ndarray, values: np.ndarray, kind: str) -> dict[str, float]:
+    mag = np.maximum(np.abs(values), 1e-30)
+    score = np.log(mag)
+    idx = int(np.argmax(score) if kind == "max" else np.argmin(score))
+    eta = np.log(freqs_hz)
+    eta_star = float(eta[idx])
+    log_amp = float(score[idx])
+    if 0 < idx < len(freqs_hz) - 1:
+        local_eta = eta[idx - 1 : idx + 2]
+        local_score = score[idx - 1 : idx + 2]
+        a, b, cc = np.polyfit(local_eta, local_score, 2)
+        if abs(a) > 1e-12:
+            candidate = float(-b / (2.0 * a))
+            curvature_ok = (kind == "max" and a < 0.0) or (kind == "min" and a > 0.0)
+            bracket_ok = float(local_eta[0]) <= candidate <= float(local_eta[-1])
+            if curvature_ok and bracket_ok:
+                eta_star = candidate
+                log_amp = float(a * candidate**2 + b * candidate + cc)
+    return {
+        "frequency_hz": float(math.exp(eta_star)),
+        "log_amplitude": log_amp,
+        "amplitude": float(math.exp(log_amp)),
+    }
+
+
+def extract_peak_feature_vector(
+    data: dict[str, Any],
+    p: Params | None = None,
+    observed: bool = False,
+) -> dict[str, dict[str, float | str]]:
     c: Constants = data["constants"]
-    rng = np.random.default_rng(RUN_SEED + 17)
-    log_likelihood = make_likelihood(data)
+    freqs = data["freqs_hz"]
+    flight_freqs = data["flight_freqs_hz"]
+    if observed:
+        channels = data["observed"]
+        response_psd = data["response_psd_observed"]
+    else:
+        if p is None:
+            raise ValueError("A model parameter set is required unless observed=True")
+        channels = frequency_channels(p, c, freqs)
+        response_psd, _ = tray_response_psd_g2_per_hz(p, c, flight_freqs)
+    features: dict[str, dict[str, float | str]] = {}
+    for feature_name, channel_name, kind, source in FEATURE_SPECS:
+        if source == "PSD":
+            feature = extremum_feature(flight_freqs, response_psd, kind)
+        else:
+            feature = extremum_feature(freqs, channels[channel_name], kind)
+        feature["kind"] = kind
+        feature["source"] = source
+        feature["channel"] = channel_name
+        features[feature_name] = feature
+    return features
+
+
+def feature_likelihood_assumptions() -> dict[str, float | str]:
+    return {
+        "description": "Lossy comparison likelihood using only selected peak/notch frequency and magnitude features, not whole curves.",
+        "frf_log_frequency_sigma": 0.06,
+        "frf_log_amplitude_sigma": 0.30,
+        "psd_log_frequency_sigma": 0.06,
+        "psd_log_amplitude_sigma": 0.40,
+        "independence_assumption": "Feature residuals are treated as independent for this comparison artifact.",
+    }
+
+
+def make_peak_feature_likelihood(data: dict[str, Any]) -> Any:
+    c: Constants = data["constants"]
+    observed_features = extract_peak_feature_vector(data, observed=True)
+    assumptions = feature_likelihood_assumptions()
+
+    def normal_logpdf(resid: float, sigma: float) -> float:
+        return -0.5 * ((resid / sigma) ** 2 + math.log(2.0 * math.pi * sigma**2))
+
+    def log_likelihood(x: np.ndarray) -> float:
+        p = unpack_params(x, c)
+        model_features = extract_peak_feature_vector(data, p=p, observed=False)
+        total = 0.0
+        for name, obs in observed_features.items():
+            pred = model_features[name]
+            if obs["source"] == "PSD":
+                sigma_f = float(assumptions["psd_log_frequency_sigma"])
+                sigma_a = float(assumptions["psd_log_amplitude_sigma"])
+            else:
+                sigma_f = float(assumptions["frf_log_frequency_sigma"])
+                sigma_a = float(assumptions["frf_log_amplitude_sigma"])
+            total += normal_logpdf(
+                math.log(float(obs["frequency_hz"]) / max(float(pred["frequency_hz"]), 1e-30)),
+                sigma_f,
+            )
+            total += normal_logpdf(float(obs["log_amplitude"]) - float(pred["log_amplitude"]), sigma_a)
+        return total
+
+    log_likelihood.observed_features = observed_features  # type: ignore[attr-defined]
+    log_likelihood.assumptions = assumptions  # type: ignore[attr-defined]
+    return log_likelihood
+
+
+def run_mcmc(
+    data: dict[str, Any],
+    *,
+    likelihood_kind: str = "full_curve",
+    seed_offset: int = 17,
+    n_steps: int = 3800,
+    burn: int = 1000,
+    thin: int = 5,
+) -> dict[str, Any]:
+    c: Constants = data["constants"]
+    rng = np.random.default_rng(RUN_SEED + seed_offset)
+    if likelihood_kind == "full_curve":
+        log_likelihood = make_likelihood(data)
+        proposal = np.array([0.022, 0.022, 0.050, 0.050, 0.055, 0.024])
+    elif likelihood_kind == "peak_feature":
+        log_likelihood = make_peak_feature_likelihood(data)
+        proposal = np.array([0.035, 0.035, 0.075, 0.075, 0.085, 0.040])
+    else:
+        raise ValueError(f"Unknown likelihood kind {likelihood_kind}")
     x = np.array([0.0, 0.0, math.log(0.018), math.log(0.026), math.log(0.85), math.log(95.0)])
     current = log_prior(x) + log_likelihood(x)
-    n_steps = 3800
-    burn = 1000
-    thin = 5
-    proposal = np.array([0.022, 0.022, 0.050, 0.050, 0.055, 0.024])
     accepted = 0
     traces = np.zeros((n_steps, len(x)))
     logps = np.zeros(n_steps)
@@ -768,6 +889,7 @@ def run_mcmc(data: dict[str, Any]) -> dict[str, Any]:
         "proposal_scales": proposal,
         "physical_samples": phys,
         "qoi_samples": qoi_samples,
+        "likelihood_kind": likelihood_kind,
     }
 
 
@@ -918,6 +1040,9 @@ def write_assumptions_json(data: dict[str, Any]) -> None:
         ("Damping prior standard deviation", 0.35, "natural log damping-ratio ratio", "Synthetic inference choice", "log(zeta/zeta_nom) prior spread for zeta1 and zeta2", "High", "Posterior"),
         ("Damping prior 95% factor", "0.504 to 1.986 before truncation", "damping-ratio multiplier", "Derived from sigma_log_zeta=0.35", "Shows the initial damping uncertainty before truncation to [0.004, 0.090]", "High", "Posterior/report"),
         ("Likelihood data usage", "Whole complex FRFs and whole log response PSD", "categorical", "Implementation fact", "The likelihood uses every frequency point, not only peak locations or magnitudes", "High", "Likelihood/report/checker"),
+        ("Peak-feature comparison frequency scatter", 0.06, "natural log frequency", "Comparison assumption", "Feature-only likelihood needs a peak-picking frequency error model", "High", "Peak-feature comparison"),
+        ("Peak-feature comparison FRF amplitude scatter", 0.30, "natural log amplitude", "Comparison assumption", "Lumped peak/notch amplitude uncertainty for FRF feature residuals", "High", "Peak-feature comparison"),
+        ("Peak-feature comparison PSD amplitude scatter", 0.40, "natural log PSD amplitude", "Comparison assumption", "Lumped response-PSD peak amplitude uncertainty for feature residuals", "High", "Peak-feature comparison"),
         ("Frequency plot x-axis", "log", "categorical", "Harness gate", "Broadband structural dynamics default", "High", "Plots/checker"),
         ("Magnitude scale", "linear", "categorical", "Harness gate", "Preserve units", "High", "Plots/report"),
         ("Coupled assembly boundary", "fixed base; m1-to-base, m2-to-m1 only", "categorical", "Fresh modeling choice", "Avoid double-counting tray stiffness", "High", "Model/contracts"),
@@ -1475,12 +1600,91 @@ def set_parameter_in_transformed(x_base: np.ndarray, view_name: str, value: floa
     return x
 
 
-def normalized_hist_curve(values: np.ndarray, grid: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    counts, edges = np.histogram(values, bins=46, range=(float(grid[0]), float(grid[-1])), density=True)
+def normalized_hist_curve(
+    values: np.ndarray,
+    grid: np.ndarray,
+    bins: int = PRIOR_DENSITY_MC_BINS,
+) -> tuple[np.ndarray, np.ndarray, float]:
+    counts, edges = np.histogram(values, bins=bins, range=(float(grid[0]), float(grid[-1])), density=True)
     centers = 0.5 * (edges[:-1] + edges[1:])
     if np.max(counts) > 0.0:
         counts = counts / np.max(counts)
-    return centers, counts
+    width = float(edges[1] - edges[0])
+    return centers, counts, width
+
+
+def plot_prior_mc_histogram(ax: plt.Axes, values: np.ndarray, grid: np.ndarray, *, label: str) -> None:
+    centers, heights, width = normalized_hist_curve(values, grid)
+    ax.bar(
+        centers,
+        heights,
+        width=width,
+        color="#4f7cac",
+        alpha=0.14,
+        edgecolor="#4f7cac",
+        linewidth=0.25,
+        label=label,
+        zorder=1,
+    )
+
+
+def normalized_kde_curve(values: np.ndarray, grid: np.ndarray) -> np.ndarray:
+    vals = np.asarray(values, dtype=float)
+    vals = vals[np.isfinite(vals)]
+    if len(vals) < 2:
+        return np.zeros_like(grid)
+    std = float(np.std(vals))
+    span = max(float(grid[-1] - grid[0]), 1e-12)
+    bandwidth = max(1.06 * std * (len(vals) ** (-1.0 / 5.0)), span / 250.0)
+    z = (grid[:, None] - vals[None, :]) / bandwidth
+    density = np.exp(-0.5 * z**2).mean(axis=1) / (bandwidth * math.sqrt(2.0 * math.pi))
+    if np.max(density) > 0.0:
+        density = density / np.max(density)
+    return density
+
+
+def analytic_prior_relative_density(view_name: str, grid: np.ndarray, c: Constants) -> np.ndarray:
+    if view_name == "dome_hz":
+        center = c.dome_nominal_hz
+        sigma = 0.09
+        lower = math.sqrt(0.55) * center
+        upper = math.sqrt(1.65) * center
+        density = np.where(
+            (grid >= lower) & (grid <= upper),
+            np.exp(-0.5 * (np.log(grid / center) / sigma) ** 2) / np.maximum(grid, 1e-30),
+            0.0,
+        )
+    elif view_name == "tray_hz":
+        center = c.tray_nominal_hz
+        sigma = 0.09
+        lower = math.sqrt(0.55) * center
+        upper = math.sqrt(1.65) * center
+        density = np.where(
+            (grid >= lower) & (grid <= upper),
+            np.exp(-0.5 * (np.log(grid / center) / sigma) ** 2) / np.maximum(grid, 1e-30),
+            0.0,
+        )
+    elif view_name == "zeta1":
+        center = c.dome_nominal_zeta
+        sigma = 0.35
+        density = np.where(
+            (grid >= 0.004) & (grid <= 0.090),
+            np.exp(-0.5 * (np.log(grid / center) / sigma) ** 2) / np.maximum(grid, 1e-30),
+            0.0,
+        )
+    elif view_name == "zeta2":
+        center = c.tray_nominal_zeta
+        sigma = 0.35
+        density = np.where(
+            (grid >= 0.004) & (grid <= 0.090),
+            np.exp(-0.5 * (np.log(grid / center) / sigma) ** 2) / np.maximum(grid, 1e-30),
+            0.0,
+        )
+    else:
+        raise ValueError(f"Unknown parameter view {view_name}")
+    if np.max(density) > 0.0:
+        density = density / np.max(density)
+    return density
 
 
 def select_even_samples(samples: np.ndarray, n: int) -> np.ndarray:
@@ -1501,7 +1705,7 @@ def summarize_parameter_samples(values: np.ndarray, truth: float, nominal: float
 
 def plot_bayes_parameter_update(data: dict[str, Any], mcmc: dict[str, Any]) -> dict[str, Any]:
     c: Constants = data["constants"]
-    prior_x = draw_prior_transformed(3500)
+    prior_x = draw_prior_transformed(PRIOR_DENSITY_MC_SAMPLES)
     prior_phys = physical_sample_table(prior_x, c)
     posterior_phys = mcmc["physical_samples"]
     log_likelihood = make_likelihood(data)
@@ -1522,16 +1726,17 @@ def plot_bayes_parameter_update(data: dict[str, Any], mcmc: dict[str, Any]) -> d
     for ax, view in zip(axes.flat, PARAMETER_VIEWS):
         name = view["name"]
         grid = parameter_grid(name, c)
-        prior_centers, prior_density = normalized_hist_curve(prior_phys[name], grid)
-        post_centers, post_density = normalized_hist_curve(posterior_phys[name], grid)
+        prior_density = analytic_prior_relative_density(name, grid, c)
+        post_density = normalized_kde_curve(posterior_phys[name], grid)
         log_like = np.asarray([log_likelihood(set_parameter_in_transformed(posterior_mode_x, name, float(v), c)) for v in grid])
         like = np.exp(log_like - np.max(log_like))
         nominal = float(view["nominal"](c))
         truth = float(view["truth"](data))
         post_ci = np.quantile(posterior_phys[name], [0.025, 0.975])
-        ax.plot(prior_centers, prior_density, color="#4f7cac", lw=1.8, label="prior")
+        plot_prior_mc_histogram(ax, prior_phys[name], grid, label=f"MC prior histogram (n={PRIOR_DENSITY_MC_SAMPLES:,})")
+        ax.plot(grid, prior_density, color="#174f82", lw=2.0, label="analytic prior density", zorder=4)
         ax.plot(grid, like, color="#6a9f58", lw=1.8, label="conditional likelihood")
-        ax.plot(post_centers, post_density, color="#c65b42", lw=2.0, label="posterior")
+        ax.plot(grid, post_density, color="#c65b42", lw=2.0, label="posterior KDE")
         ax.axvspan(post_ci[0], post_ci[1], color="#c65b42", alpha=0.16, label="posterior 95% CI")
         ax.axvline(nominal, color="#555555", ls=":", lw=1.4, label="nominal")
         ax.axvline(truth, color="black", ls="--", lw=1.4, label="synthetic truth")
@@ -1566,6 +1771,16 @@ def plot_bayes_parameter_update(data: dict[str, Any], mcmc: dict[str, Any]) -> d
             "realized_discrepancy_inferred_as_latent_field": False,
             "hyperparameters_inferred": False,
         },
+        "prior_visualization": {
+            "analytic_prior_density_plotted": True,
+            "mc_prior_histogram_plotted": True,
+            "mc_prior_histogram_samples": PRIOR_DENSITY_MC_SAMPLES,
+            "mc_prior_histogram_bins": PRIOR_DENSITY_MC_BINS,
+            "prior_predictive_mc_samples": PRIOR_PREDICTIVE_MC_SAMPLES,
+            "prior_predictive_quantiles_smoothed_for_display": True,
+            "predictive_band_smoothing_sigma_points": PREDICTIVE_BAND_SMOOTHING_SIGMA_POINTS,
+            "policy": "Analytic prior density is the primary prior representation; high-sample MC histogram is shown as a labeled diagnostic.",
+        },
     }
     (OUT_DIR / "bayes_update_summary.json").write_text(json.dumps(out, indent=2))
     return out
@@ -1574,16 +1789,17 @@ def plot_bayes_parameter_update(data: dict[str, Any], mcmc: dict[str, Any]) -> d
 def plot_parameter_posterior_samples(data: dict[str, Any], mcmc: dict[str, Any], bayes: dict[str, Any]) -> None:
     c: Constants = data["constants"]
     posterior_phys = mcmc["physical_samples"]
-    prior_phys = physical_sample_table(draw_prior_transformed(2500, seed=RUN_SEED + 202), c)
+    prior_phys = physical_sample_table(draw_prior_transformed(PRIOR_DENSITY_MC_SAMPLES, seed=RUN_SEED + 202), c)
     fig, axes = plt.subplots(2, 2, figsize=(13, 8))
     for ax, view in zip(axes.flat, PARAMETER_VIEWS):
         name = view["name"]
         grid = parameter_grid(name, c)
-        prior_centers, prior_density = normalized_hist_curve(prior_phys[name], grid)
-        post_centers, post_density = normalized_hist_curve(posterior_phys[name], grid)
+        prior_density = analytic_prior_relative_density(name, grid, c)
+        post_density = normalized_kde_curve(posterior_phys[name], grid)
         summary = bayes["parameter_summaries"][name]["posterior"]
-        ax.plot(prior_centers, prior_density, color="#4f7cac", lw=1.4, label="prior")
-        ax.fill_between(post_centers, 0.0, post_density, color="#c65b42", alpha=0.35, label="posterior samples")
+        plot_prior_mc_histogram(ax, prior_phys[name], grid, label=f"MC prior histogram (n={PRIOR_DENSITY_MC_SAMPLES:,})")
+        ax.plot(grid, prior_density, color="#174f82", lw=2.0, label="analytic prior density", zorder=4)
+        ax.fill_between(grid, 0.0, post_density, color="#c65b42", alpha=0.35, label="posterior KDE")
         ax.axvspan(summary["q025"], summary["q975"], color="#c65b42", alpha=0.18, label="posterior 95% CI")
         ax.axvline(summary["truth"], color="black", ls="--", lw=1.4, label="truth")
         ax.axvline(summary["nominal"], color="#555555", ls=":", lw=1.2, label="nominal")
@@ -1599,19 +1815,48 @@ def plot_parameter_posterior_samples(data: dict[str, Any], mcmc: dict[str, Any],
     plt.close(fig)
 
 
-def predictive_band(curves: np.ndarray) -> dict[str, np.ndarray]:
-    return {
+def smooth_series_by_index(values: np.ndarray, sigma_points: float, *, positive_log: bool = False) -> np.ndarray:
+    if sigma_points <= 0.0 or len(values) < 5:
+        return values.copy()
+    half_width = max(2, int(math.ceil(4.0 * sigma_points)))
+    offsets = np.arange(-half_width, half_width + 1, dtype=float)
+    kernel = np.exp(-0.5 * (offsets / sigma_points) ** 2)
+    kernel = kernel / np.sum(kernel)
+    source = np.log(np.maximum(values, 1e-300)) if positive_log else values
+    padded = np.pad(source, (half_width, half_width), mode="edge")
+    smoothed = np.convolve(padded, kernel, mode="valid")
+    return np.exp(smoothed) if positive_log else smoothed
+
+
+def predictive_band(
+    curves: np.ndarray,
+    *,
+    smooth: bool = False,
+    yscale: str = "linear",
+) -> dict[str, np.ndarray]:
+    band = {
         "q05": np.quantile(curves, 0.05, axis=0),
         "median": np.quantile(curves, 0.50, axis=0),
         "q95": np.quantile(curves, 0.95, axis=0),
     }
+    if smooth:
+        use_log_y = yscale == "log"
+        for key in ["q05", "median", "q95"]:
+            band[key] = smooth_series_by_index(
+                band[key],
+                PREDICTIVE_BAND_SMOOTHING_SIGMA_POINTS,
+                positive_log=use_log_y,
+            )
+        band["q05"] = np.minimum(band["q05"], band["median"])
+        band["q95"] = np.maximum(band["q95"], band["median"])
+    return band
 
 
 def plot_prior_predictive_vs_data(data: dict[str, Any], mcmc: dict[str, Any]) -> None:
     c: Constants = data["constants"]
     freqs = data["freqs_hz"]
     flight_freqs = data["flight_freqs_hz"]
-    prior_x = select_even_samples(draw_prior_transformed(180, seed=RUN_SEED + 303), 120)
+    prior_x = draw_prior_transformed(PRIOR_PREDICTIVE_MC_SAMPLES, seed=RUN_SEED + 303)
     posterior_x = select_even_samples(mcmc["samples_transformed"], 120)
 
     def channel_curves(samples: np.ndarray, channel: str) -> np.ndarray:
@@ -1671,12 +1916,12 @@ def plot_prior_predictive_vs_data(data: dict[str, Any], mcmc: dict[str, Any]) ->
     ]
     fig, axes = plt.subplots(2, 2, figsize=(13, 8))
     for ax, panel in zip(axes.flat, panels):
-        pb = predictive_band(panel["prior"])
-        qb = predictive_band(panel["posterior"])
-        ax.fill_between(panel["x"], pb["q05"], pb["q95"], color="#4f7cac", alpha=0.18, label="prior 5-95%")
-        ax.plot(panel["x"], pb["median"], color="#4f7cac", lw=1.4, label="prior median")
-        ax.fill_between(panel["x"], qb["q05"], qb["q95"], color="#c65b42", alpha=0.20, label="posterior 5-95%")
-        ax.plot(panel["x"], qb["median"], color="#c65b42", lw=1.4, label="posterior median")
+        pb = predictive_band(panel["prior"], smooth=True, yscale=panel["yscale"])
+        qb = predictive_band(panel["posterior"], smooth=True, yscale=panel["yscale"])
+        ax.fill_between(panel["x"], pb["q05"], pb["q95"], color="#4f7cac", alpha=0.18, label="prior 5-95% (MC smoothed)")
+        ax.plot(panel["x"], pb["median"], color="#4f7cac", lw=1.5, label="prior median (MC smoothed)")
+        ax.fill_between(panel["x"], qb["q05"], qb["q95"], color="#c65b42", alpha=0.20, label="posterior 5-95% (MC smoothed)")
+        ax.plot(panel["x"], qb["median"], color="#c65b42", lw=1.5, label="posterior median (MC smoothed)")
         ax.plot(panel["x"], panel["truth"], color="black", lw=1.4, label="synthetic truth")
         if panel["observed"] is not None:
             ax.scatter(panel["x"], panel["observed"], s=9, color="#222222", alpha=0.45, label="observed data")
@@ -1687,7 +1932,7 @@ def plot_prior_predictive_vs_data(data: dict[str, Any], mcmc: dict[str, Any]) ->
         ax.set_ylabel(panel["ylabel"])
         ax.grid(True, which="both", alpha=0.25)
     axes[0, 0].legend(fontsize=7)
-    fig.suptitle("Prior/posterior predictive spectra against data", y=0.985)
+    fig.suptitle(f"Prior/posterior predictive spectra against data; prior MC n={PRIOR_PREDICTIVE_MC_SAMPLES}", y=0.985)
     fig.tight_layout(rect=[0.0, 0.0, 1.0, 0.955])
     save_figure(fig, "prior_predictive_vs_data.png")
     plt.close(fig)
@@ -1722,6 +1967,407 @@ def plot_posterior_predictive_spectra(data: dict[str, Any], mcmc: dict[str, Any]
     fig.suptitle("Posterior predictive distribution, not a single posterior spectrum", y=0.985)
     fig.tight_layout(rect=[0.0, 0.0, 1.0, 0.955])
     save_figure(fig, "posterior_predictive_spectra.png")
+    plt.close(fig)
+
+
+def summarize_posterior_parameters(mcmc: dict[str, Any], data: dict[str, Any]) -> dict[str, Any]:
+    c: Constants = data["constants"]
+    phys = mcmc["physical_samples"]
+    out = {}
+    for view in PARAMETER_VIEWS:
+        name = view["name"]
+        out[name] = summarize_parameter_samples(
+            phys[name],
+            float(view["truth"](data)),
+            float(view["nominal"](c)),
+            view["unit"],
+        )
+    return out
+
+
+def qoi_summary_from_samples(samples: np.ndarray, data: dict[str, Any]) -> dict[str, Any]:
+    q = summarize(samples)
+    q["truth"] = truth_summary(data)["qoi_truth_3grms_tray_accel_g"]
+    q["units"] = "g"
+    q["definition"] = "3 * GRMS of tray acceleration response PSD"
+    q["mean_bias"] = q["mean"] - q["truth"]
+    q["fraction_above_truth"] = float(np.mean(samples > q["truth"]))
+    return q
+
+
+def save_peak_feature_likelihood_comparison(
+    data: dict[str, Any],
+    full_mcmc: dict[str, Any],
+    feature_mcmc: dict[str, Any],
+) -> dict[str, Any]:
+    observed_features = extract_peak_feature_vector(data, observed=True)
+    truth_features = extract_peak_feature_vector(data, p=data["truth"], observed=False)
+    parameter_comparison = {
+        "full_curve": summarize_posterior_parameters(full_mcmc, data),
+        "peak_feature": summarize_posterior_parameters(feature_mcmc, data),
+    }
+    qoi_comparison = {
+        "full_curve": qoi_summary_from_samples(full_mcmc["qoi_samples"], data),
+        "peak_feature": qoi_summary_from_samples(feature_mcmc["qoi_samples"], data),
+    }
+    interval_width_ratios = {}
+    for view in PARAMETER_VIEWS:
+        name = view["name"]
+        full = parameter_comparison["full_curve"][name]
+        feat = parameter_comparison["peak_feature"][name]
+        full_width = max(float(full["q975"]) - float(full["q025"]), 1e-30)
+        feat_width = float(feat["q975"]) - float(feat["q025"])
+        interval_width_ratios[name] = float(feat_width / full_width)
+    qoi_width_full = max(qoi_comparison["full_curve"]["q975"] - qoi_comparison["full_curve"]["q025"], 1e-30)
+    qoi_width_feature = qoi_comparison["peak_feature"]["q975"] - qoi_comparison["peak_feature"]["q025"]
+    out = {
+        "comparison_label": "Whole FRF/PSD likelihood versus peak/notch feature likelihood",
+        "feature_likelihood_assumptions": feature_likelihood_assumptions(),
+        "observed_features": observed_features,
+        "truth_features": truth_features,
+        "parameter_comparison": parameter_comparison,
+        "qoi_comparison": qoi_comparison,
+        "interval_width_ratio_peak_feature_over_full_curve": interval_width_ratios,
+        "qoi_95_width_ratio_peak_feature_over_full_curve": float(qoi_width_feature / qoi_width_full),
+        "sampler": {
+            "full_curve_acceptance_rate": float(full_mcmc["acceptance_rate"]),
+            "peak_feature_acceptance_rate": float(feature_mcmc["acceptance_rate"]),
+            "full_curve_retained_samples": int(len(full_mcmc["samples_transformed"])),
+            "peak_feature_retained_samples": int(len(feature_mcmc["samples_transformed"])),
+        },
+        "interpretation_warning": "The peak-feature likelihood is intentionally lossy and uses independent feature residuals. It is a comparison artifact, not a recommended replacement for the whole-curve likelihood.",
+    }
+    (OUT_DIR / "peak_feature_likelihood_summary.json").write_text(json.dumps(out, indent=2))
+    return out
+
+
+def plot_peak_feature_likelihood_comparison(
+    data: dict[str, Any],
+    full_mcmc: dict[str, Any],
+    feature_mcmc: dict[str, Any],
+    comp: dict[str, Any],
+) -> None:
+    c: Constants = data["constants"]
+    fig, axes = plt.subplots(2, 2, figsize=(13.5, 9.0))
+    colors = {"full_curve": "#4f7cac", "peak_feature": "#c65b42"}
+
+    def interval_panel(ax: plt.Axes, names: list[str], title: str, xlabel: str) -> None:
+        y_ticks = []
+        y_labels = []
+        for i, name in enumerate(names):
+            y_base = len(names) - 1 - i
+            y_ticks.append(y_base)
+            y_labels.append(next(v["title"] for v in PARAMETER_VIEWS if v["name"] == name))
+            for offset, key in [(0.10, "full_curve"), (-0.10, "peak_feature")]:
+                s = comp["parameter_comparison"][key][name]
+                y = y_base + offset
+                ax.plot([s["q025"], s["q975"]], [y, y], color=colors[key], lw=4, solid_capstyle="round")
+                ax.scatter([s["median"]], [y], color=colors[key], s=38, zorder=3, label=key.replace("_", " ") if i == 0 else None)
+            truth = next(v["truth"](data) for v in PARAMETER_VIEWS if v["name"] == name)
+            ax.scatter([truth], [y_base], color="black", marker="x", s=60, zorder=4, label="truth" if i == 0 else None)
+        ax.set_yticks(y_ticks, y_labels)
+        ax.set_xlabel(xlabel)
+        ax.set_title(title)
+        ax.grid(True, axis="x", alpha=0.25)
+        ax.legend(fontsize=8)
+
+    interval_panel(axes[0, 0], ["dome_hz", "tray_hz"], "Natural-frequency posterior intervals", "Hz")
+    interval_panel(axes[0, 1], ["zeta1", "zeta2"], "Damping-ratio posterior intervals", "ratio")
+
+    truth_qoi = truth_summary(data)["qoi_truth_3grms_tray_accel_g"]
+    axes[1, 0].hist(full_mcmc["qoi_samples"], bins=28, density=True, alpha=0.45, color=colors["full_curve"], label="full FRF/PSD")
+    axes[1, 0].hist(feature_mcmc["qoi_samples"], bins=28, density=True, alpha=0.45, color=colors["peak_feature"], label="peak-feature")
+    axes[1, 0].axvline(truth_qoi, color="black", lw=2, label="truth")
+    axes[1, 0].set_title("QOI posterior samples")
+    axes[1, 0].set_xlabel("3*GRMS tray response [g]")
+    axes[1, 0].set_ylabel("density")
+    axes[1, 0].legend(fontsize=8)
+    axes[1, 0].grid(True, alpha=0.25)
+
+    f = data["flight_freqs_hz"]
+
+    def response_band(samples: np.ndarray) -> dict[str, np.ndarray]:
+        selected = select_even_samples(samples, 120)
+        curves = []
+        for x in selected:
+            p = unpack_params(x, c)
+            response_psd, _ = tray_response_psd_g2_per_hz(p, c, f)
+            curves.append(response_psd)
+        return predictive_band(np.asarray(curves))
+
+    full_band = response_band(full_mcmc["samples_transformed"])
+    feature_band = response_band(feature_mcmc["samples_transformed"])
+    ax = axes[1, 1]
+    ax.plot(f, data["response_psd_clean"], color="black", lw=1.8, label="truth PSD")
+    ax.scatter(f, data["response_psd_observed"], s=8, alpha=0.22, color="#555555", label="observed PSD")
+    ax.fill_between(f, full_band["q05"], full_band["q95"], color=colors["full_curve"], alpha=0.22, label="full 5-95%")
+    ax.plot(f, full_band["median"], color=colors["full_curve"], lw=1.5, label="full median")
+    ax.fill_between(f, feature_band["q05"], feature_band["q95"], color=colors["peak_feature"], alpha=0.20, label="feature 5-95%")
+    ax.plot(f, feature_band["median"], color=colors["peak_feature"], lw=1.5, label="feature median")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_title("Flight-like response PSD posterior predictive")
+    ax.set_xlabel("frequency [Hz]")
+    ax.set_ylabel("g^2/Hz")
+    ax.grid(True, which="both", alpha=0.25)
+    ax.legend(fontsize=7)
+
+    width_ratio = comp["qoi_95_width_ratio_peak_feature_over_full_curve"]
+    fig.suptitle(
+        f"Whole-curve likelihood vs peak-feature likelihood; QOI 95% width ratio = {width_ratio:.2f}",
+        y=0.985,
+    )
+    fig.tight_layout(rect=[0.0, 0.0, 1.0, 0.955])
+    save_figure(fig, "full_vs_peak_feature_likelihood_comparison.png")
+    plt.close(fig)
+
+
+FEATURE_LABELS = {
+    "ch1_dome_notch": "Ch1 dome notch",
+    "ch2_primary_notch": "Ch2 primary notch",
+    "ch3_tray_notch": "Ch3 tray notch",
+    "ch4_tray_peak": "Ch4 tray peak",
+    "ch5_response_psd_peak": "Ch5 PSD peak",
+}
+
+
+def perturb_for_log_sensitivity(x_base: np.ndarray, variable: str, delta: float) -> np.ndarray:
+    x = x_base.copy()
+    if variable == "dome_hz":
+        # x[0] is log stiffness ratio, so a log-frequency perturbation is doubled.
+        x[0] += 2.0 * delta
+    elif variable == "tray_hz":
+        x[1] += 2.0 * delta
+    elif variable == "zeta1":
+        x[2] += delta
+    elif variable == "zeta2":
+        x[3] += delta
+    elif variable == "force_fc":
+        x[5] += delta
+    else:
+        raise ValueError(f"Unknown sensitivity variable {variable}")
+    return x
+
+
+def feature_sigma_for_source(source: str, assumptions: dict[str, float | str]) -> tuple[float, float]:
+    if source == "PSD":
+        return (
+            float(assumptions["psd_log_frequency_sigma"]),
+            float(assumptions["psd_log_amplitude_sigma"]),
+        )
+    return (
+        float(assumptions["frf_log_frequency_sigma"]),
+        float(assumptions["frf_log_amplitude_sigma"]),
+    )
+
+
+def save_peak_feature_mapping_benchmark(data: dict[str, Any]) -> dict[str, Any]:
+    c: Constants = data["constants"]
+    p_truth: Params = data["truth"]
+    x_truth = param_vector(p_truth, c)
+    observed = extract_peak_feature_vector(data, observed=True)
+    clean = extract_peak_feature_vector(data, p=p_truth, observed=False)
+    assumptions = feature_likelihood_assumptions()
+    variables = ["dome_hz", "tray_hz", "zeta1", "zeta2", "force_fc"]
+    variable_labels = {
+        "dome_hz": "dome freq",
+        "tray_hz": "tray freq",
+        "zeta1": "dome zeta",
+        "zeta2": "tray zeta",
+        "force_fc": "force center",
+    }
+    delta = 0.02
+
+    feature_rows: dict[str, dict[str, Any]] = {}
+    frequency_sensitivity = np.zeros((len(FEATURE_SPECS), len(variables)))
+    amplitude_sensitivity = np.zeros_like(frequency_sensitivity)
+    for i, (feature_name, _channel_name, _kind, source) in enumerate(FEATURE_SPECS):
+        sigma_f, sigma_a = feature_sigma_for_source(source, assumptions)
+        obs = observed[feature_name]
+        base = clean[feature_name]
+        freq_z = math.log(float(obs["frequency_hz"]) / float(base["frequency_hz"])) / sigma_f
+        amp_z = (float(obs["log_amplitude"]) - float(base["log_amplitude"])) / sigma_a
+        sensitivities = {}
+        for j, variable in enumerate(variables):
+            plus = unpack_params(perturb_for_log_sensitivity(x_truth, variable, delta), c)
+            minus = unpack_params(perturb_for_log_sensitivity(x_truth, variable, -delta), c)
+            f_plus = extract_peak_feature_vector(data, p=plus, observed=False)[feature_name]
+            f_minus = extract_peak_feature_vector(data, p=minus, observed=False)[feature_name]
+            s_freq = (
+                math.log(float(f_plus["frequency_hz"]))
+                - math.log(float(f_minus["frequency_hz"]))
+            ) / (2.0 * delta)
+            s_amp = (
+                float(f_plus["log_amplitude"])
+                - float(f_minus["log_amplitude"])
+            ) / (2.0 * delta)
+            frequency_sensitivity[i, j] = s_freq
+            amplitude_sensitivity[i, j] = s_amp
+            sensitivities[variable] = {
+                "dlog_feature_frequency_dlog_variable": float(s_freq),
+                "dlog_feature_amplitude_dlog_variable": float(s_amp),
+            }
+        structural_mix = (
+            abs(sensitivities["dome_hz"]["dlog_feature_frequency_dlog_variable"]) > 0.25
+            and abs(sensitivities["tray_hz"]["dlog_feature_frequency_dlog_variable"]) > 0.25
+        )
+        force_confounded = abs(sensitivities["force_fc"]["dlog_feature_amplitude_dlog_variable"]) > 1.0
+        shifted_by_error = abs(freq_z) > 0.75 or abs(amp_z) > 0.75
+        if feature_name in {"ch1_dome_notch", "ch4_tray_peak"} and not structural_mix:
+            interpretation = "direct structural feature"
+        elif force_confounded:
+            interpretation = "forcing/response-shape confounded feature"
+        elif structural_mix:
+            interpretation = "coupled structural feature"
+        else:
+            interpretation = "weak or context-dependent feature"
+        feature_rows[feature_name] = {
+            "label": FEATURE_LABELS[feature_name],
+            "source": source,
+            "clean_feature_frequency_hz": float(base["frequency_hz"]),
+            "observed_feature_frequency_hz": float(obs["frequency_hz"]),
+            "frequency_observation_z_score_vs_clean_feature": float(freq_z),
+            "amplitude_observation_z_score_vs_clean_feature": float(amp_z),
+            "sensitivities": sensitivities,
+            "structural_frequency_mix": bool(structural_mix),
+            "force_confounded": bool(force_confounded),
+            "observed_feature_shifted_by_error": bool(shifted_by_error),
+            "interpretation": interpretation,
+        }
+
+    dome_grid = parameter_grid("dome_hz", c)
+    tray_grid = parameter_grid("tray_hz", c)
+    ch1_pred = []
+    ch1_like = []
+    ch4_pred = []
+    ch4_like = []
+    for value in dome_grid:
+        p = unpack_params(set_parameter_in_transformed(x_truth, "dome_hz", float(value), c), c)
+        pred = extract_peak_feature_vector(data, p=p, observed=False)["ch1_dome_notch"]
+        ch1_pred.append(float(pred["frequency_hz"]))
+        sigma_f, _ = feature_sigma_for_source("FRF", assumptions)
+        ch1_like.append(-0.5 * (math.log(float(observed["ch1_dome_notch"]["frequency_hz"]) / float(pred["frequency_hz"])) / sigma_f) ** 2)
+    for value in tray_grid:
+        p = unpack_params(set_parameter_in_transformed(x_truth, "tray_hz", float(value), c), c)
+        pred = extract_peak_feature_vector(data, p=p, observed=False)["ch4_tray_peak"]
+        ch4_pred.append(float(pred["frequency_hz"]))
+        sigma_f, _ = feature_sigma_for_source("FRF", assumptions)
+        ch4_like.append(-0.5 * (math.log(float(observed["ch4_tray_peak"]["frequency_hz"]) / float(pred["frequency_hz"])) / sigma_f) ** 2)
+    ch1_like_arr = np.exp(np.asarray(ch1_like) - np.max(ch1_like))
+    ch4_like_arr = np.exp(np.asarray(ch4_like) - np.max(ch4_like))
+
+    summary = {
+        "description": "Benchmark of feature likelihood mapping: observed peaks/notches are compared with predicted transfer-function feature locations, not directly with natural frequencies.",
+        "feature_likelihood_assumptions": assumptions,
+        "feature_rows": feature_rows,
+        "direct_feature_maps": {
+            "ch1_dome_notch": {
+                "x_parameter": "dome_hz",
+                "candidate_dome_hz": dome_grid.tolist(),
+                "predicted_notch_hz": ch1_pred,
+                "relative_frequency_likelihood": ch1_like_arr.tolist(),
+            },
+            "ch4_tray_peak": {
+                "x_parameter": "tray_hz",
+                "candidate_tray_hz": tray_grid.tolist(),
+                "predicted_peak_hz": ch4_pred,
+                "relative_frequency_likelihood": ch4_like_arr.tolist(),
+            },
+        },
+        "sensitivity_variables": variables,
+        "sensitivity_variable_labels": [variable_labels[v] for v in variables],
+        "feature_frequency_sensitivity_matrix": frequency_sensitivity.tolist(),
+        "feature_amplitude_sensitivity_matrix": amplitude_sensitivity.tolist(),
+        "reference_note": "This is the same concern as MAC-style likelihoods: correlated or redundant data should not be counted as independent information without an adequate covariance or feature model.",
+    }
+    (OUT_DIR / "peak_feature_mapping_benchmark.json").write_text(json.dumps(summary, indent=2))
+    return summary
+
+
+def plot_peak_feature_mapping_benchmark(data: dict[str, Any], benchmark: dict[str, Any]) -> None:
+    ts = truth_summary(data)
+    observed = extract_peak_feature_vector(data, observed=True)
+    clean = extract_peak_feature_vector(data, p=data["truth"], observed=False)
+    ch1 = benchmark["direct_feature_maps"]["ch1_dome_notch"]
+    ch4 = benchmark["direct_feature_maps"]["ch4_tray_peak"]
+
+    fig, axes = plt.subplots(2, 2, figsize=(12.5, 8.0))
+    ax = axes[0, 0]
+    dome_grid = np.asarray(ch1["candidate_dome_hz"])
+    ch1_pred = np.asarray(ch1["predicted_notch_hz"])
+    ax.plot(dome_grid, ch1_pred, color="#4f7cac", lw=2.0, label="predicted notch")
+    ax.plot(dome_grid, dome_grid, color="#777777", ls=":", lw=1.2, label="one-to-one")
+    ax.axhline(float(observed["ch1_dome_notch"]["frequency_hz"]), color="#c65b42", ls="--", lw=1.5, label="observed notch")
+    ax.scatter([ts["dome_true_hz"]], [float(clean["ch1_dome_notch"]["frequency_hz"])], color="black", zorder=3, label="clean truth feature")
+    ax.set_title("Ch1 dome-only reciprocal-inertance notch")
+    ax.set_xlabel("candidate dome natural frequency [Hz]")
+    ax.set_ylabel("predicted notch frequency [Hz]")
+    ax.grid(True, alpha=0.25)
+    ax.legend(fontsize=8)
+
+    ax = axes[0, 1]
+    tray_grid = np.asarray(ch4["candidate_tray_hz"])
+    ch4_pred = np.asarray(ch4["predicted_peak_hz"])
+    ax.plot(tray_grid, ch4_pred, color="#4f7cac", lw=2.0, label="predicted peak")
+    ax.plot(tray_grid, tray_grid, color="#777777", ls=":", lw=1.2, label="one-to-one")
+    ax.axhline(float(observed["ch4_tray_peak"]["frequency_hz"]), color="#c65b42", ls="--", lw=1.5, label="observed peak")
+    ax.scatter([ts["tray_true_hz"]], [float(clean["ch4_tray_peak"]["frequency_hz"])], color="black", zorder=3, label="clean truth feature")
+    ax.set_title("Ch4 standalone tray transmissibility peak")
+    ax.set_xlabel("candidate tray natural frequency [Hz]")
+    ax.set_ylabel("predicted peak frequency [Hz]")
+    ax.grid(True, alpha=0.25)
+    ax.legend(fontsize=8)
+
+    ax = axes[1, 0]
+    ax.plot(dome_grid, np.asarray(ch1["relative_frequency_likelihood"]), color="#c65b42", lw=2.0)
+    ax.axvline(ts["dome_true_hz"], color="black", ls="--", lw=1.4, label="truth")
+    ax.set_title("Ch1 frequency-feature likelihood slice")
+    ax.set_xlabel("candidate dome natural frequency [Hz]")
+    ax.set_ylabel("relative likelihood")
+    ax.grid(True, alpha=0.25)
+    ax.legend(fontsize=8)
+
+    ax = axes[1, 1]
+    ax.plot(tray_grid, np.asarray(ch4["relative_frequency_likelihood"]), color="#c65b42", lw=2.0)
+    ax.axvline(ts["tray_true_hz"], color="black", ls="--", lw=1.4, label="truth")
+    ax.set_title("Ch4 frequency-feature likelihood slice")
+    ax.set_xlabel("candidate tray natural frequency [Hz]")
+    ax.set_ylabel("relative likelihood")
+    ax.grid(True, alpha=0.25)
+    ax.legend(fontsize=8)
+
+    fig.suptitle("Feature likelihood maps observed transfer-function features to predicted features")
+    fig.tight_layout(rect=[0.0, 0.0, 1.0, 0.95])
+    save_figure(fig, "peak_feature_mapping_benchmark.png")
+    plt.close(fig)
+
+
+def plot_peak_feature_sensitivity_matrix(benchmark: dict[str, Any]) -> None:
+    freq_sens = np.asarray(benchmark["feature_frequency_sensitivity_matrix"], dtype=float)
+    amp_sens = np.asarray(benchmark["feature_amplitude_sensitivity_matrix"], dtype=float)
+    feature_labels = [FEATURE_LABELS[name] for name, *_ in FEATURE_SPECS]
+    variable_labels = benchmark["sensitivity_variable_labels"]
+
+    fig, axes = plt.subplots(1, 2, figsize=(13.0, 5.0))
+    for ax, values, title in [
+        (axes[0], freq_sens, "feature-frequency sensitivity"),
+        (axes[1], amp_sens, "feature-amplitude sensitivity"),
+    ]:
+        vmax = max(1.0, float(np.nanmax(np.abs(values))))
+        im = ax.imshow(values, cmap="coolwarm", vmin=-vmax, vmax=vmax, aspect="auto")
+        ax.set_xticks(range(len(variable_labels)), variable_labels, rotation=30, ha="right")
+        ax.set_yticks(range(len(feature_labels)), feature_labels)
+        ax.set_title(title)
+        for i in range(values.shape[0]):
+            for j in range(values.shape[1]):
+                val = values[i, j]
+                color = "white" if abs(val) > 0.55 * vmax else "black"
+                ax.text(j, i, f"{val:.2f}", ha="center", va="center", fontsize=8, color=color)
+        cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.03)
+        cbar.set_label("log-log slope")
+    fig.suptitle("Peak/notch feature sensitivity benchmark at synthetic truth")
+    fig.tight_layout(rect=[0.0, 0.0, 1.0, 0.93])
+    save_figure(fig, "peak_feature_sensitivity_matrix.png", min_width_px=1200, min_height_px=520)
     plt.close(fig)
 
 
@@ -2105,9 +2751,12 @@ def axis_metadata() -> dict[str, str]:
         "figures/posterior_fit_and_residuals.png": "log",
         "figures/statfem_likelihood_graphical_model_legible.png": "not a frequency-domain plot",
         "figures/bayes_parameter_update.png": "parameter axes; likelihood slices over physical parameters",
-        "figures/parameter_posterior_samples.png": "parameter histograms",
+        "figures/parameter_posterior_samples.png": "analytic prior density plus MC prior histogram and posterior KDE; parameter axes",
         "figures/prior_predictive_vs_data.png": "log frequency for spectral/FRF panels",
         "figures/posterior_predictive_spectra.png": "log frequency for spectral/FRF panels",
+        "figures/full_vs_peak_feature_likelihood_comparison.png": "mixed parameter/QOI axes plus log frequency for PSD panel",
+        "figures/peak_feature_mapping_benchmark.png": "not a frequency-domain plot; feature-map parameter/frequency axes",
+        "figures/peak_feature_sensitivity_matrix.png": "not a frequency-domain plot; feature sensitivity matrix",
         "figures/flight_truth_vs_observed.png": "log frequency for PSD panels; time axis for realization panel",
         "figures/qoi_samples.png": "log frequency for PSD panels; histogram for QOI samples",
         "figures/reference_standards_comparison_cards.png": "not a frequency-domain plot",
@@ -2126,6 +2775,8 @@ def write_manifest(posterior: dict[str, Any], ref: dict[str, Any], sens: dict[st
         "dataset": "fresh_2dof_dataset.json",
         "posterior": "posterior_summary.json",
         "bayes_update_summary": "bayes_update_summary.json",
+        "peak_feature_likelihood_comparison": "peak_feature_likelihood_summary.json",
+        "peak_feature_mapping_benchmark": "peak_feature_mapping_benchmark.json",
         "sensitivity": "sensitivity_summary.json",
         "reference_comparison": "reference_comparison.json",
         "checker_report": "checker_report.json",
@@ -2159,6 +2810,9 @@ def run_acceptance_checks() -> dict[str, Any]:
         "figures/parameter_posterior_samples.png",
         "figures/prior_predictive_vs_data.png",
         "figures/posterior_predictive_spectra.png",
+        "figures/full_vs_peak_feature_likelihood_comparison.png",
+        "figures/peak_feature_mapping_benchmark.png",
+        "figures/peak_feature_sensitivity_matrix.png",
         "figures/sampler_diagnostics.png",
         "figures/qoi_samples.png",
         "figures/sensitivity_qoi.png",
@@ -2175,6 +2829,8 @@ def run_acceptance_checks() -> dict[str, Any]:
         "fresh_2dof_dataset.json",
         "posterior_summary.json",
         "bayes_update_summary.json",
+        "peak_feature_likelihood_summary.json",
+        "peak_feature_mapping_benchmark.json",
         "sensitivity_summary.json",
         "reference_comparison.json",
         "image_legibility_report.json",
@@ -2207,6 +2863,8 @@ def run_acceptance_checks() -> dict[str, Any]:
         "StatFEM-style noise/discrepancy model",
         "Central methodology",
         "Prior variance assumptions",
+        "MC prior histogram",
+        "analytic prior density",
         "Likelihood formulation",
         "not only resonance peak locations or magnitudes",
         "## Method Summary",
@@ -2215,6 +2873,11 @@ def run_acceptance_checks() -> dict[str, Any]:
         "Fixed assumptions",
         "Not inferred",
         "Specific likelihood function",
+        "## Whole FRF vs Peak-Feature Likelihood Comparison",
+        "peak-feature likelihood",
+        "## Peak/Notch Feature Mapping Benchmark",
+        "predicted transfer-function feature",
+        "not directly compared with the true natural frequency",
         "Image legibility QA",
     ]
     missing_snippets = [s for s in required_snippets if s not in report_text]
@@ -2278,7 +2941,16 @@ def run_acceptance_checks() -> dict[str, Any]:
         bayes.get("prior_model", {}).get("natural_frequency_prior", {}).get("sigma_log_frequency") == 0.09
         and bayes.get("prior_model", {}).get("damping_prior", {}).get("sigma_log_damping_ratio") == 0.35
         and bayes.get("likelihood_formulation", {}).get("uses_whole_frf_not_peak_summary") is True
+        and bayes.get("prior_visualization", {}).get("analytic_prior_density_plotted") is True
+        and bayes.get("prior_visualization", {}).get("mc_prior_histogram_plotted") is True
+        and int(bayes.get("prior_visualization", {}).get("mc_prior_histogram_samples", 0)) >= 50000
+        and int(bayes.get("prior_visualization", {}).get("prior_predictive_mc_samples", 0)) >= 3000
+        and bayes.get("prior_visualization", {}).get("prior_predictive_quantiles_smoothed_for_display") is True
+        and float(bayes.get("prior_visualization", {}).get("predictive_band_smoothing_sigma_points", 0.0)) > 0.0
         and "Likelihood formulation" in report_text
+        and "MC prior histogram" in report_text
+        and "analytic prior density" in report_text
+        and "smoothed MC predictive summaries" in report_text
         and "not only resonance peak locations or magnitudes" in report_text
     )
     method_summary_documented = (
@@ -2296,6 +2968,29 @@ def run_acceptance_checks() -> dict[str, Any]:
         and "figures/statfem_likelihood_graphical_model_legible.png" in image_legibility.get("strict_text_heavy_figures", [])
         and "figures/reference_standards_comparison_cards.png" in image_legibility.get("strict_text_heavy_figures", [])
         and "Image legibility QA" in report_text
+    )
+    peak_comp = json.loads((OUT_DIR / "peak_feature_likelihood_summary.json").read_text()) if (OUT_DIR / "peak_feature_likelihood_summary.json").exists() else {}
+    peak_feature_comparison_present = (
+        bool(peak_comp.get("parameter_comparison"))
+        and bool(peak_comp.get("qoi_comparison"))
+        and peak_comp.get("feature_likelihood_assumptions", {}).get("description", "").startswith("Lossy comparison")
+        and (OUT_DIR / "figures/full_vs_peak_feature_likelihood_comparison.png").exists()
+        and "## Whole FRF vs Peak-Feature Likelihood Comparison" in report_text
+        and "peak-feature likelihood" in report_text
+    )
+    feature_benchmark = json.loads((OUT_DIR / "peak_feature_mapping_benchmark.json").read_text()) if (OUT_DIR / "peak_feature_mapping_benchmark.json").exists() else {}
+    feature_rows = feature_benchmark.get("feature_rows", {})
+    feature_mapping_benchmark_present = (
+        feature_benchmark.get("description", "").startswith("Benchmark of feature likelihood mapping")
+        and bool(feature_rows)
+        and feature_rows.get("ch1_dome_notch", {}).get("interpretation") == "direct structural feature"
+        and feature_rows.get("ch2_primary_notch", {}).get("structural_frequency_mix") is True
+        and feature_rows.get("ch3_tray_notch", {}).get("structural_frequency_mix") is True
+        and feature_rows.get("ch5_response_psd_peak", {}).get("force_confounded") is True
+        and (OUT_DIR / "figures/peak_feature_mapping_benchmark.png").exists()
+        and (OUT_DIR / "figures/peak_feature_sensitivity_matrix.png").exists()
+        and "## Peak/Notch Feature Mapping Benchmark" in report_text
+        and "not directly compared with the true natural frequency" in report_text
     )
     sens = json.loads((OUT_DIR / "sensitivity_summary.json").read_text()) if (OUT_DIR / "sensitivity_summary.json").exists() else {}
     ref = json.loads((OUT_DIR / "reference_comparison.json").read_text()) if (OUT_DIR / "reference_comparison.json").exists() else {}
@@ -2338,6 +3033,8 @@ def run_acceptance_checks() -> dict[str, Any]:
         "statfem_noise_model_documented": statfem_noise_documented,
         "prior_likelihood_methodology_documented": prior_likelihood_methodology_documented,
         "method_summary_documented": method_summary_documented,
+        "peak_feature_likelihood_comparison_present": peak_feature_comparison_present,
+        "peak_feature_mapping_benchmark_present": feature_mapping_benchmark_present,
         "image_legibility_report_pass": image_legibility_pass,
         "checker_status_and_limitations_included": "## Checker Status" in report_text and "## Limitations" in report_text,
     }
@@ -2356,6 +3053,8 @@ def run_acceptance_checks() -> dict[str, Any]:
 def write_report(
     posterior: dict[str, Any],
     bayes: dict[str, Any],
+    peak_comp: dict[str, Any],
+    feature_benchmark: dict[str, Any],
     sens: dict[str, Any],
     ref: dict[str, Any],
     comparison: dict[str, Any],
@@ -2402,6 +3101,20 @@ def write_report(
     like = bayes["likelihood_summary"]
     prior_model = bayes["prior_model"]
     likelihood_form = bayes["likelihood_formulation"]
+    peak_qoi = peak_comp["qoi_comparison"]["peak_feature"]
+    full_qoi = peak_comp["qoi_comparison"]["full_curve"]
+    peak_width_ratio = peak_comp["qoi_95_width_ratio_peak_feature_over_full_curve"]
+    feature_rows = feature_benchmark["feature_rows"]
+    feature_table = "\n".join(
+        [
+            "| Feature | Clean predicted feature | Observed feature | Frequency z-score | Interpretation |",
+            "|---|---:|---:|---:|---|",
+            *[
+                f"| {row['label']} | {row['clean_feature_frequency_hz']:.3f} Hz | {row['observed_feature_frequency_hz']:.3f} Hz | {row['frequency_observation_z_score_vs_clean_feature']:.2f} | {row['interpretation']} |"
+                for row in feature_rows.values()
+            ],
+        ]
+    )
     freq95 = prior_model["natural_frequency_prior"]["approx_95_factor_untruncated"]
     damp95 = prior_model["damping_prior"]["approx_95_factor_untruncated"]
     lines = [
@@ -2504,7 +3217,9 @@ def write_report(
         "",
         "Plain-language model-family caveat: the synthetic data were generated by the same 2DOF equations used in fitting, just with shifted stiffness, damping, and forcing parameters. That means the posterior can fit by moving those parameters. A real FEM may be wrong in ways that no parameter shift can represent, such as missing modes, nonlinear joints, slosh, preload, or incorrect boundary conditions.",
         "",
-        "Bayes rule in action: the parameter plot shows prior density, a one-dimensional conditional likelihood slice, and posterior density for the two natural frequencies and two damping ratios. The likelihood slices hold all other transformed variables at the retained posterior sample with largest log posterior; they are visual diagnostics, not full marginal likelihoods.",
+        f"Bayes rule in action: the parameter plot shows analytic prior density, a high-sample MC prior histogram diagnostic (`n={PRIOR_DENSITY_MC_SAMPLES:,}`), a one-dimensional conditional likelihood slice, and posterior density for the two natural frequencies and two damping ratios. The likelihood slices hold all other transformed variables at the retained posterior sample with largest log posterior; they are visual diagnostics, not full marginal likelihoods.",
+        "",
+        "Prior visualization policy: the smooth blue curve is the analytic prior density and is the primary prior representation. The light-blue MC prior histogram is shown only as a sampling diagnostic and is labeled separately so histogram roughness is not mistaken for mathematical prior structure. Posterior curves are kernel-density estimates from retained samples.",
         "",
         f"Likelihood diagnostic: log likelihood at the prior center is `{like['log_likelihood_at_prior_center']:.3g}`, at synthetic truth `{like['log_likelihood_at_truth']:.3g}`, and at the retained posterior mode `{like['log_likelihood_at_retained_posterior_mode']:.3g}`.",
         "",
@@ -2518,9 +3233,33 @@ def write_report(
         "",
         fig("parameter_posterior_samples.png"),
         "",
-        "Prior predictive versus data: the base-driven standalone tray transfer, coupled tray drive-point channel, flight-like tray response PSD, and latent force PSD are shown with prior and posterior predictive bands. The force PSD is latent in this toy; the observed flight-like data are the tray response PSD, not a direct force measurement.",
+        f"Prior predictive versus data: the base-driven standalone tray transfer, coupled tray drive-point channel, flight-like tray response PSD, and latent force PSD are shown with prior and posterior predictive bands. These are not analytic prior densities; they are smoothed MC predictive summaries. The prior predictive bands use `{PRIOR_PREDICTIVE_MC_SAMPLES}` prior draws, and plotted pointwise quantile summaries are smoothed over frequency with Gaussian sigma `{PREDICTIVE_BAND_SMOOTHING_SIGMA_POINTS}` grid points so resonance-ordering wiggles are not mistaken for prior structure. The force PSD is latent in this toy; the observed flight-like data are the tray response PSD, not a direct force measurement.",
         "",
         fig("prior_predictive_vs_data.png"),
+        "",
+        "## Whole FRF vs Peak-Feature Likelihood Comparison",
+        "",
+        "This side-by-side comparison asks what changes if the likelihood uses only selected peak/notch frequency and magnitude features instead of the whole complex FRFs and whole response PSD. The peak-feature likelihood uses one dominant feature from each frequency channel plus the response-PSD peak. It treats feature residuals as independent with broad log-frequency and log-amplitude uncertainty. This is a deliberately lossy comparison artifact, not a recommended replacement for the whole-curve StatFEM likelihood.",
+        "",
+        f"QOI comparison: full FRF/PSD likelihood mean `{full_qoi['mean']:.5g} g`, 95% interval `[{full_qoi['q025']:.5g}, {full_qoi['q975']:.5g}] g`; peak-feature likelihood mean `{peak_qoi['mean']:.5g} g`, 95% interval `[{peak_qoi['q025']:.5g}, {peak_qoi['q975']:.5g}] g`. Peak-feature QOI 95% width divided by full-curve width is `{peak_width_ratio:.3g}`.",
+        "",
+        "Feature likelihood assumptions and observed feature values are stored in `peak_feature_likelihood_summary.json`.",
+        "",
+        fig("full_vs_peak_feature_likelihood_comparison.png"),
+        "",
+        "## Peak/Notch Feature Mapping Benchmark",
+        "",
+        "A peak or notch is not assumed to equal a natural frequency. The feature likelihood compares an observed transfer-function feature with the predicted transfer-function feature from each candidate parameter set. It is therefore benchmarked against `feature(theta)`, not directly compared with the true natural frequency.",
+        "",
+        "In a clean one-DOF-like channel, the feature can sit very near the natural frequency but still depends on the exact quantity, damping, and boundary condition. In coupled channels, notches and response-PSD peaks are mixed features: they can depend on dome frequency, tray frequency, damping, and forcing assumptions at the same time.",
+        "",
+        feature_table,
+        "",
+        "The sensitivity matrix below reports log-log slopes of each selected feature with respect to the inferred variables at the synthetic truth. Ch1 and Ch4 are close to direct structural features. Ch2 and Ch3 mix dome and tray frequency information. Ch5 is a response/forcing feature, so its amplitude is strongly confounded with the assumed force spectrum.",
+        "",
+        fig("peak_feature_mapping_benchmark.png"),
+        "",
+        fig("peak_feature_sensitivity_matrix.png"),
         "",
         "## Posterior Fit and Diagnostics",
         "",
@@ -2636,6 +3375,12 @@ def main() -> int:
     plot_parameter_posterior_samples(data, mcmc, bayes)
     plot_prior_predictive_vs_data(data, mcmc)
     plot_posterior_predictive_spectra(data, mcmc)
+    feature_mcmc = run_mcmc(data, likelihood_kind="peak_feature", seed_offset=311, n_steps=3600, burn=900, thin=5)
+    peak_comp = save_peak_feature_likelihood_comparison(data, mcmc, feature_mcmc)
+    plot_peak_feature_likelihood_comparison(data, mcmc, feature_mcmc, peak_comp)
+    feature_benchmark = save_peak_feature_mapping_benchmark(data)
+    plot_peak_feature_mapping_benchmark(data, feature_benchmark)
+    plot_peak_feature_sensitivity_matrix(feature_benchmark)
     sens = run_sensitivity(data, mcmc)
     plot_sensitivity(sens)
     ref = reference_comparison(data)
@@ -2644,9 +3389,9 @@ def main() -> int:
     write_image_legibility_report()
     comparison = fresh_prior_comparison()
     write_manifest(posterior, ref, sens)
-    write_report(posterior, bayes, sens, ref, comparison, checker=None)
+    write_report(posterior, bayes, peak_comp, feature_benchmark, sens, ref, comparison, checker=None)
     checker = run_acceptance_checks()
-    write_report(posterior, bayes, sens, ref, comparison, checker=checker)
+    write_report(posterior, bayes, peak_comp, feature_benchmark, sens, ref, comparison, checker=checker)
     checker = run_acceptance_checks()
     print(json.dumps({"report": str(OUT_DIR / "fresh_2dof_statfem_packet.md"), "checker": checker}, indent=2))
     return 0 if checker["pass"] else 2

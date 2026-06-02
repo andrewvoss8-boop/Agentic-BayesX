@@ -20,6 +20,17 @@
   - Artifacts: `docs/agents/how_to_run.md`, `docs/agents/claude_code_starter_prompt.md`, `.claude/agents/`, `.cursor/agents/`, `.cursor/rules/`, `docs/codex_prompts/multi_agent/`, and `artifacts/reports/multi_agent_first_loop_20260602/`.
   - Lessons: Git was initialized in this previously untracked folder. NUTS/HMC is now documented as the future default sampler, but the existing inference code remains prototype/legacy random-walk/random-scan Metropolis until a checked implementation replaces it.
 
+## 2026-06-02 Sequential vibe/modal/flight research setup
+- Trial: create setup packet for a staged rocket dome/tray workflow with smoothline vibe PSD, tray vibe test, dome-only modal test, coupled modal test, first flight, and ten later build/flight updates.
+  - Commands:
+    - `python3 -m py_compile scripts/sequential_vibe_modal_flight_setup.py tests/test_sequential_vibe_modal_flight_setup.py`
+    - `bash scripts/run_sequential_vibe_modal_flight_setup.sh`
+    - `shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. New checker wrote `artifacts/tests/sequential_vibe_modal_flight_setup_report.json`; immutable checker hashes all reported `OK`.
+  - Key metrics: dome FEM peak response PSD = 0.1 g^2/Hz; smoothline input 3*GRMS = 28.2690 g; first-build tray vibe observed 3*GRMS = 43.9091 g; flight count = 11; later builds = 10; forcing covariance = Matérn-3/2 with log-frequency length scale 0.08; NUTS active = false.
+  - Artifacts: `artifacts/reports/sequential_vibe_modal_flight_20260602/`, `scripts/sequential_vibe_modal_flight_setup.py`, `tests/test_sequential_vibe_modal_flight_setup.py`, and `docs/agents/claude_sequential_vibe_modal_flight_prompt.md`.
+  - Lessons: the next Claude loop can start from a checked setup packet, but posterior updates still require a real NUTS/HMC implementation. The setup explicitly treats 3 dB flight-to-flight variability as fixed/known and build-to-build plus sensor-noise scales as future learned quantities.
+
 ## 2026-05-27
 - Initialized run log template.
 - Trial: canary harness gate
@@ -243,3 +254,33 @@
   - Key metrics: image legibility report pass = true; figures checked = 20; strict text-heavy figures = `figures/statfem_likelihood_graphical_model_legible.png` and `figures/reference_standards_comparison_cards.png`; strict method figure min font = 12.5 pt vs required 12.0 pt; strict reference figure min font = 11.5 pt vs required 11.5 pt; overlap/clipping/plain-math issues = none for strict figures.
   - Artifacts: added `image_legibility_report.json`; added cache-busting figures `statfem_likelihood_graphical_model_legible.png` and `reference_standards_comparison_cards.png`; updated report, manifest, internal checker, external checker, harness docs, launch prompt, and local skills.
   - Lessons: figure existence and checker booleans are not enough. The first implementation of the hook failed the run by flagging many edge tick labels, then the stricter text-heavy overlap check caught a real overlap in the reference cards. Blocking legibility checks should be strict for method/table/status figures and lighter for ordinary plot axes.
+- Trial: smooth the prior-density plots and compare the full FRF/PSD likelihood against a peak/notch feature likelihood.
+  - Command: `bash scripts/run_fresh_2dof_statfem_fbs.sh`; then `python3 tests/test_fresh_2dof_rerun.py && shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. Internal checker and `tests/test_fresh_2dof_rerun.py` both reported `pass = true`; immutable checker manifest verified with all entries `OK`.
+  - Key metrics: numeric assumptions = 33; Ch2/Ch3 clean relative L2 = 0.673906; image legibility report pass = true with 21 figures checked and no failed figures; `peak_feature_likelihood_comparison_present = true`.
+  - Prior-plot metrics: prior curves in `bayes_parameter_update.png` and `parameter_posterior_samples.png` are now analytic transformed-prior density evaluations rather than finite-sample histograms. Posterior curves are retained-sample KDE summaries.
+  - Peak-feature likelihood metrics: feature residual assumptions are log-frequency sigma = 0.06, FRF log-amplitude sigma = 0.30, and PSD log-amplitude sigma = 0.40. Features are Ch1 dome notch, Ch2 primary notch, Ch3 tray notch, Ch4 tray peak, and Ch5 response-PSD peak.
+  - Comparison metrics: full-curve QOI mean = 12.12008 g with 95% interval [9.88234, 14.28316] g; peak-feature QOI mean = 10.31594 g with 95% interval [6.86282, 16.94469] g; synthetic truth = 10.89493 g. Peak-feature/full-curve 95% width ratios: QOI = 2.2909, dome frequency = 21.57, tray frequency = 27.32, dome damping = 1.923, tray damping = 5.790.
+  - Sampler metrics: full-curve acceptance = 0.4992 with 560 retained samples; peak-feature acceptance = 0.8542 with 540 retained samples.
+  - Artifacts: added `peak_feature_likelihood_summary.json`; added `figures/full_vs_peak_feature_likelihood_comparison.png`; updated `fresh_2dof_statfem_packet.md`, `manifest.json`, `checker_report.json`, `checker_report_external.json`, `scripts/fresh_2dof_statfem_fbs.py`, and `tests/test_fresh_2dof_rerun.py`.
+  - Lessons: finite prior samples can make a smooth prior look jagged; plot analytic prior densities when available and label sampled estimates when not. Peak-only likelihoods are lossy and need explicit feature extraction, feature uncertainty assumptions, and side-by-side posterior/QOI interval comparisons against the whole-data likelihood.
+- Trial: add a peak/notch feature-map benchmark so feature likelihoods are checked against predicted transfer-function features rather than natural frequencies directly.
+  - Command: `bash scripts/run_fresh_2dof_statfem_fbs.sh`; then `shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. Internal and external fresh rerun checkers reported `pass = true`; immutable checker manifest verified with all entries `OK`.
+  - Key metrics: `peak_feature_mapping_benchmark_present = true`; image legibility report pass = true with 23 figures checked and no failed figures; numeric assumptions = 33; Ch2/Ch3 clean relative L2 = 0.673906.
+  - Feature-map metrics: Ch1 clean dome notch = 93.576 Hz versus observed notch = 98.107 Hz, frequency z-score = 0.79; Ch4 clean tray peak = 86.341 Hz versus observed peak = 86.416 Hz, z-score = 0.01. The Ch1 frequency-feature likelihood slice peaks above the synthetic truth because the realized observed notch is shifted high.
+  - Feature-sensitivity metrics: Ch1 notch frequency sensitivity is 1.06 to dome frequency and 0.00 to tray frequency; Ch4 peak sensitivity is 0.97 to tray frequency and 0.00 to dome frequency. Ch2 and Ch3 are mixed coupled features with dome/tray frequency sensitivities of approximately 0.41/0.62 and 0.62/0.45. Ch5 response-PSD peak amplitude is strongly force-center-confounded with sensitivity -3.57.
+  - Artifacts: added `peak_feature_mapping_benchmark.json`, `figures/peak_feature_mapping_benchmark.png`, and `figures/peak_feature_sensitivity_matrix.png`; updated the report, manifest, internal checker, external checker, and feature-likelihood implementation.
+  - Lessons: peak/notch likelihoods should be benchmarked through the same feature extractor used in the likelihood. A feature can be physically meaningful but still falsely informative if the realized observed feature is shifted by discrepancy/noise or if the feature is coupled to multiple parameters.
+- Trial: triage remaining jagged prior visuals and encode analytic-plus-MC prior plotting as a SciML reporting rule.
+  - Command: `bash scripts/run_fresh_2dof_statfem_fbs.sh`; then `python3 tests/test_fresh_2dof_rerun.py && shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. Internal and external fresh rerun checkers reported `pass = true`; immutable checker manifest verified with all entries `OK`.
+  - Key metrics: prior density MC histogram samples = 80,000; MC histogram bins = 90; prior predictive MC samples = 1,600; numeric assumptions = 33; Ch2/Ch3 clean relative L2 = 0.673906; image legibility report pass = true.
+  - Artifacts: regenerated `figures/bayes_parameter_update.png`, `figures/parameter_posterior_samples.png`, and `figures/prior_predictive_vs_data.png`; updated `bayes_update_summary.json`, `fresh_2dof_statfem_packet.md`, `manifest.json`, `checker_report.json`, `checker_report_external.json`, `scripts/fresh_2dof_statfem_fbs.py`, `tests/test_fresh_2dof_rerun.py`, harness docs, and local skills.
+  - Lessons: even after adding analytic prior curves, low-sample prior predictive bands and unlabeled prior histograms can still read as jagged or ambiguous. For SciML packets, analytic prior density should be the primary line; a high-sample MC histogram should be shown and labeled as a sampling diagnostic; prior predictive bands need enough MC samples for stable visual review.
+- Trial: smooth prior/posterior predictive envelope display for the Ch4 prior predictive panel and related spectra.
+  - Command: `bash scripts/run_fresh_2dof_statfem_fbs.sh`; then `python3 tests/test_fresh_2dof_rerun.py && shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. Internal and external fresh rerun checkers reported `pass = true`; immutable checker manifest verified with all entries `OK`.
+  - Key metrics: prior predictive MC samples = 4,000; displayed predictive quantile summaries smoothed = true; Gaussian smoothing sigma = 1.8 frequency-grid points; numeric assumptions = 33; image legibility report pass = true.
+  - Artifacts: regenerated `figures/prior_predictive_vs_data.png`; updated `bayes_update_summary.json`, `fresh_2dof_statfem_packet.md`, `checker_report.json`, `checker_report_external.json`, `scripts/fresh_2dof_statfem_fbs.py`, and `tests/test_fresh_2dof_rerun.py`.
+  - Lessons: a prior predictive envelope is not an analytic prior density. It is a finite-sample, pointwise MC summary of nonlinear forward-model outputs, and sharp moving resonances can make raw quantile curves look jagged even with many samples. If smoothing is used for review readability, label it as display smoothing and record the smoothing parameter.

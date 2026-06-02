@@ -1,0 +1,17 @@
+{
+  "dome_fem_peak_psd_g2_per_hz": 0.09999999999999999,
+  "smoothline_3grms_g": 28.26901890473986,
+  "first_build_vibe_3grms_g_observed": 43.909121761403156,
+  "flight_count": 11,
+  "later_builds": 10,
+  "flight_to_flight_sigma_db_psd_known_not_learned": 3.0,
+  "build_to_build_sigma_db_psd_initial_to_be_learned": 1.5,
+  "sensor_noise_sigma_db_psd_initial_to_be_learned": 0.75,
+  "forcing_covariance": {
+    "type": "Matern",
+    "nu": "3/2",
+    "ell_log_frequency": 0.08
+  },
+  "nuts_active": false,
+  "nuts_backend_recommendation": "NumPyro NUTS"
+}

@@ -1,0 +1,27 @@
+{
+  "trial_id": "sequential_vibe_modal_flight_20260602",
+  "date": "2026-06-02",
+  "command": "python3 scripts/sequential_vibe_modal_flight_setup.py",
+  "report": "artifacts/reports/sequential_vibe_modal_flight_20260602/sequential_research_packet.md",
+  "dataset": "artifacts/reports/sequential_vibe_modal_flight_20260602/sequential_dataset.json",
+  "schema": "artifacts/reports/sequential_vibe_modal_flight_20260602/experiment_schema.json",
+  "checker": "artifacts/tests/sequential_vibe_modal_flight_setup_report.json",
+  "figures": [
+    "figures/smoothline_vs_dome_fem_psd.png",
+    "figures/staged_test_observations.png",
+    "figures/flight_forcing_matern_gp_samples.png",
+    "figures/flight_qoi_interface_sequence.png",
+    "figures/cumulative_flight_ci_preview.png"
+  ],
+  "supporting_docs": [
+    "assumptions_ledger.md",
+    "assumptions_ledger.json",
+    "quantity_contracts.md",
+    "db_conventions.md",
+    "sources.md",
+    "nuts_backend_choice.md"
+  ],
+  "status": "setup_only_no_posterior_inference",
+  "nuts_active": false,
+  "open_next_step": "Implement checked NumPyro NUTS inference for the staged schema."
+}

@@ -1,0 +1,67 @@
+{
+  "dB_convention": {
+    "space": "PSD/power",
+    "factor_formula": "10 ** (dB / 10)",
+    "complex_frf_multiplier": "sqrt(PSD factor)"
+  },
+  "stages": [
+    "pre_data_dome_fem",
+    "tray_vibe_test",
+    "dome_modal_test",
+    "coupled_modal_test",
+    "first_build_flight",
+    "later_builds_and_flights"
+  ],
+  "learning_targets_future_nuts": [
+    "dome natural frequency",
+    "dome damping",
+    "tray natural frequency",
+    "tray damping",
+    "build-to-build variability scale",
+    "sensor-noise scale",
+    "interface acceleration spectrum",
+    "tray 3*GRMS response QOI"
+  ],
+  "fixed_not_learned": {
+    "flight_to_flight_variability_sigma_db_psd": 3.0,
+    "flight_forcing_covariance": "Mat\u00e9rn-3/2 in natural log frequency"
+  },
+  "priors_source": "artifacts/reports/fresh_2dof_statfem_fbs_20260601/fresh_2dof_statfem_packet.md and prior_model_summary from fresh setup",
+  "prior_model_summary": {
+    "parameterization": "transformed positive variables: log(k1/k1_nom), log(k2/k2_nom), log(zeta1), log(zeta2), log(force_amp), log(force_fc)",
+    "stiffness_prior": {
+      "distribution": "log(k/k_nom) ~ Normal(0, 0.18^2), truncated to log([0.55, 1.65])",
+      "sigma_log_stiffness": 0.18,
+      "approx_95_factor_untruncated": [
+        0.7027177228683976,
+        1.4230465056696404
+      ]
+    },
+    "natural_frequency_prior": {
+      "distribution": "because f is proportional to sqrt(k), log(f/f_nom) ~ Normal(0, 0.09^2) before truncation",
+      "sigma_log_frequency": 0.09,
+      "approx_95_factor_untruncated": [
+        0.8382826032242334,
+        1.1929151292818951
+      ],
+      "dome_prior_center_hz": 110.0,
+      "tray_prior_center_hz": 75.0
+    },
+    "damping_prior": {
+      "distribution": "log(zeta/zeta_nom) ~ Normal(0, 0.35^2), with zeta truncated to [0.004, 0.090]",
+      "sigma_log_damping_ratio": 0.35,
+      "approx_95_factor_untruncated": [
+        0.5035863913063715,
+        1.985756599589326
+      ],
+      "dome_prior_center_zeta": 0.018,
+      "tray_prior_center_zeta": 0.026
+    },
+    "force_prior": {
+      "force_amp": "log(A/0.85 N/sqrt(Hz)) ~ Normal(0, 0.65^2), truncated to [0.10, 5.0]",
+      "force_amp_sigma_log": 0.65,
+      "force_center": "log(fc/95 Hz) ~ Normal(0, 0.22^2), truncated to [35, 170] Hz",
+      "force_center_sigma_log": 0.22
+    }
+  }
+}

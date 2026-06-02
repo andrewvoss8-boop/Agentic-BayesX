@@ -62,6 +62,10 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 - For frequency-domain structural dynamics plots, use log-scaled frequency axes unless the artifact explicitly justifies linear frequency.
 - Avoid dB unless requested or standard for the quantity; state linear/dB scale explicitly.
 - Show posterior/QOI samples and residual/zoom views when a full-scale overlay can hide meaningful differences.
+- Plot analytic prior densities when available and, for SciML review packets, show a labeled high-sample MC prior histogram alongside them as a sampling diagnostic. Record the MC sample count/bins so jaggedness is not mistaken for prior structure.
+- Distinguish prior densities from prior predictive envelopes. Predictive envelopes are finite-sample MC summaries of forward-model outputs; if quantile smoothing is used for readability, label it as display smoothing and record the sample count and smoothing parameter.
+- When comparing whole-data likelihoods to peak/feature-summary likelihoods, show the side-by-side posterior and QOI consequences, including interval-width ratios and the feature/noise assumptions.
+- For peak/notch feature likelihoods, benchmark observed features against predicted transfer-function features from the same forward model and report feature sensitivities; do not silently equate a peak or notch with a natural frequency.
 - Run an image-legibility QA hook for generated review figures. Text-heavy figures must have readable font sizes, no clipped labels, no overlapping text, and no plain underscore/caret equation strings masquerading as rendered math.
 
 ### Sensitivity Gate
@@ -75,6 +79,8 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 - Check for duplicate channels, wrong units, wrong axes, convention mismatches, unrealistic limiting behavior, hidden bias, missing figures, missing method summaries, missing data/replicate counts, and missing likelihood data-usage choices.
 - Check generated image legibility with an artifact-backed report; file existence is not enough when a figure is unreadable.
 - Check whether the likelihood uses whole FRF/PSD/time-history data, selected bands, or peak/feature summaries; require the report to state the choice explicitly.
+- Check that feature-summary likelihood comparisons include the selected features, feature residual/noise assumptions, and posterior/QOI differences versus the whole-data likelihood.
+- Check that peak/notch feature likelihoods include a feature-map or sensitivity benchmark that can expose falsely informative, redundant, or confounded features.
 - Do not rely on visual appeal or artifact existence as verification.
 - If a checker cannot encode the physics yet, document the manual review checklist and residual risk.
 

@@ -73,6 +73,10 @@ Required fields:
 | Not inferred | Latent fields, discrepancy realizations, noise scales, hyperparameters, replicate effects, or variability terms that are generated or assumed but not inferred |
 | Data usage | Whole FRF/PSD/time-history likelihood, selected bands, or peak/feature-summary likelihood |
 | QOI propagation | Whether QOI samples come from posterior samples, posterior predictive samples, a mean model, or a deterministic plug-in value |
+| Prior visualization | Analytic prior density plus labeled high-sample MC prior histogram when available; MC sample count/bins recorded |
+| Prior predictive visualization | MC sample count, raw-versus-smoothed quantile status, and smoothing parameter if display smoothing is used |
+| Likelihood comparisons | If whole-data and peak/feature likelihoods are compared, selected features, feature uncertainty assumptions, and interval/QOI changes |
+| Feature-map benchmark | For peak/notch features, predicted feature location/amplitude versus structural parameters and feature sensitivity/confounding diagnostics |
 
 Why: plots of posterior fit can look persuasive while hiding the central methodological choices. A reviewer should not have to infer from code whether the workflow used the whole FRF, only a peak location, one flight, many flights, fixed discrepancy, or inferred discrepancy.
 
@@ -187,6 +191,9 @@ Required:
 - notes entry with commands and metrics;
 - checker-backed method visibility: report existence of method summary, graphical model, likelihood equation, data count, whole-data versus peak/feature likelihood choice, and inferred/fixed/not-inferred variables;
 - checker-backed figure legibility: generated image QA should record resolution, font-size floor, clipped text, overlap checks, and plain-text math checks for text-heavy figures;
+- checker-backed prior/likelihood comparison metadata: analytic prior density and high-sample MC prior histogram should both be shown/labeled when available, prior predictive MC sample count should be recorded, and feature-summary likelihood comparisons should report selected features, feature uncertainty assumptions, and posterior/QOI interval-width changes;
+- checker-backed prior predictive display metadata: predictive envelopes should declare sample count and whether pointwise quantiles are raw or smoothed for visualization;
+- checker-backed feature-map diagnostics: peak/notch likelihoods should compare observed features to predicted transfer-function features and report sensitivities that expose redundant, direct, coupled, and forcing-confounded features;
 - no unstated method swaps;
 - no tuning only to pass a checker;
 - failed or concerning findings reported as findings, not hidden as limitations.

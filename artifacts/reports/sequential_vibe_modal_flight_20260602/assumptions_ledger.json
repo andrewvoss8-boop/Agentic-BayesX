@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "assumption": "PSD-space dB convention",
+      "value": "factor = 10 ** (dB / 10)",
+      "units": "dimensionless PSD multiplier",
+      "source": "Human clarification on 2026-06-02",
+      "rationale": "The smoothline, flight-to-flight, build-to-build, and sensor-noise values are PSD/power quantities.",
+      "sensitivity_priority": "High",
+      "where_used": "All staged data generation"
+    },
+    {
+      "assumption": "Smoothline PSD points",
+      "value": [
+        [
+          20.0,
+          0.01
+        ],
+        [
+          100.0,
+          0.1
+        ],
+        [
+          750.0,
+          0.1
+        ],
+        [
+          2000.0,
+          0.001
+        ]
+      ],
+      "units": "Hz, g^2/Hz",
+      "source": "Human research plan",
+      "rationale": "Defines the vibe-test input spec by log-log interpolation.",
+      "sensitivity_priority": "High",
+      "where_used": "Tray vibe test and reference plots"
+    },
+    {
+      "assumption": "Flight-to-flight variability",
+      "value": 3.0,
+      "units": "dB, PSD space",
+      "source": "Human research plan",
+      "rationale": "Known forcing variability; fixed rather than learned.",
+      "sensitivity_priority": "High",
+      "where_used": "Mat\u00e9rn GP forcing samples"
+    },
+    {
+      "assumption": "Build-to-build initial variability",
+      "value": 1.5,
+      "units": "dB, PSD space",
+      "source": "Human research plan",
+      "rationale": "Initial generated scale; future NUTS/HMC model should learn this scale.",
+      "sensitivity_priority": "High",
+      "where_used": "Build-level dome/tray effects"
+    },
+    {
+      "assumption": "Sensor-noise initial variability",
+      "value": 0.75,
+      "units": "dB, PSD space",
+      "source": "Setup assumption",
+      "rationale": "A concrete starting value is needed for preview data; future NUTS/HMC model should learn it.",
+      "sensitivity_priority": "High",
+      "where_used": "Fresh sensor noise for each observation"
+    },
+    {
+      "assumption": "Flight forcing mean offset",
+      "value": -6.0,
+      "units": "dB, PSD space",
+      "source": "Human research plan",
+      "rationale": "Mean flight forcing PSD is lower than the pre-data dynamics engineer's original forcing function.",
+      "sensitivity_priority": "High",
+      "where_used": "Flight forcing GP mean"
+    },
+    {
+      "assumption": "Flight forcing covariance",
+      "value": "Mat\u00e9rn-3/2, ell=0.08",
+      "units": "natural log frequency",
+      "source": "Human research plan",
+      "rationale": "Use Mat\u00e9rn, not RBF, with tight frequency correlation.",
+      "sensitivity_priority": "High",
+      "where_used": "Flight forcing GP samples"
+    },
+    {
+      "assumption": "NUTS/HMC status",
+      "value": "not implemented in this setup",
+      "units": "categorical",
+      "source": "Project sampler rule",
+      "rationale": "Avoid claiming posterior updates before a checked NUTS/HMC implementation exists.",
+      "sensitivity_priority": "High",
+      "where_used": "Report and next task"
+    }
+  ]
+}

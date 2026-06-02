@@ -1,0 +1,249 @@
+{
+  "comparison_label": "Whole FRF/PSD likelihood versus peak/notch feature likelihood",
+  "feature_likelihood_assumptions": {
+    "description": "Lossy comparison likelihood using only selected peak/notch frequency and magnitude features, not whole curves.",
+    "frf_log_frequency_sigma": 0.06,
+    "frf_log_amplitude_sigma": 0.3,
+    "psd_log_frequency_sigma": 0.06,
+    "psd_log_amplitude_sigma": 0.4,
+    "independence_assumption": "Feature residuals are treated as independent for this comparison artifact."
+  },
+  "observed_features": {
+    "ch1_dome_notch": {
+      "frequency_hz": 98.10667884121362,
+      "log_amplitude": -3.4986566229199525,
+      "amplitude": 0.030237977155325876,
+      "kind": "min",
+      "source": "FRF",
+      "channel": "ch1_dome_only_reciprocal_inertance"
+    },
+    "ch2_primary_notch": {
+      "frequency_hz": 129.13418369046082,
+      "log_amplitude": -2.4636650894753984,
+      "amplitude": 0.08512239734606815,
+      "kind": "min",
+      "source": "FRF",
+      "channel": "ch2_coupled_primary_reciprocal_inertance"
+    },
+    "ch3_tray_notch": {
+      "frequency_hz": 60.3154259280367,
+      "log_amplitude": -3.693204738010536,
+      "amplitude": 0.02489210141680176,
+      "kind": "min",
+      "source": "FRF",
+      "channel": "ch3_coupled_tray_reciprocal_inertance"
+    },
+    "ch4_tray_peak": {
+      "frequency_hz": 86.41637186817336,
+      "log_amplitude": 3.3348575081563467,
+      "amplitude": 28.074382568245852,
+      "kind": "max",
+      "source": "FRF",
+      "channel": "ch4_standalone_tray_accel_transmissibility"
+    },
+    "ch5_response_psd_peak": {
+      "frequency_hz": 62.3983461026869,
+      "log_amplitude": 0.6744445525764604,
+      "amplitude": 1.9629423618310446,
+      "kind": "max",
+      "source": "PSD",
+      "channel": "response_psd"
+    }
+  },
+  "truth_features": {
+    "ch1_dome_notch": {
+      "frequency_hz": 93.5762661917528,
+      "log_amplitude": -3.10150766678089,
+      "amplitude": 0.044981334381632654,
+      "kind": "min",
+      "source": "FRF",
+      "channel": "ch1_dome_only_reciprocal_inertance"
+    },
+    "ch2_primary_notch": {
+      "frequency_hz": 129.6826557815142,
+      "log_amplitude": -2.4769466943271254,
+      "amplitude": 0.08399931001101649,
+      "kind": "min",
+      "source": "FRF",
+      "channel": "ch2_coupled_primary_reciprocal_inertance"
+    },
+    "ch3_tray_notch": {
+      "frequency_hz": 62.17699578345321,
+      "log_amplitude": -3.5926767948058114,
+      "amplitude": 0.027524554141758806,
+      "kind": "min",
+      "source": "FRF",
+      "channel": "ch3_coupled_tray_reciprocal_inertance"
+    },
+    "ch4_tray_peak": {
+      "frequency_hz": 86.34061430294412,
+      "log_amplitude": 3.1957125228927907,
+      "amplitude": 24.42757269772661,
+      "kind": "max",
+      "source": "FRF",
+      "channel": "ch4_standalone_tray_accel_transmissibility"
+    },
+    "ch5_response_psd_peak": {
+      "frequency_hz": 62.37813545578798,
+      "log_amplitude": 0.687059748750471,
+      "amplitude": 1.9878621181277474,
+      "kind": "max",
+      "source": "PSD",
+      "channel": "response_psd"
+    }
+  },
+  "parameter_comparison": {
+    "full_curve": {
+      "dome_hz": {
+        "mean": 93.45161231009027,
+        "median": 93.47174479743295,
+        "sd": 0.14672142505145488,
+        "q025": 93.19869788263061,
+        "q05": 93.19869788263061,
+        "q95": 93.67540165109165,
+        "q975": 93.79498753772323,
+        "truth": 93.49999999999999,
+        "nominal": 110.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "tray_hz": {
+        "mean": 86.24864704665018,
+        "median": 86.2534229124947,
+        "sd": 0.08083814112479219,
+        "q025": 86.0417789980289,
+        "q05": 86.10143307080159,
+        "q95": 86.35438237367393,
+        "q975": 86.39815006108721,
+        "truth": 86.24999999999999,
+        "nominal": 75.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "zeta1": {
+        "mean": 0.022169222277527326,
+        "median": 0.021986984153744688,
+        "sd": 0.0016391717005480363,
+        "q025": 0.01911576169960109,
+        "q05": 0.01987122465965819,
+        "q95": 0.024827047016228277,
+        "q975": 0.025912536800225774,
+        "truth": 0.0225,
+        "nominal": 0.018,
+        "units": "ratio",
+        "truth_in_95_ci": true
+      },
+      "zeta2": {
+        "mean": 0.021863546015131796,
+        "median": 0.021769902180756046,
+        "sd": 0.0009607511235347057,
+        "q025": 0.020177342278002077,
+        "q05": 0.02041188227335742,
+        "q95": 0.023504851940540215,
+        "q975": 0.02380205024544761,
+        "truth": 0.0195,
+        "nominal": 0.026,
+        "units": "ratio",
+        "truth_in_95_ci": false
+      }
+    },
+    "peak_feature": {
+      "dome_hz": {
+        "mean": 100.2222505040065,
+        "median": 100.21497905392384,
+        "sd": 3.2925755225685656,
+        "q025": 93.9584399283673,
+        "q05": 94.49622641275185,
+        "q95": 105.3501332292365,
+        "q975": 106.82048827251346,
+        "truth": 93.49999999999999,
+        "nominal": 110.0,
+        "units": "Hz",
+        "truth_in_95_ci": false
+      },
+      "tray_hz": {
+        "mean": 81.01912101156849,
+        "median": 80.9530335901998,
+        "sd": 2.7876351245848427,
+        "q025": 76.53938670470188,
+        "q05": 76.73175635828257,
+        "q95": 85.74112607698537,
+        "q975": 86.27412723051178,
+        "truth": 86.24999999999999,
+        "nominal": 75.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "zeta1": {
+        "mean": 0.015346810499692694,
+        "median": 0.015516370034057135,
+        "sd": 0.0034191519996847964,
+        "q025": 0.008760012610164397,
+        "q05": 0.00913806117003048,
+        "q95": 0.02039503391599026,
+        "q975": 0.021829737988190746,
+        "truth": 0.0225,
+        "nominal": 0.018,
+        "units": "ratio",
+        "truth_in_95_ci": false
+      },
+      "zeta2": {
+        "mean": 0.023837547417846914,
+        "median": 0.023339208042394574,
+        "sd": 0.004741685913131522,
+        "q025": 0.01525406727793934,
+        "q05": 0.01635414082766014,
+        "q95": 0.0332877272614398,
+        "q975": 0.036240126517392536,
+        "truth": 0.0195,
+        "nominal": 0.026,
+        "units": "ratio",
+        "truth_in_95_ci": true
+      }
+    }
+  },
+  "qoi_comparison": {
+    "full_curve": {
+      "mean": 12.120083922034894,
+      "median": 12.109303527343265,
+      "sd": 1.1245281186240708,
+      "q025": 9.88233886756201,
+      "q05": 10.219206669450895,
+      "q95": 13.9447649404451,
+      "q975": 14.283163685443622,
+      "truth": 10.894934079492213,
+      "units": "g",
+      "definition": "3 * GRMS of tray acceleration response PSD",
+      "mean_bias": 1.225149842542681,
+      "fraction_above_truth": 0.8607142857142858
+    },
+    "peak_feature": {
+      "mean": 10.315938711630103,
+      "median": 9.78729640157459,
+      "sd": 2.4935747380715996,
+      "q025": 6.862817651902607,
+      "q05": 7.01059390188049,
+      "q95": 15.360948195189989,
+      "q975": 16.94468743934901,
+      "truth": 10.894934079492213,
+      "units": "g",
+      "definition": "3 * GRMS of tray acceleration response PSD",
+      "mean_bias": -0.5789953678621096,
+      "fraction_above_truth": 0.3111111111111111
+    }
+  },
+  "interval_width_ratio_peak_feature_over_full_curve": {
+    "dome_hz": 21.57013497433283,
+    "tray_hz": 27.316304646814807,
+    "zeta1": 1.922930387504675,
+    "zeta2": 5.789724145485537
+  },
+  "qoi_95_width_ratio_peak_feature_over_full_curve": 2.290904592812088,
+  "sampler": {
+    "full_curve_acceptance_rate": 0.4992105263157895,
+    "peak_feature_acceptance_rate": 0.8541666666666666,
+    "full_curve_retained_samples": 560,
+    "peak_feature_retained_samples": 540
+  },
+  "interpretation_warning": "The peak-feature likelihood is intentionally lossy and uses independent feature residuals. It is a comparison artifact, not a recommended replacement for the whole-curve likelihood."
+}

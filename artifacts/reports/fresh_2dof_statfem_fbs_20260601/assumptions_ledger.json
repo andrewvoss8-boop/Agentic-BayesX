@@ -325,6 +325,33 @@
       "where_used": "Likelihood/report/checker"
     },
     {
+      "assumption": "Peak-feature comparison frequency scatter",
+      "value": 0.06,
+      "units": "natural log frequency",
+      "source": "Comparison assumption",
+      "rationale": "Feature-only likelihood needs a peak-picking frequency error model",
+      "sensitivity_priority": "High",
+      "where_used": "Peak-feature comparison"
+    },
+    {
+      "assumption": "Peak-feature comparison FRF amplitude scatter",
+      "value": 0.3,
+      "units": "natural log amplitude",
+      "source": "Comparison assumption",
+      "rationale": "Lumped peak/notch amplitude uncertainty for FRF feature residuals",
+      "sensitivity_priority": "High",
+      "where_used": "Peak-feature comparison"
+    },
+    {
+      "assumption": "Peak-feature comparison PSD amplitude scatter",
+      "value": 0.4,
+      "units": "natural log PSD amplitude",
+      "source": "Comparison assumption",
+      "rationale": "Lumped response-PSD peak amplitude uncertainty for feature residuals",
+      "sensitivity_priority": "High",
+      "where_used": "Peak-feature comparison"
+    },
+    {
       "assumption": "Frequency plot x-axis",
       "value": "log",
       "units": "categorical",

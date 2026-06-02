@@ -6,6 +6,17 @@
 - [ ] Add MDOF reduced-order transfer-function prototype tests.
 - [ ] Inspect `/Users/avoss/Downloads/check pages.pdf` for incorrect crop seams; record PDF page numbers, visible textbook page numbers, assumptions, and validation artifacts.
 
+## 2026-06-02 Sequential Vibe/Modal/Flight Research Setup
+- [x] Create a separate sequential research packet so the existing fresh 2DOF run is not overwritten.
+- [x] Document PSD-space dB conventions, forcing smoothline assumptions, and what is learned versus fixed.
+- [x] Add a log-log smoothline PSD generator from the four-point test spec.
+- [x] Add staged synthetic data schema for dome FEM, tray vibe, dome modal, coupled modal, first flight, and ten later build/flight updates.
+- [x] Add build-to-build, flight-to-flight, and sensor-noise bookkeeping, with known 3 dB flight variability and learnable build/sensor variability.
+- [x] Use a Matérn covariance for sampled flight forcing functions, not an RBF covariance.
+- [x] Generate first-pass plots for spec/forcing, staged observations, build effects, and flight-by-flight QOI/interface summaries.
+- [x] Add a NUTS/HMC backend choice note without claiming NUTS is active.
+- [x] Add and run checker-backed acceptance for the new setup.
+
 ## 2026-06-02 Plain-English Multi-Agent Scaffold
 - [x] Initialize Git with a minimal cache-focused `.gitignore`.
 - [x] Sync `CLAUDE.md` with the stronger engineering gates in `AGENTS.md`.
@@ -73,6 +84,32 @@
 - [x] Add an image-generation legibility hook that records resolution, font size, clipping, and overlap checks.
 - [x] Make the fresh checker require the image legibility report to pass.
 - [x] Regenerate, visually inspect, validate, and log the fix.
+
+## 2026-06-02 Smooth Priors and Peak-Feature Likelihood Comparison
+- [x] Replace sampled/histogram prior curves with analytic smooth prior PDFs in Bayes parameter plots.
+- [x] Add a peak/feature-only likelihood variant using resonance/notch/PSD peak frequencies and amplitudes.
+- [x] Run a side-by-side posterior/QOI comparison against the full FRF/PSD likelihood.
+- [x] Add figures, JSON summaries, report section, checker coverage, and image legibility QA.
+- [x] Regenerate, validate, and log the result.
+
+## 2026-06-02 Peak/Notch Feature Map Benchmark
+- [x] Add a deterministic benchmark showing predicted feature locations versus structural natural frequencies.
+- [x] Add feature-sensitivity diagnostics for uninformative or confounded peak/notch features.
+- [x] Document that the feature likelihood compares observed features to predicted transfer-function features, not directly to true natural frequencies.
+- [x] Add checker coverage, regenerate, validate, and log the result.
+
+## 2026-06-02 Prior Visualization Triage
+- [x] Replace remaining low-sample prior visual summaries with analytic-prior primary curves plus high-sample MC histogram diagnostics.
+- [x] Increase prior predictive Monte Carlo samples enough that bands are visually stable.
+- [x] Add checker/report language that analytic and MC prior views are both shown and labeled.
+- [x] Update SciML harness docs and local skills with the broadly applicable prior-visualization rule.
+- [x] Regenerate, validate, visually inspect, and log the result.
+
+## 2026-06-02 Prior Predictive Band Smoothing
+- [x] Smooth displayed prior/posterior predictive quantile bands over log-frequency while labeling them as smoothed MC summaries.
+- [x] Increase prior predictive MC sample count and record smoothing/sample metadata in machine-readable artifacts.
+- [x] Add checker/report/docs guidance distinguishing analytic priors from prior predictive envelopes.
+- [x] Regenerate, validate, visually inspect, and log the result.
 
 ## 2026-05-27 Codex Review + Sampler Fix
 - [x] Read `docs/CODEX.md`, design assumptions, source, tests, and prior notes.

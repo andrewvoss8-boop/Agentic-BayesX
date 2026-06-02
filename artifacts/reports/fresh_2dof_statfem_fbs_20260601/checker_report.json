@@ -1,7 +1,7 @@
 {
   "missing_files": [],
   "missing_snippets": [],
-  "numeric_assumption_count": 30,
+  "numeric_assumption_count": 33,
   "channel_2_3_relative_l2": 0.6739064407171255,
   "checks": {
     "required_files_exist": true,
@@ -21,6 +21,8 @@
     "statfem_noise_model_documented": true,
     "prior_likelihood_methodology_documented": true,
     "method_summary_documented": true,
+    "peak_feature_likelihood_comparison_present": true,
+    "peak_feature_mapping_benchmark_present": true,
     "image_legibility_report_pass": true,
     "checker_status_and_limitations_included": true
   },

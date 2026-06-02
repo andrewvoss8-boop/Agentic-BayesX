@@ -85,6 +85,9 @@ Optional: use `--dangerously-bypass-approvals-and-sandbox` only if you accept fu
 10. Every run must identify relevant standards/benchmarks/references; if a prompt mentions one, compare against it before accepting outputs.
 11. Probabilistic structural-dynamics packets must start with a method summary and run-specific graphical model that state inferred variables, fixed assumptions, non-inferred latent variables/hyperparameters, data/replicate count, and whether the likelihood uses whole FRF/PSD/time-history data or peak/feature summaries.
 12. Generated review figures need image-legibility QA. Text-heavy figures must be checked for readable font size, clipping, overlapping text, and plain underscore/caret equation strings.
+13. Prior plots should use analytic densities when available and show a labeled high-sample MC histogram beside them as a sampling diagnostic. Record MC sample counts/bins, and avoid low-sample prior predictive bands that look like prior structure. If a peak/feature-summary likelihood is used or compared, report the selected features, feature-noise assumptions, and posterior/QOI interval changes versus the whole-data likelihood.
+13a. Prior predictive envelopes are MC summaries of forward-model outputs, not analytic priors. If pointwise quantile bands are smoothed for display, label them as smoothed MC summaries and record the sample count plus smoothing parameter.
+14. Peak/notch feature likelihoods must benchmark observed features against predicted transfer-function features from the same forward model. Do not imply peaks/notches equal natural frequencies without a quantity-specific feature map and sensitivity/confounding diagnostic.
 
 ## Suggested first session (beginner-friendly)
 
