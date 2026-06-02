@@ -22,7 +22,9 @@ round-1 fixes in the round-2 task card. Headline ask = the per-flight coupled IN
 RESPONSE PSD with mean/95/99 bands vs the original test spec, as an animated GIF; plus the forcing
 overlay and the flight-3*GRMS-vs-vibe-RMS overlay. Keep your round-1 strengths (real NUTS, 4 chains,
 non-centered, convergence gate) AND this round report R-hat/ESS over the RAW latents too, not only the
-monitored marginals. Resolve the QOI-driving resonances (no clipped peaks) and run a resolution
+monitored marginals; meet the source-backed bar (rank-normalized split-R-hat < 1.01; bulk AND tail
+ESS >= 100 x chains; 0 divergences ideal — see the task card). Resolve the QOI-driving resonances (no
+clipped peaks) and run a resolution
 sensitivity check. Every figure gets a legend. Write runtime.json.
 
 Write ALL outputs to: artifacts/reports/runner_claude_opus48_round2_20260602/

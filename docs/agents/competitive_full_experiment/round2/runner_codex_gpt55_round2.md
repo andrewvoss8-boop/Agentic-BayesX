@@ -23,7 +23,9 @@ overlay and the flight-3*GRMS-vs-vibe-RMS overlay.
 Round-1 fixes specific to you: (a) DO try real NUTS first — install NumPyro in a venv as Opus did on
 the same Python 3.9.6; only fall back to a labeled custom HMC if install genuinely fails, and say why.
 (b) Use >=4 chains, longer warmup, non-centered hierarchical latents, and actually SAMPLE the
-per-build/flight latents; self-gate convergence over ALL variables (your round-1 R-hat hit 4.57).
+per-build/flight latents; self-gate convergence over ALL variables to the source-backed bar
+(rank-normalized split-R-hat < 1.01; bulk AND tail ESS >= 100 x chains; 0 divergences ideal — see the
+task card; your round-1 R-hat hit 4.57).
 (c) Consume the shared sequential_dataset.json grid; do NOT regenerate a coarse 56-point grid that
 clips the tray peak. (d) Give the first-flight dual-axis panel a legend.
 Resolve the QOI-driving resonances and run a resolution sensitivity check. Write runtime.json.

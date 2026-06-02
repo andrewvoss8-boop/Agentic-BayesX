@@ -21,7 +21,9 @@ Then do Step 0 (priority clarification -> priority_deliverables.md) and the prio
 round-1 fixes in the round-2 task card. Headline ask = the per-flight coupled INTERFACE ACCELERATION
 RESPONSE PSD with mean/95/99 bands vs the original test spec, as an animated GIF; plus the forcing
 overlay and the flight-3*GRMS-vs-vibe-RMS overlay. Use real NUTS, >=4 chains, non-centered latents,
-and self-gate convergence over ALL variables. Resolve the QOI-driving resonances (no clipped peaks)
+and self-gate convergence over ALL variables to the source-backed bar (rank-normalized split-R-hat
+< 1.01; bulk AND tail ESS >= 100 x chains; 0 divergences ideal — see the task card). Resolve the
+QOI-driving resonances (no clipped peaks)
 and run a resolution sensitivity check. Every figure gets a legend. Write runtime.json.
 
 Write ALL outputs to: artifacts/reports/runner_cursor_composer25_round2_20260602/
