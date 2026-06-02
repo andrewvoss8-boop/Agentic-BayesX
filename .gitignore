@@ -7,4 +7,5 @@ __pycache__/
 artifacts/.matplotlib/
 .venv_nuts/
 .venv/
+.venv*/
 

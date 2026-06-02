@@ -1,0 +1,14 @@
+{
+  "runner": "cursor_composer25",
+  "output_dir": "artifacts/reports/runner_cursor_composer25_20260602",
+  "replay_command": "bash scripts/run_sequential_vibe_modal_flight_inference.sh",
+  "setup_sources": [
+    "artifacts/reports/sequential_vibe_modal_flight_20260602"
+  ],
+  "nuts_active": true,
+  "figures": [
+    "figures/truth_vs_observed_staged_data.png",
+    "figures/full_vs_peak_feature_likelihood_comparison.png",
+    "figures/posterior_predictive_input_and_qoi.png"
+  ]
+}

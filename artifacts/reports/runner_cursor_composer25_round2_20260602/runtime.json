@@ -1,0 +1,43 @@
+{
+  "active_runtime_s": 223.218,
+  "elapsed_wallclock_s": 223.604,
+  "note": "Final artifact-completion replay (skipped 11 sequential NUTS frames because GIF already existed). First full pass including 11 sequential MCMC frames (400+400 each) had ~783 s wall before JSON fix; add ~560 s active if counting that pass (~13 min total wall).",
+  "first_pass_wallclock_s_including_sequential_gif": 783,
+  "commands": [
+    {
+      "command": "load_data_and_consts",
+      "active_runtime_s": 35.423,
+      "detail": ""
+    },
+    {
+      "command": "nuts_full",
+      "active_runtime_s": 54.984,
+      "detail": "warmup=1000 samples=1000"
+    },
+    {
+      "command": "nuts_peak",
+      "active_runtime_s": 89.835,
+      "detail": "warmup=1000 samples=1000"
+    },
+    {
+      "command": "round1_figures",
+      "active_runtime_s": 3.183,
+      "detail": ""
+    },
+    {
+      "command": "sequential_gif_11_frames",
+      "active_runtime_s": 31.309,
+      "detail": ""
+    },
+    {
+      "command": "priority_plots",
+      "active_runtime_s": 7.625,
+      "detail": ""
+    },
+    {
+      "command": "resolution_sensitivity",
+      "active_runtime_s": 0.859,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "failures": [],
+  "shasum_ok": true,
+  "shasum_stdout": "harness/checkers/verify_artifacts.py: OK\nharness/checkers/check_canary.py: OK\ntests/test_posterior_recovery.py: OK\ntests/test_mdof_transfer.py: OK\n",
+  "shasum_stderr": "",
+  "nuts_active": true
+}

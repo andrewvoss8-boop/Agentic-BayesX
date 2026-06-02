@@ -1,0 +1,12 @@
+{
+  "nuts_active": true,
+  "sampler": "NumPyro NUTS",
+  "flight_to_flight_sigma_db_psd_known_not_learned": 3.0,
+  "forcing_covariance": {
+    "type": "Matern",
+    "nu": "3/2",
+    "ell_log_frequency": 0.08
+  },
+  "learned_sigma_build_db_median": 3.9060840606689453,
+  "learned_sigma_sensor_db_median": 3.1017775535583496
+}

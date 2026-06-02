@@ -1,0 +1,145 @@
+{
+  "checks": [
+    {
+      "name": "immutable:harness/checkers/verify_artifacts.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "immutable:harness/checkers/check_canary.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "immutable:tests/test_posterior_recovery.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "immutable:tests/test_mdof_transfer.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:priority_deliverables.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:runtime.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:nuts_diagnostics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:nuts_diagnostics.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:resolution_sensitivity.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:results.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:packet.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:commands.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:files_changed.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:assumptions_ledger.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:known_failures.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:review_request.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:manifest.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file:posterior_samples.npz",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure:07_interface_response_psd_vs_spec_evolution.gif",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure:08_forcing_overlay_discrete_flights.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure:09_tray_3grms_vs_vibe_test_refs.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure:10_interface_response_psd_vs_spec_final.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure:11_resolution_peak_zoom.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure:01_truth_vs_observed.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime_active_le_wall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full_is_nuts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "has_convergence_gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reports_all_param_table",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "status": "pass"
+}

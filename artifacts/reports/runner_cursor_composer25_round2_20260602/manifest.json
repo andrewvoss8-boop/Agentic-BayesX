@@ -1,0 +1,6 @@
+{
+  "trial_id": "runner_cursor_composer25_round2_20260602",
+  "runner": "Cursor Composer 2.5",
+  "sampler": "NUTS (numpyro)",
+  "nuts_active": true
+}

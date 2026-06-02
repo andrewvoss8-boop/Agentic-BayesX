@@ -1,0 +1,1 @@
+Please verify: GIF legend/axes, envelope interpretation (spec vs interface PSD), convergence table includes build_raw latents, resolution peak shift in resolution_sensitivity.json.

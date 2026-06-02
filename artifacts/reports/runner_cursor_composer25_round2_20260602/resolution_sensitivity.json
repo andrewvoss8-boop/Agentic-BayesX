@@ -1,0 +1,21 @@
+{
+  "coarse_n_freq": 260,
+  "refined_n_freq": 308,
+  "half_power_bandwidth_hz_assumed": 3.8427137702726224,
+  "zeta1_median_used": 0.02227660156679781,
+  "interface_psd_peak_freq_hz": {
+    "coarse": 62.40774493050605,
+    "refined": 62.40774493050605
+  },
+  "interface_psd_peak_g2_per_hz": {
+    "coarse": 0.02648675692856172,
+    "refined": 0.02648675692856172,
+    "relative_change": 0.0
+  },
+  "tray_3grms_structural_g": {
+    "coarse": 1.0313876710924024,
+    "refined": 1.031379508376697,
+    "relative_change": -7.9143041303921e-06
+  },
+  "rationale": "Mode-local geomspace refinement near tray ~86 Hz and dome ~93.5 Hz; half-power Df=2*zeta*f_n."
+}

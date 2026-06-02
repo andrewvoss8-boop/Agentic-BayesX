@@ -1,0 +1,238 @@
+{
+  "full": {
+    "label": "full",
+    "sampler": "NUTS (numpyro)",
+    "num_chains": 4,
+    "nuts_active": true,
+    "converged_all_variables": true,
+    "convergence_bar": {
+      "max_rank_normalized_split_rhat": 1.01,
+      "min_bulk_ess": 400,
+      "min_tail_ess": 400,
+      "divergence_fraction_fail_above": 0.02,
+      "source": "artifacts/reports/runner_comparison_20260602/reader_web_verified_sources.md"
+    },
+    "divergences_total": 0,
+    "divergence_fraction": 0.0,
+    "final_step_size": 0.052052027544971416,
+    "mean_accept_prob": 0.9487011649864828,
+    "max_leapfrog_steps": 127,
+    "mean_leapfrog_steps": 66.344,
+    "max_observed_tree_depth": 7.0,
+    "param_table": {
+      "dome_build": {
+        "r_hat": 1.0018585676031304,
+        "ess_bulk": 3075.7766723417512,
+        "ess_tail": 2388.9652623165434
+      },
+      "dome_build_raw": {
+        "r_hat": 1.0024563794113235,
+        "ess_bulk": 901.4619299057999,
+        "ess_tail": 997.8708147450984
+      },
+      "dome_hz": {
+        "r_hat": 1.0001545538323398,
+        "ess_bulk": 5405.450022331178,
+        "ess_tail": 3245.265992923892
+      },
+      "q_iface_struct_meanforce": {
+        "r_hat": 1.002619898663669,
+        "ess_bulk": 6979.784287155059,
+        "ess_tail": 2862.3117954764557
+      },
+      "q_tray_struct_meanforce": {
+        "r_hat": 1.0019130867249615,
+        "ess_bulk": 6589.018619147494,
+        "ess_tail": 2768.646795206047
+      },
+      "sigma_build_db": {
+        "r_hat": 1.0024492468416193,
+        "ess_bulk": 903.5528655868425,
+        "ess_tail": 1000.2348325655453
+      },
+      "sigma_build_ln": {
+        "r_hat": 1.0024492468416193,
+        "ess_bulk": 903.5528655868425,
+        "ess_tail": 1000.2348325655453
+      },
+      "sigma_sensor_db": {
+        "r_hat": 1.0028201622552135,
+        "ess_bulk": 4451.177574703216,
+        "ess_tail": 2587.0806944051724
+      },
+      "sigma_sensor_ln": {
+        "r_hat": 1.002815913325555,
+        "ess_bulk": 4451.177574703216,
+        "ess_tail": 2587.0806944051724
+      },
+      "tray_build": {
+        "r_hat": 1.001804703810426,
+        "ess_bulk": 2367.9239212061298,
+        "ess_tail": 2680.4425270780926
+      },
+      "tray_build_raw": {
+        "r_hat": 1.0025327431982902,
+        "ess_bulk": 905.1966726249466,
+        "ess_tail": 945.6197875376464
+      },
+      "tray_hz": {
+        "r_hat": 1.0001349308859333,
+        "ess_bulk": 4868.262435675888,
+        "ess_tail": 3132.082233174787
+      },
+      "u_k1": {
+        "r_hat": 1.0001545538323398,
+        "ess_bulk": 5405.450022331178,
+        "ess_tail": 3245.265992923892
+      },
+      "u_k2": {
+        "r_hat": 1.000136992687618,
+        "ess_bulk": 4868.262435675888,
+        "ess_tail": 3132.082233174787
+      },
+      "u_z1": {
+        "r_hat": 0.9999842654619784,
+        "ess_bulk": 4597.478351829053,
+        "ess_tail": 2875.642228545109
+      },
+      "u_z2": {
+        "r_hat": 1.0011907995715474,
+        "ess_bulk": 4748.711263711126,
+        "ess_tail": 3168.203213272047
+      },
+      "zeta1": {
+        "r_hat": 0.9999915885694619,
+        "ess_bulk": 4597.478351829053,
+        "ess_tail": 2875.642228545109
+      },
+      "zeta2": {
+        "r_hat": 1.0011862052040217,
+        "ess_bulk": 4748.711263711126,
+        "ess_tail": 3168.203213272047
+      }
+    },
+    "max_r_hat": 1.0028201622552135,
+    "min_ess_bulk": 901.4619299057999,
+    "min_ess_tail": 945.6197875376464,
+    "arviz_used": true,
+    "note_tail_ess": "bulk and tail ESS from arviz"
+  },
+  "peak": {
+    "label": "peak",
+    "sampler": "NUTS (numpyro)",
+    "num_chains": 4,
+    "nuts_active": true,
+    "converged_all_variables": true,
+    "convergence_bar": {
+      "max_rank_normalized_split_rhat": 1.01,
+      "min_bulk_ess": 400,
+      "min_tail_ess": 400,
+      "divergence_fraction_fail_above": 0.02,
+      "source": "artifacts/reports/runner_comparison_20260602/reader_web_verified_sources.md"
+    },
+    "divergences_total": 0,
+    "divergence_fraction": 0.0,
+    "final_step_size": 0.036692319484456094,
+    "mean_accept_prob": 0.8919459785914741,
+    "max_leapfrog_steps": 255,
+    "mean_leapfrog_steps": 103.376,
+    "max_observed_tree_depth": 8.0,
+    "param_table": {
+      "dome_build": {
+        "r_hat": 1.00210503691938,
+        "ess_bulk": 2975.7031574462,
+        "ess_tail": 2368.670379146806
+      },
+      "dome_build_raw": {
+        "r_hat": 1.0027049644228427,
+        "ess_bulk": 3607.196571428504,
+        "ess_tail": 2313.5738416870204
+      },
+      "dome_hz": {
+        "r_hat": 1.0015906900858755,
+        "ess_bulk": 2427.8094201425138,
+        "ess_tail": 2017.6725188190806
+      },
+      "q_iface_struct_meanforce": {
+        "r_hat": 1.0001759867789075,
+        "ess_bulk": 3024.905151015537,
+        "ess_tail": 2662.1068306267766
+      },
+      "q_tray_struct_meanforce": {
+        "r_hat": 1.0005595672183516,
+        "ess_bulk": 2332.64220104401,
+        "ess_tail": 2792.722510801028
+      },
+      "sigma_build_db": {
+        "r_hat": 1.001862129418904,
+        "ess_bulk": 1471.0928618664182,
+        "ess_tail": 1773.2803407540478
+      },
+      "sigma_build_ln": {
+        "r_hat": 1.001862129418904,
+        "ess_bulk": 1471.0928618664182,
+        "ess_tail": 1773.2803407540478
+      },
+      "sigma_sensor_db": {
+        "r_hat": 0.9998994900823034,
+        "ess_bulk": 2587.5958714312187,
+        "ess_tail": 1299.2158086703455
+      },
+      "sigma_sensor_ln": {
+        "r_hat": 0.9998994900823034,
+        "ess_bulk": 2587.5958714312187,
+        "ess_tail": 1299.2158086703455
+      },
+      "tray_build": {
+        "r_hat": 1.0025822959679458,
+        "ess_bulk": 2626.749878230825,
+        "ess_tail": 2596.7892732648647
+      },
+      "tray_build_raw": {
+        "r_hat": 1.0023517583122135,
+        "ess_bulk": 2807.716509178122,
+        "ess_tail": 2296.109842390219
+      },
+      "tray_hz": {
+        "r_hat": 1.000537319870431,
+        "ess_bulk": 1923.1030131926323,
+        "ess_tail": 1870.8150266181867
+      },
+      "u_k1": {
+        "r_hat": 1.0016515623748348,
+        "ess_bulk": 2427.8094201425138,
+        "ess_tail": 2017.6725188190806
+      },
+      "u_k2": {
+        "r_hat": 1.000537319870431,
+        "ess_bulk": 1923.1030131926323,
+        "ess_tail": 1870.8150266181867
+      },
+      "u_z1": {
+        "r_hat": 1.0001935339529573,
+        "ess_bulk": 2854.500425628421,
+        "ess_tail": 2440.189712294215
+      },
+      "u_z2": {
+        "r_hat": 1.000877192929409,
+        "ess_bulk": 2570.6280785901545,
+        "ess_tail": 2275.669216457476
+      },
+      "zeta1": {
+        "r_hat": 1.0000904207565164,
+        "ess_bulk": 2854.500425628421,
+        "ess_tail": 2440.189712294215
+      },
+      "zeta2": {
+        "r_hat": 1.0008341227196231,
+        "ess_bulk": 2570.6280785901545,
+        "ess_tail": 2275.669216457476
+      }
+    },
+    "max_r_hat": 1.0027049644228427,
+    "min_ess_bulk": 1471.0928618664182,
+    "min_ess_tail": 1299.2158086703455,
+    "arviz_used": true,
+    "note_tail_ess": "bulk and tail ESS from arviz"
+  }
+}

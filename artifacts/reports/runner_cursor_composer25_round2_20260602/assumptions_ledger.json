@@ -1,0 +1,128 @@
+{
+  "trial": "runner_cursor_composer25_round2_20260602",
+  "sampler": "NUTS (NumPyro 0.19.0, JAX 0.4.30)",
+  "inferred_variables": [
+    {
+      "name": "k1 via u_k1=log(k1/k1_nom)",
+      "maps_to": "dome natural frequency",
+      "prior": "TruncatedNormal(0, 0.18, low=log0.55, high=log1.65)",
+      "units": "ln stiffness ratio"
+    },
+    {
+      "name": "k2 via u_k2=log(k2/k2_nom)",
+      "maps_to": "tray natural frequency",
+      "prior": "TruncatedNormal(0, 0.18, low=log0.55, high=log1.65)",
+      "units": "ln stiffness ratio"
+    },
+    {
+      "name": "zeta1 via u_z1=log(zeta1)",
+      "maps_to": "dome damping ratio",
+      "prior": "TruncatedNormal(log0.018, 0.35, low=log0.004, high=log0.090)",
+      "units": "ln damping ratio"
+    },
+    {
+      "name": "zeta2 via u_z2=log(zeta2)",
+      "maps_to": "tray damping ratio",
+      "prior": "TruncatedNormal(log0.026, 0.35, low=log0.004, high=log0.090)",
+      "units": "ln damping ratio"
+    },
+    {
+      "name": "sigma_build_ln",
+      "maps_to": "build-to-build variability scale (PSD log space)",
+      "prior": "HalfNormal(0.5)",
+      "units": "ln-PSD sigma; reported also in dB"
+    },
+    {
+      "name": "sigma_sensor_ln",
+      "maps_to": "sensor-noise scale (PSD log space)",
+      "prior": "HalfNormal(0.3)",
+      "units": "ln-PSD sigma; reported also in dB"
+    },
+    {
+      "name": "dome_build[0..10], tray_build[0..10]",
+      "maps_to": "per-build dome/tray log-PSD effects (22 latent, non-centered)",
+      "prior": "Normal(0, sigma_build_ln)",
+      "units": "ln-PSD additive effect"
+    }
+  ],
+  "fixed_not_inferred": [
+    {
+      "name": "flight_to_flight_forcing_variability",
+      "value_db": 3.0,
+      "rationale": "Known per task card; enters flight QOI likelihood as fixed log-sigma computed by MC.",
+      "value_ln_sigma": 0.6908
+    },
+    {
+      "name": "flight_forcing_covariance",
+      "value": "Matern-3/2, ell=0.08 in natural log frequency",
+      "rationale": "Task card requires Matern (NOT RBF)."
+    },
+    {
+      "name": "flight_mean_force_offset_db",
+      "value_db": -6.0,
+      "rationale": "Mean flight force PSD is 6 dB below original flat force PSD (from setup packet)."
+    },
+    {
+      "name": "masses",
+      "m1": 1.0,
+      "m2": 0.6,
+      "units": "kg",
+      "rationale": "Fixed model masses (dome=m1, tray=m2) from fresh 2DOF Constants."
+    },
+    {
+      "name": "smoothline_input_psd",
+      "value": "log-log interp through (20,0.01),(100,0.1),(750,0.1),(2000,0.001)",
+      "units": "Hz, g^2/Hz"
+    },
+    {
+      "name": "force_amp/force_fc",
+      "rationale": "Not used in this staged dataset (vibe uses smoothline base input; modal uses impacts; flight uses Matern forcing GP with known mean). Not inferred."
+    },
+    {
+      "name": "realized flight forcing GP per flight",
+      "rationale": "Latent per-flight forcing realizations not inferred; only their fixed marginal scatter is propagated to the QOI likelihood."
+    }
+  ],
+  "latent_not_inferred_but_present": [
+    {
+      "name": "per-frequency flight force PSD realization",
+      "rationale": "Only scalar 3*GRMS flight observations are stored in the dataset; the full per-flight PSD is not available, so realized forcing is integrated out via the fixed f2f QOI scatter."
+    }
+  ],
+  "fixed_flight_to_flight_qoi_log_sigma": {
+    "tray": 0.197,
+    "iface": 0.15,
+    "method": "MC of the fixed 3 dB Matern-3/2 forcing GP propagated to 3*GRMS at prior-center structure; 4000 draws, seed 777. Sensor noise contribution is negligible (<1%) because per-frequency iid noise averages out over 260 PSD bins."
+  },
+  "data_counts": {
+    "tray_vibe_psd_points": 260,
+    "modal_frf_points_per_channel": 180,
+    "modal_channels": 3,
+    "flights": 11,
+    "builds": 11,
+    "flight_observations_per_flight": 2,
+    "test_to_test_replicates": "none (single vibe + single modal campaign on build 0)",
+    "build_to_build_variability": "modeled (11 builds, learned scale)",
+    "flight_to_flight_variability": "modeled but FIXED at 3 dB (not learned)"
+  },
+  "likelihood_data_usage": {
+    "full_model": "whole-curve: every PSD bin (vibe) and every FRF point (3 modal channels) used; flights use scalar 3*GRMS QOI (only data available).",
+    "peak_model": "lossy: only peak/notch log-frequency and log-amplitude of vibe peak + 3 modal notches; flights use same scalar 3*GRMS QOI.",
+    "modal_treatment": "log-magnitude likelihood (generation scales complex FRF magnitude only via exp(0.5*effect); phase carries no injected noise)."
+  },
+  "uncertainty_taxonomy": {
+    "parameter_uncertainty": "k1,k2,zeta1,zeta2 posteriors",
+    "observation_noise": "sensor-noise scale sigma_sensor (learned)",
+    "build_test_variability": "sigma_build (learned) + 22 per-build effects",
+    "forcing_uncertainty": "flight-to-flight 3 dB Matern GP (fixed/known)",
+    "qoi_uncertainty": "tray/interface 3*GRMS structural-posterior and future-build-flight predictive intervals"
+  },
+  "noise_values_used": {
+    "vibe_psd_likelihood_sigma": "sigma_sensor_ln (learned)",
+    "modal_likelihood_sigma": "0.5*sigma_sensor_ln (amplitude scaling of complex FRF)",
+    "feature_log_frequency_sigma": 0.06,
+    "feature_log_amplitude_sigma": 0.3,
+    "soft_argmax_beta": 45.0
+  },
+  "round2_notes": "Interface PSD bands are posterior predictive; GIF from 11 sequential NUTS fits (400 warmup / 400 samples per frame)."
+}
