@@ -1,0 +1,70 @@
+{
+  "trial_id": "runner_claude_opus48_20260602",
+  "runner": "Claude Code Opus 4.8",
+  "date": "2026-06-02",
+  "isolation": "copied workspace; outputs scoped to artifacts/reports/runner_claude_opus48_20260602/",
+  "sampler": "NUTS/HMC (NumPyro 0.19.0, JAX 0.4.30)",
+  "nuts_active": true,
+  "one_command_replay": "bash scripts/run_runner_claude_opus48.sh",
+  "environment_resolution": "numpyro/jax/pymc absent in system Python 3.9.6; installed numpyro+matplotlib into local .venv_nuts; arviz omitted (scipy incompatibility) and replaced by numpyro.diagnostics.",
+  "source_setup_packet": "artifacts/reports/sequential_vibe_modal_flight_20260602/ (read-only)",
+  "code": [
+    "scripts/runner_claude_opus48_full_experiment.py",
+    "scripts/run_runner_claude_opus48.sh",
+    "tests/test_runner_claude_opus48_full_experiment.py"
+  ],
+  "commands": [
+    "python3 -m venv .venv_nuts",
+    ".venv_nuts/bin/pip install numpyro matplotlib",
+    ".venv_nuts/bin/python scripts/runner_claude_opus48_full_experiment.py",
+    ".venv_nuts/bin/python tests/test_runner_claude_opus48_full_experiment.py",
+    "shasum -a 256 -c harness/checkers/manifest.sha256"
+  ],
+  "outputs": {
+    "report": "packet.md",
+    "results": "results.json",
+    "diagnostics": ["nuts_diagnostics.json", "nuts_diagnostics.md"],
+    "assumptions": ["assumptions_ledger.md", "assumptions_ledger.json"],
+    "posterior_samples": "posterior_samples.npz",
+    "checks": "checks.json",
+    "figures": [
+      "figures/01_truth_vs_observed.png",
+      "figures/02_posterior_full_vs_peak.png",
+      "figures/03_input_spectra_95_99.png",
+      "figures/04_qoi_intervals.png",
+      "figures/05_build_effect_recovery.png",
+      "figures/06_feature_map.png"
+    ],
+    "contract_docs": ["commands.md", "files_changed.md", "known_failures.md", "review_request.md", "manifest.json"]
+  },
+  "key_results": {
+    "full_likelihood_recovers_truth": true,
+    "dome_hz_full_mean": 93.55,
+    "tray_hz_full_mean": 86.14,
+    "sigma_sensor_db_full_mean": 0.74,
+    "sigma_build_db_full_mean": 1.75,
+    "peak_likelihood_sensor_identified": false,
+    "tray_3grms_structural_95_full_g": [1.011, 1.052],
+    "tray_3grms_future_predictive_95_full_g": [0.592, 1.815],
+    "tray_3grms_future_predictive_99_full_g": [0.490, 2.232],
+    "qoi_interval_width_ratio_peak_over_full_structural": 5.77,
+    "divergences_full": 0,
+    "divergences_peak": 0,
+    "max_r_hat": 1.0024
+  },
+  "immutable_checkers_untouched": [
+    "harness/checkers/verify_artifacts.py",
+    "harness/checkers/check_canary.py",
+    "tests/test_posterior_recovery.py",
+    "tests/test_mdof_transfer.py"
+  ],
+  "open_risks": [
+    "Flights provide only scalar 3*GRMS, so flights inform build effects, not structural shape.",
+    "Flight-to-flight QOI scatter fixed at prior-center structure (sensor folded as negligible).",
+    "Peak-feature soft-argmax (beta=45) approximates hard observed features.",
+    "Inference model == data-generating model (no model-form error); recovery is optimistic.",
+    "Peak-feature likelihood does not identify sensor-noise scale (reported, not hidden).",
+    "No separate prior/sigma_qoi/beta sensitivity sweep shipped."
+  ],
+  "status": "complete_with_documented_limitations"
+}

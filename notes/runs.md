@@ -8,6 +8,18 @@
 - Key metrics:
 - Lessons:
 
+## 2026-06-02 Codex GPT-5.5 full sequential vibe/modal/flight runner
+- Trial: independent Codex runner attempt at the full staged dome/tray vibe-modal-flight experiment with posterior inference and full-vs-peak likelihood comparison.
+  - Commands:
+    - `PYTHONPATH=. python3 -m py_compile scripts/run_codex_gpt55_full_experiment.py tests/test_runner_codex_gpt55_full_experiment.py`
+    - `PYTHONPATH=. python3 scripts/run_codex_gpt55_full_experiment.py`
+    - `PYTHONPATH=. python3 tests/test_runner_codex_gpt55_full_experiment.py`
+    - `shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. Runner checker wrote `artifacts/reports/runner_codex_gpt55_20260602/runner_checker_report.json`; immutable checker hashes all reported `OK`.
+  - Key metrics: NumPyro/JAX/PyMC absent under Python 3.9.6, so the runner used labeled PyTorch fixed-trajectory HMC, not NUTS. Full-data HMC divergences = 3; peak-feature HMC divergences = 0. Full-data tray `3*GRMS` 95% interval = [1.12724, 3.04702] g and 99% interval = [0.974924, 3.72774] g. Peak-feature tray `3*GRMS` 95% interval = [0.929470, 2.41841] g.
+  - Artifacts: `artifacts/reports/runner_codex_gpt55_20260602/packet.md`, `manifest.json`, `commands.md`, `checks.json`, `nuts_diagnostics.json`, `posterior_results.json`, `feature_sensitivity.json`, `sequential_full_dataset.json`, and generated figures.
+  - Lessons: a real HMC substitute is feasible with available PyTorch, but it should not be called NUTS and the full-data run still has divergences/R-hat concerns. The checker verifies artifact consistency and immutable files, not physical correctness.
+
 ## 2026-06-02 Plain-English multi-agent scaffold
 - Trial: create first scaffold where Claude Code is lead and Codex/Cursor can be manually launched as helpers.
   - Commands:
@@ -284,3 +296,11 @@
   - Key metrics: prior predictive MC samples = 4,000; displayed predictive quantile summaries smoothed = true; Gaussian smoothing sigma = 1.8 frequency-grid points; numeric assumptions = 33; image legibility report pass = true.
   - Artifacts: regenerated `figures/prior_predictive_vs_data.png`; updated `bayes_update_summary.json`, `fresh_2dof_statfem_packet.md`, `checker_report.json`, `checker_report_external.json`, `scripts/fresh_2dof_statfem_fbs.py`, and `tests/test_fresh_2dof_rerun.py`.
   - Lessons: a prior predictive envelope is not an analytic prior density. It is a finite-sample, pointwise MC summary of nonlinear forward-model outputs, and sharp moving resonances can make raw quantile curves look jagged even with many samples. If smoothing is used for review readability, label it as display smoothing and record the smoothing parameter.
+
+- 2026-06-02 Claude Opus 4.8 full sequential vibe/modal/flight runner (isolated copy)
+  - Command: `bash scripts/run_runner_claude_opus48.sh` (creates .venv_nuts with numpyro 0.19.0/jax 0.4.30; runs NUTS; runs runner checker; verifies immutable hashes).
+  - Sampler: NUTS/HMC (NumPyro), 4 chains x (1000 warmup + 1000 draws), x64. NOT Metropolis.
+  - Diagnostics: full -> 0 divergences, max R-hat 1.0024, min ESS 942; peak -> 0 divergences, R-hat 1.0019, ESS 1495. Runner checker 48/48 pass; immutable manifest all OK.
+  - Key results: full whole-curve likelihood recovers dome fn 93.55 (truth 93.5), tray fn 86.14 (86.25), sensor 0.74 dB (0.75), build 1.75 dB (1.5). Peak-feature likelihood broader/biased and CANNOT identify sensor noise (posterior ~= prior). Tray 3*GRMS structural posterior 95% [1.011,1.052] g; future-build-flight predictive 95% [0.592,1.815] g / 99% [0.490,2.232] g. Peak/full structural QOI width ratio 5.77.
+  - Artifacts: artifacts/reports/runner_claude_opus48_20260602/ (packet.md, results.json, nuts_diagnostics.{json,md}, assumptions_ledger.{md,json}, posterior_samples.npz, checks.json, 6 figures, full contract).
+  - Lessons: peak/feature-summary likelihoods discard the per-frequency residual scatter needed to identify sensor-noise scale; report that as a finding, not a tuning bug. Flights that store only scalar 3*GRMS inform build effects, not structural curve shape. Inference model == data-generating model here, so recovery is optimistic; real model-form error would widen intervals.

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic BayesX multi-agent architecture</title>
+  <desc id="desc">Infographic showing the human lead, master Claude Code agent, experiment runners, and review agents.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8f5; }
+      .title { font: 700 46px Arial, Helvetica, sans-serif; fill: #1f2933; }
+      .subtitle { font: 400 22px Arial, Helvetica, sans-serif; fill: #4b5563; }
+      .section { font: 700 25px Arial, Helvetica, sans-serif; fill: #233044; }
+      .label { font: 700 24px Arial, Helvetica, sans-serif; fill: #18212f; }
+      .body { font: 400 18px Arial, Helvetica, sans-serif; fill: #243244; }
+      .small { font: 400 16px Arial, Helvetica, sans-serif; fill: #4b5563; }
+      .tiny { font: 400 14px Arial, Helvetica, sans-serif; fill: #596273; }
+      .card { stroke: #263548; stroke-width: 2.5; rx: 20; }
+      .human { fill: #ffffff; }
+      .master { fill: #e6f0ff; }
+      .runner { fill: #fff3d6; }
+      .review { fill: #e9f7ec; }
+      .artifact { fill: #f0eefb; }
+      .note { fill: #ffffff; stroke: #9aa4b2; stroke-width: 1.6; rx: 16; }
+      .arrow { stroke: #344256; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .arrowSoft { stroke: #6b7280; stroke-width: 3; fill: none; marker-end: url(#arrowheadSoft); stroke-dasharray: 9 7; }
+      .loop { stroke: #2563eb; stroke-width: 4; fill: none; marker-end: url(#arrowheadBlue); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#344256"/>
+    </marker>
+    <marker id="arrowheadSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arrowheadBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1100"/>
+
+  <text class="title" x="80" y="80">Agentic BayesX Multi-Agent Workflow</text>
+  <text class="subtitle" x="82" y="120">Several agents try the research task. Other agents check their work. The human decides what matters.</text>
+
+  <!-- Human -->
+  <rect class="card human" x="585" y="160" width="430" height="145"/>
+  <text class="label" x="800" y="205" text-anchor="middle">Human Lead</text>
+  <text class="body" x="615" y="240">Chooses the question, approves the plan,</text>
+  <text class="body" x="615" y="265">judges tradeoffs, and decides what to trust.</text>
+  <text class="small" x="615" y="292">Final call: keep, revise, or reject.</text>
+
+  <!-- Master -->
+  <rect class="card master" x="545" y="370" width="510" height="170"/>
+  <text class="label" x="800" y="415" text-anchor="middle">Master Agent: Claude Code Opus 4.8</text>
+  <text class="body" x="580" y="455">Turns the human goal into task cards.</text>
+  <text class="body" x="580" y="482">Starts helper agents with clear prompts.</text>
+  <text class="body" x="580" y="509">Compares results and asks before changing rules.</text>
+
+  <path class="loop" d="M 800 305 C 800 330, 800 345, 800 368"/>
+  <path class="loop" d="M 1058 455 C 1190 425, 1210 285, 1020 245"/>
+  <text class="tiny" x="1078" y="382">asks for approval</text>
+
+  <!-- Runner section -->
+  <text class="section" x="115" y="610">Experiment runners</text>
+  <text class="small" x="115" y="638">Each runner attempts the whole experiment in isolation.</text>
+
+  <rect class="card runner" x="85" y="665" width="360" height="130"/>
+  <text class="label" x="265" y="705" text-anchor="middle">Cursor Composer 2.5</text>
+  <text class="body" x="115" y="740">Tries one full implementation.</text>
+  <text class="body" x="115" y="766">Writes its own report and files.</text>
+
+  <rect class="card runner" x="85" y="825" width="360" height="130"/>
+  <text class="label" x="265" y="865" text-anchor="middle">Claude Code Opus 4.8</text>
+  <text class="body" x="115" y="900">Tries one full implementation.</text>
+  <text class="body" x="115" y="926">May succeed, fail, or reveal gaps.</text>
+
+  <rect class="card runner" x="85" y="985" width="360" height="80"/>
+  <text class="label" x="265" y="1023" text-anchor="middle">Codex GPT-5.5</text>
+  <text class="body" x="115" y="1052">Tries one full implementation.</text>
+
+  <!-- Review section -->
+  <text class="section" x="1115" y="610">Review agents</text>
+  <text class="small" x="1115" y="638">They look for errors, shortcuts, and missing evidence.</text>
+
+  <rect class="card review" x="1085" y="665" width="390" height="112"/>
+  <text class="label" x="1280" y="704" text-anchor="middle">Literature Reader</text>
+  <text class="body" x="1118" y="738">Finds sources and says what each supports.</text>
+
+  <rect class="card review" x="1085" y="805" width="390" height="112"/>
+  <text class="label" x="1280" y="844" text-anchor="middle">Technical Reviewer</text>
+  <text class="body" x="1118" y="878">Checks physics, units, plots, and assumptions.</text>
+
+  <rect class="card review" x="1085" y="945" width="390" height="112"/>
+  <text class="label" x="1280" y="984" text-anchor="middle">Integrity Reviewer</text>
+  <text class="body" x="1118" y="1018">Looks for copied outputs, hidden swaps,</text>
+  <text class="body" x="1118" y="1044">weak checks, and overclaiming.</text>
+
+  <!-- Artifacts center -->
+  <rect class="card artifact" x="535" y="665" width="530" height="330"/>
+  <text class="label" x="800" y="708" text-anchor="middle">Shared Evidence Folder</text>
+  <text class="body" x="575" y="748">Each runner writes:</text>
+  <text class="body" x="610" y="780">- task card and assumptions</text>
+  <text class="body" x="610" y="808">- code changes and commands</text>
+  <text class="body" x="610" y="836">- plots and generated data</text>
+  <text class="body" x="610" y="864">- NUTS/HMC diagnostics if claimed</text>
+  <text class="body" x="610" y="892">- checker output and known failures</text>
+  <text class="body" x="610" y="920">- a short review request</text>
+  <rect class="note" x="590" y="944" width="420" height="35"/>
+  <text class="small" x="800" y="967" text-anchor="middle">No file-backed evidence, no success claim.</text>
+
+  <!-- arrows from master to runners/review/artifacts -->
+  <path class="arrow" d="M 610 540 C 480 585, 390 625, 310 664"/>
+  <path class="arrow" d="M 660 540 C 540 655, 420 760, 318 824"/>
+  <path class="arrow" d="M 710 540 C 570 710, 435 905, 322 984"/>
+
+  <path class="arrow" d="M 990 540 C 1125 585, 1195 620, 1248 664"/>
+  <path class="arrow" d="M 1012 540 C 1145 655, 1215 750, 1255 804"/>
+  <path class="arrow" d="M 1032 540 C 1165 725, 1225 885, 1262 944"/>
+
+  <path class="arrow" d="M 800 540 L 800 662"/>
+
+  <!-- runners to artifacts -->
+  <path class="arrowSoft" d="M 447 730 C 495 740, 510 755, 535 776"/>
+  <path class="arrowSoft" d="M 447 890 C 500 890, 515 878, 535 860"/>
+  <path class="arrowSoft" d="M 447 1025 C 515 1005, 530 970, 560 940"/>
+
+  <!-- artifacts to reviewers -->
+  <path class="arrowSoft" d="M 1065 760 C 1090 742, 1105 728, 1088 721"/>
+  <path class="arrowSoft" d="M 1065 845 C 1090 850, 1100 858, 1088 861"/>
+  <path class="arrowSoft" d="M 1065 930 C 1098 960, 1108 990, 1088 1000"/>
+
+  <!-- reviewers back to master -->
+  <path class="arrowSoft" d="M 1280 665 C 1275 560, 1125 495, 1058 470"/>
+  <path class="arrowSoft" d="M 1280 805 C 1275 650, 1155 520, 1058 488"/>
+  <path class="arrowSoft" d="M 1280 945 C 1260 745, 1165 560, 1058 506"/>
+
+  <!-- bottom strip -->
+  <rect x="80" y="101" width="0" height="0" fill="none"/>
+  <rect class="note" x="510" y="1018" width="580" height="50"/>
+  <text class="body" x="800" y="1050" text-anchor="middle">The point is not that every runner is right. The point is that mistakes become visible.</text>
+</svg>
+

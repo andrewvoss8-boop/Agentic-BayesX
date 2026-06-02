@@ -1,0 +1,245 @@
+{
+  "checks": [
+    {
+      "name": "immutable_unchanged:harness/checkers/verify_artifacts.py",
+      "pass": true,
+      "detail": "ec313e56820b20dbaa1d7183b623de7004c25107c42755d5e73b69ad7cb98a7c"
+    },
+    {
+      "name": "immutable_unchanged:harness/checkers/check_canary.py",
+      "pass": true,
+      "detail": "259ddd547f4c8c822ea27d9a1896d4f4ddee3db872191a512f4df94b53585dc8"
+    },
+    {
+      "name": "immutable_unchanged:tests/test_posterior_recovery.py",
+      "pass": true,
+      "detail": "e523e68a72fa929e4e11e832884231a1f476b18a0564c0d95c8c3d53476c6651"
+    },
+    {
+      "name": "immutable_unchanged:tests/test_mdof_transfer.py",
+      "pass": true,
+      "detail": "8d63ac8a365a02e085196130949408a11d76bfa945e6796a984cb4b19fdfb784"
+    },
+    {
+      "name": "file_exists:results.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:nuts_diagnostics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:posterior_samples.npz",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:packet.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:commands.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:files_changed.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:assumptions_ledger.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:assumptions_ledger.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:known_failures.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:review_request.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file_exists:manifest.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure_exists:01_truth_vs_observed.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure_exists:02_posterior_full_vs_peak.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure_exists:03_input_spectra_95_99.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure_exists:04_qoi_intervals.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure_exists:05_build_effect_recovery.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "figure_exists:06_feature_map.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full:is_nuts",
+      "pass": true,
+      "detail": "NUTS (numpyro)"
+    },
+    {
+      "name": "full:has_divergences_total",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full:has_final_step_size",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full:has_max_observed_tree_depth",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full:has_min_n_eff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full:has_max_r_hat",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full:rhat_ok",
+      "pass": true,
+      "detail": "1.0023681399347368"
+    },
+    {
+      "name": "full:ess_ok",
+      "pass": true,
+      "detail": "941.7960576111342"
+    },
+    {
+      "name": "full:divergence_fraction_ok",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "peak:is_nuts",
+      "pass": true,
+      "detail": "NUTS (numpyro)"
+    },
+    {
+      "name": "peak:has_divergences_total",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "peak:has_final_step_size",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "peak:has_max_observed_tree_depth",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "peak:has_min_n_eff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "peak:has_max_r_hat",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "peak:rhat_ok",
+      "pass": true,
+      "detail": "1.001850105076448"
+    },
+    {
+      "name": "peak:ess_ok",
+      "pass": true,
+      "detail": "1495.317844933527"
+    },
+    {
+      "name": "peak:divergence_fraction_ok",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "results_has:posterior_full",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "results_has:posterior_peak",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "results_has:qoi_full",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "results_has:qoi_peak",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "results_has:qoi_interval_width_ratio_peak_over_full",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "results_has:fixed_flight_to_flight_qoi_log_sigma",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "full_recovers_dome_hz",
+      "pass": true,
+      "detail": "truth=93.49999999999999 ci=[93.39787362521437,93.70519711730932]"
+    },
+    {
+      "name": "full_recovers_tray_hz",
+      "pass": true,
+      "detail": "truth=86.24999999999999 ci=[86.01384107113145,86.27798573604731]"
+    },
+    {
+      "name": "peak_qoi_wider_than_full",
+      "pass": true,
+      "detail": "5.773694675207635"
+    }
+  ],
+  "status": "pass"
+}

@@ -1,0 +1,365 @@
+ARTIST BRIEF: RUNNER EXPERIMENT INFOGRAPHIC
+
+Project: Agentic BayesX
+Date: 2026-06-02
+Purpose: Create a professional infographic that explains the experiment each runner agent is being asked to attempt.
+
+Important note:
+This infographic should describe the assignment, not the results. It should not imply that any runner succeeded, that the physics is proven, or that the Bayesian update worked. The point is to show the problem structure and the evidence each runner must leave behind.
+
+
+ONE-SENTENCE SUMMARY
+
+Each runner agent is asked to build and run a staged vibration-learning experiment for a coupled tank-and-tray system: start with a conservative vibration specification, simulate ground tests and flights, use Bayesian updating with NUTS/HMC to learn structural parameters and uncertainty, and produce reviewable plots, checks, and reports.
+
+
+THE PHYSICAL STORY
+
+The system has two coupled structures:
+
+- m1 is the tank/dome/source structure.
+- m2 is the tray/load/secondary structure.
+
+Think of m1 as the thing receiving flight forcing and m2 as the secondary structure attached to it.
+
+The larger aerospace reality is that dynamics models are expensive and imperfect. Flight conditions, build differences, sensor noise, material properties, joints, damping, and model error all create uncertainty. The experiment is a small test case for asking whether an agent can build a more disciplined learning workflow instead of relying only on conservative fixed margins.
+
+
+THE INPUT VIBRATION SPEC
+
+The experiment begins with a vibration specification written as a Power Spectral Density, or PSD.
+
+The smoothline PSD passes through these points:
+
+- 20 Hz: 0.01 g^2/Hz
+- 100 Hz: 0.1 g^2/Hz
+- 750 Hz: 0.1 g^2/Hz
+- 2000 Hz: 0.001 g^2/Hz
+
+Use a log-log interpolation idea visually: frequency is on a log axis and PSD is on a log axis.
+
+Important dB convention:
+All dB changes are in PSD space, not amplitude space.
+
+- 3 dB in PSD space is about a factor of 2 in PSD.
+- 6 dB below the original spec means the PSD is divided by about 4.
+- Build-to-build variability starts at 1.5 dB.
+- Flight-to-flight forcing variability is known and fixed at 3 dB; it is not learned.
+
+
+THE STAGED EXPERIMENT
+
+The runner should recreate this sequence.
+
+Stage 1: Dome-only model and smoothline spec
+
+- The company starts with no test data, only a model of the dome and tray.
+- A finite element style model of just the dome is run with a simple flat broadband input.
+- The dome-only response is shaped so its peak hits 0.1 g^2/Hz.
+- Plot the dome-only response against the smoothline vibration spec.
+
+Visual idea:
+Show the smoothline PSD as a clean envelope curve and the dome-only response as a second curve with a visible peak.
+
+
+Stage 2: Tray vibe test
+
+- The tray is tested to the smoothline spec.
+- A sensor is mounted on the tray.
+- The simulated observation includes tray build-to-build variability and sensor noise.
+- Save the tray response as 3 x GRMS. This is a vibration response quantity computed from the response PSD.
+
+Visual idea:
+Show a shaker table or lab vibe test, with the tray sensor highlighted, and a callout for "3 x GRMS tray response."
+
+
+Stage 3: Update tray properties
+
+- Use the tray vibe data to update the tray natural frequency and damping.
+- Compare two ways of using the data:
+  1. Whole-curve likelihood: use the full response curve.
+  2. Peak-feature likelihood: use only peak frequency and peak amplitude.
+
+Visual idea:
+Split one plot into "whole curve used" versus "peak only used." The whole-curve side should look richer; the peak-only side should look intentionally lossy.
+
+
+Stage 4: Tank-only modal test
+
+- A modal test is done on the tank/dome alone, without the tray attached.
+- The data include sensor noise and build-to-build variability.
+- Use the modal data to update the tank natural frequency and damping.
+- Again compare whole-FRF data against peak-only data.
+
+Plain-English note:
+FRF means Frequency Response Function. It is the measured response of the structure as a function of frequency.
+
+Visual idea:
+Show the tank/dome alone with an impact hammer and sensor. Show an FRF curve with a resonance peak.
+
+
+Stage 5: Coupled tank-plus-tray modal test
+
+- A modal test is done on the assembled tank/dome plus tray system.
+- Impacts are applied at the interface and on the tray.
+- Sensors measure the coupled response.
+- The build variability is linked to earlier tests:
+  - Use the same tank build offset as the tank-only modal test.
+  - Use the same tray build offset as the tray vibe test.
+- Update tank and tray properties from the coupled modal data.
+- Compare whole-FRF likelihood against peak-feature likelihood.
+
+Visual idea:
+Show m1 and m2 connected by a spring/damper, with two impact locations and response sensors.
+
+
+Stage 6: First flight of this build
+
+- The first flight uses the same physical build already tested on the ground.
+- Measurements are taken at the interface and on the tray.
+- The forcing into m1 is modeled as a Matérn Gaussian process in log PSD.
+- The mean flight forcing is 6 dB below the original vibration spec.
+- Flight-to-flight forcing variability is fixed at 3 dB and is not learned.
+- Sensor noise is fresh for the flight.
+
+Visual idea:
+Show a rocket/vehicle flight panel feeding measured interface and tray spectra into a learning block.
+
+
+Stage 7: Ten later builds and flights
+
+- Run 10 more new builds and flights.
+- For new builds, draw new build-to-build variability.
+- For each flight, draw a new flight forcing function from the Matérn GP.
+- Do not run more modal tests after the first set.
+- Use the new flight and vibe data to keep updating what is learned.
+
+Visual idea:
+Show a row of builds or flights, numbered 1 through 11 total flights. The first build can be highlighted as "ground tested + flown"; later builds can be shown as "vibe + flight only."
+
+
+WHAT THE BAYESIAN UPDATE SHOULD LEARN
+
+The runner should use NUTS/HMC for posterior inference if it claims to do Bayesian updating.
+
+NUTS/HMC is a modern gradient-based Bayesian sampler. It replaces the older prototype random-walk sampler.
+
+The update should learn:
+
+- tank/dome natural frequency
+- tank/dome damping
+- tray natural frequency
+- tray damping
+- build-to-build variability
+- sensor noise
+- interface acceleration spectrum
+- tray 3 x RMS or 3 x GRMS response
+
+The update should not learn:
+
+- the 3 dB flight-to-flight forcing variability, because it is assumed known for this experiment
+
+The runner must show sampler diagnostics if it claims NUTS/HMC was used:
+
+- divergences
+- effective sample size
+- R-hat
+- step size
+- tree depth
+
+Visual idea:
+Use a "learned" box with natural frequency, damping, build scatter, sensor noise, interface spectrum, and tray response. Use a separate "fixed known input" box for the 3 dB flight-to-flight forcing variability.
+
+
+THE MAIN COMPARISON
+
+A key scientific comparison is:
+
+Whole-curve likelihood versus peak-feature likelihood.
+
+Whole-curve likelihood:
+- Uses the full FRF or PSD curve.
+- Keeps more information.
+- Should usually be more informative, but still needs to be checked.
+
+Peak-feature likelihood:
+- Uses only a few features, such as peak frequency and peak amplitude.
+- Easier and smaller, but can throw away important information.
+- May confuse coupled structural effects or forcing effects with true structural parameters.
+
+Visual idea:
+Show a fork in the workflow:
+
+Path A: full curve data goes into Bayesian update.
+Path B: peak markers only go into Bayesian update.
+
+Then the two paths recombine into a comparison panel: posterior intervals, tray response intervals, and notes about differences.
+
+
+WHAT FINAL PLOTS EACH RUNNER SHOULD PRODUCE
+
+The runner should leave a packet that a reviewer can audit quickly.
+
+Expected plots include:
+
+- original smoothline PSD
+- dome-only response plotted with the smoothline PSD
+- tray vibe response
+- tank-only modal FRF
+- coupled tank-plus-tray modal FRFs
+- flight forcing spectra
+- interface acceleration spectra
+- tray 3 x RMS or 3 x GRMS response after each flight
+- 95% and 99% confidence or credible intervals for input spectra
+- 95% and 99% intervals for the tray response quantity of interest
+- whole-curve versus peak-feature posterior comparison
+- residual or error plots so mistakes are visible
+- NUTS/HMC diagnostic plots or summary cards
+
+The infographic itself does not need to show all these plots in detail. It can show small representative mini-plots.
+
+
+WHAT THE RUNNER MUST LEAVE BEHIND
+
+Each runner writes its own evidence folder. The folder should include:
+
+- task description
+- commands used
+- files changed
+- assumptions
+- quantity definitions
+- data and plots
+- NUTS/HMC diagnostics
+- checker output
+- known failures
+- manifest
+- review request
+
+This is important because the goal is not simply "did the agent make a pretty plot?" The goal is "can another person or agent inspect what happened and catch mistakes?"
+
+
+THE ROLE OF FAILURE
+
+This is a pressure test of agent behavior.
+
+The runners are allowed to fail. A useful failure is one that leaves evidence:
+
+- what command failed
+- what assumption was unclear
+- what shortcut was taken
+- what method was swapped
+- what result is not trusted
+- what the reviewer should inspect
+
+The infographic should not make the workflow look magical or guaranteed. It should show that review and evidence are part of the experiment.
+
+
+SUGGESTED VISUAL STRUCTURE
+
+Option A: Left-to-right timeline
+
+1. Starting spec and model
+2. Dome-only model
+3. Tray vibe test
+4. Tank modal test
+5. Coupled modal test
+6. First flight
+7. Ten later builds/flights
+8. Bayesian update
+9. Review packet
+
+This is probably the clearest choice for a broad audience.
+
+
+Option B: Three horizontal lanes
+
+Lane 1: physical system and tests
+- dome, tray, vibe test, modal tests, flights
+
+Lane 2: uncertainty and learning
+- build variability, sensor noise, fixed flight variability, Matérn forcing, NUTS/HMC update
+
+Lane 3: evidence and review
+- plots, diagnostics, checker output, reviewer notes, next-loop decision
+
+This is useful if the artist wants to show both the engineering process and the agentic workflow.
+
+
+Option C: Funnel plus comparison fork
+
+Inputs feed into staged tests. The data split into two inference paths:
+
+- full curve
+- peak features only
+
+Those paths recombine into a comparison of posterior intervals and tray response intervals.
+
+This is useful if the main message should be about whole-curve versus peak-only inference.
+
+
+VISUAL TONE
+
+The tone should feel like:
+
+- aerospace test lab
+- serious but readable
+- evidence-driven
+- uncertainty-aware
+- not hype
+
+Avoid:
+
+- magical AI imagery
+- robots replacing engineers
+- a green "success" ending
+- over-polished dashboards that hide the science
+- implying the answer is known before the review
+
+
+RECOMMENDED LABELS
+
+Use these labels if space allows:
+
+- "m1: tank / dome / source"
+- "m2: tray / load / secondary structure"
+- "PSD smoothline spec"
+- "dB in PSD space"
+- "Tray vibe test"
+- "Tank-only modal test"
+- "Coupled modal test"
+- "Flight forcing: Matérn GP"
+- "Known: 3 dB flight-to-flight variability"
+- "Learned: fn, damping, build scatter, sensor noise"
+- "Full curve likelihood"
+- "Peak-feature likelihood"
+- "NUTS/HMC posterior update"
+- "Interface acceleration spectrum"
+- "Tray 3 x GRMS response"
+- "95% and 99% intervals"
+- "Commands, checks, diagnostics, manifest"
+- "Strict review: physics, sources, shortcuts, overclaims"
+
+
+THINGS NOT TO IMPLY
+
+Do not imply:
+
+- that NUTS/HMC has succeeded unless a runner produces real diagnostics
+- that the full-curve likelihood is automatically correct
+- that peak-only data is useless
+- that the 3 dB flight-to-flight variability is learned
+- that checker output proves the physics
+- that the runners coordinate with each other
+- that copied plots or assets are acceptable as new results
+- that the final answer is a single deterministic number
+
+
+SIMPLE CAPTION
+
+"Three independent runner agents are given the same staged tank-and-tray vibration problem. Each must build the experiment, run Bayesian updating with NUTS/HMC if it claims posterior inference, compare whole-curve data against peak-only data, and leave enough plots, commands, checks, and diagnostics for strict review."
+
+
+SHORTER CAPTION
+
+"Same experiment, three independent runners, strict evidence trail."
+

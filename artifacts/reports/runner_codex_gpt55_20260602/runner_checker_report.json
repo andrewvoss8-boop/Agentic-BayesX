@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "failures": [],
+  "output_dir": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_20260602",
+  "checked_files": [
+    "commands.md",
+    "files_changed.md",
+    "assumptions_ledger.md",
+    "assumptions_ledger.json",
+    "nuts_diagnostics.md",
+    "nuts_diagnostics.json",
+    "figures/sequential_observations_truth_vs_observed.png",
+    "figures/absolute_error_and_normalized_diagnostics.png",
+    "figures/posterior_full_vs_peak_parameters.png",
+    "figures/input_spectra_and_tray_qoi_intervals_after_flights.png",
+    "figures/full_vs_peak_likelihood_qoi_differences.png",
+    "figures/hmc_diagnostics.png",
+    "figures/peak_feature_mapping_sensitivity.png",
+    "figures/graphical_model_likelihood.png",
+    "checks.json",
+    "known_failures.md",
+    "review_request.md",
+    "manifest.json",
+    "packet.md",
+    "posterior_results.json",
+    "sequential_full_dataset.json",
+    "quantity_contracts.md",
+    "feature_sensitivity.json"
+  ]
+}

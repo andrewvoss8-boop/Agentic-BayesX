@@ -1,0 +1,152 @@
+{
+  "rows": [
+    {
+      "assumption": "PSD-space dB convention",
+      "value": "factor = 10 ** (dB / 10)",
+      "units": "dimensionless PSD multiplier",
+      "source": "Prompt/setup packet",
+      "rationale": "All dB variability is applied in PSD/power space.",
+      "sensitivity_priority": "High",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Dome/source coordinate",
+      "value": "m1",
+      "units": "coordinate label",
+      "source": "Prompt",
+      "rationale": "Dome/tank/source is modeled as primary mass.",
+      "sensitivity_priority": "High",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Tray/load coordinate",
+      "value": "m2",
+      "units": "coordinate label",
+      "source": "Prompt",
+      "rationale": "Tray/load/secondary structure is modeled as secondary mass.",
+      "sensitivity_priority": "High",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Smoothline PSD points",
+      "value": [
+        [
+          20.0,
+          0.01
+        ],
+        [
+          100.0,
+          0.1
+        ],
+        [
+          750.0,
+          0.1
+        ],
+        [
+          2000.0,
+          0.001
+        ]
+      ],
+      "units": "Hz, g^2/Hz",
+      "source": "Prompt/setup packet",
+      "rationale": "Defines tray vibe input by log-log interpolation.",
+      "sensitivity_priority": "High",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Flight-to-flight forcing variability",
+      "value": 3.0,
+      "units": "dB PSD sigma",
+      "source": "Prompt",
+      "rationale": "Known forcing variability; fixed, not learned.",
+      "sensitivity_priority": "High",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Forcing covariance",
+      "value": "Matern-3/2 ell=0.08",
+      "units": "natural log frequency",
+      "source": "Prompt",
+      "rationale": "Required Mat\u00e9rn forcing GP; RBF not used.",
+      "sensitivity_priority": "High",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Build-to-build variability",
+      "value": "learned; synthetic truth 1.5",
+      "units": "dB PSD sigma",
+      "source": "Prompt/setup packet",
+      "rationale": "Hierarchical variability over builds.",
+      "sensitivity_priority": "High",
+      "status": "inferred"
+    },
+    {
+      "assumption": "Sensor-noise scale",
+      "value": "learned; synthetic truth 0.75",
+      "units": "dB PSD sigma",
+      "source": "Prompt/setup packet",
+      "rationale": "Fresh multiplicative PSD/log-FRF sensor noise.",
+      "sensitivity_priority": "High",
+      "status": "inferred"
+    },
+    {
+      "assumption": "Flight mean force offset",
+      "value": -6.0,
+      "units": "dB PSD",
+      "source": "Setup packet",
+      "rationale": "Mean force PSD is below original flat force PSD.",
+      "sensitivity_priority": "High",
+      "status": "fixed mean with learned global scale"
+    },
+    {
+      "assumption": "Masses",
+      "value": [
+        1.0,
+        0.6
+      ],
+      "units": "kg",
+      "source": "Fresh 2DOF model",
+      "rationale": "Toy dome/tray structural model.",
+      "sensitivity_priority": "Medium",
+      "status": "fixed"
+    },
+    {
+      "assumption": "Likelihood full-data choice",
+      "value": "all generated frequency points",
+      "units": "categorical",
+      "source": "Runner implementation",
+      "rationale": "Uses full log PSD and log FRF magnitude arrays.",
+      "sensitivity_priority": "High",
+      "status": "fixed method choice"
+    },
+    {
+      "assumption": "Likelihood peak-feature choice",
+      "value": "soft peak/notch forward features",
+      "units": "categorical",
+      "source": "Runner implementation",
+      "rationale": "Compares observed hard features to predicted transfer-function features.",
+      "sensitivity_priority": "High",
+      "status": "fixed method choice"
+    }
+  ],
+  "inferred_variables": [
+    "dome natural frequency via k1",
+    "tray natural frequency via k2",
+    "dome damping zeta1",
+    "tray damping zeta2",
+    "global flight force PSD scale",
+    "build-to-build PSD variability scale",
+    "sensor-noise PSD variability scale"
+  ],
+  "fixed_variables": [
+    "m1 and m2 masses",
+    "flight-to-flight forcing variability sigma = 3 dB PSD",
+    "Matern-3/2 forcing covariance length scale",
+    "smoothline PSD table"
+  ],
+  "not_inferred_latent_variables": [
+    "individual build effects are marginalized/approximated, not sampled",
+    "individual flight forcing GP paths are marginalized/used in posterior predictive draws, not sampled in HMC state",
+    "phase noise for modal FRFs is not inferred"
+  ]
+}

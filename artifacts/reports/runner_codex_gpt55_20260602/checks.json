@@ -1,0 +1,169 @@
+{
+  "self_check_pass": true,
+  "self_check_failures": [],
+  "image_legibility": [
+    {
+      "figure": "figures/sequential_observations_truth_vs_observed.png",
+      "width_px": 2244,
+      "height_px": 1530,
+      "text_count": 91,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{5}}$",
+        "$\\mathdefault{10^{3}}$"
+      ],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/absolute_error_and_normalized_diagnostics.png",
+      "width_px": 2074,
+      "height_px": 833,
+      "text_count": 40,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{5}}$"
+      ],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/posterior_full_vs_peak_parameters.png",
+      "width_px": 2295,
+      "height_px": 1258,
+      "text_count": 109,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_examples": [
+        "0.024",
+        "700",
+        "1.05"
+      ],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/input_spectra_and_tray_qoi_intervals_after_flights.png",
+      "width_px": 2210,
+      "height_px": 901,
+      "text_count": 46,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{-4}}$",
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{1}}$"
+      ],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/full_vs_peak_likelihood_qoi_differences.png",
+      "width_px": 1785,
+      "height_px": 884,
+      "text_count": 17,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": false,
+      "clipped_examples": [
+        "14"
+      ],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/hmc_diagnostics.png",
+      "width_px": 2210,
+      "height_px": 1326,
+      "text_count": 100,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_examples": [
+        "180",
+        "180"
+      ],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/peak_feature_mapping_sensitivity.png",
+      "width_px": 1955,
+      "height_px": 1224,
+      "text_count": 29,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": true,
+      "clipped_examples": [],
+      "issues": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/graphical_model_likelihood.png",
+      "width_px": 2142,
+      "height_px": 1088,
+      "text_count": 8,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": true,
+      "clipped_examples": [],
+      "issues": [],
+      "pass": true
+    }
+  ],
+  "immutable_checker_command": {
+    "command": "shasum -a 256 -c harness/checkers/manifest.sha256",
+    "status": "pass",
+    "exit_code": 0,
+    "console_output": [
+      "harness/checkers/verify_artifacts.py: OK",
+      "harness/checkers/check_canary.py: OK",
+      "tests/test_posterior_recovery.py: OK",
+      "tests/test_mdof_transfer.py: OK"
+    ]
+  },
+  "runner_checker_command": {
+    "command": "PYTHONPATH=. python3 tests/test_runner_codex_gpt55_full_experiment.py",
+    "status": "pass",
+    "exit_code": 0,
+    "report": "runner_checker_report.json",
+    "console_summary": {
+      "pass": true,
+      "failures": [],
+      "output_dir": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_20260602",
+      "report": "runner_checker_report.json"
+    }
+  },
+  "runner_checker": {
+    "command": "PYTHONPATH=. python3 tests/test_runner_codex_gpt55_full_experiment.py",
+    "pass": true,
+    "report": "runner_checker_report.json",
+    "failures": []
+  },
+  "py_compile_command": {
+    "command": "PYTHONPATH=. python3 -m py_compile scripts/run_codex_gpt55_full_experiment.py tests/test_runner_codex_gpt55_full_experiment.py",
+    "status": "pass",
+    "exit_code": 0
+  },
+  "runner_command": {
+    "command": "PYTHONPATH=. python3 scripts/run_codex_gpt55_full_experiment.py",
+    "status": "pass",
+    "exit_code": 0,
+    "console_summary": {
+      "self_check_pass": true,
+      "full_divergences": 3,
+      "peak_divergences": 0,
+      "full_tray_3grms_95": [
+        1.1272430195867968,
+        3.0470227919946162
+      ],
+      "peak_tray_3grms_95": [
+        0.929469989994112,
+        2.4184115544838596
+      ]
+    }
+  }
+}

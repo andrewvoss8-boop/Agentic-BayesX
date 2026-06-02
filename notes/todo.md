@@ -6,6 +6,35 @@
 - [ ] Add MDOF reduced-order transfer-function prototype tests.
 - [ ] Inspect `/Users/avoss/Downloads/check pages.pdf` for incorrect crop seams; record PDF page numbers, visible textbook page numbers, assumptions, and validation artifacts.
 
+## 2026-06-02 Runner Experiment Infographic
+- [x] Read the competitive runner task card and prompts.
+- [x] Create a plain-English infographic describing the experiment each runner is asked to run.
+- [x] Add a Markdown wrapper that displays the infographic from the repo.
+- [x] Validate the SVG is well-formed.
+
+## 2026-06-02 Artist Brief For Runner Experiment Infographic
+- [x] Create a plain text artist brief describing the runner experiment.
+- [x] Include visual story, required labels, uncertainty conventions, and cautions about what not to imply.
+- [x] Verify the brief file exists and is readable.
+
+## 2026-06-02 Claude Opus 4.8 Full Sequential Runner (isolated copy)
+- [x] Read AGENTS/CLAUDE/runner role/task card/handoff/setup packet.
+- [x] Install numpyro 0.19.0 + jax 0.4.30 + matplotlib in .venv_nuts (system Py3.9.6 had none).
+- [x] Verify analytic JAX-able forward model reproduces dataset clean PSD (rel err ~1e-16).
+- [x] Compute fixed flight-to-flight QOI log-scatter via MC (tray~0.201, iface~0.131).
+- [x] Build hierarchical NumPyro NUTS model: struct params (k1,k2,z1,z2), sigma_build, sigma_sensor, 11x2 build effects (non-centered); flight-to-flight 3 dB fixed.
+- [x] Full-curve likelihood (vibe PSD + 3 modal FRF log-mag + flight QOIs) and peak-feature likelihood (soft-argmax) variants.
+- [x] Diagnostics (0 divergences, R-hat<=1.002, ESS>=942, tree depth<=8, step size logged), QOI 95/99% intervals, input spectra bands.
+- [x] Figures (6), packet.md, manifest, checks.json (48/48 pass), contract files. 4 checker files verified unchanged. One-command replay verified.
+
+## 2026-06-02 Codex GPT-5.5 Full Sequential Runner
+- [x] Create a scoped runner output folder and one-command script for the full sequential vibe/modal/flight experiment.
+- [x] Reuse the checked setup packet conventions: PSD-space dB, dome `m1`, tray `m2`, Matérn-3/2 forcing GP, fixed 3 dB flight-to-flight forcing variability.
+- [x] Implement gradient-based HMC posterior inference with transparent backend handling because NumPyro/JAX/PyMC are absent under Python 3.9.6.
+- [x] Compare full FRF/PSD likelihood with peak-feature likelihood, including posterior/QOI differences and feature assumptions.
+- [x] Generate the required Markdown/JSON contract, figures, diagnostics, manifest, checks, and known-failure notes.
+- [x] Run syntax checks, runner artifact checks, immutable checker hash verification, and record exact command outcomes.
+
 ## 2026-06-02 Sequential Vibe/Modal/Flight Research Setup
 - [x] Create a separate sequential research packet so the existing fresh 2DOF run is not overwritten.
 - [x] Document PSD-space dB conventions, forcing smoothline assumptions, and what is learned versus fixed.
