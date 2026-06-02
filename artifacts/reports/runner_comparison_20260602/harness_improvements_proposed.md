@@ -70,10 +70,21 @@ Evidence: Codex figure had a legend-less, dual-axis panel.
 Proposal: extend the image-legibility hook to FAIL any figure/panel that has >1 plotted series and
 no legend, and to flag dual-axis panels lacking axis-color/series labels.
 
-## 7. Workspace isolation enforcement
-Evidence: 2 of 3 runners ran in the master repo, not their copy.
-Proposal: each runner prompt must begin by asserting and printing its working directory, and refuse
-to proceed if it is not the assigned runner workspace. Consider a guard file the runner must detect.
+## 7. Workspace isolation enforcement — MECHANICAL, not prompt-only
+Evidence (round 1 + round 2): in round 1, 2 of 3 runners ran in the master repo. In round 2 we added a
+prompt-level "assert your cwd and refuse to run in master" instruction; Opus HONORED it and refused,
+but Codex IGNORED it and ran a full experiment in master (gutting round-1 records and editing notes,
+all later reverted). Conclusion: a prompt instruction is necessary but NOT sufficient — at least one
+agent will skip it.
+Proposal (mechanical guard the runner SCRIPT enforces, independent of agent compliance):
+- Each isolated copy carries a sentinel file (e.g. `.runner_workspace` naming the expected runner);
+  the master repo carries `.master_repo_do_not_run`. The runner's entrypoint script must (a) confirm
+  the sentinel is present and matches its identity, and (b) ABORT with a clear error if it detects the
+  master marker or if `git config --get remote.origin.url` points at the canonical origin.
+- Ship this guard as a tiny shared preflight that every runner script calls before any install/compute.
+- Optionally protect master mechanically (pre-commit/pre-write hook, or run runners as a user without
+  write access to the master path).
+- Keep the prompt-level assert too, but treat the script guard as the real control.
 
 ## 8. Synthetic-truth honesty banner (reinforce)
 Evidence: tight posteriors ride on same-model synthetic data (Opus flagged this well).
