@@ -1,0 +1,7 @@
+{
+  "active_runtime_s": 586.55,
+  "elapsed_wallclock_s": 586.55,
+  "note": "active_runtime_s here = this script's measured runtime; total active across all commands (venv install, validation, checker) is summed in runtime.json by the wrapper.",
+  "fit_runtime_s": 5.7,
+  "smoke_mode": false
+}

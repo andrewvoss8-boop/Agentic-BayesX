@@ -1,0 +1,79 @@
+[
+  {
+    "flight_id": 0,
+    "build_id": 0,
+    "peak_mean_psd_g2_per_hz": 0.012347762007666586,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 1,
+    "build_id": 1,
+    "peak_mean_psd_g2_per_hz": 0.006994239880386996,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 2,
+    "build_id": 2,
+    "peak_mean_psd_g2_per_hz": 0.006691464942061185,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 3,
+    "build_id": 3,
+    "peak_mean_psd_g2_per_hz": 0.018479062489312425,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.01179245283018868
+  },
+  {
+    "flight_id": 4,
+    "build_id": 4,
+    "peak_mean_psd_g2_per_hz": 0.009568377014540996,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 5,
+    "build_id": 5,
+    "peak_mean_psd_g2_per_hz": 0.012411574929491293,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 6,
+    "build_id": 6,
+    "peak_mean_psd_g2_per_hz": 0.005757818018885812,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 7,
+    "build_id": 7,
+    "peak_mean_psd_g2_per_hz": 0.012075671855700156,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 8,
+    "build_id": 8,
+    "peak_mean_psd_g2_per_hz": 0.005018716951927807,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 9,
+    "build_id": 9,
+    "peak_mean_psd_g2_per_hz": 0.007530710284069555,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  },
+  {
+    "flight_id": 10,
+    "build_id": 10,
+    "peak_mean_psd_g2_per_hz": 0.010812373711815475,
+    "peak_freq_hz": 129.5,
+    "frac_freqs_99hi_exceeds_spec": 0.0
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "converged": true,
+  "nuts_active": true,
+  "artifacts": {
+    "gif": "figures/interface_response_psd_vs_spec.gif",
+    "n_frames": 11,
+    "forcing_overlay": "figures/flight_forcing_overlay.png",
+    "qoi_overlay": "figures/flight_qoi_vs_vibe_reference.png",
+    "resolution": "figures/resolution_sensitivity.png",
+    "sequential": "figures/sequential_assimilation_qoi.png",
+    "posterior_recovery": "figures/posterior_recovery.png",
+    "interface_psd_bands": "interface_psd_bands.json"
+  },
+  "fit_runtime_s": 5.70253586769104
+}

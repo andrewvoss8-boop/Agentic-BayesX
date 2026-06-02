@@ -1,0 +1,58 @@
+{
+  "trial_id": "runner_claude_opus48_round2_20260602",
+  "runner": "Claude Code Opus 4.8",
+  "date": "2026-06-02",
+  "one_command_replay": "bash scripts/run_runner_claude_opus48_round2.sh",
+  "pipeline": "scripts/runner_claude_opus48_round2.py",
+  "forward_model": "scripts/r2_forward.py",
+  "checker": "scripts/check_round2_artifacts.py (runner-local, non-immutable)",
+  "dataset_consumed": "artifacts/reports/sequential_vibe_modal_flight_20260602/sequential_dataset.json",
+  "sampler": "NUTS (NumPyro)",
+  "n_chains": 4,
+  "converged": true,
+  "nuts_active": true,
+  "divergences": 0,
+  "worst_rank_split_rhat": {
+    "value": 1.002475887598128,
+    "variable": "z_tray[2]"
+  },
+  "min_ess_bulk": {
+    "value": 2392.913790582128,
+    "variable": "sigma_build_dome"
+  },
+  "min_ess_tail": {
+    "value": 3173.6429663045114,
+    "variable": "z_tray[0]"
+  },
+  "key_deliverable": "figures/interface_response_psd_vs_spec.gif",
+  "figures": [
+    "figures/interface_response_psd_vs_spec.gif",
+    "figures/flight_forcing_overlay.png",
+    "figures/flight_qoi_vs_vibe_reference.png",
+    "figures/resolution_sensitivity.png",
+    "figures/posterior_recovery.png",
+    "figures/sequential_assimilation_qoi.png"
+  ],
+  "docs": [
+    "priority_deliverables.md",
+    "quantity_contracts_round2.md",
+    "assumptions_ledger.md",
+    "resolution_analysis.md",
+    "nuts_diagnostics.md",
+    "commands.md",
+    "files_changed.md",
+    "known_failures.md",
+    "review_request.md",
+    "packet.md"
+  ],
+  "machine_readable": [
+    "nuts_diagnostics.json",
+    "interface_psd_bands.json",
+    "resolution_metrics.json",
+    "checks.json",
+    "runtime.json",
+    "posterior_samples.npz"
+  ],
+  "immutable_checkers_unchanged": true,
+  "status": "complete"
+}

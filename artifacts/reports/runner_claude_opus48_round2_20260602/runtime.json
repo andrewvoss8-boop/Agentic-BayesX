@@ -1,0 +1,14 @@
+{
+  "active_runtime_s": 1268.43,
+  "elapsed_wallclock_s": 2900.0,
+  "note": "active_runtime_s = sum of per-command execution times (env build + validation + smoke + full pipeline run + checker + one discarded first full run). elapsed_wallclock_s >= active (includes brief gaps between commands; no human-approval wait was inside the measured commands).",
+  "components_s": {
+    "environment_build_venv_install_s": 78.0,
+    "forward_model_validation_s": 22.0,
+    "smoke_test_s": 95.0,
+    "full_pipeline_run_s": 605.37,
+    "discarded_first_full_run_s": 467.94,
+    "checker_s": 0.12
+  },
+  "reported_fit_only_s": 5.7
+}

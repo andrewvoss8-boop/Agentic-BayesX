@@ -1,0 +1,5 @@
+CONVERGED: True worst_rhat {'value': 1.002475887598128, 'variable': 'z_tray[2]'} min_ess_bulk {'value': 2392.913790582128, 'variable': 'sigma_build_dome'} min_ess_tail {'value': 3173.6429663045114, 'variable': 'z_tray[0]'} div 0 fit_s 5.7
+DONE pipeline in 586.5 s
+real 605.37
+user 2089.31
+sys 17.44

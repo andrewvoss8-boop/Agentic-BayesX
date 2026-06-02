@@ -1,0 +1,10 @@
+{
+  "environment_build_venv_install_s": 78.0,
+  "forward_model_validation_s": 22.0,
+  "smoke_test_s": 95.0,
+  "discarded_first_full_run_s": 467.94,
+  "checker_s": 0.12,
+  "elapsed_wallclock_s": 2900.0,
+  "reported_fit_only_s": 5.7,
+  "_note": "env/validation/smoke times are close measured estimates; full_pipeline_run_s is parsed from pipeline_run.log /usr/bin/time 'real'. elapsed_wallclock_s spans from venv build to final checker and INCLUDES agent reasoning/tool latency and the early double-run contention, so it exceeds active_runtime_s."
+}

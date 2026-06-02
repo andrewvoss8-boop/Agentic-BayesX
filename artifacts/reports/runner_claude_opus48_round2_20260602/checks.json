@@ -1,0 +1,188 @@
+{
+  "n_checks": 36,
+  "n_pass": 36,
+  "n_fail": 0,
+  "all_pass": true,
+  "checks": [
+    {
+      "check": "exists:priority_deliverables.md",
+      "pass": true,
+      "detail": "8267 bytes"
+    },
+    {
+      "check": "exists:runtime.json",
+      "pass": true,
+      "detail": "621 bytes"
+    },
+    {
+      "check": "exists:nuts_diagnostics.json",
+      "pass": true,
+      "detail": "5705 bytes"
+    },
+    {
+      "check": "exists:nuts_diagnostics.md",
+      "pass": true,
+      "detail": "2580 bytes"
+    },
+    {
+      "check": "exists:assumptions_ledger.md",
+      "pass": true,
+      "detail": "5035 bytes"
+    },
+    {
+      "check": "exists:quantity_contracts_round2.md",
+      "pass": true,
+      "detail": "3440 bytes"
+    },
+    {
+      "check": "exists:resolution_analysis.md",
+      "pass": true,
+      "detail": "3581 bytes"
+    },
+    {
+      "check": "exists:resolution_metrics.json",
+      "pass": true,
+      "detail": "1582 bytes"
+    },
+    {
+      "check": "exists:commands.md",
+      "pass": true,
+      "detail": "2141 bytes"
+    },
+    {
+      "check": "exists:files_changed.md",
+      "pass": true,
+      "detail": "2280 bytes"
+    },
+    {
+      "check": "exists:known_failures.md",
+      "pass": true,
+      "detail": "3221 bytes"
+    },
+    {
+      "check": "exists:review_request.md",
+      "pass": true,
+      "detail": "2597 bytes"
+    },
+    {
+      "check": "exists:manifest.json",
+      "pass": true,
+      "detail": "1745 bytes"
+    },
+    {
+      "check": "exists:packet.md",
+      "pass": true,
+      "detail": "6769 bytes"
+    },
+    {
+      "check": "exists:interface_psd_bands.json",
+      "pass": true,
+      "detail": "1868 bytes"
+    },
+    {
+      "check": "exists:figures/interface_response_psd_vs_spec.gif",
+      "pass": true,
+      "detail": "547789 bytes"
+    },
+    {
+      "check": "exists:figures/flight_forcing_overlay.png",
+      "pass": true,
+      "detail": "415391 bytes"
+    },
+    {
+      "check": "exists:figures/flight_qoi_vs_vibe_reference.png",
+      "pass": true,
+      "detail": "81037 bytes"
+    },
+    {
+      "check": "exists:figures/resolution_sensitivity.png",
+      "pass": true,
+      "detail": "145074 bytes"
+    },
+    {
+      "check": "exists:figures/posterior_recovery.png",
+      "pass": true,
+      "detail": "75589 bytes"
+    },
+    {
+      "check": "exists:figures/sequential_assimilation_qoi.png",
+      "pass": true,
+      "detail": "66259 bytes"
+    },
+    {
+      "check": "gif_frames==11",
+      "pass": true,
+      "detail": "11 frames"
+    },
+    {
+      "check": "interface_psd_bands:11_records_keys",
+      "pass": true,
+      "detail": "11 records"
+    },
+    {
+      "check": "diagnostics:required_fields",
+      "pass": true,
+      "detail": "missing=set()"
+    },
+    {
+      "check": "diagnostics:n_chains>=4",
+      "pass": true,
+      "detail": "4"
+    },
+    {
+      "check": "diagnostics:raw_latents_included",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "diagnostics:not_smoke",
+      "pass": true,
+      "detail": "smoke=False"
+    },
+    {
+      "check": "consistency:nuts_active==converged",
+      "pass": true,
+      "detail": "nuts_active=True converged=True"
+    },
+    {
+      "check": "gate:rhat<1.01",
+      "pass": true,
+      "detail": "{'value': 1.002475887598128, 'variable': 'z_tray[2]'}"
+    },
+    {
+      "check": "gate:ess_bulk>=400",
+      "pass": true,
+      "detail": "{'value': 2392.913790582128, 'variable': 'sigma_build_dome'}"
+    },
+    {
+      "check": "gate:ess_tail>=400",
+      "pass": true,
+      "detail": "{'value': 3173.6429663045114, 'variable': 'z_tray[0]'}"
+    },
+    {
+      "check": "gate:div_frac<0.02",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "check": "diagnostics:>=29_monitored_quantities",
+      "pass": true,
+      "detail": "29"
+    },
+    {
+      "check": "resolution:reference_and_clip_fields",
+      "pass": true,
+      "detail": "missing=set()"
+    },
+    {
+      "check": "runtime:fields_and_active<=elapsed",
+      "pass": true,
+      "detail": "{'active_runtime_s': 1268.43, 'elapsed_wallclock_s': 2900.0, 'note': 'active_runtime_s = sum of per-command execution times (env build + validation + smoke + full pipeline run + checker + one discarded first full run). elapsed_wallclock_s >= active (includes brief gaps between commands; no human-approval wait was inside the measured commands).', 'components_s': {'environment_build_venv_install_s': 78.0, 'forward_model_validation_s': 22.0, 'smoke_test_s': 95.0, 'full_pipeline_run_s': 605.37, 'discarded_first_full_run_s': 467.94, 'checker_s': 0.12}, 'reported_fit_only_s': 5.7}"
+    },
+    {
+      "check": "immutable_checkers:unchanged",
+      "pass": true,
+      "detail": "harness/checkers/verify_artifacts.py: OK\nharness/checkers/check_canary.py: OK\ntests/test_posterior_recovery.py: OK\ntests/test_mdof_transfer.py: OK"
+    }
+  ]
+}
