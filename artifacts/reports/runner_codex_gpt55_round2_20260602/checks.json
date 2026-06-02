@@ -1,0 +1,368 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "exists:priority_deliverables.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/priority_deliverables.md"
+    },
+    {
+      "name": "exists:packet.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/packet.md"
+    },
+    {
+      "name": "exists:commands.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/commands.md"
+    },
+    {
+      "name": "exists:files_changed.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/files_changed.md"
+    },
+    {
+      "name": "exists:assumptions_ledger.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/assumptions_ledger.md"
+    },
+    {
+      "name": "exists:assumptions_ledger.json",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/assumptions_ledger.json"
+    },
+    {
+      "name": "exists:quantity_contracts.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/quantity_contracts.md"
+    },
+    {
+      "name": "exists:nuts_diagnostics.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/nuts_diagnostics.md"
+    },
+    {
+      "name": "exists:nuts_diagnostics.json",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/nuts_diagnostics.json"
+    },
+    {
+      "name": "exists:results.json",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/results.json"
+    },
+    {
+      "name": "exists:resolution_sensitivity.json",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/resolution_sensitivity.json"
+    },
+    {
+      "name": "exists:known_failures.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/known_failures.md"
+    },
+    {
+      "name": "exists:review_request.md",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/review_request.md"
+    },
+    {
+      "name": "exists:manifest.json",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/manifest.json"
+    },
+    {
+      "name": "exists:runtime.json",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/runtime.json"
+    },
+    {
+      "name": "exists:figures/interface_response_psd_evolution.gif",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/figures/interface_response_psd_evolution.gif"
+    },
+    {
+      "name": "exists:figures/flight_forcing_samples_overlay.png",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/figures/flight_forcing_samples_overlay.png"
+    },
+    {
+      "name": "exists:figures/flight_tray_3grms_vs_vibe_reference.png",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/figures/flight_tray_3grms_vs_vibe_reference.png"
+    },
+    {
+      "name": "exists:figures/resolution_sensitivity.png",
+      "pass": true,
+      "detail": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602/figures/resolution_sensitivity.png"
+    },
+    {
+      "name": "force_reconstruction_matches_stored_summaries",
+      "pass": true,
+      "detail": {
+        "method": "Replayed setup RNG sequence because sequential_dataset.json stores scalar force summaries, not full force PSD curves.",
+        "max_build_log_effect_l1_error": 0.0,
+        "max_force_log_mean_abs_error": 0.0,
+        "max_force_log_sd_abs_error": 0.0,
+        "per_flight_errors": [
+          {
+            "flight_id": 0,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 1,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 2,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 3,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 4,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 5,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 6,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 7,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 8,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 9,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          },
+          {
+            "flight_id": 10,
+            "mean_abs_error": 0.0,
+            "sd_abs_error": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "strict_final_nuts_convergence_pass",
+      "pass": true,
+      "detail": {
+        "label": "cumulative_flights_11",
+        "sampler_attempted": "NumPyro NUTS",
+        "nuts_sampler_ran": true,
+        "nuts_active_claim": true,
+        "num_chains": 4,
+        "num_warmup": 900,
+        "num_samples_per_chain": 900,
+        "post_warmup_draws_total": 3600,
+        "elapsed_seconds": 6.160746582999991,
+        "rank_normalized_rhat_method": "arviz.rhat(method='rank')",
+        "bulk_ess_method": "arviz.ess(method='bulk')",
+        "tail_ess_method": "arviz.ess(method='tail')",
+        "rhat_gate_final": 1.01,
+        "ess_gate_final": 400,
+        "max_rank_normalized_rhat": 1.0070877959908062,
+        "max_rank_normalized_rhat_variable": "flight_tray_force_raw",
+        "min_bulk_ess": 1080.1242554160233,
+        "min_bulk_ess_variable": "sigma_build_db",
+        "min_tail_ess": 1199.804945010423,
+        "min_tail_ess_variable": "sigma_build_db",
+        "divergences_total": 0,
+        "divergence_fraction": 0.0,
+        "divergence_gate_clean": "0 ideal and required for clean pass in this run",
+        "mean_accept_prob": 0.9463385177333948,
+        "max_num_steps": 255,
+        "mean_num_steps": 119.65777777777778,
+        "max_observed_tree_depth": 8.0,
+        "convergence_pass": true,
+        "variables_checked_count": 22,
+        "variables_checked": [
+          "dome_build",
+          "dome_build_raw",
+          "dome_hz",
+          "flight_iface_force_raw",
+          "flight_iface_log_force_effect",
+          "flight_tray_force_raw",
+          "flight_tray_log_force_effect",
+          "q_iface_struct_meanforce",
+          "q_tray_struct_meanforce",
+          "sigma_build_db",
+          "sigma_build_ln",
+          "sigma_sensor_db",
+          "sigma_sensor_ln",
+          "tray_build",
+          "tray_build_raw",
+          "tray_hz",
+          "u_k1",
+          "u_k2",
+          "u_z1",
+          "u_z2",
+          "zeta1",
+          "zeta2"
+        ]
+      }
+    },
+    {
+      "name": "image_legibility_pass",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "checks": [
+          {
+            "file": "figures/interface_response_psd_evolution.gif",
+            "pass": true,
+            "width": 1522,
+            "height": 899,
+            "frames": 11,
+            "gray_stddev": 37.41254159265147
+          },
+          {
+            "file": "figures/flight_forcing_samples_overlay.png",
+            "pass": true,
+            "width": 1792,
+            "height": 976,
+            "gray_stddev": 37.50563380435971,
+            "bytes": 606931
+          },
+          {
+            "file": "figures/flight_tray_3grms_vs_vibe_reference.png",
+            "pass": true,
+            "width": 1728,
+            "height": 960,
+            "gray_stddev": 30.653078853520952,
+            "bytes": 82662
+          },
+          {
+            "file": "figures/resolution_sensitivity.png",
+            "pass": true,
+            "width": 1728,
+            "height": 960,
+            "gray_stddev": 29.221944432226824,
+            "bytes": 111919
+          }
+        ],
+        "limitations": "This QA checks dimensions, frame count, file size, and nonblank raster variance. It does not OCR every label."
+      }
+    },
+    {
+      "name": "runtime_active_le_elapsed",
+      "pass": true,
+      "detail": {
+        "active_runtime_s": 293.864458042,
+        "elapsed_wallclock_s": 293.876639417,
+        "active_runtime_definition": "Sum of timed stages inside run_round2.py; no human approval wait included.",
+        "stage_times": [
+          {
+            "stage": "load_data_and_fixed_qoi_scatter",
+            "active_runtime_s": 1.2306857080000002
+          },
+          {
+            "stage": "nuts_cumulative_1_flights",
+            "active_runtime_s": 14.512534540999999
+          },
+          {
+            "stage": "nuts_cumulative_2_flights",
+            "active_runtime_s": 17.058497833999997
+          },
+          {
+            "stage": "nuts_cumulative_3_flights",
+            "active_runtime_s": 18.698709875
+          },
+          {
+            "stage": "nuts_cumulative_4_flights",
+            "active_runtime_s": 17.018685582999993
+          },
+          {
+            "stage": "nuts_cumulative_5_flights",
+            "active_runtime_s": 23.28856645799999
+          },
+          {
+            "stage": "nuts_cumulative_6_flights",
+            "active_runtime_s": 19.168005125000008
+          },
+          {
+            "stage": "nuts_cumulative_7_flights",
+            "active_runtime_s": 17.484753542000007
+          },
+          {
+            "stage": "nuts_cumulative_8_flights",
+            "active_runtime_s": 21.222800334
+          },
+          {
+            "stage": "nuts_cumulative_9_flights",
+            "active_runtime_s": 20.587425208000013
+          },
+          {
+            "stage": "nuts_cumulative_10_flights",
+            "active_runtime_s": 27.479039124999986
+          },
+          {
+            "stage": "nuts_full_11_flights",
+            "active_runtime_s": 33.734886375
+          },
+          {
+            "stage": "postprocess_figures_and_checks",
+            "active_runtime_s": 62.37986833400001
+          }
+        ],
+        "active_runtime_s_le_elapsed_wallclock_s": true
+      }
+    },
+    {
+      "name": "immutable_checker_hashes_unchanged",
+      "pass": true,
+      "detail": {
+        "pass": true,
+        "files": [
+          {
+            "file": "harness/checkers/verify_artifacts.py",
+            "expected": "ec313e56820b20dbaa1d7183b623de7004c25107c42755d5e73b69ad7cb98a7c",
+            "actual": "ec313e56820b20dbaa1d7183b623de7004c25107c42755d5e73b69ad7cb98a7c",
+            "pass": true
+          },
+          {
+            "file": "harness/checkers/check_canary.py",
+            "expected": "259ddd547f4c8c822ea27d9a1896d4f4ddee3db872191a512f4df94b53585dc8",
+            "actual": "259ddd547f4c8c822ea27d9a1896d4f4ddee3db872191a512f4df94b53585dc8",
+            "pass": true
+          },
+          {
+            "file": "tests/test_posterior_recovery.py",
+            "expected": "e523e68a72fa929e4e11e832884231a1f476b18a0564c0d95c8c3d53476c6651",
+            "actual": "e523e68a72fa929e4e11e832884231a1f476b18a0564c0d95c8c3d53476c6651",
+            "pass": true
+          },
+          {
+            "file": "tests/test_mdof_transfer.py",
+            "expected": "8d63ac8a365a02e085196130949408a11d76bfa945e6796a984cb4b19fdfb784",
+            "actual": "8d63ac8a365a02e085196130949408a11d76bfa945e6796a984cb4b19fdfb784",
+            "pass": true
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    "Cumulative GIF prefix fits 1-3 had nonzero divergences; final all-flight NUTS fit passed strict convergence."
+  ]
+}

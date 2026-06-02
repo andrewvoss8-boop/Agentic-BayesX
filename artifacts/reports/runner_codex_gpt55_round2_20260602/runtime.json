@@ -1,0 +1,60 @@
+{
+  "active_runtime_s": 293.864458042,
+  "elapsed_wallclock_s": 293.876639417,
+  "active_runtime_definition": "Sum of timed stages inside run_round2.py; no human approval wait included.",
+  "stage_times": [
+    {
+      "stage": "load_data_and_fixed_qoi_scatter",
+      "active_runtime_s": 1.2306857080000002
+    },
+    {
+      "stage": "nuts_cumulative_1_flights",
+      "active_runtime_s": 14.512534540999999
+    },
+    {
+      "stage": "nuts_cumulative_2_flights",
+      "active_runtime_s": 17.058497833999997
+    },
+    {
+      "stage": "nuts_cumulative_3_flights",
+      "active_runtime_s": 18.698709875
+    },
+    {
+      "stage": "nuts_cumulative_4_flights",
+      "active_runtime_s": 17.018685582999993
+    },
+    {
+      "stage": "nuts_cumulative_5_flights",
+      "active_runtime_s": 23.28856645799999
+    },
+    {
+      "stage": "nuts_cumulative_6_flights",
+      "active_runtime_s": 19.168005125000008
+    },
+    {
+      "stage": "nuts_cumulative_7_flights",
+      "active_runtime_s": 17.484753542000007
+    },
+    {
+      "stage": "nuts_cumulative_8_flights",
+      "active_runtime_s": 21.222800334
+    },
+    {
+      "stage": "nuts_cumulative_9_flights",
+      "active_runtime_s": 20.587425208000013
+    },
+    {
+      "stage": "nuts_cumulative_10_flights",
+      "active_runtime_s": 27.479039124999986
+    },
+    {
+      "stage": "nuts_full_11_flights",
+      "active_runtime_s": 33.734886375
+    },
+    {
+      "stage": "postprocess_figures_and_checks",
+      "active_runtime_s": 62.37986833400001
+    }
+  ],
+  "active_runtime_s_le_elapsed_wallclock_s": true
+}

@@ -1,0 +1,40 @@
+{
+  "trial_id": "runner_codex_gpt55_round2_20260602",
+  "date": "2026-06-02",
+  "workspace": "/Users/avoss/Downloads/bayesX/Agentic BayesX",
+  "output_dir": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/runner_codex_gpt55_round2_20260602",
+  "sampler": {
+    "attempted": "NumPyro NUTS",
+    "nuts_sampler_ran": true,
+    "nuts_active_claim": true,
+    "convergence_pass": true,
+    "random_walk_metropolis_used": false,
+    "custom_hmc_used": false
+  },
+  "priority_artifacts": [
+    "priority_deliverables.md",
+    "figures/interface_response_psd_evolution.gif",
+    "figures/flight_forcing_samples_overlay.png",
+    "figures/flight_tray_3grms_vs_vibe_reference.png"
+  ],
+  "supporting_artifacts": [
+    "packet.md",
+    "commands.md",
+    "files_changed.md",
+    "assumptions_ledger.md",
+    "assumptions_ledger.json",
+    "quantity_contracts.md",
+    "nuts_diagnostics.md",
+    "nuts_diagnostics.json",
+    "results.json",
+    "resolution_sensitivity.json",
+    "image_legibility_report.json",
+    "checks.json",
+    "known_failures.md",
+    "review_request.md",
+    "runtime.json"
+  ],
+  "checks_status": "pass",
+  "image_qa_pass": true,
+  "cumulative_frame_convergence_warning_count": 3
+}

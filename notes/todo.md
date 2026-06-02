@@ -6,6 +6,16 @@
 - [ ] Add MDOF reduced-order transfer-function prototype tests.
 - [ ] Inspect `/Users/avoss/Downloads/check pages.pdf` for incorrect crop seams; record PDF page numbers, visible textbook page numbers, assumptions, and validation artifacts.
 
+## 2026-06-02 Codex GPT-5.5 Round 2 Sequential Runner
+- [x] Print and assert runner workspace path before proceeding.
+- [x] Read AGENTS/CLAUDE/CODEX, round-2 task card, setup packet, figures, and human feedback.
+- [x] Write Step 0 `priority_deliverables.md` before building.
+- [x] Build isolated round-2 runner artifacts under `artifacts/reports/runner_codex_gpt55_round2_20260602/`.
+- [x] Try real NumPyro NUTS in `.venv_nuts`; label any fallback honestly.
+- [x] Generate interface response PSD GIF, forcing overlay, and flight tray `3*GRMS` vs vibe reference overlay.
+- [x] Run resolution sensitivity, convergence self-gate, artifact checks, immutable checker hash check, and runtime accounting.
+- [x] Write report contract files, update run notes, and stop.
+
 ## 2026-06-02 Runner Experiment Infographic
 - [x] Read the competitive runner task card and prompts.
 - [x] Create a plain-English infographic describing the experiment each runner is asked to run.

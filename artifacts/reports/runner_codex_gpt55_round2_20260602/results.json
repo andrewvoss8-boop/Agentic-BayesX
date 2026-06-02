@@ -1,0 +1,263 @@
+{
+  "posterior_summary": {
+    "dome_hz": {
+      "mean": 93.5553535888913,
+      "sd": 0.07791058079454077,
+      "q005": 93.3633137895038,
+      "q025": 93.40413011745765,
+      "q500": 93.55477337789776,
+      "q975": 93.70669712213707,
+      "q995": 93.74896034846017
+    },
+    "tray_hz": {
+      "mean": 86.14284014633132,
+      "sd": 0.06678453173483538,
+      "q005": 85.97064256498177,
+      "q025": 86.00978817703468,
+      "q500": 86.14304028025876,
+      "q975": 86.27164560554229,
+      "q995": 86.31572442371673
+    },
+    "zeta1": {
+      "mean": 0.022273755287041605,
+      "sd": 0.0008769268507008038,
+      "q005": 0.020089061359948816,
+      "q025": 0.020545776853061457,
+      "q500": 0.02228577560951943,
+      "q975": 0.023997152414447425,
+      "q995": 0.024548748987041673
+    },
+    "zeta2": {
+      "mean": 0.019626773860243807,
+      "sd": 0.0005542736222644339,
+      "q005": 0.01821505715041045,
+      "q025": 0.018588177647836483,
+      "q500": 0.019615346335605584,
+      "q975": 0.020716787597417772,
+      "q995": 0.021012745353814064
+    },
+    "sigma_build_db": {
+      "mean": 1.615330604665925,
+      "sd": 0.46274876311446805,
+      "q005": 0.6815742029626444,
+      "q025": 0.840049840581573,
+      "q500": 1.5691531774883951,
+      "q975": 2.6218683442829294,
+      "q995": 3.058378290784682
+    },
+    "sigma_sensor_db": {
+      "mean": 0.7427753355946278,
+      "sd": 0.018499757281451968,
+      "q005": 0.69791148276478,
+      "q025": 0.7080416850115594,
+      "q500": 0.7423320038094006,
+      "q975": 0.7795862394597389,
+      "q995": 0.7927351024503498
+    },
+    "q_tray_struct_meanforce": {
+      "mean": 1.0317440211410613,
+      "sd": 0.010785967450154992,
+      "q005": 1.0056078884782067,
+      "q025": 1.0113563311820333,
+      "q500": 1.0315305171790532,
+      "q975": 1.0530865350893048,
+      "q995": 1.0607529457054012
+    },
+    "q_iface_struct_meanforce": {
+      "mean": 1.3784928784890669,
+      "sd": 0.0067410165369397096,
+      "q005": 1.3618663983166077,
+      "q025": 1.3658835350743426,
+      "q500": 1.3784168223426028,
+      "q975": 1.3917932315768669,
+      "q995": 1.3963686726670155
+    }
+  },
+  "interface_psd_evolution": {
+    "gif": "figures/interface_response_psd_evolution.gif",
+    "frames": [
+      "figures/interface_gif_frames/interface_response_psd_after_flight_01.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_02.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_03.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_04.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_05.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_06.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_07.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_08.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_09.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_10.png",
+      "figures/interface_gif_frames/interface_response_psd_after_flight_11.png"
+    ],
+    "summaries": [
+      {
+        "after_flight": 1,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.7944657853131788,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 2,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.9323166854497473,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 3,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.6071981685107161,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 4,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.7883834038326858,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 5,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.6501009849920653,
+        "max_ratio_frequency_hz": 129.37215323092656
+      },
+      {
+        "after_flight": 6,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.7083528094233486,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 7,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.7156417310268636,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 8,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.7671382041165759,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 9,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.6832364123063057,
+        "max_ratio_frequency_hz": 62.40774493050605
+      },
+      {
+        "after_flight": 10,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.7765644446674859,
+        "max_ratio_frequency_hz": 129.37215323092656
+      },
+      {
+        "after_flight": 11,
+        "q995_exceeds_spec_any_frequency": false,
+        "frequency_fraction_q995_above_spec": 0.0,
+        "max_q995_to_spec_ratio": 0.5928507558305511,
+        "max_ratio_frequency_hz": 62.40774493050605
+      }
+    ]
+  },
+  "resolution_sensitivity": {
+    "grid_policy": "Use stored 260-point sequential_dataset grid for likelihood; use mode-local refined grid for response PSD/QOI evaluation.",
+    "base_frequency_count": 260,
+    "refined_frequency_count": 861,
+    "mode_local_spacing": {
+      "86.25_hz": {
+        "half_power_bandwidth_hz_assuming_zeta_0p02": 3.45,
+        "base_points_in_half_power_band": 2,
+        "refined_points_in_half_power_band": 75,
+        "base_max_gap_hz_in_band": 1.5418682795490923,
+        "refined_max_gap_hz_in_band": 0.11499999999999488
+      },
+      "93.50_hz": {
+        "half_power_bandwidth_hz_assuming_zeta_0p02": 3.74,
+        "base_points_in_half_power_band": 2,
+        "refined_points_in_half_power_band": 82,
+        "base_max_gap_hz_in_band": 1.65552332804522,
+        "refined_max_gap_hz_in_band": 0.1150000000000091
+      }
+    },
+    "qoi_shift_refined_minus_base": {
+      "tray_3grms_meanforce_relative_median": -2.4500799200491613e-05,
+      "tray_3grms_meanforce_relative_max_abs": 2.5802434650288646e-05,
+      "interface_3grms_meanforce_relative_median": -6.248878181017484e-06,
+      "interface_3grms_meanforce_relative_max_abs": 6.461307552650046e-06,
+      "interface_peak_psd_relative_median": 3.4548467988611076e-16,
+      "interface_peak_psd_relative_max_abs": 4.520096958396459e-16
+    }
+  },
+  "force_reconstruction": {
+    "method": "Replayed setup RNG sequence because sequential_dataset.json stores scalar force summaries, not full force PSD curves.",
+    "max_build_log_effect_l1_error": 0.0,
+    "max_force_log_mean_abs_error": 0.0,
+    "max_force_log_sd_abs_error": 0.0,
+    "per_flight_errors": [
+      {
+        "flight_id": 0,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 1,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 2,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 3,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 4,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 5,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 6,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 7,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 8,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 9,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      },
+      {
+        "flight_id": 10,
+        "mean_abs_error": 0.0,
+        "sd_abs_error": 0.0
+      }
+    ]
+  }
+}

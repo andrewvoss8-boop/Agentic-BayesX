@@ -8,6 +8,23 @@
 - Key metrics:
 - Lessons:
 
+## 2026-06-02 Codex GPT-5.5 round-2 sequential vibe/modal/flight runner
+- Trial: isolated round-2 Codex runner focused on the priority coupled interface acceleration response PSD GIF, forcing overlay, flight tray `3*GRMS` reference overlay, real NumPyro NUTS, resolution sensitivity, and runtime accounting.
+  - Commands:
+    - `pwd` confirmed `/Users/avoss/Downloads/bayesX/Agentic BayesX`.
+    - `.venv_nuts/bin/pip install --quiet --disable-pip-version-check 'arviz<0.19'`
+    - `.venv_nuts/bin/pip install --quiet --disable-pip-version-check 'scipy<1.13'`
+    - `PYTHONUNBUFFERED=1 bash artifacts/reports/runner_codex_gpt55_round2_20260602/run_round2.sh`
+    - `.venv_nuts/bin/python -m py_compile artifacts/reports/runner_codex_gpt55_round2_20260602/run_round2.py`
+    - `shasum -a 256 -c harness/checkers/manifest.sha256`
+  - Checker result: pass. `checks.json` reports `status = pass`; immutable checker hashes all reported `OK`.
+  - Key metrics: final all-11-flight NumPyro NUTS used 4 chains, 900 warmup, 900 post-warmup samples per chain. Strict all-variable diagnostics passed: max rank-normalized R-hat = 1.0070878 at `flight_tray_force_raw`, min bulk ESS = 1080.12 at `sigma_build_db`, min tail ESS = 1199.80 at `sigma_build_db`, divergences = 0. Early cumulative GIF prefix fits 1-3 had divergences (4, 4, 1 respectively), so those frames are hard-WARN despite the final posterior pass.
+  - Priority artifacts: `figures/interface_response_psd_evolution.gif`, `figures/flight_forcing_samples_overlay.png`, `figures/flight_tray_3grms_vs_vibe_reference.png`, `priority_deliverables.md`, `runtime.json`.
+  - Interface PSD result: final 99% predictive band did not exceed the smoothline at any frequency; max 99%/spec ratio = 0.59285 at 62.41 Hz.
+  - Resolution result: stored grid had 2 points in each half-power band; mode-local refined grid had 75 points near 86.25 Hz and 82 near 93.5 Hz. Median refined-minus-base interface `3*GRMS` shift = -0.000625%.
+  - Runtime: `active_runtime_s = 293.864`, `elapsed_wallclock_s = 293.877`.
+  - Lessons: the setup dataset did not store full forcing PSD curves; the runner reconstructed them from the setup RNG and verified exact agreement with stored force log-mean/log-sd summaries. A wrapper path bug briefly created `/Users/avoss/Downloads/bayesX/.venv_nuts`; it was removed and the wrapper was patched to use the actual repo root.
+
 ## 2026-06-02 Codex GPT-5.5 full sequential vibe/modal/flight runner
 - Trial: independent Codex runner attempt at the full staged dome/tray vibe-modal-flight experiment with posterior inference and full-vs-peak likelihood comparison.
   - Commands:

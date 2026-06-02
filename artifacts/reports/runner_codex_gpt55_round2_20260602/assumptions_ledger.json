@@ -1,0 +1,100 @@
+{
+  "rows": [
+    {
+      "assumption": "PSD-space dB convention",
+      "value": "factor = 10 ** (dB / 10)",
+      "units": "dimensionless PSD multiplier",
+      "source": "setup packet",
+      "rationale": "All dB values are power/PSD quantities.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Smoothline PSD points",
+      "value": "[(20,0.01),(100,0.1),(750,0.1),(2000,0.001)]",
+      "units": "Hz, g^2/Hz",
+      "source": "human task card",
+      "rationale": "Original test spec for envelope comparison.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Flight forcing mean offset",
+      "value": "-6.0",
+      "units": "dB PSD",
+      "source": "project setup assumption",
+      "rationale": "Mean flight forcing is below original force PSD; not a GEVS margin.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Flight forcing variability",
+      "value": "3.0",
+      "units": "dB PSD sigma",
+      "source": "setup/task card",
+      "rationale": "Known Matern forcing variability, fixed in inference.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Forcing covariance",
+      "value": "Matern-3/2 ell=0.08",
+      "units": "natural log frequency",
+      "source": "setup/task card",
+      "rationale": "Flight forcing curves are correlated over log frequency.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Build-to-build scale prior",
+      "value": "HalfNormal(0.5) on natural-log PSD sigma",
+      "units": "ln PSD",
+      "source": "round-2 model",
+      "rationale": "Learn build variability with non-centered raw build effects.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Sensor scale prior",
+      "value": "HalfNormal(0.3) on natural-log PSD sigma",
+      "units": "ln PSD",
+      "source": "round-2 model",
+      "rationale": "Learn observation scatter for full PSD/modal curves.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Flight QOI observation noise",
+      "value": "0.08",
+      "units": "natural log 3*GRMS",
+      "source": "round-2 model assumption",
+      "rationale": "Scalar flight observations need residual noise beyond sampled forcing latent.",
+      "sensitivity_priority": "Medium"
+    },
+    {
+      "assumption": "Structural stiffness prior",
+      "value": "log(k/k_nom) ~ Normal(0,0.18^2), truncated [0.55,1.65]",
+      "units": "dimensionless",
+      "source": "setup prior summary",
+      "rationale": "Prior centers from fresh 2DOF setup.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Damping prior",
+      "value": "log(zeta/zeta_nom) ~ Normal(0,0.35^2), truncated [0.004,0.09]",
+      "units": "dimensionless",
+      "source": "setup prior summary",
+      "rationale": "Positive damping with broad uncertainty.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Likelihood data usage",
+      "value": "whole stored tray PSD and modal log-magnitude curves; scalar flight 3*GRMS observations",
+      "units": "mixed",
+      "source": "round-2 model",
+      "rationale": "No full flight PSD observations are stored in sequential_dataset.json.",
+      "sensitivity_priority": "High"
+    },
+    {
+      "assumption": "Response evaluation grid",
+      "value": "stored 260 point grid plus mode-local refinement",
+      "units": "Hz",
+      "source": "round-2 resolution gate",
+      "rationale": "Resolve tray/dome modes without inventing a new coarse truth.",
+      "sensitivity_priority": "High"
+    }
+  ]
+}

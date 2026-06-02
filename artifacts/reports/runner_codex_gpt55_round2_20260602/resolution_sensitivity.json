@@ -1,0 +1,29 @@
+{
+  "grid_policy": "Use stored 260-point sequential_dataset grid for likelihood; use mode-local refined grid for response PSD/QOI evaluation.",
+  "base_frequency_count": 260,
+  "refined_frequency_count": 861,
+  "mode_local_spacing": {
+    "86.25_hz": {
+      "half_power_bandwidth_hz_assuming_zeta_0p02": 3.45,
+      "base_points_in_half_power_band": 2,
+      "refined_points_in_half_power_band": 75,
+      "base_max_gap_hz_in_band": 1.5418682795490923,
+      "refined_max_gap_hz_in_band": 0.11499999999999488
+    },
+    "93.50_hz": {
+      "half_power_bandwidth_hz_assuming_zeta_0p02": 3.74,
+      "base_points_in_half_power_band": 2,
+      "refined_points_in_half_power_band": 82,
+      "base_max_gap_hz_in_band": 1.65552332804522,
+      "refined_max_gap_hz_in_band": 0.1150000000000091
+    }
+  },
+  "qoi_shift_refined_minus_base": {
+    "tray_3grms_meanforce_relative_median": -2.4500799200491613e-05,
+    "tray_3grms_meanforce_relative_max_abs": 2.5802434650288646e-05,
+    "interface_3grms_meanforce_relative_median": -6.248878181017484e-06,
+    "interface_3grms_meanforce_relative_max_abs": 6.461307552650046e-06,
+    "interface_peak_psd_relative_median": 3.4548467988611076e-16,
+    "interface_peak_psd_relative_max_abs": 4.520096958396459e-16
+  }
+}

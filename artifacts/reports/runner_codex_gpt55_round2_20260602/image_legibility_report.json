@@ -1,0 +1,38 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "file": "figures/interface_response_psd_evolution.gif",
+      "pass": true,
+      "width": 1522,
+      "height": 899,
+      "frames": 11,
+      "gray_stddev": 37.41254159265147
+    },
+    {
+      "file": "figures/flight_forcing_samples_overlay.png",
+      "pass": true,
+      "width": 1792,
+      "height": 976,
+      "gray_stddev": 37.50563380435971,
+      "bytes": 606931
+    },
+    {
+      "file": "figures/flight_tray_3grms_vs_vibe_reference.png",
+      "pass": true,
+      "width": 1728,
+      "height": 960,
+      "gray_stddev": 30.653078853520952,
+      "bytes": 82662
+    },
+    {
+      "file": "figures/resolution_sensitivity.png",
+      "pass": true,
+      "width": 1728,
+      "height": 960,
+      "gray_stddev": 29.221944432226824,
+      "bytes": 111919
+    }
+  ],
+  "limitations": "This QA checks dimensions, frame count, file size, and nonblank raster variance. It does not OCR every label."
+}
