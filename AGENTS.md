@@ -22,8 +22,23 @@ Build for correctness, reproducibility, traceability, and continuity.
 - Do not claim NUTS/HMC is implemented or active unless code, one-command replay, sampler diagnostics, and checker output prove it.
 - If a future task uses another sampler, say why in the task card and report.
 
+## Convergence Gate
+- "NUTS/HMC active" requires PASSING convergence diagnostics, not just that a sampler ran. Report R-hat and ESS over ALL sampled variables, including raw hierarchical latents, not only headline marginals.
+- Default acceptance (state and justify any deviation): max R-hat <= 1.05 (prefer <= 1.01 where a primary source supports it), min ESS >= 200 for reported parameters (documented for nuisance latents), divergence fraction < 2%. Use >= 4 chains and a non-centered parameterization for hierarchical variance models unless justified.
+- If convergence fails, do NOT report a clean "pass" or "NUTS active"; surface the worst-case R-hat/ESS next to any interval and label the intervals as not-yet-converged.
+
+## Sampler Decision
+- NUTS/HMC is the default. If the sampler library is unavailable, either install it in an isolated environment or use a clearly labeled alternative WITH a stated reason. Never present a non-NUTS sampler as NUTS. Honest labeling of a fallback is acceptable; misleading success framing is not.
+- NUTS/HMC needs a differentiable forward model and likelihood; if features (e.g. peaks/argmax) are non-differentiable, document the smoothing/relaxation used and its effect.
+
 ## Engineering Harness Gates
 Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experiment task is complete, satisfy these broadly applicable gates.
+
+### Priority Deliverables and Clarification Gate
+- At task start, restate the human/master's PRIORITY deliverables and acceptance criteria in your own words, and flag any ambiguous or underspecified ask.
+- If a priority ask is ambiguous, ask for clarification BEFORE building. If you cannot ask mid-run, state the assumption prominently and, where cheap, produce both interpretations.
+- Record a `priority_deliverables.md` listing each priority ask, its interpretation, and where it was delivered. A priority with no delivered artifact is a failure; an "assumed" interpretation without confirmation is a warning.
+- The harness must NOT encode any specific problem's deliverables; those belong in the task card/runner prompt. The harness only ensures priorities are surfaced, clarified, and met.
 
 ### Question and Decision Gate
 - State the engineering decision being supported.
@@ -83,6 +98,15 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 - Check that peak/notch feature likelihoods include a feature-map or sensitivity benchmark that can expose falsely informative, redundant, or confounded features.
 - Do not rely on visual appeal or artifact existence as verification.
 - If a checker cannot encode the physics yet, document the manual review checklist and residual risk.
+
+### Discretization Resolution Gate
+- Treat the analysis grid/resolution (frequency, time, or mesh) as a first-class documented assumption: spacing, log/linear, and a rationale tying it to the features that drive the QOI.
+- Show the QOI-driving features are adequately resolved, OR justify a coarser grid INCLUDING the runtime/accuracy tradeoff (finer is not free and may be intractable).
+- Provide a resolution sensitivity result (refine near the QOI-driving features; report the QOI/posterior shift) or a justified intractability note with a bounded error estimate.
+- The harness does not mandate a fixed points-per-feature number; specific targets belong in the task card.
+
+### Runtime Accounting Gate
+- Record `runtime.json` with `active_runtime_s` (sum of per-command execution time) and `elapsed_wallclock_s`. Cross-runner comparison uses `active_runtime_s` so human-approval wait does not distort it. `active_runtime_s <= elapsed_wallclock_s`.
 
 ## Memory
 - Do not rely on conversational memory across sessions.

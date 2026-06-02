@@ -87,3 +87,9 @@ Automation that is not assumed:
 - Claude Code cannot automatically control the Codex app or Cursor Composer unless a local CLI/API bridge is explicitly configured.
 - Model selection is manual in each app unless that app exposes a setting for it.
 - Cross-agent handoff is file-based and human-mediated for this proof of concept.
+
+## Runner Isolation and Auto-Run
+
+- Each runner works in its own disposable copied workspace and asserts its working directory at start; it refuses to run in the master repo.
+- Because the workspace is disposable and immutable checker hashes are verified afterward, runners may auto-execute within it: Claude Code `--dangerously-skip-permissions`; Codex full-auto/no-approval; Cursor Agent Auto-Run. Never enable auto-run in the master repo. Confirm exact flags in-app.
+- Runtime is compared across runners using `active_runtime_s` (sum of per-command execution time), which excludes human-approval wait; record `elapsed_wallclock_s` separately.
