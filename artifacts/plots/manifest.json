@@ -1,0 +1,11 @@
+{
+  "plots": [
+    "artifacts/plots/nominal_2dof_frfs.png",
+    "artifacts/plots/key_2dof_transfer_functions_linear.png",
+    "artifacts/plots/synthetic_channels.png",
+    "artifacts/plots/posterior_vs_truth.png",
+    "artifacts/plots/posterior_channel_fit.png",
+    "artifacts/plots/mdof_frf_comparison.png",
+    "artifacts/plots/mcmc_traces.png"
+  ]
+}

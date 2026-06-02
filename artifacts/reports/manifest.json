@@ -1,0 +1,35 @@
+{
+  "report": "artifacts/reports/synthetic_statfem_packet.md",
+  "figures": [
+    "artifacts/reports/figures/model_schematic.png",
+    "artifacts/reports/figures/experimental_workflow.png",
+    "artifacts/reports/figures/error_taxonomy.png",
+    "artifacts/reports/figures/error_hyperparameters.png",
+    "artifacts/reports/figures/channel_truth_vs_observed.png",
+    "artifacts/reports/figures/channel_absolute_error.png",
+    "artifacts/reports/figures/channel_error_vs_truth.png",
+    "artifacts/reports/figures/gp_discrepancy_samples.png",
+    "artifacts/reports/figures/parameter_error_summary.png",
+    "artifacts/reports/figures/question_framing.png",
+    "artifacts/reports/figures/qoi_uncertainty.png",
+    "artifacts/reports/figures/qoi_samples.png",
+    "artifacts/reports/figures/sampler_diagnostics.png"
+  ],
+  "source_plots": [
+    "artifacts/plots/nominal_2dof_frfs.png",
+    "artifacts/plots/key_2dof_transfer_functions_linear.png",
+    "artifacts/plots/synthetic_channels.png",
+    "artifacts/plots/posterior_vs_truth.png",
+    "artifacts/plots/posterior_channel_fit.png",
+    "artifacts/plots/mdof_frf_comparison.png",
+    "artifacts/plots/mcmc_traces.png"
+  ],
+  "frequency_axis_scale": {
+    "artifacts/reports/figures/channel_truth_vs_observed.png": "log",
+    "artifacts/reports/figures/channel_absolute_error.png": "log",
+    "artifacts/reports/figures/channel_error_vs_truth.png": "log",
+    "artifacts/reports/figures/gp_discrepancy_samples.png": "log",
+    "artifacts/reports/figures/qoi_samples.png": "log",
+    "artifacts/plots/key_2dof_transfer_functions_linear.png": "log"
+  }
+}

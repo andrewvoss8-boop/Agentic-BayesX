@@ -1,0 +1,20 @@
+{
+  "missing_files": [],
+  "missing_frfs": [],
+  "bad_units": [],
+  "bad_scales": [],
+  "bad_values": [],
+  "load_apparent_mass_without_interior_peak": [],
+  "load_apparent_mass_without_resonant_amplification": [],
+  "source_apparent_mass_without_interior_notch": [],
+  "source_apparent_mass_without_low_frequency_growth": [],
+  "grid_ok": true,
+  "mass_reference_ok": true,
+  "total_mass_ok": true,
+  "natural_frequency_reference_ok": true,
+  "has_accel_force": true,
+  "has_source_apparent_mass": true,
+  "has_load_apparent_mass": true,
+  "frf_count": 15,
+  "pass": true
+}

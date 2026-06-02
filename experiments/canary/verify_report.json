@@ -1,0 +1,11 @@
+{
+  "base_dir": ".",
+  "missing": [],
+  "required_count": 3,
+  "artifact_hashes": {
+    "experiments/canary/baseline.json": "76824b3a38dde02f0ccd8e2566853f8f6f7bcd6459816b77c00f3f93ff903338",
+    "experiments/canary/candidate.json": "7eb106d0a9441a74d7f1c7f9b17f6719e25310d68de04025f433252a92b330f2",
+    "experiments/canary/metrics.json": "87c33f38736cb717df3f35ad853bf10cf2d87ae4733f6584f0238605432d1ca2"
+  },
+  "status": "pass"
+}

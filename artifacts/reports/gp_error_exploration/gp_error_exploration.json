@@ -1,0 +1,31 @@
+{
+  "noise_config": {
+    "sigma_re": 0.02,
+    "sigma_im": 0.02,
+    "discrepancy_scale": 0.03,
+    "discrepancy_corr_hz": 8.0,
+    "seed": 42
+  },
+  "interpretation": {
+    "already_in_main_generator": true,
+    "main_generator_function": "src/twodof/synthetic_data.py::_complex_noise",
+    "inference_likelihood_function": "src/inference/mcmc.py::_log_likelihood",
+    "current_limitations": [
+      "GP discrepancy and iid sensor noise are added together and not stored separately in twodof_dataset.json.",
+      "Real and imaginary parts get independent GP draws with the same covariance.",
+      "Each channel gets an independent discrepancy draw but shares the same hyperparameters.",
+      "The discrepancy is additive in raw complex channel units rather than normalized or per-channel scaled.",
+      "The inference marginalizes the discrepancy through covariance; it does not sample latent discrepancy functions."
+    ]
+  },
+  "covariance_checks": {
+    "diag_mean": 0.0009000000999999998,
+    "near_corr_reference": 0.6198518084924871,
+    "far_corr_reference": 8.799316916087202e-99
+  },
+  "figures": [
+    "artifacts/reports/gp_error_exploration/gp_frequency_covariance.png",
+    "artifacts/reports/gp_error_exploration/gp_error_samples.png",
+    "artifacts/reports/gp_error_exploration/gp_error_components_ch2.png"
+  ]
+}

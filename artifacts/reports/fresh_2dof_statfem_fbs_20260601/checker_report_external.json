@@ -1,0 +1,30 @@
+{
+  "missing_files": [],
+  "missing_snippets": [],
+  "numeric_assumption_count": 30,
+  "channel_2_3_relative_l2": 0.6739064407171255,
+  "checks": {
+    "required_report_exists": true,
+    "required_figures_exist": true,
+    "required_files_exist": true,
+    "required_report_snippets_present": true,
+    "numerical_assumptions_present": true,
+    "model_error_assumptions_present": true,
+    "reference_standards_comparison_present": true,
+    "reference_value_metrics_present": true,
+    "sensitivity_artifact_present": true,
+    "no_arbitrary_sensitivity_threshold_language": true,
+    "channel_2_and_3_not_accidental_duplicates": true,
+    "frequency_domain_plot_metadata_states_log_x_axis": true,
+    "qoi_sample_summary_exists": true,
+    "bayes_parameter_update_artifact_present": true,
+    "posterior_parameter_95_ci_exists": true,
+    "simulation_replicate_count_reported": true,
+    "statfem_noise_model_documented": true,
+    "prior_likelihood_methodology_documented": true,
+    "method_summary_documented": true,
+    "image_legibility_report_pass": true,
+    "checker_status_and_limitations_included": true
+  },
+  "pass": true
+}

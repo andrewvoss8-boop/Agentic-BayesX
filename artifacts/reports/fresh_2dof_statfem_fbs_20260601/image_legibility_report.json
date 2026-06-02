@@ -1,0 +1,416 @@
+{
+  "checks": [
+    {
+      "figure": "figures/model_schematic.png",
+      "width_px": 1360,
+      "height_px": 544,
+      "text_count": 7,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "F1",
+        "F2"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "2 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/workflow_diagram.png",
+      "width_px": 1530,
+      "height_px": 612,
+      "text_count": 8,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 9.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "Anti-cheating trace: generated data, error components, assumptions, posterior sa"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "1 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/statfem_likelihood_graphical_model_legible.png",
+      "width_px": 2660,
+      "height_px": 1747,
+      "text_count": 13,
+      "min_font_pt_required": 12.0,
+      "min_font_pt_observed": 12.5,
+      "text_heavy": true,
+      "clipped_text_examples": [],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/assumptions_graphical.png",
+      "width_px": 2040,
+      "height_px": 595,
+      "text_count": 38,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": false,
+      "clipped_text_examples": [],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/channel_truth_vs_observed.png",
+      "width_px": 2040,
+      "height_px": 1360,
+      "text_count": 61,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "70",
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "5 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/channel_absolute_error.png",
+      "width_px": 2040,
+      "height_px": 1360,
+      "text_count": 59,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "35",
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "4 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/channel_normalized_error_diagnostic.png",
+      "width_px": 2040,
+      "height_px": 1360,
+      "text_count": 59,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$",
+        "Normalized error diagnostic; denominator effects can dominate near notches"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "5 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/gp_discrepancy_samples.png",
+      "width_px": 2040,
+      "height_px": 680,
+      "text_count": 33,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{4}}$",
+        "4",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "6 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/flight_truth_vs_observed.png",
+      "width_px": 2210,
+      "height_px": 1360,
+      "text_count": 83,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{1}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{1}}$",
+        "$\\mathdefault{10^{2}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "13 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/posterior_fit_and_residuals.png",
+      "width_px": 2210,
+      "height_px": 2040,
+      "text_count": 96,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "100",
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "5 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/sampler_diagnostics.png",
+      "width_px": 2040,
+      "height_px": 1360,
+      "text_count": 74,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "Random-walk MH traces; acceptance = 0.499"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "1 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/qoi_samples.png",
+      "width_px": 2210,
+      "height_px": 1360,
+      "text_count": 101,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "60",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{0}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "37 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/bayes_parameter_update.png",
+      "width_px": 2210,
+      "height_px": 1360,
+      "text_count": 85,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "70",
+        "100",
+        "\u22120.02",
+        "0.10"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "4 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/parameter_posterior_samples.png",
+      "width_px": 2210,
+      "height_px": 1360,
+      "text_count": 81,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "70",
+        "1.2",
+        "100",
+        "1.2",
+        "0.10"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "5 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/prior_predictive_vs_data.png",
+      "width_px": 2210,
+      "height_px": 1360,
+      "text_count": 74,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{1}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "9 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/posterior_predictive_spectra.png",
+      "width_px": 2210,
+      "height_px": 1360,
+      "text_count": 77,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{0}}$",
+        "$\\mathdefault{10^{3}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "7 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    },
+    {
+      "figure": "figures/sensitivity_qoi.png",
+      "width_px": 2210,
+      "height_px": 765,
+      "text_count": 36,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 8.0,
+      "text_heavy": false,
+      "clipped_text_examples": [],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/sensitivity_synthetic_error.png",
+      "width_px": 1530,
+      "height_px": 680,
+      "text_count": 17,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 10.0,
+      "text_heavy": false,
+      "clipped_text_examples": [],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/reference_standards_comparison_cards.png",
+      "width_px": 2660,
+      "height_px": 1937,
+      "text_count": 26,
+      "min_font_pt_required": 11.5,
+      "min_font_pt_observed": 11.5,
+      "text_heavy": true,
+      "clipped_text_examples": [],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "figure": "figures/nasa_7004c_apparent_mass_benchmark.png",
+      "width_px": 2210,
+      "height_px": 816,
+      "text_count": 45,
+      "min_font_pt_required": 7.0,
+      "min_font_pt_observed": 7.0,
+      "text_heavy": false,
+      "clipped_text_examples": [
+        "$\\mathdefault{10^{-3}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{3}}$",
+        "$\\mathdefault{10^{4}}$",
+        "$\\mathdefault{10^{-3}}$"
+      ],
+      "plain_math_text_examples": [],
+      "overlap_examples": [],
+      "issues": [],
+      "warnings": [
+        "6 edge text/tick labels appear near the image boundary"
+      ],
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "strict_text_heavy_figures": [
+    "figures/statfem_likelihood_graphical_model_legible.png",
+    "figures/reference_standards_comparison_cards.png"
+  ]
+}

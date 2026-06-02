@@ -1,0 +1,14 @@
+{
+  "trial_name": "canary",
+  "timestamp": "20260601-095052",
+  "status": "pass",
+  "git_head": "nogit",
+  "config_path": "harness/configs/canary_trial.json",
+  "run_command": "python3 experiments/canary/prepare.py && python3 experiments/canary/train.py && python3 experiments/canary/evaluate.py",
+  "check_command": "python3 harness/checkers/check_canary.py && python3 harness/checkers/verify_artifacts.py --base-dir . --spec harness/specs/canary_artifacts.json --output experiments/canary/verify_report.json",
+  "run_code": 0,
+  "check_code": 0,
+  "checker_manifest": "/Users/avoss/Downloads/bayesX/Agentic BayesX/harness/checkers/manifest.sha256",
+  "checker_manifest_mismatch_before": [],
+  "checker_manifest_mismatch_after": []
+}

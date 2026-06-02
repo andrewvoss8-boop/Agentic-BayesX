@@ -1,0 +1,209 @@
+{
+  "parameter_summaries": {
+    "dome_hz": {
+      "prior": {
+        "mean": 110.47800826412812,
+        "median": 109.9043429363045,
+        "sd": 9.93698878014541,
+        "q025": 91.66905100226896,
+        "q05": 95.11721533536134,
+        "q95": 127.27509981479899,
+        "q975": 131.01119962049088,
+        "truth": 93.49999999999999,
+        "nominal": 110.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "posterior": {
+        "mean": 93.45161231009027,
+        "median": 93.47174479743295,
+        "sd": 0.14672142505145488,
+        "q025": 93.19869788263061,
+        "q05": 93.19869788263061,
+        "q95": 93.67540165109165,
+        "q975": 93.79498753772323,
+        "truth": 93.49999999999999,
+        "nominal": 110.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "conditional_likelihood_max_at": 93.62242705699632,
+      "conditional_likelihood_units": "Hz"
+    },
+    "tray_hz": {
+      "prior": {
+        "mean": 75.08188373481053,
+        "median": 74.83828966360716,
+        "sd": 6.594472624309204,
+        "q025": 62.73502158772021,
+        "q05": 64.7322416543113,
+        "q95": 86.38645849205402,
+        "q975": 88.56876917007034,
+        "truth": 86.24999999999999,
+        "nominal": 75.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "posterior": {
+        "mean": 86.24864704665018,
+        "median": 86.2534229124947,
+        "sd": 0.08083814112479219,
+        "q025": 86.0417789980289,
+        "q05": 86.10143307080159,
+        "q95": 86.35438237367393,
+        "q975": 86.39815006108721,
+        "truth": 86.24999999999999,
+        "nominal": 75.0,
+        "units": "Hz",
+        "truth_in_95_ci": true
+      },
+      "conditional_likelihood_max_at": 86.07426391475208,
+      "conditional_likelihood_units": "Hz"
+    },
+    "zeta1": {
+      "prior": {
+        "mean": 0.01913224673803131,
+        "median": 0.01813147482923355,
+        "sd": 0.006823302508946633,
+        "q025": 0.0090721612031927,
+        "q05": 0.01010746612909489,
+        "q95": 0.031537070327819654,
+        "q975": 0.03529806812749699,
+        "truth": 0.0225,
+        "nominal": 0.018,
+        "units": "ratio",
+        "truth_in_95_ci": true
+      },
+      "posterior": {
+        "mean": 0.022169222277527326,
+        "median": 0.021986984153744688,
+        "sd": 0.0016391717005480363,
+        "q025": 0.01911576169960109,
+        "q05": 0.01987122465965819,
+        "q95": 0.024827047016228277,
+        "q975": 0.025912536800225774,
+        "truth": 0.0225,
+        "nominal": 0.018,
+        "units": "ratio",
+        "truth_in_95_ci": true
+      },
+      "conditional_likelihood_max_at": 0.02191023729075774,
+      "conditional_likelihood_units": "ratio"
+    },
+    "zeta2": {
+      "prior": {
+        "mean": 0.027696112658445834,
+        "median": 0.025844097570402066,
+        "sd": 0.010171864677188709,
+        "q025": 0.013435670724626592,
+        "q05": 0.014920986548586384,
+        "q95": 0.04699432957200751,
+        "q975": 0.052905561508855364,
+        "truth": 0.0195,
+        "nominal": 0.026,
+        "units": "ratio",
+        "truth_in_95_ci": true
+      },
+      "posterior": {
+        "mean": 0.021863546015131796,
+        "median": 0.021769902180756046,
+        "sd": 0.0009607511235347057,
+        "q025": 0.020177342278002077,
+        "q05": 0.02041188227335742,
+        "q95": 0.023504851940540215,
+        "q975": 0.02380205024544761,
+        "truth": 0.0195,
+        "nominal": 0.026,
+        "units": "ratio",
+        "truth_in_95_ci": false
+      },
+      "conditional_likelihood_max_at": 0.02191023729075774,
+      "conditional_likelihood_units": "ratio"
+    }
+  },
+  "likelihood_summary": {
+    "likelihood_curve_type": "one-dimensional conditional slices with all other transformed variables held at the retained posterior sample with largest log posterior",
+    "log_likelihood_at_prior_center": -8398.766283185509,
+    "log_likelihood_at_truth": 166.6819752813649,
+    "log_likelihood_at_retained_posterior_mode": 172.90213997908248,
+    "log_prior_at_prior_center": 1.9605205546754023,
+    "log_prior_at_truth": -1.4585712004384968,
+    "log_prior_at_retained_posterior_mode": -1.2671182304147721
+  },
+  "prior_model": {
+    "parameterization": "transformed positive variables: log(k1/k1_nom), log(k2/k2_nom), log(zeta1), log(zeta2), log(force_amp), log(force_fc)",
+    "stiffness_prior": {
+      "distribution": "log(k/k_nom) ~ Normal(0, 0.18^2), truncated to log([0.55, 1.65])",
+      "sigma_log_stiffness": 0.18,
+      "approx_95_factor_untruncated": [
+        0.7027177228683976,
+        1.4230465056696404
+      ]
+    },
+    "natural_frequency_prior": {
+      "distribution": "because f is proportional to sqrt(k), log(f/f_nom) ~ Normal(0, 0.09^2) before truncation",
+      "sigma_log_frequency": 0.09,
+      "approx_95_factor_untruncated": [
+        0.8382826032242334,
+        1.1929151292818951
+      ],
+      "dome_prior_center_hz": 110.0,
+      "tray_prior_center_hz": 75.0
+    },
+    "damping_prior": {
+      "distribution": "log(zeta/zeta_nom) ~ Normal(0, 0.35^2), with zeta truncated to [0.004, 0.090]",
+      "sigma_log_damping_ratio": 0.35,
+      "approx_95_factor_untruncated": [
+        0.5035863913063715,
+        1.985756599589326
+      ],
+      "dome_prior_center_zeta": 0.018,
+      "tray_prior_center_zeta": 0.026
+    },
+    "force_prior": {
+      "force_amp": "log(A/0.85 N/sqrt(Hz)) ~ Normal(0, 0.65^2), truncated to [0.10, 5.0]",
+      "force_amp_sigma_log": 0.65,
+      "force_center": "log(fc/95 Hz) ~ Normal(0, 0.22^2), truncated to [35, 170] Hz",
+      "force_center_sigma_log": 0.22
+    }
+  },
+  "likelihood_formulation": {
+    "uses_whole_frf_not_peak_summary": true,
+    "frequency_channels": {
+      "data_used": "all complex FRF/transfer values at 120 log-spaced frequencies for Ch1-Ch4",
+      "residual": "observed complex channel value minus model complex channel value at every frequency point",
+      "covariance": "C = K_discrepancy + diag(sigma_sensor^2), with K_ij = sigma_d(f_i) sigma_d(f_j) exp(-0.5*((ln f_i - ln f_j)/ell)^2)",
+      "real_imag_treatment": "real and imaginary residual vectors are evaluated independently with the same covariance",
+      "peak_usage": "peak/notch locations are used only for reference checks and plots, not as likelihood summary statistics"
+    },
+    "flight_response_psd": {
+      "data_used": "all log response-PSD values at 181 log-spaced frequencies",
+      "residual": "log(observed PSD) minus log(model response PSD) at every frequency point",
+      "covariance": "C_logPSD = sigma_log_discrepancy^2 R_logfreq + sigma_log_sensor^2 I",
+      "qoi": "3*GRMS is computed after posterior sampling from each sampled response PSD; it is not the only data used in the likelihood"
+    },
+    "not_inferred": {
+      "realized_discrepancy_field": true,
+      "noise_hyperparameters": true,
+      "flight_to_flight_variability": true
+    },
+    "desired_next_step": "Infer discrepancy fields and/or hyperparameters in a hierarchical StatFEM model, preferably with replicate data so sensor noise, flight-to-flight variability, and model discrepancy are identifiable."
+  },
+  "simulation_replicates": {
+    "frequency_domain_realizations_per_channel": 1,
+    "flight_like_response_psd_realizations": 1,
+    "flight_time_history_realizations": 1,
+    "flight_to_flight_variability_modeled": false,
+    "flight_to_flight_variability_realizations": 0,
+    "note": "This fresh trial generates one synthetic dataset. It does not model flight-to-flight variability or repeated experiment scatter."
+  },
+  "statfem_noise_model": {
+    "frf_generation": "observed = clean + realized GP model discrepancy + realized iid sensor noise",
+    "frf_likelihood": "complex residuals use covariance K_discrepancy + diagonal sensor-noise covariance; real and imaginary parts are treated independently",
+    "response_psd_generation": "observed PSD = clean PSD * exp(log-GP discrepancy + log-iid sensor noise)",
+    "response_psd_likelihood": "log PSD residual uses GP discrepancy covariance plus diagonal log sensor-noise covariance",
+    "kept_separate_in_generated_data": true,
+    "realized_discrepancy_inferred_as_latent_field": false,
+    "hyperparameters_inferred": false
+  }
+}

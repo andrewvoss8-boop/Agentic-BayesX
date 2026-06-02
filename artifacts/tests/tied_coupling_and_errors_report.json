@@ -1,0 +1,8 @@
+{
+  "tied_coupling_ok": true,
+  "log_frequency_gp_ok": true,
+  "missing_error_channels": [],
+  "missing_error_components": [],
+  "bad_error_reconstruction": [],
+  "pass": true
+}

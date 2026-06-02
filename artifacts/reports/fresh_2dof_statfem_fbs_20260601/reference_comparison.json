@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "nasa_7004c_scope": "Applied explicitly through Figure 9 normalized source/load apparent-mass benchmark curves and fresh source/load-style curves.",
+    "vibrationdata_scope": "Applied as SDOF/2DOF shape sanity checks for transmissibility, resonances, and non-duplicate drive points.",
+    "ch4_low_frequency_transmissibility_near_one": true,
+    "ch4_high_frequency_rolloff": true,
+    "ch4_peak_near_tray_frequency": true,
+    "ch1_reciprocal_inertance_notch_near_dome_frequency": true,
+    "ch2_ch3_not_duplicate": true,
+    "nasa_7004c_figure9_load_at_0p62_near_1p62": true,
+    "nasa_7004c_figure9_load_peak_near_50": true,
+    "nasa_7004c_figure9_source_notch_near_0p02": true
+  },
+  "metrics": {
+    "ch4_low_frequency_median": 1.0294634514887901,
+    "ch4_high_frequency_median": 0.23073659293447837,
+    "ch4_peak_frequency_hz": 86.90297809664551,
+    "tray_true_frequency_hz": 86.24999999999999,
+    "ch1_notch_frequency_hz": 93.51495783120234,
+    "dome_true_frequency_hz": 93.49999999999999,
+    "ch2_ch3_relative_l2": 0.6739064407171255,
+    "nasa_7004c_q": 50.0,
+    "nasa_7004c_load_at_r_0p62": 1.6242268582684123,
+    "nasa_7004c_load_at_r_1": 50.00999900019995,
+    "nasa_7004c_source_at_r_1": 0.02
+  },
+  "pass": true
+}

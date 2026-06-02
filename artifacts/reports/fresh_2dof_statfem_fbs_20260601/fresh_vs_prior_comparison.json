@@ -1,0 +1,41 @@
+{
+  "generated_after_fresh_outputs": true,
+  "prior_artifacts_checked": {
+    "synthetic_statfem_packet": true,
+    "key_frf_summary": true,
+    "twodof_dataset": true
+  },
+  "matched": [
+    "same nominal 75 Hz tray and 110 Hz dome problem class",
+    "synthetic observation noise plus model-form discrepancy",
+    "log-scaled frequency-domain review plots",
+    "separate Ch2 and Ch3 drive/response definitions",
+    "posterior QOI samples, sampler diagnostics, sensitivity, and checker-backed packet",
+    "NASA-HDBK-7004C used to prevent apparent-mass convention overclaiming"
+  ],
+  "differed": [
+    "fresh coupled assembly uses one tray-to-primary stiffness/damping and no direct tray-to-base spring in the coupled model",
+    "updated flight-like measurement uses a response PSD likelihood and 3*GRMS QOI rather than a deterministic time-history peak",
+    "updated noise/discrepancy is larger, local-magnitude scaled, and visibly separates observed from clean curves",
+    "synthetic truth now includes explicit model-form shifts of -15%/+15% in natural frequency and +25%/-25% in damping ratio",
+    "fresh checker and artifacts are scoped under a separate rerun directory"
+  ],
+  "improvements": [
+    "question framing, assumptions, and contracts were written before fresh plots/fits",
+    "absolute injected GP, iid, and total errors are stored for every channel",
+    "the report includes explicit NASA-HDBK-7004C Figure 9 source/load apparent-mass benchmark values",
+    "reference comparison is now a value table instead of a pass/fail bar chart"
+  ],
+  "unresolved": [
+    "synthetic-only toy with no physical hardware data",
+    "simple random-walk MH rather than NUTS/HMC or formal convergence diagnostics",
+    "sensitivity does not refit the posterior for every noise/discrepancy scenario",
+    "the larger discrepancy assumptions are literature-informed but not calibrated to a specific tank/tray test article"
+  ],
+  "gates_that_prevented_mistakes": [
+    "Question gate prevented optimizing a QOI before stating the engineering decision",
+    "Quantity-contract gate forced separation between reciprocal inertance and 7004C source/load apparent mass",
+    "Plot gate forced log frequency axes and linear magnitude units",
+    "Verification gate forced a duplicate-channel numerical check and report-content checker"
+  ]
+}

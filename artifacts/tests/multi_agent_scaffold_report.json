@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "failures": [],
+  "packet": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/multi_agent_first_loop_20260602",
+  "manifest": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/multi_agent_first_loop_20260602/manifest.json",
+  "roles": [
+    "checker",
+    "lead",
+    "notes",
+    "reader",
+    "reviewer",
+    "runner"
+  ]
+}

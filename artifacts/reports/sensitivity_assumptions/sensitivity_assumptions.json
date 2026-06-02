@@ -1,0 +1,213 @@
+{
+  "purpose": "First-pass sensitivity check for assumed synthetic observation noise and GP discrepancy hyperparameters.",
+  "scope": "Synthetic data error sensitivity only; this is not yet posterior sensitivity or BOED.",
+  "plot": "artifacts/reports/sensitivity_assumptions/sensitivity_error_assumptions.png",
+  "scenarios": [
+    {
+      "name": "baseline",
+      "noise_config": {
+        "sigma_re": 0.02,
+        "sigma_im": 0.02,
+        "discrepancy_scale": 0.03,
+        "discrepancy_corr_logfreq": 0.08,
+        "discrepancy_coordinate": "natural_log_frequency",
+        "seed": 42
+      },
+      "qoi_peak_tray_accel_truth": 1190.2531031653896,
+      "median_channel_relative_error": 0.04407238008633538,
+      "max_channel_p95_relative_error": 0.7848960258158064,
+      "per_channel": {
+        "dome_drive_apparent_mass_modal": {
+          "median_relative_error": 0.061945053826145346,
+          "p95_relative_error": 0.7848960258158064,
+          "max_relative_error": 2.1165290895455953
+        },
+        "coupled_interface_apparent_mass_modal": {
+          "median_relative_error": 0.04407238008633538,
+          "p95_relative_error": 0.41137119495637176,
+          "max_relative_error": 1.0224219261460794
+        },
+        "coupled_tray_impact_apparent_mass_test": {
+          "median_relative_error": 0.09939910713351069,
+          "p95_relative_error": 0.710238728363186,
+          "max_relative_error": 2.543624298113239
+        },
+        "tray_standalone_accel_over_base": {
+          "median_relative_error": 0.028701258054054983,
+          "p95_relative_error": 0.1868707318197745,
+          "max_relative_error": 0.3193780884121873
+        },
+        "flight_tray_accel_from_unknown_m1_force": {
+          "median_relative_error": 0.0007730246243610223,
+          "p95_relative_error": 0.025204939372335377,
+          "max_relative_error": 0.128758573237718
+        }
+      }
+    },
+    {
+      "name": "high_sensor_noise",
+      "noise_config": {
+        "sigma_re": 0.05,
+        "sigma_im": 0.05,
+        "discrepancy_scale": 0.03,
+        "discrepancy_corr_logfreq": 0.08,
+        "discrepancy_coordinate": "natural_log_frequency",
+        "seed": 42
+      },
+      "qoi_peak_tray_accel_truth": 1190.2531031653896,
+      "median_channel_relative_error": 0.07490907028312518,
+      "max_channel_p95_relative_error": 1.047728696061323,
+      "per_channel": {
+        "dome_drive_apparent_mass_modal": {
+          "median_relative_error": 0.09620421595893883,
+          "p95_relative_error": 0.9723503116904518,
+          "max_relative_error": 2.5033445753910133
+        },
+        "coupled_interface_apparent_mass_modal": {
+          "median_relative_error": 0.07490907028312518,
+          "p95_relative_error": 0.5557090610538743,
+          "max_relative_error": 1.8157524706422017
+        },
+        "coupled_tray_impact_apparent_mass_test": {
+          "median_relative_error": 0.16429583519471025,
+          "p95_relative_error": 1.047728696061323,
+          "max_relative_error": 3.6119563617707975
+        },
+        "tray_standalone_accel_over_base": {
+          "median_relative_error": 0.06001493769182638,
+          "p95_relative_error": 0.3018477734011025,
+          "max_relative_error": 0.5450017813529583
+        },
+        "flight_tray_accel_from_unknown_m1_force": {
+          "median_relative_error": 0.0010181387813957546,
+          "p95_relative_error": 0.03996213169413585,
+          "max_relative_error": 0.2043127777356245
+        }
+      }
+    },
+    {
+      "name": "high_gp_discrepancy",
+      "noise_config": {
+        "sigma_re": 0.02,
+        "sigma_im": 0.02,
+        "discrepancy_scale": 0.08,
+        "discrepancy_corr_logfreq": 0.08,
+        "discrepancy_coordinate": "natural_log_frequency",
+        "seed": 42
+      },
+      "qoi_peak_tray_accel_truth": 1190.2531031653896,
+      "median_channel_relative_error": 0.11482074991307227,
+      "max_channel_p95_relative_error": 1.9152853864613755,
+      "per_channel": {
+        "dome_drive_apparent_mass_modal": {
+          "median_relative_error": 0.1507304773021075,
+          "p95_relative_error": 1.7453237675647262,
+          "max_relative_error": 5.556394642559376
+        },
+        "coupled_interface_apparent_mass_modal": {
+          "median_relative_error": 0.11482074991307227,
+          "p95_relative_error": 1.042523493092779,
+          "max_relative_error": 1.8379658981534561
+        },
+        "coupled_tray_impact_apparent_mass_test": {
+          "median_relative_error": 0.20829356865766932,
+          "p95_relative_error": 1.9152853864613755,
+          "max_relative_error": 5.761154541516899
+        },
+        "tray_standalone_accel_over_base": {
+          "median_relative_error": 0.04918487022567453,
+          "p95_relative_error": 0.4542180080055692,
+          "max_relative_error": 0.6151686680698373
+        },
+        "flight_tray_accel_from_unknown_m1_force": {
+          "median_relative_error": 0.0018829750131219274,
+          "p95_relative_error": 0.059294324458953496,
+          "max_relative_error": 0.3976286354944114
+        }
+      }
+    },
+    {
+      "name": "long_gp_correlation",
+      "noise_config": {
+        "sigma_re": 0.02,
+        "sigma_im": 0.02,
+        "discrepancy_scale": 0.03,
+        "discrepancy_corr_logfreq": 0.2,
+        "discrepancy_coordinate": "natural_log_frequency",
+        "seed": 42
+      },
+      "qoi_peak_tray_accel_truth": 1190.2531031653896,
+      "median_channel_relative_error": 0.056435544401174265,
+      "max_channel_p95_relative_error": 0.5003529137765491,
+      "per_channel": {
+        "dome_drive_apparent_mass_modal": {
+          "median_relative_error": 0.05724320819451973,
+          "p95_relative_error": 0.3627836802597204,
+          "max_relative_error": 1.1483792389438152
+        },
+        "coupled_interface_apparent_mass_modal": {
+          "median_relative_error": 0.056435544401174265,
+          "p95_relative_error": 0.489577281253103,
+          "max_relative_error": 1.2624922954769036
+        },
+        "coupled_tray_impact_apparent_mass_test": {
+          "median_relative_error": 0.09039670352192875,
+          "p95_relative_error": 0.5003529137765491,
+          "max_relative_error": 1.5905414383909071
+        },
+        "tray_standalone_accel_over_base": {
+          "median_relative_error": 0.02718393890420912,
+          "p95_relative_error": 0.12069165592676633,
+          "max_relative_error": 0.23434357652682225
+        },
+        "flight_tray_accel_from_unknown_m1_force": {
+          "median_relative_error": 0.0004925629600255066,
+          "p95_relative_error": 0.027941672822389133,
+          "max_relative_error": 0.1274995925997638
+        }
+      }
+    },
+    {
+      "name": "low_noise_optimistic",
+      "noise_config": {
+        "sigma_re": 0.005,
+        "sigma_im": 0.005,
+        "discrepancy_scale": 0.01,
+        "discrepancy_corr_logfreq": 0.08,
+        "discrepancy_coordinate": "natural_log_frequency",
+        "seed": 42
+      },
+      "qoi_peak_tray_accel_truth": 1190.2531031653896,
+      "median_channel_relative_error": 0.014214027067052977,
+      "max_channel_p95_relative_error": 0.251218742858782,
+      "per_channel": {
+        "dome_drive_apparent_mass_modal": {
+          "median_relative_error": 0.019488410174291607,
+          "p95_relative_error": 0.251218742858782,
+          "max_relative_error": 0.6958993603925921
+        },
+        "coupled_interface_apparent_mass_modal": {
+          "median_relative_error": 0.014214027067052977,
+          "p95_relative_error": 0.1361205162094158,
+          "max_relative_error": 0.29536768893885174
+        },
+        "coupled_tray_impact_apparent_mass_test": {
+          "median_relative_error": 0.029515412551241856,
+          "p95_relative_error": 0.24664596655712867,
+          "max_relative_error": 0.7947187948169153
+        },
+        "tray_standalone_accel_over_base": {
+          "median_relative_error": 0.008282575897418243,
+          "p95_relative_error": 0.058136013584418916,
+          "max_relative_error": 0.0938791287327667
+        },
+        "flight_tray_accel_from_unknown_m1_force": {
+          "median_relative_error": 0.0002430198408265285,
+          "p95_relative_error": 0.007964525321233379,
+          "max_relative_error": 0.045576629141159945
+        }
+      }
+    }
+  ],
+  "miss_documented": "The original packet named uncertainty types but did not show sensitivity to those assumptions."
+}

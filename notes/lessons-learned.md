@@ -1,0 +1,58 @@
+# Lessons Learned
+
+## 2026-06-02
+- Multi-agent scaffolds need plain file handoffs before automation. For the first proof of concept, Claude Code leads, and Codex/Cursor helpers are launched manually with specific prompts.
+- Sampler names should be explicit. "MCMC" was too broad for planning; future Bayesian updating work should say NUTS/HMC when that is the intended sampler and label the current random-walk/random-scan Metropolis code as prototype/legacy.
+- Initializing Git late is still useful, but it means the first commit becomes a project snapshot rather than a clean historical record of earlier work.
+
+## 2026-05-27
+- Deterministic checker gating is mandatory to reduce false-success behavior.
+- Immutable checker hash verification should run before and after each trial.
+- Python execution in sandbox crashed with a segmentation fault on NumPy; running unsandboxed resolved it.
+- Scripts imported as `src.*` require `PYTHONPATH=.` when run from repo root as plain scripts.
+- A loose posterior recovery threshold can pass even when sampler acceptance is poor; record acceptance and inspect traces/full artifacts.
+- Random-scan MH is a better baseline than all-parameter random-walk MH for the current tight 11-parameter synthetic posterior.
+- Overall acceptance can hide post-burn stickiness; log post-burn acceptance separately.
+- Plot generation currently warns because `/Users/avoss/.matplotlib` is not writable; future pipeline ergonomics should set `MPLCONFIGDIR` to a writable cache path.
+- A shareable agentic-science packet needs question framing, assumptions, checker status, and human reflection prompts in one place; plots alone are not a meeting artifact.
+- Distinct channel names are not enough; add a numerical check that clean forward models are not accidental duplicates.
+- FRF review plots need quantity-specific units. Mixing acceleration/force, apparent mass, and transmissibility in one dB convention hides the engineering meaning a human is trying to check.
+- NASA-HDBK-7004C-style load apparent mass is not the same as drive-point reciprocal inertance. Use reaction force divided by base/interface acceleration for force-limited vibration apparent mass; add a checker that confirms interior resonance peaks.
+- Root-cause notes should separate technical mistakes from workflow mistakes. Here, the technical mistake was reciprocal inertance vs load apparent mass; the workflow mistake was accepting a named quantity without a quantity contract and expected curve shape.
+- NASA-HDBK-7004C source and load apparent masses are not interchangeable. Source apparent mass can have a resonance notch and low-frequency growth; load apparent mass has a fixed-base resonance peak. The quantity contract needs a source/load constraint field.
+- Naming uncertainty categories is not enough for a review packet. Show the actual hyperparameter values, the realized error functions, and how assumption changes move summary metrics.
+- Smoke tests that write shared artifact paths can corrupt the canonical review packet. Regenerate canonical artifacts after smoke tests or isolate test outputs.
+- A QOI interval alone hides whether the sample distribution is biased, narrow, multimodal, or driven by a few response shapes. Show retained QOI samples and representative response spectra before making engineering claims.
+- Full-scale response overlays can hide the discrepancy that matters for a peak QOI. Include residual or zoom panels and report bias/fraction-above-truth when synthetic truth is available.
+- Normalized error plots are secondary diagnostics. Primary review artifacts should show clean truth versus observed data and absolute injected error first; otherwise denominator effects can be mistaken for physically structured noise.
+- A plotting requirement satisfied once is not a durable convention. For repeated plot families, encode axis scale and coordinate assumptions in docs, artifacts, and checks.
+- For broad-band structural dynamics, a log-frequency GP is often a better default than a fixed-Hz GP because it correlates by frequency ratio. It remains an assumption and should be sensitivity-tested.
+- Human review comments should be converted into problem-class gates, not one-off prohibitions. For this project, the reusable gates are assumptions ledger, quantity contract, reference/standards comparison, review-packet evidence, sensitivity analysis, and checker-backed metadata.
+- A fresh-agent rerun should write its own question framing, assumptions, and quantity contracts before reading prior artifacts. That ordering made the later comparison useful rather than a recipe-copy exercise.
+- A scoped fresh-run artifact directory and checker made it possible to compare against the prior run without overwriting the canonical packet or modifying immutable checker files.
+- Visual QA is still needed after checker pass. The first fresh reference-comparison figure passed file/content checks but had overlapping title text; the figure was fixed and the one-command workflow rerun.
+- The fresh 2DOF assembly choice matters: using a single tray-to-primary stiffness/damping in the coupled model avoids a possible tray-stiffness double count, but it should be treated as a documented modeling assumption rather than silently declared superior.
+- Simple random-walk MH can satisfy a harness smoke check while leaving sampler-quality risk. Record acceptance rate and retain the limitation when the sampler is not the point of the trial.
+- For aerospace random-vibration review, `3 * GRMS` from response PSD is a better default QOI than the peak of one deterministic time realization unless the time waveform itself is the engineering object.
+- If observed and clean synthetic curves are line-on-line, the review packet is under-informative even when the data file contains error components. Use local-magnitude-scaled noise/discrepancy and floors near notches when testing harness robustness.
+- Literature-informed uncertainty assumptions should be explicit about what they are and are not: PSD tolerance bands and model-form uncertainty justify larger synthetic discrepancy, but they do not calibrate a specific tank/tray model without real data.
+- NASA-HDBK-7004C source/load apparent mass should be plotted as its own benchmark quantity. Do not use reciprocal inertance plots as a stand-in for source/load apparent mass.
+- Pass/fail bar charts are poor reference/standards artifacts when every bar is 1. Keep boolean checker results in JSON, but show reviewers the actual computed values, expected values, units, and engineering interpretation.
+- Sensitivity labels must say exactly what was rerun. "Synthetic-data sensitivity" means changing injected error assumptions without inference; the QOI fragility check here recomputes retained posterior samples and is not a posterior refit.
+- Model-form frequency and damping error assumptions should be explicit numerical rows in the assumptions ledger. If the human says +/-15% frequency and +/-25% damping is the relevant aerospace gut check, encode it as synthetic-truth model error and checker coverage rather than burying it as prose.
+- Bayes-rule artifacts should show prior, likelihood/data, and posterior in the same visual frame. Posterior means alone make the update look magical and hide whether the likelihood or the prior is carrying the result.
+- Posterior spectra should be shown as posterior predictive distributions or sample families, not a single spectrum, unless the figure is explicitly labeled as a posterior-mean summary.
+- Dataset replicate count is a first-class assumption. If a run has one synthetic flight/one test realization and no flight-to-flight variability, the packet must say that plainly and the checker should enforce it.
+- Keeping generated GP discrepancy separate from iid sensor noise on disk is not the same as inferring a latent discrepancy field. Reports need to distinguish generated error components, fixed covariance in the likelihood, inferred parameters, and non-inferred hyperparameters.
+- A toy posterior can fit far from nominal when the truth is still in the parametric model family and the likelihood has many informative frequency points. That is a Bayes plumbing check, not proof that the workflow handles real FEM model-form misspecification.
+- Prior variance assumptions are not background details. For structural dynamics packets, report the actual prior standard deviations in physical terms, such as implied natural-frequency spread and damping-ratio multipliers.
+- The likelihood formulation must state whether it uses the whole FRF/PSD, selected bands, or peak-summary features. This is central methodology and should be checker-backed.
+- Inferring a discrepancy/noise covariance is a different model class from fixing one. If hyperparameters or latent discrepancy fields are fixed, say so and identify what replicate data or hierarchy would be needed to infer them.
+- First review summaries for StatFEM/BOED/FEM-update work need a run-specific graphical model and likelihood equation before posterior plots. A paper-style diagram is not enough unless it names this run's variables, data count, covariance assumptions, and non-inferred terms.
+- Dataset count and likelihood data usage are harness gates, not prose details. A packet must say whether it used one flight or repeated flights, whole FRFs/PSDs or peak/feature summaries, and whether flight-to-flight/test-to-test variability is modeled.
+- "Not inferred" needs to be a visible category. Generated discrepancy fields, fixed noise scales, fixed correlation lengths, and absent replicate effects can otherwise be mistaken for full StatFEM inference.
+- Checkers should reject missing method visibility. The fresh checker now requires the method summary, graphical model, whole-FRF/PSD likelihood statement, inferred/fixed/not-inferred labels, and specific likelihood function.
+- Equations inside review figures need math rendering and enough font size. Plain underscore/caret text in a graphical model is not legible enough for human review, especially for likelihood and covariance definitions.
+- Generated image files need legibility QA, not only existence checks. For text-heavy figures, check minimum font size, clipped labels, overlapping text, and plain underscore/caret math tokens.
+- Cache-busting filenames are useful after replacing bad report figures. Reusing the same PNG path can leave a browser or report viewer showing a stale unreadable figure even when the generator was fixed.
+- Legibility hooks need tiers. Ordinary plots can record edge-label warnings, while method diagrams, tables, reference/checker summaries, and equation figures should fail on clipping or overlap.

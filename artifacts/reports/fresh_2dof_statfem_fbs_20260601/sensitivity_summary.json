@@ -1,0 +1,225 @@
+{
+  "truth_qoi_3grms_tray_accel_g": 10.894934079492213,
+  "decision_threshold": null,
+  "qoi_scenarios": [
+    {
+      "mean": 12.540731479179088,
+      "median": 12.585336755054936,
+      "sd": 1.0798562520447403,
+      "q025": 10.164001304363268,
+      "q05": 10.84120357270508,
+      "q95": 14.283241847158738,
+      "q975": 15.229495364065393,
+      "name": "baseline_3grms",
+      "type": "QOI recomputed from retained posterior samples",
+      "metric": "three_grms",
+      "damping_scale": 1.0,
+      "force_bandwidth_logfreq": 0.33,
+      "mean_ratio_to_truth": 1.1510607946481106,
+      "mean_ratio_to_baseline_3grms": 1.0
+    },
+    {
+      "mean": 14.426423401949409,
+      "median": 14.478322625915851,
+      "sd": 1.2435717044265777,
+      "q025": 11.68638788319501,
+      "q05": 12.465587910384537,
+      "q95": 16.421635203778813,
+      "q975": 17.519460750127823,
+      "name": "damping_0p75_3grms",
+      "type": "QOI recomputed from retained posterior samples",
+      "metric": "three_grms",
+      "damping_scale": 0.75,
+      "force_bandwidth_logfreq": 0.33,
+      "mean_ratio_to_truth": 1.324140494718972,
+      "mean_ratio_to_baseline_3grms": 1.150365385456268
+    },
+    {
+      "mean": 11.257863194003745,
+      "median": 11.300375179530887,
+      "sd": 0.9677251651222731,
+      "q025": 9.127054294641159,
+      "q05": 9.735214732462588,
+      "q95": 12.820894543076456,
+      "q975": 13.663021827703068,
+      "name": "damping_1p25_3grms",
+      "type": "QOI recomputed from retained posterior samples",
+      "metric": "three_grms",
+      "damping_scale": 1.25,
+      "force_bandwidth_logfreq": 0.33,
+      "mean_ratio_to_truth": 1.033311731109478,
+      "mean_ratio_to_baseline_3grms": 0.8977038709978566
+    },
+    {
+      "mean": 9.400625737205853,
+      "median": 9.405675910625995,
+      "sd": 0.8686943429016408,
+      "q025": 7.5202451786709,
+      "q05": 8.097395142859735,
+      "q95": 10.711932450721736,
+      "q975": 11.634592913070676,
+      "name": "force_bandwidth_narrow_3grms",
+      "type": "forcing model sensitivity",
+      "metric": "three_grms",
+      "damping_scale": 1.0,
+      "force_bandwidth_logfreq": 0.22,
+      "mean_ratio_to_truth": 0.8628437463335248,
+      "mean_ratio_to_baseline_3grms": 0.7496074493591832
+    },
+    {
+      "mean": 14.484617114559692,
+      "median": 14.552099865076084,
+      "sd": 1.2428037265081808,
+      "q025": 11.743587505529517,
+      "q05": 12.529103693634816,
+      "q95": 16.487829139294234,
+      "q975": 17.535148395166168,
+      "name": "force_bandwidth_wide_3grms",
+      "type": "forcing model sensitivity",
+      "metric": "three_grms",
+      "damping_scale": 1.0,
+      "force_bandwidth_logfreq": 0.48,
+      "mean_ratio_to_truth": 1.3294818499016365,
+      "mean_ratio_to_baseline_3grms": 1.1550057617139768
+    },
+    {
+      "mean": 4.180243826393028,
+      "median": 4.195112251684979,
+      "sd": 0.35995208401491335,
+      "q025": 3.388000434787756,
+      "q05": 3.613734524235026,
+      "q95": 4.761080615719579,
+      "q975": 5.076498454688465,
+      "name": "baseline_grms_qoi",
+      "type": "QOI definition sensitivity",
+      "metric": "grms",
+      "damping_scale": 1.0,
+      "force_bandwidth_logfreq": 0.33,
+      "mean_ratio_to_truth": null,
+      "mean_ratio_to_baseline_3grms": null
+    }
+  ],
+  "synthetic_error_scenarios": [
+    {
+      "name": "baseline_error_model",
+      "type": "synthetic-data sensitivity",
+      "noise_multiplier": 1.0,
+      "discrepancy_multiplier": 1.0,
+      "channels": {
+        "ch1_dome_only_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.49842889314563044,
+          "expected_rms_over_median_truth": 0.21540659228538014
+        },
+        "ch2_coupled_primary_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.6622899477799664,
+          "expected_rms_over_median_truth": 0.21540659228538017
+        },
+        "ch3_coupled_tray_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.18178330777304214,
+          "expected_rms_over_median_truth": 0.21540659228538017
+        },
+        "ch4_standalone_tray_accel_transmissibility": {
+          "expected_rms_absolute_error": 0.23922888808199627,
+          "expected_rms_over_median_truth": 0.21540659228538014
+        }
+      }
+    },
+    {
+      "name": "observation_noise_x2",
+      "type": "synthetic-data sensitivity",
+      "noise_multiplier": 2.0,
+      "discrepancy_multiplier": 1.0,
+      "channels": {
+        "ch1_dome_only_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.5926470666430432,
+          "expected_rms_over_median_truth": 0.2561249694973139
+        },
+        "ch2_coupled_primary_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.7874828289785559,
+          "expected_rms_over_median_truth": 0.256124969497314
+        },
+        "ch3_coupled_tray_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.21614586473197395,
+          "expected_rms_over_median_truth": 0.25612496949731395
+        },
+        "ch4_standalone_tray_accel_transmissibility": {
+          "expected_rms_absolute_error": 0.2844504015072163,
+          "expected_rms_over_median_truth": 0.25612496949731395
+        }
+      }
+    },
+    {
+      "name": "discrepancy_scale_x2",
+      "type": "synthetic-data sensitivity",
+      "noise_multiplier": 1.0,
+      "discrepancy_multiplier": 2.0,
+      "channels": {
+        "ch1_dome_only_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.9438889034262918,
+          "expected_rms_over_median_truth": 0.4079215610874228
+        },
+        "ch2_coupled_primary_reciprocal_inertance": {
+          "expected_rms_absolute_error": 1.2541972208213044,
+          "expected_rms_over_median_truth": 0.40792156108742283
+        },
+        "ch3_coupled_tray_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.34424819546921376,
+          "expected_rms_over_median_truth": 0.4079215610874228
+        },
+        "ch4_standalone_tray_accel_transmissibility": {
+          "expected_rms_absolute_error": 0.45303451694890196,
+          "expected_rms_over_median_truth": 0.4079215610874228
+        }
+      }
+    },
+    {
+      "name": "observation_noise_half",
+      "type": "synthetic-data sensitivity",
+      "noise_multiplier": 0.5,
+      "discrepancy_multiplier": 1.0,
+      "channels": {
+        "ch1_dome_only_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.4719444517131459,
+          "expected_rms_over_median_truth": 0.2039607805437114
+        },
+        "ch2_coupled_primary_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.6270986104106522,
+          "expected_rms_over_median_truth": 0.20396078054371142
+        },
+        "ch3_coupled_tray_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.17212409773460688,
+          "expected_rms_over_median_truth": 0.2039607805437114
+        },
+        "ch4_standalone_tray_accel_transmissibility": {
+          "expected_rms_absolute_error": 0.22651725847445098,
+          "expected_rms_over_median_truth": 0.2039607805437114
+        }
+      }
+    },
+    {
+      "name": "discrepancy_scale_half",
+      "type": "synthetic-data sensitivity",
+      "noise_multiplier": 1.0,
+      "discrepancy_multiplier": 0.5,
+      "channels": {
+        "ch1_dome_only_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.2963235333215216,
+          "expected_rms_over_median_truth": 0.12806248474865695
+        },
+        "ch2_coupled_primary_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.39374141448927796,
+          "expected_rms_over_median_truth": 0.128062484748657
+        },
+        "ch3_coupled_tray_reciprocal_inertance": {
+          "expected_rms_absolute_error": 0.10807293236598697,
+          "expected_rms_over_median_truth": 0.12806248474865697
+        },
+        "ch4_standalone_tray_accel_transmissibility": {
+          "expected_rms_absolute_error": 0.14222520075360814,
+          "expected_rms_over_median_truth": 0.12806248474865697
+        }
+      }
+    }
+  ],
+  "limitation": "Posterior samples are not refit for each scenario; QOI scenarios are conditional predictive sensitivities, not full posterior sensitivity refits."
+}

@@ -1,0 +1,7 @@
+{
+  "required_files": [
+    "experiments/canary/baseline.json",
+    "experiments/canary/candidate.json",
+    "experiments/canary/metrics.json"
+  ]
+}

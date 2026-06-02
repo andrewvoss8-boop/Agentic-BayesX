@@ -1,0 +1,1792 @@
+
+Transcript with Ilias and Max — May 26, 2026
+
+is how to create full autonomous labs.
+Labs that do the experimentation autonomously
+without humans, 24/7.
+There are two issues there, at least.
+Okay, but two important issues.
+One is the sequential design of experiments,
+You know, how do you come up?
+You know, and digest all the data you have
+and come up with a new experiment.
+This is what basic global optimization does.
+That is what you know how to do.
+- Mm-hmm.
+- Okay, but this is one part of the story.
+The other part of the story is to actually control
+the device that does the experiment
+so that you close the loop.
+I think that developing the part
+that suggests the new experiment is actually very doable
+if you have a specific case.
+I mean, if you have, you know, up to 10, 15 variables
+you want to vary, and they're all continuous,
+and the thing you want to optimize is scalar,
+or even multiple scalars, we know what to do.
+And it's straightforward, I would say right now,
+even with, if you use a coding agent,
+you have to set up the code so that you do,
+do you do it very well, okay?
+The hard part right now is connecting to the device.
+Okay, so first of all, it's not even,
+you may not be able to completely automate something, okay?
+But if you have an instrument that you can control
+electronically without robots, okay?
+Without robots, then that is also doable.
+Not a lot of people have done that,
+but this is also doable as soon as you are willing
+to spend a little bit of time to interface with the machine.
+Either exploit a programmable interface
+that the machine may have,
+or develop your own by, on top of whatever they have.
+Which a year ago, I would say let's not bother with that
+because that would be a computer science programming tasks,
+basically creating an API for an instrument.
+But now, I think with coding agents, they could do it.
+I mean, they know more programming than all of us.
+We're not programmers, but they know more programming
+than most programmers, also.
+So, I think it's completely doable to take an instrument
+that
+create the API so that you can control.
+- Yeah.
+Yeah, all right.
+- You keep going, I'll ask questions at the end.
+So, I understand that you cannot automate all experiments
+without robots, okay?
+I don't think you can.
+I mean, the problem with robots is that we don't have one
+to give you, okay?
+And there's like $500,000 each.
+But if you have one, you could have the robot also.
+Okay, it's a way more difficult adding the robot.
+So, I think for me, the most useful thing would be to take
+any instrument, expose its controls through an API,
+through an application interface, and then expose that
+interface to an agentic system that controls the instrument.
+And it has, and you break it down into the following
+components, the brain, which is what experiments should I do
+next, where you collect all the data and you build a
+Gaussian process surrogate for a scalar quantity or multiple
+scalar quantities and you solve for the expected improvement
+or for the maximum improvement or for the maximum
+expected improvement in hypervolume if you go for the,
+for a multi-objective problem.
+That is the easy part.
+And then you try to run this experiment, okay?
+So, the second part is the actuation.
+So, from the decision that this is the experiment that I
+should run to actually running it, which means that
+the ideal experiment you should run should be translated
+into a program that will run on the instrument.
+And then you run that and you need to add the final layer,
+which is the autonomous sensing.
+So, you need to do the, whatever measurements you have
+to do, they have to be done autonomously so that you bring
+them in and you close the loop.
+Okay, so this is where, well, this is the sort of thing
+we're gonna start doing.
+Like this July, we're gonna start doing this thing
+in various applications.
+Now, I think this may be impossible to do during the
+summer, okay?
+But what is not impossible is investigating each one
+of the components or two of them, okay?
+And working towards that direction.
+So, okay, I have the brain, but I don't have the actuation.
+I mean, the brain, you will have it.
+I don't think that's a problem for you.
+You already know how to do it.
+That's what we did in five, three, nine, right?
+And six, nine, seven.
+Let me work on the, you know, controlling the machine,
+make it having an agent control the machine.
+And you could do, you know, short of completely closing
+the loop, which is ideal, right?
+So what are the steps you would take towards building that?
+And okay, maybe you won't do it during the summer,
+but maybe you can do two of these steps that will teach
+us something, right?
+So, creating an API for an instrument,
+if such an API doesn't exist,
+that will teach us something.
+Creating a domain-specific knowledge
+in which the agent system can express itself
+and control the instrument that is also something
+that we want to do because this hides a lot of complexity,
+okay, so here's how you would do it.
+Let's say you have made an API that controls the instrument
+and then what is the agent going to do?
+It's gonna have to go and run things with that API, right?
+The experiment should be translated
+into some domain-specific language
+that you will have to design.
+Like, I mean, the case of 323, for example,
+it will be, you know, take a new,
+the language will have to specify
+what is the experiment you should do, right?
+So take this particular specimen,
+manufacture this specimen, you know,
+ask your manufacturer to take it and put it there
+and do the test and read the output and tell me what it is.
+So this will all be sort of a program
+suggested by the agent and it will have to be executed.
+And whenever you have an agentic system
+suggesting a program that will run on the physical world,
+or you have a safety issue, you can't just run it, right?
+You have to be reasonably sure
+that it's not going to damage the instrument
+or hurt any people, right?
+So there's a safety issue
+and we're gonna have to think
+about how we're gonna solve the safety issue.
+And typically the way this is done
+is by making a digital twin of the instrument
+that allows you to play what would happen
+if you run the experiment.
+And if your digital twin tells you it's okay,
+you can run it, so.
+- Well, what if your digital twin may not know
+that, you know, there's a kid running around the lab
+or something and that your experiment's gonna injure a human.
+Like the digital, you need almost like computer vision
+or something to actually see that there's safety here.
+- If you want to add this kind of safety,
+like human safety, you do need computer vision.
+- Yeah.
+- And the linear project, we study that as well.
+- Oh.
+- We have experts that build vision models
+that identify humans and they stop the robots
+before they hit a human.
+That's one of the problems actually.
+- Okay.
+So.
+- I'm not sorry, but this is part of safety, right?
+- Yeah.
+- So there's actually a hard part of safety.
+The other part of safety that we haven't done yet
+is how not to damage the machine.
+- So my domain specific knowledge is in vibrations.
+And structural dynamics models, aerospace workflows
+for vibration loads and vibration testing.
+And so that's what I want to focus on this summer.
+So let's use that as kind of our, how we talk about things.
+I do have an instrument, a data acquisition system
+from DeweSoft, Slovenian company.
+I don't know, do you guys use DeweSoft equipment?
+Max?
+- No, but I actually worked with it in my undergrad.
+- Okay.
+- Cool.
+- But yeah, it's been a long time.
+- Yeah, I asked them to give me a shaker
+and they sent me a bill for like 50K,
+so I'm not getting the shaker.
+But they gave me this DAQ for free as like a rental
+in exchange for developing some curriculum for them,
+which I've done.
+So I can definitely work on developing an API for that
+and I think that makes sense.
+I was curious about a few things.
+So I had seen news about labs like this
+from Google DeepMind,
+like doing material science research in an automated sense.
+Have you seen this?
+- Yeah, and we're to have funding to do these,
+both for pharma and materials.
+- Yeah.
+So are you gonna spin up like a hardware robots lab at Purdue?
+- So here, so first of all,
+my lab is going to remain a traditional lab
+of for as long as there's funding
+and there's funding right now.
+So there are two programs that are relevant to us.
+So it is the Agentic Drug Discovery Program,
+which I lead and we are adding now July
+an experimental component.
+It's gonna be on DNA factories.
+So we're looking at manufacturing of DNA.
+Actually manufacturing of proteins.
+You have to make the DNA first
+so that you can make the proteins.
+And there I bring in people who have robotics expertise
+and domain expertise, okay?
+But the Agentec stuff is what we're gonna be developing.
+And this domain specific language I'm talking about
+and the safety concerns,
+the sequential experimental design
+and all that is basically what we're gonna be doing.
+It's just that, I mean, why are we adding these things?
+Because now things are so much easier than they were a year ago.
+So we might as well solve harder problems, okay?
+- Yeah. - That's the idea.
+The second thing is a new NSF project
+which is recommended, but not yet funded.
+Recommended means somebody from the federal government
+flags it for whatever reason it's gonna go through.
+And that is a $19 million project
+that will, the goal of which is to expose
+to produce manufacturing facilities, the whole building.
+So this is a Birck Technology Center and the MMRL.
+Do you know what MMRL stands for?
+Marks manufacturing, somethings, blah, blah.
+It's additive manufacturing basically
+and advanced manufacturing.
+So we're going to expose the whole building,
+two buildings actually through an application interface
+to the entire United States.
+So somebody could remotely write a program
+that will run on the building
+with robots moving stuff around and also humans do it.
+Well, you need to control humans through programs.
+I mean, I assume you're not gonna do that job, of course.
+So, and this also has a lot of agent, AI flavors.
+Obviously we're doing that so that we can also
+make agents that control the facilities.
+And we're going to offer to the users of the facilities
+the tools like build a surrogate,
+the Sequential Experimental Design
+around basic global optimization on your specific
+experimental program.
+So imagine that, you know, a small company, for example,
+in the United States that doesn't have the equipment
+we have at Birk, it will be able to run
+a non-trivial experiment that requires manufacturing
+something and transferring it somewhere else
+for further processing than doing one more
+processing step than testing it.
+So you'll be able to program the entire thing
+and also say, okay, now I want you to do
+basic global optimization
+around 10 steps of BGO on this program.
+And we're gonna offer that also free of charge.
+Okay, I mean, free of charge.
+It's tax money, it's no money.
+You're gonna write a proposal.
+If you have a small company, you will write a proposal
+and we will review the proposals and we'll say, okay,
+you have, you know, you can spend this match on experiment.
+- Are you the principal investigator?
+- So there I'm also, the principal investigator
+is Alex Trachen from Materials
+and I need the AI part.
+- Okay, 19 or 90 million?
+- 19 at one night.
+- Okay, that's cool.
+- And the agentic drug discovery program
+is also the same magnitude.
+It's like five million a year now.
+- Is that Lily, is that what you're already doing
+with Lily or is this something different?
+- Yeah, that's me, yes.
+- Okay, so I don't know much about these labs
+but I imagine that Bayesian Global Optimization
+is not the only way to, you know, design an experiment
+with agents. - No.
+- And so I imagine like in a lot of these labs,
+you'll have them doing like a literature review
+and turned out, hey, we're actually,
+we're asking the wrong question
+and we need a completely different experimental setup.
+- Yes, but this comes out, so we're already doing that.
+- Okay, because we started agentic scientific discovery
+in silico, so we do everything that,
+we have pretty much done everything
+and we'll continue to be doing everything
+that requires only compute.
+Okay, this is, this is, this remains a scope
+but it's all in the air.
+Unless you can make stuff and test them, basically.
+- Let's say you make stuff. - For materials
+and for pharma, you have to make them.
+- So.
+- And when you make them, you have to also optimize.
+- Yeah, so say Codex is coming up with the best,
+a great experiment based on the literature
+and then they get the data back from the experiment
+and it says we need a wholly new experiment.
+This experiment's not gonna cut it.
+Is that possible in the workflow without humans?
+- It is, yes. - Okay.
+- It will tell you something, it will tell you something.
+It's not certainly gonna be a good experiment.
+- Yeah.
+- Okay, but you have to think about it as follows.
+It's like the engine before you will be suggesting,
+oh, let's make this protein, okay.
+This protein will actually be helpful for binding
+with this particular part of the virus
+and we're gonna be able to make a good drug, okay.
+All right, you have to make a protein.
+You know what protein to make,
+but there are like infinite ways to make that protein.
+There are many, many parameters you need to pick
+to make it correct.
+Sometimes, you know, you make it with a,
+the choices will affect how fast you make it,
+how reliable you make it,
+how much it's going to cost, right?
+So you still be doing basic global optimization
+over the parameters that control the manufacturing process
+of a thing that your agent system has suggested
+that you should play with.
+- Okay.
+- Right, so it comes hierarchically.
+It's not just one big optimization over everything.
+And the same thing with material.
+So that NSF project is actually microelectronics.
+It's not drugs.
+And there, the agent system or a human,
+so just again, let's make this, let's test this material.
+Well, that material, again, you can make it in infinite ways.
+You get different uncertainty for the quants of interest
+depending on what path you took to make it.
+And there is room to optimize that, right?
+So you want minimum uncertainty.
+You want to get it fast.
+You want to have a certain cost and so on
+or energy consumption.
+- Are you going to, but once you make the material,
+are you going to do a tensile test, a bending test,
+a fatigue test, a test under temperatures,
+thermal testing, in what order the space of possible tests
+goes through the moon as well?
+- Yes, yes.
+So the agent, I mean, what do we do in, so far?
+Somebody decides, okay, let's just do this.
+That's what we do.
+- Okay.
+- Let's just do them in this order.
+Or let's make more so that we can cut it
+and then, you know, do it like that.
+And then we will also argue for several months
+on how we're going to cap things.
+Max, you weren't in these discussions
+where we're talking about the hypersonics,
+the hypersonics installation, right?
+Well, we spent probably three or four months
+just on how to cut the insulation we're making
+and how to test it.
+We never actually did a test.
+- Max, you haven't told me about that project.
+- Yeah, it died.
+- It died.
+- It died, it died.
+- We were the experimentals who were never doing experiments
+with that experimental equipment.
+Anyway, I don't have 30 seconds.
+I don't have a lot to be thinking, okay?
+But think about it.
+I don't, the only thing I don't want you to do
+is just, I don't want you to do a trivial
+basic global optimization or something.
+I want you to start thinking about how you can leverage
+coding agents to do something way more difficult.
+- Yeah.
+- And challenge yourself.
+Because you will see problems that are of interest to me
+and I know I will encounter in the next few months
+and I just want to just find them now.
+- Yeah.
+- So--
+- And there's no failure, okay?
+You don't have to succeed.
+I mean, you'll be successful if you try it.
+- Yeah.
+- And you learn.
+- Well, be careful.
+Automate agentic vibrations lab
+is gonna get spooled up in Chattanooga
+and you'll have to, you don't have it at Purdue.
+Be careful with encouraging too much ambition.
+Okay, I'm still curious what you think about relativity
+and that stuff, but I guess that's for another day.
+- Yeah, let's make another appointment.
+I have a conference this week,
+so it's gonna have to be next week.
+- Okay.
+- So Wednesday, Thursday, Friday are available,
+but we're gonna try for Monday.
+All right, but the right thing now.
+- All right, I'm gonna go guys.
+- Okay.
+- Bye-bye.
+
+
+
+TALK WITH MAX:
+- Yeah, it's pretty cool stuff.
+So, yeah, but we didn't actually get to talk about it.
+I get that the agentic stuff is the tool,
+but what's the project?
+You know, we didn't actually get to what's the actual
+question you're asking.
+- Yeah.
+- Look, I think this, the hyper structures thing
+I'm just gonna do is kind of like a side hustle.
+- Yeah, how did meeting with him again go?
+- Meeting with this author?
+- Yeah, didn't you say you had a follow up with him?
+- We had a follow up via email,
+but we have met, he's really pushing AI for this thing
+that the lab doesn't really specialize in,
+but it's just kind of like,
+is kind of helping like splice the part
+to print as multiple parts.
+But like, if he's gonna, he said he'd have me sign an NDA
+and get me set up with his systems,
+like I might as well get used to it.
+It seems like a pretty cool technology
+that I wanna work with.
+And it sounds like from Ilias' perspective,
+I can kind of dick around with whatever I want
+now that I have the power of Codex on my side
+and hope to achieve three research projects in two months.
+And, but yeah, I'll try and get something going
+with Bayesian updating.
+That makes sense and would totally fit
+within this framework.
+And maybe Relativity would be interested
+in fully automated labs.
+They, like their CEO, Tim Ellis and Relativity leadership are big on AI [ASR may have said Eric Schmidt],
+so I don't know what.
+But yeah, ultimately I'll try and do something useful
+for them, but it's, it may not be,
+yeah, it may not be in the cards,
+unless Todd, the guy's willing to do most of the legwork.
+And, what else was I saying?
+Yeah, sounds like a cool project though.
+I don't really care about the drug development.
+Maybe I should, but the materials research
+really excites me.
+And yeah, I've got Codex, I need to get going on,
+I need to try out Claude code next.
+I mean, so what do you do with--
+What you prefer what?
+I use Claude code, the CLI for pretty much everything,
+so it's just whatever, but yeah, the terminal tool,
+yeah, it just feels like you have a better,
+the terminal tools, you know, you feel like
+you have a better grasp on what's happening with your files
+because the file changes are all right there,
+not in like a GUI.
+And then, oh, and I think Claude code is just a little
+bit better, so they're better about looking at the files,
+reading them around, sort of looping, running for longer.
+Which one's better at running for longer, Claude code?
+Yeah, I found Claude code has not made a problem for me,
+like it runs until I stop, and they also have these,
+they have all these fancy features,
+which most of them I don't know how to do,
+but like they have like a slash goal,
+and then it'll just like run until that goal is up,
+sort of thing.
+Okay, that's cool.
+Yeah, and they have a lot of features.
+What goal are you setting?
+I don't use it, because I'm so close to it.
+Like I don't, I think these are for like longer tasks
+that need like whatever, you're trying to like one-shot
+or like long horizon, like hey,
+I need you to build this whole thing, but you know.
+But that sounds like what Ilias is talking about though.
+Exactly, so yeah, when you're trying to do stuff like that,
+this is like the sort of tools that they'll use,
+but how I'm using it right now is to,
+yeah, it's much closer, I wouldn't say like,
+oh okay, let's try this, okay, now let's try this,
+sort of thing, build this one specific thing,
+let's see how it works,
+then let's build the next specific thing.
+Okay, so who's, this substack thing,
+who in the lab is actually like continuing this work?
+Like using, he said specifically he wants me,
+more ideas for harnesses and scaffolds
+that fit specific problem classes.
+And he's really interested in like the domain-specific problems, you know,
+solving domain specific questions.
+Yeah, you know these like specific harnesses,
+you know, Asterb, the research scientist,
+he's working a lot on this,
+like it's like kind of autonomous harness development,
+like okay, the agent like decides on what
+different steps the task would need,
+and then build out a harness to like fulfill those steps,
+which is kind of trying to be a generalization
+of some things that I've done in the past,
+and some, like there's a guy, Mahmoud,
+who does like FEM, trying to like give the agents
+to like read a paper and make the FEM for it.
+How do you spell that?
+Kind of.
+Mahmoud, what?
+Mahmoud, what was his name?
+Mahmoud Gillespie, I can just link you.
+- Okay, yeah, do that on the Slack.
+He's in the lab?
+- He's a postdoc of the FEM people in the agentic project,
+so he's in Hector and Gomez's lab.
+- In the Lily project?
+- Yeah.
+- Why do they need FEM in the Lily project?
+- FEM, spinal fluid,
+modeling like lots of CFD sort of work.
+- Wow, this Lily project's really something.
+- The Lily project is cool.
+I like it a lot.
+Yeah, I mean, we have these really complicated models
+here, I actually got a poster cleared.
+I can drop it to you 'cause everything has to be,
+they're very, I would say, particular
+about what you can show,
+but let me show you a little bit.
+This is like pretty basic on the agentic stuff,
+but good on the Lilly stuff.
+But now it's going too long, it's going to be starting to...
+Okay.
+- I'm good on the Lily stuff.
+- Are you putting that in Slack?
+- Yeah.
+- So was there an NSF grant for that,
+or did Lily provide all the funding?
+- Lily has provided all of the funding
+for the drug development delivery work
+that the agentic stuff is tackling right now.
+It looks a little bit weird from the preview,
+but I think if you download the PowerPoint
+that I sent you, it'll actually show up.
+[unclear].
+It's just having a couple rendering.
+- Did you go to Lily in person?
+- Yeah, Yeah, in Indianapolis.
+- Okay.
+- Nice.
+Okay, oh yeah, this is a single slide or a single poster.
+- Yeah, so yeah, I did find parts about how like,
+hey, we have a very complicated problem,
+which is spinal fluid flow up and down from the brain.
+It's like depends on like heartbeat
+and the spine also deforms.
+So it's not just like a rigid body.
+
+
+____
+Remaining convo with max
+
+speaker-0 (00:02)
+Did you go to Lily in person?
+
+speaker-1 (00:05)
+Yeah. I was in Indianapolis.
+
+speaker-0 (00:07)
+Okay. Nice. Okay. yeah, this is a single slide. Okay or a single poster.
+
+speaker-1 (00:15)
+Yeah. So yeah, it just kinda talks about how like hey we have like very complicated problem which is spinal fluid flow up and down from the brain. It's like depends on like heartbeat and the spine also deforms so it's not just like a rigid body. and it takes a long time to run. So
+
+You know, my small part of the project is like, assuming you handed me this, you know, final element, can I like just point a surrogate agent at it and make a surrogate? The answer is no, actually, right now, but 'cause it's just too expensive to run everything. So it it just like struggles with this kind of long horizon test. This would take like a graduate student like a year to do.
+
+speaker-0 (01:10)
+To to do what?
+
+speaker-1 (01:13)
+To make a good surrogate of good surround like I think of all.
+
+speaker-0 (01:17)
+With what with a with a neural network or with a G P?
+
+speaker-1 (01:24)
+Yeah, I probably I mean the the basic task it's it's kind of an operator running task so you probably either use like FNO or we're what how we're starting is like and what they actually did was just like PCA and G P
+
+speaker-0 (01:43)
+Yeah.
+
+speaker-1 (01:45)
+So it's but I think that they did the PCA pretty badly actually. So I don't think they could they could really construct the fields very well. The field is like too too many nodes. Like you can't actually do PCA on it 'cause the data is like terabytes. So you can't load all that into one big matrix and then do the I and decomposition.
+
+speaker-0 (02:11)
+Wait, how many nodes is it?
+
+Wait, and are you C F is this C F D or F E A?
+
+speaker-1 (02:23)
+It's a good question. I don't I I th it's like so many coupled things 'cause it's like some of it's fluid, some of it's solid, but I don't even know like what it falls under.
+
+speaker-0 (02:35)
+Okay. Mm multi mixed dimensional FSI model, fluid structural interaction. Okay. Okay. So
+
+speaker-1 (02:42)
+Yeah, exactly. Yeah,
+
+in the interface it's yeah, it takes like
+
+speaker-0 (02:50)
+And you're referencing a Gomez paper and you've got okay, there's Gomez, Mark Wilkinson. Yeah.
+
+speaker-1 (02:58)
+Mark is our lab mate who did the surrogate development, but they just he just did it like assuming they handed it the P like the principal components off their PCA, which I think their PCA is bad, but whatever. I mean it's not a big deal.
+
+speaker-0 (03:13)
+Yeah. So
+
+So the surrogate sucked, is what you're saying? Wait, so so Mark did it the old school way and you
+
+speaker-1 (03:31)
+Mark Mark and Aditya collabed and Aditya's in Gomez's lab and Mark's in our lab. They collabed and worked on it for six months and came up with a you know, in my opinion, a little bit of a crappy surrogate.
+
+speaker-0 (03:52)
+And then like the the the agent also came up with a crappy surrogate?
+
+speaker-1 (03:58)
+Yeah, the agent can one shot an crappy surrogate in like I don't know, a couple hours.
+
+speaker-0 (04:04)
+But but both surrogates sucked.
+
+speaker-1 (04:08)
+Think so. I like yeah, I I I kind of have put this problem on ice a little bit, like just to work on other things. But basically what you have to go do is like redo the PCA. If you like work from there, crappy PCA, it's probably fine. Like then the agent does a good job. But if the agent has to go rework the PCA from these terabytes of data like the mesh over time, then it's you know, then you're kinda playing a different game.
+
+speaker-0 (04:38)
+so
+
+I is do you have like an objective function set up for the agent to like by the end of it does the agent know that its surrogate sucks?
+
+speaker-1 (04:55)
+The current objective function is just like fitting the PCs well, which again is like a pretty easy objective.
+
+speaker-0 (05:04)
+The what fitting the what's well?
+
+speaker-1 (05:07)
+No the principal component.
+
+speaker-0 (05:09)
+huh.
+
+speaker-1 (05:11)
+You know, 'cause that's really the only that's like the how the task has been broken up. But yeah, like what you would actually want is like the agent to like whatever, have the surrogate reconstruct the fields and then do some sort of field error, you know. Which is you know, there's metrics for that, whatever, but
+
+You could do average, you could do Maholous with like lots of weird field, you know, error metrics.
+
+speaker-0 (05:43)
+So yeah, like when you're
+
+When you're setting up an agent like I guess I'm I'm mainly just selfishly asking, like, how do I get started, you know, day one noob agentic scientific machine learning? Still like you know, Ilias doesn't have any textbooks on it, I don't think. Th there's the Substack. there's the GitHub where he did the like the pin project with the Burgers equation. and
+
+So yeah, and I'm I'm I'm wanting to apply it to vibration problems, design optimization, all these other material I guess material science as well.
+
+speaker-1 (06:39)
+I think it's important to clarify, I mean, first to yourself then in the project scope is like, are you using agents to do things or are you trying to create an autonomous agent that can one shot a family of problems that you throw at it? So this is
+
+I y I do both. Like I like for the Lily project, for the surrogate modeling, that is my task to create a autonomous agent that can one shot a surrogate the surrogate create the surrogate creation process.
+
+For yeah, for a broad class. I mean like it's hard to say any I mean I have I don't know, twenty five cases that I work with. But yeah, like that's the idea. It's like you give me any simulator, I give you a surrogate. That's that's the that's the ambitious task.
+
+speaker-0 (07:37)
+So when he said when he said develop skills and harnesses that enable them to correctly solve a class of engineering problems
+
+That's exactly what you're doing.
+
+speaker-1 (07:51)
+Yes, exactly. And he's talking about yeah, autonomous one-shot.
+
+speaker-0 (07:58)
+So building building a scientist, another building a a a PhD student agent that can sit alongside us in the lab.
+
+speaker-1 (08:09)
+Yeah.
+
+speaker-0 (08:09)
+And I can I can talk to it and say, yo, I've got this idea for Bayesian updating of dynamics in this with this problem for this company. do it. Like
+
+speaker-1 (08:25)
+Yeah. Well, yeah. That's how that's especially how like Mahmood is doing it. It's like I ha like look at this paper. This is this is his like big goal. It's like I have this paper. Can you make me the FE code that this paper describes?
+
+speaker-0 (08:44)
+Okay. does it work? That sounds amazing.
+
+speaker-1 (08:53)
+You know, sometimes I
+
+It he has like like when Ilias was saying like developed skills and harnesses and then like specialized harnesses. Mahmood has a very like I would say rigid workflow which I'm guessing works when the problem is like falls within the purview of that workflow. But if it's like a little bit more abstracted or misaligned then it will
+
+speaker-0 (09:25)
+What do you mean by a workflow?
+
+speaker-1 (09:28)
+Like he has I mean, like he could like draw out to you a picture. I don't have his slides, I probably wouldn't be allowed to show them anyways if I did. But it's like, okay, first thing the agent needs to do is read and understand and look in the literature. The second thing he needs to do is like mesh out the problem. The third thing it needs to do is you know what I mean? So it has like these kind of flow charts, which really
+
+speaker-0 (09:55)
+Yeah.
+
+So it's kinda like this thing. That would be considered a workflow.
+
+speaker-1 (10:03)
+Yeah, exactly. Exactly. Something like that. So what is that pro
+
+speaker-0 (10:11)
+What's that? That's from that's from Karniadakis and Kumar. Hey, is this the guy from Brown? Yeah, yeah, yeah. Yeah. so
+
+speaker-1 (10:24)
+Exactly,
+
+something like that. But but to be honest, like th their little person that you know, they're a little bit underdefined. So Mahmoods would have like hard checkers at like inside those as well, where they're sort of a little bit loosey-goosey to be honest.
+
+speaker-0 (10:42)
+Wait, hard checkers.
+
+speaker-1 (10:45)
+Like as in like you need like it needs to run a script that validates that what happened is what says it happened. So this is also a big part of like the harness engineering is like having deterministic checking after you accomplish a task. 'Cause if you just like ask an agent to one shot something and report the metrics, it'll just kind of make something happen. So
+
+speaker-0 (11:10)
+Yeah.
+
+speaker-1 (11:14)
+like having your workflow built in with some like deterministic checkpointing is like kind of where we're at right now.
+
+speaker-0 (11:23)
+Okay, so basically it sounds like you have to the the more narrow and specific you can make your agentic workflow, the more trustworthy it'll be. But the less useful it'll be. And so we're all we're kind of trying to see the the boundaries of how open ended you can make something while it's still verifiably effective.
+
+speaker-1 (11:43)
+Yes, correct. Yeah, great. Sorry. So right now, you know, I have what whatever as what I think of like the minimal harness. I was like, the the absolute least like the the the the least structured it can be and still be like marginally trustworthy is to say, like, have a Python file.
+
+In that Python file it says, launch me a Codex session. It works, blah, blah, blah, blah, blah. It does whatever, but it needs to deliver a model that a deterministic script can evaluate the RMSC of. And then you have that script takes the model in, outputs scalar RMSE, and that's like the only and that like then you can trust that that R like model is what it says it is. You know what I mean?
+
+Mm-hmm.
+
+speaker-0 (12:33)
+Yes.
+
+speaker-1 (12:37)
+Because it without that and so what that is is a Python file that opens an agent session and then closes the agent session and then runs, you know, a script. But if you just say, Hey agent, you can do this and then it says, I have reported like I
+
+My me as the agent, I called some modeling scripts, I called some training scripts, and then I called the validation script. You can never know that it didn't change the validation script to, you know, help itself out or, you know, it misunderstood which metric you wanted it to use, stuff like that. So like all that is like it might be high percentage that they do it as you want to, but it's not a hundred percent. It's not you know, so you can't s you can't say anything for sure.
+
+speaker-0 (13:24)
+So how does one actually go about like is it in the harness that one defines the workflow of like agent one and and and are all of these multi agent or single agent?
+
+speaker-1 (13:41)
+So what I just described yet, the minimal harness is is just single agent. But like Mahmoud's is definitely multi-agent. This Karniadakis multi-agent workflow is definitely multi-agent. And then you get into like a communication problem. So like the problem with multi-agent workflows is that you know they need to pass messages between them, and but every time you like add structure to these sort of
+
+workflows, it's like overhead for the agents to like go through. So like you say, hey, you're the you know, modeling agent and hey, you're the evaluator agent, just like explaining to them what their tasks are and like who they like who they are and stuff like that is overhead. That like, you know, a single agent, you know, doesn't require money and time.
+
+speaker-0 (14:27)
+Yeah, yeah.
+
+So over what it makes it slower and more expensive?
+
+speaker-1 (14:41)
+Yeah, so be like exp like, Hey, wake up, this is what you are and you have to go check this model.
+
+And so yeah, there's again it's another trade-off. Like yes, you have like a more defined and more like explainable workflow, but you have like for a really simple problem, you just spent, you know, three hours working on it to like wake up all your agents and coordinate them, whereas like you could have, you know, done it super fast you could have done it in ten minutes with a single agent, just open-ended thing.
+
+speaker-0 (15:14)
+So it's more inefficient but but potentially at the value of being more doing higher quality work or more consistent work, less less errors.
+
+speaker-1 (15:31)
+Yeah, all but and and more explain I mean, it makes I think part of it is a little bit psychological. Like it makes us feel better that they have specific jobs and it follows a sort of workflow that we're doing. It might be tough. I I think, you know, if you try it single agent and it just like is garbage every time, then you know it makes sense to set things up. But again, you also lose
+
+speaker-0 (15:42)
+It's Cope.
+
+speaker-1 (16:00)
+A generalizability.
+
+speaker-0 (16:02)
+So is is his auto research pins GitHub like a good place to start? For like looking at harnesses?
+
+speaker-1 (16:14)
+I haven't I haven't looked at it.
+
+speaker-0 (16:17)
+Okay. I mean is is is Ilias a noob in this area compared to these other the agentic masters? [Andrew: is Ilias a noob?]
+
+speaker-1 (16:33)
+No, I I don't think I I think, you know, it's everyone's a new. So yeah. Ilias is optimistic. That's just like the the toxic qualifier you have to keep in your mind is like OS is like constantly like everything Ilius says needs to be like vibe checked by like is this sound a little too optimistic? But he he gets the basic basic ideas.
+
+speaker-0 (17:03)
+So what else should I look at getting started? And and how would I spool up a multi agent thing in Codex?
+
+speaker-1 (17:16)
+Hello, I would ask Yeah. I would ask
+
+I would ask Codex or Claude Code to like show you like to make like a Py file harness that has t like two or three agents and then you can just kind of see how it works and like have it launch a session and stuff like this from within the Py file. That's what makes like a harness is that it's driven by
+
+speaker-0 (17:54)
+Am I am I about to Am I about to burn through a bunch of money on on tokens? Okay.
+
+speaker-1 (18:04)
+That's
+
+the But let me see I mean like where do where where do I learn about this? Like mostly mostly Twitter. Okay.
+
+speaker-0 (18:15)
+Yeah. I've seen some stuff on the old Twitter. that's wild. That's wild also. Just a crazy, crazy claim. where have I learned about this cutting edge PhD work I'm doing, mostly Twitter.
+
+speaker-1 (18:27)
+Yeah.
+
+Literature is just like the the like whatever, academic literature is just like way too slow. Like there's not it's just like, what what did I just try today online?
+
+speaker-0 (18:45)
+Yeah. Twitter you mean the company SpaceX owns.
+
+speaker-1 (18:52)
+Sure. X XAI now too, right?
+
+speaker-0 (18:56)
+Yeah,
+
+there's a great launch this weekend. or Friday, last weekend. really? Yeah. Yeah, Starship, first flight of the version 3 Starship went pretty well. There were a few little issues here and there, but all in all pretty successful. it was just a test flight, you know, takes off in South Texas and lands in the Indian Ocean. but crazy powerful rocket this latest version. just insane, insane thrust.
+
+speaker-1 (19:11)
+Where where did they go?
+
+speaker-0 (19:26)
+and size.
+
+speaker-1 (19:27)
+To
+
+take like big
+
+speaker-0 (19:30)
+Yeah, I mean it's it's for like it's for Mars colonization, moon colonization, and launching data centers into space at full reusability, insanely low cost. but Okay, so you learned about this on Twitter. Well if you ever see any like noob friendly stuff to pass my way, or just like hey you might be interested in this. So if I
+
+speaker-1 (19:52)
+think about it. For sure.
+
+Yeah, there's lots of articles that we kind of like blog posts. Yeah. These things. I mean
+
+speaker-0 (20:01)
+That Vibe
+
+Physics blog post was sick. I loved that one. Vibe Physics. I think it was posted on Anthropic's website.
+
+speaker-1 (20:12)
+yeah. yeah yeah, I know it's
+
+speaker-0 (20:15)
+but what you need is the the papal encyclical Pope Leo on safeguarding the human person in times of artificial intelligence. Have you seen this? It's been making waves.
+
+speaker-1 (20:27)
+No, I I mean I saw that it existed but I haven't yeah said that to you. Have you are you Catholic?
+
+speaker-0 (20:33)
+No. I'm a I'm a Protestant, but my best friend's a Catholic and the Catholics do much better intellectual work than the Protestants. but am I gonna read all this? Whew, maybe not. but I wish I would.
+
+speaker-1 (20:48)
+But
+
+while I while I load it in the chat to PT and ask it a couple of questions. Sure, why not?
+
+speaker-0 (20:55)
+but the Okay, so if I'm if I'm getting started on this, should I start with trying to replicate a paper and then is there a version of this where I'm investigating a new like, hey, I want to combine this paper and this paper to do this and test it with some synthetic data. Go.
+
+speaker-1 (21:20)
+Yeah, I I think April
+
+That that that would that's a great like end task. Like I think if you can do that by the end of the summer, that's great. Paper replication is like not easy because like it's just so there's just so many pieces and ingredients and like things in papers are like it's just it's sad, but it's like they're genuinely so under specified. If you can find papers already with their code posted, then you then okay, now it it looks a lot more like doable.
+
+speaker-0 (21:54)
+Yeah.
+
+speaker-1 (21:54)
+But like just from papers themselves, like the the space of like error is just too large. Like so genu generally like what like when there are people in my on NALA working on paper replication, like whatever from scratch and it genu generally takes them like a couple days to like the agent runs a couple days to get it done. So
+
+speaker-0 (22:24)
+Okay. Yeah, I replicated the results of this ODIL paper. the
+
+This got my graphs in it? No.
+
+speaker-1 (22:45)
+You have to just be like and you have to really go through and inspect the actual codes that it writes. Like here's a s here's a here's a scary story. Like i in the beginning when they were doing paper replication, it was like, I want you to like you know, recreate this plot. And so after struggling with like the actual algorithm for a little bit and couldn't really get it to work, what it did with it took took the picture, it you know, you know, pixel by pixel.
+
+analysis and then it fit a line to like fit the pixels of the line.
+
+speaker-0 (23:21)
+Was that this right here? When AI agents start cheating?
+
+speaker-1 (23:27)
+It's probably probably something like that is in there. Yeah, but like you know this is all like anytime you say anytime anytime like you see like capitalized prompts it's just like hopes and dreams. I mean like it might increase your probability of it d like doing it right, but like you have no guarantees.
+
+speaker-0 (23:46)
+What when you say something like do not replicate this
+
+speaker-1 (23:50)
+Yeah, that's I mean I don't know, that's just so silly to me. Like I mean, obviously like it does help, but like it like you're in front of admitting that you're you're impotent when you do something like that. You know what I mean?
+
+speaker-0 (24:08)
+well yeah, this was the my results doing a paper replication for ME 697. I wonder if he's gonna change that project if like this could be one shotted. agentic.
+
+speaker-1 (24:28)
+See, when this was this was you doing the work, not an agent.
+
+speaker-0 (24:32)
+Well, I mean I I used I used chatbots to help write the code and stuff. but I had never I had yeah, a long long time. but the
+
+speaker-1 (24:44)
+Yeah, yeah, I think.
+
+speaker-0 (24:53)
+So okay, so yeah, the paper replications are hard. Okay, okay. So like what like what is you're a PhD student now, right?
+
+speaker-1 (25:05)
+Yeah.
+
+speaker-0 (25:06)
+W like is the is the goalpost moving for how you get a PhD in scientific machine learning, like in a computational field?
+
+speaker-1 (25:14)
+Yeah.
+
+I think so because like in the past, I don't know five years ago, like if you made like okay, if you took some like existing surrogate model architectures, and then you like ported it over to your problem, which no and no one had like done it, like I don't know, like, I work in HVAC or in my case diesel engines, and you like port over, like whatever, a reasonably complicated but like state-of-the-art method that someone else has invented, and then you can just port.
+
+over to your problem and it works pretty well. Like that's, you know, a valuable contribution. That's like part of your work. So but that's that's not
+
+speaker-0 (25:57)
+Too easy now these days. So what is like what does a PhD student need to show? Did Trenick get his? D was he was he awarded his PhD?
+
+speaker-1 (25:59)
+That's an afternoon.
+
+Yeah, for sure. But they they hardly ever don't afford it at the defense. At least would have held him. At least would have told him don't do it if he thought it was But yeah, like okay, yeah, Shredix is a great thing. Like Shrednids won't that that's you know only because he did it pre agent.
+
+speaker-0 (26:29)
+Yeah, that's not gonna fly for your PhD.
+
+So what is what is what is gonna fly? How do they know that you're ready to become doctorate [verify audio]?
+
+speaker-1 (26:40)
+Well my my probably PhD like topic will be like how does one make an agent that does things like you know, it's like on arguing on the the the higher level, like taking one step back.
+
+speaker-0 (26:55)
+Uh-huh. Okay.
+
+speaker-1 (26:58)
+But to be honest with you, like we're in such an early phase that like probably if like my PhD won't age very well.
+
+speaker-0 (27:07)
+yeah, well, they can't take it away from you.
+
+speaker-1 (27:10)
+Yeah, you know, someone has you have to you know, you have to big like build the groundwork in any way, so
+
+speaker-0 (27:16)
+And no one knows what a PhD is gonna look like in ten years. But you basically can't just you can't get it the old way.
+
+speaker-1 (27:25)
+This is yeah, this is the sort yeah, Ilias this is the sort of things that Elias definitely says and thinks. I mean, I think there are still like frontier problems which require like which to which like it doesn't look that different.
+
+speaker-0 (27:38)
+What what problems you said? Frontier, yeah.
+
+speaker-1 (27:40)
+Just like from
+
+Just like inventing a method completely from scratch, like that's gonna just take a lot of like time and thought. So you know I I think it'll change a lot of things, especially in the engineering scene. But I I you know, there's definitely some parts where it's not as important.
+
+speaker-0 (27:53)
+Yeah.
+
+Okay. I was thinking about one other thing, but I lost it.
+
+speaker-1 (28:17)
+Yeah. I think you can find these sort of decent articles that like to kind of explain, you know, A James said harnesses and skills kind of you know f a little bit beginner friendly. And then yeah, what's a good like starting task? It's a good question. Like
+
+speaker-0 (28:35)
+I I mean basically he just it sounds like he just wants me to dick around. He was like, yeah there's no fit the only failure would be not trying. So like you know, make a mess, especially in an area where I do have some domain expertise. see what's possible.
+
+speaker-1 (28:53)
+My guess is also that you can get the you should get like the codex or cloud code like the $200 version and just ask him to reimburse it.
+
+speaker-0 (29:01)
+Yeah, yeah,
+
+for sure. Yeah, he said he'd pay for five hundred dollars for experimental hardware and I'm sure he'd be willing to let me go balls to the wall on tokens. Yeah. Yeah, I mean I I don't know if I'll do Codex or Claude Code. I I'm not as user terminal savvy, so having the GUI is actually more more favorable for me.
+
+It is a human is a robot really five hundred K? No way.
+
+speaker-1 (29:35)
+I mean y I I g I'm guessing just the kinds that he's talking about that like are whatever really industrial grade but
+
+speaker-0 (29:42)
+No, just get like a figure th a figure or an Optimus or something. I don't know if those are for sale yet. But they're already working in like Amazon factories and stuff. Shouldn't be that that hard to get one for a lab setting.
+
+speaker-1 (29:58)
+Yeah, I think this is a space that we don't understand very well. I mean yeah, he's gonna lean a lot on the other people for the robotic stuff.
+
+speaker-0 (30:06)
+Yeah.
+
+speaker-1 (30:08)
+We've never done an experiment in our lives, you know.
+
+speaker-0 (30:11)
+Yeah. Yeah. Time to get get out of your comfort zone, you computational pencil whippers.
+
+speaker-1 (30:19)
+Excited.
+
+Yeah. The current models are definitely safer than us. I mean we're like quickly, you know, coding ourselves out of a job, but
+
+speaker-0 (30:27)
+Is he is he like over is he overhung up on on Bayesian global optimization? I like it seems like that's only one small piece of the puzzle as I understand it. Like
+
+speaker-1 (30:42)
+I think when you when you're talking about the space of experiments, experimental design, like I think he you know, he pretty well believes in basic what we'll say.
+
+speaker-0 (30:52)
+It's just what it it can efficiently search a multi parameter space with uncertainty with with a clearly defined objective function. But like how much faster is it than a random search?
+
+And is that is that the big knob determin for solving an important scientific question is like how fast did you search the space? No, it's like did you define the question right? I think is use and like how often are you gonna be gated by how efficient is your search? it just seems like that's like sort of small peanuts on the side of like actually advancing science in the in the mechanical engineering domain.
+
+It's a great tool for that specific problem. But like as I saw with my beam design stuff, like yeah, you still actually have to get enough data to get off the ground and it can still get stuck unless you have the right setup and you don't know what the right setup is until the end.
+
+speaker-1 (31:56)
+Yeah, I think I think it makes a lot of sense when one experiment is really expensive. Yeah, for sure. Like if it it you know mine, it's way more work to set it up than just like spamming stuff. If you have the money, you can just spam it.
+
+speaker-0 (32:11)
+Yeah. Okay. good talking dude. Thanks for joining. I appreciate being able to debrief. this is fun. This is exciting. I'll keep you updated. Yeah. Alright, man. What what keeps happening? History. Yeah. Yeah, I gotta I'll I'll I will expense my time on Twitter to best. This is
+
+speaker-1 (32:28)
+Keeps happening.
+
+I screen did have a
+
+speaker-0 (32:42)
+I'm working.
+
+speaker-1 (32:43)
+Do we need do we need to do anything there? I mean, I think she's just looking for like an outline of like the activities or something like that. Like a
+
+speaker-0 (32:54)
+I'm waiting for her to reach out. she she met with Ilias and they approved the project and Yeah, so but they're not paying me fifty. They can only pay me as what as what a TA makes, but Ilias was just like fudge the hours basically. Like
+
+speaker-1 (33:18)
+Like twenty dollars an hour?
+
+speaker-0 (33:20)
+Well, he said he could get it up to like forty with including accounting for like health insurance and stuff.
+
+speaker-1 (33:26)
+Okay.
+_____
+
+Full transcript (Riverside) — ASR-corrected
+Speaker 1 = Ilias Bilionis | Speaker 2 = Max | Speaker 3 = Andrew Voss
+Key fixes: GP surrogate, that is the easy part, build a surrogate, DeweSoft/DAQ,
+Birck, Bayesian global optimization, agentic/in silico, Codex, Asterb,
+Mahmoud Gillespie, FNO, ODIL, Karniadakis, crappy surrogate, etc.
+
+Speaker 1 (00:00:00)
+is how create fully autonomous labs. Labs that do the experimentation autonomously without humans 24/7. There are two issues there. [unclear — possibly 'at least']. Okay, but two important issues. One is a sequential design of experiments, you know, how do you come up you know, digest all the data you have and come up with the new experiment. This is what Bayesian global optimization does and that is what you know how to do. Okay, but
+
+This is one part of the story. The other part of the story is to actually control the device that does the experiment so that you close the loop.
+
+I think that developing the part that suggests the new experiment is actually very doable if you have a specific case. I mean if you have I don't know up to ten, fifteen variables you want to vary and they're all continuous and the thing you want to optimize a scalar or even multiple scalars. We know what to do. And and it's it's
+
+straightforward I would say right now, even with if you use a coding agent to to have it to set up the code so that you do do you do it very well. Okay. the hard part right now is connecting to the device. Okay, so first of all it's not even clear you may not be able to completely automate something, okay? But
+
+if you you have an instrument that you can
+
+Speaker 1 (00:01:50)
+control electronically without robots, okay, without robots, then that is also doable. Not a lot of people have done that, but this is also doable as soon as you are willing to spend a little bit of time to interface with the machine the machine. Either exploit exploit a programmable interface that the machine may have
+
+or develop your own by on on top of whatever they have. Which a year ago I would say let's not even bother with that because that would be a computer science programming task of basically creating an API for an instrument. But now I think with coding agents, they could do it. I mean they know more programming than all of us. We're not programmers, but they know more programming than
+
+most programmers also. So I think it's it's completely doable to take an instrument that
+
+create the API for so that you can control.
+
+Yeah.
+
+Speaker 1 (00:03:07)
+Yeah, I had.
+
+You keep going. I'll ask questions at the end.
+
+So I I understand that you cannot automate all experiments without robots. Okay. I don't think you can I mean I l the problem with robots i is that we don't have one to give you, okay? And there's like five hundred thousand dollars each. but if you have one you could have a robot also. Okay, just that
+
+It's it's way more difficult adding a robot. so I think I think for for me the most useful thing would be to take a an instrument, expose its controls through an API, through an application interface,
+
+And then expose that interface to an agentic system that controls the instrument. And and it has and you break it down into the following components. The brain, which is what experiment should I do next, where you collect all the data and you build a Gaussian process surrogate for a scalar quantity or multiple scalar quantities and you
+
+Speaker 1 (00:04:41)
+solve for the expected improvement or for the maximum improvement or for the maximum expected improvement in hypervolume if you go for the for a multi objective problem. So that's that's that's the easy part. And then you try to run this experiment. Okay, so the second part is the actuation. So from the decision that this is the experiment that I should run.
+
+actually running it, which means that the ideal experiment you should run should be translated into a program that will run on the instrument. And then you run that and you need to add the final layer which is the autonomous sensing. So you need to do the whatever measurements you have to do, they have to be done autonomously so that you bring them in and you close the loop.
+
+Okay, so this is where well this is the sort of thing we're gonna start doing.
+
+Like this July, we're gonna start doing this thing in various applications. Now I think this may be impossible to do during the summer, okay? But what is not impossible is investigating each one of the components or two of them, okay, and working towards that direction. So okay, I have the brain, but I don't have the actuation. I mean the brain you will have it.
+
+I don't think that's a problem for you. You already know how to do it. That's what we did in ME 539, right? And ME 697. let me work on the you know controlling the machine, making having an agent control the machine. And and you could do you know, sort of completely closing the loop, which is ideal, right? So what are the what are the the the steps you would take towards building that and okay
+
+Speaker 1 (00:06:45)
+Maybe you won't do it during the summer, but maybe you can do two of these steps. Mm-hmm. That will teach that will teach us something, right? So creating an API for on a for an instrument, if such an API doesn't exist, that will teach us something. Creating a d domain specific knowledge in which the agentic system can express itself and control the instrument, that is
+
+ also something that we want to do because this this hides the a lot of complexity, okay. So here's how how you would do it. Let's say you have made an API that controls the instrument. And then what is the agent going to do? It won't it's gonna have to go and run things with that API. Right? The experiment should be translated into some domain specific language that you will have to design.
+
+Like I mean I mean the the case of ECE 323 for example, it would be you know, take a new it will the language will have to to to to to to specify what is the experiment you should do, right? So take this particular specimens, manufacture this specimen, you know, as you have manufactured, take it and put it there and do the test.
+
+and read the output and tell me what it is. So this would all be sort of a program suggested by the agent and it will have to be executed. And and whenever you you have an agentic system suggesting a program that will run on the physical world, or you have a safety issue. You can't just run it. You have to be reasonably sure that it's not going to damage the instrument or
+
+ d h hurt any people right so there's a there's a safety issue and we're gonna have to think about how we're gonna solve the safety issue. And typically the way we the way the way this is done is by making a digital twin of the instrument that allows you to to play what would happen if you ran the experiment. And if your digital twin tells you it's okay you can run it. So
+
+Speaker 3 (00:09:10)
+Well what if your your digital twin may not know that, you know, there's a that there's a kid running around the lab or something and that your experiment's gonna injure a human or like the digital t you need almost like computer vision or something to to actually see that there's safety or
+
+Add this this kind of safety, like human safety, you do need computer vision. We we we we we we study that as well. we have experts that build vision models that identify humans and they stop the robots before they hit a human. That's one of the problems actually.
+
+Okay. so
+
+I'm not sure but but this is part of safety, right? So this is actually a har hard part of safety. The other other part of safety that we haven't done yet is how not to damage the machine. Mm-hmm.
+
+So I my domain specific knowledge is in vibrations and structural dynamics models, aerospace workflows for vibration loads and vibration testing. and so that's what I want to focus on this summer. so let's use that as kind of our how we talk about things.
+
+Speaker 3 (00:10:34)
+I I do have an instrument, a data acquisition system from DeweSoft, Slovenian company. I don't know, do you guys use DeweSoft equipment? Max?
+
+But I I actually worked with it in my undergrad. Cool. But yeah, it's been a long time.
+
+Okay.
+
+Yeah, I asked them to give me a shaker, and they sent me a bill for like fifty K, so I I'm not getting the shaker. But they gave me this DAQ for free as like a rental, in exchange for developing some curriculum for them, which I've done. so I can definitely work on developing an API for that and I think that makes sense.
+
+I was curious about a few things. So I I had seen news about labs like this from Google DeepMind, like doing material science research in an automated sense. have you seen this?
+
+Speaker 1 (00:11:28)
+Yeah, and and we actually have funding to do this both for pharma and materials.
+
+Yeah. So are you gonna sp spin up a la like a hardware robots lab at Purdue?
+
+So here so first of all my my lab is going to remain computational lab of for as long as there's funding and there is funding right now. So there are there are two two programs that are relevant to us. So there's the Agentic Drug Discovery Program, which which I I lead and we are adding now in July an experimental component
+
+It's gonna be on DNA factories. Okay, so we're looking at manufacturing of of DNA. Actually, manufacturing of proteins. You have to make the DNA first so that you can make the proteins. Okay. and there I bring in people who have robotics expertise and domain expertise.
+
+Okay, but the agentic stuff is what we're gonna be developing. And this domain specific language that I'm talking about and the safety concerns, the sequential experimental design, all that is basically what we're gonna be doing. It's just that I I mean wh why why are we adding these things? Because now things are so much easier than they were a year ago. Mm-hmm. So we might as well solve harder problems.
+
+Speaker 1 (00:13:04)
+Okay. That's that's the that's it, yeah. The second thing is a new NSF project which is recommended but not yet funded. Recommended means unless somebody from the federal government flags it for whatever reason, it's gonna go through. And that is a nineteen million dollar project that
+
+ will well the goal of which is to expose Purdue manufacturing facilities facilities the whole building so it's the Birk Birck Nanotechnology Center and the MMRL. Do you know what MMRL stands for, Max? Manufacturing something blah blah. It's additive manufacturing basically an advanced manufacturing. So we're going to expose the whole building to buildings actually through an application interface.
+
+to the entire United States. So somebody could remotely write a program that will run on the building with robots moving stuff around and also humans do it. Well you'll be able to control humans through programs. I'm gonna assume that they're gonna do their job of course. so and and this also has a lot of
+
+Agentic AI flavors. Obviously we're doing that so that we can also make agents that control the facilities and we're going to offer to the users of the facilities tools like build a surrogate, do sequential experimental design Bayesian global optimization on your specific experimental
+
+program. So imagine that, you know, a small company, for example, in the United States that doesn't have the equipment we have at Berk, it will be able to run a non trivial experiment that requires manufacturing something and transferring it somewhere else for further processing, then d doing one more processing step, then testing it. So you'll be able to program the entire thing and also say, okay, now I want you to do Bayesian global
+
+Speaker 1 (00:15:27)
+Optimization
+
+Around ten steps of BGO on on on this on this program. And we're gonna offer that also free of charge. Okay, I mean free of charge, tax money, taxpayer money. You're gonna write a proposal. If you have a small company, you will write a proposal and we will review the proposals and we'll say, Okay, you have you know, you can spend this this much on experiment.
+
+Are you the Are you the principal investigator?
+
+So there I'm also I'm the principal investigator is Alex Strachan [verify spelling] for Materials, and I lead the AI part.
+
+Okay. I nineteen or ninety million.
+
+Speaker 1 (00:16:17)
+nineteen one nine one nine. That's cool. Yeah the and the drug discovery program is also the same magnitude. It's like five million a year now.
+
+
+
+Speaker 3 (00:16:30)
+Is that Lily? Is that what you're already doing with Lily or is this something different? Yeah. Okay. so I I don't know much about these labs, but I I imagine that Bayesian Global Optimization is not the only way to, you know, design and experiment. with with agents and so I imagine like in a lot of these labs you'll have them doing like a literature review and
+
+That's the idea, yes.
+
+Speaker 3 (00:16:58)
+Turned out hey, we're actually we're asking the wrong question and we need a completely different experimental setup.
+
+Yes, but this this this comes at so we're already doing that, okay, because we we started agentic scientific discovery in silico. So we do everything that we have pretty much done everything and we'll continue to be doing everything that requires only compute. Okay, this is this is this remains a scope. But
+
+It's all in the air, unless you can make stuff and test them. Mm-hmm. It's for materials and and and for pharma, you have to make them. And when you make them, you have to also optimize.
+
+So
+
+Speaker 3 (00:17:49)
+Yeah. So say Codex is is coming up with the best a great experiment based on the literature and then they get the data back from the experiment and it says we need a whole wholly new experiment. This experiment's not gonna cut it. Is that possible in the workflow without humans?
+
+It is, yes. it will tell you something. It will tell you something. It's not necessarily gonna be a good experiment. Okay, but you you you have to think about it as as follows. It's like the the the engine before you will be suggesting let's make this protein. Okay. This protein will actually be helpful for
+
+Okay.
+
+Speaker 3 (00:18:18)
+Yeah.
+
+Speaker 2 (00:18:23)
+Thank you.
+
+Speaker 1 (00:18:36)
+binding with this particular part of the virus, we're gonna be able to make a good drug. Okay? All right. You have to make a protein. you know what protein to make, but there are like infinite ways to make that protein. There are many, many parameters you need to pick to make it to make it correct. Sometimes, you know, you make it with a every y you you know, it will it the the the the choices will affect how fast you make it, how
+
+how how reliable you make it, how much it's going to cost, right? So you still be doing basic global optimization over the parameters that control the manufacturing process of a thing that your agentic system has suggested that you should play with. Right. So it comes hierarchically. It's not just you know, one
+
+b big optimization over over everything. And the same thing with with material. So that NSF project is actually microelectronics. It's not it's not drugs. And there the agentic system or or a human will suggest, okay, let's make this. Let's make let's test this material. Well that material, again, you can make it in infinite ways. You get different uncertainty
+
+or the quantities of interest depending on what path you took to make it, and there is room to optimize that. Right. So you want minimum uncertainty, you wanna get it fast, you wanna have certain cost and so on. Or energy consumption.
+
+Are you gonna but once you make the material, are you gonna do a tensile test, a bending test, a fatigue test, a test under temperatures, thermal testing, in what order the space of possible tests goes through the moon as well?
+
+Speaker 1 (00:20:34)
+Yes. So the agent, I mean what do we do in in in i so far? If somebody decides, okay, let's just do this. That that's what we do. Okay. Let's just do them in in this order. Or let's make more so that we can cut it and then, you know, do it like that and and we will also argue for several months on how we're gonna cap things. Max, you weren't in these discussions where we're talking about hypersonics
+
+the the hypersonic insulation, right? But we spent probably three or four months just on how to to cut the the insulation we're making and how how to test it. We never actually did the test.
+
+Max, you haven't told me about that project.
+
+Yeah, it died. It died.
+
+Because the experimentalists will never do any experiments, so [garbled — experimenters never ran tests]. Anyway, I have I don't have I don't have I have thirty seconds, I have long meeting. Okay, but think about it. I don't w the only thing I don't want you to do is just I don't want you to do a trivial basic global optimization over something. I want you to start thinking about how you can leverage coding agents to do something way more difficult.
+
+Speaker 2 (00:21:58)
+Yeah.
+
+Okay, that's challenge yourself. Because you will seek problems that are of interest to me and I know I will encounter in the next few months, I might as well just find them now. And there's no failure, okay? You don't have to you don't have to succeed. I mean you'll be successful if you try it and learn.
+
+Yeah.
+
+Speaker 3 (00:22:09)
+Yeah. So
+
+Speaker 3 (00:22:16)
+Yeah. Well be careful, automate agentic vibrations lab is gonna get spooled up in Chattanooga and you won't have it at Purdue. be careful it encouraging too much ambition. Okay. I'm still curious what you think about relativity and that stuff, but I guess that's for another day.
+
+Yeah, let's make another appointment. I have I have a conference this week, so it's gonna have to be next week. Okay. so Wednes Wednesday, Thursday, Friday I'm not available, but we're gonna try for Monday. All right, but to write things down. All right, gonna go guys. Okay.
+
+Baba.
+
+Max.
+
+no. What's that? Yeah, it's pretty cool stuff. so yeah, but we didn't actually get to talk about it. I get the the agentic stuff is the the tool, but what's the project? You know, we didn't actually get to what's the actual question you're asking. look, I I think this the hyperstructures thing I'm just gonna do as kind of like a
+
+Speaker 2 (00:23:06)
+And so done.
+
+Speaker 3 (00:23:35)
+ a side side hustle.
+
+Meeting with him again?
+
+Meeting with this author.
+
+Yeah, didn't you say you had a a follow-up with him?
+
+ we we had a follow-up via email. but we have we have met he's really pushing AI for this thing that the lab doesn't really specialize in, but is just kind of like is kind of helping like splice the part to print as multiple parts. but like if he's gonna
+
+Speaker 3 (00:24:18)
+He's he said he'd have me sign an NDA and get me set up with his systems, like I might as well get used to it. It's it seems like a pretty cool technology that I wanna work with. And it sounds like from Ilias' perspective, I can kinda dick around with whatever I want now that I have the power of Codex on my side and h you know, hope to achieve three research projects in two months. and but yeah, I'll try and get something going with Bayesian updating.
+
+ that makes sense and would totally fit within this framework. and maybe relativity would be interested in fully automated labs. they like their their CEO, Tim Ellis and Relativity leadership are big on AI [ASR may have said Eric Schmidt], so I don't know what
+
+But yeah, ultimately I'll I'll try and do something useful for them, but it's
+
+It may not be
+
+Speaker 3 (00:25:22)
+Yeah. It may not be in the cards. unless Todd, the the guy's willing to do most of the legwork. and
+
+What else was I saying? Yeah. Sounds like a cool project though. I mean I don't really care about the drug development. Maybe I should. but the materials research really really excites me.
+
+Speaker 3 (00:26:01)
+And yeah, I've got I've got Codex. I need to get going on I need to try out Claude Code. Next. I mean so what what do you do with
+
+For
+
+You prefer what you prefer what?
+
+I I use Claude Code, the COI for pretty much everything, so it's just whatever. But yeah. The terminal tool. yeah, it just feels like you have a better the terminal tools, you know, you feel like you have better grasp of what's happening with your files because it's like the file changes are all right there. not in like a GUI.
+
+And then and I think on code's ruling is just a little bit better, so they're you know, better about looking at the files, reading them, moving them around. I'm sorry.
+
+Speaker 3 (00:27:01)
+Yeah.
+
+Looping, running for longer.
+
+Which one's better at running for longer? Claude Code?
+
+Yeah, I I found Claude Code has not been a problem for me. Like it i it runs until I need it to stop. And they also have these they have all these fancy features which most of them I don't know how to use, but like they have like a slash goal and that it'll just like run until that goal is up sort of thing.
+
+Okay, that's cool.
+
+Speaker 2 (00:27:36)
+Yeah, and they have a lot of features.
+
+What what goal are you setting?
+
+Speaker 2 (00:27:43)
+use it I because I'm so like close to it. Like I don't I think these are for like long during tasks that need like whatever you're trying to like one shot or like long horizon like hey I need you to build this whole thing. But you know for
+
+ That sounds like what what Ilias is talking about though.
+
+Exactly. So yeah, when when you're trying to do stuff like that, this is like the sort of tools that they'll use. But how I'm using it right now is to Yeah.
+
+you know, is much closer I would say like, okay, let's try this. Okay, now let's try this sort of thing. Build this one specific thing, let's see how it works, then let's build the next specific thing.
+
+ Okay. So who's this this substack thing who in the lab is actually like continuing this work?
+
+Speaker 3 (00:28:45)
+Like using he w he said specifically he wants me
+
+More ideas for harnesses and scaffolds that fit specific problem classes. And he's really interested in like the domain specific problems, you know, solving domain specific questions.
+
+Yeah.
+
+Yeah. yeah, these like specific harnesses. you know, Asterb, the research scientist, he's working a lot on this like it's like kind of autonomous harness development, like, okay, the agent like decides on what different steps a task would need and then builds out a harness to like fulfill those steps. which is kind of trying to be a generalization of
+
+Some things that I've done in the past and some like there's a guy, Mahmoud, who does like F E trying to like get the agents to like read a paper and then make the FEM for kinda who
+
+Speaker 3 (00:29:52)
+How do you spell that?
+
+Speaker 3 (00:29:57)
+Mahmoud? What was his name?
+
+Mahmoud Gillespie, I can just make you
+
+Okay, yeah, do that on on the subs or on the Slack.
+
+
+
+Yeah.
+
+Speaker 3 (00:30:12)
+He's in in the lab.
+
+He's he's take he's a postdoc of the FEM people in the Agentic project. So he's in Hector Gomez's lab.
+
+In the Lily project? Yeah. Why do they need FEM in the Lilly project?
+
+ spinal fluid modeling, like lots of CFD sort of look.
+
+Wow. This Lily project's really something.
+
+Speaker 2 (00:30:46)
+The Lilly project is cool. I like it a lot. Yeah, I mean we have these really complicated FEM/FSI models. here, I actually got I actually got a poster cleared. I can drop it to you. 'Cause everything has to be they're very I would say particular about what you can show. But let me show you
+
+A little bit. This is like pretty basic on the agentic stuff, but good on the
+
+My computer's bug and now it's been too long since I restarted it. Okay.
+
+Speaker 2 (00:31:37)
+Good on the Lily stuff.
+
+Are you putting that in slack?
+
+Grazie.
+
+Speaker 3 (00:31:47)
+So was there an NSF grant for that or did Lily provide all the funding?
+
+provided all of the funding for yeah the drug development delivery work that the the agentic poster has text. It looks a little bit weird from the preview, but I think if you download the PowerPoint that I sent you it'll actually show up. It's just having
+
+Speaker 3 (00:32:18)
+Did you go to Lily in person?
+
+Yeah. I mean it's in Indianapolis.
+
+Okay. Nice. Okay. yeah, this is single slide. Okay or a single poster.
+
+Yeah. So yeah, it just kinda talks about how like hey we have like very complicated problem which is spinal fluid flow up and down from the brain. It's like depends on like heartbeat and the spine also deforms so it's not just like a rigid body. and it takes a long time to run. So
+
+You know, my small part of the project is like, assuming you handed me this, you know, final element model, can I like just point a surrogate agent at it and make a surrogate? The answer is no, actually, right now, but 'cause it's just too expensive to run everything. So it it just like struggles with this kind of long horizon test. This would take like a graduate student like a year to do.
+
+Speaker 3 (00:33:26)
+To to do what?
+
+To make a good surrogate of the sur like Fall.
+
+With what with a with a neural network or with a G P?
+
+Yeah, I probably I mean the the basic task it's it's kind of an operator running task so you probably either use like FNO or we're well how we're starting is like and what they actually did was just like PCA and G P
+
+Yeah.
+
+Speaker 2 (00:34:01)
+So it's but I think that they did the PCA pretty badly actually. So I don't think they could they could really construct the fields very well. Is that the is too much the field is like too too many nodes. Like you can't actually do PCA on it because the data is like terabytes. So you can't load all that into one big matrix and then do the I and decomposition.
+
+Wait, how many nodes is it?
+
+Mm.
+
+Wait, and are you C F is this C F D or F E A?
+
+Speaker 2 (00:34:39)
+It's a good question. I don't I I th it's like so many coupled things 'cause it's like some of it's fluid, some of it's solid, but I don't even know like what it falls under.
+
+Okay. Mm multi mixed dimensional FSI model, fluid structural interaction. Okay. Okay. So
+
+Yeah, exactly.
+
+But yeah, in the interface it's But yeah, it takes like
+
+And you're referencing a Gomez paper and you've g okay, there's Gomez, Mark Wilkinson.
+
+Speaker 2 (00:35:14)
+ Mark is our lab mate who did the surrogate development, but they just he just did it like assuming they handed the P like the principal components off their PCA, which I think their PCA is bad, but whatever. I mean it's not a big deal.
+
+Yeah. So
+
+Speaker 3 (00:35:37)
+So the surrogate sucked, is what you're saying? Wait, so so Mark did it the old school way and you
+
+Mark Mark and Aditya collabed and Aditya's in Gomez's lab and Mark's in our lab. They collabed and worked on it for six months and came up with a you know, in my opinion, a little bit of a crappy circuit.
+
+Speaker 3 (00:36:08)
+And then like the the the agent also came up with a crappy surrogate?
+
+Yeah, the agent can one shot an crappy surrogate in like I don't know, a couple hours.
+
+ But but both surrogates sucked.
+
+I think so. I like yeah, I I I kind of had put this problem on ice a little bit, like just to work on other things. But basically what you have to go do is like redo the PCA. If you like work from there crappy PCA, it's probably fine. Like then the agent does a good job. But if the agent has to go rework the PCA from these terabytes of data like the mesh over time, then it's you know, then you're kind of playing a different game.
+
+ so
+
+Speaker 3 (00:36:57)
+I is do you have like an objective function set up for the agent to like by the end of it does the agent know that its surrogate sucks?
+
+Speaker 2 (00:37:11)
+The current objective function is just like fitting the PCs well, which again is like a pretty easy
+
+The what fitting the what's well?
+
+No, the principal component.
+
+ huh.
+
+You know, 'cause that's really the only that's like the how the task has been broken up. But yeah, like what you would actually want is like the agent to like whatever, have the surrogate reconstruct the fields and then do some sort of field error, you know. Which is you know, there's metrics for that, whatever, but
+
+Speaker 2 (00:37:49)
+You could do average you could do Mahalanobis with like lots of weird field, you know, error metrics.
+
+So yeah, like when you're
+
+When you're setting up an agent like I guess I'm I'm mainly just selfishly asking, like, how do I get started, you know, day one noob, agentic scientific machine learning? Still like you know, Ilias doesn't have any textbooks on it, I don't think. there's the Substack. there's the GitHub where he did the like the pin project with the Burgers equation. and
+
+So yeah, and I'm I'm I'm wanting to apply it to vibration problems, design optimization, all these other material I guess material science as well.
+
+Think it's important to clarify. I mean, first to yourself, then in the project scope, is like, are you using agents to do things, or are you trying to create an autonomous agent that can one-shot a family of problems that you throw at it? So this is
+
+Speaker 2 (00:39:16)
+I y I do both. Like I like for the Lily project for the surrogate modeling, that is my task to create a autonomous agent that can one shot a surrogate the surrogate create the surrogate creation process.
+
+Speaker 2 (00:39:35)
+For yeah, for a broad class. I mean like it's hard to say any I mean I have I don't know, twenty five cases that I work with. But yeah, like that's the idea. It's like you give me any simulator, I give you a surrogate. That's that's the that's the ambitious task.
+
+So when he said when he said develop skills and harnesses that enable them to correctly solve a class of engineering problems
+
+That's exactly what you're doing.
+
+Yes, exactly. And he's talking about yeah, autonomous one-shot.
+
+So building building a scientist, another building a a a PhD student agent that can sit alongside us in the lab.
+
+Speaker 2 (00:40:24)
+Yeah.
+
+And I can I can talk to it and say, yo, I've got this idea for Bayesian updating of dynamics in this with this problem for this company. do it. Like
+
+ Yeah. Well, yeah.
+
+That's how that's especially how like Mahmood is doing it. It's like I ha like look at this paper. This is this is his inter like big goal. It's like I have this paper. Can you make me the FE code that this paper describes?
+
+Okay. does it work? That sounds amazing.
+
+Speaker 2 (00:41:08)
+You know, sometimes I
+
+It he has like like when Ilias was saying like developed skills and harnesses and then like specialized harnesses and stuff. Mahmood has a very like I would say rigid workflow which I'm guessing works when the problem is like falls within review of that workflow. But if it's like a little bit more abstracted or misaligned, then it will
+
+What do you mean by a workflow?
+
+Like he has I mean, like he could like draw out to you a picture and I don't have his slides, I probably wouldn't be allowed to show them anyways if I did. But it's like, okay, first thing the agent needs to do is read and understand and look in the literature. The second thing he needs to do is like mesh out the problem. The first thing it needs to do is you know what I mean? So it has like like these kind of flow charts, which really
+
+Yeah. So it's kinda like this thing. That would be considered a workflow.
+
+Speaker 2 (00:42:19)
+Yeah, exactly. Exactly. Something like that. So what is that pro
+
+What's that? That's from that's from Karniadakis and Kumar. Hey, is this the guy from Brown? Yeah, yeah. Yeah, okay. so
+
+Exactly, something like that. But but to be honest, like th their little person that you know, they're a little bit underdefined. So Mahmoods would have like hard checkers at like inside those as well, where they're sort of a little bit loosey-goosey, to be honest.
+
+Wait, hard checkers?
+
+Like as in like you need like it needs to run a script that validates that what happened is what says it happened. So this is also a big part of like the harness engineering is like having deterministic checking after you accomplish a task. 'Cause if you just like ask an agent to one shot something and report the metrics, it'll just kind of make something out. huh. So
+
+Speaker 3 (00:43:26)
+Yeah.
+
+Speaker 2 (00:43:30)
+ like having your workflow built in with some like deterministic checkpointing is like kind of where we're at right now.
+
+Okay, so basically it sounds like you have to the the more narrow and specific you can make your agentic workflow, the more trustworthy it'll be. But the less useful it'll be. And so we're all we're kind of trying to see the the boundaries of how open ended you can make something while it's still verifiably effective.
+
+Yes, correct. Yeah, great. Sorry. So right now, you know, I have what whatever as what I think of like the minimal harness. I'll say well the the absolute least like the the the the least structured it can be and still be like marginally trustworthy is to say like have a Python file
+
+In that Python file it says, launch me a Codex session. It works, blah, blah, blah, blah, blah. It does whatever, but it needs to deliver a model that a deterministic script can evaluate the RMSE of. And then you have that script takes the model in, outputs scalar RMSE, and that's like the only and that like then you can trust that that R like model is what it says it is. You know what I mean?
+
+Mm-hmm.
+
+Speaker 3 (00:44:49)
+Yes.
+
+Speaker 2 (00:44:53)
+Because it without that and so what that is is a Python file that opens an agent session and then closes the agent session and then runs, you know, a script. But if you just say, Hey agent, you can do this and then it says, I have reported like I
+
+My me as the agent, I called some modeling scripts, I called some training scripts, and then I called the validation script. You can never know that it didn't change the validation script to, you know, help itself out or, you know, it misunderstood which metric you wanted it to use, stuff like that. So like all that is like it might be high percentage that they do it as you want to, but it's not a hundred percent. It's not you know, so you can't s you can't say anything for sure.
+
+So how does one actually go about like is it in the harness that one defines the workflow of like Agent One and and are all of these multi agent or single agent?
+
+So what I just described yet, the minimal harness is is just single agent. But like Mahmoud's is definitely multi-agent. This Karniadakis multi-agent workflow is definitely multi-agent. And then you get into like a communication problem. So like the problem with multi-agent workflows is that you know they need to pass messages between them, and but every time you like add structure to these sort of
+
+workflows, it's like overhead for the agents to like go through. So like you say, hey, you're the you know, modeling agent and hey, you're the evaluator agent, just like explaining to them what their tasks are and like who they like who they are and stuff like that is overhead. That like, you know, a single agent, you know, doesn't require money and time.
+
+Speaker 3 (00:46:43)
+Yeah, yeah.
+
+Speaker 3 (00:46:52)
+So over what it makes it slower and more expensive?
+
+Yeah, so be like expla like, hey, wake up. This is what you are, you have to go check this model. and so yeah, th th there's again it's another trade off. Like yes you have like a more defined and more like explainable workflow, but you have like for a really simple problem, you just spent
+
+you know, three hours working on it to like wake up all your agents and coordinate them, whereas like you could have, you know, done it super fast you could have done it in ten minutes with a single agent, just open ended thing.
+
+So it's more inefficient, but but potentially at the value of being more doing higher quality work or more consistent work, less less errors.
+
+ Yeah, all but and and more explain I mean, it makes I think part of it is a little bit psychological. Like it makes us feel better that they have specific jobs and it follows a sort of workflow that gonna
+
+Speaker 3 (00:47:57)
+ It's Cope.
+
+It might be tough. I I think, you know, if you try it single agent and it just like is garbage every time, then you know, it makes sense to set things up. But again, you also lose like generalizability.
+
+So is is his auto research pins GitHub like a good place to start? For like looking at harnesses?
+
+I haven't I haven't looked at it.
+
+Okay. I mean is is is Ilias a noob in this area compared to these other the agentic masters? [Andrew: is Ilias a noob compared to agentic masters?]
+
+Speaker 2 (00:48:49)
+N no.
+
+Speaker 2 (00:48:53)
+It's everyone's a new. So yeah. Ilias is optimistic. That that's just like the the toxic qualifier you have to keep in your mind is like Ilias is like constantly like everything Ilias says needs to be like vibe checked by like is this sound a little too optimistic? He he gets the basic basic ideas.
+
+
+
+Speaker 3 (00:49:19)
+So what else should I look at getting started? And and how would I spool up a multi agent thing in Codex?
+
+Speaker 2 (00:49:32)
+Hello, I would ask Yeah. I would ask
+
+Speaker 2 (00:49:40)
+ I would ask Codex or Claude Code to like show you like to make like a Py file harness that has t like two or three agents and then you can just kind of see how it works and like have it launch a session and stuff like this from within the Py file. That's what makes like a harness is that it's driven by
+
+Am I am I about to Am I about to burn through a bunch of money on on tokens?
+
+I'll purchase.
+
+Speaker 2 (00:50:20)
+That's the but let me see I mean like where d where where do I learn about this? Like mostly mostly Twitter.
+
+Okay. Yeah. I've seen some stuff on the old Twitter. that's wild. That's wild also, just a crazy, crazy claim. where have I learned about this cutting edge PhD work I'm doing, mostly Twitter.
+
+Well the literature is just like the the like whatever, academic literature is just like way too slow. Like there's not it's just like, what what did I just try today online?
+
+Yeah. Twitter you mean the company SpaceX owns.
+
+Sure. X XAI now, too, right?
+
+Speaker 3 (00:51:12)
+Yeah, there's great launch this weekend. or or Friday, last weekend. really? Yeah. Yeah, Starship, first flight of the version 3 Starship went pretty well. There were a few little issues here and there, but all in all pretty successful. it was just a test flight, you know, takes off in South Texas and lands in the Indian Ocean. but crazy powerful rocket, this latest version. just insane, insane thrust.
+
+Where where did they go?
+
+Speaker 3 (00:51:42)
+ and size. So
+
+To take like big
+
+Yeah, I mean it's it's for like it's for Mars colonization, moon colonization, and launching data centers into space at full reusability, insanely low cost. but Okay, so you learned about this on Twitter. Well if you ever see any like noob friendly stuff to pass my way, or just like, hey, you might be interested in this. So if I
+
+think about for sure. Yeah, and there's lots of articles that we kind of like blog posts these things. Let me
+
+Yeah. That Vibe Physics blog post was sick. I loved that one. Vibe Physics, I think it was posted on Anthropics website.
+
+Speaker 2 (00:52:23)
+So which one?
+
+Speaker 2 (00:52:28)
+yeah. yeah yeah, I know it's
+
+but what you need is the the papal encyclical Pope Leo on safeguarding the human person in times of artificial intelligence. Have you seen this? It's been making waves.
+
+No, I I I saw that it existed but I haven't yeah said that to you. Have you are you Catholic?
+
+No. I'm a I'm a Protestant, but my best friend's a Catholic and the Catholics do much better intellectual work than the Protestants. but am I gonna read all this? Whew, maybe not. but I wish I would.
+
+Well I while I load it in the chat to PT and ask it a couple of questions. Sure, why not?
+
+Speaker 3 (00:53:10)
+ but the Okay, so if I'm if I'm getting started on this, should I start with trying to replicate a paper and then is there a version of this where I'm investigating a new like, hey, I want to combine this paper and this paper to do this and test it with some synthetic data. Go.
+
+Yeah. I I think paper
+
+That that that would that's a great like end task. Like I think if you can do that by the end of the summer, that's great. Paper replication is like not easy because like it's just so there's just so many pieces and ingredients and like things in papers are like it's just it's sad but it's like genuinely so under specified. If you can find papers already with their code posted, then you then okay, now it it looks a lot more like doable.
+
+Yeah.
+
+Like just from papers themselves, like the the space of like error is just too large. Like so genu generally like what like when there are people in my on NALA working [verify group name] on paper replication, like whatever from scratch, and it genu generally takes them like a couple days to like the agent runs a couple days to get it done. So
+
+Speaker 3 (00:54:40)
+Okay. Yeah, I replicated the results of this ODIL paper. the
+
+Speaker 3 (00:54:53)
+This got my graphs in it? No.
+
+You have to just be like and you have to really go through and inspect the actual codes that it writes. Like here's a s here's a here's a scary story. Like i in the beginning when they were doing paper replication, it was like, I want you to like you know, recreate this plot. And so after struggling with like the actual algorithm for a little bit and couldn't really get it to work, what it did with it took took the picture, it you know, you know, pixel by pixel
+
+analysis and then it fit a line to like fit the pixels of the line.
+
+Was that this right here? When AI agents start cheating?
+
+It's probably probably something like that is in there. Yeah, but like you know this is all like anytime you say anytime anytime like you see like capitalized prompts it's just like hopes and dreams. I mean like it might increase your probability of it d like doing it right, but like you have no guarantees.
+
+Speaker 3 (00:56:02)
+What when you say something like do not replicate this
+
+Yeah, that's I mean I don't know, that's just so silly to me. Like I mean, obviously like it does help, but like it the like you're in front of admitting that you're you're impotent when you do something like that. You know what I mean? Like
+
+ well yeah, this was the my results doing a paper replication for ME 697. I wonder if he's gonna change that project if like this could be one shotted.
+
+This was this was you doing the work, not an agent.
+
+Well, I mean I I used I used chatbots to help write the code and stuff. but I had never I had yeah, a long long time. but the
+
+Speaker 3 (00:57:09)
+So okay, so yeah, the paper replications are hard. Okay, okay. So like what like what is you're a PhD student now, right?
+
+Yeah.
+
+Like is the is the goalpost moving for how you get a PhD in scientific machine learning, like in a computational field?
+
+Yeah, I I think so because like in the past five years ago, like if you made like okay, if you took some like existing
+
+surrogate model architectures and then you like ported it over to your problem which no and no one had like done it like I don't like, I work in HVAC or in my case diesel engines and you like port over like whatever a reasonably complicated but like state of the art method that someone else has invented and then you can just port it over to your problem and it works pretty well. Like that's you know a valuable contribution. That's like part of your work.
+
+Speaker 2 (00:58:10)
+So but that's that's not
+
+Too easy now these days. So what is like what does a PhD student need to show? Did Trenick get his? D was he was he awarded his PhD?
+
+That's an afternoon.
+
+Speaker 2 (00:58:26)
+Yeah, for sure. But they they hardly ever don't afford it at the defense. At least would have held him. Elise would have told him don't do it if he thought it was But yeah, like okay, yeah, Shrenik's thesis [verify] is a great thing. Like Shrenik's thesis [verify] won't that that's you know only because he did it pre agent.
+
+Yeah, that's not gonna fly for your PhD.
+
+So what is what is what is gonna fly? How do they know that you're ready to become doctorate [verify audio]?
+
+Well my my probably PhD like topic will be like how does one make an agent that does th like you know, it's like on arguing on the the the higher level, like taking one step back.
+
+ Okay.
+
+Speaker 2 (00:59:14)
+But to be honest with you, like we're in such an early phase that like probably if like my PhD won't age very well.
+
+ yeah, well, they can't take it away from you.
+
+Yeah, you know, someone has you have to you know, you have to like like build the groundwork in any way, so
+
+And no one knows what a PhD is gonna look like in ten years. But you basically can't just you can't get it the old way.
+
+This is yeah, this is the sort yeah, Ilias this is the sort of thing that Ilias definitely says and thinks. I mean, I think there are still like frontier problems which require like which to which like it doesn't look that different.
+
+Speaker 3 (00:59:53)
+What what problems you said? Frontier, yeah.
+
+Just like from inventing just like inventing a method completely from scratch, like that's gonna just take a lot of like time and thought. So you know.
+
+Yeah.
+
+I think it'll change a lot of things, especially in the engineering scene. But I I you know, there's definitely some parts where it's not as important.
+
+
+
+Speaker 3 (01:00:25)
+Okay. I was thinking about one other thing, but I lost it.
+
+Yeah. I think you can find you some decent articles that like to kind of explain, you know, Agentic harnesses and skills kind of you know, f a little bit beginner friendly. And then yeah, what's a good like starting task? It's a good question. Like
+
+I I mean basically he just it sounds like he just wants me to dick around. He was like, Yeah there's no fit the only failure would be not trying. So like, you know, make a mess, especially in an area where I do have some domain expertise. see what's possible.
+
+ My guess is also that you can get the you should get like the codex or cloud code like the $200 version and just ask him to reimburse it.
+
+Yeah, yeah, for sure. Yeah, he said he'd pay for five hundred dollars for experimental hardware and I'm sure he'd be willing to let me go balls to the wall on tokens. Yeah, I mean I I don't know if I'll do Codex or Claude Code. I I'm not as user terminal savvy, so having the GUI is actually more more favorable for me.
+
+Speaker 2 (01:01:27)
+Yeah.
+
+Speaker 3 (01:01:45)
+It is a human is a robot really five hundred K? No way.
+
+I mean y I I g I'm guessing just the kinds that he's talking about that like are whatever Lily industrial grade, but
+
+No, just get like a figure th a figure or an Optimus or something. I don't know if those are for sale yet. But they're already working in like Amazon factories and stuff. Shouldn't be that that hard to get one for a lab setting.
+
+Yeah, I think this is a space that we don't understand very well. I mean yeah, he's gonna lean a lot on the other people for the robotic stuff.
+
+Yeah.
+
+Speaker 2 (01:02:24)
+We've never done an experiment in our lives, you know.
+
+ Yeah. Yeah. Time to get get out of your comfort zone, you computational pencil whippers.
+
+And yeah. The current models are definitely safer than us. I mean, we're like quickly, you know, coding ourselves out of a job but
+
+Is he is he like over is he overhung up on on Bayesian global optimization? I like it seems like that's only one small piece of the puzzle as I understand it. Like
+
+I think when you when you're talking about the space of experiments, experimental design, like I think he you know, he pretty well believes in basic what we'll say.
+
+Speaker 3 (01:03:08)
+It's just what it it can efficiently search a multi parameter space with uncertainty with with a clearly defined objective function. But like how much faster is it than a random search?
+
+And is that is that the big knob determin for solving an important scientific question is like how fast did you search the space? No, it's like did you define the question right? I think is use and like how often are you gonna be gated by how efficient is your search? it just seems like that's like sort of small peanuts on the side of like actually advancing science in the in the mechanical engineering domain.
+
+It's a great tool for that specific problem. But like as I saw with my beam design stuff, like yeah, you still actually have to get enough data to get off the ground and it can still get stuck unless you have the right setup and you don't know what the right setup is until the end.
+
+ Yeah, I think I think it makes a lot of sense when one experiment is really expensive. Yeah, for sure. Like if it it you know mine, it's way more work to set it up than just like spamming stuff. If you have the money, you can just spam it.
+
+Yeah. Okay. good talking dude. Thanks for joining. I appreciate being able to debrief. this is fun. This is exciting. I'll keep you updated. Yeah. Alright, man. what what keeps happening? History. Yeah. Yeah, I gotta I'll I'll I will expense my time on Twitter to best.
+
+Speaker 2 (01:04:43)
+ It keeps happening.
+
+I screen gives out a
+
+Speaker 2 (01:04:56)
+Ha ha ha.
+
+I'm working.
+
+Do we need do we need to do anything there? I mean, I think she's just looking for like an outline of like the activities or something like that. Like a
+
+I'm waiting for her to reach out. she she met with Ilias and they approved the project and Yeah, so but they're not paying me fifty. They can only pay me as what as what a TA makes, but Ilias was just like fudge the hours basically. Like
+
+Well, he said he could get it up to like forty with in accounting for like health insurance and stuff.
+
+Speaker 2 (01:05:42)
+Okay. 

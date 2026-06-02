@@ -1,0 +1,100 @@
+{
+  "trial_id": "multi_agent_first_loop_20260602",
+  "date": "2026-06-02",
+  "purpose": "Plain-English multi-agent proof of concept using the existing fresh 2DOF StatFEM/FBS workflow.",
+  "payload_command": "bash scripts/run_fresh_2dof_statfem_fbs.sh",
+  "sampler_standard": {
+    "future_default": "NUTS/HMC",
+    "current_status": "Existing random-walk/random-scan Metropolis outputs are prototype/legacy and are not NUTS/HMC."
+  },
+  "agent_roles": [
+    "lead",
+    "runner",
+    "checker",
+    "reader",
+    "reviewer",
+    "notes"
+  ],
+  "role_files": [
+    "docs/agents/roles/lead.md",
+    "docs/agents/roles/runner.md",
+    "docs/agents/roles/checker.md",
+    "docs/agents/roles/reader.md",
+    "docs/agents/roles/reviewer.md",
+    "docs/agents/roles/notes.md"
+  ],
+  "claude_agents": [
+    ".claude/agents/lead.md",
+    ".claude/agents/runner.md",
+    ".claude/agents/checker.md",
+    ".claude/agents/reader.md",
+    ".claude/agents/reviewer.md",
+    ".claude/agents/notes.md"
+  ],
+  "codex_prompts": [
+    "docs/codex_prompts/multi_agent/lead.md",
+    "docs/codex_prompts/multi_agent/runner.md",
+    "docs/codex_prompts/multi_agent/checker.md",
+    "docs/codex_prompts/multi_agent/reader.md",
+    "docs/codex_prompts/multi_agent/reviewer.md",
+    "docs/codex_prompts/multi_agent/notes.md"
+  ],
+  "cursor_adapters": [
+    ".cursor/rules/agentic-bayesx-core.mdc",
+    ".cursor/rules/engineering-quality-gates.mdc",
+    ".cursor/agents/lead.md",
+    ".cursor/agents/runner.md",
+    ".cursor/agents/checker.md",
+    ".cursor/agents/reader.md",
+    ".cursor/agents/reviewer.md",
+    ".cursor/agents/notes.md"
+  ],
+  "packet_files": [
+    "artifacts/reports/multi_agent_first_loop_20260602/task.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/framing.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/assumptions.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/quantity_contracts.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/commands.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/checks.json",
+    "artifacts/reports/multi_agent_first_loop_20260602/sources.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/review.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/next_prompt.md",
+    "artifacts/reports/multi_agent_first_loop_20260602/manifest.json"
+  ],
+  "commands": [
+    "bash scripts/run_fresh_2dof_statfem_fbs.sh",
+    "python3 tests/test_fresh_2dof_rerun.py",
+    "python3 tests/test_multi_agent_scaffold.py",
+    "shasum -a 256 -c harness/checkers/manifest.sha256"
+  ],
+  "checks": {
+    "scaffold": "artifacts/tests/multi_agent_scaffold_report.json",
+    "fresh_2dof": "artifacts/reports/fresh_2dof_statfem_fbs_20260601/checker_report_external.json",
+    "immutable_hashes": "terminal output from shasum command"
+  },
+  "check_status": {
+    "fresh_2dof_payload": "pass",
+    "fresh_2dof_checker": "pass",
+    "scaffold_checker": "pass",
+    "immutable_checker_hashes": "pass"
+  },
+  "key_metrics": {
+    "numeric_assumption_count": 30,
+    "channel_2_3_relative_l2": 0.6739064407171255
+  },
+  "sources": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/harness/agentic-engineering-quality-gates.md",
+    "artifacts/reports/fresh_2dof_statfem_fbs_20260601/",
+    "https://code.claude.com/docs/en/sub-agents",
+    "https://docs.cursor.com/en/context"
+  ],
+  "open_risks": [
+    "Claude Code is launched manually through the user's CC Cursor extension, not from this Codex shell.",
+    "Cursor and Claude project-agent support depends on installed extension versions.",
+    "NUTS/HMC is documented as the future default but not implemented in the current model code.",
+    "The first loop tests coordination, not a stronger structural-dynamics model."
+  ],
+  "human_stop_point": "Human review required before changing durable project rules, checker expectations, sampler code, or notes."
+}

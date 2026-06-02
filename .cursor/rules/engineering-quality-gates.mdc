@@ -1,0 +1,14 @@
+---
+description: Structural dynamics review rules for Agentic BayesX.
+alwaysApply: true
+---
+
+# Structural Dynamics Checks
+
+- State the engineering decision, objective, allowed choices, human judgment, and wrong-question trigger.
+- Write quantity contracts before plots or checkers.
+- State assumptions with values, units, sources, and sensitivity priority.
+- Check units, axes, boundary conditions, and expected resonance/notch behavior.
+- Use log frequency axes for frequency-domain plots unless the file explains why not.
+- Show clean truth, observed data, absolute error, residuals, posterior/QOI samples, sensitivity, and reference comparison when applicable.
+

@@ -1,0 +1,31 @@
+{
+  "trial_id": "multi_agent_first_loop_20260602",
+  "status": "pass",
+  "commands": [
+    {
+      "name": "fresh_2dof_payload",
+      "command": "bash scripts/run_fresh_2dof_statfem_fbs.sh",
+      "status": "pass",
+      "evidence": "Command exited 0 and printed checker pass = true. Report: artifacts/reports/fresh_2dof_statfem_fbs_20260601/fresh_2dof_statfem_packet.md"
+    },
+    {
+      "name": "fresh_2dof_checker",
+      "command": "python3 tests/test_fresh_2dof_rerun.py",
+      "status": "pass",
+      "evidence": "Command exited 0. pass = true, numeric_assumption_count = 30, channel_2_3_relative_l2 = 0.6739064407171255."
+    },
+    {
+      "name": "scaffold_checker",
+      "command": "python3 tests/test_multi_agent_scaffold.py",
+      "status": "pass",
+      "evidence": "Command exited 0. Report: artifacts/tests/multi_agent_scaffold_report.json"
+    },
+    {
+      "name": "immutable_checker_hashes",
+      "command": "shasum -a 256 -c harness/checkers/manifest.sha256",
+      "status": "pass",
+      "evidence": "Command exited 0. verify_artifacts.py, check_canary.py, test_posterior_recovery.py, and test_mdof_transfer.py all reported OK."
+    }
+  ],
+  "notes": "All planned first-loop setup checks passed on 2026-06-02. This verifies scaffold structure and existing fresh 2DOF workflow replay, not NUTS/HMC implementation."
+}

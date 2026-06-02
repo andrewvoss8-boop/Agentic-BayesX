@@ -1,0 +1,15 @@
+---
+description: Core Agentic BayesX rules for every Cursor session.
+alwaysApply: true
+---
+
+# Agentic BayesX Core
+
+- Use plain English.
+- Inspect relevant files before edits.
+- Write a short plan in `notes/todo.md` for nontrivial work.
+- Do not report success without files and checker output.
+- Do not edit immutable checker files during a trial.
+- Do not copy reference assets and present them as generated outputs.
+- Future Bayesian updating should use NUTS/HMC by default; current random-walk Metropolis outputs are prototype/legacy.
+

@@ -1,0 +1,355 @@
+{
+  "rows": [
+    {
+      "assumption": "Primary/dome mass m1",
+      "value": 1.0,
+      "units": "kg",
+      "source": "Synthetic choice",
+      "rationale": "Smaller audit-friendly model",
+      "sensitivity_priority": "Medium",
+      "where_used": "Model/QOI"
+    },
+    {
+      "assumption": "Tray mass m2",
+      "value": 0.6,
+      "units": "kg",
+      "source": "Synthetic choice",
+      "rationale": "Secondary is lighter than primary",
+      "sensitivity_priority": "Medium",
+      "where_used": "Model/QOI"
+    },
+    {
+      "assumption": "Nominal dome natural frequency",
+      "value": 110.0,
+      "units": "Hz",
+      "source": "User prompt",
+      "rationale": "Required nominal dome frequency",
+      "sensitivity_priority": "High",
+      "where_used": "Priors/reference"
+    },
+    {
+      "assumption": "Nominal tray natural frequency",
+      "value": 75.0,
+      "units": "Hz",
+      "source": "User prompt",
+      "rationale": "Required nominal tray frequency",
+      "sensitivity_priority": "High",
+      "where_used": "Priors/reference"
+    },
+    {
+      "assumption": "Nominal dome stiffness k1_nom",
+      "value": 477688.85301272495,
+      "units": "N/m",
+      "source": "Derived",
+      "rationale": "m1*(2*pi*f)^2",
+      "sensitivity_priority": "High",
+      "where_used": "Priors/model"
+    },
+    {
+      "assumption": "Nominal tray coupling stiffness k2_nom",
+      "value": 133239.65941470632,
+      "units": "N/m",
+      "source": "Derived",
+      "rationale": "m2*(2*pi*f)^2",
+      "sensitivity_priority": "High",
+      "where_used": "Priors/model"
+    },
+    {
+      "assumption": "Dome frequency model error",
+      "value": -0.15,
+      "units": "fractional frequency shift",
+      "source": "Human review",
+      "rationale": "Model-form error shifts dome frequency -15% from nominal",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "Tray frequency model error",
+      "value": 0.15,
+      "units": "fractional frequency shift",
+      "source": "Human review",
+      "rationale": "Model-form error shifts tray frequency +15% from nominal",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "Dome damping model error",
+      "value": 0.25,
+      "units": "fractional damping-ratio shift",
+      "source": "Human review",
+      "rationale": "Model-form error shifts dome damping +25% from nominal",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "Tray damping model error",
+      "value": -0.25,
+      "units": "fractional damping-ratio shift",
+      "source": "Human review",
+      "rationale": "Model-form error shifts tray damping -25% from nominal",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "True dome stiffness k1",
+      "value": 345130.19630169374,
+      "units": "N/m",
+      "source": "Derived synthetic truth",
+      "rationale": "Implements -15% dome frequency error through stiffness",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth"
+    },
+    {
+      "assumption": "True tray coupling stiffness k2",
+      "value": 176209.44957594908,
+      "units": "N/m",
+      "source": "Derived synthetic truth",
+      "rationale": "Implements +15% tray frequency error through stiffness",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth"
+    },
+    {
+      "assumption": "True dome local frequency",
+      "value": 93.49999999999999,
+      "units": "Hz",
+      "source": "Derived synthetic truth",
+      "rationale": "Computed from true k1 and m1 after -15% model-form frequency shift",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/reference"
+    },
+    {
+      "assumption": "True tray local frequency",
+      "value": 86.24999999999999,
+      "units": "Hz",
+      "source": "Derived synthetic truth",
+      "rationale": "Computed from true k2 and m2 after +15% model-form frequency shift",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/reference"
+    },
+    {
+      "assumption": "True dome damping ratio zeta1",
+      "value": 0.0225,
+      "units": "ratio",
+      "source": "Derived synthetic truth",
+      "rationale": "Implements +25% dome damping model error",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "True tray damping ratio zeta2",
+      "value": 0.0195,
+      "units": "ratio",
+      "source": "Derived synthetic truth",
+      "rationale": "Implements -25% tray damping model error",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "True dome damping c1",
+      "value": 26.436502179958104,
+      "units": "N s/m",
+      "source": "Derived synthetic truth",
+      "rationale": "Computed from true k1, m1, and zeta1",
+      "sensitivity_priority": "Medium",
+      "where_used": "Synthetic truth"
+    },
+    {
+      "assumption": "True tray damping c2",
+      "value": 12.681038746215199,
+      "units": "N s/m",
+      "source": "Derived synthetic truth",
+      "rationale": "Computed from true k2, m2, and zeta2",
+      "sensitivity_priority": "Medium",
+      "where_used": "Synthetic truth"
+    },
+    {
+      "assumption": "Observation noise scale",
+      "value": 0.08,
+      "units": "relative to local channel magnitude with floor",
+      "source": "NASA/ECSS-informed synthetic choice",
+      "rationale": "Test tolerances and FRF estimation scatter make the earlier 2.5% assumption too clean",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic data/likelihood"
+    },
+    {
+      "assumption": "Discrepancy GP scale",
+      "value": 0.2,
+      "units": "relative to local channel magnitude with floor",
+      "source": "NASA/NESC-informed synthetic choice",
+      "rationale": "Model-form and boundary-condition errors should dominate sensor noise in this toy",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic data/likelihood"
+    },
+    {
+      "assumption": "Local error floor",
+      "value": 0.2,
+      "units": "fraction of channel median magnitude",
+      "source": "Synthetic robustness choice",
+      "rationale": "Prevents noise from vanishing at reciprocal-inertance notches",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic data/likelihood"
+    },
+    {
+      "assumption": "Discrepancy GP correlation length",
+      "value": 0.16,
+      "units": "natural log frequency",
+      "source": "Harness convention",
+      "rationale": "Frequency-ratio correlation",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic data/likelihood"
+    },
+    {
+      "assumption": "Response PSD log observation scatter",
+      "value": 0.18,
+      "units": "natural log PSD",
+      "source": "ECSS/NASA-informed synthetic choice",
+      "rationale": "Represents random vibration PSD estimate/control scatter",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic data/likelihood/QOI"
+    },
+    {
+      "assumption": "Response PSD log discrepancy",
+      "value": 0.35,
+      "units": "natural log PSD",
+      "source": "NASA/NESC-informed synthetic choice",
+      "rationale": "Represents correlated model-form error in response PSD",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic data/likelihood/QOI"
+    },
+    {
+      "assumption": "Flight force amplitude",
+      "value": 1.0,
+      "units": "N/sqrt(Hz)",
+      "source": "Synthetic choice",
+      "rationale": "Sets one-sided force PSD level for a visible tray response",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/QOI"
+    },
+    {
+      "assumption": "Flight force center",
+      "value": 92.0,
+      "units": "Hz",
+      "source": "Synthetic choice",
+      "rationale": "Forcing overlaps tray/dome band",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/QOI"
+    },
+    {
+      "assumption": "Flight force bandwidth",
+      "value": 0.33,
+      "units": "natural log frequency",
+      "source": "Synthetic choice",
+      "rationale": "Broad flight-like band",
+      "sensitivity_priority": "High",
+      "where_used": "Synthetic truth/sensitivity"
+    },
+    {
+      "assumption": "Generated dataset count",
+      "value": "1 synthetic realization per measurement class",
+      "units": "categorical",
+      "source": "Implementation fact",
+      "rationale": "This trial does not simulate repeated flights or repeated tests",
+      "sensitivity_priority": "High",
+      "where_used": "Report/checker"
+    },
+    {
+      "assumption": "Flight-to-flight variability modeled",
+      "value": "No",
+      "units": "categorical",
+      "source": "Implementation fact",
+      "rationale": "Repeated-flight scatter is a missing capability and is not included in the posterior",
+      "sensitivity_priority": "High",
+      "where_used": "Limitations/human review"
+    },
+    {
+      "assumption": "QOI definition",
+      "value": "3 * GRMS of tray acceleration response PSD",
+      "units": "g",
+      "source": "NASA-STD-5002B random-vibration practice",
+      "rationale": "Peak-equivalent random vibration metric from response PSD",
+      "sensitivity_priority": "High",
+      "where_used": "QOI/report/checker"
+    },
+    {
+      "assumption": "Stiffness prior standard deviation",
+      "value": 0.18,
+      "units": "natural log stiffness ratio",
+      "source": "Synthetic inference choice",
+      "rationale": "log(k/k_nom) prior spread for k1 and k2",
+      "sensitivity_priority": "High",
+      "where_used": "Posterior"
+    },
+    {
+      "assumption": "Implied natural-frequency prior standard deviation",
+      "value": 0.09,
+      "units": "natural log frequency ratio",
+      "source": "Derived from stiffness prior",
+      "rationale": "Because natural frequency is proportional to sqrt(k), log(f/f_nom) has half the stiffness log spread",
+      "sensitivity_priority": "High",
+      "where_used": "Posterior/report"
+    },
+    {
+      "assumption": "Implied natural-frequency prior 95% factor",
+      "value": "0.838 to 1.193 before truncation",
+      "units": "frequency ratio",
+      "source": "Derived from sigma_log_frequency=0.09",
+      "rationale": "Shows the initial frequency uncertainty implied by the stiffness prior",
+      "sensitivity_priority": "High",
+      "where_used": "Posterior/report"
+    },
+    {
+      "assumption": "Damping prior standard deviation",
+      "value": 0.35,
+      "units": "natural log damping-ratio ratio",
+      "source": "Synthetic inference choice",
+      "rationale": "log(zeta/zeta_nom) prior spread for zeta1 and zeta2",
+      "sensitivity_priority": "High",
+      "where_used": "Posterior"
+    },
+    {
+      "assumption": "Damping prior 95% factor",
+      "value": "0.504 to 1.986 before truncation",
+      "units": "damping-ratio multiplier",
+      "source": "Derived from sigma_log_zeta=0.35",
+      "rationale": "Shows the initial damping uncertainty before truncation to [0.004, 0.090]",
+      "sensitivity_priority": "High",
+      "where_used": "Posterior/report"
+    },
+    {
+      "assumption": "Likelihood data usage",
+      "value": "Whole complex FRFs and whole log response PSD",
+      "units": "categorical",
+      "source": "Implementation fact",
+      "rationale": "The likelihood uses every frequency point, not only peak locations or magnitudes",
+      "sensitivity_priority": "High",
+      "where_used": "Likelihood/report/checker"
+    },
+    {
+      "assumption": "Frequency plot x-axis",
+      "value": "log",
+      "units": "categorical",
+      "source": "Harness gate",
+      "rationale": "Broadband structural dynamics default",
+      "sensitivity_priority": "High",
+      "where_used": "Plots/checker"
+    },
+    {
+      "assumption": "Magnitude scale",
+      "value": "linear",
+      "units": "categorical",
+      "source": "Harness gate",
+      "rationale": "Preserve units",
+      "sensitivity_priority": "High",
+      "where_used": "Plots/report"
+    },
+    {
+      "assumption": "Coupled assembly boundary",
+      "value": "fixed base; m1-to-base, m2-to-m1 only",
+      "units": "categorical",
+      "source": "Fresh modeling choice",
+      "rationale": "Avoid double-counting tray stiffness",
+      "sensitivity_priority": "High",
+      "where_used": "Model/contracts"
+    }
+  ]
+}
