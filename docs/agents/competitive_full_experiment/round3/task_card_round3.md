@@ -43,6 +43,15 @@ global breathing mode). Do not pretend a full dome lands there by itself.
 - Minimally constrained on STRUTS to clevises (rod-end / pin-jointed struts; statically-determinate
   style mount), NO mechanical isolators (hard strut mount). Strut stiffness + 136 kg set the
   fundamental — tune strut stiffness so tray mode 1 = 86.25 Hz.
+- SOFTEST SPRING + MOST DAMPING AT THE JOINTS: the strut-end interfaces (strut-to-tray and
+  strut-to-dome clevis / rod-end joints) are likely the softest springs in the whole system and the
+  dominant damping source (pinned/bolted joints govern both compliance and loss). Model the joint
+  compliance and joint damping there (e.g., complex/structural-damping interface stiffness or a
+  dashpot at the joint), so the tray fundamental (86.25 Hz) AND its damping (zeta_1 ~ 0.0195) are set
+  primarily by these joints rather than by the panel or dome material. State the approach.
+- Start the tray fundamental at 86.25 Hz. If hitting it forces a physically UNREALISTIC strut/joint
+  stiffness, do NOT silently fudge — flag it, report the implied stiffness, and propose the iteration
+  (the human expects to iterate the anchor if needed).
 - See attached assembly/strut images (black isogrid avionics tray on clevis-mounted struts).
 
 ### Dome (source) physical model
