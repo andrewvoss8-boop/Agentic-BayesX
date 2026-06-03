@@ -1,0 +1,496 @@
+ARTIST COPY DECK: AGENTIC BAYESX MULTI-AGENT WORKFLOW
+
+Purpose:
+This file lists every title, block, and arrow label for the multi-agent architecture infographic.
+It is meant for a professional artist/designer who will redraw the diagram with better visual tools.
+
+Core message:
+Several agents try the research task independently. Other agents review their work. One agent challenges whether the whole question is framed correctly. The human makes the final judgment.
+
+
+TITLE
+
+Agentic BayesX Multi-Agent Workflow
+
+
+SUBTITLE
+
+Several agents try the research task. Other agents check their work. One agent challenges the whole framing. The human decides what matters.
+
+
+MAIN BLOCKS
+
+Block 1: Human Lead
+
+Title:
+Human Lead
+
+Body:
+Chooses the question, approves the plan,
+judges tradeoffs, and decides what to trust.
+
+Small footer:
+Final call: keep, revise, reject, or ask a better question.
+
+Plain-English role:
+The human is not a rubber stamp. The human chooses what is worth doing, decides whether the evidence is good enough, and can redirect the whole workflow.
+
+
+Block 2: Master Agent
+
+Title:
+Master Agent: Claude Code Opus 4.8
+
+Body:
+Turns the human goal into task cards.
+Starts helper agents with clear prompts.
+Compares results and asks before changing rules.
+
+Plain-English role:
+The master agent coordinates the workflow. It does not automatically trust the runners. It gathers their results, asks for reviews, and brings decisions back to the human.
+
+
+Block 3: Experiment Runners Section
+
+Section title:
+Experiment Runners
+
+Section subtitle:
+Each runner attempts the full experiment in isolation.
+
+Plain-English role:
+These agents each try to solve the whole research task separately. We want independent attempts so differences, mistakes, and shortcuts are easier to spot.
+
+
+Block 3A: Cursor Runner
+
+Title:
+Cursor Composer 2.5
+
+Body:
+Tries one full implementation.
+Writes its own report and files.
+
+
+Block 3B: Claude Runner
+
+Title:
+Claude Code Opus 4.8
+
+Body:
+Tries one full implementation.
+May succeed, fail, or reveal gaps.
+
+
+Block 3C: Codex Runner
+
+Title:
+Codex GPT-5.5
+
+Body:
+Tries one full implementation.
+
+
+Block 4: Shared Evidence Folder
+
+Title:
+Shared Evidence Folder
+
+Body:
+Each runner writes:
+- task card and assumptions
+- code changes and commands
+- plots and generated data
+- NUTS/HMC diagnostics if claimed
+- checker output and known failures
+- a short review request
+
+Footer inside block:
+No file-backed evidence, no success claim.
+
+Plain-English role:
+This is the evidence pile. Every runner must leave files that another person or agent can inspect. Pretty claims are not enough.
+
+
+Block 5: Review And Challenge Agents Section
+
+Section title:
+Review And Challenge Agents
+
+Section subtitle:
+They read runner evidence and report back to the master.
+
+Plain-English role:
+These agents do not try to build the experiment. They read the evidence and look for problems, missing sources, bad physics, shortcuts, and better questions.
+
+
+Block 5A: Literature Reader
+
+Title:
+Literature Reader
+
+Body:
+Finds sources and says what each supports.
+
+Plain-English role:
+Checks outside sources and separates supported claims from guesses.
+
+
+Block 5B: Technical Reviewer
+
+Title:
+Technical Reviewer
+
+Body:
+Checks physics, units, plots, and assumptions.
+
+Plain-English role:
+Looks for scientific and engineering mistakes.
+
+
+Block 5C: Integrity Reviewer
+
+Title:
+Integrity Reviewer
+
+Body:
+Looks for copied outputs, hidden swaps,
+weak checks, and overclaiming.
+
+Plain-English role:
+Looks for cheating, corner cutting, unlabeled method changes, and claims that outrun the evidence.
+
+
+Block 5D: Framing Challenger
+
+Title:
+Framing Challenger
+
+Body:
+Asks if this is the right decision,
+QOI, test plan, or next question.
+
+Plain-English role:
+This agent challenges the research framing after seeing runner results. It asks whether the experiment is serving a real engineering decision and proposes better next questions.
+
+
+Optional Emphasis Block: Framing Challenger Question
+
+Text:
+Framing Challenger asks: are we solving the right problem?
+
+Use:
+This can be a central callout between the master and shared evidence folder, or it can be integrated into the Framing Challenger block on the right. If the diagram is crowded, use only the right-side Framing Challenger block and skip this extra central callout.
+
+
+Bottom Reminder
+
+Text:
+The point is not that every runner is right. The point is that mistakes become visible.
+
+
+ARROW LABELS AND MEANINGS
+
+Arrow 1: Human Lead to Master Agent
+
+Suggested label:
+approved goal and direction
+
+Meaning:
+The human gives the master the goal, constraints, and permission to proceed.
+
+Visual direction:
+Human Lead -> Master Agent
+
+
+Arrow 2: Master Agent back to Human Lead
+
+Label:
+asks for approval
+
+Meaning:
+The master returns to the human before changing plans, changing durable rules, or making major claims.
+
+Visual direction:
+Master Agent -> Human Lead
+
+Style suggestion:
+Use a curved blue loop, but keep the label outside the curve and away from both blocks.
+
+
+Arrow 3: Master Agent to Experiment Runners
+
+Label:
+master sends runner prompts
+
+Meaning:
+The master gives each runner a clear prompt, task card, and output folder.
+
+Visual direction:
+Master Agent -> Cursor Composer 2.5
+Master Agent -> Claude Code Opus 4.8
+Master Agent -> Codex GPT-5.5
+
+Style suggestion:
+Use one clean dispatch lane from the master to the runner column, then split into three short arrows. Avoid long diagonals across the page.
+
+
+Arrow 4: Master Agent to Shared Evidence Folder
+
+Label:
+task cards and expected folders
+
+Meaning:
+The master defines what files each runner should produce and where those files should go.
+
+Visual direction:
+Master Agent -> Shared Evidence Folder
+
+
+Arrow 5: Runner Agents to Shared Evidence Folder
+
+Label:
+reports and files
+
+Meaning:
+Each runner writes its own implementation, plots, diagnostics, checker output, known failures, and review request.
+
+Visual direction:
+Cursor Composer 2.5 -> Shared Evidence Folder
+Claude Code Opus 4.8 -> Shared Evidence Folder
+Codex GPT-5.5 -> Shared Evidence Folder
+
+Style suggestion:
+Use dashed arrows from each runner into the evidence folder. Keep arrowheads just outside the evidence folder edge, not on top of the text.
+
+
+Arrow 6: Shared Evidence Folder to Review And Challenge Agents
+
+Label:
+evidence for review
+
+Meaning:
+The review agents read the runner outputs rather than trusting summaries.
+
+Visual direction:
+Shared Evidence Folder -> Literature Reader
+Shared Evidence Folder -> Technical Reviewer
+Shared Evidence Folder -> Integrity Reviewer
+Shared Evidence Folder -> Framing Challenger
+
+Style suggestion:
+Use short dashed arrows from the evidence folder to the right-side review column.
+
+
+Arrow 7: Master Agent to Review And Challenge Agents
+
+Label:
+master sends review prompts
+
+Meaning:
+The master tells each review agent what to check.
+
+Visual direction:
+Master Agent -> Literature Reader
+Master Agent -> Technical Reviewer
+Master Agent -> Integrity Reviewer
+Master Agent -> Framing Challenger
+
+Style suggestion:
+Use a separate dispatch lane from the master to the right-side review column. Do not overlap this with the "evidence for review" arrows.
+
+
+Arrow 8: Review Agents back to Master Agent
+
+Label:
+findings flow back
+
+Meaning:
+The reader, technical reviewer, and integrity reviewer send their findings back to the master.
+
+Visual direction:
+Literature Reader -> Master Agent
+Technical Reviewer -> Master Agent
+Integrity Reviewer -> Master Agent
+
+Style suggestion:
+Use dashed gray return arrows routed around the outside edge of the diagram.
+
+
+Arrow 9: Framing Challenger back to Master Agent
+
+Suggested label:
+framing critique and better questions
+
+Meaning:
+The Framing Challenger reviews the runner results and asks whether this is the right decision, quantity of interest, test plan, or next experiment. It reports proposals back to the master.
+
+Visual direction:
+Framing Challenger -> Master Agent
+
+Style suggestion:
+Use a distinct color, such as warm red or orange, so this loop reads as different from normal review. Route it around the outside edge, not through the center text.
+
+
+Arrow 10: Shared Evidence Folder to Framing Challenger
+
+Suggested label:
+after runner results
+
+Meaning:
+The Framing Challenger should review the actual runner outputs before critiquing the research framing.
+
+Visual direction:
+Shared Evidence Folder -> Framing Challenger
+
+Style suggestion:
+Use the same distinct color as the Framing Challenger return arrow.
+
+
+OPTIONAL SIMPLIFIED ARROW SET
+
+If the final design gets crowded, use only these six arrow labels:
+
+1. Human -> Master:
+approved goal and direction
+
+2. Master -> Runners:
+runner prompts
+
+3. Runners -> Evidence:
+reports and files
+
+4. Evidence -> Reviewers:
+evidence for review
+
+5. Reviewers -> Master:
+findings flow back
+
+6. Master -> Human:
+asks for approval
+
+Then add one special orange loop:
+
+Framing Challenger -> Master:
+better questions and framing critique
+
+
+COLOR / STYLE SUGGESTIONS
+
+Human Lead:
+White block. Neutral and central.
+
+Master Agent:
+Light blue block. Coordinator role.
+
+Experiment Runners:
+Light yellow blocks. These are implementation attempts.
+
+Shared Evidence Folder:
+Light lavender or pale purple block. This is where files land.
+
+Review Agents:
+Light green blocks. These check and review.
+
+Framing Challenger:
+Light peach block with orange/red arrows. This agent challenges the whole premise.
+
+Normal command arrows:
+Dark blue/gray solid arrows.
+
+Evidence arrows:
+Dashed gray arrows.
+
+Approval loop:
+Blue curved arrow.
+
+Framing challenge loop:
+Orange/red dashed arrow.
+
+
+LAYOUT SUGGESTIONS TO AVOID OVERLAP
+
+Use three main columns:
+
+Left column:
+Experiment Runners
+
+Center column:
+Human Lead at top
+Master Agent below
+Shared Evidence Folder below
+
+Right column:
+Review And Challenge Agents
+
+Recommended flow:
+
+Human Lead
+down to
+Master Agent
+
+Master Agent
+out left to runners
+out right to reviewers
+down to evidence folder
+
+Runners
+into evidence folder
+
+Evidence folder
+out right to reviewers and Framing Challenger
+
+Reviewers and Framing Challenger
+back to Master Agent
+
+Master Agent
+back to Human Lead for approval
+
+
+Avoid:
+
+- arrows crossing through block titles
+- arrow labels sitting on top of block text
+- diagonal arrows that cut through the shared evidence folder
+- tiny labels placed between tightly packed blocks
+- making the Framing Challenger look like just another checker
+
+
+DESIGNER NOTE ON THE FRAMING CHALLENGER
+
+The Framing Challenger is not a normal reviewer. It is not asking "did the runner do the assigned task correctly?" It is asking "was this the right task to assign in the first place?"
+
+It should visually feel connected to the reviewers, but slightly separate or highlighted.
+
+
+SHORT VERSION FOR A CLEANER INFOGRAPHIC
+
+Title:
+Agentic BayesX Multi-Agent Workflow
+
+Subtitle:
+Independent runners try the experiment. Review agents inspect the evidence. A framing challenger asks whether the question itself should change. The human decides what matters.
+
+Blocks:
+
+Human Lead:
+Chooses the question, approves the plan, and decides what to trust.
+
+Master Agent:
+Turns the human goal into prompts, compares results, and asks before changing rules.
+
+Experiment Runners:
+Cursor Composer 2.5, Claude Code Opus 4.8, and Codex GPT-5.5 each try the full experiment in isolation.
+
+Shared Evidence Folder:
+Each runner leaves reports, commands, plots, diagnostics, checker output, known failures, and a review request.
+
+Review Agents:
+Reader checks sources. Technical reviewer checks physics. Integrity reviewer checks shortcuts and overclaiming.
+
+Framing Challenger:
+Asks whether this is the right decision, QOI, test plan, or next question.
+
+Bottom line:
+The goal is not to prove every runner right. The goal is to make mistakes visible.
+

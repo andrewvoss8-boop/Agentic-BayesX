@@ -6,6 +6,17 @@
 - [ ] Add MDOF reduced-order transfer-function prototype tests.
 - [ ] Inspect `/Users/avoss/Downloads/check pages.pdf` for incorrect crop seams; record PDF page numbers, visible textbook page numbers, assumptions, and validation artifacts.
 
+## 2026-06-03 Architecture Infographic Readability Update
+- [x] Redesign the multi-agent architecture infographic with larger blocks and non-overlapping arrows.
+- [x] Add the Framing Challenger agent and show its review output flowing back to the master.
+- [x] Update the Markdown role description.
+- [x] Validate the SVG is well-formed.
+
+## 2026-06-03 Architecture Infographic Artist Text
+- [x] Write a plain text copy deck for every block and arrow in the multi-agent architecture diagram.
+- [x] Include layout notes for the artist so arrows and labels do not cover text.
+- [x] Verify the text file exists and is readable.
+
 ## 2026-06-02 Codex GPT-5.5 Round 2 Sequential Runner
 - [x] Print and assert runner workspace path before proceeding.
 - [x] Read AGENTS/CLAUDE/CODEX, round-2 task card, setup packet, figures, and human feedback.

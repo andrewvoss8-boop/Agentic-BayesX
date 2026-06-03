@@ -233,3 +233,21 @@ driver-run checks operating on saved bytes, not self-reported JSON —
 4) key-deliverable presence + frame-distinctness + "not equal to the spec curve" authenticity check;
 5) mechanical workspace-isolation guard (sentinel / refuse-if-origin-remote + snapshot-hash round-1 &
    notes). Also: cut/fix/wire the two never-executed unit tests (or stop implying they gate anything).
+
+### Round-3 workspace + deliverable conventions (CONFIRMED with human)
+- Each runner gets ONE self-contained workspace: `runs/round3/<tool>/` (not under artifacts/reports,
+  because not every file is a report). Layout:
+  - `runs/round3/<tool>/code/`   (model / pipeline / runner-local checker scripts)
+  - `runs/round3/<tool>/tests/`
+  - `runs/round3/<tool>/report/` (packet.md, figures/, *.json — the human-review artifacts)
+  - `runs/round3/<tool>/runtime.json, files_changed.md, priority_deliverables.md`
+  - `runs/round3/<tool>/.venv/` (gitignored)
+- Isolation = INSTRUCTION ONLY, no permissions/chmod/sandbox (overkill). Tell each runner: "Your entire
+  workspace is runs/round3/<tool>/; put everything you create there; read shared inputs (the setup
+  dataset, src/, immutable checkers) read-only; write nothing outside your workspace." Lead still
+  commits a clean checkpoint before launch and snapshot-hashes outside-workspace files to DETECT leaks.
+- PPT DELIVERABLE (new this round): each runner produces `report/packet.pptx` for review, built by a
+  shared `runs/round3/make_pptx.py` (python-pptx) from the run's own figures + key numbers. Markdown
+  packet.md remains the source of truth; pptx is the review layer. GIF won't animate in pptx — embed
+  the final PSD-vs-spec PNG + a few key frames (or link the .gif), don't rely on animation.
+- Prior rounds stay under artifacts/reports/ (no history churn); this convention applies round 3 forward.

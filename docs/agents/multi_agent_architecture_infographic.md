@@ -12,7 +12,7 @@ Infographic:
 - **Literature reader:** finds useful sources and explains what each source supports.
 - **Technical reviewer:** checks physics, assumptions, units, plots, and whether the evidence matches the claim.
 - **Integrity reviewer:** looks for copied outputs, hidden method changes, weak checks, and overconfident claims.
+- **Framing challenger:** reviews runner results and asks whether the whole experiment is serving the right engineering decision. It proposes better questions, stronger QOIs, and higher-value next experiments, then reports back to the master.
 - **Shared evidence folder:** where each runner leaves reports, commands, plots, diagnostics, checker output, and known failures.
 
 The aim is not for every runner to be right. The aim is to make mistakes visible so the harness can improve.
-
