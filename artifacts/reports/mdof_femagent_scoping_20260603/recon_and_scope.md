@@ -67,3 +67,34 @@ impossible, the human will build the component models himself. Decision/cost mod
 - FEM/modal results MUST be checked against an analytical benchmark before acceptance (cantilever
   betaL natural frequencies; lumped MDOF eigenvalues). vibrationdata/Irvine MDOF examples are an
   accepted project reference. An LLM-built FEM that is "plausible but unvalidated" is not acceptable.
+
+## SPIKE RESULT (2026-06-03): GO — two validated differentiable paths
+Committed under runs/round3/spike/. Honest verdict from the feasibility agent:
+- PATH A (recommended default): JAX Euler-Bernoulli beam. Benchmark error < 0.0011%, drive-point FRF
+  antiresonance interlacing 4/4, ~0.33 ms/gradient, native to the project's JAX/numpyro NUTS stack.
+- PATH B (GO, for continuum geometry): TensorMesh continuum FEM (installs on Python 3.13; P2 quadratic
+  elements cure P1 shear-locking -> mode-1 error -0.026% vs EB). Caveats: dense eigen scales poorly
+  (P2 @4561 nodes = 154 s; production NUTS needs sparse eigsh), and from_mesh(E=...) detaches the
+  material gradient -> FIX: assemble unit K and scale by (E, rho) tensors (matches closed-form to 9e-7);
+  geometry gradients are native. Continuum only (Line/Tri/Quad/Tet/Hex) -- a "beam" must be a slender
+  2D/3D continuum (no EB beam / C1 shell elements).
+- CAVEAT carried forward: only SINGLE simple components validated; the two-component MDOF +
+  single-interface coupling + netCG QOI chain is scoped but NOT yet built or checker-backed.
+- Round-3 method policy: DEFAULT to Path A (JAX EB / modal-superposition MDOF) for speed +
+  NUTS-compatibility; ALLOW Path B (TensorMesh, P2 + E/rho-factoring + sparse eigsh) when a runner
+  justifies that continuum/native-shape-gradient geometry is needed. Either way: validate against an
+  analytical benchmark and show drive-point antiresonance interlacing before acceptance.
+
+## FEM VISUALIZATION + EXPORT requirement (NEW, human-requested, round 3)
+Every runner that builds an FEM/MDOF model must make the mesh INSPECTABLE by the human, via ALL of:
+1. A human-readable "card": report/mesh/nodes.csv (node_id, x, y, z) + report/mesh/elements.csv
+   (elem_id, type, connectivity node_ids). The simplest thing the human can eyeball / pull into tools.
+2. A Femap-importable model: report/mesh/model.bdf -- NASTRAN bulk data (GRID + element cards), written
+   via `meshio` (or directly). Femap reads NASTRAN bulk data (.bdf/.nas) and Femap neutral (.neu).
+3. A general mesh file for Blender/ParaView: report/mesh/model.vtu (VTK) and/or a surface .obj/.stl,
+   via `meshio` (one library converts NASTRAN <-> VTK <-> gmsh .msh <-> Abaqus .inp <-> STL/OBJ).
+4. Rendered figures in report/figures/: the undeformed mesh AND the first ~3-5 mode shapes (deformed),
+   via pyvista or matplotlib; embed key ones in the PPT.
+Recommendation: standardize on `meshio` for (2)+(3) so one export covers Femap + Blender/ParaView, plus
+the CSV card (1) and rendered PNGs (4). The runner states units and the coordinate frame. This lets the
+human pull any AI-generated mesh into Femap on the other machine or into Blender, and audit it visually.
