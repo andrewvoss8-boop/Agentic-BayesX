@@ -163,3 +163,73 @@ than fn/damping.
     it and Matern ell; sensor-noise/build scales remain assumptions to learn or sweep.
 12. Mechanical isolation guard + figure content-hash manifest (anti-copy) + shared non-self-authored
     convergence checker (from the checker audit).
+
+---
+
+## ADDENDUM 2026-06-03 — exceedance reconciliation, Opus QOI gap, runtime, checker audit
+
+### Narrow-band exceedance: reconciliation + the KEY engineering insight
+Per-flight numbers (interface response PSD vs the input vibe spec):
+- Opus: only FLIGHT 3 exceeds (frac_99hi_exceeds_spec = 0.0118 ≈ 1.2% of freqs near 62 Hz); other 10
+  flights 0.0.
+- Codex: q99.5 never crosses; worst max_q99.5/spec ratio = 0.93 at 62.4 Hz (~0.6 dB under).
+- Cursor: showed it VISUALLY in the GIF but did not quantify (no envelope metric in results.json).
+All three are the SAME physical story: the worst-case interface response sits RIGHT AT the spec near
+the ~62 Hz coupled mode; whether a given run/flight tips over the line is a draw + band-definition
+coin-flip. The human's read is correct: results are close; Opus just tipped over on one flight. This is
+NOT a runner discrepancy to litigate — it is the finding.
+
+KEY INSIGHT (human, endorsed — a target result for the problem class): the overall tray 3·GRMS response
+(~1 g) is ~44x BELOW the vibe-test level (43.9 g), yet there is a moderate chance of a narrow-band 99%
+exceedance at the coupled resonance. So a hugely conservative SCALAR margin can coexist with the tray
+being UNDER-qualified in a narrow band. An aerospace org would flag the narrow-band exceedance as a
+major risk and ignore the 44x scalar comfort. This is exactly why the PSD-envelope (not the scalar) is
+the acceptance check, and it is the spirit of NASA-HDBK-7004 force-limited vibration (spectral truth vs
+scalar comfort; resonance-band behavior is what matters). Round 3+ should deliberately design the study
+to surface and quantify this (probability of narrow-band exceedance vs scalar margin; tie to force
+limiting / notching). This is the most valuable engineering point to emerge so far — make it a headline
+objective, not a footnote.
+
+### Opus tray-3·GRMS interval: what happened (you asked)
+It WAS requested (competitive prompt: "95% and 99% ... tray 3*RMS/3*GRMS QOI intervals after flights";
+round-2 deliverable P3). Opus DID produce the per-flight tray-3·GRMS-vs-vibe FIGURE
+(flight_qoi_vs_vibe_reference.png) and its priority_deliverables.md shows it understood the ask. What it
+did NOT do: expose tray 3·GRMS as a NUMERIC 95/99 credible interval in results.json (Codex and Cursor
+both did). Cause: Opus deliberately elevated the PSD-envelope as PRIMARY and demoted the scalar to a
+"summary only" figure (per its own priority_deliverables), so it put its 95/99 numeric rigor into the
+interface-PSD bands instead of the scalar. So this is a JUDGMENT/prioritization gap, NOT a round-1-style
+comprehension miss — Opus produced the figure and reasoned about the quantity, it just didn't also dump
+the scalar CI. Fix is trivial (also emit the tray 3·GRMS 95/99 array). Still: the harness should make
+"every requested QOI exposed as a numeric interval" an explicit, checked deliverable so prioritization
+can't silently drop a requested number.
+
+### Runtime self-report (low-pain fix)
+All three ALREADY self-report active_runtime_s (Opus 1268, Codex 294, Cursor 223) — so Cursor/Claude
+Code can report like Codex; they do. Codex's number is clean because it timed its WHOLE producing
+script start→end in one process (perf_counter), which naturally excludes human-permission waits (those
+happen between commands). The only fixes needed, both cheap:
+1. Each runner wraps its ENTIRE producing run in one start/end wall timer and reports that as the
+   comparable number (script_wall_s), alongside the per-stage active sum.
+2. Time the FULL pipeline that produces the deliverables — NOT a post-hoc replay that skips stages
+   (Cursor's 223 s skipped the GIF build; that's the only real error).
+Do NOT chase the full agent-session wall (the 28:06 the human saw for Codex includes agent reasoning +
+permission waits); it is not worth the complexity. Standardize on script_wall_s + active_compute_s.
+
+### Checker audit — bottom line (checker_audit.md)
+Confirms and sharpens the concern. What is TRUSTED today: only (a) the 4-file immutable hash gate and
+(b) named-file existence. Everything substantive (convergence, figure authenticity, no-copied-assets,
+runtime honesty, isolation) is SELF-GRADED by runner-authored code. The two hash-locked unit tests
+(test_posterior_recovery, test_mdof_transfer) are NEVER EXECUTED by the harness (no config runs them)
+and test the LEGACY Metropolis sampler with loose tolerances (0.35 / 0.45). Of five cheat/error modes,
+four are uncaught by any trusted control and THREE actually occurred in round 2 (Cursor copied figs;
+Cursor runtime understated; Codex ran in master + edited round-1/shared files). Even the best
+self-checker (Opus's) has a loophole: its convergence gate sits behind `if converged:`, and the `else`
+branch records "honest_not_converged_reported = True" → a NON-converged run still returns all_pass.
+Recommended (proposal, needs approval; checker change so between-trials only): five SHARED, hash-locked,
+driver-run checks operating on saved bytes, not self-reported JSON —
+1) recompute convergence (arviz rhat/ess) over ALL vars from posterior_samples.npz;
+2) figure content-hash manifest that FAILS on cross-run byte-identical images unless declared a copy;
+3) external wall-clock wrapper (driver holds the clock);
+4) key-deliverable presence + frame-distinctness + "not equal to the spec curve" authenticity check;
+5) mechanical workspace-isolation guard (sentinel / refuse-if-origin-remote + snapshot-hash round-1 &
+   notes). Also: cut/fix/wire the two never-executed unit tests (or stop implying they gate anything).
