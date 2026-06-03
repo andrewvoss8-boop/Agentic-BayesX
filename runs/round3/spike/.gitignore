@@ -1,0 +1,5 @@
+# Disposable spike virtualenvs (large; reproducible from commands.md)
+.venv_tm313/
+.venv_spike/
+.gmsh_cache/
+__pycache__/
