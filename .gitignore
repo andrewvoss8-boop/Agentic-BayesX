@@ -9,3 +9,4 @@ artifacts/.matplotlib/
 .venv/
 .venv*/
 
+artifacts/reports/context_compaction_lit_review_20260604/raw/
