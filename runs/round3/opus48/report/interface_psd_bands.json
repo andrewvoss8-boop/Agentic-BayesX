@@ -1,0 +1,189 @@
+[
+  {
+    "flight_id": 0,
+    "build_id": 0,
+    "iface_peak_mean_psd_g2_per_hz": 0.00755232403924149,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 1.112684178083972,
+    "netcg_3grms_g_95ci": [
+      0.7620452921962283,
+      1.6301862145521473
+    ],
+    "netcg_3grms_g_99ci": [
+      0.6959915555228752,
+      1.8222066559874437
+    ]
+  },
+  {
+    "flight_id": 1,
+    "build_id": 1,
+    "iface_peak_mean_psd_g2_per_hz": 0.004083435393152381,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 0.7963991442473122,
+    "netcg_3grms_g_95ci": [
+      0.5198206093712406,
+      1.2331886778420245
+    ],
+    "netcg_3grms_g_99ci": [
+      0.466933562050799,
+      1.3853315322410185
+    ]
+  },
+  {
+    "flight_id": 2,
+    "build_id": 2,
+    "iface_peak_mean_psd_g2_per_hz": 0.004182023870914615,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 0.803111488852922,
+    "netcg_3grms_g_95ci": [
+      0.5119066971574637,
+      1.3016557175750216
+    ],
+    "netcg_3grms_g_99ci": [
+      0.45567655892828296,
+      1.437424108648278
+    ]
+  },
+  {
+    "flight_id": 3,
+    "build_id": 3,
+    "iface_peak_mean_psd_g2_per_hz": 0.010727850340312112,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.012718600953895072,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 1.2658755261772838,
+    "netcg_3grms_g_95ci": [
+      0.8462708695960187,
+      2.0524658561496465
+    ],
+    "netcg_3grms_g_99ci": [
+      0.7633221322738122,
+      2.4134134000330847
+    ]
+  },
+  {
+    "flight_id": 4,
+    "build_id": 4,
+    "iface_peak_mean_psd_g2_per_hz": 0.006232351708979046,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 0.9517520364094657,
+    "netcg_3grms_g_95ci": [
+      0.6408686968547576,
+      1.5196731056881831
+    ],
+    "netcg_3grms_g_99ci": [
+      0.5988878387275146,
+      1.7721453226011585
+    ]
+  },
+  {
+    "flight_id": 5,
+    "build_id": 5,
+    "iface_peak_mean_psd_g2_per_hz": 0.008380438568534149,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 1.0854242954028548,
+    "netcg_3grms_g_95ci": [
+      0.7658153799007126,
+      1.6993163145343881
+    ],
+    "netcg_3grms_g_99ci": [
+      0.6070707179598454,
+      1.8915542034463104
+    ]
+  },
+  {
+    "flight_id": 6,
+    "build_id": 6,
+    "iface_peak_mean_psd_g2_per_hz": 0.0036710241192963265,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 0.748079737708536,
+    "netcg_3grms_g_95ci": [
+      0.5065549512649496,
+      1.1416406582693217
+    ],
+    "netcg_3grms_g_99ci": [
+      0.42290244233806423,
+      1.2462220140222366
+    ]
+  },
+  {
+    "flight_id": 7,
+    "build_id": 7,
+    "iface_peak_mean_psd_g2_per_hz": 0.007640537571074733,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 1.0700661842741908,
+    "netcg_3grms_g_95ci": [
+      0.7020595745110226,
+      1.7182572022663958
+    ],
+    "netcg_3grms_g_99ci": [
+      0.5972847959759204,
+      2.078887387419844
+    ]
+  },
+  {
+    "flight_id": 8,
+    "build_id": 8,
+    "iface_peak_mean_psd_g2_per_hz": 0.003437506569513175,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 0.7142711958902657,
+    "netcg_3grms_g_95ci": [
+      0.44261319634318536,
+      1.122800662375538
+    ],
+    "netcg_3grms_g_99ci": [
+      0.39517171619578917,
+      1.3795788736823638
+    ]
+  },
+  {
+    "flight_id": 9,
+    "build_id": 9,
+    "iface_peak_mean_psd_g2_per_hz": 0.004923149407191533,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 0.8687204224527649,
+    "netcg_3grms_g_95ci": [
+      0.5660063789091726,
+      1.400148495831271
+    ],
+    "netcg_3grms_g_99ci": [
+      0.49845368206317336,
+      1.6159290349506485
+    ]
+  },
+  {
+    "flight_id": 10,
+    "build_id": 10,
+    "iface_peak_mean_psd_g2_per_hz": 0.007228042100032793,
+    "iface_peak_freq_hz": 122.368,
+    "iface_frac_99hi_exceeds_spec": 0.0,
+    "iface_frac_95hi_exceeds_spec": 0.0,
+    "netcg_3grms_g_q50": 1.0353183604695593,
+    "netcg_3grms_g_95ci": [
+      0.6705599864918275,
+      1.690903462792026
+    ],
+    "netcg_3grms_g_99ci": [
+      0.5926425387771693,
+      1.8593325183442713
+    ]
+  }
+]

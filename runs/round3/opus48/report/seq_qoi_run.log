@@ -1,0 +1,13 @@
+N=0 kj median 2.254e+07
+N=1 kj median 1.862e+07
+N=2 kj median 1.819e+07
+N=3 kj median 1.841e+07
+N=4 kj median 1.814e+07
+N=5 kj median 1.826e+07
+N=6 kj median 1.834e+07
+N=7 kj median 1.837e+07
+N=8 kj median 1.825e+07
+wrote /Users/avoss/Downloads/bayesX/Agentic BayesX/runs/round3/opus48/report/figures/seq_netcg_prior_data_posterior.gif
+wrote /Users/avoss/Downloads/bayesX/Agentic BayesX/runs/round3/opus48/report/figures/seq_iface_prior_data_posterior.gif
+wrote frf_truth_bu_buplusd.png  (kj_hat 1.825e+07)
+DONE sequential QOI in 256.1 s

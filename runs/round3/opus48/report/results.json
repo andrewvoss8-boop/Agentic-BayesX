@@ -1,0 +1,289 @@
+{
+  "qoi_netCG_3grms_g": {
+    "definition": "3*sqrt(integral PSD_Fiface/m_load^2 df); m_load=tray total (136 kg avionics + isogrid panel)",
+    "m_load_phys_kg": 141.9535,
+    "overall_q50": 0.9379483601715932,
+    "overall_95ci": [
+      0.5333650016909646,
+      1.6711237734300775
+    ],
+    "overall_99ci": [
+      0.45654364816652515,
+      1.948207669073101
+    ],
+    "per_flight": [
+      {
+        "flight_id": 0,
+        "q50": 1.112684178083972,
+        "ci95": [
+          0.7620452921962283,
+          1.6301862145521473
+        ],
+        "ci99": [
+          0.6959915555228752,
+          1.8222066559874437
+        ]
+      },
+      {
+        "flight_id": 1,
+        "q50": 0.7963991442473122,
+        "ci95": [
+          0.5198206093712406,
+          1.2331886778420245
+        ],
+        "ci99": [
+          0.466933562050799,
+          1.3853315322410185
+        ]
+      },
+      {
+        "flight_id": 2,
+        "q50": 0.803111488852922,
+        "ci95": [
+          0.5119066971574637,
+          1.3016557175750216
+        ],
+        "ci99": [
+          0.45567655892828296,
+          1.437424108648278
+        ]
+      },
+      {
+        "flight_id": 3,
+        "q50": 1.2658755261772838,
+        "ci95": [
+          0.8462708695960187,
+          2.0524658561496465
+        ],
+        "ci99": [
+          0.7633221322738122,
+          2.4134134000330847
+        ]
+      },
+      {
+        "flight_id": 4,
+        "q50": 0.9517520364094657,
+        "ci95": [
+          0.6408686968547576,
+          1.5196731056881831
+        ],
+        "ci99": [
+          0.5988878387275146,
+          1.7721453226011585
+        ]
+      },
+      {
+        "flight_id": 5,
+        "q50": 1.0854242954028548,
+        "ci95": [
+          0.7658153799007126,
+          1.6993163145343881
+        ],
+        "ci99": [
+          0.6070707179598454,
+          1.8915542034463104
+        ]
+      },
+      {
+        "flight_id": 6,
+        "q50": 0.748079737708536,
+        "ci95": [
+          0.5065549512649496,
+          1.1416406582693217
+        ],
+        "ci99": [
+          0.42290244233806423,
+          1.2462220140222366
+        ]
+      },
+      {
+        "flight_id": 7,
+        "q50": 1.0700661842741908,
+        "ci95": [
+          0.7020595745110226,
+          1.7182572022663958
+        ],
+        "ci99": [
+          0.5972847959759204,
+          2.078887387419844
+        ]
+      },
+      {
+        "flight_id": 8,
+        "q50": 0.7142711958902657,
+        "ci95": [
+          0.44261319634318536,
+          1.122800662375538
+        ],
+        "ci99": [
+          0.39517171619578917,
+          1.3795788736823638
+        ]
+      },
+      {
+        "flight_id": 9,
+        "q50": 0.8687204224527649,
+        "ci95": [
+          0.5660063789091726,
+          1.400148495831271
+        ],
+        "ci99": [
+          0.49845368206317336,
+          1.6159290349506485
+        ]
+      },
+      {
+        "flight_id": 10,
+        "q50": 1.0353183604695593,
+        "ci95": [
+          0.6705599864918275,
+          1.690903462792026
+        ],
+        "ci99": [
+          0.5926425387771693,
+          1.8593325183442713
+        ]
+      }
+    ]
+  },
+  "headline_narrowband_exceedance": {
+    "worst_flight": 3,
+    "worst_flight_frac_99hi_exceeds_spec": 0.012718600953895072,
+    "worst_flight_frac_95hi_exceeds_spec": 0.0,
+    "band_definition": "central 99% = q0.5..q99.5; one-sided 99%-hi exceedance fraction per flight",
+    "note": "A large overall scalar margin can coexist with a narrow-band 99% exceedance at a coupled resonance."
+  },
+  "anchors": {
+    "dome_mode1_hz": 93.5,
+    "tray_mode1_hz": 86.25
+  },
+  "forcing_reverse_engineered": {
+    "process": "flat ORIGINAL (+6 dB initial) force PSD chosen so the DOME-ONLY interface response peaks at 0.1 g^2/Hz at the bounce mode; flight mean = -6 dB design envelope",
+    "dome_bounce_eff_mass_kg": 225.16815002906557,
+    "dome_cap_mass_kg": 562.9203750726639,
+    "dome_bounce_participation": 0.4,
+    "force_orig_plus6dB_n2hz": 987.0545137599802,
+    "force_flight_minus6dB_n2hz": 247.93688402739804,
+    "dome_resp_target_g2hz": 0.1,
+    "dome_resp_peak_freq_hz": 93.57108835970644,
+    "m_load_phys_kg": 141.9535,
+    "note": "DEVIATION from round-2 abstract scaling (per human direction): forcing and masses are now PHYSICAL; netCG is physically scaled (no longer abstract milli-g)."
+  },
+  "converged": true,
+  "nuts_active": true,
+  "resolution": {
+    "grid_global_points": 260,
+    "grid_refined_points": 629,
+    "reference_points": 60000,
+    "global_min_dlog_freq": 0.017780579868678537,
+    "interface_3grms_coarse_g": 1.5825615394348294,
+    "interface_3grms_refined_g": 1.5822739687171414,
+    "interface_3grms_reference_g": 1.5821576856551385,
+    "interface_3grms_coarse_err_vs_ref": 0.0002552550756176048,
+    "interface_3grms_refined_err_vs_ref": 7.349650610508063e-05,
+    "peak62_coarse_clip_frac": 0.004022052648398372,
+    "peak62_refined_clip_frac": 0.004022052648398372,
+    "rationale": "refined grid adds mode-local clusters whose width scales with each mode's half-power bandwidth (~2*zeta*fn); no hard-coded lines-per-band. QOI integral is robust; coarse grid clips the narrow 62 Hz peak tip (reported)."
+  },
+  "sensitivity": {
+    "offset_sweep": [
+      {
+        "offset_db": -9.0,
+        "netcg_3grms_q50": 0.6845265240506379,
+        "netcg_3grms_95ci": [
+          0.4976864100739797,
+          1.0472699194901476
+        ]
+      },
+      {
+        "offset_db": -6.0,
+        "netcg_3grms_q50": 0.9660951935401814,
+        "netcg_3grms_95ci": [
+          0.669303601108301,
+          1.3839363850056794
+        ]
+      },
+      {
+        "offset_db": -3.0,
+        "netcg_3grms_q50": 1.3630770533385843,
+        "netcg_3grms_95ci": [
+          0.9927894182225757,
+          2.230927589419546
+        ]
+      },
+      {
+        "offset_db": 0.0,
+        "netcg_3grms_q50": 1.957971776846453,
+        "netcg_3grms_95ci": [
+          1.3501825358498392,
+          2.824451350239341
+        ]
+      }
+    ],
+    "ell_sweep": [
+      {
+        "matern_ell": 0.04,
+        "netcg_3grms_q50": 0.9869594009263083,
+        "netcg_3grms_95ci": [
+          0.7526198822845992,
+          1.4513554290029906
+        ]
+      },
+      {
+        "matern_ell": 0.08,
+        "netcg_3grms_q50": 0.9875439121526708,
+        "netcg_3grms_95ci": [
+          0.7068469267308398,
+          1.4961287114614736
+        ]
+      },
+      {
+        "matern_ell": 0.16,
+        "netcg_3grms_q50": 0.9729541204297492,
+        "netcg_3grms_95ci": [
+          0.6855130085426145,
+          1.473520166068559
+        ]
+      }
+    ],
+    "dome_mass_sweep": [
+      {
+        "bounce_particip": 0.25,
+        "dome_eff_mass_kg": 140.73009376816597,
+        "rederived_orig_force_n2hz": 385.5681694374923,
+        "netcg_3grms_q50": 0.7592543014774837,
+        "netcg_3grms_95ci": [
+          0.5429923676573549,
+          1.0823196960517387
+        ]
+      },
+      {
+        "bounce_particip": 0.4,
+        "dome_eff_mass_kg": 225.16815002906557,
+        "rederived_orig_force_n2hz": 987.0545137599802,
+        "netcg_3grms_q50": 0.9700516442961962,
+        "netcg_3grms_95ci": [
+          0.6923815746419283,
+          1.4013844986625699
+        ]
+      },
+      {
+        "bounce_particip": 0.55,
+        "dome_eff_mass_kg": 309.60620628996514,
+        "rederived_orig_force_n2hz": 1866.1499400774621,
+        "netcg_3grms_q50": 1.1521687995391083,
+        "netcg_3grms_95ci": [
+          0.8633145828197283,
+          1.8701105572204917
+        ]
+      }
+    ],
+    "note": "offset sweep is relative to the RE-DERIVED +6 dB original force; dome-mass sweep re-derives the force at each mass so the dome interface response stays pinned at 0.1 g^2/Hz at the bounce mode."
+  },
+  "peak_feature_comparison": {
+    "whole_psd_tray_fn_hz_median": 86.14547666483277,
+    "peak_only_tray_fn_hz_estimate": 85.94777314659213,
+    "diff_hz": 0.19770351824064392,
+    "note": "WHOLE-PSD/FRF likelihood is the default (uses all 260 bins + 3 FRF curves + 11 flights). Peak-only feature (argmax of vibe PSD) is a LABELED comparison; it recovers a similar tray fundamental but discards band shape, damping identifiability, and off-peak fit."
+  }
+}

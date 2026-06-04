@@ -1,0 +1,17 @@
+{
+  "with_discrepancy": {
+    "rank_split_rhat": 1.0000168479406693,
+    "ess_bulk": 4184.122957130677,
+    "ess_tail": 4390.364497367904,
+    "divergences": 0,
+    "converged": true
+  },
+  "without_discrepancy": {
+    "rank_split_rhat": 1.0026156658295682,
+    "ess_bulk": 2017.1493774491746,
+    "ess_tail": 1887.439535410183,
+    "divergences": 0,
+    "converged": true
+  },
+  "note": "1 learned parameter (log_kj); GP discrepancy marginalized. R-hat/ESS over log_kj."
+}

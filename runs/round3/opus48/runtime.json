@@ -1,0 +1,24 @@
+{
+  "active_runtime_s": 247.2,
+  "elapsed_wallclock_s": 265.0,
+  "note": "active_runtime_s = sum of per-command execution time for the FINAL PRODUCING chain (no replay that skips expensive stages). Cross-runner comparison uses active_runtime_s. The expensive NUTS+prediction pipeline runs in full each time. active_runtime_s <= elapsed_wallclock_s. Final pipeline reflects the PHYSICAL reverse-engineered forcing (human-directed deviation from round-2 abstract scaling).",
+  "producing_chain_s": {
+    "run_pipeline_full_NUTS_and_prediction": 214.8,
+    "validate_fem": 17.65,
+    "fem_export_mesh_and_modeshapes": 1.23,
+    "make_pptx": 0.26,
+    "mdof_forward_selftest": 13.3
+  },
+  "pipeline_internal_stages_s": {
+    "forcing_precompute_s": 1.06,
+    "nuts_fit_s": 5.4,
+    "prediction_and_plots_s": 70.0,
+    "script_wall_s": 214.8
+  },
+  "exploratory_not_counted_in_active": {
+    "smoke_tests_R3_SMOKE": 173.0,
+    "superseded_runs_abstract_force_and_flat_residues": 408.0,
+    "pip_install_local_libs_one_time": 12.0
+  },
+  "machine": "macOS; .venv_nuts (jax 0.4.30 CPU, 4 host devices); local meshio+python-pptx in .pylibs"
+}

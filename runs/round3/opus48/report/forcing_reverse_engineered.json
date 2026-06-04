@@ -1,0 +1,11 @@
+{
+  "m1_phys": 225.16815002906557,
+  "m_load_phys": 141.9535,
+  "dome_cap_mass_kg": 562.9203750726639,
+  "dome_cap_area_m2": 33.0352332789122,
+  "dome_bounce_particip": 0.4,
+  "force_orig_n2hz": 987.0545137599802,
+  "force_flight_n2hz": 247.93688402739804,
+  "dome_resp_peak_freq_hz": 93.57108835970644,
+  "dome_resp_target_g2hz": 0.1
+}

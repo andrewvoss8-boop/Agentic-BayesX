@@ -1,0 +1,4 @@
+KJ_TRUE=4.169e+07 N/m  guess=5.211e+07  m_load=142.0 kg  dome eff mass=225 kg
+WITH d:    kj q50 4.146e+07  (truth 4.169e+07)  rhat 1.0000 ess 4184 div 0
+WITHOUT d: kj q50 4.222e+07  rhat 1.0026
+DONE statfem_kj in 85.5 s; netCG q50 0.971 g

@@ -1,0 +1,11 @@
+KJ_TRUE 1.816e+07  guess 2.270e+07  axial mode idx 2
+N=1 kj q50 1.733e+07 bias -4.56% sd 1.96e+04 cov False rhat 1.000 ess 3714
+N=2 kj q50 1.796e+07 bias -1.10% sd 2.03e+04 cov False rhat 1.001 ess 3558
+N=3 kj q50 1.780e+07 bias -1.97% sd 1.22e+04 cov False rhat 1.002 ess 3813
+N=4 kj q50 1.765e+07 bias -2.78% sd 9.43e+03 cov False rhat 1.001 ess 3647
+N=5 kj q50 1.756e+07 bias -3.29% sd 8.26e+03 cov False rhat 1.000 ess 3675
+N=6 kj q50 1.765e+07 bias -2.78% sd 7.47e+03 cov False rhat 1.000 ess 3321
+N=7 kj q50 1.774e+07 bias -2.32% sd 7.23e+03 cov False rhat 1.000 ess 3704
+N=8 kj q50 1.774e+07 bias -2.28% sd 7.09e+03 cov False rhat 1.000 ess 3882
+wrote /Users/avoss/Downloads/bayesX/Agentic BayesX/runs/round3/opus48/report/figures/hexapod_sequential_learning.gif with 8 frames
+DONE statfem_hexapod in 603.9 s

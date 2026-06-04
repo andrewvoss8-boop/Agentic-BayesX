@@ -1,0 +1,60 @@
+{
+  "learned": [
+    "k_j_pop (population mean)",
+    "sigma_build (aleatory build-to-build scatter)"
+  ],
+  "true_sigma_build": 0.04,
+  "true_kj": 18156365.96084156,
+  "sequential": [
+    {
+      "N": 2,
+      "sigma_build_q50": 0.08036201235436138,
+      "sigma_build_q025": 0.03114393452679602,
+      "sigma_build_q975": 0.21007210326528453,
+      "kj_pop_q50": 18190906.31640508,
+      "kj_pop_bias_pct": 0.19023826484890052,
+      "rhat_sigma": 0.9999928526975056,
+      "ess_sigma": 2362.486640113065,
+      "rhat_kj": 1.0016379589414461,
+      "div": 0
+    },
+    {
+      "N": 4,
+      "sigma_build_q50": 0.05447236781983882,
+      "sigma_build_q025": 0.026107662013007477,
+      "sigma_build_q975": 0.14202682619357876,
+      "kj_pop_q50": 17818984.518791378,
+      "kj_pop_bias_pct": -1.8581991725537101,
+      "rhat_sigma": 1.0029692081852084,
+      "ess_sigma": 1798.2261415726505,
+      "rhat_kj": 1.0033247849195046,
+      "div": 10
+    },
+    {
+      "N": 6,
+      "sigma_build_q50": 0.048041568642523035,
+      "sigma_build_q025": 0.026947302660677602,
+      "sigma_build_q975": 0.10567127755493404,
+      "kj_pop_q50": 17780569.64378046,
+      "kj_pop_bias_pct": -2.069777167256887,
+      "rhat_sigma": 1.0006811319072428,
+      "ess_sigma": 1501.9932527369347,
+      "rhat_kj": 1.0016229354648172,
+      "div": 1
+    },
+    {
+      "N": 8,
+      "sigma_build_q50": 0.04235493027830003,
+      "sigma_build_q025": 0.026164370582712163,
+      "sigma_build_q975": 0.08327966414365962,
+      "kj_pop_q50": 17908177.18168028,
+      "kj_pop_bias_pct": -1.366951843207805,
+      "rhat_sigma": 1.0007544869963212,
+      "ess_sigma": 1314.076715091083,
+      "rhat_kj": 1.0031576407311715,
+      "div": 0
+    }
+  ],
+  "runtime_s": 3063.2,
+  "headline": "sigma_build (a variance) is learned: its posterior CONTRACTS build-by-build (epistemic uncertainty ABOUT the aleatory scatter shrinks ~1/sqrt(2N)); this is the decision-relevant predict-a-new-build margin and shows genuine sequential learning."
+}

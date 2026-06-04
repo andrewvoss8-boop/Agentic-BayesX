@@ -1,0 +1,24 @@
+{
+  "k_j_per_strut_n_per_m": 18156365.96084156,
+  "m_tray_kg": 142.0,
+  "mount_modes_symmetric_hz": [
+    47.175497893893365,
+    47.17549789389341,
+    86.24999999999996,
+    105.63424515752453,
+    136.56277925948743,
+    136.56277925948748
+  ],
+  "mount_modes_spatial_error_hz": [
+    45.375251394121335,
+    47.93888023810509,
+    85.15337325420798,
+    105.5725102704809,
+    132.58764166851526,
+    141.47194954852898
+  ],
+  "n_struts": 6,
+  "skew_deg": 30.0,
+  "spatial_error_amp": 0.2,
+  "note": "rigid tray on 6 axial struts, RBE'd to single interface node; struts = real constant springs (no complex impedance yet); two model-form errors: spatial (per-strut k, symmetry-breaking) + frequency (output GP on FRF)."
+}

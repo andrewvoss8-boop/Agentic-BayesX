@@ -1,0 +1,3 @@
+PHYS forcing: dome eff mass 225.2 kg (cap 563 kg), orig +6dB force 987.05 N^2/Hz, flight 247.94 N^2/Hz
+CONVERGED: True worst_rhat {'value': 1.0014336368887669, 'variable': 'z_dome[3]'} min_ess_bulk {'value': 2457.9148196750007, 'variable': 'sigma_build_dome'} min_ess_tail {'value': 3198.1361274568826, 'variable': 'z_dome[0]'} div 0 fit_s 5.4
+DONE pipeline in 214.8 s

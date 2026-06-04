@@ -1,0 +1,7 @@
+true sigma_build = 0.040 ; kj_true 1.816e+07
+N=2 sigma_build q50 0.080 [0.031,0.210] (true 0.040) | kj_pop bias +0.19% | rhat_s 1.000 ess_s 2362 div 0
+N=4 sigma_build q50 0.054 [0.026,0.142] (true 0.040) | kj_pop bias -1.86% | rhat_s 1.003 ess_s 1798 div 10
+N=6 sigma_build q50 0.048 [0.027,0.106] (true 0.040) | kj_pop bias -2.07% | rhat_s 1.001 ess_s 1502 div 1
+N=8 sigma_build q50 0.042 [0.026,0.083] (true 0.040) | kj_pop bias -1.37% | rhat_s 1.001 ess_s 1314 div 0
+wrote /Users/avoss/Downloads/bayesX/Agentic BayesX/runs/round3/opus48/report/figures/hier_sigma_build_learning.gif with 4 frames
+DONE hier in 3063.2 s

@@ -1,0 +1,10 @@
+{
+  "script_wall_s": 214.84,
+  "active_compute_stages_s": {
+    "forcing_precompute_s": 0.43,
+    "nuts_fit_s": 5.37,
+    "prediction_and_plots_s": 57.26
+  },
+  "fit_runtime_s": 5.37,
+  "smoke_mode": false
+}

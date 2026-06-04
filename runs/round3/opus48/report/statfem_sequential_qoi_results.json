@@ -1,0 +1,27 @@
+{
+  "Ns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "kj_median_by_N": {
+    "0": 22538820.434520166,
+    "1": 18615050.352806702,
+    "2": 18187678.016760048,
+    "3": 18405834.92230177,
+    "4": 18138625.34655677,
+    "5": 18264151.383137308,
+    "6": 18336477.99935548,
+    "7": 18373005.7749574,
+    "8": 18251701.119619355
+  },
+  "note": "QOI bands: TOTAL (epistemic k_j + build scatter + 3 dB forcing) barely shrinks because it is ALEATORY-dominated; EPISTEMIC-only (k_j) collapses with builds. netCG/interface PSD are predictions; ground truth (with spatial+freq model-form error) shown as the target.",
+  "gif_duration_s_per_frame": 6.0,
+  "runtime_s": 256.1
+}

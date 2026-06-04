@@ -1,0 +1,14 @@
+{
+  "grid_global_points": 260,
+  "grid_refined_points": 629,
+  "reference_points": 60000,
+  "global_min_dlog_freq": 0.017780579868678537,
+  "interface_3grms_coarse_g": 1.5825615394348294,
+  "interface_3grms_refined_g": 1.5822739687171414,
+  "interface_3grms_reference_g": 1.5821576856551385,
+  "interface_3grms_coarse_err_vs_ref": 0.0002552550756176048,
+  "interface_3grms_refined_err_vs_ref": 7.349650610508063e-05,
+  "peak62_coarse_clip_frac": 0.004022052648398372,
+  "peak62_refined_clip_frac": 0.004022052648398372,
+  "rationale": "refined grid adds mode-local clusters whose width scales with each mode's half-power bandwidth (~2*zeta*fn); no hard-coded lines-per-band. QOI integral is robust; coarse grid clips the narrow 62 Hz peak tip (reported)."
+}

@@ -1,0 +1,95 @@
+{
+  "offset_sweep": [
+    {
+      "offset_db": -9.0,
+      "netcg_3grms_q50": 0.6845265240506379,
+      "netcg_3grms_95ci": [
+        0.4976864100739797,
+        1.0472699194901476
+      ]
+    },
+    {
+      "offset_db": -6.0,
+      "netcg_3grms_q50": 0.9660951935401814,
+      "netcg_3grms_95ci": [
+        0.669303601108301,
+        1.3839363850056794
+      ]
+    },
+    {
+      "offset_db": -3.0,
+      "netcg_3grms_q50": 1.3630770533385843,
+      "netcg_3grms_95ci": [
+        0.9927894182225757,
+        2.230927589419546
+      ]
+    },
+    {
+      "offset_db": 0.0,
+      "netcg_3grms_q50": 1.957971776846453,
+      "netcg_3grms_95ci": [
+        1.3501825358498392,
+        2.824451350239341
+      ]
+    }
+  ],
+  "ell_sweep": [
+    {
+      "matern_ell": 0.04,
+      "netcg_3grms_q50": 0.9869594009263083,
+      "netcg_3grms_95ci": [
+        0.7526198822845992,
+        1.4513554290029906
+      ]
+    },
+    {
+      "matern_ell": 0.08,
+      "netcg_3grms_q50": 0.9875439121526708,
+      "netcg_3grms_95ci": [
+        0.7068469267308398,
+        1.4961287114614736
+      ]
+    },
+    {
+      "matern_ell": 0.16,
+      "netcg_3grms_q50": 0.9729541204297492,
+      "netcg_3grms_95ci": [
+        0.6855130085426145,
+        1.473520166068559
+      ]
+    }
+  ],
+  "dome_mass_sweep": [
+    {
+      "bounce_particip": 0.25,
+      "dome_eff_mass_kg": 140.73009376816597,
+      "rederived_orig_force_n2hz": 385.5681694374923,
+      "netcg_3grms_q50": 0.7592543014774837,
+      "netcg_3grms_95ci": [
+        0.5429923676573549,
+        1.0823196960517387
+      ]
+    },
+    {
+      "bounce_particip": 0.4,
+      "dome_eff_mass_kg": 225.16815002906557,
+      "rederived_orig_force_n2hz": 987.0545137599802,
+      "netcg_3grms_q50": 0.9700516442961962,
+      "netcg_3grms_95ci": [
+        0.6923815746419283,
+        1.4013844986625699
+      ]
+    },
+    {
+      "bounce_particip": 0.55,
+      "dome_eff_mass_kg": 309.60620628996514,
+      "rederived_orig_force_n2hz": 1866.1499400774621,
+      "netcg_3grms_q50": 1.1521687995391083,
+      "netcg_3grms_95ci": [
+        0.8633145828197283,
+        1.8701105572204917
+      ]
+    }
+  ],
+  "note": "offset sweep is relative to the RE-DERIVED +6 dB original force; dome-mass sweep re-derives the force at each mass so the dome interface response stays pinned at 0.1 g^2/Hz at the bounce mode."
+}

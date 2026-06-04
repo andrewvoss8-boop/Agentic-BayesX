@@ -1,0 +1,23 @@
+{
+  "n_points": 229,
+  "modes_hz": [
+    47.2,
+    86.2,
+    93.5,
+    105.6,
+    136.6,
+    281.7,
+    473.3,
+    670.6
+  ],
+  "PEAK_HEIGHT_mean_err_adaptive": 0.006639794812841831,
+  "PEAK_HEIGHT_mean_err_uniform_log": 0.07230261552324196,
+  "PEAK_HEIGHT_max_err_adaptive": 0.029708947274233385,
+  "PEAK_HEIGHT_max_err_uniform_log": 0.15503355342945752,
+  "peak_fidelity_improvement_x": 10.889284618163744,
+  "integrated_3grms_rel_err_adaptive": 0.007162626147777897,
+  "integrated_3grms_rel_err_uniform_log": 0.0015400884477437618,
+  "min_pts_in_halfpower_adaptive": 4,
+  "min_pts_in_halfpower_uniform": 1,
+  "note": "Adaptive WINS on PEAK FIDELITY (peak height / no-clipped-peaks / narrow-band exceedance) at matched cost. The INTEGRATED 3*GRMS is grid-robust either way; a matched-N adaptive grid can even be slightly worse on the integral if its log baseline is starved -> rule: keep an adequate log baseline AND add mode-local refinement (use adaptive for peak-sensitive outputs; ensure baseline for integrals)."
+}

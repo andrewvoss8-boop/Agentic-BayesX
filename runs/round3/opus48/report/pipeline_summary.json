@@ -1,0 +1,13 @@
+{
+  "converged": true,
+  "nuts_active": true,
+  "artifacts": {
+    "gif": "figures/interface_netcg_psd_vs_spec.gif",
+    "n_frames": 11,
+    "interface_psd_bands": "interface_psd_bands.json",
+    "results": "results.json",
+    "component_frfs": "figures/component_frfs.png",
+    "netcg_headline": "figures/netcg_psd_headline.png"
+  },
+  "fit_runtime_s": 5.371591329574585
+}

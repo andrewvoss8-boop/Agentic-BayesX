@@ -1,0 +1,56 @@
+{
+  "nuts_converged": true,
+  "nuts_active_earned": true,
+  "worst_rank_split_rhat": {
+    "value": 1.0014336368887669,
+    "variable": "z_dome[3]"
+  },
+  "min_ess_bulk": {
+    "value": 2457.9148196750007,
+    "variable": "sigma_build_dome"
+  },
+  "min_ess_tail": {
+    "value": 3198.1361274568826,
+    "variable": "z_dome[0]"
+  },
+  "divergences": 0,
+  "n_chains": 4,
+  "n_monitored_incl_raw_latents": 29,
+  "gate_rhat_lt_1p01": true,
+  "gate_ess_ge_400": true,
+  "gate_div_lt_2pct": true,
+  "validation_all_pass": true,
+  "validation_summary": {
+    "cantilever_benchmark": true,
+    "lumped_2dof_benchmark": true,
+    "fbs_equals_round2_2dof": true,
+    "antiresonance_interlacing": true,
+    "netcg_lowfreq_limit": true,
+    "anchors": true
+  },
+  "anchors_within_1pct": true,
+  "fbs_reduces_to_round2_2dof": true,
+  "cantilever_betaL_max_err_pct": 0.0010828539125533757,
+  "antiresonance_interlacing_ok": true,
+  "netcg_qoi_intervals_present": true,
+  "netcg_q50_g_physical": 0.9379483601715932,
+  "forcing_reverse_engineered_dome_resp_0p1_g2hz": 0.1,
+  "forcing_orig_plus6dB_n2hz": 987.0545137599802,
+  "forcing_flight_minus6dB_n2hz": 247.93688402739804,
+  "dome_bounce_eff_mass_kg": 225.16815002906557,
+  "headline_worst_flight": 3,
+  "headline_99hi_exceed_frac": 0.012718600953895072,
+  "mesh_export_files": [
+    "nodes.csv",
+    "elements.csv",
+    "model.bdf",
+    "model.vtu",
+    "model.obj"
+  ],
+  "mesh_n_nodes": 46,
+  "mesh_n_elements": 45,
+  "whole_psd_default_peak_feature_labeled": true,
+  "immutable_checkers_unchanged": true,
+  "workspace_isolation_only_runs_round3_opus48": true,
+  "all_pass": true
+}
