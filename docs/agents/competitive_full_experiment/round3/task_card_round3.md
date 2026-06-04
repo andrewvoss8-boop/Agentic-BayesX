@@ -5,9 +5,13 @@ The ONLY structural change from round 2 is SDOF -> MDOF for each component (sing
 Decision/cost modeling is OUT this round. Sampler stays differentiable + NUTS this round (gradient-free
 TMCMC/ABC comparison is a deliberate FUTURE round, not part of this one).
 
-## Step 0 — Priority clarification (first)
+## Step 0 — Priority clarification + decisions log (first)
 Write `report/priority_deliverables.md`: restate the priority deliverables (below) and acceptance tests
 in your own words; flag any ambiguity and your interpretation before building.
+Also start `decisions_log.md` (append-only) in your workspace: log every human clarification and
+non-obvious choice with a UTC timestamp + rationale, written before you continue (never left only in
+chat). After any context compaction, re-read the task card, `priority_deliverables.md`, and
+`decisions_log.md` before acting — only your auto-loaded root rules file survives a compaction.
 
 ## Workspace (instruction-only isolation)
 Your ENTIRE workspace is `runs/round3/<tool>/`. Put everything you create there:
@@ -119,7 +123,7 @@ packet.md (method/likelihood summary up top), packet.pptx (review layer; embed m
 final PSD-vs-spec PNG + key GIF frames), the interface-PSD-vs-spec evolution GIF, forcing overlay,
 netCG-vs-vibe-reference, mesh/ exports, nuts_diagnostics.(md|json), resolution_sensitivity, results.json
 (numeric QOI intervals), assumptions_ledger, quantity_contracts, known_failures, review_request,
-manifest.json, commands.md, files_changed.md, runtime.json, priority_deliverables.md, checks.json.
+manifest.json, commands.md, files_changed.md, runtime.json, priority_deliverables.md, decisions_log.md, checks.json.
 
 ## Not allowed
 Editing immutable checkers (verify with shasum -a 256 -c harness/checkers/manifest.sha256); copying

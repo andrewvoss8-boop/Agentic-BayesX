@@ -12,3 +12,5 @@ Read the task card first. Only run or edit what the task allows. Do not edit imm
 
 For inference language, label current random-walk/random-scan Metropolis as prototype/legacy and treat NUTS/HMC as the future default unless the task card says otherwise.
 
+Maintain an append-only `decisions_log.md` in your workspace: record every human clarification and non-obvious choice with a UTC timestamp + rationale before continuing (do not leave it only in chat). At session start and after any compaction, re-read the task card, `priority_deliverables.md`, and `decisions_log.md` before acting — only the auto-loaded root rules file survives a compaction.
+

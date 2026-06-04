@@ -109,6 +109,14 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
   - `notes/lessons-learned.md`
   - `notes/todo.md`
 
+## Context and Compaction
+- Treat the file system + git as the source of truth; the live chat is a cache that can be compacted or lost at any time.
+- Any human clarification or non-obvious decision that changes an action MUST be written to a file before continuing: `decisions_log.md` in the runner workspace; the CURRENT STATE block at the top of `notes/memory.md` for the lead. Never leave it only in chat. (After a compaction, only project-root CLAUDE.md is re-injected; conversation-only instructions are otherwise lost.)
+- At session start and after any compaction, run the re-grounding routine: re-read the task card, `priority_deliverables.md`, `decisions_log.md`/`notes/memory.md`, `notes/todo.md`, and the latest `notes/runs.md`; restate goal / last decision / next action / open ambiguities in one line before acting. If anything is missing or contradictory, ask the human before acting.
+- Keep auto-loaded files short and high-signal (target < ~200 lines).
+- If a long session is about to compact, prefer scoped compaction instructions that preserve the task card, human clarifications, open ambiguities, and sampler/convergence decisions. Prefer a fresh session re-grounded from files at phase boundaries over a heroic long session.
+- Claude-Code-specific mechanisms (/compact, CLAUDE.md re-injection, @import) do not transfer to Cursor/Codex; verify each tool's compaction/memory behavior before relying on it.
+
 ## Done Criteria
 A task is done only when all of the following are true:
 - requested artifacts/code exist;

@@ -13,3 +13,5 @@ NUTS/HMC is the default future sampler for Bayesian updating. Existing random-wa
 
 Do not claim success unless the required files and checker outputs exist. Stop for human approval before changing durable rules, checker expectations, sampler standards, or project notes.
 
+Keep a short `CURRENT STATE / LAST DECISION / NEXT ACTION / OPEN AMBIGUITIES` block at the top of `notes/memory.md`, updated before risky steps and after each human decision. Before assigning or reviewing a runner's work, read that runner's `decisions_log.md`. At session start and after any compaction, re-ground from the task card and `notes/memory.md` before acting.
+
