@@ -62,10 +62,39 @@ Named, rigorous pitfall, not a hunch:
 - Kennedy & O'Hagan (2001): discrepancy-augmented calibration; physics/discrepancy confounding.
 - Brynjarsdottir & O'Hagan (2014): you cannot recover physics with a flexible discrepancy unless you put
   genuine STRUCTURE (a strong, correct prior) on it.
-- Plumlee (2017), Tuo & Wu (2015-16), Sargsyan embedded discrepancy, cut/modular Bayes: existing ways to
-  constrain the discrepancy to restore identifiability.
+- Plumlee (2017, JASA 112:1274-1285) [READ IN FULL 2026-06-05]: defines the calibration parameter as the
+  MINIMIZER OF A LOSS (KOH never defined it -> their posterior is too broad), PROVES the bias must be
+  ORTHOGONAL to the model's parameter-gradient df/dtheta, and builds the bias GP prior by projecting a
+  base covariance onto that orthogonal space; when the model is expensive it emulates it + uses
+  modularization + a plug-in gradient. IMPORTANT: Plumlee's setting has a KNOWN, CONTROLLED input; the
+  bias is a function of that known input.
+- Tuo & Wu (2015-16), Sargsyan embedded discrepancy, cut/modular Bayes: other ways to constrain the
+  discrepancy to restore identifiability.
 
 ## 5. The contribution
+
+### 5.0 Where the novelty actually lies (UNDER RECONSIDERATION, 2026-06-05)
+Honest update after reading Plumlee (2017) in full: **orthogonality-to-the-parameter-gradient is
+Plumlee's**, and our "GP `F(k)` over elemental stiffness" is essentially a CHOICE OF BASE COVARIANCE that
+plugs into his orthogonal projection. So **"orthogonal + GP discrepancy" alone is not our novelty**, and
+the stiffness-keying is a structural-prior choice of the kind Brynjarsdottir & O'Hagan already say is
+needed. We should NOT lock the patent claim to "property-keyed / orthogonal discrepancy" yet.
+
+What is genuinely DIFFERENT from Plumlee / KOH / Surer-Plumlee-Wild / published StatFEM is that they all
+assume a **KNOWN, CONTROLLED input**. Aerospace forcing is **UNKNOWN and STOCHASTIC** (the flight
+random-vibration environment): we measure RESPONSE, not the input force, so the forcing must be inferred
+or marginalized ALONGSIDE the physics and the model-form error. That **three-way problem (physics x
+discrepancy x unknown forcing)** has its own identifiability trap (is the response large because the
+forcing was large or the structure compliant?), and the methods that must arise to keep it identifiable
+AND push it to a force-limiting load QOI may be the real, more-defensible contribution (Andrew's instinct).
+
+Honesty guardrail: "unknown input" is itself a studied field — operational modal analysis (OMA), joint
+input-state estimation (Lourens; Maes; Gillijns-De Moor), Bayesian force identification. So the novelty
+is NOT "unknown forcing" by itself; it would be the **combination**: dynamic StatFEM (model-form error)
++ unknown stochastic forcing + a force-limiting / apparent-mass LOAD QOI + the honest held-out trust
+test. The **apparent-mass framing (`M = F/a`, a structure property independent of forcing LEVEL)** is the
+natural bridge for the input/system ambiguity. Treat the novelty LOCATION as OPEN, pending a literature
+review (OMA / input-state estimation / force-ID) and a real patent/FTO search.
 
 ### 5.1 Plain definitions
 - **Calibration parameter** = a knob inside the model you adjust to match data, claiming to be the true
@@ -104,9 +133,10 @@ frequency-dependent model-form error contribution.
 - (c) **Cut / modular updating** — first identify `k` from the data that genuinely pins it (the sharp
   resonance frequencies) WITHOUT letting `F` vote on `k`; then fit `F` to the residual with `k` fixed.
 
-**The novel twist over Plumlee:** index/correlate `F` by **elemental stiffness (and type)** — a physical
-structural prior — not by gradient geometry alone. Orthogonal placement + stiffness-indexed correlation
-together is the candidate-novel core. (Subject to a real patent search; see 5.4.)
+**Relation to Plumlee (read carefully — see 5.0):** orthogonality-to-the-gradient is Plumlee's; the
+stiffness-indexed `F(k)` is a CHOICE OF BASE COVARIANCE plugged into his orthogonal projection. So this
+is a useful, correct method for our problem, but its STANDALONE novelty is modest. The more defensible
+novelty likely lies in the unknown-stochastic-forcing aerospace setting (5.0), not in `F(k)` by itself.
 
 **Honest status of the core:** Stage 3 only showed the SAME-parameter-space (spatial) version
 **confounds**. The orthogonal output-space `F(k)` version is **UNTESTED**. The A/B "orthogonal `F(k)`
@@ -125,8 +155,14 @@ non-obviousness ("unexpected result") evidence.
   indicator (NASA-HDBK-7004C), e.g. netCG = transmitted interface force / load mass.
 - **QOI-targeted sensor placement + quick frequency/modal-ID tests.** Choose accelerometer locations and
   cheap system-ID modal tests that maximize what the digital twin learns about the load indicators
-  (Papadimitriou's QOI-information-gain optimal sensor placement). Established; defensible only tied to
-  the core.
+  (Papadimitriou's QOI-information-gain optimal sensor placement = PHYSICAL experiment design).
+  Established; defensible only tied to the core.
+- **Adaptive emulator-run design (different "experiment", a tractability tool).** Surer, Plumlee & Wild
+  (2024, Technometrics) [READ 2026-06-05] design WHICH SIMULATION RUNS (parameter settings) to evaluate
+  to build an emulator that learns the posterior efficiently (their EIVAR criterion: explore uncertain
+  posterior regions + exploit high-density ones). Use this if our FEM is too expensive to sample
+  directly. NOTE: this is design over SIMULATION inputs, NOT over physical sensors — distinct from
+  Papadimitriou. Established.
 
 ### 5.4 Prior-art read (literature-only, NOT a cleared patent search)
 - A. Orthogonal, stiffness-indexed (`F(k)`) model-form discrepancy in DYNAMIC StatFEM: novelty
@@ -211,6 +247,11 @@ The unifying object that serves almost everyone: the subscale tray testbed with 
   (CMS/FBS) problems where the QOI lives, with REAL data.
 - Honest, tractable likelihoods that do not artificially collapse the posterior.
 - Separating real physics from model error (the lever) in dynamic inference.
+- **UNKNOWN, STOCHASTIC FORCING:** inferring/marginalizing the excitation (we measure response, not input
+  force) jointly with the physics and the discrepancy, and keeping all three identifiable — the aerospace
+  reality that the known-input calibration literature (KOH/Plumlee) does not cover. Likely novelty home
+  (5.0); overlaps operational modal analysis / input-state estimation, so the contribution is the
+  combination, not the bare idea.
 - Propagating the posterior all the way to a load/QOI/margin.
 - Computational tractability on full-size models; automating the workflow agentically.
 
@@ -230,6 +271,11 @@ The unifying object that serves almost everyone: the subscale tray testbed with 
 - The orthogonal `F(k)` discrepancy advantage is a HYPOTHESIS. Stage 3 only showed the same-parameter-
   space (spatial) version confounds; the orthogonal output-space version is UNTESTED. That A/B (on a
   validated FEM + real data) is the science and the patent's non-obviousness evidence.
+- **The LOCATION of the novelty is itself open (5.0).** After reading Plumlee in full, orthogonality is
+  his and `F(k)` is a base-kernel choice -> modest standalone novelty. The likely-stronger axis
+  (unknown stochastic forcing + force-limiting load QOI in dynamic StatFEM) OVERLAPS operational modal
+  analysis / input-state estimation / force identification. Do not claim novelty in EITHER direction
+  until a literature review of those fields and a real patent/FTO search are done.
 - Earlier tight posteriors are NOT trust-validated; held-out calibration is the right gate and is only
   partly done.
 - Prior-art read was literature-only; NO patent-database / freedom-to-operate search has been run.
