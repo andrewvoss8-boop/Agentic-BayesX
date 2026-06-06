@@ -39,13 +39,23 @@ actually is.
 
 ## What are the remaining knowledge gaps
 
-- StatFEM has not been used with the data aerospace actually uses (random vibration, transient,
-  shock), or on the assembled-interface problems where the load of interest lives.
-- When learning real physics from dynamic test data, model error and real physics can look identical
-  to the math, so the result is either overconfident or fails to settle. We have reproduced this
-  failure in a small example.
-- Open: keeping the uncertainty honest, carrying the result to a real load decision, and keeping the
-  computation affordable on full-size models.
+Two places StatFEM has not gone:
+- A modern aerospace workflow, end to end, to a real load and verification decision.
+- The data and system types aerospace uses: random vibration, transient, and shock, and
+  assembled-structure methods (component mode synthesis, frequency-based substructuring).
+
+Getting there means solving three problems:
+1. Matching data quality and volume to the number of parameters, accounting for the likelihood
+   function. Too many parameters for the available, informative data gives an unidentifiable or
+   artificially confident result. We have reproduced this failure in a small example.
+2. Getting data from the most informative sensor locations and excitation (type, location,
+   amplitude).
+3. Keeping the computation tractable on full-size models:
+   - the number of FEM runs required; reducing model size and runtime;
+   - formulating likelihood functions that are computationally tractable and accurate, not
+     oversimplified, and that do not artificially collapse the posterior;
+   - integrating over the parameter space to get a posterior for the QOI;
+   - automating the workflow with agentic engineering.
 
 ## My objective is to
 
