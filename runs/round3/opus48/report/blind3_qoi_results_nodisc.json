@@ -1,0 +1,29 @@
+{
+  "definition": "netCG=F_iface/m_load; F_iface from FBS coupling M_L/(M_S+M_L)*F (canonical contract)",
+  "m_source_z_kg": 433.16898998117324,
+  "m_load_kg": 170.0,
+  "netcg_fzero_rigid_limit": 0.281844728133829,
+  "netcg_3grms_g": {
+    "p0p5": 1.3715856955223924,
+    "p2p5": 1.3767502987936122,
+    "p50": 2.0178751609770034,
+    "p97p5": 4.131721141582695,
+    "p99p5": 4.147480568470767
+  },
+  "published_observed_netcg_g": {
+    "min": 0.4663952391219846,
+    "mean": 0.6504323583943944,
+    "max": 0.935076837077097
+  },
+  "coverage_of_published_95": 0.0,
+  "coverage_of_published_99": 0.0,
+  "bias_ratio_median": 3.102359738002841,
+  "spec_3grms_g": 4.358711409875442,
+  "overall_scalar_margin": 2.1600500834576235,
+  "narrowband_exceedance_frac_99hi_vs_spec": 0.062,
+  "n_posterior_used": 400,
+  "n_flights": 11,
+  "posterior": "blind3_posterior_nodisc.npz",
+  "tag": "nodisc",
+  "note": "full uncertainty: parameter(epistemic)+build(aleatory)+flight(aleatory)+discrepancy d. sigma_e (sensor noise) excluded from physical QOI. Compare vs PUBLISHED observed netCG."
+}

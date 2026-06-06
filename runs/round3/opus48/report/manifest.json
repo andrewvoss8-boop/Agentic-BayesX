@@ -1,239 +1,40 @@
 {
-  "runner": "claude_code_opus48_round3",
-  "workspace": "runs/round3/opus48",
-  "files": {
-    "report/pipeline_summary.json": {
-      "sha256_16": "a4b5bece30caab94",
-      "bytes": 373
-    },
-    "report/pipeline_run.log": {
-      "sha256_16": "012020b5b927210e",
-      "bytes": 369
-    },
-    "report/packet.md": {
-      "sha256_16": "d7832c83cf126034",
-      "bytes": 10622
-    },
-    "report/assumptions_ledger.md": {
-      "sha256_16": "a874721192193710",
-      "bytes": 7541
-    },
-    "report/nuts_diagnostics.json": {
-      "sha256_16": "99b6d473432c1c0e",
-      "bytes": 5792
-    },
-    "report/posterior_samples.npz": {
-      "sha256_16": "(binary)",
-      "bytes": 3266818
-    },
-    "report/priority_deliverables.md": {
-      "sha256_16": "dfb79a9bc2a69a49",
-      "bytes": 7188
-    },
-    "report/results.json": {
-      "sha256_16": "22f82ba37bf197ac",
-      "bytes": 8209
-    },
-    "report/packet.pptx": {
-      "sha256_16": "(binary)",
-      "bytes": 2812553
-    },
-    "report/quantity_contracts.md": {
-      "sha256_16": "6a4bb36fc56ee979",
-      "bytes": 4973
-    },
-    "report/checks.json": {
-      "sha256_16": "e530223cb84e97d9",
-      "bytes": 1622
-    },
-    "report/nuts_diagnostics.md": {
-      "sha256_16": "86fb090ca3ab5ae9",
-      "bytes": 1971
-    },
-    "report/sensitivity.json": {
-      "sha256_16": "f9fc2f08be0adae5",
-      "bytes": 2335
-    },
-    "report/validation.json": {
-      "sha256_16": "f444c8caf3f8fd2e",
-      "bytes": 3479
-    },
-    "report/manifest.json": {
-      "sha256_16": "a03b4a41ebfaafc1",
-      "bytes": 5998
-    },
-    "report/known_failures.md": {
-      "sha256_16": "5ad74f6ce5a502b0",
-      "bytes": 6771
-    },
-    "report/runtime_pipeline.json": {
-      "sha256_16": "a25a966432ce22e5",
-      "bytes": 207
-    },
-    "report/forcing_reverse_engineered.json": {
-      "sha256_16": "384aca024b713d8c",
-      "bytes": 336
-    },
-    "report/review_request.md": {
-      "sha256_16": "e83cc81f825ae00c",
-      "bytes": 3176
-    },
-    "report/interface_psd_bands.json": {
-      "sha256_16": "03a61b4c5cdba526",
-      "bytes": 4857
-    },
-    "report/resolution_metrics.json": {
-      "sha256_16": "58314a1afb0a808a",
-      "bytes": 757
-    },
-    "report/mesh/model.obj": {
-      "sha256_16": "ce3bad9a591b5718",
-      "bytes": 1759
-    },
-    "report/mesh/model.vtu": {
-      "sha256_16": "c30b8ae4451c89a6",
-      "bytes": 1901
-    },
-    "report/mesh/elements.csv": {
-      "sha256_16": "3724f38ad688f49a",
-      "bytes": 901
-    },
-    "report/mesh/nodes.csv": {
-      "sha256_16": "05f443d04fd6984d",
-      "bytes": 1447
-    },
-    "report/mesh/model.msh": {
-      "sha256_16": "85beb240043b3ccd",
-      "bytes": 3337
-    },
-    "report/mesh/model.bdf": {
-      "sha256_16": "1b1c12170f0c9111",
-      "bytes": 3059
-    },
-    "report/mesh/mesh_summary.json": {
-      "sha256_16": "0322648394668b1f",
-      "bytes": 309
-    },
-    "report/figures/component_frfs.png": {
-      "sha256_16": "(binary)",
-      "bytes": 211793
-    },
-    "report/figures/mesh_assembly.png": {
-      "sha256_16": "(binary)",
-      "bytes": 66557
-    },
-    "report/figures/netcg_psd_headline.png": {
-      "sha256_16": "(binary)",
-      "bytes": 246625
-    },
-    "report/figures/resolution_sensitivity.png": {
-      "sha256_16": "(binary)",
-      "bytes": 135088
-    },
-    "report/figures/sensitivity_offset_ell.png": {
-      "sha256_16": "(binary)",
-      "bytes": 139147
-    },
-    "report/figures/modeshapes_tray.png": {
-      "sha256_16": "(binary)",
-      "bytes": 145844
-    },
-    "report/figures/interface_netcg_psd_vs_spec.gif": {
-      "sha256_16": "(binary)",
-      "bytes": 613041
-    },
-    "report/figures/posterior_recovery.png": {
-      "sha256_16": "(binary)",
-      "bytes": 79956
-    },
-    "report/figures/flight_forcing_overlay.png": {
-      "sha256_16": "(binary)",
-      "bytes": 391588
-    },
-    "report/figures/netcg_vs_vibe_reference.png": {
-      "sha256_16": "(binary)",
-      "bytes": 72134
-    },
-    "report/figures/modeshapes_dome.png": {
-      "sha256_16": "(binary)",
-      "bytes": 167564
-    },
-    "report/figures/gif_frames/frame_flight_09.png": {
-      "sha256_16": "(binary)",
-      "bytes": 201443
-    },
-    "report/figures/gif_frames/frame_flight_08.png": {
-      "sha256_16": "(binary)",
-      "bytes": 203537
-    },
-    "report/figures/gif_frames/frame_flight_00.png": {
-      "sha256_16": "(binary)",
-      "bytes": 202756
-    },
-    "report/figures/gif_frames/frame_flight_01.png": {
-      "sha256_16": "(binary)",
-      "bytes": 202417
-    },
-    "report/figures/gif_frames/frame_flight_03.png": {
-      "sha256_16": "(binary)",
-      "bytes": 202855
-    },
-    "report/figures/gif_frames/frame_flight_02.png": {
-      "sha256_16": "(binary)",
-      "bytes": 204235
-    },
-    "report/figures/gif_frames/frame_flight_06.png": {
-      "sha256_16": "(binary)",
-      "bytes": 203261
-    },
-    "report/figures/gif_frames/frame_flight_07.png": {
-      "sha256_16": "(binary)",
-      "bytes": 203015
-    },
-    "report/figures/gif_frames/frame_flight_05.png": {
-      "sha256_16": "(binary)",
-      "bytes": 202564
-    },
-    "report/figures/gif_frames/frame_flight_10.png": {
-      "sha256_16": "(binary)",
-      "bytes": 203067
-    },
-    "report/figures/gif_frames/frame_flight_04.png": {
-      "sha256_16": "(binary)",
-      "bytes": 202239
-    },
-    "code/fem_export.py": {
-      "sha256_16": "4a8d70aef08d7586",
-      "bytes": 11000
-    },
-    "code/run_pipeline.py": {
-      "sha256_16": "0ed4a6f2b19ae581",
-      "bytes": 47905
-    },
-    "code/make_pptx.py": {
-      "sha256_16": "c17700146c2e98e8",
-      "bytes": 4070
-    },
-    "code/mdof_forward.py": {
-      "sha256_16": "a44980a12a696308",
-      "bytes": 20308
-    },
-    "tests/validate_fem.py": {
-      "sha256_16": "faafd25979cd0610",
-      "bytes": 7978
-    },
-    "commands.md": {
-      "sha256_16": "d4d38ace062b0c3e",
-      "bytes": 2410
-    },
-    "files_changed.md": {
-      "sha256_16": "e55b397f7c93f030",
-      "bytes": 2366
-    },
-    "runtime.json": {
-      "sha256_16": "8d7f4d4df0d76ced",
-      "bytes": 1002
-    }
+  "run": "round3 stage3 — Claude Code Opus 4.8 INFERENCE runner, BLIND vs Codex independent truth",
+  "date": "2026-06-04",
+  "supersedes": "manifest_blind_prior.json (prior blind round; preserved)",
+  "blindness_attestation": {
+    "consumed_only": "runs/round3/codex_truth/dataset/observations.npz + data_contract.md (read-only)",
+    "did_not_open": ["runs/round3/codex_truth/sealed_truth/", "runs/round3/codex_truth/code/", "runs/round3/codex_truth/report/"],
+    "scored_by": "master, against sealed truth, AFTER this is committed",
+    "dataset_path_in_code": "blind3_model.py DATASET = codex_truth/dataset/observations.npz only"
   },
-  "n_files": 58
+  "the_three_fixes": {
+    "1_asymmetric_per_strut_forward": "code/blind3_model.py load_AM_diag (6 per-strut k, JAX) -> represents x!=y, rx!=ry",
+    "2_structure_based_discrepancy": "code/blind3_model.py feature_corr/apply_discrepancy (per-strut azimuth-feature kernel, parameter space)",
+    "3_complex_likelihood_and_FBS_netCG": "code/blind3_infer.py make_model (re+im); code/blind3_qoi.py FBS netCG (canonical contract)"
+  },
+  "headline_scorecard": {
+    "convergence_gate_over_all_latents": {
+      "with_discrepancy": {"worst_rhat": 2.845, "min_bulk_ess": 4.7, "divergences": 0, "gate": "FAIL", "nuts_active_claim": false},
+      "without_discrepancy_per_strut_physics": {"worst_rhat": 1.009, "min_bulk_ess": 487, "divergences": 0, "gate": "PASS", "k_pop_n_per_m": [16780000, 16850000, 16930000]}
+    },
+    "ridge_resolved": "NO -- the per-strut discrepancy is confounded with the per-strut stiffness; it INTRODUCES a parameter<->discrepancy ridge (sigma_d -> 1.33 >> prior). Fix #1 (asymmetric physics) alone RESTORES convergence.",
+    "sigma_e": {"with_d": 0.69, "without_d": 0.93, "true_sensor_scale": "~0.005 (still inflated ~2x = missing higher modes)"},
+    "netcg_bias_ratio": {"prior_blind_drivepoint": 4.86, "stage3_with_d": 1.71, "stage3_without_d_converged": 3.10, "fzero_rigid_limit": 0.282},
+    "netcg_coverage": {"with_d_95": 0.92, "with_d_99": 0.97, "without_d_95": 0.0, "note": "with-d covers only via WIDE multimodal bands; converged without-d is biased 3.1x high (genuine model-form over-prediction)"},
+    "heldout": {"new_build_coverage95": 0.911, "new_build_logwidth": 2.16, "band_95_115_coverage95": 0.715},
+    "companions": {"starve_data_rhat": 2.85, "n_eff_k_pop": 0.6, "n_nominal_obs": 7920, "gridinv": "bounded/intractable under the ridge (itself a signal)"},
+    "spec": {"overall_margin_with_d": 2.56, "narrowband_99hi_exceedance_with_d_frac": 0.254},
+    "dominant_residual_error": "MISSING HIGHER MODES (z:62/77/120, lateral:51/87/137) -- outside the coarse model's span; Stage-4 higher-fidelity FEM is the real fix"
+  },
+  "deliverables": {
+    "code": ["blind3_model.py", "blind3_infer.py", "blind3_qoi.py", "blind3_figs.py", "blind3_gridinv.py", "blind3_pptx.py"],
+    "packet": ["packet_stage3.md", "packet.pptx"],
+    "results": ["blind3_results.json", "blind3_companions.json", "blind3_heldout.json", "blind3_nuts_diagnostics.json", "blind3_nuts_diagnostics.md", "blind3_qoi_results.json", "blind3_qoi_results_nodisc.json", "blind3_gridinv.json"],
+    "posteriors": ["blind3_posterior.npz", "blind3_posterior_nodisc.npz"],
+    "figures": ["blind3_netcg_transfer.png", "blind3_netcg_grms_vs_truth.png", "blind3_netcg_psd_vs_spec.png", "blind3_ppc_train_b0.png", "blind3_ppc_heldout_b6.png", "blind3_split_with_d.png", "blind3_hyperparams.png"],
+    "meta": ["files_changed.md", "runtime.json", "manifest.json", "decisions_log.md (D25-D30)", "priority_deliverables.md", "blind_known_failures.md (Stage-3 addendum)", "commands.md"]
+  },
+  "immutable_checkers": "verified unchanged (shasum -a 256 -c harness/checkers/manifest.sha256 -> OK)",
+  "honesty": "Mixed, honest result. Fix #1 restores convergence; fix #2 does not (informative failure: same-space discrepancy = confounded); fix #3 cuts the netCG definitional bias. No 'NUTS active' claim for the with-d model. Residual bias/under-coverage reported, not tuned away."
 }

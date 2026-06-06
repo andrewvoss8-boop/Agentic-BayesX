@@ -1,0 +1,7 @@
+{
+  "status": "BOUNDED / not completed",
+  "note": "Grid-invariance refit at 2x grid density did NOT complete in a reasonable budget under the with-discrepancy RIDGE: NUTS hits the capped tree depth every draw and mixing is absent (the same multimodal pathology that fails the main gate). This intractability is itself a signal that the with-d geometry is ill-conditioned. The DECISIVE over-counting / trust evidence is reported instead via: (a) effective-vs-nominal sample count n_eff(k_pop) ~ 0.6 vs 7920 (blind3_results.json), (b) starve-the-data still R-hat 2.85 (blind3_companions.json -> ridge is structural, not data-deluge), (c) the without-d CONVERGED model as the trustworthy posterior. Grid-invariance is a supporting diagnostic only (D14/D16); its omission does not change the headline.",
+  "grid_1x_n": 110,
+  "grid_2x_n_attempted": 144,
+  "decisive_overcounting_evidence": "n_eff(k_pop)=0.6 vs nominal 7920 obs (ratio 8e-5); multimodal posterior is WIDER than prior -> tightness is illusory, not fictitiously over-counted."
+}

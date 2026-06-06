@@ -1,0 +1,66 @@
+{
+  "with_d_CAPPED_discrepancy_MAIN": {
+    "worst_rhat": 2.4114227098127703,
+    "worst_rhat_var": "z_b",
+    "min_ess_bulk": 4.9058380104395765,
+    "min_ess_tail": 29.15973978973836,
+    "min_ess_var": "z_b",
+    "divergences": 0,
+    "divergence_frac": 0.0,
+    "n_draws_total": 4000,
+    "gate_pass": false,
+    "per_var": {
+      "beta": {
+        "max_rhat": 1.8295500369004443,
+        "min_ess_bulk": 5.807152684728745,
+        "min_ess_tail": 37.58738967592727
+      },
+      "f_dome": {
+        "max_rhat": 1.5815471465182547,
+        "min_ess_bulk": 6.816232664709536,
+        "min_ess_tail": 31.807357957085657
+      },
+      "k_strut_pop": {
+        "max_rhat": 1.8732765345326643,
+        "min_ess_bulk": 5.72844643342838,
+        "min_ess_tail": 42.39512019742221
+      },
+      "log_k_strut_pop": {
+        "max_rhat": 1.8732765345326643,
+        "min_ess_bulk": 5.72844643342838,
+        "min_ess_tail": 42.39512019742221
+      },
+      "sigma_build": {
+        "max_rhat": 1.7542180304179151,
+        "min_ess_bulk": 6.055386389249532,
+        "min_ess_tail": 121.0877993525531
+      },
+      "sigma_d": {
+        "max_rhat": NaN,
+        "min_ess_bulk": 4000.0,
+        "min_ess_tail": 4000.0
+      },
+      "sigma_e": {
+        "max_rhat": 2.0676514861285193,
+        "min_ess_bulk": 5.30725969914088,
+        "min_ess_tail": 30.00932294580977
+      },
+      "z_b": {
+        "max_rhat": 2.4114227098127703,
+        "min_ess_bulk": 4.9058380104395765,
+        "min_ess_tail": 29.15973978973836
+      }
+    }
+  },
+  "without_d": {
+    "skipped": true
+  },
+  "starve": {
+    "skipped": true
+  },
+  "flexible_learn_sigma_d_RIDGE": {
+    "skipped": true
+  },
+  "gate": "rank-split R-hat<1.01, bulk&tail ESS>=400 over ALL latents, div<2%, 4 chains, non-centered",
+  "note": "MAIN fit CAPS sigma_d (=0.30) to break the ridge. The flexible variant LEARNS sigma_d and EXHIBITS the ridge (de-identified, non-converged) -- reported as a finding per D19."
+}

@@ -1,0 +1,32 @@
+{
+  "stage": "round3_stage3_canonical_netcg_republish",
+  "canonical_contract": "docs/agents/competitive_full_experiment/round3/netcg_quantity_contract.md",
+  "updated_public_keys": [
+    "response_psd_g2_per_Hz",
+    "netcg_3grms_g"
+  ],
+  "updated_scoring_key_keys": [
+    "clean_response_psd_g2_per_Hz",
+    "clean_interface_force_psd_N2_per_Hz",
+    "clean_netcg_3grms_g"
+  ],
+  "unchanged_public_non_netcg_keys_pass": true,
+  "changed_public_non_netcg_keys": [],
+  "unchanged_scoring_non_netcg_keys_pass": true,
+  "changed_scoring_non_netcg_keys": [],
+  "public_netcg_matches_integral_pass": true,
+  "scoring_netcg_matches_integral_pass": true,
+  "scoring_force_to_netcg_psd_pass": true,
+  "max_abs_f0_transfer_minus_rigid_limit": 5.551115123125783e-17,
+  "f0_rigid_limit_pass": true,
+  "min_resonant_transfer_amplification_over_f0_limit": 5.264312886487024,
+  "resonant_structure_pass": true,
+  "peak_transfer_frequency_hz_min": 63.75,
+  "peak_transfer_frequency_hz_median": 66.4,
+  "peak_transfer_frequency_hz_max": 68.1,
+  "old_to_new_public_response_psd_max_abs_delta": 0.0008633905534674094,
+  "old_to_new_public_netcg_3grms_max_abs_delta": 0.022536101230373085,
+  "old_to_new_scoring_force_psd_max_abs_delta": 5.093170329928398e-11,
+  "old_to_new_scoring_netcg_3grms_max_abs_delta": 1.1102230246251565e-16,
+  "overall_pass": true
+}

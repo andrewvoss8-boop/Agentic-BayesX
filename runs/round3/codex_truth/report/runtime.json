@@ -1,0 +1,18 @@
+{
+  "script_wall_s": 6.202824125,
+  "elapsed_wallclock_s": 6.202824125,
+  "active_runtime_s": 1.1688667080000013,
+  "active_compute_by_stage_s": {
+    "load_public_observations": 0.1021424169999996,
+    "load_scoring_key": 0.2248277080000003,
+    "load_sealed_parameters": 0.08202179199999993,
+    "canonical_dynamic_fbs_netcg_recompute": 0.09829450000000062,
+    "write_public_observations_npz": 0.1917115410000001,
+    "write_scoring_key_npz": 0.466893625,
+    "write_scoring_key_json": 0.0023217080000002,
+    "write_stage3_checks": 0.0006534170000005446
+  },
+  "active_runtime_definition": "Stage-3 targeted netCG republish only: recompute canonical dynamic FBS netCG, overwrite netCG-derived public/scoring quantities, verify unchanged non-netCG arrays.",
+  "checks_overall_pass": true,
+  "stage3_netcg_republish_checks": "report/checks/stage3_netcg_republish_checks.json"
+}

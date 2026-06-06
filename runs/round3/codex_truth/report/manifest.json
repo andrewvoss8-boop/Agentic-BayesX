@@ -1,0 +1,39 @@
+{
+  "dataset": [
+    "dataset/observations.npz",
+    "dataset/data_contract.md"
+  ],
+  "sealed_truth": [
+    "sealed_truth/generate_truth.py",
+    "sealed_truth/true_parameters.json",
+    "sealed_truth/model_form_imperfections.md",
+    "sealed_truth/scoring_key.npz",
+    "sealed_truth/scoring_key.json",
+    "sealed_truth/hidden_decisions_log.md"
+  ],
+  "report": [
+    "report/packet.md",
+    "report/results.json",
+    "report/assumptions_ledger.md",
+    "report/quantity_contracts.md",
+    "report/resolution_sensitivity.json",
+    "report/known_failures.md",
+    "report/review_request.md",
+    "report/commands.md",
+    "report/files_changed.md",
+    "report/runtime.json",
+    "report/checks/checks.json"
+  ],
+  "figures": [
+    "report/figures/apparent_mass_antiresonances.png",
+    "report/figures/response_psd_clean_vs_observed.png",
+    "report/figures/flight_response_overlay_build0.png",
+    "report/figures/netcg_distribution.png",
+    "report/figures/mesh_undeformed.png",
+    "report/figures/mode_shape_1.png",
+    "report/figures/mode_shape_2.png",
+    "report/figures/mode_shape_3.png",
+    "report/figures/mode_shape_4.png",
+    "report/figures/mode_shape_5.png"
+  ]
+}

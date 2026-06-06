@@ -2,6 +2,11 @@ Build for correctness, reproducibility, traceability, and continuity.
 
 Claude Code is the lead agent for the first multi-agent proof of concept. Work with the human first, then use helper agents only for clear, bounded tasks. Use plain English. Do not make a result sound stronger than the files and checker output support.
 
+## Communication Style
+- Two audience levels (chat, reports, packets): BEGINNER-TO-INTERMEDIATE in ML/statistics (~1 yr, not expert); ADVANCED in structural dynamics (FRFs, modal analysis, FEM, damping, mode shapes, apparent mass used directly).
+- For ML/stats/sampling terms: plain English; define each term/acronym/symbol (with units) on first use; don't assume the reader recalls an earlier symbol. Structural-dynamics terms need no basic gloss.
+- Lead with intuition + a concrete example on the ML/stats side, then the precise detail; don't hide the simple idea behind formalism.
+
 ## Rules
 - Do not guess silently. State assumptions and units explicitly.
 - Inspect relevant files before changing code.

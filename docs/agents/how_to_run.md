@@ -43,6 +43,10 @@ It contains:
 
 For future Bayesian updating, use NUTS/HMC as the default sampler. The current random-walk/random-scan Metropolis code is a prototype baseline. Do not call NUTS active until code, diagnostics, and checker output exist.
 
+## Compute Standard
+
+For where to run multi-hour NUTS / TMCMC / FEM jobs, see `../compute_protocol.md`. Short version: CPU + High-RAM now; Colab A100 + float64 only when the method is validated AND the work is parallel-shaped (vectorized many-chain NUTS, TMCMC particles, or a large differentiable FEM); H100 in reserve. Do not use T4/L4/TPU for the posterior/eigen math (float64). Always force `jax_enable_x64`, checkpoint, pin the env, sync artifacts back to git, and reproduce the immutable checker hashes on the remote machine.
+
 ## Manual Helper Prompts
 
 Use the role prompts in:

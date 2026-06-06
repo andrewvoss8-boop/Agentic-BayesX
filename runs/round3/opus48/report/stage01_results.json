@@ -1,0 +1,86 @@
+{
+  "stage": "0+1 trust harness + learn all hyperparameters",
+  "grid": {
+    "n_points": 61,
+    "band_hz": [
+      25,
+      400
+    ],
+    "adaptive": true,
+    "min_pts_in_halfpower": 3
+  },
+  "learned_hyperparameters_with_d": {
+    "kj_pop": {
+      "kj_q50": 18856378.636788663,
+      "kj_sd": 20577392.96440094,
+      "kj_bias_pct": 3.8554668784317543,
+      "kj_95": [
+        17572825.831972793,
+        83994430.79855348
+      ],
+      "covers_truth": true
+    },
+    "sigma_build_q50": 0.06817709435594851,
+    "sigma_build_true": 0.05,
+    "sigma_e_q50": 0.22692058398542186,
+    "sigma_e_true": 0.08,
+    "sigma_d_q50": 0.9335447809777335,
+    "ell_d_q50_normu": 0.35870375079059247
+  },
+  "without_discrepancy": {
+    "kj_pop": {
+      "kj_q50": 18571010.679234825,
+      "kj_sd": 605641.9310891033,
+      "kj_bias_pct": 2.2837428992538724,
+      "kj_95": [
+        17377163.39570215,
+        19898843.22034307
+      ],
+      "covers_truth": true
+    }
+  },
+  "starve_1build": {
+    "kj_pop": {
+      "kj_q50": 18124091.889036305,
+      "kj_sd": 1590353.417107349,
+      "kj_bias_pct": -0.17775623092671844,
+      "kj_95": [
+        15640545.381736947,
+        22475889.713796087
+      ],
+      "covers_truth": true
+    }
+  },
+  "HELD_OUT_CALIBRATION_95": {
+    "with_d_new_builds_coverage": 0.9986338797814207,
+    "with_d_heldout_band_coverage": 0.9875,
+    "without_d_new_builds_coverage": 0.9836065573770492,
+    "without_d_heldout_band_coverage": 1.0,
+    "note": "target ~0.95; with_d should be near 0.95 and beat without_d (which collapses onto bias)."
+  },
+  "effective_vs_nominal": {
+    "n_eff_kj": 0.32606297263053446,
+    "nominal_points": 1224,
+    "ratio": 0.0002663913175086066,
+    "note": "n_eff << nominal => correlated model error; tightness is not from independent data. n_eff ~ (sigma_prior/sigma_post)^2."
+  },
+  "convergence": {
+    "with_d": {
+      "worst_rhat": 1.5356832656691903,
+      "min_ess": 7.196500746056623,
+      "divergences": 1
+    },
+    "without_d": {
+      "worst_rhat": 1.0031654896889348,
+      "min_ess": 1562.2587235374406,
+      "divergences": 2
+    },
+    "starve": {
+      "worst_rhat": 1.0011558022896656,
+      "min_ess": 1764.1378028515467,
+      "divergences": 3
+    }
+  },
+  "independent_truth": "spatial per-strut error + Gaussian-bump frequency error (NON-Matern) + build scatter + sensor noise; inference discrepancy is Matern HSGP -> mildly misspecified (honest).",
+  "runtime_s": 4317.5
+}

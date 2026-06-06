@@ -1,0 +1,14 @@
+{
+  "build_coverage95": 0.9106060606060606,
+  "build_logwidth": 2.1599915826858553,
+  "band_coverage95": 0.7148148148148149,
+  "heldout_builds": [
+    6,
+    7
+  ],
+  "heldout_band_hz": [
+    95.0,
+    115.0
+  ],
+  "note": "coverage vs OBSERVED complex AM (re&im inside 95% band); read WITH log-width"
+}

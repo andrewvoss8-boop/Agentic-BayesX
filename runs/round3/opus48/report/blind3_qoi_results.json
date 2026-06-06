@@ -1,0 +1,29 @@
+{
+  "definition": "netCG=F_iface/m_load; F_iface from FBS coupling M_L/(M_S+M_L)*F (canonical contract)",
+  "m_source_z_kg": 433.16898998117324,
+  "m_load_kg": 170.0,
+  "netcg_fzero_rigid_limit": 0.281844728133829,
+  "netcg_3grms_g": {
+    "p0p5": 0.4957375202769853,
+    "p2p5": 0.5185676699149316,
+    "p50": 1.1154031224957714,
+    "p97p5": 2.3068637120475715,
+    "p99p5": 2.563397818081965
+  },
+  "published_observed_netcg_g": {
+    "min": 0.4663952391219846,
+    "mean": 0.6504323583943944,
+    "max": 0.935076837077097
+  },
+  "coverage_of_published_95": 0.9204545454545454,
+  "coverage_of_published_99": 0.9659090909090909,
+  "bias_ratio_median": 1.7148641332192742,
+  "spec_3grms_g": 2.8570299266408186,
+  "overall_scalar_margin": 2.5614326058618775,
+  "narrowband_exceedance_frac_99hi_vs_spec": 0.254,
+  "n_posterior_used": 400,
+  "n_flights": 11,
+  "posterior": "blind3_posterior.npz",
+  "tag": "withd",
+  "note": "full uncertainty: parameter(epistemic)+build(aleatory)+flight(aleatory)+discrepancy d. sigma_e (sensor noise) excluded from physical QOI. Compare vs PUBLISHED observed netCG."
+}

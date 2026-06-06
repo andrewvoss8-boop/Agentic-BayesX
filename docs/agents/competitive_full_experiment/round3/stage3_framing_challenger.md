@@ -13,6 +13,17 @@ to propose better framings. Honesty rules: do not cite from memory — cite sour
 session (URL/section); mark [SPECULATIVE] / [OPINION]. You critique + propose only; do not edit code,
 durable rules, or checkers. Write ONLY to artifacts/reports/stage3_framing_challenge_20260605/.
 
+THE HUMAN'S REAL OBJECTIVE (anchor everything to this). The human wants a trustworthy StatFEM-based
+aerospace digital twin / model-updating method that (a) produces a decision-relevant load/QOI they can
+defend to an aerospace audience, and (b) is a genuine, defensible novel contribution (they are weighing a
+master's thesis and a possible patent built around the structure/property-based discrepancy idea). A
+recorded lesson: THIS EXPERIMENT DRIFTED from that objective into an internally-motivated technical march
+(a tired-day 5-stage plan), and the human lost visibility into what it was doing. So: (1) restate, in your
+own words, what you believe the human's real objective is; (2) judge whether Stage 3 -- AND the master's
+proposed Stage 4 (higher-fidelity FEM + orthogonal discrepancy) -- actually serves it, or is technical
+machinery for its own sake; (3) treat "make a bigger / more technical plan" as a RED FLAG, not progress.
+You may and should challenge the Stage-4 plan itself, not just Stage 3.
+
 Read first (the independently-verified facts, so you challenge reality not a strawman):
 - artifacts/reports/blind_round3_stage3_review_20260605/review.md  (Stage-3 independent score)
 - artifacts/reports/blind_round3_review_20260604/review.md         (Stage 0/1 blind score)
@@ -56,6 +67,18 @@ Attack the framing on these axes (be specific; tie each to a real decision and w
    research?
 6. THE STAGED 0->5 MARCH. Is the long staged plan delaying real-world value? What would make Stage 3 the
    WRONG question entirely, and what cheaper experiment would deliver more impact?
+7. DRIFT & COMPREHENSION. In <=5 plain sentences, state what Stage 3 is ACTUALLY doing, so a busy human
+   can sanity-check it against intent. Then judge: has this drifted from the real aerospace + contribution
+   objective into a self-justifying technical march? Is the master's Stage-4 plan the evidence-motivated
+   fix, or "more machinery"? What is the SIMPLEST experiment that would answer the human's real question?
+8. THE CONTRIBUTION / PATENT (attack it freely; do NOT protect it). The human may build a thesis and a
+   patent on the structure/property-based discrepancy. Stage 3 showed the naive version (discrepancy in
+   the SAME parameter space as the calibration stiffness) is CONFOUNDED. Pressure-test whether
+   "property/structure-based discrepancy" is even the right contribution to build on. Is the defensible
+   contribution instead the ORTHOGONAL/modular formulation, model-class selection/averaging, the
+   held-out trust-test methodology, or something else entirely? Better the human learns this BEFORE they
+   commit. (Note: a true patentability/freedom-to-operate search has NOT been run; do not assert novelty
+   as fact -- flag what would need a real patent-database search.)
 
 Deliver to artifacts/reports/stage3_framing_challenge_20260605/framing_challenge.md:
 - A blunt verdict on whether Stage 3 is the right question (and where it is plumbing vs science).
@@ -65,6 +88,12 @@ Deliver to artifacts/reports/stage3_framing_challenge_20260605/framing_challenge
   calibration and go prediction/decision-first; model-class selection+averaging instead of a GP
   discrepancy; jump to real data; reframe entirely around overtest risk + force limiting).
 - A KILL LIST: what about the Stage-3 framing to STOP doing.
+- A SIMPLEST-PATH option: the cheapest experiment (least NEW machinery) that would answer the human's real
+  question, ranked by value-per-effort. At least one reframe in your backlog must REDUCE scope/complexity,
+  not add it.
+- A clear RECOMMENDATION on the human's actual fork right now: (i) proceed to Stage 4 as the master
+  planned, (ii) reframe Stage 3/4, or (iii) step back to a simpler experiment closer to the real
+  objective. Say which and why, in one short paragraph a tired human can act on.
 - Sources (cited, with [SPECULATIVE]/[OPINION] marked). A "the framing is right / partly right / wrong"
   conclusion are all fine if honest.
 

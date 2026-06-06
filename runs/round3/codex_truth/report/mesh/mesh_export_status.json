@@ -1,0 +1,7 @@
+{
+  "nodes": 409,
+  "elements": 478,
+  "vtu_written_with_meshio": true,
+  "obj_written_with_meshio": true,
+  "bdf_written": "manual NASTRAN bulk data cards; meshio is used for VTU/OBJ"
+}

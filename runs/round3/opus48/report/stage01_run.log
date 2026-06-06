@@ -1,0 +1,21 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/runs/round3/opus48/code/stage01_trust_hyper.py:260: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.set_title(lbl, fontsize=9.5); ax.legend(fontsize=8); ax.grid(True, alpha=0.3)
+grid points NF=61  modes=[47.2, 86.2, 105.6, 136.6]  pts in half-power bands={47.18: 5, 86.25: 4, 105.63: 5, 136.56: 3}
+{
+  "HELD_OUT_CALIBRATION_95": {
+    "with_d_new_builds_coverage": 0.9986338797814207,
+    "with_d_heldout_band_coverage": 0.9875,
+    "without_d_new_builds_coverage": 0.9836065573770492,
+    "without_d_heldout_band_coverage": 1.0,
+    "note": "target ~0.95; with_d should be near 0.95 and beat without_d (which collapses onto bias)."
+  },
+  "effective_vs_nominal": {
+    "n_eff_kj": 0.32606297263053446,
+    "nominal_points": 1224,
+    "ratio": 0.0002663913175086066,
+    "note": "n_eff << nominal => correlated model error; tightness is not from independent data. n_eff ~ (sigma_prior/sigma_post)^2."
+  }
+}
+kj bias with_d 3.86% (covers True) | without_d 2.28% (covers True) | starve -0.18%
+learned: sigma_build 0.068 (true 0.050) sigma_e 0.227 (true 0.080) sigma_d 0.934 ell_d 0.359 | conv {'worst_rhat': 1.5356832656691903, 'min_ess': 7.196500746056623, 'divergences': 1}
+DONE stage01 in 4318.9 s

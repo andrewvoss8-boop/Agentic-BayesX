@@ -49,3 +49,20 @@ margin can hide a narrow-band 99% exceedance at a coupled resonance (force-limit
    the implied k_j and flag it rather than fudging.
 </content>
 </invoke>
+
+## ===== STAGE 3 priority deliverables (structure-aware fix vs independent truth) =====
+Restated asks (my words), interpretation, and where delivered. Convergence/calibration reported HONESTLY
+either way; never "NUTS active" unless the gate passes over ALL latents.
+
+| # | Priority ask (my words) | Interpretation | Where delivered |
+|---|---|---|---|
+| S1 | Asymmetric / per-DOF, per-strut forward model that CAN represent x≠y, rx≠ry splits | 6 per-strut axial stiffnesses through the hexapod geometry; JAX-differentiable | `code/blind3_model.py` `load_AM_diag`; D26 |
+| S2 | Structure/property-based discrepancy (D12) in PARAMETER (strut-feature) space, not freq-only | per-strut log-k field with azimuth-feature covariance; k_j=k_pop·exp(d0_j) | `code/blind3_model.py` `feature_corr`/`apply_discrepancy`; `blind3_infer.py`; D27 |
+| S3 | Complex (mag+phase) likelihood on all 6 diagonal apparent-mass DOF | fit real+imag, magnitude-relative noise w/ floor | `code/blind3_infer.py` `make_model`; D28 |
+| S4 | netCG per canonical contract (FBS dynamic coupling; show f→0 limit + resonance) | netCG=[M_L/(M_S+M_L)]·F/m_load; FORBIDDEN forms avoided | `code/blind3_qoi.py`; `blind3_netcg_transfer.png`; D25 |
+| S5 | Convergence gate over ALL latents (incl. discrepancy coeffs + per-build) | rank-split R-hat, bulk&tail ESS, divergences; non-centered; ≥4 chains | `report/blind3_nuts_diagnostics.{md,json}`, `blind3_results.json` |
+| S6 | Headline tests: ridge resolved? σ_e inflation stopped? spatial error caught (with/without)? bias/coverage moved? | reported with the with/without comparison + honest nuance (D29) | `blind3_results.json`, `blind3_companions.json`, `blind3_hyperparams.png`, `blind3_split_with_d.png` |
+| S7 | Companion trust studies skipped last run: without-d, starve-data, eff-vs-nominal count, grid-invariance | all four | `blind3_companions.json`, `blind3_results.json` (effective_sample_count), `blind3_gridinv.json` |
+| S8 | Held-out calibration PRIMARY (whole builds AND frequency bands), read WITH width | builds 6,7 + band 95-115 Hz | `report/blind3_heldout.json` |
+| S9 | Full-uncertainty netCG + interface-PSD QOI vs spec (narrow-band exceedance); close D13 | parameter+build+flight+discrepancy d propagated | `code/blind3_qoi.py`, `blind3_qoi_results.json`, `blind3_netcg_*` figs |
+| S10 | Packet, pptx, manifest, files_changed, runtime, decisions_log | — | `report/packet_stage3.md`, `packet.pptx`, `manifest.json`, `files_changed.md`, `runtime.json` |

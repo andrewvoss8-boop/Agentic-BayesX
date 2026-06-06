@@ -1,0 +1,18 @@
+[grid] 110 points in (35.0, 160.0) Hz | train builds [0, 1, 2, 3, 4, 5] | held-out [6, 7]
+[run] chains=4 warmup=350 draws=350 SMOKE=False
+[t=1194s] MAIN FIT done
+
+[companion] WITHOUT structure-based discrepancy (sigma_d=0) ...
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/arviz/stats/diagnostics.py:592: RuntimeWarning: invalid value encountered in scalar divide
+  (between_chain_variance / within_chain_variance + num_samples - 1) / (num_samples)
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/arviz/stats/diagnostics.py:592: RuntimeWarning: invalid value encountered in scalar divide
+  (between_chain_variance / within_chain_variance + num_samples - 1) / (num_samples)
+[companion] STARVE-THE-DATA (1 build, 40-100 Hz) ...
+
+=== MAIN FIT ===
+k_pop [6426581.598918658, 7597095.578232177, 16776414.298924878] f_dome [75.00057252208408, 76.11654951650092, 77.05353551773791]
+sigma_build [0.0006017660772507642, 0.016924701953446867, 0.09084525271544529] sigma_e [0.6207896440689689, 0.6930798368282081, 0.7106950865863719] sigma_d [0.9173040337616934, 1.329032676734632, 1.796858064842619]
+CONVERGENCE {'worst_rhat': 2.845238, 'min_ess_bulk': 4.669239, 'min_ess_tail': 30.569088, 'divergences': 0} GATE_PASS False
+HELD-OUT {'build_coverage95': 0.9106060606060606, 'build_logwidth': 2.1599915826858553, 'band_coverage95': 0.7148148148148149}
+n_eff(k_pop) 0.6 vs nominal 7920
+runtime_s 1937.6

@@ -1,5 +1,10 @@
 Build for correctness, reproducibility, traceability, and continuity.
 
+## Communication Style
+- Two audience levels (chat, reports, packets): BEGINNER-TO-INTERMEDIATE in ML/statistics (~1 yr, not expert); ADVANCED in structural dynamics (FRFs, modal analysis, FEM, damping, mode shapes, apparent mass used directly).
+- For ML/stats/sampling terms: plain English; define each term/acronym/symbol (with units) on first use; don't assume the reader recalls an earlier symbol. Structural-dynamics terms need no basic gloss.
+- Lead with intuition + a concrete example on the ML/stats side, then the precise detail; don't hide the simple idea behind formalism.
+
 ## Rules
 - Do not guess silently. State assumptions and units explicitly.
 - Inspect relevant files before changing code.
@@ -107,6 +112,9 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 
 ### Runtime Accounting Gate
 - Record `runtime.json` with `active_runtime_s` (sum of per-command execution time) and `elapsed_wallclock_s`. Cross-runner comparison uses `active_runtime_s` so human-approval wait does not distort it. `active_runtime_s <= elapsed_wallclock_s`.
+
+## Compute
+- For where to run multi-hour NUTS / TMCMC / FEM jobs (CPU+High-RAM now; Colab A100+float64 only when the method is validated AND the work is parallel-shaped; H100 reserve) and the non-negotiables for any remote/GPU run, follow `docs/compute_protocol.md`. Do NOT use T4/L4/TPU for the posterior/eigen math (float64).
 
 ## Memory
 - Do not rely on conversational memory across sessions.

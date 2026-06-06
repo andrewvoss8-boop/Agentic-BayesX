@@ -1,6 +1,6 @@
 # Project Vision — A Digital Bayesian Twin for Aerospace Structures
 
-Status: working vision (living document). Last updated: 2026-06-05 (sweeping revision).
+Status: working vision (living document). Last updated: 2026-06-06.
 Owner: Andrew Voss (lead human). Lead agent: Claude Code (Agentic BayesX).
 Communication: written for a beginner-to-intermediate reader (about one year of ML); technical terms
 are defined in plain words on first use.
@@ -46,6 +46,38 @@ lives. If the new methods work, there is a patent; if they do not, there is no p
 - The open, hard, aerospace-relevant regime is **dynamic, physics-identifying, QOI-propagating** inference
   on **assembled-interface** structures with **real data**. That is the "track," and it is largely
   unaddressed.
+
+## 3.5 What we are actually doing — and where novelty can honestly come from (stance, 2026-06-06)
+Be honest about the stance: we are NOT claiming a brand-new statistical method up front. We are
+**TEST-DRIVING StatFEM and its neighbors** (Bayesian FE model updating, KOH/Plumlee calibration, TMCMC,
+hierarchical Bayes, force-limited vibration) on aerospace structural-dynamics problems Andrew is a
+genuine expert in. We do as much **scrappy, automated, agentic testing of synthetic AND real examples**
+as we can to pressure-test where these tools BREAK. The novel, patentable innovation is **whatever it
+takes to make these tools actually WORK in a real aerospace workflow and modeling context** — discovered
+AS we test, not pre-claimed. If a fix that makes it work emerges and is defensible -> patent; if not ->
+no patent.
+
+**Literature read (2026-06-06):** Andrew has now read Kiran, Das & Bansal (2025), "A state-of-the-art
+review of Bayesian FE model updating techniques for structural systems," Probabilistic Engineering
+Mechanics 80:103761 (the "review of Bayesian..." PDF). It sets the honest baseline:
+- Bayesian FE model updating is MATURE and thoroughly reviewed: likelihoods in time/frequency/modal
+  domains; the Beck-Katafygiotis global/local/un-identifiability taxonomy (= our Stage-3 ridge); model
+  errors (Mottershead); prediction-error; model-class selection (evidence/Occam); hierarchical Bayes;
+  TMCMC; complex & INCOMPLETE modal data; SHM/damage detection. => Do NOT claim novelty in any of these,
+  including "interfaces" / "incomplete complex modal data" updating (already published).
+- The review NEVER mentions StatFEM (Girolami). The Bayesian-FE-updating world (Beck/Katafygiotis/
+  Yuen/Papadimitriou) and StatFEM (applied math) are SEPARATE literatures -> bringing StatFEM's
+  discrepancy formalism into this aerospace dynamic updating context is a genuine literature BRIDGE.
+- The review's OWN stated gaps that line up with us: "Bayesian FE model updating using OUTPUT-ONLY
+  time-history data has NOT been researched" (the unknown-forcing / operational-modal-analysis white
+  space); a GENERALIZED integrated workflow (modal test -> ID -> updating -> damage) as future scope
+  (our tech-assisted installed-part workflow); complex modal data still under-explored; surrogate/ML for
+  tractability; Bayesian UQ for differential equations (probabilistic numerics, StatFEM-adjacent). It
+  does NOT cover aerospace force-limited vibration / load QOIs at all.
+- Caution (review ref [184], Schneider et al.): a multiplicative model error "correlated in both SPACE
+  and FREQUENCY" already exists -> our discrepancy-correlation idea is adjacent to prior work; more
+  reason the defensible novelty is the application + unknown forcing + load QOI, not the correlation
+  itself.
 
 ## 4. The technical heart — the discrepancy lever
 When you try to learn real physics (stiffness k, damping c, forcing) from dynamic test data, the model's

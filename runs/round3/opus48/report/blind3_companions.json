@@ -1,0 +1,61 @@
+{
+  "without_d": {
+    "k_pop": [
+      16779984.47963363,
+      16853118.009161435,
+      16930818.298318665
+    ],
+    "f_dome": [
+      71.95616283170803,
+      72.13637830170477,
+      72.34222100196419
+    ],
+    "sigma_build": [
+      0.00012142785651998566,
+      0.0019413771873619313,
+      0.008522829195712034
+    ],
+    "sigma_e": [
+      0.9166823782543582,
+      0.9313382119056551,
+      0.9464918709068044
+    ],
+    "convergence": {
+      "worst_rhat": 1.009453,
+      "min_ess_bulk": 487.201493,
+      "min_ess_tail": 459.67161,
+      "divergences": 0
+    }
+  },
+  "with_vs_without": {
+    "sigma_e_with": 0.6930798368282081,
+    "sigma_e_without": 0.9313382119056551,
+    "worst_rhat_with": 2.845238,
+    "worst_rhat_without": 1.009453,
+    "note": "does the structure-based discrepancy lower sigma_e / improve convergence vs no discrepancy?"
+  },
+  "starve_data": {
+    "k_pop": [
+      8127541.633035376,
+      13917544.588371132,
+      20510995.32379406
+    ],
+    "sigma_e": [
+      0.537312383177518,
+      0.5831570451819515,
+      0.6724622693497466
+    ],
+    "sigma_d": [
+      1.0537849151518803,
+      1.3902873408601186,
+      1.6775659410594528
+    ],
+    "convergence": {
+      "worst_rhat": 2.846632,
+      "min_ess_bulk": 4.774709,
+      "min_ess_tail": 24.983179,
+      "divergences": 0
+    },
+    "note": "1 build, band 40-100 Hz; removes the data deluge"
+  }
+}

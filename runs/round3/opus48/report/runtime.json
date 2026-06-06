@@ -1,0 +1,20 @@
+{
+  "stage": "round3 stage3 (structure-aware fix, BLIND)",
+  "elapsed_wallclock_s": 9300,
+  "active_runtime_s": 8700,
+  "note": "active_runtime_s = sum of per-command execution time (all compute that ran, incl. exploratory + killed restarts, for honest cross-runner comparison). active <= elapsed. Wall span 20:40:52->23:15:52 (~2h35m) for the Stage-3 build+run.",
+  "breakdown_s": {
+    "blind3_infer_final_run": 1937.6,
+    "blind3_qoi": 60,
+    "blind3_figs": 30,
+    "blind3_model_validate_plus_bestfit_probe": 60,
+    "blind3_pptx": 10,
+    "smoke_tests_x4": 1100,
+    "killed_restart_main_600w500d": 3240,
+    "killed_restart_sequential": 280,
+    "gridinv_bounded_killed": 1950
+  },
+  "producing_commands_active_s": 2100,
+  "exploratory_and_killed_active_s": 6600,
+  "convergence_gate": {"with_d": "FAIL (R-hat 2.85)", "without_d": "PASS (R-hat 1.009)"}
+}

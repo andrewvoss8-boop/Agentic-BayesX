@@ -1,0 +1,41 @@
+{
+  "qoi_mapping": "a_cg = F/M_app,zz (driving-point accelerance); PSD_acg = PSD_F/(|M_zz|^2 g0^2)",
+  "qoi_mapping_known_bias": "driving-point mapping ~2x the published 3*GRMS (truth's coupled transmission attenuates more) -> reported model-form bias in the QOI transfer",
+  "full_uncertainty_sources": [
+    "parameter k_strut/f_dome (epistemic)",
+    "build-to-build sigma_build (aleatory)",
+    "flight-to-flight forcing (aleatory)",
+    "discrepancy d (with its uncertainty)",
+    "sensor n/a (QOI is structural)"
+  ],
+  "netcg_3grms_g_PREDICTED_full_uncertainty": {
+    "netcg_3grms_g_q50": 3.159947182505937,
+    "netcg_3grms_g_95ci": [
+      1.2214224325696559,
+      6.083879534496517
+    ],
+    "netcg_3grms_g_99ci": [
+      0.5997120967957851,
+      6.379517087917885
+    ]
+  },
+  "netcg_3grms_g_PUBLISHED_observed": {
+    "mean": 0.6510199790482493,
+    "min": 0.46196745157257757,
+    "max": 0.9576129383074701
+  },
+  "spec_definition": "design-envelope forcing through predictive-median accelerance, peak-hold broadband envelope",
+  "narrow_band_exceedance": {
+    "frac_freqs_99hi_exceeds_spec": 0.4275,
+    "frac_freqs_median_exceeds_spec": 0.0,
+    "overall_scalar_margin_spec_over_pred": 4.52411982363043,
+    "headline": "a large overall scalar margin can coexist with narrow-band 99%-hi exceedance at a sharp coupled resonance"
+  },
+  "qoi_grid": {
+    "band_hz": [
+      30.0,
+      170.0
+    ],
+    "n_points": 400
+  }
+}

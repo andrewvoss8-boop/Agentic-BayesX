@@ -50,3 +50,24 @@ PYTHONPATH="runs/round3/opus48/.pylibs" .venv_nuts/bin/python runs/round3/opus48
 shasum -a 256 -c harness/checkers/manifest.sha256
 ```
 </content>
+
+## BLIND inference round (vs Codex independent truth) — one-command replay
+```
+# (env: repo-root .venv_nuts; local libs on PYTHONPATH)
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind_model.py        # forward-model sanity vs published data
+R3BLIND_COMPANIONS=0 PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind_infer.py   # NUTS + held-out calibration
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind_qoi.py          # netCG/interface-PSD QOI vs spec
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind_pptx.py         # packet.pptx
+# Companions (slow, optional, diagnostic): R3BLIND_COMPANIONS=1 ... code/blind_infer.py
+```
+
+## STAGE 3 (structure-aware fix) — one-command replay (env: repo-root .venv_nuts; .pylibs+code on PYTHONPATH)
+```
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind3_model.py    # forward-model sanity vs data
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind3_infer.py    # NUTS(with-d) + without-d + starve + held-out + n_eff
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind3_qoi.py      # full-uncertainty netCG (with-d + converged without-d)
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind3_figs.py     # review figures
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind3_gridinv.py  # grid-invariance companion
+PYTHONPATH=".pylibs:code" ../../../.venv_nuts/bin/python code/blind3_pptx.py     # packet.pptx
+# Quick low-sample test (NOT for reporting): prefix R3_SMOKE=1
+```

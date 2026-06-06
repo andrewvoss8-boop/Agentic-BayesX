@@ -1,0 +1,4957 @@
+{
+  "rng_seed": 2026060403,
+  "profiles": {
+    "material_visualization": {
+      "dome_material": "Al 2219-like",
+      "E_GPa": 72.0,
+      "rho_kg_m3": 2840.0,
+      "nu": 0.33,
+      "pressure_bar_abs": 4.2,
+      "diameter_m": 5.5,
+      "ellipsoidal_cap_height_m": 1.38
+    },
+    "masses": {
+      "netcg_load_mass_kg": 170.0,
+      "avionics_mass_kg": 136.0,
+      "tray_panel_mass_kg": 34.0,
+      "source_effective_z_mass_kg": 430.0
+    },
+    "dof_profiles": {
+      "z": {
+        "source_rigid": 430.0,
+        "load_rigid": 170.0,
+        "source_modes": [
+          {
+            "fn_hz": 93.5,
+            "zeta": 0.0225,
+            "participation": 0.42,
+            "fd_stiff_frac": 0.018,
+            "fd_loss_frac": 0.62,
+            "relax_hz": 155.0,
+            "nonlinear_soften_frac": 0.005
+          },
+          {
+            "fn_hz": 128.0,
+            "zeta": 0.028,
+            "participation": 0.17,
+            "fd_stiff_frac": 0.025,
+            "fd_loss_frac": 0.45,
+            "relax_hz": 210.0,
+            "nonlinear_soften_frac": 0.003
+          },
+          {
+            "fn_hz": 176.0,
+            "zeta": 0.0185,
+            "participation": 0.12,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.38,
+            "relax_hz": 260.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 266.0,
+            "zeta": 0.032,
+            "participation": 0.09,
+            "fd_stiff_frac": 0.02,
+            "fd_loss_frac": 0.52,
+            "relax_hz": 330.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 382.0,
+            "zeta": 0.036,
+            "participation": 0.06,
+            "fd_stiff_frac": 0.012,
+            "fd_loss_frac": 0.35,
+            "relax_hz": 470.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 522.0,
+            "zeta": 0.04,
+            "participation": 0.04,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.24,
+            "relax_hz": 520.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ],
+        "load_modes": [
+          {
+            "fn_hz": 86.25,
+            "zeta": 0.0195,
+            "participation": 0.78,
+            "fd_stiff_frac": 0.022,
+            "fd_loss_frac": 0.8,
+            "relax_hz": 135.0,
+            "nonlinear_soften_frac": 0.012
+          },
+          {
+            "fn_hz": 119.0,
+            "zeta": 0.026,
+            "participation": 0.22,
+            "fd_stiff_frac": -0.012,
+            "fd_loss_frac": 0.44,
+            "relax_hz": 180.0,
+            "nonlinear_soften_frac": 0.004
+          },
+          {
+            "fn_hz": 168.0,
+            "zeta": 0.022,
+            "participation": 0.18,
+            "fd_stiff_frac": 0.016,
+            "fd_loss_frac": 0.4,
+            "relax_hz": 230.0,
+            "nonlinear_soften_frac": 0.003
+          },
+          {
+            "fn_hz": 244.0,
+            "zeta": 0.031,
+            "participation": 0.11,
+            "fd_stiff_frac": 0.01,
+            "fd_loss_frac": 0.58,
+            "relax_hz": 310.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 356.0,
+            "zeta": 0.038,
+            "participation": 0.07,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.32,
+            "relax_hz": 430.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 505.0,
+            "zeta": 0.044,
+            "participation": 0.05,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.28,
+            "relax_hz": 540.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ]
+      },
+      "x": {
+        "source_rigid": 360.0,
+        "load_rigid": 158.0,
+        "source_modes": [
+          {
+            "fn_hz": 101.0,
+            "zeta": 0.025,
+            "participation": 0.24,
+            "fd_stiff_frac": 0.014,
+            "fd_loss_frac": 0.48,
+            "relax_hz": 160.0,
+            "nonlinear_soften_frac": 0.003
+          },
+          {
+            "fn_hz": 149.0,
+            "zeta": 0.03,
+            "participation": 0.13,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.36,
+            "relax_hz": 225.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 315.0,
+            "zeta": 0.036,
+            "participation": 0.08,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.24,
+            "relax_hz": 390.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 477.0,
+            "zeta": 0.04,
+            "participation": 0.05,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.2,
+            "relax_hz": 530.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ],
+        "load_modes": [
+          {
+            "fn_hz": 69.0,
+            "zeta": 0.023,
+            "participation": 0.52,
+            "fd_stiff_frac": 0.02,
+            "fd_loss_frac": 0.7,
+            "relax_hz": 115.0,
+            "nonlinear_soften_frac": 0.006
+          },
+          {
+            "fn_hz": 91.0,
+            "zeta": 0.021,
+            "participation": 0.3,
+            "fd_stiff_frac": -0.012,
+            "fd_loss_frac": 0.55,
+            "relax_hz": 150.0,
+            "nonlinear_soften_frac": 0.005
+          },
+          {
+            "fn_hz": 154.0,
+            "zeta": 0.027,
+            "participation": 0.18,
+            "fd_stiff_frac": 0.012,
+            "fd_loss_frac": 0.36,
+            "relax_hz": 230.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 286.0,
+            "zeta": 0.035,
+            "participation": 0.1,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.28,
+            "relax_hz": 360.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 448.0,
+            "zeta": 0.043,
+            "participation": 0.05,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.2,
+            "relax_hz": 510.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ]
+      },
+      "y": {
+        "source_rigid": 365.0,
+        "load_rigid": 160.0,
+        "source_modes": [
+          {
+            "fn_hz": 101.0,
+            "zeta": 0.025,
+            "participation": 0.23,
+            "fd_stiff_frac": 0.014,
+            "fd_loss_frac": 0.48,
+            "relax_hz": 160.0,
+            "nonlinear_soften_frac": 0.003
+          },
+          {
+            "fn_hz": 151.0,
+            "zeta": 0.03,
+            "participation": 0.12,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.36,
+            "relax_hz": 225.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 323.0,
+            "zeta": 0.036,
+            "participation": 0.08,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.24,
+            "relax_hz": 390.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 481.0,
+            "zeta": 0.04,
+            "participation": 0.05,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.2,
+            "relax_hz": 530.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ],
+        "load_modes": [
+          {
+            "fn_hz": 69.0,
+            "zeta": 0.023,
+            "participation": 0.5,
+            "fd_stiff_frac": 0.02,
+            "fd_loss_frac": 0.7,
+            "relax_hz": 115.0,
+            "nonlinear_soften_frac": 0.006
+          },
+          {
+            "fn_hz": 91.0,
+            "zeta": 0.021,
+            "participation": 0.29,
+            "fd_stiff_frac": -0.012,
+            "fd_loss_frac": 0.55,
+            "relax_hz": 150.0,
+            "nonlinear_soften_frac": 0.005
+          },
+          {
+            "fn_hz": 157.0,
+            "zeta": 0.027,
+            "participation": 0.18,
+            "fd_stiff_frac": 0.012,
+            "fd_loss_frac": 0.36,
+            "relax_hz": 230.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 292.0,
+            "zeta": 0.035,
+            "participation": 0.1,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.28,
+            "relax_hz": 360.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 455.0,
+            "zeta": 0.043,
+            "participation": 0.05,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.2,
+            "relax_hz": 510.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ]
+      },
+      "rx": {
+        "source_rigid": 520.0,
+        "load_rigid": 245.0,
+        "source_modes": [
+          {
+            "fn_hz": 112.0,
+            "zeta": 0.026,
+            "participation": 0.28,
+            "fd_stiff_frac": 0.018,
+            "fd_loss_frac": 0.52,
+            "relax_hz": 180.0,
+            "nonlinear_soften_frac": 0.003
+          },
+          {
+            "fn_hz": 174.0,
+            "zeta": 0.03,
+            "participation": 0.14,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.34,
+            "relax_hz": 250.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 335.0,
+            "zeta": 0.038,
+            "participation": 0.08,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.24,
+            "relax_hz": 430.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ],
+        "load_modes": [
+          {
+            "fn_hz": 82.0,
+            "zeta": 0.024,
+            "participation": 0.48,
+            "fd_stiff_frac": 0.02,
+            "fd_loss_frac": 0.72,
+            "relax_hz": 125.0,
+            "nonlinear_soften_frac": 0.006
+          },
+          {
+            "fn_hz": 109.0,
+            "zeta": 0.022,
+            "participation": 0.32,
+            "fd_stiff_frac": -0.012,
+            "fd_loss_frac": 0.54,
+            "relax_hz": 160.0,
+            "nonlinear_soften_frac": 0.005
+          },
+          {
+            "fn_hz": 197.0,
+            "zeta": 0.03,
+            "participation": 0.16,
+            "fd_stiff_frac": 0.01,
+            "fd_loss_frac": 0.4,
+            "relax_hz": 270.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 390.0,
+            "zeta": 0.044,
+            "participation": 0.08,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.22,
+            "relax_hz": 500.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ]
+      },
+      "ry": {
+        "source_rigid": 515.0,
+        "load_rigid": 250.0,
+        "source_modes": [
+          {
+            "fn_hz": 112.0,
+            "zeta": 0.026,
+            "participation": 0.27,
+            "fd_stiff_frac": 0.018,
+            "fd_loss_frac": 0.52,
+            "relax_hz": 180.0,
+            "nonlinear_soften_frac": 0.003
+          },
+          {
+            "fn_hz": 177.0,
+            "zeta": 0.03,
+            "participation": 0.14,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.34,
+            "relax_hz": 250.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 342.0,
+            "zeta": 0.038,
+            "participation": 0.08,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.24,
+            "relax_hz": 430.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ],
+        "load_modes": [
+          {
+            "fn_hz": 82.0,
+            "zeta": 0.024,
+            "participation": 0.47,
+            "fd_stiff_frac": 0.02,
+            "fd_loss_frac": 0.72,
+            "relax_hz": 125.0,
+            "nonlinear_soften_frac": 0.006
+          },
+          {
+            "fn_hz": 109.0,
+            "zeta": 0.022,
+            "participation": 0.31,
+            "fd_stiff_frac": -0.012,
+            "fd_loss_frac": 0.54,
+            "relax_hz": 160.0,
+            "nonlinear_soften_frac": 0.005
+          },
+          {
+            "fn_hz": 202.0,
+            "zeta": 0.03,
+            "participation": 0.16,
+            "fd_stiff_frac": 0.01,
+            "fd_loss_frac": 0.4,
+            "relax_hz": 270.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 398.0,
+            "zeta": 0.044,
+            "participation": 0.08,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.22,
+            "relax_hz": 500.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ]
+      },
+      "rz": {
+        "source_rigid": 420.0,
+        "load_rigid": 185.0,
+        "source_modes": [
+          {
+            "fn_hz": 136.0,
+            "zeta": 0.028,
+            "participation": 0.24,
+            "fd_stiff_frac": 0.014,
+            "fd_loss_frac": 0.4,
+            "relax_hz": 210.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 229.0,
+            "zeta": 0.033,
+            "participation": 0.12,
+            "fd_stiff_frac": -0.008,
+            "fd_loss_frac": 0.3,
+            "relax_hz": 320.0,
+            "nonlinear_soften_frac": 0.001
+          },
+          {
+            "fn_hz": 405.0,
+            "zeta": 0.042,
+            "participation": 0.07,
+            "fd_stiff_frac": 0.006,
+            "fd_loss_frac": 0.2,
+            "relax_hz": 500.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ],
+        "load_modes": [
+          {
+            "fn_hz": 118.0,
+            "zeta": 0.026,
+            "participation": 0.42,
+            "fd_stiff_frac": 0.018,
+            "fd_loss_frac": 0.6,
+            "relax_hz": 170.0,
+            "nonlinear_soften_frac": 0.004
+          },
+          {
+            "fn_hz": 171.0,
+            "zeta": 0.029,
+            "participation": 0.24,
+            "fd_stiff_frac": -0.01,
+            "fd_loss_frac": 0.44,
+            "relax_hz": 245.0,
+            "nonlinear_soften_frac": 0.002
+          },
+          {
+            "fn_hz": 286.0,
+            "zeta": 0.038,
+            "participation": 0.12,
+            "fd_stiff_frac": 0.008,
+            "fd_loss_frac": 0.28,
+            "relax_hz": 360.0,
+            "nonlinear_soften_frac": 0.0
+          },
+          {
+            "fn_hz": 474.0,
+            "zeta": 0.046,
+            "participation": 0.06,
+            "fd_stiff_frac": -0.006,
+            "fd_loss_frac": 0.18,
+            "relax_hz": 520.0,
+            "nonlinear_soften_frac": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "forcing_params": {
+    "quantity": "interface forcing PSD",
+    "units": "N^2/Hz",
+    "db_convention": "PSD-space dB, factor = 10**(dB/10)",
+    "design_envelope_array_key": "design_force_psd_N2_per_Hz",
+    "mean_offset_db_relative_to_design": -6.0,
+    "matern_family": "Matern-3/2 in log10(frequency_Hz)",
+    "flight_to_flight_sigma_db": 3.0,
+    "length_scale_log10_hz": 0.28,
+    "control_grid_count_used_to_draw_gp": 180,
+    "n_flights": 11
+  },
+  "builds": [
+    {
+      "build_id": 0,
+      "source_fn_scale": 1.0290725270789376,
+      "load_fn_scale": 1.0109650562339114,
+      "source_zeta_scale": 0.9996387544708673,
+      "load_zeta_scale": 0.9951229159412666,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        8109810.119736517,
+        6858216.56197395,
+        8691851.294499708,
+        8304425.710832713,
+        8656036.012594039,
+        8487134.638132503
+      ],
+      "strut_length_variation_mm": [
+        1.714565910149326,
+        0.6015459392430113,
+        0.7062112884033728,
+        -1.058355430546306,
+        -0.4600910452582726,
+        -0.45953594524425295
+      ],
+      "preload_variation_frac": [
+        0.00786000237340158,
+        -0.0589469711884067,
+        0.07120178517875053,
+        0.07321041617908701,
+        0.006880161773823563,
+        -0.0282278761789956
+      ],
+      "joint_stiffness_variation_frac": [
+        -0.02538055768256756,
+        -0.175794364820419,
+        0.044567892007141834,
+        -0.0019920768106363104,
+        0.040263688880067844,
+        0.019965486955002644
+      ],
+      "pair_split_xy_fraction": 0.06582694361159769,
+      "pair_split_rot_fraction": 0.04047190151372065,
+      "dofs": {
+        "x": {
+          "source_rigid": 356.7265906542283,
+          "load_rigid": 158.4948664367868,
+          "source_modes": [
+            {
+              "fn_hz": 97.5412090230276,
+              "zeta": 0.025030763668782183,
+              "participation": 0.22050022925509666,
+              "fd_stiff_frac": 0.01731004722951503,
+              "fd_loss_frac": 0.5638475362498439,
+              "relax_hz": 136.43745205936906,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 143.59046148742053,
+              "zeta": 0.029973543445942784,
+              "participation": 0.13339081640496556,
+              "fd_stiff_frac": -0.006279195399200586,
+              "fd_loss_frac": 0.3748237613175056,
+              "relax_hz": 239.2377268961318,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 307.8308656018166,
+              "zeta": 0.03607128490302187,
+              "participation": 0.07296212109809354,
+              "fd_stiff_frac": -0.007223322190649891,
+              "fd_loss_frac": 0.28205162502969017,
+              "relax_hz": 410.9502904641925,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 467.48349561489624,
+              "zeta": 0.03980469004722856,
+              "participation": 0.0463751607670702,
+              "fd_stiff_frac": -0.00434392577315584,
+              "fd_loss_frac": 0.2206556834259264,
+              "relax_hz": 592.290598867492,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 64.71727933953187,
+              "zeta": 0.0229664099788101,
+              "participation": 0.4985520793547763,
+              "fd_stiff_frac": 0.019997314265024737,
+              "fd_loss_frac": 0.6984449695776596,
+              "relax_hz": 123.57732299219315,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 83.0603116268709,
+              "zeta": 0.020805656236501373,
+              "participation": 0.2892070053527248,
+              "fd_stiff_frac": -0.014919001813358453,
+              "fd_loss_frac": 0.5340348022554526,
+              "relax_hz": 146.15518859375328,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 141.2611013920461,
+              "zeta": 0.02674313807577908,
+              "participation": 0.17876711014526625,
+              "fd_stiff_frac": 0.020742943584558353,
+              "fd_loss_frac": 0.3767264271227186,
+              "relax_hz": 231.9615632336408,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 266.2599275515233,
+              "zeta": 0.03453485489963858,
+              "participation": 0.10743392066636462,
+              "fd_stiff_frac": 0.004206663777889794,
+              "fd_loss_frac": 0.13184835427387634,
+              "relax_hz": 383.59591170897727,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 415.57065088525997,
+              "zeta": 0.04293960629661029,
+              "participation": 0.04841466207965316,
+              "fd_stiff_frac": -0.00678585047186755,
+              "fd_loss_frac": 0.19910826327551995,
+              "relax_hz": 500.37263561441,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 359.462248678525,
+          "load_rigid": 157.363029691202,
+          "source_modes": [
+            {
+              "fn_hz": 103.48667430013619,
+              "zeta": 0.02513051873166368,
+              "participation": 0.2625766008823281,
+              "fd_stiff_frac": 0.005429097275415733,
+              "fd_loss_frac": 0.4489124610694425,
+              "relax_hz": 160.7048516640634,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 157.0987400473472,
+              "zeta": 0.030016242193876008,
+              "participation": 0.11443157602300694,
+              "fd_stiff_frac": -0.014728484845938963,
+              "fd_loss_frac": 0.3398621333818075,
+              "relax_hz": 254.97796205660168,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 326.7368610404994,
+              "zeta": 0.035795888913304146,
+              "participation": 0.08380069038329839,
+              "fd_stiff_frac": 0.009751705566222568,
+              "fd_loss_frac": 0.17515601109081072,
+              "relax_hz": 389.64318189238736,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 492.6972153040027,
+              "zeta": 0.04019748306584315,
+              "participation": 0.0518382770725716,
+              "fd_stiff_frac": 0.0044862861585699635,
+              "fd_loss_frac": 0.20410957637800647,
+              "relax_hz": 512.5890229617789,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 75.5088852687633,
+              "zeta": 0.02280472311318423,
+              "participation": 0.5444127123266819,
+              "fd_stiff_frac": 0.018198178137075086,
+              "fd_loss_frac": 0.5538880188575993,
+              "relax_hz": 112.13803344832256,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 98.7602854606626,
+              "zeta": 0.020897629485511188,
+              "participation": 0.219052655960089,
+              "fd_stiff_frac": -0.012184527957682786,
+              "fd_loss_frac": 0.565516597593057,
+              "relax_hz": 145.25783880474435,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 174.99651020321375,
+              "zeta": 0.026829980155571156,
+              "participation": 0.18911765233380173,
+              "fd_stiff_frac": 0.007890616434062081,
+              "fd_loss_frac": 0.3018760838206279,
+              "relax_hz": 237.7685421239696,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 317.3573743452866,
+              "zeta": 0.03455458083636465,
+              "participation": 0.11133989132230078,
+              "fd_stiff_frac": 0.01495958987615523,
+              "fd_loss_frac": 0.37676118821953336,
+              "relax_hz": 406.858485323237,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 512.3329894094102,
+              "zeta": 0.042915560481688146,
+              "participation": 0.05133016930258284,
+              "fd_stiff_frac": -0.009783188709849818,
+              "fd_loss_frac": 0.18326691277253274,
+              "relax_hz": 448.87376682749243,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 418.24583680150243,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 97.46705628493957,
+              "zeta": 0.022527368353034347,
+              "participation": 0.39914069172385513,
+              "fd_stiff_frac": 0.024369912501117252,
+              "fd_loss_frac": 0.6135629774423282,
+              "relax_hz": 171.21876456676617,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 131.67275572208072,
+              "zeta": 0.028004027337386786,
+              "participation": 0.14817459419801937,
+              "fd_stiff_frac": 0.028863528709928116,
+              "fd_loss_frac": 0.49948100374438487,
+              "relax_hz": 193.1887038700547,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 181.6513235122957,
+              "zeta": 0.018518990714621503,
+              "participation": 0.10796266770509867,
+              "fd_stiff_frac": -0.01718344705254543,
+              "fd_loss_frac": 0.42008848986367187,
+              "relax_hz": 288.27487965537216,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 271.4137076784539,
+              "zeta": 0.031838905348081224,
+              "participation": 0.07813180816369254,
+              "fd_stiff_frac": 0.019306156480065582,
+              "fd_loss_frac": 0.48119196496433875,
+              "relax_hz": 324.75498450466495,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 392.5821830637261,
+              "zeta": 0.03596853867458029,
+              "participation": 0.05772885073458504,
+              "fd_stiff_frac": 0.008719710350165865,
+              "fd_loss_frac": 0.3760097062088164,
+              "relax_hz": 470.2631183073719,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 534.4722662841152,
+              "zeta": 0.039920871905054355,
+              "participation": 0.04213516374476875,
+              "fd_stiff_frac": 0.0021428133447947938,
+              "fd_loss_frac": 0.2635110694578067,
+              "relax_hz": 549.338507943655,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 87.69694567149223,
+              "zeta": 0.019473993698233664,
+              "participation": 0.8695754649314504,
+              "fd_stiff_frac": 0.03177122894194638,
+              "fd_loss_frac": 0.8316389417790492,
+              "relax_hz": 144.81943768570125,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 119.50792286703445,
+              "zeta": 0.025887073049144553,
+              "participation": 0.2568982381118463,
+              "fd_stiff_frac": 0.006222564901227971,
+              "fd_loss_frac": 0.43074127584529087,
+              "relax_hz": 183.110459200363,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 170.1802170955811,
+              "zeta": 0.021891768620340715,
+              "participation": 0.19370428350891158,
+              "fd_stiff_frac": 0.02683988257395803,
+              "fd_loss_frac": 0.4256089049524276,
+              "relax_hz": 243.08889634251815,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 249.20966804904424,
+              "zeta": 0.030874327341428722,
+              "participation": 0.13437305432954855,
+              "fd_stiff_frac": 0.00651360089334696,
+              "fd_loss_frac": 0.5362080508787131,
+              "relax_hz": 343.58195747791,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 366.4814402967013,
+              "zeta": 0.03788293356803036,
+              "participation": 0.054834247284508225,
+              "fd_stiff_frac": -0.0005109202899557918,
+              "fd_loss_frac": 0.32567292261601694,
+              "relax_hz": 478.02212073709234,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 508.7428703916067,
+              "zeta": 0.04385719975630454,
+              "participation": 0.05267376414173913,
+              "fd_stiff_frac": 0.012852784585482032,
+              "fd_loss_frac": 0.24820043696113223,
+              "relax_hz": 544.150772385517,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 513.9011127356817,
+          "load_rigid": 248.50996471850019,
+          "source_modes": [
+            {
+              "fn_hz": 112.56553865162263,
+              "zeta": 0.0257863541411243,
+              "participation": 0.279109639691714,
+              "fd_stiff_frac": 0.016962741666240008,
+              "fd_loss_frac": 0.4866665668299252,
+              "relax_hz": 183.22592624143525,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 175.67260681845664,
+              "zeta": 0.030024935911922884,
+              "participation": 0.14661680028666033,
+              "fd_stiff_frac": -0.01105620720081519,
+              "fd_loss_frac": 0.3055376085670273,
+              "relax_hz": 259.7437626010277,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 341.4349527066078,
+              "zeta": 0.03803815485056404,
+              "participation": 0.07839587833501828,
+              "fd_stiff_frac": -0.000703426629236897,
+              "fd_loss_frac": 0.2277061501990325,
+              "relax_hz": 454.4028737889306,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 79.9649482024792,
+              "zeta": 0.023831219220843615,
+              "participation": 0.36382511709675847,
+              "fd_stiff_frac": 0.030506623930285318,
+              "fd_loss_frac": 0.7818211740392421,
+              "relax_hz": 139.52257367144912,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 105.33349480704582,
+              "zeta": 0.022022913164328636,
+              "participation": 0.3313205437680272,
+              "fd_stiff_frac": -0.011107163559670181,
+              "fd_loss_frac": 0.535267522354398,
+              "relax_hz": 160.6361925892905,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 193.4697775759916,
+              "zeta": 0.029894625693477353,
+              "participation": 0.17199304958714592,
+              "fd_stiff_frac": 0.008643580184292508,
+              "fd_loss_frac": 0.35979460379795836,
+              "relax_hz": 250.79917013834515,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 379.3091202611105,
+              "zeta": 0.043766304483499885,
+              "participation": 0.06408260884102669,
+              "fd_stiff_frac": -0.004685749988675013,
+              "fd_loss_frac": 0.22412944815944696,
+              "relax_hz": 499.175545095741,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 512.3449317869971,
+          "load_rigid": 246.754051676451,
+          "source_modes": [
+            {
+              "fn_hz": 115.57219101029492,
+              "zeta": 0.026175464428677728,
+              "participation": 0.26937434799633175,
+              "fd_stiff_frac": 0.015826503550304565,
+              "fd_loss_frac": 0.4094196966495178,
+              "relax_hz": 189.38719753207232,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 185.98715441062686,
+              "zeta": 0.029784927774884323,
+              "participation": 0.12881037276692245,
+              "fd_stiff_frac": -0.0071059482233253495,
+              "fd_loss_frac": 0.2941636173174197,
+              "relax_hz": 260.2641411361746,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 358.5244680932984,
+              "zeta": 0.038008341601829046,
+              "participation": 0.07398235310551225,
+              "fd_stiff_frac": 0.00880167369563289,
+              "fd_loss_frac": 0.22308861306768119,
+              "relax_hz": 392.1036535513227,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 85.56508765597687,
+              "zeta": 0.023853557573996303,
+              "participation": 0.45343508786230535,
+              "fd_stiff_frac": 0.02249760083812984,
+              "fd_loss_frac": 0.8058776829703009,
+              "relax_hz": 126.2494959024795,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 114.76692962518895,
+              "zeta": 0.022027512629417295,
+              "participation": 0.2975272046189612,
+              "fd_stiff_frac": -0.010911315910408965,
+              "fd_loss_frac": 0.5779396943006132,
+              "relax_hz": 179.3628526313805,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 209.29217469493915,
+              "zeta": 0.029772264298992906,
+              "participation": 0.15432241152141746,
+              "fd_stiff_frac": 0.009098496964773144,
+              "fd_loss_frac": 0.40781866785753396,
+              "relax_hz": 244.69811058021645,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 407.28147998897595,
+              "zeta": 0.044176674082840005,
+              "participation": 0.08678477228459115,
+              "fd_stiff_frac": -0.003803098744762442,
+              "fd_loss_frac": 0.2644886982549874,
+              "relax_hz": 519.0591455000548,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 411.82814117659865,
+          "load_rigid": 182.1751765923313,
+          "source_modes": [
+            {
+              "fn_hz": 140.1664470953437,
+              "zeta": 0.02813187118705225,
+              "participation": 0.23614836286107416,
+              "fd_stiff_frac": 0.010392193624323733,
+              "fd_loss_frac": 0.3718385723749994,
+              "relax_hz": 261.6456041744531,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 238.1386178089128,
+              "zeta": 0.032995198390058086,
+              "participation": 0.12504104506194608,
+              "fd_stiff_frac": -0.015292180161094182,
+              "fd_loss_frac": 0.3619046628839161,
+              "relax_hz": 337.54168830790434,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 419.2272562123318,
+              "zeta": 0.04194527323237907,
+              "participation": 0.0708697821505545,
+              "fd_stiff_frac": 0.008573408906076475,
+              "fd_loss_frac": 0.19577224592605222,
+              "relax_hz": 523.163204010703,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 120.32549410334913,
+              "zeta": 0.025827761111441073,
+              "participation": 0.45034766434843704,
+              "fd_stiff_frac": 0.019020548825341942,
+              "fd_loss_frac": 0.5893231454280508,
+              "relax_hz": 151.50921393041318,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 177.08013720633238,
+              "zeta": 0.02892296596872752,
+              "participation": 0.25405406625264354,
+              "fd_stiff_frac": -0.010678349228973698,
+              "fd_loss_frac": 0.3743313219692118,
+              "relax_hz": 230.1806585759001,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 294.0980132935443,
+              "zeta": 0.03771982832005636,
+              "participation": 0.1261700742916852,
+              "fd_stiff_frac": 0.019338016014518084,
+              "fd_loss_frac": 0.21862451014557857,
+              "relax_hz": 366.57519450503463,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 485.74703498085063,
+              "zeta": 0.04611808925417353,
+              "participation": 0.061229264004731,
+              "fd_stiff_frac": -0.011532338667086979,
+              "fd_loss_frac": 0.18424733794407178,
+              "relax_hz": 454.51644525546516,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 1,
+      "source_fn_scale": 1.0049174004327441,
+      "load_fn_scale": 0.9946024716376552,
+      "source_zeta_scale": 1.035931090407566,
+      "load_zeta_scale": 1.0274765438252689,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        8565748.761199534,
+        8228117.1468165275,
+        7661858.417380657,
+        8238759.493507666,
+        7857654.251497882,
+        8358474.6980160605
+      ],
+      "strut_length_variation_mm": [
+        1.0244129087668092,
+        0.18311864537256617,
+        0.16920706845260494,
+        -2.08450271315632,
+        -0.9686001495471833,
+        -0.07792336947963148
+      ],
+      "preload_variation_frac": [
+        -0.02473105453482847,
+        0.14837398054903256,
+        0.01960666754723886,
+        -0.016716866809271914,
+        0.002690818881992158,
+        0.03858712533245425
+      ],
+      "joint_stiffness_variation_frac": [
+        0.02941316225820103,
+        -0.011162675012991664,
+        -0.07921442455359576,
+        -0.009883700802260961,
+        -0.05568410462773209,
+        0.004503413585403644
+      ],
+      "pair_split_xy_fraction": 0.03265350915708857,
+      "pair_split_rot_fraction": 0.021131787829280935,
+      "dofs": {
+        "x": {
+          "source_rigid": 360.4587373817708,
+          "load_rigid": 158.91093461878137,
+          "source_modes": [
+            {
+              "fn_hz": 98.94096586617694,
+              "zeta": 0.02585679942406962,
+              "participation": 0.23713716075665767,
+              "fd_stiff_frac": 0.01219484768760059,
+              "fd_loss_frac": 0.4514922315221198,
+              "relax_hz": 158.7326717262328,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 150.9472490543056,
+              "zeta": 0.03107369593461247,
+              "participation": 0.14104433738709,
+              "fd_stiff_frac": -0.015751546503523887,
+              "fd_loss_frac": 0.4095742002374967,
+              "relax_hz": 223.13969415110296,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 313.3290322558376,
+              "zeta": 0.03735421075899888,
+              "participation": 0.07851320360193495,
+              "fd_stiff_frac": 0.0060656793424124856,
+              "fd_loss_frac": 0.2541592376507197,
+              "relax_hz": 386.21623913869246,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 468.44293852891985,
+              "zeta": 0.041689832383133084,
+              "participation": 0.05370805304868234,
+              "fd_stiff_frac": -0.012229826767157519,
+              "fd_loss_frac": 0.050897823051723745,
+              "relax_hz": 569.2179841911961,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 68.23727522607308,
+              "zeta": 0.023556081693371284,
+              "participation": 0.4601350173480859,
+              "fd_stiff_frac": 0.02407399008050926,
+              "fd_loss_frac": 0.6711916142090592,
+              "relax_hz": 120.59238677139645,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 89.33171123376411,
+              "zeta": 0.021596497152359548,
+              "participation": 0.3184736623748222,
+              "fd_stiff_frac": -0.020179175922709222,
+              "fd_loss_frac": 0.5507300679556749,
+              "relax_hz": 162.8065244529925,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 149.0668867926519,
+              "zeta": 0.027843108088016467,
+              "participation": 0.18806124690727444,
+              "fd_stiff_frac": 0.009489043963502256,
+              "fd_loss_frac": 0.38298317790091946,
+              "relax_hz": 229.29064216828917,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 272.404079236152,
+              "zeta": 0.03631738289478653,
+              "participation": 0.11388082966664044,
+              "fd_stiff_frac": 0.007366793100639851,
+              "fd_loss_frac": 0.37695263398940293,
+              "relax_hz": 382.2896829020783,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 441.1515761321886,
+              "zeta": 0.04402211800997953,
+              "participation": 0.053305174894344755,
+              "fd_stiff_frac": -0.012375906760684046,
+              "fd_loss_frac": 0.2000679160379129,
+              "relax_hz": 459.8137749036963,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 366.1380776446054,
+          "load_rigid": 158.4310120197261,
+          "source_modes": [
+            {
+              "fn_hz": 102.07173072296375,
+              "zeta": 0.02587974400570241,
+              "participation": 0.20225288905703803,
+              "fd_stiff_frac": 0.017658022009919578,
+              "fd_loss_frac": 0.4990257806053974,
+              "relax_hz": 142.0832112988987,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 153.34437577569676,
+              "zeta": 0.03108375166449591,
+              "participation": 0.1035823839252509,
+              "fd_stiff_frac": -0.003936278406568438,
+              "fd_loss_frac": 0.4313643734127069,
+              "relax_hz": 236.43157897303462,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 331.4323823757312,
+              "zeta": 0.03701250802825076,
+              "participation": 0.08233392496767931,
+              "fd_stiff_frac": 0.008325300970506877,
+              "fd_loss_frac": 0.21728013365535737,
+              "relax_hz": 382.88254010785073,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 476.7064688620901,
+              "zeta": 0.04153083793359539,
+              "participation": 0.04512368450719839,
+              "fd_stiff_frac": -8.425869065610547e-05,
+              "fd_loss_frac": 0.02475006605148622,
+              "relax_hz": 552.489134792686,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 71.40921047917037,
+              "zeta": 0.023568430170474476,
+              "participation": 0.4764855251540809,
+              "fd_stiff_frac": 0.0312515684940154,
+              "fd_loss_frac": 0.6472331822760372,
+              "relax_hz": 115.48312205418313,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 93.5254744663488,
+              "zeta": 0.021650936874881167,
+              "participation": 0.2621203940373177,
+              "fd_stiff_frac": -0.014213122698875301,
+              "fd_loss_frac": 0.5391721346420247,
+              "relax_hz": 151.4876881797885,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 162.55335145180507,
+              "zeta": 0.027604818865897145,
+              "participation": 0.21103168736966482,
+              "fd_stiff_frac": 0.006356179143220601,
+              "fd_loss_frac": 0.4683058501791728,
+              "relax_hz": 204.8974342279897,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 308.16928065741615,
+              "zeta": 0.03596861964877531,
+              "participation": 0.11576866168097058,
+              "fd_stiff_frac": 0.0067279780015473065,
+              "fd_loss_frac": 0.24063666617590224,
+              "relax_hz": 368.6089061357487,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 479.06798789539425,
+              "zeta": 0.04435825919763869,
+              "participation": 0.049064670613325256,
+              "fd_stiff_frac": -0.006879306722352666,
+              "fd_loss_frac": 0.2269805675515691,
+              "relax_hz": 494.0823168842191,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 431.35467403401066,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 95.6063610346215,
+              "zeta": 0.0233919199079276,
+              "participation": 0.45099609629873616,
+              "fd_stiff_frac": 0.016460333791673155,
+              "fd_loss_frac": 0.6480896663631905,
+              "relax_hz": 161.3873370043693,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 127.62029271559526,
+              "zeta": 0.02894371103214851,
+              "participation": 0.1794836175058579,
+              "fd_stiff_frac": 0.021146303687941778,
+              "fd_loss_frac": 0.5250610290213424,
+              "relax_hz": 219.90320033660183,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 173.08799283370885,
+              "zeta": 0.019123076223678464,
+              "participation": 0.1253123440945093,
+              "fd_stiff_frac": -0.0174625774820362,
+              "fd_loss_frac": 0.3948247203165226,
+              "relax_hz": 255.0358322929382,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 265.63660622930576,
+              "zeta": 0.03307991478013324,
+              "participation": 0.10078417992516255,
+              "fd_stiff_frac": 0.01347328105262123,
+              "fd_loss_frac": 0.5824537741966653,
+              "relax_hz": 387.084608119419,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 389.37406658086826,
+              "zeta": 0.037483875967796995,
+              "participation": 0.05941095968467492,
+              "fd_stiff_frac": -0.0001384389650745787,
+              "fd_loss_frac": 0.3939700740526372,
+              "relax_hz": 504.25779269265206,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 532.2311001436063,
+              "zeta": 0.041624219162661166,
+              "participation": 0.04080792281084448,
+              "fd_stiff_frac": -0.008634519792378073,
+              "fd_loss_frac": 0.2807587265163736,
+              "relax_hz": 536.3549465788687,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 86.82399072222275,
+              "zeta": 0.020002110498748202,
+              "participation": 0.6471650807926701,
+              "fd_stiff_frac": 0.016365108309420586,
+              "fd_loss_frac": 0.7503064341076415,
+              "relax_hz": 142.94720011922317,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 119.91440254044947,
+              "zeta": 0.02652137665593911,
+              "participation": 0.2744243348762744,
+              "fd_stiff_frac": -0.0143246037669882,
+              "fd_loss_frac": 0.4477831669240865,
+              "relax_hz": 183.4940296816745,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 169.60100896273724,
+              "zeta": 0.022542165258335547,
+              "participation": 0.21148374172798737,
+              "fd_stiff_frac": 0.014223026635159654,
+              "fd_loss_frac": 0.42112438040758554,
+              "relax_hz": 229.3958760636252,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 243.1634230209642,
+              "zeta": 0.03166815554463559,
+              "participation": 0.10974340772273639,
+              "fd_stiff_frac": 0.006265573479019935,
+              "fd_loss_frac": 0.6254297928287308,
+              "relax_hz": 300.259851730386,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 352.316684808553,
+              "zeta": 0.039052896534975144,
+              "participation": 0.08372270945764503,
+              "fd_stiff_frac": -0.010125096636287342,
+              "fd_loss_frac": 0.338341002247752,
+              "relax_hz": 471.26623507341685,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 494.10685302988736,
+              "zeta": 0.04544424061015388,
+              "participation": 0.04952225245391336,
+              "fd_stiff_frac": 0.007935673167521572,
+              "fd_loss_frac": 0.2918010792911651,
+              "relax_hz": 495.77200119521297,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 521.167973800629,
+          "load_rigid": 240.5010254144384,
+          "source_modes": [
+            {
+              "fn_hz": 112.62879915300397,
+              "zeta": 0.026835965891248873,
+              "participation": 0.27986859407843223,
+              "fd_stiff_frac": 0.01909040503529897,
+              "fd_loss_frac": 0.3827503547625981,
+              "relax_hz": 189.89924923926344,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 173.92609800008697,
+              "zeta": 0.030943635290100267,
+              "participation": 0.13740911738973524,
+              "fd_stiff_frac": -0.007778211072609695,
+              "fd_loss_frac": 0.29372206489615293,
+              "relax_hz": 284.37573142620147,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 335.2522090527079,
+              "zeta": 0.039398123293714275,
+              "participation": 0.08114244979645008,
+              "fd_stiff_frac": 0.014901674216812731,
+              "fd_loss_frac": 0.208715007527443,
+              "relax_hz": 432.9805523307515,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 80.2182565430467,
+              "zeta": 0.02456199128212688,
+              "participation": 0.5298752745164523,
+              "fd_stiff_frac": 0.023750691225766916,
+              "fd_loss_frac": 0.6617278174083432,
+              "relax_hz": 123.38698641088288,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 106.57397004817948,
+              "zeta": 0.02256214678319147,
+              "participation": 0.3010263401788221,
+              "fd_stiff_frac": -0.008416029236158045,
+              "fd_loss_frac": 0.503567850054292,
+              "relax_hz": 170.59641552383926,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 190.09540366345257,
+              "zeta": 0.030835316287165484,
+              "participation": 0.16391205292716263,
+              "fd_stiff_frac": 0.016340406636683236,
+              "fd_loss_frac": 0.43009056305180865,
+              "relax_hz": 255.71267455886718,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 370.48903401893233,
+              "zeta": 0.045274968557126365,
+              "participation": 0.0862004157127094,
+              "fd_stiff_frac": -0.008378447435228026,
+              "fd_loss_frac": 0.18386154702573076,
+              "relax_hz": 477.8112807231597,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 520.4921775561663,
+          "load_rigid": 249.83624293197113,
+          "source_modes": [
+            {
+              "fn_hz": 114.30453071112315,
+              "zeta": 0.02696840957257066,
+              "participation": 0.2936830763374625,
+              "fd_stiff_frac": 0.012004260566615969,
+              "fd_loss_frac": 0.5704396495755197,
+              "relax_hz": 193.97951814940734,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 179.11808476341244,
+              "zeta": 0.030978716932084892,
+              "participation": 0.13437948315616596,
+              "fd_stiff_frac": 0.0004035232148625143,
+              "fd_loss_frac": 0.2792150117279556,
+              "relax_hz": 229.4680689814735,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 350.20389069900324,
+              "zeta": 0.03919468673806209,
+              "participation": 0.08986530169674743,
+              "fd_stiff_frac": 0.006212920526665657,
+              "fd_loss_frac": 0.21772210926699614,
+              "relax_hz": 415.6280821807956,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 82.90867212213526,
+              "zeta": 0.024728436283146388,
+              "participation": 0.4893440481251914,
+              "fd_stiff_frac": 0.021263908580280738,
+              "fd_loss_frac": 0.676883246165933,
+              "relax_hz": 129.10552313647682,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 109.60637987768118,
+              "zeta": 0.022680145382957227,
+              "participation": 0.3288073694816918,
+              "fd_stiff_frac": -0.02193206449344995,
+              "fd_loss_frac": 0.5097831350745056,
+              "relax_hz": 171.7762057585643,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 207.31956717915688,
+              "zeta": 0.03084978937933723,
+              "participation": 0.15394228865621107,
+              "fd_stiff_frac": 0.009284419060194636,
+              "fd_loss_frac": 0.3964555665759201,
+              "relax_hz": 275.1239757135859,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 416.6620881542174,
+              "zeta": 0.045024044992005866,
+              "participation": 0.08817087284998394,
+              "fd_stiff_frac": -0.012463765519835263,
+              "fd_loss_frac": 0.16627213091185666,
+              "relax_hz": 432.5873519233262,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 412.69281361777973,
+          "load_rigid": 181.92667140303135,
+          "source_modes": [
+            {
+              "fn_hz": 135.82695276621368,
+              "zeta": 0.029090514751492498,
+              "participation": 0.2516883723412252,
+              "fd_stiff_frac": 0.022576988546777872,
+              "fd_loss_frac": 0.4962195129868674,
+              "relax_hz": 227.99847730841597,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 232.88552863587466,
+              "zeta": 0.03438361427087683,
+              "participation": 0.11356226927539187,
+              "fd_stiff_frac": -0.005774356466971288,
+              "fd_loss_frac": 0.2489612974023199,
+              "relax_hz": 318.80693020872735,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 413.23456010061125,
+              "zeta": 0.043324536871996985,
+              "participation": 0.08020587591767327,
+              "fd_stiff_frac": -0.001677318077275343,
+              "fd_loss_frac": 0.14138059424126614,
+              "relax_hz": 523.5913479249659,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 116.77970977450474,
+              "zeta": 0.026738217611956612,
+              "participation": 0.3930835719130938,
+              "fd_stiff_frac": 0.008158561168511887,
+              "fd_loss_frac": 0.6046777717554046,
+              "relax_hz": 163.91883102866467,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 173.51142147342196,
+              "zeta": 0.0295930608398099,
+              "participation": 0.25034203860205934,
+              "fd_stiff_frac": 0.005367922406358749,
+              "fd_loss_frac": 0.4437544231692413,
+              "relax_hz": 221.3399051177262,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 286.20482200639816,
+              "zeta": 0.03899994499980658,
+              "participation": 0.14291045361529509,
+              "fd_stiff_frac": -0.005287466394116777,
+              "fd_loss_frac": 0.22369985660747288,
+              "relax_hz": 356.82128479211974,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 469.143281393139,
+              "zeta": 0.04692749302068391,
+              "participation": 0.06690384996913798,
+              "fd_stiff_frac": -0.004838495427240754,
+              "fd_loss_frac": 0.21524925124114547,
+              "relax_hz": 473.0678744011168,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 2,
+      "source_fn_scale": 1.0277417514934915,
+      "load_fn_scale": 0.9987087339355655,
+      "source_zeta_scale": 0.960041011449636,
+      "load_zeta_scale": 0.9917930818777718,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        7589643.946128775,
+        8543689.518934868,
+        8195065.014945793,
+        7297320.891914235,
+        8115988.212886142,
+        8671976.701570721
+      ],
+      "strut_length_variation_mm": [
+        1.3416500493503762,
+        -1.5826176540650247,
+        -0.6509279858178173,
+        2.3395845051104285,
+        0.6494941132659349,
+        0.1235480344968575
+      ],
+      "preload_variation_frac": [
+        0.10068980008480877,
+        -0.06559541244926892,
+        -0.06823270988601353,
+        -0.008240673913296078,
+        0.04772570321138154,
+        -0.06089740421648478
+      ],
+      "joint_stiffness_variation_frac": [
+        -0.08789300354121861,
+        0.02676213022705507,
+        -0.015134808744318086,
+        -0.12302375603340648,
+        -0.024638087808283075,
+        0.042179406408743486
+      ],
+      "pair_split_xy_fraction": 0.02689032413224849,
+      "pair_split_rot_fraction": 0.05285734586503582,
+      "dofs": {
+        "x": {
+          "source_rigid": 365.02270144082274,
+          "load_rigid": 157.04836404146567,
+          "source_modes": [
+            {
+              "fn_hz": 99.42407120051615,
+              "zeta": 0.024065485507869234,
+              "participation": 0.22062342254962536,
+              "fd_stiff_frac": 0.009821212050494122,
+              "fd_loss_frac": 0.44426184286508497,
+              "relax_hz": 158.3372283123402,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 147.00238075825928,
+              "zeta": 0.028636060872931687,
+              "participation": 0.11903256367621441,
+              "fd_stiff_frac": -0.007825969689031879,
+              "fd_loss_frac": 0.34047082733668876,
+              "relax_hz": 219.5935329974208,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 311.9032513288637,
+              "zeta": 0.034528302808480474,
+              "participation": 0.08169378176118791,
+              "fd_stiff_frac": 0.005781693676800661,
+              "fd_loss_frac": 0.22192356075789135,
+              "relax_hz": 456.7668224241481,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 468.6680963102162,
+              "zeta": 0.03851826690297577,
+              "participation": 0.048179766475057506,
+              "fd_stiff_frac": -0.006130708899634392,
+              "fd_loss_frac": 0.19630312834756186,
+              "relax_hz": 541.2145560942403,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 66.51751181474697,
+              "zeta": 0.02285371662461909,
+              "participation": 0.572400004668882,
+              "fd_stiff_frac": 0.01301331380569201,
+              "fd_loss_frac": 0.7310244169837962,
+              "relax_hz": 119.02448574592859,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 90.49791449289887,
+              "zeta": 0.020828640758677953,
+              "participation": 0.3058572541907204,
+              "fd_stiff_frac": -0.008284313501702622,
+              "fd_loss_frac": 0.5457904354081101,
+              "relax_hz": 148.11426274330793,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 150.7522785390802,
+              "zeta": 0.02686316058971123,
+              "participation": 0.1556822159593906,
+              "fd_stiff_frac": 0.004100235720670873,
+              "fd_loss_frac": 0.39897014334712405,
+              "relax_hz": 247.1624691584809,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 282.0377023542433,
+              "zeta": 0.03478637327431235,
+              "participation": 0.11659094693501593,
+              "fd_stiff_frac": 0.01473121397382519,
+              "fd_loss_frac": 0.28552367126023526,
+              "relax_hz": 403.61036144658965,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 443.0140207172234,
+              "zeta": 0.04255551836417501,
+              "participation": 0.04537860970707054,
+              "fd_stiff_frac": -0.007710392870252883,
+              "fd_loss_frac": 0.12527768403076994,
+              "relax_hz": 523.1562063521435,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 368.07280357473644,
+          "load_rigid": 161.2374212001173,
+          "source_modes": [
+            {
+              "fn_hz": 101.8596966287766,
+              "zeta": 0.024113878687718755,
+              "participation": 0.25264050111887365,
+              "fd_stiff_frac": 0.023390437077132085,
+              "fd_loss_frac": 0.409503781176705,
+              "relax_hz": 145.50591582776798,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 153.97137264093536,
+              "zeta": 0.02885560644506078,
+              "participation": 0.12484041346764035,
+              "fd_stiff_frac": -0.010540520790601735,
+              "fd_loss_frac": 0.37213304737699743,
+              "relax_hz": 187.9402110834457,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 327.22935168800524,
+              "zeta": 0.034623656012161684,
+              "participation": 0.0907400763147972,
+              "fd_stiff_frac": 0.017427091594177418,
+              "fd_loss_frac": 0.23888568187738274,
+              "relax_hz": 375.6738476337849,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 486.83263558907186,
+              "zeta": 0.0384890153850068,
+              "participation": 0.04790875244948856,
+              "fd_stiff_frac": 0.0033628282218799016,
+              "fd_loss_frac": 0.23090244400769366,
+              "relax_hz": 532.7879660076735,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 71.17251233898475,
+              "zeta": 0.02273267386273986,
+              "participation": 0.5823240153626685,
+              "fd_stiff_frac": 0.01416275153484179,
+              "fd_loss_frac": 0.7644433365559827,
+              "relax_hz": 106.98329605622293,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 92.59635866087305,
+              "zeta": 0.02077382792873814,
+              "participation": 0.30243748393219605,
+              "fd_stiff_frac": -0.019128893377879548,
+              "fd_loss_frac": 0.48639096639937024,
+              "relax_hz": 159.00986321666124,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 163.02865238503583,
+              "zeta": 0.026764224956717438,
+              "participation": 0.2013753960765872,
+              "fd_stiff_frac": 0.018507350842292138,
+              "fd_loss_frac": 0.3296125714260575,
+              "relax_hz": 253.22627229180392,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 294.56343144485623,
+              "zeta": 0.035013505929353206,
+              "participation": 0.08760716504771449,
+              "fd_stiff_frac": 0.019756111834052466,
+              "fd_loss_frac": 0.32470748151954426,
+              "relax_hz": 371.7365693614702,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 462.4361650766195,
+              "zeta": 0.042747605761991304,
+              "participation": 0.04366871074468897,
+              "fd_stiff_frac": -0.013253385758804262,
+              "fd_loss_frac": 0.1545924648998167,
+              "relax_hz": 502.27309082599083,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 433.21771805438374,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 96.44918582624308,
+              "zeta": 0.021600740796960064,
+              "participation": 0.37708514145648014,
+              "fd_stiff_frac": 0.015034588485420282,
+              "fd_loss_frac": 0.6283501845596295,
+              "relax_hz": 156.7397620678376,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 130.7193706586099,
+              "zeta": 0.026899427863798665,
+              "participation": 0.1773144454697403,
+              "fd_stiff_frac": 0.028325180521818517,
+              "fd_loss_frac": 0.3835114182743409,
+              "relax_hz": 207.0457363643774,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 182.12985755006295,
+              "zeta": 0.017771223617012503,
+              "participation": 0.10909931368489213,
+              "fd_stiff_frac": 0.004117579295516592,
+              "fd_loss_frac": 0.3067081577197138,
+              "relax_hz": 259.44055195251224,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 278.3968328235592,
+              "zeta": 0.030612418603849834,
+              "participation": 0.08784760412559853,
+              "fd_stiff_frac": 0.014287507565011156,
+              "fd_loss_frac": 0.5386925143108792,
+              "relax_hz": 362.52702953061856,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 389.9262051153295,
+              "zeta": 0.034590572774873,
+              "participation": 0.06301932974006719,
+              "fd_stiff_frac": 0.018811090132154713,
+              "fd_loss_frac": 0.3221403443921115,
+              "relax_hz": 458.3178613675227,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 537.5527281516505,
+              "zeta": 0.038539706188421424,
+              "participation": 0.035503593819727515,
+              "fd_stiff_frac": -0.008947639588557193,
+              "fd_loss_frac": 0.2156589716462448,
+              "relax_hz": 507.11811423769404,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 87.23666939674987,
+              "zeta": 0.019307326675256118,
+              "participation": 0.6862356469021165,
+              "fd_stiff_frac": 0.026969289574670104,
+              "fd_loss_frac": 0.7959396372073181,
+              "relax_hz": 145.4574771178032,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 117.44993616402755,
+              "zeta": 0.025571512901380326,
+              "participation": 0.21179145784936904,
+              "fd_stiff_frac": -0.008659650505185674,
+              "fd_loss_frac": 0.4233512837086047,
+              "relax_hz": 173.94657473180612,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 167.86938096147188,
+              "zeta": 0.021856628771287624,
+              "participation": 0.18991025085702276,
+              "fd_stiff_frac": 0.009184375860835346,
+              "fd_loss_frac": 0.34135480397790574,
+              "relax_hz": 264.1212463001263,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 245.5033062214029,
+              "zeta": 0.030718912611211603,
+              "participation": 0.11797791811755257,
+              "fd_stiff_frac": 0.007056326034503993,
+              "fd_loss_frac": 0.5963917532562322,
+              "relax_hz": 318.28530942502965,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 354.84199112498777,
+              "zeta": 0.03754779874827216,
+              "participation": 0.05755091831430546,
+              "fd_stiff_frac": -0.016228107013326214,
+              "fd_loss_frac": 0.29054565347089284,
+              "relax_hz": 414.73387651179587,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 509.6588839029559,
+              "zeta": 0.04376788778387304,
+              "participation": 0.05045162828519011,
+              "fd_stiff_frac": 0.014454033692533667,
+              "fd_loss_frac": 0.35753517225401293,
+              "relax_hz": 528.5755700474442,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 517.3635969751111,
+          "load_rigid": 245.92273911510128,
+          "source_modes": [
+            {
+              "fn_hz": 113.05599507570432,
+              "zeta": 0.025030654564174887,
+              "participation": 0.2638282897867759,
+              "fd_stiff_frac": 0.01679254403239416,
+              "fd_loss_frac": 0.5310992917230988,
+              "relax_hz": 180.25492570600375,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 171.8057155311557,
+              "zeta": 0.02880320356309454,
+              "participation": 0.1462023852367124,
+              "fd_stiff_frac": -0.016924760221534347,
+              "fd_loss_frac": 0.264481257687958,
+              "relax_hz": 291.43139919106585,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 333.59620099817323,
+              "zeta": 0.036476180258277674,
+              "participation": 0.07993214882354603,
+              "fd_stiff_frac": 0.00939483565105097,
+              "fd_loss_frac": 0.21657765484629088,
+              "relax_hz": 342.5301854212703,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 77.46989017087888,
+              "zeta": 0.02376155622266261,
+              "participation": 0.5507978416093627,
+              "fd_stiff_frac": 0.025097809622551297,
+              "fd_loss_frac": 0.6751048966820338,
+              "relax_hz": 139.04135701939524,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 102.97419155833964,
+              "zeta": 0.02184450419499074,
+              "participation": 0.32749307188101257,
+              "fd_stiff_frac": -0.015965316123935196,
+              "fd_loss_frac": 0.4342784870852088,
+              "relax_hz": 154.249510466102,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 188.29582608992595,
+              "zeta": 0.029963223854057065,
+              "participation": 0.17068257880553134,
+              "fd_stiff_frac": 4.369944472277197e-05,
+              "fd_loss_frac": 0.44310199869235345,
+              "relax_hz": 251.65236381960662,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 365.44110768616343,
+              "zeta": 0.04388555490549,
+              "participation": 0.1020435042709871,
+              "fd_stiff_frac": -0.0008063540756516104,
+              "fd_loss_frac": 0.2493033732753141,
+              "relax_hz": 417.7899164326207,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 510.1070926633104,
+          "load_rigid": 251.61378271815676,
+          "source_modes": [
+            {
+              "fn_hz": 117.9716862136042,
+              "zeta": 0.02489358137467081,
+              "participation": 0.25353734072984063,
+              "fd_stiff_frac": 0.008835732111507838,
+              "fd_loss_frac": 0.5007381408709941,
+              "relax_hz": 171.69381085848616,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 185.21863701415617,
+              "zeta": 0.028667641400017454,
+              "participation": 0.13096439481423394,
+              "fd_stiff_frac": -0.021421539725504136,
+              "fd_loss_frac": 0.2853954146008088,
+              "relax_hz": 271.12799973478667,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 373.48950060971356,
+              "zeta": 0.036402548681828906,
+              "participation": 0.06809014218812129,
+              "fd_stiff_frac": 0.008676863558906784,
+              "fd_loss_frac": 0.26765020691481695,
+              "relax_hz": 493.1174539958064,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 87.46908930270689,
+              "zeta": 0.02395389952042102,
+              "participation": 0.4039561510916953,
+              "fd_stiff_frac": 0.018013201362923625,
+              "fd_loss_frac": 0.7418860851015173,
+              "relax_hz": 124.8171119542312,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 116.25585411688513,
+              "zeta": 0.021924567539278534,
+              "participation": 0.34000553763049757,
+              "fd_stiff_frac": -0.01070853160904468,
+              "fd_loss_frac": 0.462844908496678,
+              "relax_hz": 153.31486061434651,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 210.65068866547696,
+              "zeta": 0.029683870521179472,
+              "participation": 0.17228606983936748,
+              "fd_stiff_frac": 0.010888890925121708,
+              "fd_loss_frac": 0.35630998129351865,
+              "relax_hz": 281.98886404628956,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 423.8780722285933,
+              "zeta": 0.04361075734692954,
+              "participation": 0.09135478898480447,
+              "fd_stiff_frac": -0.00972796559426844,
+              "fd_loss_frac": 0.3204998762079313,
+              "relax_hz": 441.79980719206844,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 422.4494037230532,
+          "load_rigid": 186.1971641841481,
+          "source_modes": [
+            {
+              "fn_hz": 140.55396348721328,
+              "zeta": 0.026967350218751903,
+              "participation": 0.2427187628966524,
+              "fd_stiff_frac": 0.011059186442977025,
+              "fd_loss_frac": 0.36446008065600055,
+              "relax_hz": 222.65313678443985,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 232.6560923197437,
+              "zeta": 0.031497469736677136,
+              "participation": 0.13275766481309595,
+              "fd_stiff_frac": -0.01800889506962096,
+              "fd_loss_frac": 0.3948989928338323,
+              "relax_hz": 323.45839699127504,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 413.52215432945644,
+              "zeta": 0.04045095891146322,
+              "participation": 0.0676100927798947,
+              "fd_stiff_frac": -0.0009095087841118742,
+              "fd_loss_frac": 0.17454620255848968,
+              "relax_hz": 500.0287211902599,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 117.55990017883886,
+              "zeta": 0.02589351080073237,
+              "participation": 0.45649859435517876,
+              "fd_stiff_frac": 0.019505107145158844,
+              "fd_loss_frac": 0.5607065769114735,
+              "relax_hz": 156.5225178603105,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 172.0723167238246,
+              "zeta": 0.028772516983889745,
+              "participation": 0.2285932038243215,
+              "fd_stiff_frac": -0.012429525305916135,
+              "fd_loss_frac": 0.3859632284403721,
+              "relax_hz": 264.1150211141066,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 289.79342639948237,
+              "zeta": 0.03781692684129938,
+              "participation": 0.11737784960924692,
+              "fd_stiff_frac": 0.013264657826128484,
+              "fd_loss_frac": 0.22183994652498934,
+              "relax_hz": 385.4711111534779,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 470.049642630871,
+              "zeta": 0.04566760145048366,
+              "participation": 0.05210232326833241,
+              "fd_stiff_frac": -0.004652771450707222,
+              "fd_loss_frac": 0.16374307475023656,
+              "relax_hz": 487.0606104684537,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 3,
+      "source_fn_scale": 1.0265037027354176,
+      "load_fn_scale": 0.9995208147300736,
+      "source_zeta_scale": 0.9904369708369561,
+      "load_zeta_scale": 0.971628007410319,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        8588498.567383172,
+        8101142.951641086,
+        8248014.102770114,
+        8365051.46075448,
+        7745936.498425016,
+        7251325.030542327
+      ],
+      "strut_length_variation_mm": [
+        -1.0636887270963264,
+        -0.8133134761330827,
+        0.7152898782260986,
+        -0.2933510764894389,
+        1.5217751424275725,
+        -0.0034093617790998568
+      ],
+      "preload_variation_frac": [
+        0.035702607533988136,
+        0.0224339219705056,
+        0.13101453716138278,
+        0.05354352504880284,
+        0.0037396057056740665,
+        -0.047855029189369645
+      ],
+      "joint_stiffness_variation_frac": [
+        0.03214718476774982,
+        -0.026422159201089243,
+        -0.008771501874658163,
+        0.005293794708726512,
+        -0.06911010259676603,
+        -0.12855143918471748
+      ],
+      "pair_split_xy_fraction": 0.04235589525278808,
+      "pair_split_rot_fraction": 0.03688245452162046,
+      "dofs": {
+        "x": {
+          "source_rigid": 364.0359383196616,
+          "load_rigid": 156.1815080912796,
+          "source_modes": [
+            {
+              "fn_hz": 100.22755472520718,
+              "zeta": 0.024842544492796527,
+              "participation": 0.21605996435254907,
+              "fd_stiff_frac": 0.008603438566497382,
+              "fd_loss_frac": 0.5050558120466667,
+              "relax_hz": 158.7237120451576,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 146.5520307718927,
+              "zeta": 0.02976588310016412,
+              "participation": 0.11151951451118994,
+              "fd_stiff_frac": -0.005400479742009889,
+              "fd_loss_frac": 0.342299205465103,
+              "relax_hz": 203.93935524794077,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 310.49755345466014,
+              "zeta": 0.035683031611974614,
+              "participation": 0.08946750440312023,
+              "fd_stiff_frac": 0.0028287833045782546,
+              "fd_loss_frac": 0.18933862513650349,
+              "relax_hz": 391.2976002127452,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 464.51201918226656,
+              "zeta": 0.039435622138094095,
+              "participation": 0.050918201004922614,
+              "fd_stiff_frac": 0.005276194277490289,
+              "fd_loss_frac": 0.16576593733878695,
+              "relax_hz": 529.7015544634975,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 65.78933567871053,
+              "zeta": 0.022304506227131926,
+              "participation": 0.5436664662842212,
+              "fd_stiff_frac": 0.021541231722448092,
+              "fd_loss_frac": 0.662585273371491,
+              "relax_hz": 113.32652197521986,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 86.49359159011316,
+              "zeta": 0.020423218346203746,
+              "participation": 0.26766435603537275,
+              "fd_stiff_frac": -0.02099176410672514,
+              "fd_loss_frac": 0.55203726162279,
+              "relax_hz": 160.2577454681857,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 144.58255924401612,
+              "zeta": 0.026240260470450565,
+              "participation": 0.19065258349295572,
+              "fd_stiff_frac": 0.0047407187773587725,
+              "fd_loss_frac": 0.32727486781087833,
+              "relax_hz": 233.17670811416997,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 277.24814920419647,
+              "zeta": 0.03395417999519431,
+              "participation": 0.09224038195889954,
+              "fd_stiff_frac": 0.007582154193226356,
+              "fd_loss_frac": 0.32071666781622793,
+              "relax_hz": 343.00490525529057,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 433.4185387654386,
+              "zeta": 0.04169575132637709,
+              "participation": 0.05159000119044434,
+              "fd_stiff_frac": -0.011729385974421365,
+              "fd_loss_frac": 0.31591027943684785,
+              "relax_hz": 499.510498215181,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 363.73062338651545,
+          "load_rigid": 157.1218838330958,
+          "source_modes": [
+            {
+              "fn_hz": 103.46757577712997,
+              "zeta": 0.02478971363874995,
+              "participation": 0.23534572264740938,
+              "fd_stiff_frac": 0.01124412596570916,
+              "fd_loss_frac": 0.4526374982940683,
+              "relax_hz": 186.3346816449835,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 155.74363369191244,
+              "zeta": 0.029633167370205632,
+              "participation": 0.13057351593047195,
+              "fd_stiff_frac": -0.011356590972054681,
+              "fd_loss_frac": 0.3839337262646331,
+              "relax_hz": 252.54570693333366,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 335.47944960108254,
+              "zeta": 0.03585072660053404,
+              "participation": 0.07453023855410887,
+              "fd_stiff_frac": 0.0018009323992257366,
+              "fd_loss_frac": 0.22432947996179903,
+              "relax_hz": 375.1772497576766,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 503.0754841302343,
+              "zeta": 0.039508154763485175,
+              "participation": 0.048548545913497346,
+              "fd_stiff_frac": -0.00986741425999433,
+              "fd_loss_frac": 0.23032838970865166,
+              "relax_hz": 497.24491652729165,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 70.68759478223188,
+              "zeta": 0.022278345291198993,
+              "participation": 0.46401284031809686,
+              "fd_stiff_frac": 0.027308329010590295,
+              "fd_loss_frac": 0.7099934157505641,
+              "relax_hz": 116.84646501665564,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 94.72305903168044,
+              "zeta": 0.02033712252437117,
+              "participation": 0.32043427849785905,
+              "fd_stiff_frac": -0.006827215020567757,
+              "fd_loss_frac": 0.6048470492144847,
+              "relax_hz": 154.99784455495293,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 163.05460360257646,
+              "zeta": 0.026015787530988564,
+              "participation": 0.17918091263849747,
+              "fd_stiff_frac": -0.00017927176250682325,
+              "fd_loss_frac": 0.33239060692537986,
+              "relax_hz": 238.6899126790701,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 300.0298181530133,
+              "zeta": 0.03403397369779219,
+              "participation": 0.09036576973480015,
+              "fd_stiff_frac": 0.010143000366127104,
+              "fd_loss_frac": 0.3218542868535623,
+              "relax_hz": 361.9486696327757,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 470.60921695681884,
+              "zeta": 0.041571517127103684,
+              "participation": 0.046751254600014225,
+              "fd_stiff_frac": -0.009438831643597066,
+              "fd_loss_frac": 0.05949270513318447,
+              "relax_hz": 513.4198948171523,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 431.46527768652487,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 96.2539447750764,
+              "zeta": 0.022216111419205428,
+              "participation": 0.42329081677019054,
+              "fd_stiff_frac": 0.017995041440018764,
+              "fd_loss_frac": 0.6111326540068166,
+              "relax_hz": 149.13186899005717,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 131.12068435719763,
+              "zeta": 0.0276968102378952,
+              "participation": 0.16544849809949352,
+              "fd_stiff_frac": 0.023344800615573816,
+              "fd_loss_frac": 0.4598263415098251,
+              "relax_hz": 189.24586552110563,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 180.67426750400674,
+              "zeta": 0.018237974342250544,
+              "participation": 0.13945951697878745,
+              "fd_stiff_frac": -0.016488309727609708,
+              "fd_loss_frac": 0.3452100304087064,
+              "relax_hz": 292.3748069954924,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 264.3621529230418,
+              "zeta": 0.031468328017675545,
+              "participation": 0.08409406460538399,
+              "fd_stiff_frac": 0.019951719232593475,
+              "fd_loss_frac": 0.5811870069841112,
+              "relax_hz": 315.8516606718404,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 384.9848367769616,
+              "zeta": 0.035683688824598166,
+              "participation": 0.05904293234135917,
+              "fd_stiff_frac": 0.00843040103221884,
+              "fd_loss_frac": 0.2974785529546531,
+              "relax_hz": 436.37488409032227,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 533.1959784789514,
+              "zeta": 0.03965596785669111,
+              "participation": 0.03463909845706124,
+              "fd_stiff_frac": -0.006374598822919374,
+              "fd_loss_frac": 0.1937143578733427,
+              "relax_hz": 549.3152952810595,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 85.60750349940298,
+              "zeta": 0.018978943070715754,
+              "participation": 0.7693178019504227,
+              "fd_stiff_frac": 0.03133981599715423,
+              "fd_loss_frac": 0.7424072290314923,
+              "relax_hz": 128.70650125428807,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 120.69317132375858,
+              "zeta": 0.025191941354688704,
+              "participation": 0.23196846476517916,
+              "fd_stiff_frac": -0.0085242747556542,
+              "fd_loss_frac": 0.4029839892561168,
+              "relax_hz": 192.2032627659688,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 166.6715270455904,
+              "zeta": 0.021570775778541138,
+              "participation": 0.165790827755655,
+              "fd_stiff_frac": 0.005899730952613641,
+              "fd_loss_frac": 0.41463135918830146,
+              "relax_hz": 216.10828235709153,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 239.7160811411577,
+              "zeta": 0.030151606007466848,
+              "participation": 0.11556154740586207,
+              "fd_stiff_frac": 0.02366205482141515,
+              "fd_loss_frac": 0.6778767456101333,
+              "relax_hz": 329.09718928981954,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 352.58260953524956,
+              "zeta": 0.03684480068703418,
+              "participation": 0.07239372033647723,
+              "fd_stiff_frac": 0.0015190613870099557,
+              "fd_loss_frac": 0.3008478210932194,
+              "relax_hz": 408.336733640765,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 509.3489523134214,
+              "zeta": 0.0426774976080903,
+              "participation": 0.051080008125819955,
+              "fd_stiff_frac": 0.011526986121065185,
+              "fd_loss_frac": 0.21310533401888831,
+              "relax_hz": 577.1565451060147,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 514.1235951643714,
+          "load_rigid": 245.37972288270538,
+          "source_modes": [
+            {
+              "fn_hz": 112.62198625059504,
+              "zeta": 0.025666428076322093,
+              "participation": 0.31628019497990506,
+              "fd_stiff_frac": 0.00932626307080958,
+              "fd_loss_frac": 0.5464005615496985,
+              "relax_hz": 159.17931265470816,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 177.63468797417593,
+              "zeta": 0.029669437106525646,
+              "participation": 0.1324655762196639,
+              "fd_stiff_frac": -0.009535141146427938,
+              "fd_loss_frac": 0.3928407239350713,
+              "relax_hz": 232.1058971934261,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 338.6929976693347,
+              "zeta": 0.0375124572493742,
+              "participation": 0.09804636299126225,
+              "fd_stiff_frac": 0.011889253087658074,
+              "fd_loss_frac": 0.2469509547068153,
+              "relax_hz": 480.36828161633684,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 79.38729951048178,
+              "zeta": 0.02318190559360244,
+              "participation": 0.46794593171849486,
+              "fd_stiff_frac": 0.02074789358998536,
+              "fd_loss_frac": 0.7401080114469799,
+              "relax_hz": 130.9881173253316,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 103.77384582255858,
+              "zeta": 0.021436761544797553,
+              "participation": 0.3493759642822721,
+              "fd_stiff_frac": -0.005267744889160896,
+              "fd_loss_frac": 0.49046163388462816,
+              "relax_hz": 155.96688412692797,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 195.7806425237218,
+              "zeta": 0.029027087897313335,
+              "participation": 0.1563404038010129,
+              "fd_stiff_frac": -0.0019391940857337604,
+              "fd_loss_frac": 0.4243109508256336,
+              "relax_hz": 269.82686491937767,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 381.71337960281295,
+              "zeta": 0.042643249767468756,
+              "participation": 0.07842370086366078,
+              "fd_stiff_frac": 0.00010358427577634652,
+              "fd_loss_frac": 0.18054011214276627,
+              "relax_hz": 549.0354350763268,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 513.4753594332713,
+          "load_rigid": 251.09724528779392,
+          "source_modes": [
+            {
+              "fn_hz": 117.43066281378876,
+              "zeta": 0.02574630611128211,
+              "participation": 0.27292635639373425,
+              "fd_stiff_frac": 0.013103756590648465,
+              "fd_loss_frac": 0.6403706022264146,
+              "relax_hz": 170.479735018861,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 183.1184833443103,
+              "zeta": 0.02974435766039043,
+              "participation": 0.1308372489385097,
+              "fd_stiff_frac": -0.009714603466201592,
+              "fd_loss_frac": 0.33754949175010196,
+              "relax_hz": 281.6258531345735,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 352.26052730326415,
+              "zeta": 0.03772054817344633,
+              "participation": 0.0855980577857622,
+              "fd_stiff_frac": 0.009131741703819175,
+              "fd_loss_frac": 0.16448075569173998,
+              "relax_hz": 401.49300961271285,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 84.07503973491755,
+              "zeta": 0.023256494713956445,
+              "participation": 0.4601704435847367,
+              "fd_stiff_frac": 0.015475493994403282,
+              "fd_loss_frac": 0.7697868687233784,
+              "relax_hz": 133.7157684113978,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 111.91874734046537,
+              "zeta": 0.021453045598549814,
+              "participation": 0.3299931384024002,
+              "fd_stiff_frac": -0.006095658544818169,
+              "fd_loss_frac": 0.45938958350294185,
+              "relax_hz": 156.9457097294811,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 209.99949592288422,
+              "zeta": 0.029132271866671083,
+              "participation": 0.16068514293896005,
+              "fd_stiff_frac": 0.01887583686092959,
+              "fd_loss_frac": 0.3554864702325281,
+              "relax_hz": 317.6320549389763,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 410.8151374973371,
+              "zeta": 0.04277328433997911,
+              "participation": 0.07814595454130731,
+              "fd_stiff_frac": -0.0033528599040128088,
+              "fd_loss_frac": 0.18877298368860793,
+              "relax_hz": 436.9001981030619,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 419.3674428861951,
+          "load_rigid": 184.12676007765933,
+          "source_modes": [
+            {
+              "fn_hz": 139.7406385349649,
+              "zeta": 0.027773660827564453,
+              "participation": 0.2503328380325299,
+              "fd_stiff_frac": 0.016152195050894255,
+              "fd_loss_frac": 0.42513123739796393,
+              "relax_hz": 214.64619991653592,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 234.61132311626545,
+              "zeta": 0.032795905369258756,
+              "participation": 0.12219252440416357,
+              "fd_stiff_frac": -0.00924919950997285,
+              "fd_loss_frac": 0.2652586558423656,
+              "relax_hz": 364.52244884056927,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 414.43057540578843,
+              "zeta": 0.04181300214142382,
+              "participation": 0.07070436284680096,
+              "fd_stiff_frac": 0.019531618539832773,
+              "fd_loss_frac": 0.22065220464832902,
+              "relax_hz": 473.6316932916751,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 119.25881271655241,
+              "zeta": 0.025264013358377465,
+              "participation": 0.4040045573701794,
+              "fd_stiff_frac": 0.016876069404649623,
+              "fd_loss_frac": 0.6476045784300942,
+              "relax_hz": 196.87525108824897,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 169.28656045586968,
+              "zeta": 0.028213637356544457,
+              "participation": 0.24700282057672243,
+              "fd_stiff_frac": -0.007042255776480287,
+              "fd_loss_frac": 0.4287390438454471,
+              "relax_hz": 276.9524445078312,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 288.84554077501934,
+              "zeta": 0.036950478923509715,
+              "participation": 0.1190474054804074,
+              "fd_stiff_frac": 0.018213390628270307,
+              "fd_loss_frac": 0.2709851285080569,
+              "relax_hz": 358.5616508371133,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 473.02131764937224,
+              "zeta": 0.044919013409065726,
+              "participation": 0.07542907054294835,
+              "fd_stiff_frac": -0.005091280954458016,
+              "fd_loss_frac": 0.22631195899640794,
+              "relax_hz": 536.2124624525644,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 4,
+      "source_fn_scale": 0.9933425817534333,
+      "load_fn_scale": 0.982487806662123,
+      "source_zeta_scale": 0.980768034323596,
+      "load_zeta_scale": 1.0036564490863602,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        7232949.905470297,
+        7992571.852501567,
+        8685173.543137014,
+        7919563.790767551,
+        7426936.6054891795,
+        9250749.063232848
+      ],
+      "strut_length_variation_mm": [
+        -0.3529277090062393,
+        -0.6859937283941421,
+        -0.8669238170353575,
+        0.31420454373577394,
+        0.4549362589075382,
+        -2.196842559946087
+      ],
+      "preload_variation_frac": [
+        0.02095206881842264,
+        -0.007776989099611156,
+        -0.03648569346722081,
+        0.09832410884474266,
+        0.10202920549062286,
+        -0.004957972108836066
+      ],
+      "joint_stiffness_variation_frac": [
+        -0.13075972197874142,
+        -0.03946999910521101,
+        0.04376537428934643,
+        -0.04824395008079754,
+        -0.10744681987647307,
+        0.11173501720893965
+      ],
+      "pair_split_xy_fraction": 0.004362762414321741,
+      "pair_split_rot_fraction": 0.07458982835670756,
+      "dofs": {
+        "x": {
+          "source_rigid": 366.49284746475723,
+          "load_rigid": 156.80058797022173,
+          "source_modes": [
+            {
+              "fn_hz": 98.67982660222181,
+              "zeta": 0.02453737920371999,
+              "participation": 0.2545302486510715,
+              "fd_stiff_frac": 0.021858085002974523,
+              "fd_loss_frac": 0.43731367867542337,
+              "relax_hz": 153.46292341611053,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 151.1944997213872,
+              "zeta": 0.02948287174169243,
+              "participation": 0.10946197413255063,
+              "fd_stiff_frac": -0.010117888192383821,
+              "fd_loss_frac": 0.34123095101995354,
+              "relax_hz": 225.8644640556723,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 313.02169294725223,
+              "zeta": 0.035377639289181924,
+              "participation": 0.08599503244590113,
+              "fd_stiff_frac": 0.014243100596938367,
+              "fd_loss_frac": 0.22624745701896629,
+              "relax_hz": 426.6889897418374,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 476.81346562589874,
+              "zeta": 0.03920685495394109,
+              "participation": 0.04374876719409826,
+              "fd_stiff_frac": -0.015417722584770015,
+              "fd_loss_frac": 0.232202780821243,
+              "relax_hz": 616.2893372349774,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 67.27126639762662,
+              "zeta": 0.023066764421240327,
+              "participation": 0.47060467419514435,
+              "fd_stiff_frac": 0.026497254541613082,
+              "fd_loss_frac": 0.6830032278651388,
+              "relax_hz": 119.62592176995103,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 88.61711980878614,
+              "zeta": 0.021126046212694437,
+              "participation": 0.3062781543599913,
+              "fd_stiff_frac": -0.014121817216454413,
+              "fd_loss_frac": 0.5872140047371912,
+              "relax_hz": 154.08442873297628,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 148.30160603098267,
+              "zeta": 0.027153477335465033,
+              "participation": 0.16737729409585525,
+              "fd_stiff_frac": 0.013239589979789853,
+              "fd_loss_frac": 0.3309157898795213,
+              "relax_hz": 239.1146398988735,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 285.9887177867093,
+              "zeta": 0.03501089850453042,
+              "participation": 0.09607357075822531,
+              "fd_stiff_frac": 0.013826347134866333,
+              "fd_loss_frac": 0.32159386633940745,
+              "relax_hz": 355.09985750498805,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 432.31329292971327,
+              "zeta": 0.042892779876937404,
+              "participation": 0.0556264327342945,
+              "fd_stiff_frac": 0.0019033278229204018,
+              "fd_loss_frac": 0.06843788259118821,
+              "relax_hz": 506.01651191668293,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 368.75991442536684,
+          "load_rigid": 161.61293589180372,
+          "source_modes": [
+            {
+              "fn_hz": 101.90355905041955,
+              "zeta": 0.024437552097863788,
+              "participation": 0.23592518594834383,
+              "fd_stiff_frac": 0.011817209615482323,
+              "fd_loss_frac": 0.5514944604197943,
+              "relax_hz": 153.08185180674462,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 152.3128205432481,
+              "zeta": 0.029465280882117813,
+              "participation": 0.13242528999105452,
+              "fd_stiff_frac": -0.014590056315753972,
+              "fd_loss_frac": 0.4876047467407626,
+              "relax_hz": 246.8895115532031,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 328.4919334061123,
+              "zeta": 0.035289664214630014,
+              "participation": 0.08615706759593471,
+              "fd_stiff_frac": 0.005761756282062238,
+              "fd_loss_frac": 0.19319327414648002,
+              "relax_hz": 400.0482430264804,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 484.3549742097439,
+              "zeta": 0.03918515966964587,
+              "participation": 0.04794842225431374,
+              "fd_stiff_frac": -0.0017655923833307151,
+              "fd_loss_frac": 0.13077297950804323,
+              "relax_hz": 560.9770380410891,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 69.33667222475592,
+              "zeta": 0.023119399685075145,
+              "participation": 0.521969191536756,
+              "fd_stiff_frac": 0.02156810679653467,
+              "fd_loss_frac": 0.7338834658455639,
+              "relax_hz": 115.48900864984724,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 88.17305211971592,
+              "zeta": 0.02104781147174759,
+              "participation": 0.25760669097481903,
+              "fd_stiff_frac": -0.015047708128728503,
+              "fd_loss_frac": 0.49269350278005963,
+              "relax_hz": 160.17882059482366,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 156.25884151186273,
+              "zeta": 0.027017658820626664,
+              "participation": 0.169545169292797,
+              "fd_stiff_frac": 0.00623218369842429,
+              "fd_loss_frac": 0.4284628826426838,
+              "relax_hz": 239.36769810987076,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 288.0222140132347,
+              "zeta": 0.035030425126605855,
+              "participation": 0.10414582201830958,
+              "fd_stiff_frac": 0.0009278564315469053,
+              "fd_loss_frac": 0.23878623001058616,
+              "relax_hz": 391.3607239417596,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 431.356909858941,
+              "zeta": 0.04330259385449259,
+              "participation": 0.049986181146992686,
+              "fd_stiff_frac": -0.0068590954948137255,
+              "fd_loss_frac": 0.22703746246311332,
+              "relax_hz": 513.6149794297958,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 431.6757755652188,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 92.86218139269572,
+              "zeta": 0.022206068197647928,
+              "participation": 0.40982025976849734,
+              "fd_stiff_frac": 0.01823007441876287,
+              "fd_loss_frac": 0.5132364097852551,
+              "relax_hz": 159.70979203681216,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 129.21837998929325,
+              "zeta": 0.02766134672041013,
+              "participation": 0.15009761985710315,
+              "fd_stiff_frac": 0.023140196337808814,
+              "fd_loss_frac": 0.39752603840709666,
+              "relax_hz": 219.48978981880333,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 172.8054454681722,
+              "zeta": 0.018186596601110487,
+              "participation": 0.10941812189464728,
+              "fd_stiff_frac": -0.012912938967972621,
+              "fd_loss_frac": 0.374898414969448,
+              "relax_hz": 204.30380937411098,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 261.5269484345068,
+              "zeta": 0.03170613439768131,
+              "participation": 0.0914519479282585,
+              "fd_stiff_frac": 0.01687205010296693,
+              "fd_loss_frac": 0.5495328109544335,
+              "relax_hz": 340.9416821302447,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 381.00573538856247,
+              "zeta": 0.035486459021182186,
+              "participation": 0.05894300692778303,
+              "fd_stiff_frac": 0.013436139895356502,
+              "fd_loss_frac": 0.3480468387753883,
+              "relax_hz": 449.66633229823725,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 509.6421168482802,
+              "zeta": 0.03932961358015957,
+              "participation": 0.03520970723384025,
+              "fd_stiff_frac": -0.015239639050913708,
+              "fd_loss_frac": 0.22560863626940053,
+              "relax_hz": 584.4026295408365,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 83.32669246424906,
+              "zeta": 0.019721525672280842,
+              "participation": 0.7789957307245904,
+              "fd_stiff_frac": 0.025230836929668463,
+              "fd_loss_frac": 0.9043388854476729,
+              "relax_hz": 139.67228100676166,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 115.63633908384857,
+              "zeta": 0.02605020669066663,
+              "participation": 0.20063652487751,
+              "fd_stiff_frac": -0.017291917568442765,
+              "fd_loss_frac": 0.393609571528171,
+              "relax_hz": 173.25821140082425,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 162.54795022221884,
+              "zeta": 0.022073980548434367,
+              "participation": 0.18809085164939457,
+              "fd_stiff_frac": 0.007015364070657242,
+              "fd_loss_frac": 0.4317515270225045,
+              "relax_hz": 223.4425000236642,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 237.75812411481746,
+              "zeta": 0.031067825345728252,
+              "participation": 0.105036671602422,
+              "fd_stiff_frac": 0.006142801396148031,
+              "fd_loss_frac": 0.615680243794247,
+              "relax_hz": 309.1931564357368,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 354.4913303814167,
+              "zeta": 0.038066767310913886,
+              "participation": 0.0835549600499891,
+              "fd_stiff_frac": -0.001996049727856051,
+              "fd_loss_frac": 0.3537112629745297,
+              "relax_hz": 426.0305348701438,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 502.3868835523521,
+              "zeta": 0.04431705639810186,
+              "participation": 0.06374610410427436,
+              "fd_stiff_frac": 0.010660145353716712,
+              "fd_loss_frac": 0.23764448161001606,
+              "relax_hz": 524.3645750354568,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 514.028703683599,
+          "load_rigid": 244.55077546696344,
+          "source_modes": [
+            {
+              "fn_hz": 108.59003991706369,
+              "zeta": 0.025548662096433382,
+              "participation": 0.29733195442761096,
+              "fd_stiff_frac": 0.013823779047630508,
+              "fd_loss_frac": 0.5020530926239903,
+              "relax_hz": 179.02078089823038,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 170.30446820801325,
+              "zeta": 0.02952335613992976,
+              "participation": 0.15083715315542603,
+              "fd_stiff_frac": -0.005856962923374405,
+              "fd_loss_frac": 0.42700452039165027,
+              "relax_hz": 271.8411001541363,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 323.32155536762104,
+              "zeta": 0.037361503300694245,
+              "participation": 0.07874717773357696,
+              "fd_stiff_frac": 0.007074105396947482,
+              "fd_loss_frac": 0.1837343927857832,
+              "relax_hz": 433.4898195552178,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 73.37847058288982,
+              "zeta": 0.024418500132368945,
+              "participation": 0.5616422489915087,
+              "fd_stiff_frac": 0.018921727176030776,
+              "fd_loss_frac": 0.7763520984375047,
+              "relax_hz": 119.31119225490332,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 97.16215706564233,
+              "zeta": 0.022026199963762608,
+              "participation": 0.35069561498114815,
+              "fd_stiff_frac": -0.004024445983603313,
+              "fd_loss_frac": 0.5671905455480772,
+              "relax_hz": 154.83572057168706,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 178.9195117597567,
+              "zeta": 0.03006743201600805,
+              "participation": 0.15242471139402297,
+              "fd_stiff_frac": 0.008531658208549717,
+              "fd_loss_frac": 0.38331468957654924,
+              "relax_hz": 273.2744526547879,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 354.4411543152093,
+              "zeta": 0.04397148166336472,
+              "participation": 0.09655452217822638,
+              "fd_stiff_frac": -0.00482438221952066,
+              "fd_loss_frac": 0.1745067435973225,
+              "relax_hz": 526.3196439758791,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 516.3005702545464,
+          "load_rigid": 246.93061402489002,
+          "source_modes": [
+            {
+              "fn_hz": 114.3204745814532,
+              "zeta": 0.025485710646066573,
+              "participation": 0.244309342653786,
+              "fd_stiff_frac": 0.026691899112118004,
+              "fd_loss_frac": 0.406797067682992,
+              "relax_hz": 165.73907326785292,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 184.29069538447305,
+              "zeta": 0.029348176119306936,
+              "participation": 0.1436962251683774,
+              "fd_stiff_frac": -0.0030259527923574376,
+              "fd_loss_frac": 0.27204192050315573,
+              "relax_hz": 228.6524723736425,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 349.0118343054002,
+              "zeta": 0.037251261021828685,
+              "participation": 0.0892221400031689,
+              "fd_stiff_frac": 0.009825065065646873,
+              "fd_loss_frac": 0.2772653514228451,
+              "relax_hz": 449.3918923104971,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 86.09125171719224,
+              "zeta": 0.02411968231448282,
+              "participation": 0.391794002891177,
+              "fd_stiff_frac": 0.013017512744017815,
+              "fd_loss_frac": 0.7425972048929134,
+              "relax_hz": 121.34233769245466,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 117.01095789321906,
+              "zeta": 0.022002532086315592,
+              "participation": 0.32281916982389025,
+              "fd_stiff_frac": -0.014815210783554755,
+              "fd_loss_frac": 0.6108601046859532,
+              "relax_hz": 155.89645342017462,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 213.96408779166075,
+              "zeta": 0.030222353969141108,
+              "participation": 0.1746071675244362,
+              "fd_stiff_frac": 0.01046687661209823,
+              "fd_loss_frac": 0.3546646981794914,
+              "relax_hz": 257.4437412074398,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 420.17710957493625,
+              "zeta": 0.04419416461715933,
+              "participation": 0.08227642526512677,
+              "fd_stiff_frac": -0.011211672586841415,
+              "fd_loss_frac": 0.09761434327132931,
+              "relax_hz": 429.4511162600482,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 421.47067393142487,
+          "load_rigid": 185.2196859020818,
+          "source_modes": [
+            {
+              "fn_hz": 138.90087060655222,
+              "zeta": 0.027612255105740485,
+              "participation": 0.24849543243234026,
+              "fd_stiff_frac": 0.014097571761145152,
+              "fd_loss_frac": 0.4203632138395613,
+              "relax_hz": 204.76674741605248,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 226.5674750868851,
+              "zeta": 0.03228566959154454,
+              "participation": 0.1284837500422345,
+              "fd_stiff_frac": -0.01359096643376424,
+              "fd_loss_frac": 0.3485802812624049,
+              "relax_hz": 280.60173844822833,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 404.62512508415756,
+              "zeta": 0.0414607667088522,
+              "participation": 0.0637424573954924,
+              "fd_stiff_frac": 0.0035839715032689114,
+              "fd_loss_frac": 0.24898576223279542,
+              "relax_hz": 536.8182303784744,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 116.15350194175683,
+              "zeta": 0.02617000720555642,
+              "participation": 0.45512566701345597,
+              "fd_stiff_frac": 0.01126821090472687,
+              "fd_loss_frac": 0.4916129507367194,
+              "relax_hz": 195.63651126884605,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 172.22175594009627,
+              "zeta": 0.029061867538780116,
+              "participation": 0.24526615627855006,
+              "fd_stiff_frac": -0.008646378151226203,
+              "fd_loss_frac": 0.4945139404219294,
+              "relax_hz": 244.25009689198177,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 284.8970423364566,
+              "zeta": 0.03820136054980737,
+              "participation": 0.11314405109214294,
+              "fd_stiff_frac": -7.254073851646788e-05,
+              "fd_loss_frac": 0.3339618671443989,
+              "relax_hz": 349.03101639210536,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 480.3498211507739,
+              "zeta": 0.04605325377816881,
+              "participation": 0.061544165223506635,
+              "fd_stiff_frac": -0.005688147787064951,
+              "fd_loss_frac": 0.039106896928856105,
+              "relax_hz": 492.59054179497923,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 5,
+      "source_fn_scale": 1.0025924247008244,
+      "load_fn_scale": 1.0148623599885882,
+      "source_zeta_scale": 1.0010226701838147,
+      "load_zeta_scale": 1.0133570584764313,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        8954049.09989977,
+        8743248.305505794,
+        7395443.07794364,
+        8207950.904927092,
+        7940450.987948744,
+        7950794.306926116
+      ],
+      "strut_length_variation_mm": [
+        -0.004413742247067403,
+        -0.6111239088015663,
+        -1.0312338397951413,
+        -0.34307305216319967,
+        2.247661502215586,
+        1.5226550104001229
+      ],
+      "preload_variation_frac": [
+        -0.03544862233403452,
+        -0.11013378546453223,
+        0.029051559844732518,
+        -0.035886401872103985,
+        -0.013926652432571969,
+        0.008467402575783108
+      ],
+      "joint_stiffness_variation_frac": [
+        0.07607825724417236,
+        0.050744673641230295,
+        -0.11123164391055787,
+        -0.013586210352751085,
+        -0.04573377189317689,
+        -0.044490734186423964
+      ],
+      "pair_split_xy_fraction": 0.05195985588895767,
+      "pair_split_rot_fraction": 0.045710948262594,
+      "dofs": {
+        "x": {
+          "source_rigid": 359.5016972508063,
+          "load_rigid": 159.98363728929576,
+          "source_modes": [
+            {
+              "fn_hz": 99.48573027294383,
+              "zeta": 0.02516555318048967,
+              "participation": 0.23659054024204523,
+              "fd_stiff_frac": 0.015125027141492836,
+              "fd_loss_frac": 0.49384757133034624,
+              "relax_hz": 157.72732300854491,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 147.8576151763393,
+              "zeta": 0.029912745070320063,
+              "participation": 0.14172894591376267,
+              "fd_stiff_frac": -0.007319236815551725,
+              "fd_loss_frac": 0.4611242855239698,
+              "relax_hz": 237.83649393881885,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 308.2055757596897,
+              "zeta": 0.036073200563685175,
+              "participation": 0.08901565706245507,
+              "fd_stiff_frac": 0.0011244130580493946,
+              "fd_loss_frac": 0.29535738477965257,
+              "relax_hz": 449.94706767120897,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 459.27905235247624,
+              "zeta": 0.03997462747061445,
+              "participation": 0.049842737629775494,
+              "fd_stiff_frac": -0.008896491204751293,
+              "fd_loss_frac": 0.2623772989892108,
+              "relax_hz": 546.5132417161583,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 68.07270188800044,
+              "zeta": 0.023273203957646448,
+              "participation": 0.5549222487719385,
+              "fd_stiff_frac": 0.01635019371901055,
+              "fd_loss_frac": 0.6905435487040534,
+              "relax_hz": 122.83111930105038,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 87.41548950701186,
+              "zeta": 0.021234994145281298,
+              "participation": 0.303969054999423,
+              "fd_stiff_frac": -0.006046407130251112,
+              "fd_loss_frac": 0.3756932046595488,
+              "relax_hz": 141.6252711567352,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 147.59476030636017,
+              "zeta": 0.027383117577928315,
+              "participation": 0.1651131267771207,
+              "fd_stiff_frac": 0.018310639824546338,
+              "fd_loss_frac": 0.3374604440069207,
+              "relax_hz": 226.68852523792197,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 273.0167305560188,
+              "zeta": 0.0355578533449844,
+              "participation": 0.10026091577657377,
+              "fd_stiff_frac": 0.0010992665429649948,
+              "fd_loss_frac": 0.3318548329951629,
+              "relax_hz": 339.87848657015275,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 436.8906182674757,
+              "zeta": 0.043595641242046096,
+              "participation": 0.04809099370981232,
+              "fd_stiff_frac": -0.012782696634276508,
+              "fd_loss_frac": 0.19657797740901803,
+              "relax_hz": 561.0772371592072,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 364.6273909277511,
+          "load_rigid": 158.59079459730424,
+          "source_modes": [
+            {
+              "fn_hz": 101.58276989054235,
+              "zeta": 0.025131218412643642,
+              "participation": 0.2436988584354601,
+              "fd_stiff_frac": 0.014420477038017342,
+              "fd_loss_frac": 0.4570391872354266,
+              "relax_hz": 170.33412522781197,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 155.52805327811004,
+              "zeta": 0.030070944783231753,
+              "participation": 0.12354217557445742,
+              "fd_stiff_frac": 0.001231286651593064,
+              "fd_loss_frac": 0.3437877298568586,
+              "relax_hz": 222.29946899869157,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 332.4499907361873,
+              "zeta": 0.03599072189274198,
+              "participation": 0.07818631021097534,
+              "fd_stiff_frac": 7.106291485970903e-05,
+              "fd_loss_frac": 0.2852993874995581,
+              "relax_hz": 389.17560701843263,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 488.0199842922724,
+              "zeta": 0.039842791749788435,
+              "participation": 0.04015845803918227,
+              "fd_stiff_frac": -0.006012944977438472,
+              "fd_loss_frac": 0.09446108752084209,
+              "relax_hz": 530.6436782027444,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 73.57316603623835,
+              "zeta": 0.023324134095481706,
+              "participation": 0.5152546497916568,
+              "fd_stiff_frac": 0.019899862033817054,
+              "fd_loss_frac": 0.6976235359307442,
+              "relax_hz": 109.90674966091949,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 97.54722001983153,
+              "zeta": 0.021329850626081094,
+              "participation": 0.24718621361717852,
+              "fd_stiff_frac": -0.016483653666525037,
+              "fd_loss_frac": 0.5973947896430416,
+              "relax_hz": 159.373988356324,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 168.20291323920864,
+              "zeta": 0.027411973208289246,
+              "participation": 0.1851585102730629,
+              "fd_stiff_frac": 0.018299694222582003,
+              "fd_loss_frac": 0.38169143713925985,
+              "relax_hz": 210.73123828187397,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 302.53736045568724,
+              "zeta": 0.035506992885074584,
+              "participation": 0.10487220350279608,
+              "fd_stiff_frac": 0.00943049270173206,
+              "fd_loss_frac": 0.27003892859746637,
+              "relax_hz": 347.59208915871596,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 479.5637639066742,
+              "zeta": 0.043612971843709804,
+              "participation": 0.04458769249800626,
+              "fd_stiff_frac": -0.0002456781880976304,
+              "fd_loss_frac": 0.2152431343374357,
+              "relax_hz": 540.4895574873416,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 432.6777665077625,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 93.08237676099489,
+              "zeta": 0.022531314755336977,
+              "participation": 0.4011306482906557,
+              "fd_stiff_frac": 0.00452265682310554,
+              "fd_loss_frac": 0.6441790819237692,
+              "relax_hz": 157.22671852388683,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 129.80183403843662,
+              "zeta": 0.02801766412691801,
+              "participation": 0.179533587311572,
+              "fd_stiff_frac": 0.014822407342338176,
+              "fd_loss_frac": 0.4973516614929611,
+              "relax_hz": 204.4816163466303,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 172.4539939961296,
+              "zeta": 0.018572383385114966,
+              "participation": 0.11377610804407902,
+              "fd_stiff_frac": -0.006314916277511537,
+              "fd_loss_frac": 0.33016580039046456,
+              "relax_hz": 261.9850165014202,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 263.3534261430486,
+              "zeta": 0.032085875908677466,
+              "participation": 0.0917687798570785,
+              "fd_stiff_frac": 0.01685260613568692,
+              "fd_loss_frac": 0.4918071360286732,
+              "relax_hz": 343.27126167913184,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 380.78806520878265,
+              "zeta": 0.03600400024297801,
+              "participation": 0.06238078215377047,
+              "fd_stiff_frac": 0.00827505927142685,
+              "fd_loss_frac": 0.3174918831362756,
+              "relax_hz": 481.94362675584296,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 530.4257320975823,
+              "zeta": 0.040015879263846414,
+              "participation": 0.03899714250814156,
+              "fd_stiff_frac": -0.012983569927393926,
+              "fd_loss_frac": 0.2225191384306752,
+              "relax_hz": 567.9722266102533,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 88.44655089917285,
+              "zeta": 0.019673987150991216,
+              "participation": 0.858436773352987,
+              "fd_stiff_frac": 0.014408903804255694,
+              "fd_loss_frac": 0.801654352083807,
+              "relax_hz": 117.55702824337604,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 119.71097032222414,
+              "zeta": 0.02640281601699605,
+              "participation": 0.24043338592496916,
+              "fd_stiff_frac": -0.02042661082691151,
+              "fd_loss_frac": 0.47953579090814663,
+              "relax_hz": 166.9611430682297,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 170.6939868435655,
+              "zeta": 0.022177943672290947,
+              "participation": 0.1711226978829345,
+              "fd_stiff_frac": 0.021940704739848733,
+              "fd_loss_frac": 0.4206196935632936,
+              "relax_hz": 220.70205966584513,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 242.3101390271819,
+              "zeta": 0.031459343283432084,
+              "participation": 0.1123930107137067,
+              "fd_stiff_frac": -0.007973607498703598,
+              "fd_loss_frac": 0.6061018269029764,
+              "relax_hz": 255.59970395025925,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 354.73223695875714,
+              "zeta": 0.03875523990485542,
+              "participation": 0.06225612298401257,
+              "fd_stiff_frac": -0.006398759127896739,
+              "fd_loss_frac": 0.3007309584893382,
+              "relax_hz": 442.0279474125815,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 519.022332738925,
+              "zeta": 0.0446022479398978,
+              "participation": 0.047222816265643675,
+              "fd_stiff_frac": -0.0024165255373064937,
+              "fd_loss_frac": 0.2554514002542003,
+              "relax_hz": 518.9048078261735,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 517.7216966608634,
+          "load_rigid": 241.50914964786926,
+          "source_modes": [
+            {
+              "fn_hz": 111.54426192974663,
+              "zeta": 0.026234126033400522,
+              "participation": 0.2470728464130225,
+              "fd_stiff_frac": 0.02676446720099012,
+              "fd_loss_frac": 0.43470939018447946,
+              "relax_hz": 152.68169123424394,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 169.3837790121168,
+              "zeta": 0.0298105841859834,
+              "participation": 0.1590642367040406,
+              "fd_stiff_frac": -0.012159502956225417,
+              "fd_loss_frac": 0.23904442076611854,
+              "relax_hz": 265.4737595791895,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 334.2266893204061,
+              "zeta": 0.038244692203106924,
+              "participation": 0.08538979360513521,
+              "fd_stiff_frac": 0.014725656877185375,
+              "fd_loss_frac": 0.24104667970274657,
+              "relax_hz": 426.4158613932524,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 80.1178954917727,
+              "zeta": 0.024228625316498918,
+              "participation": 0.40620830530282886,
+              "fd_stiff_frac": 0.015825091397022293,
+              "fd_loss_frac": 0.7645099929656259,
+              "relax_hz": 108.26167567020029,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 105.42171656734676,
+              "zeta": 0.022401693689004402,
+              "participation": 0.3325435056359025,
+              "fd_stiff_frac": -0.013785193059797411,
+              "fd_loss_frac": 0.530738988844112,
+              "relax_hz": 155.76171829126716,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 192.20230677137718,
+              "zeta": 0.030459449284448964,
+              "participation": 0.17763836907880387,
+              "fd_stiff_frac": 0.005523615723537876,
+              "fd_loss_frac": 0.3900599283959783,
+              "relax_hz": 259.3695816323468,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 377.8551594900191,
+              "zeta": 0.044706888693000726,
+              "participation": 0.07569020331408767,
+              "fd_stiff_frac": -0.007571108143443032,
+              "fd_loss_frac": 0.19797154717050316,
+              "relax_hz": 493.54347495619794,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 506.57448836096404,
+          "load_rigid": 249.20893516401898,
+          "source_modes": [
+            {
+              "fn_hz": 112.47592230195801,
+              "zeta": 0.025918195473117613,
+              "participation": 0.2811666826355629,
+              "fd_stiff_frac": 0.01804024231237963,
+              "fd_loss_frac": 0.4398802449732796,
+              "relax_hz": 182.71587052596968,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 177.64671224057307,
+              "zeta": 0.030069027753938257,
+              "participation": 0.13232691679254527,
+              "fd_stiff_frac": -0.017419178479396315,
+              "fd_loss_frac": 0.2845829215048892,
+              "relax_hz": 292.85151442123265,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 350.43180748733175,
+              "zeta": 0.03811528846262844,
+              "participation": 0.08143105202665592,
+              "fd_stiff_frac": 0.013747648446944837,
+              "fd_loss_frac": 0.2429792555633495,
+              "relax_hz": 408.7947522245833,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 86.51888694923291,
+              "zeta": 0.024277832089323142,
+              "participation": 0.4712699051413561,
+              "fd_stiff_frac": 0.025641875196512526,
+              "fd_loss_frac": 0.692290207637354,
+              "relax_hz": 109.20756751598469,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 115.2176353729969,
+              "zeta": 0.022227850481351976,
+              "participation": 0.30855464332138943,
+              "fd_stiff_frac": -0.015444835980303799,
+              "fd_loss_frac": 0.5529247413011131,
+              "relax_hz": 140.03924477384953,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 218.94466686595206,
+              "zeta": 0.030343050947193927,
+              "participation": 0.13305336066210383,
+              "fd_stiff_frac": 0.01700377078587885,
+              "fd_loss_frac": 0.3558832946586741,
+              "relax_hz": 265.9056704911078,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 419.15309999977853,
+              "zeta": 0.04464595727596705,
+              "participation": 0.08778812417657215,
+              "fd_stiff_frac": 0.0019838828541585696,
+              "fd_loss_frac": 0.2452814724677484,
+              "relax_hz": 555.5003106375975,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 426.3711047751211,
+          "load_rigid": 184.36168367400154,
+          "source_modes": [
+            {
+              "fn_hz": 137.15468562322303,
+              "zeta": 0.02811048278687604,
+              "participation": 0.2613806034166168,
+              "fd_stiff_frac": 0.01776100064428981,
+              "fd_loss_frac": 0.49173482758609116,
+              "relax_hz": 210.05516828512515,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 232.38806735643837,
+              "zeta": 0.03304429184552804,
+              "participation": 0.12281466677981914,
+              "fd_stiff_frac": -0.012076956731070962,
+              "fd_loss_frac": 0.21496514134942427,
+              "relax_hz": 307.46569286848575,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 406.6875452175564,
+              "zeta": 0.04208347658850475,
+              "participation": 0.07510481758172455,
+              "fd_stiff_frac": 0.009023879975434634,
+              "fd_loss_frac": 0.17994582295882783,
+              "relax_hz": 556.3396924137734,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 119.78267298740683,
+              "zeta": 0.02636464355531738,
+              "participation": 0.41061273175566787,
+              "fd_stiff_frac": 0.011403791640932227,
+              "fd_loss_frac": 0.5537714969301764,
+              "relax_hz": 181.71207616086025,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 174.5386791270031,
+              "zeta": 0.029406736784870123,
+              "participation": 0.21428929694968546,
+              "fd_stiff_frac": -0.01708419175807611,
+              "fd_loss_frac": 0.513779864993258,
+              "relax_hz": 269.0611756322778,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 292.68693866361315,
+              "zeta": 0.03862973596274426,
+              "participation": 0.1257316134183337,
+              "fd_stiff_frac": -0.0047895677286094816,
+              "fd_loss_frac": 0.3204113990484595,
+              "relax_hz": 352.7438331396501,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 485.72678325277496,
+              "zeta": 0.04649344929668898,
+              "participation": 0.0657212750257612,
+              "fd_stiff_frac": -0.002294378971105004,
+              "fd_loss_frac": 0.21514394621927416,
+              "relax_hz": 540.3713179852878,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 6,
+      "source_fn_scale": 0.9765022617433106,
+      "load_fn_scale": 1.0246130514266951,
+      "source_zeta_scale": 1.0060963776547813,
+      "load_zeta_scale": 0.9665206939635285,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        7605350.929654186,
+        8878412.988544166,
+        8428946.693630999,
+        8042592.490640632,
+        8539018.05084669,
+        7412926.238654101
+      ],
+      "strut_length_variation_mm": [
+        1.2321649062128985,
+        -0.0006513710915495586,
+        0.079262109115763,
+        1.316363855100112,
+        -1.9781361420876538,
+        -0.5432771452151959
+      ],
+      "preload_variation_frac": [
+        0.13729955195664909,
+        0.026324604692431943,
+        -0.055963198528266464,
+        0.042040435505833744,
+        0.026935706686166894,
+        0.05473368405995793
+      ],
+      "joint_stiffness_variation_frac": [
+        -0.08600537222827725,
+        0.06698847294835274,
+        0.012972585619170016,
+        -0.0334586269858054,
+        0.026200723294502605,
+        -0.10913055546458944
+      ],
+      "pair_split_xy_fraction": 0.05072320433030604,
+      "pair_split_rot_fraction": 0.04713590392909618,
+      "dofs": {
+        "x": {
+          "source_rigid": 358.13363167302566,
+          "load_rigid": 155.69699388321365,
+          "source_modes": [
+            {
+              "fn_hz": 97.56156451292118,
+              "zeta": 0.024946956819468756,
+              "participation": 0.2582774495300721,
+              "fd_stiff_frac": 0.0167971543339464,
+              "fd_loss_frac": 0.49387867006595576,
+              "relax_hz": 146.58603110719272,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 145.7697473472723,
+              "zeta": 0.03011637823958091,
+              "participation": 0.13366032048763887,
+              "fd_stiff_frac": -0.017293830944989777,
+              "fd_loss_frac": 0.3434256396457629,
+              "relax_hz": 199.57998628632015,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 303.2499604218573,
+              "zeta": 0.03637893863631511,
+              "participation": 0.09889350031251531,
+              "fd_stiff_frac": 0.00484676725331058,
+              "fd_loss_frac": 0.22957483956943178,
+              "relax_hz": 358.95421819119616,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 469.17230299745916,
+              "zeta": 0.04026416752255612,
+              "participation": 0.05621108195162403,
+              "fd_stiff_frac": 0.003976164141281479,
+              "fd_loss_frac": 0.21861132829391236,
+              "relax_hz": 502.3030789781236,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 66.82679249532747,
+              "zeta": 0.022231648190286852,
+              "participation": 0.4254549707967917,
+              "fd_stiff_frac": 0.017948167620325396,
+              "fd_loss_frac": 0.6430915464794412,
+              "relax_hz": 126.57027549896887,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 87.99541994991178,
+              "zeta": 0.02027014555760287,
+              "participation": 0.29053872805406444,
+              "fd_stiff_frac": -0.012614070316795694,
+              "fd_loss_frac": 0.563586641464569,
+              "relax_hz": 155.64090043677854,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 150.3021785526229,
+              "zeta": 0.02606292234232984,
+              "participation": 0.17054850826738016,
+              "fd_stiff_frac": 0.016344531306607436,
+              "fd_loss_frac": 0.4131135190312771,
+              "relax_hz": 252.43697981354416,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 286.3178602505124,
+              "zeta": 0.03353760644795953,
+              "participation": 0.10742463908826633,
+              "fd_stiff_frac": 0.0025545453994980025,
+              "fd_loss_frac": 0.31723032256912514,
+              "relax_hz": 329.28496057018964,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 442.6107939862659,
+              "zeta": 0.04174000006465929,
+              "participation": 0.053231693923249335,
+              "fd_stiff_frac": -0.005538593129236876,
+              "fd_loss_frac": 0.09924741351958416,
+              "relax_hz": 506.50787492441,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 360.30240947526534,
+          "load_rigid": 161.60826344839333,
+          "source_modes": [
+            {
+              "fn_hz": 103.10840884138146,
+              "zeta": 0.025168329882307123,
+              "participation": 0.25692752826845716,
+              "fd_stiff_frac": 0.018825929724048753,
+              "fd_loss_frac": 0.48263611241318927,
+              "relax_hz": 156.4586226622546,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 154.0415530979054,
+              "zeta": 0.03011539349170689,
+              "participation": 0.12054338202702748,
+              "fd_stiff_frac": -0.006663860792153533,
+              "fd_loss_frac": 0.32426609229129333,
+              "relax_hz": 210.9122483053461,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 333.1041734008977,
+              "zeta": 0.03610995741858827,
+              "participation": 0.0700749204769567,
+              "fd_stiff_frac": -0.003985104790884623,
+              "fd_loss_frac": 0.19914384153321563,
+              "relax_hz": 384.1613970030613,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 497.7311843512939,
+              "zeta": 0.03992654355399182,
+              "participation": 0.05307737073853274,
+              "fd_stiff_frac": -0.014077900574673124,
+              "fd_loss_frac": 0.27801626628588394,
+              "relax_hz": 515.9053137423055,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 74.49775951475647,
+              "zeta": 0.02214682062291072,
+              "participation": 0.49561139429658146,
+              "fd_stiff_frac": 0.017159444139166948,
+              "fd_loss_frac": 0.6906532839181067,
+              "relax_hz": 120.10486190516177,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 96.05819395947287,
+              "zeta": 0.02034312540539513,
+              "participation": 0.3795334214216177,
+              "fd_stiff_frac": -0.008869680291900365,
+              "fd_loss_frac": 0.4853679176392031,
+              "relax_hz": 133.105839644818,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 169.28231312290052,
+              "zeta": 0.025962485086906944,
+              "participation": 0.18154653703351092,
+              "fd_stiff_frac": 0.014100519088077733,
+              "fd_loss_frac": 0.2902199348684066,
+              "relax_hz": 222.41010589057694,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 314.9974042573981,
+              "zeta": 0.03387370742496371,
+              "participation": 0.0937935876994353,
+              "fd_stiff_frac": 0.00747349228181752,
+              "fd_loss_frac": 0.25856617235948093,
+              "relax_hz": 367.6128603451274,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 500.03614498318706,
+              "zeta": 0.04186790445152263,
+              "participation": 0.042039093062536746,
+              "fd_stiff_frac": 0.0012692397882568948,
+              "fd_loss_frac": 0.20475470877694066,
+              "relax_hz": 473.8972423895664,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 430.22837281421323,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 92.1227711942531,
+              "zeta": 0.022670875142833072,
+              "participation": 0.40014054810123956,
+              "fd_stiff_frac": 0.017081024524799288,
+              "fd_loss_frac": 0.6464186217478757,
+              "relax_hz": 145.1435586121469,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 124.71518647340827,
+              "zeta": 0.028149640249229214,
+              "participation": 0.17541250749328727,
+              "fd_stiff_frac": 0.0166276295170727,
+              "fd_loss_frac": 0.4573462350806143,
+              "relax_hz": 236.72851704773046,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 169.25389005647915,
+              "zeta": 0.018549664482630922,
+              "participation": 0.13423816204065653,
+              "fd_stiff_frac": -0.005758280454226881,
+              "fd_loss_frac": 0.4105080674528566,
+              "relax_hz": 231.4156479475253,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 255.02637886414294,
+              "zeta": 0.03210429984875567,
+              "participation": 0.09044093327364847,
+              "fd_stiff_frac": 0.0207232245085536,
+              "fd_loss_frac": 0.5071818322954003,
+              "relax_hz": 310.6592373868731,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 385.8876211127548,
+              "zeta": 0.03635246821680571,
+              "participation": 0.0712726114888088,
+              "fd_stiff_frac": 0.020198387281120635,
+              "fd_loss_frac": 0.37863935463693676,
+              "relax_hz": 425.0494785228235,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 523.5909152824951,
+              "zeta": 0.04007786203618688,
+              "participation": 0.04586130576014635,
+              "fd_stiff_frac": -0.012072787490389841,
+              "fd_loss_frac": 0.15810065299440004,
+              "relax_hz": 658.0727924583583,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 89.17146390671311,
+              "zeta": 0.01871493498107272,
+              "participation": 0.8025344938362982,
+              "fd_stiff_frac": 0.022580329784602293,
+              "fd_loss_frac": 0.8542339137164601,
+              "relax_hz": 143.23688539279203,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 122.15086300466304,
+              "zeta": 0.025010105304319283,
+              "participation": 0.21599725418826674,
+              "fd_stiff_frac": -0.020824041760243293,
+              "fd_loss_frac": 0.41910168787600577,
+              "relax_hz": 186.27001366454223,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 168.34584672585373,
+              "zeta": 0.021257297786492806,
+              "participation": 0.18014789629774614,
+              "fd_stiff_frac": 0.017771211620587157,
+              "fd_loss_frac": 0.4348324293073035,
+              "relax_hz": 227.2072415944804,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 247.30454802857096,
+              "zeta": 0.02989994871228277,
+              "participation": 0.11585565897680218,
+              "fd_stiff_frac": 0.007299205664850599,
+              "fd_loss_frac": 0.6286840229694539,
+              "relax_hz": 290.92787190425554,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 367.99405473758145,
+              "zeta": 0.03682279545777923,
+              "participation": 0.06637868575512536,
+              "fd_stiff_frac": -0.02018067816483087,
+              "fd_loss_frac": 0.34513215025559596,
+              "relax_hz": 390.4776487194035,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 529.0647143710411,
+              "zeta": 0.042543937522402944,
+              "participation": 0.061867633133565116,
+              "fd_stiff_frac": 0.010410041110646731,
+              "fd_loss_frac": 0.17651205652654253,
+              "relax_hz": 538.2961679330509,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 522.183760608913,
+          "load_rigid": 244.93312051558368,
+          "source_modes": [
+            {
+              "fn_hz": 107.31124960404134,
+              "zeta": 0.026178350080732937,
+              "participation": 0.27429481125515254,
+              "fd_stiff_frac": 0.01910492419353372,
+              "fd_loss_frac": 0.5569814625495711,
+              "relax_hz": 194.56609558379094,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 165.25644666908656,
+              "zeta": 0.0303656399401674,
+              "participation": 0.1473792895723918,
+              "fd_stiff_frac": -0.011729615281027422,
+              "fd_loss_frac": 0.3508073182099582,
+              "relax_hz": 231.65335954015288,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 322.3501558585184,
+              "zeta": 0.03797837136970928,
+              "participation": 0.08172788758681776,
+              "fd_stiff_frac": -0.006271375150962263,
+              "fd_loss_frac": 0.18797277755274652,
+              "relax_hz": 475.93192138953225,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 79.82798579028928,
+              "zeta": 0.02293044209026393,
+              "participation": 0.4259395036706513,
+              "fd_stiff_frac": 0.0273102440137607,
+              "fd_loss_frac": 0.651778327169104,
+              "relax_hz": 115.39555181618512,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 107.37940833837382,
+              "zeta": 0.02120235126296958,
+              "participation": 0.3256080001324056,
+              "fd_stiff_frac": -0.020377945265698208,
+              "fd_loss_frac": 0.5419112640269061,
+              "relax_hz": 170.984523714972,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 191.32117627252273,
+              "zeta": 0.02883065108484015,
+              "participation": 0.14694024434826328,
+              "fd_stiff_frac": 0.009787046755124878,
+              "fd_loss_frac": 0.36307396797160724,
+              "relax_hz": 263.9897427186139,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 379.2606178762623,
+              "zeta": 0.04285621909949541,
+              "participation": 0.07528006224802244,
+              "fd_stiff_frac": -0.019908913955314463,
+              "fd_loss_frac": 0.24579671968656733,
+              "relax_hz": 508.13081321188747,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 507.99909064482125,
+          "load_rigid": 249.60813079793394,
+          "source_modes": [
+            {
+              "fn_hz": 111.28525543836838,
+              "zeta": 0.02621104832244503,
+              "participation": 0.2796835012950161,
+              "fd_stiff_frac": 0.016493491416286553,
+              "fd_loss_frac": 0.5766188248648373,
+              "relax_hz": 184.7501984471332,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 177.16512316969715,
+              "zeta": 0.030038865699231827,
+              "participation": 0.11619279746752657,
+              "fd_stiff_frac": -0.01003992318669688,
+              "fd_loss_frac": 0.41205359057096524,
+              "relax_hz": 286.7620097458149,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 345.8999410971682,
+              "zeta": 0.03809700683377928,
+              "participation": 0.0740589044181542,
+              "fd_stiff_frac": 0.008147301293687641,
+              "fd_loss_frac": 0.21363845111730212,
+              "relax_hz": 431.26807704508576,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 88.58172480199326,
+              "zeta": 0.023226372915484555,
+              "participation": 0.5332163646129993,
+              "fd_stiff_frac": 0.020568223366214906,
+              "fd_loss_frac": 0.6795060362804225,
+              "relax_hz": 127.66562337101794,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 118.80243473838502,
+              "zeta": 0.02120753000682093,
+              "participation": 0.31492547014388206,
+              "fd_stiff_frac": 0.004807316655636933,
+              "fd_loss_frac": 0.48439755517825434,
+              "relax_hz": 186.91843267274024,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 221.87265468038422,
+              "zeta": 0.029243544493362812,
+              "participation": 0.14726214672836077,
+              "fd_stiff_frac": 0.005820495257155414,
+              "fd_loss_frac": 0.44405499718167596,
+              "relax_hz": 260.1427160628292,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 427.6040142958494,
+              "zeta": 0.042382021693469794,
+              "participation": 0.07896638348818712,
+              "fd_stiff_frac": -0.011591035747407209,
+              "fd_loss_frac": 0.2150983688325133,
+              "relax_hz": 475.09045606216944,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 430.6623931232253,
+          "load_rigid": 187.8621846335397,
+          "source_modes": [
+            {
+              "fn_hz": 131.75976267306513,
+              "zeta": 0.028263935255015638,
+              "participation": 0.26038651607632657,
+              "fd_stiff_frac": 0.016230876383866263,
+              "fd_loss_frac": 0.35531562530124855,
+              "relax_hz": 209.9659292091328,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 226.04169116848132,
+              "zeta": 0.033169437710773735,
+              "participation": 0.11231045614668064,
+              "fd_stiff_frac": -0.01738314269303253,
+              "fd_loss_frac": 0.2788479667893601,
+              "relax_hz": 317.0902501914724,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 402.4832941338516,
+              "zeta": 0.04241133653449713,
+              "participation": 0.06898855030662997,
+              "fd_stiff_frac": 0.0033900606073854465,
+              "fd_loss_frac": 0.12296368151574477,
+              "relax_hz": 417.56568770722714,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 121.39197143225064,
+              "zeta": 0.025424688896132475,
+              "participation": 0.39097695617132816,
+              "fd_stiff_frac": 0.020462148169623,
+              "fd_loss_frac": 0.5705512220702953,
+              "relax_hz": 172.5551203791785,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 175.97892748680115,
+              "zeta": 0.027866908974874066,
+              "participation": 0.27209371231518387,
+              "fd_stiff_frac": -0.006303995303207988,
+              "fd_loss_frac": 0.4223381573581988,
+              "relax_hz": 249.37474481043546,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 295.0569287037578,
+              "zeta": 0.036391827494924416,
+              "participation": 0.12458286511801073,
+              "fd_stiff_frac": 0.01623042821438868,
+              "fd_loss_frac": 0.2641767303253893,
+              "relax_hz": 314.5802932774795,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 502.6777912575555,
+              "zeta": 0.04400490352439593,
+              "participation": 0.06505300768395823,
+              "fd_stiff_frac": -0.009420708159607712,
+              "fd_loss_frac": 0.17962296889146653,
+              "relax_hz": 477.0413379190754,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "build_id": 7,
+      "source_fn_scale": 0.9975757578205705,
+      "load_fn_scale": 1.0196484770672376,
+      "source_zeta_scale": 1.0136632386081128,
+      "load_zeta_scale": 1.0024706880682297,
+      "strut_nominal_axial_k_N_per_m": 8321001.785530932,
+      "strut_axial_k_N_per_m": [
+        9099991.522475522,
+        8998246.388965392,
+        8380318.582844109,
+        7969398.281583961,
+        7727010.393066074,
+        8588279.46523467
+      ],
+      "strut_length_variation_mm": [
+        -1.7639095511431968,
+        -0.014631079230893698,
+        0.03394225511597112,
+        -0.45838629604267284,
+        -2.0191543249233397,
+        -0.6296636374665533
+      ],
+      "preload_variation_frac": [
+        0.07813829255726683,
+        -0.05680015735017633,
+        0.13044987250597936,
+        -0.07275499428540362,
+        0.01589170375880043,
+        -0.11037582975108227
+      ],
+      "joint_stiffness_variation_frac": [
+        0.09361730198149279,
+        0.08138979186521696,
+        0.007128564425538435,
+        -0.04225494874407568,
+        -0.07138460101014849,
+        0.032120853545362545
+      ],
+      "pair_split_xy_fraction": 0.0751566018303621,
+      "pair_split_rot_fraction": 0.008592819422633066,
+      "dofs": {
+        "x": {
+          "source_rigid": 353.27934283503316,
+          "load_rigid": 157.16760352672608,
+          "source_modes": [
+            {
+              "fn_hz": 97.69484223878091,
+              "zeta": 0.025438604846922164,
+              "participation": 0.256938006571176,
+              "fd_stiff_frac": 0.016357929965398546,
+              "fd_loss_frac": 0.5260698755807062,
+              "relax_hz": 142.5115768977685,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 145.39854030182948,
+              "zeta": 0.030553970904879442,
+              "participation": 0.11672243550328139,
+              "fd_stiff_frac": -0.007170522909829342,
+              "fd_loss_frac": 0.41233836912985417,
+              "relax_hz": 250.53981079159766,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 308.3159642963674,
+              "zeta": 0.03665077143062249,
+              "participation": 0.07586093778650844,
+              "fd_stiff_frac": 0.022495177619859495,
+              "fd_loss_frac": 0.2679757047543184,
+              "relax_hz": 454.9026473549532,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 457.1252544996127,
+              "zeta": 0.040619085592223964,
+              "participation": 0.05793562978494247,
+              "fd_stiff_frac": -0.0011299085907285822,
+              "fd_loss_frac": 0.2466461802679536,
+              "relax_hz": 616.500166680674,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 65.90251796147822,
+              "zeta": 0.02304017294178623,
+              "participation": 0.5618528751630003,
+              "fd_stiff_frac": 0.014690521027102324,
+              "fd_loss_frac": 0.7986645596868537,
+              "relax_hz": 121.11889190492946,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 86.27778329398733,
+              "zeta": 0.021105409253351314,
+              "participation": 0.2656008816444721,
+              "fd_stiff_frac": -0.01018833122630022,
+              "fd_loss_frac": 0.5438781833712327,
+              "relax_hz": 154.82619478592892,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 145.45664567973577,
+              "zeta": 0.02701394024264692,
+              "participation": 0.14222614791385776,
+              "fd_stiff_frac": 0.01942852295784939,
+              "fd_loss_frac": 0.45003400854091274,
+              "relax_hz": 241.78517801533158,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 271.84032190235115,
+              "zeta": 0.03523811857924809,
+              "participation": 0.09405192483869046,
+              "fd_stiff_frac": 0.004127421339177966,
+              "fd_loss_frac": 0.3338185321514408,
+              "relax_hz": 359.31070182219077,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 430.5457195113216,
+              "zeta": 0.04276764065706826,
+              "participation": 0.04765356525628978,
+              "fd_stiff_frac": -0.013732873669514176,
+              "fd_loss_frac": 0.16101968710298092,
+              "relax_hz": 548.4643028602815,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "y": {
+          "source_rigid": 364.84341192329236,
+          "load_rigid": 162.06694519814877,
+          "source_modes": [
+            {
+              "fn_hz": 103.26162863558741,
+              "zeta": 0.025273547303681972,
+              "participation": 0.26810630474756375,
+              "fd_stiff_frac": 0.016010704957511664,
+              "fd_loss_frac": 0.4629072612268609,
+              "relax_hz": 137.58364083112738,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 152.67897235065158,
+              "zeta": 0.03023659168443945,
+              "participation": 0.10809650860997128,
+              "fd_stiff_frac": -0.005443956127287001,
+              "fd_loss_frac": 0.3062842167133598,
+              "relax_hz": 212.93615320960808,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 330.75624173020685,
+              "zeta": 0.0367107165216493,
+              "participation": 0.07709533049440427,
+              "fd_stiff_frac": 0.0010092660786563184,
+              "fd_loss_frac": 0.15420921498299184,
+              "relax_hz": 428.54137815126626,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 493.7523865559374,
+              "zeta": 0.040488334057412076,
+              "participation": 0.055935777124422194,
+              "fd_stiff_frac": -0.0022318028482506266,
+              "fd_loss_frac": 0.20903355703655263,
+              "relax_hz": 569.9204964374549,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 74.03908307521618,
+              "zeta": 0.023138832229142918,
+              "participation": 0.48528240779900805,
+              "fd_stiff_frac": 0.020099543540944256,
+              "fd_loss_frac": 0.7298326353387881,
+              "relax_hz": 120.28039292097718,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 98.28935693452556,
+              "zeta": 0.021152637923425574,
+              "participation": 0.2690847832520295,
+              "fd_stiff_frac": -0.019542721914403247,
+              "fd_loss_frac": 0.4644164910266723,
+              "relax_hz": 159.02393255160266,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 164.95924251353912,
+              "zeta": 0.026951324674197242,
+              "participation": 0.19048947996618476,
+              "fd_stiff_frac": 0.014204915827675305,
+              "fd_loss_frac": 0.33595303207817573,
+              "relax_hz": 231.96710612567898,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 328.3511944486472,
+              "zeta": 0.035070546086142615,
+              "participation": 0.09756605206033736,
+              "fd_stiff_frac": 0.0070127642663523225,
+              "fd_loss_frac": 0.38009964837289273,
+              "relax_hz": 404.58245207468246,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 497.67110616556886,
+              "zeta": 0.04303980712367055,
+              "participation": 0.04830063609516344,
+              "fd_stiff_frac": -0.0018685661595811455,
+              "fd_loss_frac": 0.2355023276172431,
+              "relax_hz": 559.8883883794726,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "z": {
+          "source_rigid": 446.1664195320111,
+          "load_rigid": 170.0,
+          "source_modes": [
+            {
+              "fn_hz": 93.19691030684172,
+              "zeta": 0.02285814767540038,
+              "participation": 0.4286502105950736,
+              "fd_stiff_frac": 0.021563143191968805,
+              "fd_loss_frac": 0.6221162460309871,
+              "relax_hz": 153.90056601400295,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 124.69121446675358,
+              "zeta": 0.028455205414779434,
+              "participation": 0.16259009115831327,
+              "fd_stiff_frac": 0.03627180149368618,
+              "fd_loss_frac": 0.39372819477461335,
+              "relax_hz": 236.61524088675912,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 173.9277725530631,
+              "zeta": 0.018703832466099374,
+              "participation": 0.10577309041770332,
+              "fd_stiff_frac": -0.012495352306485298,
+              "fd_loss_frac": 0.32902967514097126,
+              "relax_hz": 262.18668777137566,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 263.81631713239494,
+              "zeta": 0.032499552875292416,
+              "participation": 0.08258725682427216,
+              "fd_stiff_frac": 0.03485273066376771,
+              "fd_loss_frac": 0.6514374439379766,
+              "relax_hz": 334.21529467116426,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 380.8378007183629,
+              "zeta": 0.036479081381134766,
+              "participation": 0.06577616856030688,
+              "fd_stiff_frac": 0.006834494030782565,
+              "fd_loss_frac": 0.3109810311532957,
+              "relax_hz": 539.2771412342047,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 531.9588447739667,
+              "zeta": 0.040482317161480035,
+              "participation": 0.03802932806318725,
+              "fd_stiff_frac": -0.009336928567150527,
+              "fd_loss_frac": 0.17617111373220198,
+              "relax_hz": 472.14807580830734,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 89.39446068382414,
+              "zeta": 0.019565260341024827,
+              "participation": 0.7936531473432424,
+              "fd_stiff_frac": 0.023918374763060263,
+              "fd_loss_frac": 0.8407902250527729,
+              "relax_hz": 122.65367061313783,
+              "nonlinear_soften_frac": 0.012
+            },
+            {
+              "fn_hz": 121.76065948695846,
+              "zeta": 0.02596398653421213,
+              "participation": 0.2702639347450459,
+              "fd_stiff_frac": -0.007558578799841161,
+              "fd_loss_frac": 0.4559883489204583,
+              "relax_hz": 183.39335477574386,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 171.53572217985985,
+              "zeta": 0.022128624468046663,
+              "participation": 0.18850653993022912,
+              "fd_stiff_frac": 0.023062826992711304,
+              "fd_loss_frac": 0.42747445001575396,
+              "relax_hz": 206.786869093884,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 247.49644419807726,
+              "zeta": 0.03121721718894948,
+              "participation": 0.10381044128466979,
+              "fd_stiff_frac": 0.007324233888344555,
+              "fd_loss_frac": 0.6455589973123858,
+              "relax_hz": 280.3936492970244,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 358.92932231425664,
+              "zeta": 0.03794929855509875,
+              "participation": 0.07273034053344302,
+              "fd_stiff_frac": -0.014821699543546974,
+              "fd_loss_frac": 0.3181551919054152,
+              "relax_hz": 452.8373372880933,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 507.09916117136896,
+              "zeta": 0.04404594188950481,
+              "participation": 0.043438056625517994,
+              "fd_stiff_frac": 0.01158686315937312,
+              "fd_loss_frac": 0.2635280663030905,
+              "relax_hz": 462.36737954293073,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rx": {
+          "source_rigid": 524.1511633473365,
+          "load_rigid": 241.32130560474238,
+          "source_modes": [
+            {
+              "fn_hz": 110.8917893842181,
+              "zeta": 0.026437398477724267,
+              "participation": 0.27542153413358217,
+              "fd_stiff_frac": 0.017399481635865893,
+              "fd_loss_frac": 0.5297187065370123,
+              "relax_hz": 182.1051109551854,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 174.64706723022852,
+              "zeta": 0.03045365245104824,
+              "participation": 0.1437975691752819,
+              "fd_stiff_frac": -0.010363755863988489,
+              "fd_loss_frac": 0.3044328048481102,
+              "relax_hz": 223.2026678654934,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 332.31335656122644,
+              "zeta": 0.03848613462131411,
+              "participation": 0.07973636961729155,
+              "fd_stiff_frac": 0.016177321040561563,
+              "fd_loss_frac": 0.23303411576074956,
+              "relax_hz": 467.5473750214538,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 83.70527975761844,
+              "zeta": 0.02399791069414364,
+              "participation": 0.41787981007751834,
+              "fd_stiff_frac": 0.016092547870239622,
+              "fd_loss_frac": 0.7099842897184053,
+              "relax_hz": 118.26805550203794,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 108.34894833446344,
+              "zeta": 0.02211312743388596,
+              "participation": 0.3715597938257883,
+              "fd_stiff_frac": -0.015072043314455032,
+              "fd_loss_frac": 0.48528550462455816,
+              "relax_hz": 170.21983469380817,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 196.44488735837137,
+              "zeta": 0.030128040383845946,
+              "participation": 0.15282791229695153,
+              "fd_stiff_frac": 0.0034222877223032827,
+              "fd_loss_frac": 0.43809911032159105,
+              "relax_hz": 307.62280405943335,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 395.52622301038133,
+              "zeta": 0.04404743629770079,
+              "participation": 0.08635480369757906,
+              "fd_stiff_frac": 0.0017410542513689956,
+              "fd_loss_frac": 0.1099844238911104,
+              "relax_hz": 573.0438311407527,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "ry": {
+          "source_rigid": 510.0027486669845,
+          "load_rigid": 252.09998682411955,
+          "source_modes": [
+            {
+              "fn_hz": 113.37691390849557,
+              "zeta": 0.02642858506784512,
+              "participation": 0.2849040054942583,
+              "fd_stiff_frac": 0.018289409040987498,
+              "fd_loss_frac": 0.4841192783781849,
+              "relax_hz": 190.70210108333296,
+              "nonlinear_soften_frac": 0.003
+            },
+            {
+              "fn_hz": 175.30906747707678,
+              "zeta": 0.03040183623054809,
+              "participation": 0.11526763862646931,
+              "fd_stiff_frac": -0.01662321127386594,
+              "fd_loss_frac": 0.3332198835146974,
+              "relax_hz": 240.4417707634237,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 341.39028560835726,
+              "zeta": 0.03852518901167656,
+              "participation": 0.08527064146622283,
+              "fd_stiff_frac": 0.00696947984353978,
+              "fd_loss_frac": 0.22834520372919392,
+              "relax_hz": 415.62175387793764,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 83.58017552449051,
+              "zeta": 0.024123715931402466,
+              "participation": 0.4380295298683113,
+              "fd_stiff_frac": 0.020668931223096713,
+              "fd_loss_frac": 0.7578784222839599,
+              "relax_hz": 119.0537984224617,
+              "nonlinear_soften_frac": 0.006
+            },
+            {
+              "fn_hz": 111.25294686169846,
+              "zeta": 0.022074552195580046,
+              "participation": 0.30515706566776546,
+              "fd_stiff_frac": -0.004901619672874086,
+              "fd_loss_frac": 0.4206452008530178,
+              "relax_hz": 158.86953202222907,
+              "nonlinear_soften_frac": 0.005
+            },
+            {
+              "fn_hz": 205.75931797517975,
+              "zeta": 0.030298388821819663,
+              "participation": 0.16557756402053297,
+              "fd_stiff_frac": 0.008470819021150863,
+              "fd_loss_frac": 0.3392580139534837,
+              "relax_hz": 264.11739114792545,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 421.18875163758173,
+              "zeta": 0.0438487185986829,
+              "participation": 0.07288380544673966,
+              "fd_stiff_frac": -0.008479420323458926,
+              "fd_loss_frac": 0.16640963132783224,
+              "relax_hz": 424.7190037466339,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        },
+        "rz": {
+          "source_rigid": 427.16314939685236,
+          "load_rigid": 185.38678721367026,
+          "source_modes": [
+            {
+              "fn_hz": 135.40916006295788,
+              "zeta": 0.02843647936520995,
+              "participation": 0.20591175964834502,
+              "fd_stiff_frac": 0.0164914717505058,
+              "fd_loss_frac": 0.39566982675758944,
+              "relax_hz": 193.7238447243408,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 228.80320119541724,
+              "zeta": 0.03344269137736411,
+              "participation": 0.13315829733744347,
+              "fd_stiff_frac": -0.005235732556793825,
+              "fd_loss_frac": 0.31049740711854706,
+              "relax_hz": 355.9298345128917,
+              "nonlinear_soften_frac": 0.001
+            },
+            {
+              "fn_hz": 409.97257985671826,
+              "zeta": 0.04260482825054219,
+              "participation": 0.06654268875104102,
+              "fd_stiff_frac": 0.0014434542309041034,
+              "fd_loss_frac": 0.18554116306630405,
+              "relax_hz": 515.529677812618,
+              "nonlinear_soften_frac": 0.0
+            }
+          ],
+          "load_modes": [
+            {
+              "fn_hz": 120.34080842733258,
+              "zeta": 0.026054970266653106,
+              "participation": 0.41169958201785595,
+              "fd_stiff_frac": 0.012615744307217085,
+              "fd_loss_frac": 0.6120527325062319,
+              "relax_hz": 187.70055804947262,
+              "nonlinear_soften_frac": 0.004
+            },
+            {
+              "fn_hz": 176.93604979963382,
+              "zeta": 0.029248592241154107,
+              "participation": 0.23065857621738478,
+              "fd_stiff_frac": -0.01163963897028092,
+              "fd_loss_frac": 0.3569930377694721,
+              "relax_hz": 279.1268938378606,
+              "nonlinear_soften_frac": 0.002
+            },
+            {
+              "fn_hz": 295.5837291154672,
+              "zeta": 0.038458812923350745,
+              "participation": 0.1274397477800036,
+              "fd_stiff_frac": 0.009145251712757043,
+              "fd_loss_frac": 0.30791792852746525,
+              "relax_hz": 319.7044627692492,
+              "nonlinear_soften_frac": 0.0
+            },
+            {
+              "fn_hz": 481.31551403866393,
+              "zeta": 0.046279518248566485,
+              "participation": 0.06444130464363562,
+              "fd_stiff_frac": -0.008497142192392733,
+              "fd_loss_frac": 0.2534638081648194,
+              "relax_hz": 624.1305150014038,
+              "nonlinear_soften_frac": 0.0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "noise_summary": {
+    "apparent_mass_fraction_noise_median": 0.004568118139605895,
+    "apparent_mass_fraction_noise_p95": 0.010552142877419374,
+    "response_psd_noise_db_median_abs": 0.1445029469625034,
+    "response_psd_noise_db_p95_abs": 0.5552672873992931
+  }
+}

@@ -1,0 +1,479 @@
+id,type,connectivity,group
+1,tria3,1 2 3,dome_shell
+2,tria3,1 3 4,dome_shell
+3,tria3,1 4 5,dome_shell
+4,tria3,1 5 6,dome_shell
+5,tria3,1 6 7,dome_shell
+6,tria3,1 7 8,dome_shell
+7,tria3,1 8 9,dome_shell
+8,tria3,1 9 10,dome_shell
+9,tria3,1 10 11,dome_shell
+10,tria3,1 11 12,dome_shell
+11,tria3,1 12 13,dome_shell
+12,tria3,1 13 14,dome_shell
+13,tria3,1 14 15,dome_shell
+14,tria3,1 15 16,dome_shell
+15,tria3,1 16 17,dome_shell
+16,tria3,1 17 18,dome_shell
+17,tria3,1 18 19,dome_shell
+18,tria3,1 19 20,dome_shell
+19,tria3,1 20 21,dome_shell
+20,tria3,1 21 22,dome_shell
+21,tria3,1 22 23,dome_shell
+22,tria3,1 23 24,dome_shell
+23,tria3,1 24 25,dome_shell
+24,tria3,1 25 26,dome_shell
+25,tria3,1 26 27,dome_shell
+26,tria3,1 27 28,dome_shell
+27,tria3,1 28 29,dome_shell
+28,tria3,1 29 30,dome_shell
+29,tria3,1 30 31,dome_shell
+30,tria3,1 31 32,dome_shell
+31,tria3,1 32 33,dome_shell
+32,tria3,1 33 34,dome_shell
+33,tria3,1 34 35,dome_shell
+34,tria3,1 35 36,dome_shell
+35,tria3,1 36 37,dome_shell
+36,tria3,1 37 2,dome_shell
+37,quad4,2 3 39 38,dome_shell
+38,quad4,3 4 40 39,dome_shell
+39,quad4,4 5 41 40,dome_shell
+40,quad4,5 6 42 41,dome_shell
+41,quad4,6 7 43 42,dome_shell
+42,quad4,7 8 44 43,dome_shell
+43,quad4,8 9 45 44,dome_shell
+44,quad4,9 10 46 45,dome_shell
+45,quad4,10 11 47 46,dome_shell
+46,quad4,11 12 48 47,dome_shell
+47,quad4,12 13 49 48,dome_shell
+48,quad4,13 14 50 49,dome_shell
+49,quad4,14 15 51 50,dome_shell
+50,quad4,15 16 52 51,dome_shell
+51,quad4,16 17 53 52,dome_shell
+52,quad4,17 18 54 53,dome_shell
+53,quad4,18 19 55 54,dome_shell
+54,quad4,19 20 56 55,dome_shell
+55,quad4,20 21 57 56,dome_shell
+56,quad4,21 22 58 57,dome_shell
+57,quad4,22 23 59 58,dome_shell
+58,quad4,23 24 60 59,dome_shell
+59,quad4,24 25 61 60,dome_shell
+60,quad4,25 26 62 61,dome_shell
+61,quad4,26 27 63 62,dome_shell
+62,quad4,27 28 64 63,dome_shell
+63,quad4,28 29 65 64,dome_shell
+64,quad4,29 30 66 65,dome_shell
+65,quad4,30 31 67 66,dome_shell
+66,quad4,31 32 68 67,dome_shell
+67,quad4,32 33 69 68,dome_shell
+68,quad4,33 34 70 69,dome_shell
+69,quad4,34 35 71 70,dome_shell
+70,quad4,35 36 72 71,dome_shell
+71,quad4,36 37 73 72,dome_shell
+72,quad4,37 2 38 73,dome_shell
+73,quad4,38 39 75 74,dome_shell
+74,quad4,39 40 76 75,dome_shell
+75,quad4,40 41 77 76,dome_shell
+76,quad4,41 42 78 77,dome_shell
+77,quad4,42 43 79 78,dome_shell
+78,quad4,43 44 80 79,dome_shell
+79,quad4,44 45 81 80,dome_shell
+80,quad4,45 46 82 81,dome_shell
+81,quad4,46 47 83 82,dome_shell
+82,quad4,47 48 84 83,dome_shell
+83,quad4,48 49 85 84,dome_shell
+84,quad4,49 50 86 85,dome_shell
+85,quad4,50 51 87 86,dome_shell
+86,quad4,51 52 88 87,dome_shell
+87,quad4,52 53 89 88,dome_shell
+88,quad4,53 54 90 89,dome_shell
+89,quad4,54 55 91 90,dome_shell
+90,quad4,55 56 92 91,dome_shell
+91,quad4,56 57 93 92,dome_shell
+92,quad4,57 58 94 93,dome_shell
+93,quad4,58 59 95 94,dome_shell
+94,quad4,59 60 96 95,dome_shell
+95,quad4,60 61 97 96,dome_shell
+96,quad4,61 62 98 97,dome_shell
+97,quad4,62 63 99 98,dome_shell
+98,quad4,63 64 100 99,dome_shell
+99,quad4,64 65 101 100,dome_shell
+100,quad4,65 66 102 101,dome_shell
+101,quad4,66 67 103 102,dome_shell
+102,quad4,67 68 104 103,dome_shell
+103,quad4,68 69 105 104,dome_shell
+104,quad4,69 70 106 105,dome_shell
+105,quad4,70 71 107 106,dome_shell
+106,quad4,71 72 108 107,dome_shell
+107,quad4,72 73 109 108,dome_shell
+108,quad4,73 38 74 109,dome_shell
+109,quad4,74 75 111 110,dome_shell
+110,quad4,75 76 112 111,dome_shell
+111,quad4,76 77 113 112,dome_shell
+112,quad4,77 78 114 113,dome_shell
+113,quad4,78 79 115 114,dome_shell
+114,quad4,79 80 116 115,dome_shell
+115,quad4,80 81 117 116,dome_shell
+116,quad4,81 82 118 117,dome_shell
+117,quad4,82 83 119 118,dome_shell
+118,quad4,83 84 120 119,dome_shell
+119,quad4,84 85 121 120,dome_shell
+120,quad4,85 86 122 121,dome_shell
+121,quad4,86 87 123 122,dome_shell
+122,quad4,87 88 124 123,dome_shell
+123,quad4,88 89 125 124,dome_shell
+124,quad4,89 90 126 125,dome_shell
+125,quad4,90 91 127 126,dome_shell
+126,quad4,91 92 128 127,dome_shell
+127,quad4,92 93 129 128,dome_shell
+128,quad4,93 94 130 129,dome_shell
+129,quad4,94 95 131 130,dome_shell
+130,quad4,95 96 132 131,dome_shell
+131,quad4,96 97 133 132,dome_shell
+132,quad4,97 98 134 133,dome_shell
+133,quad4,98 99 135 134,dome_shell
+134,quad4,99 100 136 135,dome_shell
+135,quad4,100 101 137 136,dome_shell
+136,quad4,101 102 138 137,dome_shell
+137,quad4,102 103 139 138,dome_shell
+138,quad4,103 104 140 139,dome_shell
+139,quad4,104 105 141 140,dome_shell
+140,quad4,105 106 142 141,dome_shell
+141,quad4,106 107 143 142,dome_shell
+142,quad4,107 108 144 143,dome_shell
+143,quad4,108 109 145 144,dome_shell
+144,quad4,109 74 110 145,dome_shell
+145,quad4,110 111 147 146,dome_shell
+146,quad4,111 112 148 147,dome_shell
+147,quad4,112 113 149 148,dome_shell
+148,quad4,113 114 150 149,dome_shell
+149,quad4,114 115 151 150,dome_shell
+150,quad4,115 116 152 151,dome_shell
+151,quad4,116 117 153 152,dome_shell
+152,quad4,117 118 154 153,dome_shell
+153,quad4,118 119 155 154,dome_shell
+154,quad4,119 120 156 155,dome_shell
+155,quad4,120 121 157 156,dome_shell
+156,quad4,121 122 158 157,dome_shell
+157,quad4,122 123 159 158,dome_shell
+158,quad4,123 124 160 159,dome_shell
+159,quad4,124 125 161 160,dome_shell
+160,quad4,125 126 162 161,dome_shell
+161,quad4,126 127 163 162,dome_shell
+162,quad4,127 128 164 163,dome_shell
+163,quad4,128 129 165 164,dome_shell
+164,quad4,129 130 166 165,dome_shell
+165,quad4,130 131 167 166,dome_shell
+166,quad4,131 132 168 167,dome_shell
+167,quad4,132 133 169 168,dome_shell
+168,quad4,133 134 170 169,dome_shell
+169,quad4,134 135 171 170,dome_shell
+170,quad4,135 136 172 171,dome_shell
+171,quad4,136 137 173 172,dome_shell
+172,quad4,137 138 174 173,dome_shell
+173,quad4,138 139 175 174,dome_shell
+174,quad4,139 140 176 175,dome_shell
+175,quad4,140 141 177 176,dome_shell
+176,quad4,141 142 178 177,dome_shell
+177,quad4,142 143 179 178,dome_shell
+178,quad4,143 144 180 179,dome_shell
+179,quad4,144 145 181 180,dome_shell
+180,quad4,145 110 146 181,dome_shell
+181,quad4,146 147 183 182,dome_shell
+182,quad4,147 148 184 183,dome_shell
+183,quad4,148 149 185 184,dome_shell
+184,quad4,149 150 186 185,dome_shell
+185,quad4,150 151 187 186,dome_shell
+186,quad4,151 152 188 187,dome_shell
+187,quad4,152 153 189 188,dome_shell
+188,quad4,153 154 190 189,dome_shell
+189,quad4,154 155 191 190,dome_shell
+190,quad4,155 156 192 191,dome_shell
+191,quad4,156 157 193 192,dome_shell
+192,quad4,157 158 194 193,dome_shell
+193,quad4,158 159 195 194,dome_shell
+194,quad4,159 160 196 195,dome_shell
+195,quad4,160 161 197 196,dome_shell
+196,quad4,161 162 198 197,dome_shell
+197,quad4,162 163 199 198,dome_shell
+198,quad4,163 164 200 199,dome_shell
+199,quad4,164 165 201 200,dome_shell
+200,quad4,165 166 202 201,dome_shell
+201,quad4,166 167 203 202,dome_shell
+202,quad4,167 168 204 203,dome_shell
+203,quad4,168 169 205 204,dome_shell
+204,quad4,169 170 206 205,dome_shell
+205,quad4,170 171 207 206,dome_shell
+206,quad4,171 172 208 207,dome_shell
+207,quad4,172 173 209 208,dome_shell
+208,quad4,173 174 210 209,dome_shell
+209,quad4,174 175 211 210,dome_shell
+210,quad4,175 176 212 211,dome_shell
+211,quad4,176 177 213 212,dome_shell
+212,quad4,177 178 214 213,dome_shell
+213,quad4,178 179 215 214,dome_shell
+214,quad4,179 180 216 215,dome_shell
+215,quad4,180 181 217 216,dome_shell
+216,quad4,181 146 182 217,dome_shell
+217,quad4,182 183 219 218,dome_shell
+218,quad4,183 184 220 219,dome_shell
+219,quad4,184 185 221 220,dome_shell
+220,quad4,185 186 222 221,dome_shell
+221,quad4,186 187 223 222,dome_shell
+222,quad4,187 188 224 223,dome_shell
+223,quad4,188 189 225 224,dome_shell
+224,quad4,189 190 226 225,dome_shell
+225,quad4,190 191 227 226,dome_shell
+226,quad4,191 192 228 227,dome_shell
+227,quad4,192 193 229 228,dome_shell
+228,quad4,193 194 230 229,dome_shell
+229,quad4,194 195 231 230,dome_shell
+230,quad4,195 196 232 231,dome_shell
+231,quad4,196 197 233 232,dome_shell
+232,quad4,197 198 234 233,dome_shell
+233,quad4,198 199 235 234,dome_shell
+234,quad4,199 200 236 235,dome_shell
+235,quad4,200 201 237 236,dome_shell
+236,quad4,201 202 238 237,dome_shell
+237,quad4,202 203 239 238,dome_shell
+238,quad4,203 204 240 239,dome_shell
+239,quad4,204 205 241 240,dome_shell
+240,quad4,205 206 242 241,dome_shell
+241,quad4,206 207 243 242,dome_shell
+242,quad4,207 208 244 243,dome_shell
+243,quad4,208 209 245 244,dome_shell
+244,quad4,209 210 246 245,dome_shell
+245,quad4,210 211 247 246,dome_shell
+246,quad4,211 212 248 247,dome_shell
+247,quad4,212 213 249 248,dome_shell
+248,quad4,213 214 250 249,dome_shell
+249,quad4,214 215 251 250,dome_shell
+250,quad4,215 216 252 251,dome_shell
+251,quad4,216 217 253 252,dome_shell
+252,quad4,217 182 218 253,dome_shell
+253,quad4,218 219 255 254,dome_shell
+254,quad4,219 220 256 255,dome_shell
+255,quad4,220 221 257 256,dome_shell
+256,quad4,221 222 258 257,dome_shell
+257,quad4,222 223 259 258,dome_shell
+258,quad4,223 224 260 259,dome_shell
+259,quad4,224 225 261 260,dome_shell
+260,quad4,225 226 262 261,dome_shell
+261,quad4,226 227 263 262,dome_shell
+262,quad4,227 228 264 263,dome_shell
+263,quad4,228 229 265 264,dome_shell
+264,quad4,229 230 266 265,dome_shell
+265,quad4,230 231 267 266,dome_shell
+266,quad4,231 232 268 267,dome_shell
+267,quad4,232 233 269 268,dome_shell
+268,quad4,233 234 270 269,dome_shell
+269,quad4,234 235 271 270,dome_shell
+270,quad4,235 236 272 271,dome_shell
+271,quad4,236 237 273 272,dome_shell
+272,quad4,237 238 274 273,dome_shell
+273,quad4,238 239 275 274,dome_shell
+274,quad4,239 240 276 275,dome_shell
+275,quad4,240 241 277 276,dome_shell
+276,quad4,241 242 278 277,dome_shell
+277,quad4,242 243 279 278,dome_shell
+278,quad4,243 244 280 279,dome_shell
+279,quad4,244 245 281 280,dome_shell
+280,quad4,245 246 282 281,dome_shell
+281,quad4,246 247 283 282,dome_shell
+282,quad4,247 248 284 283,dome_shell
+283,quad4,248 249 285 284,dome_shell
+284,quad4,249 250 286 285,dome_shell
+285,quad4,250 251 287 286,dome_shell
+286,quad4,251 252 288 287,dome_shell
+287,quad4,252 253 289 288,dome_shell
+288,quad4,253 218 254 289,dome_shell
+289,quad4,254 255 291 290,dome_shell
+290,quad4,255 256 292 291,dome_shell
+291,quad4,256 257 293 292,dome_shell
+292,quad4,257 258 294 293,dome_shell
+293,quad4,258 259 295 294,dome_shell
+294,quad4,259 260 296 295,dome_shell
+295,quad4,260 261 297 296,dome_shell
+296,quad4,261 262 298 297,dome_shell
+297,quad4,262 263 299 298,dome_shell
+298,quad4,263 264 300 299,dome_shell
+299,quad4,264 265 301 300,dome_shell
+300,quad4,265 266 302 301,dome_shell
+301,quad4,266 267 303 302,dome_shell
+302,quad4,267 268 304 303,dome_shell
+303,quad4,268 269 305 304,dome_shell
+304,quad4,269 270 306 305,dome_shell
+305,quad4,270 271 307 306,dome_shell
+306,quad4,271 272 308 307,dome_shell
+307,quad4,272 273 309 308,dome_shell
+308,quad4,273 274 310 309,dome_shell
+309,quad4,274 275 311 310,dome_shell
+310,quad4,275 276 312 311,dome_shell
+311,quad4,276 277 313 312,dome_shell
+312,quad4,277 278 314 313,dome_shell
+313,quad4,278 279 315 314,dome_shell
+314,quad4,279 280 316 315,dome_shell
+315,quad4,280 281 317 316,dome_shell
+316,quad4,281 282 318 317,dome_shell
+317,quad4,282 283 319 318,dome_shell
+318,quad4,283 284 320 319,dome_shell
+319,quad4,284 285 321 320,dome_shell
+320,quad4,285 286 322 321,dome_shell
+321,quad4,286 287 323 322,dome_shell
+322,quad4,287 288 324 323,dome_shell
+323,quad4,288 289 325 324,dome_shell
+324,quad4,289 254 290 325,dome_shell
+325,quad4,290 291 327 326,dome_shell
+326,quad4,291 292 328 327,dome_shell
+327,quad4,292 293 329 328,dome_shell
+328,quad4,293 294 330 329,dome_shell
+329,quad4,294 295 331 330,dome_shell
+330,quad4,295 296 332 331,dome_shell
+331,quad4,296 297 333 332,dome_shell
+332,quad4,297 298 334 333,dome_shell
+333,quad4,298 299 335 334,dome_shell
+334,quad4,299 300 336 335,dome_shell
+335,quad4,300 301 337 336,dome_shell
+336,quad4,301 302 338 337,dome_shell
+337,quad4,302 303 339 338,dome_shell
+338,quad4,303 304 340 339,dome_shell
+339,quad4,304 305 341 340,dome_shell
+340,quad4,305 306 342 341,dome_shell
+341,quad4,306 307 343 342,dome_shell
+342,quad4,307 308 344 343,dome_shell
+343,quad4,308 309 345 344,dome_shell
+344,quad4,309 310 346 345,dome_shell
+345,quad4,310 311 347 346,dome_shell
+346,quad4,311 312 348 347,dome_shell
+347,quad4,312 313 349 348,dome_shell
+348,quad4,313 314 350 349,dome_shell
+349,quad4,314 315 351 350,dome_shell
+350,quad4,315 316 352 351,dome_shell
+351,quad4,316 317 353 352,dome_shell
+352,quad4,317 318 354 353,dome_shell
+353,quad4,318 319 355 354,dome_shell
+354,quad4,319 320 356 355,dome_shell
+355,quad4,320 321 357 356,dome_shell
+356,quad4,321 322 358 357,dome_shell
+357,quad4,322 323 359 358,dome_shell
+358,quad4,323 324 360 359,dome_shell
+359,quad4,324 325 361 360,dome_shell
+360,quad4,325 290 326 361,dome_shell
+361,quad4,362 367 368 363,tray_panel
+362,quad4,363 368 369 364,tray_panel
+363,quad4,364 369 370 365,tray_panel
+364,quad4,365 370 371 366,tray_panel
+365,quad4,367 372 373 368,tray_panel
+366,quad4,368 373 374 369,tray_panel
+367,quad4,369 374 375 370,tray_panel
+368,quad4,370 375 376 371,tray_panel
+369,quad4,372 377 378 373,tray_panel
+370,quad4,373 378 379 374,tray_panel
+371,quad4,374 379 380 375,tray_panel
+372,quad4,375 380 381 376,tray_panel
+373,quad4,377 382 383 378,tray_panel
+374,quad4,378 383 384 379,tray_panel
+375,quad4,379 384 385 380,tray_panel
+376,quad4,380 385 386 381,tray_panel
+377,quad4,382 387 388 383,tray_panel
+378,quad4,383 388 389 384,tray_panel
+379,quad4,384 389 390 385,tray_panel
+380,quad4,385 390 391 386,tray_panel
+381,quad4,387 392 393 388,tray_panel
+382,quad4,388 393 394 389,tray_panel
+383,quad4,389 394 395 390,tray_panel
+384,quad4,390 395 396 391,tray_panel
+385,line2,362 363,tray_isogrid
+386,line2,363 364,tray_isogrid
+387,line2,364 365,tray_isogrid
+388,line2,365 366,tray_isogrid
+389,line2,367 368,tray_isogrid
+390,line2,368 369,tray_isogrid
+391,line2,369 370,tray_isogrid
+392,line2,370 371,tray_isogrid
+393,line2,372 373,tray_isogrid
+394,line2,373 374,tray_isogrid
+395,line2,374 375,tray_isogrid
+396,line2,375 376,tray_isogrid
+397,line2,377 378,tray_isogrid
+398,line2,378 379,tray_isogrid
+399,line2,379 380,tray_isogrid
+400,line2,380 381,tray_isogrid
+401,line2,382 383,tray_isogrid
+402,line2,383 384,tray_isogrid
+403,line2,384 385,tray_isogrid
+404,line2,385 386,tray_isogrid
+405,line2,387 388,tray_isogrid
+406,line2,388 389,tray_isogrid
+407,line2,389 390,tray_isogrid
+408,line2,390 391,tray_isogrid
+409,line2,392 393,tray_isogrid
+410,line2,393 394,tray_isogrid
+411,line2,394 395,tray_isogrid
+412,line2,395 396,tray_isogrid
+413,line2,362 367,tray_isogrid
+414,line2,367 372,tray_isogrid
+415,line2,372 377,tray_isogrid
+416,line2,377 382,tray_isogrid
+417,line2,382 387,tray_isogrid
+418,line2,387 392,tray_isogrid
+419,line2,363 368,tray_isogrid
+420,line2,368 373,tray_isogrid
+421,line2,373 378,tray_isogrid
+422,line2,378 383,tray_isogrid
+423,line2,383 388,tray_isogrid
+424,line2,388 393,tray_isogrid
+425,line2,364 369,tray_isogrid
+426,line2,369 374,tray_isogrid
+427,line2,374 379,tray_isogrid
+428,line2,379 384,tray_isogrid
+429,line2,384 389,tray_isogrid
+430,line2,389 394,tray_isogrid
+431,line2,365 370,tray_isogrid
+432,line2,370 375,tray_isogrid
+433,line2,375 380,tray_isogrid
+434,line2,380 385,tray_isogrid
+435,line2,385 390,tray_isogrid
+436,line2,390 395,tray_isogrid
+437,line2,366 371,tray_isogrid
+438,line2,371 376,tray_isogrid
+439,line2,376 381,tray_isogrid
+440,line2,381 386,tray_isogrid
+441,line2,386 391,tray_isogrid
+442,line2,391 396,tray_isogrid
+443,line2,362 368,tray_isogrid
+444,line2,368 364,tray_isogrid
+445,line2,364 370,tray_isogrid
+446,line2,370 366,tray_isogrid
+447,line2,372 368,tray_isogrid
+448,line2,368 374,tray_isogrid
+449,line2,374 370,tray_isogrid
+450,line2,370 376,tray_isogrid
+451,line2,372 378,tray_isogrid
+452,line2,378 374,tray_isogrid
+453,line2,374 380,tray_isogrid
+454,line2,380 376,tray_isogrid
+455,line2,382 378,tray_isogrid
+456,line2,378 384,tray_isogrid
+457,line2,384 380,tray_isogrid
+458,line2,380 386,tray_isogrid
+459,line2,382 388,tray_isogrid
+460,line2,388 384,tray_isogrid
+461,line2,384 390,tray_isogrid
+462,line2,390 386,tray_isogrid
+463,line2,392 388,tray_isogrid
+464,line2,388 394,tray_isogrid
+465,line2,394 390,tray_isogrid
+466,line2,390 396,tray_isogrid
+467,line2,398 397,strut
+468,line2,400 399,strut
+469,line2,402 401,strut
+470,line2,404 403,strut
+471,line2,406 405,strut
+472,line2,408 407,strut
+473,line2,409 397,rbe_visual
+474,line2,409 399,rbe_visual
+475,line2,409 401,rbe_visual
+476,line2,409 403,rbe_visual
+477,line2,409 405,rbe_visual
+478,line2,409 407,rbe_visual

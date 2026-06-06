@@ -1,0 +1,11 @@
+TRUTH coupled-AM resonance peaks per DOF (build 0):
+  x: in 35-160Hz = [ 50.5  87.2 134.7]  | above 160 = 2 peaks (e.g. [292. 446.])
+  y: in 35-160Hz = [ 58.7  91.  148.2]  | above 160 = 2 peaks (e.g. [307. 470.])
+  z: in 35-160Hz = [ 61.8  80.8 125.4]  | above 160 = 1 peaks (e.g. [174.])
+  rx: in 35-160Hz = [65.4 98.2]  | above 160 = 2 peaks (e.g. [164. 324.])
+  ry: in 35-160Hz = [ 68.2 101.4]  | above 160 = 2 peaks (e.g. [175. 340.])
+  rz: in 35-160Hz = [ 97.  124.6]  | above 160 = 3 peaks (e.g. [163. 223. 397.])
+
+Coarse INFERENCE model can produce: ~6 mount modes (struts, mostly lateral/rocking) + 1 axial dome SDOF.
+True sensor noise (fractional AM): median 0.46%%, p95 1.05%%  -> true sigma_e ~ 0.005
+Inference sigma_e: with-d 0.69, without-d 0.93  -> inflated ~150-190x vs true sensor scale

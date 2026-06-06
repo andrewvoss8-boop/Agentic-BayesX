@@ -1,0 +1,167 @@
+{
+  "role": "BLIND inference vs Codex independent truth (master scores vs sealed truth)",
+  "forward_model": "coarse: M_base6 rigid (from low-f asymptote) + hexapod(k_strut) + dome axial resonator(f_dome); 6 equal struts; eta fixed; magnitude-only log-likelihood",
+  "grid": {
+    "n_points": 62,
+    "band_hz": [
+      40.0,
+      115.0
+    ],
+    "adaptive_from_data_peaks": true,
+    "data_peak_modes_hz": [
+      50.9,
+      54.3,
+      62.2,
+      62.6,
+      67.0,
+      76.8,
+      87.2,
+      90.7,
+      95.4,
+      97.2,
+      99.2
+    ]
+  },
+  "n_builds_total": 8,
+  "n_builds_train": 6,
+  "heldout_builds": [
+    6,
+    7
+  ],
+  "heldout_freq_band_hz": [
+    82.0,
+    95.0
+  ],
+  "learned_with_d": {
+    "k_strut_pop": {
+      "q50": 14168354.966751978,
+      "sd": 7642120.08505717,
+      "ci95": [
+        10765028.973894589,
+        32858527.12477566
+      ]
+    },
+    "k_strut_nominal": 18156365.96084156,
+    "f_dome": {
+      "q50": 83.18828877713918,
+      "sd": 0.9531022353747984,
+      "ci95": [
+        81.86254087807812,
+        85.08006201420172
+      ]
+    },
+    "sigma_build": {
+      "q50": 0.20236205172500962,
+      "sd": 0.15636679722571847,
+      "ci95": [
+        0.020871910928437157,
+        0.3958948219970008
+      ]
+    },
+    "sigma_e": {
+      "q50": 0.6157252501354988,
+      "sd": 0.04989702968361727,
+      "ci95": [
+        0.5569497637759793,
+        0.6972918203270598
+      ]
+    },
+    "sigma_d": {
+      "q50": 0.3,
+      "sd": 1.1102230246251565e-16,
+      "ci95": [
+        0.3,
+        0.3
+      ]
+    }
+  },
+  "learned_without_d": "skipped (run with R3BLIND_COMPANIONS=1)",
+  "starve_1build": "skipped (run with R3BLIND_COMPANIONS=1)",
+  "HELD_OUT_CALIBRATION_95": {
+    "with_d_new_builds_coverage": 0.939516129032258,
+    "with_d_new_builds_mean_width": 2.83524995445817,
+    "per_build": [
+      0.946236559139785,
+      0.9327956989247311
+    ],
+    "with_d_heldout_band_coverage": 0.8773148148148149,
+    "with_d_heldout_band_mean_width": 2.8248410651418516,
+    "without_d_new_builds_coverage": null,
+    "without_d_new_builds_mean_width": null,
+    "without_d_heldout_band_coverage": null,
+    "note": "target ~0.95. Read coverage WITH width/sigma_e: wide-but-covering is NOT success. Expect model-form bias -> possible under-coverage in bands the coarse model misses."
+  },
+  "effective_vs_nominal": {
+    "n_eff_k_strut": 0.9060016942182275,
+    "nominal_points": 1800,
+    "ratio": 0.000503334274565682,
+    "note": "n_eff<<nominal => correlated model error; tightness not from independent data."
+  },
+  "convergence": {
+    "with_d_CAPPED_discrepancy_MAIN": {
+      "worst_rhat": 2.4114227098127703,
+      "worst_rhat_var": "z_b",
+      "min_ess_bulk": 4.9058380104395765,
+      "min_ess_tail": 29.15973978973836,
+      "min_ess_var": "z_b",
+      "divergences": 0,
+      "divergence_frac": 0.0,
+      "n_draws_total": 4000,
+      "gate_pass": false,
+      "per_var": {
+        "beta": {
+          "max_rhat": 1.8295500369004443,
+          "min_ess_bulk": 5.807152684728745,
+          "min_ess_tail": 37.58738967592727
+        },
+        "f_dome": {
+          "max_rhat": 1.5815471465182547,
+          "min_ess_bulk": 6.816232664709536,
+          "min_ess_tail": 31.807357957085657
+        },
+        "k_strut_pop": {
+          "max_rhat": 1.8732765345326643,
+          "min_ess_bulk": 5.72844643342838,
+          "min_ess_tail": 42.39512019742221
+        },
+        "log_k_strut_pop": {
+          "max_rhat": 1.8732765345326643,
+          "min_ess_bulk": 5.72844643342838,
+          "min_ess_tail": 42.39512019742221
+        },
+        "sigma_build": {
+          "max_rhat": 1.7542180304179151,
+          "min_ess_bulk": 6.055386389249532,
+          "min_ess_tail": 121.0877993525531
+        },
+        "sigma_d": {
+          "max_rhat": NaN,
+          "min_ess_bulk": 4000.0,
+          "min_ess_tail": 4000.0
+        },
+        "sigma_e": {
+          "max_rhat": 2.0676514861285193,
+          "min_ess_bulk": 5.30725969914088,
+          "min_ess_tail": 30.00932294580977
+        },
+        "z_b": {
+          "max_rhat": 2.4114227098127703,
+          "min_ess_bulk": 4.9058380104395765,
+          "min_ess_tail": 29.15973978973836
+        }
+      }
+    },
+    "without_d": {
+      "skipped": true
+    },
+    "starve": {
+      "skipped": true
+    },
+    "flexible_learn_sigma_d_RIDGE": {
+      "skipped": true
+    },
+    "gate": "rank-split R-hat<1.01, bulk&tail ESS>=400 over ALL latents, div<2%, 4 chains, non-centered",
+    "note": "MAIN fit CAPS sigma_d (=0.30) to break the ridge. The flexible variant LEARNS sigma_d and EXHIBITS the ridge (de-identified, non-converged) -- reported as a finding per D19."
+  },
+  "runtime_s": 375.5
+}

@@ -1,0 +1,10 @@
+{
+  "case": "build 0, flight 0, clean response",
+  "full_grid_count": 4040,
+  "coarse_grid_count": 1011,
+  "full_grid_3grms_g": 0.6231188763848752,
+  "coarse_grid_3grms_g": 0.6231213583580689,
+  "coarse_minus_full_relative": 3.983145572713191e-06,
+  "pass_threshold_abs_relative": 0.015,
+  "pass": true
+}

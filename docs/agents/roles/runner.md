@@ -17,6 +17,13 @@ The runner executes one scoped experiment or code task.
 - Swap in a different method without saying so.
 - Report metric improvements unless a checker or artifact records the metric.
 
+## Communication Style (reports, packets, and replies)
+
+- Calibrate to two different audience levels: BEGINNER-TO-INTERMEDIATE in machine learning / statistics (assume ~1 year of ML experience, not an expert), but ADVANCED in structural dynamics (assume fluency with FRFs, modal analysis, FEM, damping, mode shapes, apparent mass, etc.).
+- Prefer plain English over jargon for ML / statistics / sampling terms, and define such a term or acronym briefly on first use. Structural-dynamics terminology can be used directly without basic explanation.
+- Define every ML / statistical variable or symbol in plain words when it is used or referenced (within reason), including units where relevant. Standard structural-dynamics symbols need only light or no gloss. Do not assume the reader remembers a symbol introduced earlier.
+- Lead with intuition and a concrete example on the ML / statistics side, then add the precise/technical detail. Do not hide the simple statistical idea behind the formalism.
+
 ## Output
 
 - `commands.md` update.

@@ -1,0 +1,4 @@
+blind_heldout_calibration.png: PNG image data, 2240 x 1260, 8-bit/color RGBA, non-interlaced (410329 bytes)
+blind_netcg_3grms.png: PNG image data, 1247 x 725, 8-bit/color RGBA, non-interlaced (46618 bytes)
+blind_netcg_psd_vs_spec.png: PNG image data, 1450 x 841, 8-bit/color RGBA, non-interlaced (250437 bytes)
+blind_posteriors.png: PNG image data, 2660 x 504, 8-bit/color RGBA, non-interlaced (57528 bytes)

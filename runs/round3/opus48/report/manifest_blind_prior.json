@@ -1,0 +1,82 @@
+{
+  "round": "round3 BLIND inference (vs Codex independent truth)",
+  "tool": "Claude Code Opus 4.8",
+  "generated_utc": "2026-06-04T19:52:41Z",
+  "blindness": "consumed ONLY runs/round3/codex_truth/dataset/ (observations.npz + data_contract.md); sealed truth NOT opened",
+  "result_summary": "NUTS does NOT converge (R-hat 2.41, ESS 5, multimodal/ridge); held-out wide-but-covering; netCG QOI ~5x biased high. 'NUTS active' NOT claimed.",
+  "artifacts": {
+    "report/packet.md": {
+      "sha256_16": "d4fad1842ce7a3b9"
+    },
+    "report/packet.pptx": {
+      "sha256_16": "882f47d4691cbd08"
+    },
+    "report/blind_results.json": {
+      "sha256_16": "b3698ef59ea2fd3e"
+    },
+    "report/blind_qoi_results.json": {
+      "sha256_16": "46b540a33192203c"
+    },
+    "report/blind_nuts_diagnostics.md": {
+      "sha256_16": "a548a5194a367c42"
+    },
+    "report/blind_nuts_diagnostics.json": {
+      "sha256_16": "6ecfe13904d77c5a"
+    },
+    "report/blind_posterior.npz": {
+      "sha256_16": "635161ee94be8a7e"
+    },
+    "report/blind_quantity_contracts.md": {
+      "sha256_16": "448c72b16e930064"
+    },
+    "report/blind_assumptions_ledger.md": {
+      "sha256_16": "a9406915ec33d79d"
+    },
+    "report/blind_known_failures.md": {
+      "sha256_16": "563cbc69162299c2"
+    },
+    "report/figures/blind_heldout_calibration.png": {
+      "sha256_16": "90d437f97dad4a8f"
+    },
+    "report/figures/blind_posteriors.png": {
+      "sha256_16": "333d566cd0dd7aee"
+    },
+    "report/figures/blind_netcg_psd_vs_spec.png": {
+      "sha256_16": "8fca28df7612c2a8"
+    },
+    "report/figures/blind_netcg_3grms.png": {
+      "sha256_16": "41f7cc1f01f8a18f"
+    },
+    "code/blind_model.py": {
+      "sha256_16": "cc7dcb20849e14b5"
+    },
+    "code/blind_infer.py": {
+      "sha256_16": "72817b8aba766aad"
+    },
+    "code/blind_qoi.py": {
+      "sha256_16": "8386489088c98f47"
+    },
+    "code/blind_pptx.py": {
+      "sha256_16": "1ec003465b031b2c"
+    },
+    "report/blind_review_request.md": {
+      "sha256_16": "99e12cc9e83a37a8"
+    },
+    "report/handoff_to_master.md": {
+      "sha256_16": "e7db7766b08075a2"
+    },
+    "commands.md": {
+      "sha256_16": "5ab81b5295f86086"
+    },
+    "runtime.json": {
+      "sha256_16": "fb0924728b868a81"
+    },
+    "files_changed.md": {
+      "sha256_16": "611c8c680c41ab6a"
+    },
+    "report/decisions_log.md": {
+      "sha256_16": "20f53527ef33ca8b"
+    }
+  },
+  "missing": []
+}

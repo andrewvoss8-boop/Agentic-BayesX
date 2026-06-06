@@ -321,3 +321,16 @@
   - Key results: full whole-curve likelihood recovers dome fn 93.55 (truth 93.5), tray fn 86.14 (86.25), sensor 0.74 dB (0.75), build 1.75 dB (1.5). Peak-feature likelihood broader/biased and CANNOT identify sensor noise (posterior ~= prior). Tray 3*GRMS structural posterior 95% [1.011,1.052] g; future-build-flight predictive 95% [0.592,1.815] g / 99% [0.490,2.232] g. Peak/full structural QOI width ratio 5.77.
   - Artifacts: artifacts/reports/runner_claude_opus48_20260602/ (packet.md, results.json, nuts_diagnostics.{json,md}, assumptions_ledger.{md,json}, posterior_samples.npz, checks.json, 6 figures, full contract).
   - Lessons: peak/feature-summary likelihoods discard the per-frequency residual scatter needed to identify sensor-noise scale; report that as a finding, not a tuning bug. Flights that store only scalar 3*GRMS inform build effects, not structural curve shape. Inference model == data-generating model here, so recovery is optimistic; real model-form error would widen intervals.
+
+## 2026-06-04 — Round 3 Stage 3 (Opus 4.8 inference, BLIND, structure-aware fix)
+Workspace runs/round3/opus48/. Built the three fixes the prior blind failure pointed to and ran BLIND vs
+Codex's re-published independent truth (canonical netCG contract). Result (honest, mixed):
+- Per-strut ASYMMETRIC forward (fix #1) ALONE CONVERGES: rank-split R-hat 1.009, bulk ESS 487, 0 div;
+  k_pop 1.685e7 near nominal. Real gain over the prior blind non-convergence.
+- Structure/property-based per-strut discrepancy (fix #2) does NOT resolve the ridge -> CONFOUNDED with the
+  per-strut stiffness -> INTRODUCES a parameter<->discrepancy ridge; with-d FAILS gate (R-hat 2.85). No
+  "NUTS active" claim for with-d.
+- FBS netCG contract (fix #3) cut bias 4.86x -> 1.71x(with-d)/3.10x(without-d converged); f->0 limit exact.
+- sigma_e ~2x inflated either way = MISSING HIGHER MODES dominate (Stage-4 higher-fidelity FEM is the fix).
+Artifacts: report/packet_stage3.md, packet.pptx, manifest.json, blind3_*.json/npz, figures/blind3_*.png.
+Active runtime ~8700s (incl. exploratory/killed restarts); see report/runtime.json.

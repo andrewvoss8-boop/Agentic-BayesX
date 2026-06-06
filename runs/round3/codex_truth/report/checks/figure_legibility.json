@@ -1,0 +1,72 @@
+{
+  "apparent_mass_antiresonances.png": {
+    "pixels": [
+      1530,
+      951
+    ],
+    "legibility_min_size_pass": true
+  },
+  "response_psd_clean_vs_observed.png": {
+    "pixels": [
+      1530,
+      951
+    ],
+    "legibility_min_size_pass": true
+  },
+  "flight_response_overlay_build0.png": {
+    "pixels": [
+      1530,
+      951
+    ],
+    "legibility_min_size_pass": true
+  },
+  "netcg_distribution.png": {
+    "pixels": [
+      1360,
+      884
+    ],
+    "legibility_min_size_pass": true
+  },
+  "mesh_undeformed.png": {
+    "pixels": [
+      1360,
+      1054
+    ],
+    "legibility_min_size_pass": true
+  },
+  "mode_shape_1.png": {
+    "pixels": [
+      1360,
+      1054
+    ],
+    "legibility_min_size_pass": true
+  },
+  "mode_shape_2.png": {
+    "pixels": [
+      1360,
+      1054
+    ],
+    "legibility_min_size_pass": true
+  },
+  "mode_shape_3.png": {
+    "pixels": [
+      1360,
+      1054
+    ],
+    "legibility_min_size_pass": true
+  },
+  "mode_shape_4.png": {
+    "pixels": [
+      1360,
+      1054
+    ],
+    "legibility_min_size_pass": true
+  },
+  "mode_shape_5.png": {
+    "pixels": [
+      1360,
+      1054
+    ],
+    "legibility_min_size_pass": true
+  }
+}

@@ -119,3 +119,40 @@ The most critical takeaway—as you highlighted with the curve-shape error—is 
 * **Clean up safely:** Before deleting an AI's temporary workspace, explicitly read its changelog and securely copy over every script and output it created. Otherwise, you lose the ability to reproduce the work.
 * **Don't hoard massive setup files:** AI environments often create massive, easily rebuildable system folders (like virtual environments). Delete these when cleaning up rather than copying them, which wastes massive amounts of disk space.
 * **Keep a single master record:** Instead of making full copies of the entire project for every single AI run, keep one main project and have each AI save its results into a specific, dated subfolder.
+## 2026-06-04 (round3 stage3): a structure-based discrepancy must be ORTHOGONAL to the calibration params
+A per-strut/per-property discrepancy placed on the SAME parameters being calibrated (here per-strut
+stiffness) is non-identifiable by construction: it trades freely against the calibration parameter and the
+noise term, INTRODUCING a parameter<->discrepancy ridge that breaks NUTS convergence (R-hat 2.85, sigma_d
+runaway), even though it lowers sigma_e. A zero-mean constraint fixes the mean but not the multi-D shape
+confound. Put the discrepancy in a space the physics CANNOT already represent (output modes / modal
+participation the forward model lacks), or use modular/cut updating. Corollary: when the dominant model-form
+error is MISSING MODES (more resonances in the data than the model can produce), no same-space discrepancy
+fixes it and sigma_e has an irreducible floor (here ~1.9 fractional) -> the real fix is higher-fidelity
+physics, not a richer discrepancy. Also: the asymmetric forward (per-strut k) by itself fixed the prior
+"one equal-strut k can't fit 6 DOF" multimodality and restored convergence -- structural representational
+adequacy of the PHYSICS mattered more than the discrepancy.
+
+## 2026-06-05 (REPORT TO BILIONIS): scope drift from a fatigue-driven "5-part plan" request
+Flag this to Bilionis as a process/governance lesson, not just a technical one.
+
+What happened: late in round 3 the human (tired) asked the runner for a 5-part plan of progressively more
+technical experiments (the Stage 0->5 master plan, decisions_log D17). The agent happily produced and
+executed it. But by Stage 3 the experiment had DRIFTED:
+- The problem was framed poorly (the structure-based discrepancy was confounded with the very parameters it
+  was meant to correct -- same-parameter-space ridge), so the run could not succeed as posed.
+- It had drifted AWAY from the human's real-world objectives and the actual goal of the research.
+- The human had little idea what was actually going on inside the experiment by that point -- the agent had
+  run ahead of shared understanding.
+
+The deeper lesson (the part Bilionis cares about): an eager agent + a tired human is a scope-drift engine. A
+request for "a longer, more sophisticated plan" is a RED FLAG, not a green light. Progressive technical depth
+is NOT the same as progress toward the objective; sophistication compounded in the wrong direction.
+
+Proposed harness guardrails (for discussion, not yet adopted):
+- Every staged plan must restate the human's REAL-WORLD objective at each stage boundary and check the stage
+  still serves it; a stage that only adds technical depth without moving the objective is a stop-and-confirm.
+- Detect the "tired human asks for a big plan" pattern: when the human delegates plan AUTHORSHIP (not just
+  execution), the agent should slow down, reflect the objective back, and get explicit buy-in BEFORE building.
+- Keep the human in the loop on COMPREHENSION, not just approvals: if the human can't currently explain what
+  the experiment is doing and why, that is itself a blocking condition, surfaced by the agent.
+- Bias toward the SIMPLEST experiment that answers the real question over the most sophisticated one.

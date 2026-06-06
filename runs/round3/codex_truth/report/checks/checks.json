@@ -1,0 +1,96 @@
+{
+  "checks": {
+    "frequency_grid_monotonic": true,
+    "frequency_grid_range_pass": true,
+    "apparent_mass_shape_pass": true,
+    "response_psd_shape_pass": true,
+    "finite_values_pass": true,
+    "positive_psd_pass": true,
+    "beam_benchmark_pass": true,
+    "lumped_benchmark_pass": true,
+    "antiresonance_interlacing_pass": true,
+    "resolution_sensitivity_pass": true,
+    "mesh_export_pass": true,
+    "figure_legibility_pass": true,
+    "no_inference_or_nuts_run": true,
+    "overall_pass": true
+  },
+  "beam_benchmark": {
+    "name": "Euler-Bernoulli cantilever beam",
+    "n_elements": 20,
+    "betaL_roots": [
+      1.875104068711961,
+      4.694091132974174,
+      7.854757438237612,
+      10.995540734875465
+    ],
+    "fem_hz": [
+      18.919799110585434,
+      118.56859926882552,
+      332.0002491835837,
+      650.617973325998
+    ],
+    "analytic_hz": [
+      18.91979806674627,
+      118.56835055348154,
+      331.9948148242936,
+      650.5773334050684
+    ],
+    "relative_error": [
+      5.517179194934539e-08,
+      2.0976537400144107e-06,
+      1.6368807726700754e-05,
+      6.246747134103316e-05
+    ],
+    "max_abs_relative_error": 6.246747134103316e-05
+  },
+  "lumped_benchmark": {
+    "name": "two-mass two-spring generalized eigenproblem",
+    "numerical_hz": [
+      4.662006545154031,
+      10.031980415672663
+    ],
+    "closed_form_hz": [
+      4.662006545154031,
+      10.031980415672663
+    ],
+    "relative_error": [
+      0.0,
+      0.0
+    ],
+    "max_abs_relative_error": 0.0
+  },
+  "observable_feature_check": {
+    "observable_build0_z_resonance_like_hz": [
+      65.84596045,
+      96.8,
+      133.68,
+      182.54
+    ],
+    "observable_build0_z_antiresonance_like_hz": [
+      61.8,
+      80.75,
+      125.42,
+      174.28
+    ],
+    "resonance_antiresonance_neighbor_count": 4,
+    "interlacing_check_pass": true
+  },
+  "resolution_sensitivity": {
+    "case": "build 0, flight 0, clean response",
+    "full_grid_count": 4040,
+    "coarse_grid_count": 1011,
+    "full_grid_3grms_g": 0.6231188763848752,
+    "coarse_grid_3grms_g": 0.6231213583580689,
+    "coarse_minus_full_relative": 3.983145572713191e-06,
+    "pass_threshold_abs_relative": 0.015,
+    "pass": true
+  },
+  "mesh_status": {
+    "nodes": 409,
+    "elements": 478,
+    "vtu_written_with_meshio": true,
+    "obj_written_with_meshio": true,
+    "bdf_written": "manual NASTRAN bulk data cards; meshio is used for VTU/OBJ"
+  }
+}

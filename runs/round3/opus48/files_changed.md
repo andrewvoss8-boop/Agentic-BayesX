@@ -1,49 +1,36 @@
-# Files Changed — Round 3 (Claude Code Opus 4.8 runner)
+# Files changed — BLIND inference round (Claude Code Opus 4.8, inference runner)
 
-ALL writes are confined to `runs/round3/opus48/` (instruction-only workspace isolation). Nothing
-outside this folder was created or modified. Shared inputs were read-only: the staged dataset under
-`artifacts/reports/sequential_vibe_modal_flight_20260602/`, the validated spike
-`runs/round3/spike/`, `scripts/r2_forward.py` (round-2 forward, imported read-only for the
-data-consistent likelihood reduction), and the immutable checkers (hash-verified, unchanged).
+All writes confined to `runs/round3/opus48/`. The prior (non-blind) round-3 packet was preserved, not
+destroyed. The sealed truth / Codex generator code / Codex report were NEVER opened.
 
-## Created in runs/round3/opus48/
-### code/
-- `mdof_forward.py` — JAX beam FEM (K, M, geometric Kg), dome & tray modal bases, FBS single-interface
-  coupling, netCG QOI. Extends the spike Euler-Bernoulli beam.
-- `run_pipeline.py` — NumPyro NUTS inference + MDOF prediction + all figures + results.json + diagnostics
-  + sensitivity + resolution + peak-feature comparison.
-- `fem_export.py` — meshio mesh exports (nodes/elements CSV, NASTRAN .bdf, .vtu, .msh, .obj) + assembly
-  & mode-shape figures.
-- `make_pptx.py` — builds report/packet.pptx review layer.
+## New code (`code/`)
+- `blind_model.py` — clean coarse NOMINAL forward model for the published 6-DOF interface apparent mass:
+  M_base6 (rigid, from low-f asymptote) + hexapod(k_strut, 6 equal struts) + dome axial resonator(f_dome).
+  JAX-differentiable; `__main__` sanity-checks vs the data's gross features.
+- `blind_infer.py` — hierarchical StatFEM NUTS inference vs the PUBLISHED observations: learns k_strut +
+  σ_build (hierarchy) + f_dome + σ_e + capped low-rank frequency discrepancy; adaptive grid from data peaks;
+  held-out calibration (whole builds + whole band) + effective-sample-count; convergence over ALL latents.
+  Env flags: R3BLIND_SMOKE, R3BLIND_COMPANIONS, R3BLIND_WARMUP, R3BLIND_DRAWS.
+- `blind_qoi.py` — netCG / interface-PSD QOI with FULL uncertainty (epistemic + aleatory build/flight +
+  discrepancy) vs a design-level test spec; narrow-band exceedance; vs published observed netCG.
+- `blind_pptx.py` — builds report/packet.pptx (review layer).
 
-### tests/
-- `validate_fem.py` — references gate (betaL cantilever, lumped MDOF, FBS==round-2, antiresonance
-  interlacing, netCG low-freq limit, anchors). Writes report/validation.json.
+## New report artifacts (`report/`)
+- `packet.md` — BLIND packet (REPLACES the prior packet.md; prior preserved as below).
+- `packet_original_mdof_netcg.md` — preserved copy of the prior (non-blind) round-3 packet.
+- `packet.pptx` — 8-slide review deck (REPLACED with the blind deck).
+- `blind_results.json`, `blind_qoi_results.json` — numeric results (inference, held-out, QOI).
+- `blind_nuts_diagnostics.md` / `.json` — convergence over all latents (FAILS the gate; reported honestly).
+- `blind_posterior.npz` — posterior draws + model constants for the QOI script.
+- `blind_quantity_contracts.md`, `blind_assumptions_ledger.md`, `blind_known_failures.md` — blind docs.
+- `manifest.json` — REPLACED with the blind manifest (18 artifacts + sha256).
+- `figures/blind_heldout_calibration.png`, `blind_posteriors.png`, `blind_netcg_psd_vs_spec.png`,
+  `blind_netcg_3grms.png`.
 
-### report/  (deliverables)
-- packet.md, priority_deliverables.md, assumptions_ledger.md, quantity_contracts.md, known_failures.md,
-  review_request.md, manifest.json, checks.json
-- results.json, nuts_diagnostics.json, validation.json, interface_psd_bands.json, resolution_metrics.json,
-  sensitivity.json, forcing_reverse_engineered.json, mesh/mesh_summary.json, posterior_samples.npz,
-  pipeline_summary.json, runtime_pipeline.json, runtime.json, pipeline_run.log
+## Updated
+- `report/decisions_log.md` — appended D21–D24 (blind decisions + the non-convergence result).
+- `runtime.json` — REPLACED with the blind producing-run timing.
 
-### Round-3 follow-up revisions (human-directed)
-- Corrected the dome framing: 93.5 Hz is the global axisymmetric BOUNCE/BREATHING mode (not a "local
-  mount mode"); the 1-D strip underestimates shell stiffness (packet/known_failures/assumptions/code).
-- DEVIATED from round-2 abstract scaling: the forcing is REVERSE-ENGINEERED so the dome-only interface
-  response peaks at 0.1 g²/Hz at the bounce mode under +6 dB initial forcing; prediction uses PHYSICAL
-  masses (dome bounce eff. mass ~225 kg, load 142 kg). netCG now physically scaled (~0.94 g). Added a
-  dome-effective-mass sensitivity panel. New artifact: report/forcing_reverse_engineered.json.
-- packet.pptx
-- mesh/: nodes.csv, elements.csv, model.bdf, model.vtu, model.msh, model.obj
-- figures/: interface_netcg_psd_vs_spec.gif (+ gif_frames/frame_flight_00..10.png), netcg_psd_headline.png,
-  component_frfs.png, netcg_vs_vibe_reference.png, flight_forcing_overlay.png, sensitivity_offset_ell.png,
-  resolution_sensitivity.png, posterior_recovery.png, mesh_assembly.png, modeshapes_dome.png,
-  modeshapes_tray.png
-
-### workspace infra
-- `.pylibs/` — local meshio + python-pptx (no numpy; venv numpy 1.26.4 retained). gitignored-style.
-- `notes_todo.md` — in-workspace build plan.
-
-## Commands.md documents the one-command replay.
-</content>
+## NOT touched
+- The immutable harness checkers; anything outside `runs/round3/opus48/`; the sealed truth and Codex code.
+- Prior round-3 code (`mdof_forward.py`, `run_pipeline.py`, `statfem_*`, etc.) left intact.
