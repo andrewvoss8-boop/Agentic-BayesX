@@ -11,79 +11,102 @@ the literature, and the patent questions in full.
 
 # Part 1: Executive summary (one page)
 
-**Framing.** Traditional aerospace model updating and uncertainty quantification is a PT Cruiser:
-it gets you there, but nobody is excited about it. StatFEM (Girolami's statistical finite element
-method) is a track Porsche. So far the published work has only driven it at 5 mph around a parking
-lot: simple, static problems where the model already matches the test data and almost nothing about
-the real physics has to be learned. I want to take it onto the track, meaning real dynamic
-structures, learning the physics from test data, and pushing the result all the way to a real
-engineering decision. Doing that without crashing will require a few new methods, and that is where
-a patentable contribution lives.
+Framing. Traditional aerospace model updating and uncertainty quantification is a PT Cruiser.
+StatFEM (Girolami's statistical finite element method) is a track Porsche, but the published work
+has only driven it at 5 mph around a parking lot: simple, static problems where the model already
+matches the test data. I want to take it onto the track: real dynamic structures, learning the
+physics from test data, and pushing the result to a real engineering decision. That requires a few
+new methods, which is where a patentable contribution lives.
 
-**The big problem, and the payoff.** In aerospace, predicting loads and updating models with
-test and flight data is slow, inconsistent, and bad at accounting for how wrong the models are.
-Because a launch vehicle fails if any single part is under-designed, teams add conservatism
-everywhere, so parts look marginal on paper yet often carry large true margins. Solve it and
-structures can be 5 to 10 percent lighter with more confidence, and the design, test, and
-verification process becomes consistent and defensible, putting risk where it actually is instead
-of guessing.
+## What is the big problem/need? What happens if we solve it?
 
-**What others have done.** Girolami's group built StatFEM and used it for digital twins, cleanly
-separating model prediction, model error, and sensor noise, but only on simple, near-static cases
-where the model already matched the data. Related tools stay in separate silos: Bayesian model
-updating, substructuring (CMS/FBS), operational modal analysis and force identification, sensor
-placement, and the NASA force-limiting / apparent-mass methods used in vibration testing. The
-state-of-the-art review of Bayesian FE updating (Kiran et al.) never mentions StatFEM at all, so we
-are bridging two literatures that have not met.
+In aerospace, predicting loads and updating models with test and flight data is slow, inconsistent,
+and poor at accounting for model error. A launch vehicle fails if any single part is under-designed,
+so teams add conservatism everywhere; parts look marginal on paper yet often carry large true
+margins. Solve it and structures can be 5 to 10 percent lighter with more confidence, and the
+design, test, and verification process becomes consistent and defensible, with risk placed where it
+actually is.
 
-**The gaps.** StatFEM has not been taken into the data aerospace actually uses (random vibration,
-transient, shock) or into the assembled-interface problems where the load of interest lives. The
-hard part nobody has cracked: when you try to learn the real physics from dynamic test data, the
-model's errors and the real physics can look the same to the math, so the answer either becomes
-falsely overconfident or never settles. We have already reproduced this exact failure in a small
-example. Keeping the statistics honest, carrying the result all the way to a real load decision,
-and keeping the computation affordable on full-size models are all open.
+## What other people have done to address the problem
 
-**Why StatFEM, and why it needs friends.** Coming to this blind, the decision is not "what is the
-stiffness," it is "what is the load, from a model I know is wrong." StatFEM is the only candidate
-built primarily to deliver a calibrated prediction with model-form error as a first-class term, it
-updates sequentially (digital-twin shaped), and it stays interpretable (prior is your FE model, the
-error term says where the model is wrong). Access to Girolami is a real asset but I treat it as a
-tiebreaker, not a technical reason. StatFEM alone is not enough: the unknown-forcing case needs an
-operational-modal / input-state / force-identification front end, and parameter identifiability
-needs a structured error term. So the answer is StatFEM as the backbone plus a small, named set of
-friends, and I will prove that with a head-to-head bake-off (classical modal Bayesian updating vs
-StatFEM on the same case) rather than assert it.
+- Girolami's group built StatFEM and used it for digital twins, separating model prediction, model
+  error, and sensor noise, on simple near-static cases where the model already matched the data.
+- Adjacent tools exist separately: Bayesian model updating, substructuring (CMS/FBS), operational
+  modal analysis and force identification, sensor placement, and the NASA force-limiting /
+  apparent-mass methods used in vibration testing.
+- The state-of-the-art review of Bayesian FE updating (Kiran et al., 2025) does not mention StatFEM.
+  The two literatures have not met.
 
-**The patent, stated plainly.** The digital twin is the vision and the value. The patent would be
-one narrow, novel method inside it: describing the model's error by the type of structural part it
-comes from (joints, welds, panels) rather than by location on the structure, which is what lets the
-math separate real physics from model error. Sensor placement and the automation are supporting,
-not the core claim. A quick prior-art read (papers only, not a cleared patent search) suggests the
-error-by-part-type idea is the most novel and easiest to defend; the cross-experiment and
-sensor-placement ideas are more crowded; no blocking patents surfaced, but I could not search
-patent databases, so freedom-to-operate is not cleared.
+## What are the remaining knowledge gaps
 
-**My proposed answers to the three questions for you.**
-1. *Ownership under Purdue's student-IP rules.* I am getting a written determination from Sponsored
-   Programs now and will follow it. My intent is to structure the patent-critical work so it is
-   self-funded and outside lab resources, which under typical student-IP rules supports student
-   ownership, but I will not assume that until it is confirmed in writing.
-2. *Advise vs co-invent.* My preferred path is that you advise on the digital-twin science and the
-   experiment (which is genuinely valuable to me) while not contributing the specific inventive
-   concept (error-by-part-type), so I can retain title. If you would rather co-invent, that makes it
-   Purdue-owned, which I am open to, but I want it decided transparently up front. Inventorship is a
-   legal call based on contribution to the claims, so we will document contributions carefully as we
-   go. I am not giving legal advice here; counsel and Sponsored Programs govern.
-3. *Self-funding.* Yes. I want to keep the conception, method development, compute, and the McCallie
-   test on my own equipment and funds to keep the ownership story clean. Lab and sponsored resources
-   can support the broader digital-twin and automation work that is not the core claim.
+- StatFEM has not been used with the data aerospace actually uses (random vibration, transient,
+  shock), or on the assembled-interface problems where the load of interest lives.
+- When learning real physics from dynamic test data, model error and real physics can look identical
+  to the math, so the result is either overconfident or fails to settle. We have reproduced this
+  failure in a small example.
+- Open: keeping the uncertainty honest, carrying the result to a real load decision, and keeping the
+  computation affordable on full-size models.
 
-**Next steps.** Get the IP determination from Sponsored Programs and read the disclosure procedure;
-document conception of the method now, with a date; run a real patent-database search or have an
-attorney clear it; build the small experiment that shows the method works where the standard
-approach fails (this is both the science and the evidence the idea is non-obvious); pick a
-conference or journal target so the work has a deadline.
+## My objective is to
+
+Build and validate a dynamic StatFEM digital twin of a realistic aerospace part (a subscale avionics
+tray), learn its physical properties from real vibration data, produce an honest estimate of the
+load that matters (interface force, net-CG load, force-limiting level), and develop the method that
+keeps the inference from collapsing.
+
+## My approach is as follows
+
+- Framework. StatFEM as the backbone: it is the candidate built for calibrated prediction under a
+  wrong model, sequential updating, and interpretability (the prior is the FE model; the error term
+  says where the model is wrong). Verify this choice against classical modal Bayesian updating on the
+  same case rather than assume it. StatFEM alone is not sufficient: unknown forcing needs an
+  operational-modal / input-state / force-identification front end; identifiability needs a
+  structured error term; build-to-build and flight-to-flight scatter needs hierarchical Bayes.
+- New method (candidate patent). Describe model error by structural-part type (joints, welds,
+  panels) rather than by location, which lets the math separate real physics from model error.
+  Novelty is a hypothesis pending a literature scan and a freedom-to-operate search; no novelty is
+  claimed for Bayesian modal or interface updating itself.
+- Experiment. A self-funded subscale tray tested at McCallie under different vibration conditions and
+  assembly states; the strut-end joints are the uncertain stiffness and damping element; a compliant
+  backing plate so the force-limiting notch appears physically.
+- Code. An automated workflow that builds the model, runs the updating, and checks trust by holding
+  back data and predicting it (held-out coverage), with NUTS convergence gates.
+- Data. Public aerospace datasets (F-16 ground vibration test, Vibrationdata flight and static-fire
+  histories, NASA Common Research Model FEM, BAE Hawk) to validate, plus the tray for the
+  patent-critical demonstration.
+- Later add-on. Sensor placement to learn the most about the loads that matter.
+
+## Patent
+
+- The digital twin is the vision and the value. The patent would be one narrow method inside it
+  (model error described by structural-part type). Sensor placement and the automation are
+  supporting, not the core claim.
+- Prior-art read (papers only, not a patent search): error-by-part-type looks the most novel and
+  defensible; the cross-experiment and sensor-placement ideas are more crowded; no blocking patents
+  surfaced; freedom-to-operate is not cleared.
+
+## Three questions for you, with my answers
+
+1. Ownership under Purdue's student-IP rules. I am getting a written determination from Sponsored
+   Programs and will follow it. My intent is to keep the patent-critical work self-funded and off lab
+   resources, which under typical student-IP rules supports student ownership. I will not assume that
+   until it is in writing.
+2. Advise vs co-invent. I prefer that you advise on the science and the experiment without
+   contributing the inventive concept (error-by-part-type), so I retain title. I am open to
+   co-invention, which makes it Purdue-owned, if you prefer; either way decide up front. We will
+   document contributions. This is not legal advice; counsel and Sponsored Programs govern.
+3. Self-funding. Yes. Conception, method development, compute, and the McCallie test stay on my own
+   equipment and funds. Lab and sponsored resources can support the broader twin and automation work
+   that is not the core claim.
+
+## Next steps
+
+1. Get the IP-ownership determination from Sponsored Programs; read the disclosure procedure.
+2. Document conception of the method now, with a date.
+3. Run the literature scan, then a patent-database search or attorney clearance.
+4. Run the StatFEM vs classical updating comparison on the same case.
+5. Build the experiment that shows the method works where the standard approach fails.
+6. Pick a conference or journal target for a deadline.
 
 ---
 
