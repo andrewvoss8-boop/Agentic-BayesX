@@ -286,23 +286,26 @@ Detail:
    data. **Role: the closest published precedent to our digital twin, and the high-water mark we
    intend to pass by going dynamic and pushing to a load decision.**
 
-3. **Joint paper** (shorthand; "simple, replicable interface Bayesian update"; not in repo,
-   citation [to confirm, Andrew to supply]). Role: a clean, reproducible template for a Bayesian
-   update of an interface/joint, and evidence that interface updating itself is published, so it is
-   not our novelty. We use it as a method template and a novelty boundary.
+3. **Joint paper** (Jalali, Haddad Khodaparast, Madinei, Friswell, "Stochastic modelling and
+   updating of a joint contact interface," Mechanical Systems and Signal Processing, 2019; Swansea
+   University). Role: a clean, reproducible template for stochastically modelling and Bayesian-style
+   updating of a joint contact interface (preload, surface roughness, contact variability), and
+   evidence that interface/joint updating itself is published, so it is not our novelty. We use it
+   as a method template and a novelty boundary.
 
-4. **Bridge paper** (shorthand; "CMS plus modal likelihoods plus real ambient data"; not in repo,
-   citation [to confirm, Andrew to supply]). Role: one of the closest things to what we want, since
-   it combines component mode synthesis, modal likelihoods, and real operational (output-only,
-   unknown-input) data on a real structure. It therefore threatens novelty on the
-   CMS-plus-OMA-plus-modal combination and must be read carefully in the #1 scan.
+4. **Bridge paper** (Argyris, Papadimitriou, Panetsos, Tsopelas, "Bayesian Model-Updating Using
+   Features of Modal Data: Application to the Metsovo Bridge," Journal of Sensor and Actuator
+   Networks, 2020). Role: one of the closest published things to what we want, since it does
+   Bayesian model updating using features of modal data on a real bridge (Papadimitriou's group,
+   operational/ambient context). It therefore sets a novelty boundary on modal-feature updating of
+   real structures and must be read carefully against our combination in the #1 scan.
 
-5. **ABC, Approximate Bayesian Computation** (general references include Sisson, Fan, Beaumont's
-   handbook; in structural dynamics, Chiachio et al., "Approximate Bayesian computation by subset
-   simulation," SIAM J. Sci. Comput., 2014; specific paper Andrew read [to confirm]). Role: the
-   fallback when we cannot write down a defensible likelihood, for example when the comparison is on
-   non-Gaussian FRF features or peaks rather than the whole response. Directly relevant to our
-   whole-FRF vs feature-likelihood choice. **Partially read.**
+5. **ABC, Approximate Bayesian Computation** (Ben Abdessalem, Dervilis, Wagg, et al., "Model
+   updating and model selection for structural systems via Approximate Bayesian Computation,"
+   Mechanical Systems and Signal Processing, vol. 245, 113836, 2025/2026; Sheffield group). Role:
+   the fallback when we cannot write down a defensible likelihood, for example when the comparison
+   is on non-Gaussian FRF features or peaks rather than the whole response. Directly relevant to our
+   whole-FRF vs feature-likelihood choice, and it covers model selection too. **Partially read.**
 
 6. **Kiran review** (Kiran, R. P.; Das; Bansal, "A state-of-the-art review of Bayesian finite
    element model updating techniques for structural systems," 2025; in repo). Contribution: the map
@@ -313,17 +316,23 @@ Detail:
    modal and interface updating we are not claiming is mature. **Queued for Andrew; agent-read in
    full.**
 
-7. **Supporting set.** Kennedy and O'Hagan (calibration plus discrepancy, and the confounding it
-   introduces); Brynjarsdottir and O'Hagan (you need structure on the discrepancy or you get garbage
-   parameters); Plumlee (make the discrepancy orthogonal to the model's parameter sensitivity);
-   Ching and Chen (TMCMC, the sampler much of this field uses); the rational-surrogate
-   frequency-domain updating paper (fast frequency-domain likelihoods); Surer-Plumlee-Wild
-   (sequential design of expensive simulation runs to build an emulator, a tractability tool, not
-   physical sensor placement); force-limited vibration (NASA-HDBK-7004 / Scharton, the load decision
-   our QOI feeds); and the operational-modal and input-state lineage (Brincker FDD; Van Overschee
-   and De Moor / Peeters SSI; Au's Bayesian OMA; Lourens, Maes, Gillijns-De Moor input-state
-   estimation), which is the unknown-forcing friend. These are the targets of the #1 white-space
-   scan, and several are still on the queue rather than read.
+7. **Supporting set.** Kennedy and O'Hagan, "Bayesian calibration of computer models," J. R. Stat.
+   Soc. B, 2001 (in repo; the canonical calibration-plus-discrepancy paper that the whole field,
+   including StatFEM, builds on, and the source of the parameter-vs-discrepancy confounding we keep
+   fighting); Brynjarsdottir and O'Hagan, 2014 (you need structure on the discrepancy or you get
+   garbage parameters); Plumlee, 2017 (make the discrepancy orthogonal to the model's parameter
+   sensitivity); Schneider, Papaioannou, Straub, Winter, and Muller, "Bayesian parameter updating in
+   linear structural dynamics with frequency transformed data using rational surrogate models,"
+   Mechanical Systems and Signal Processing 166:108407, 2022 (TU Munich; fast frequency-domain
+   likelihoods via rational-function FRF surrogates, directly relevant to making a whole-FRF
+   likelihood affordable, and the same Schneider line that used a space-and-frequency-correlated
+   model error); Ching and Chen, 2007 (TMCMC, the sampler much of this field uses);
+   Surer-Plumlee-Wild, 2024 (sequential design of expensive simulation runs to build an emulator, a
+   tractability tool, not physical sensor placement); force-limited vibration (NASA-HDBK-7004 /
+   Scharton, the load decision our QOI feeds); and the operational-modal and input-state lineage
+   (Brincker FDD; Van Overschee and De Moor / Peeters SSI; Au's Bayesian OMA; Lourens, Maes,
+   Gillijns-De Moor input-state estimation), the unknown-forcing friend. These are the targets of
+   the #1 white-space scan, and several are still on the queue rather than read.
 
 ## 2.9 Patent, IP, and the three questions in detail
 
