@@ -1,0 +1,681 @@
+STATISTICS
+Statistical ﬁnite elements for misspeciﬁed models
+Connor Dufﬁna,1
+, Edward Crippsa
+, Thomas Stemlera,b
+, and Mark Girolamic,d
+aDepartment of Mathematics and Statistics, The University of Western Australia, Perth, WA 6009, Australia; bComplex Systems Group, The University of
+Western Australia, Perth, WA 6009, Australia; cDepartment of Engineering, University of Cambridge, Cambridge CB2 1PZ, United Kingdom; and dLloyd’s
+Register Foundation Programme for Data-Centric Engineering, The Alan Turing Institute, London NW1 2DB, United Kingdom
+Edited by Nancy M. Reid, University of Toronto, Toronto, ON, Canada, and approved November 18, 2020 (received for review July 23, 2020)
+We present a statistical ﬁnite element method for nonlinear, time-
+dependent phenomena, illustrated in the context of nonlinear
+internal waves (solitons). We take a Bayesian approach and lever-
+age the ﬁnite element method to cast the statistical problem as a
+nonlinear Gaussian state–space model, updating the solution, in
+receipt of data, in a ﬁltering framework. The method is applica-
+ble to problems across science and engineering for which ﬁnite
+element methods are appropriate. The Korteweg–de Vries equa-
+tion for solitons is presented because it reﬂects the necessary
+complexity while being suitably familiar and succinct for peda-
+gogical purposes. We present two algorithms to implement this
+method, based on the extended and ensemble Kalman ﬁlters,
+and demonstrate effectiveness with a simulation study and a case
+study with experimental data. The generality of our approach
+is demonstrated in SI Appendix, where we present examples
+from additional nonlinear, time-dependent partial differential
+equations (Burgers equation, Kuramoto–Sivashinsky equation).
+Bayesian calibration | ﬁnite element methods | model discrepancy
+T
+he central role of physically derived, nonlinear, time-
+dependent partial differential equations (PDEs) in scientiﬁc
+and engineering research is undisputed, as is the need for numer-
+ical intervention in order to understand their behavior. The ﬁnite
+element method (FEM) has emerged as the foremost strategy to
+undergo this numerical intervention, yet when these discretized
+solutions are compared with empirical evidence, elements of
+model mismatch are revealed that require statistical formalisms
+to be dealt with appropriately (1–3). To address this problem
+of model misspeciﬁcation, in this paper we introduce stochas-
+tic forcing inside the PDE and update the FEM discretized PDE
+solution with data in a ﬁltering context.
+Stochastic forcing is introduced through a random function
+within the governing equations. This represents an unknown pro-
+cess, which may have been omitted in the formulation of the
+physical model. For an elliptic linear PDE with coefﬁcients Λ,
+this can be expressed as
+(
+LΛu = f + ξθ,
+ξθ ∼GP(0, Cθ),
+u := u(x), f := f (x), x ∈Ω⊂Rd.
+The push forward of the Gaussian random ﬁeld ξθ, with covari-
+ance parameters θ, induces a probability measure over the space
+of admissible solutions to the above. To embed this into a ﬁnite
+element model, we start with the weak form
+AΛ(u, v) = ⟨f , v⟩, +⟨ξθ, v⟩,
+where AΛ(·, ·) is the bilinear form generated from LΛ and
+⟨·, ·⟩is the appropriate Hilbert space inner product. Discretizing
+with ﬁnite elements u(x) = PM
+i=1 uiφi(x), v(x) = PM
+i=1 viϕi(x)
+yields the Gaussian measure over the solution FEM coefﬁcients
+u = (u1, u2, . . . , uM ) ∈RM :
+p(u | Λ, θ) = N(A−1b, A−1G(θ)A−T),
+where Aij = AΛ(φi, ϕj ), bi = ⟨f , ϕi⟩, and G(θ)ij = ⟨φi, Cθϕj ⟩.
+This deﬁnes a (ﬁnite-dimensional) prior distribution over the
+FEM model, which represents all assumed knowledge before
+observing data. The mean is the standard Galerkin solution, and
+the covariance results from the action of the discretized PDE
+operator on the covariance G(θ); further details are contained
+in SI Appendix, section 1. This was ﬁrst developed in ref. 4, and
+we demonstrate the generality of such an approach by extending
+it to nonlinear, time-dependent PDEs.
+An area in which nonlinear and time-dependent problems
+are ubiquitous is ocean dynamic processes, where essentially
+all problems stem from a governing system of nonlinear, time-
+dependent equations (e.g., the Navier–Stokes equations). The
+ocean dynamics community has grown increasingly cognizant of
+the importance of accurate uncertainty quantiﬁcation (5, 6), with
+many possible applications [e.g., rogue waves (7), turbulent ﬂow
+(8)] for our proposed methodology.
+An example process is nonlinear internal waves (solitons),
+which are observed as waves of depression or elevation along a
+pycnocline in a density-stratiﬁed ﬂuid and are of broad interest to
+both the scientiﬁc and engineering communities (9–13). The clas-
+sical mathematical model for solitons is the Korteweg–de Vries
+(KdV) equation (14):
+(
+ut + αuux + βuxxx + cux = 0,
+u := u(x, t), x ∈[0, L], t ∈[0, T],
+[1]
+where u is the pycnocline displacement. Coefﬁcients α, β, and
+c are determined by physical parameters. Eq. 1 is readily inter-
+pretable: waves propagate at wave speed c, nonlinear steepening
+results from uux, and dispersion is due to uxxx. Relative coefﬁ-
+cient values determine the dominating regime, and waves can
+vary from quasilinear to highly nonlinear.
+Signiﬁcance
+Science and engineering have beneﬁted greatly from the abil-
+ity of ﬁnite element methods (FEMs) to simulate nonlinear,
+time-dependent complex systems. The recent advent of exten-
+sive data collection from such complex systems now raises the
+question of how to systematically incorporate these data into
+ﬁnite element models, consistently updating the solution in
+the face of mathematical model misspeciﬁcation with physi-
+cal reality. This article describes general and widely applicable
+methodology for the coherent synthesis of data with FEM
+models, providing a data-driven probability distribution that
+captures all sources of uncertainty in the pairing of FEM with
+measurements.
+Author contributions: C.D., E.C., T.S., and M.G. designed research, performed research,
+analyzed data, and wrote the paper.y
+The authors declare no competing interest.y
+This article is a PNAS Direct Submission.y
+This open access article is distributed under Creative Commons Attribution License 4.0
+(CC BY).y
+1To whom correspondence may be addressed. Email: connor.dufﬁn@research.uwa.
+edu.au.y
+This article contains supporting information online at https://www.pnas.org/lookup/suppl/
+doi:10.1073/pnas.2015006118/-/DCSupplemental.y
+Published December 28, 2020.
+PNAS 2021 Vol. 118 No. 2 e2015006118
+https://doi.org/10.1073/pnas.2015006118
+|
+1 of 6
+
+Despite KdV being well studied (15) and widely applied (16–
+18), its relative simplicity makes it prone to model mismatch.
+To compensate for this mismatch, we update the FEM dis-
+cretized solution with observations in a ﬁltering context. The
+resulting statistical FEM (statFEM) is shown using simulated
+and experimental data to
+1) Approximate the data-generating process with a statistically
+coherent uncertainty quantiﬁcation.
+2) Synthesize physics and data to give an interpretable posterior
+distribution.
+3) Utilize sparsely observed data to reconstruct observed phe-
+nomena.
+4) Enable the application of simpler physical models, updated
+with observations.
+For practitioners faced with data, we believe these beneﬁts are of
+importance, and we demonstrate the generality of our method in
+SI Appendix with further examples. Code to replicate the analysis
+is freely available online.
+∗
+A Nonlinear, Time-Evolving Statistical FEM
+A Gaussian process (GP), ξθ, is introduced inside of the govern-
+ing equations, which represent an unknown forcing process in
+space and time, with time-varying parameters θ. For a general
+nonlinear PDE, this is given by
+ut + LΛu + FΛ(u) + ξθ = 0,
+ξθ ∼GP(0, Cθ),
+[2]
+where LΛ and FΛ represent linear and nonlinear differential
+operators, respectively, with coefﬁcients Λ. The push forward of
+the Gaussian measure ξθ induces a probability measure over the
+space of admissible solutions to Eq. 2 and characterizes our prior
+belief in the model based on modeling assumptions. The kernel
+of the covariance operator Cθ is given by
+E
+
+ξθ(x, t)ξθ(x ′, t′)
+
+= kθ(x, x ′) · δ(t, t′).
+The exact form of this covariance can be decided upon by domain
+experts so that the uncertainty induced is physically motivated.
+For example, kθ can be chosen to be a Mat´ern covariance func-
+tion to reﬂect the unknown forcing having derivatives up to a
+known order. We assume a white noise process in time to facil-
+itate the application of standard Kalman methods to solve the
+ﬁltering problem; this is also convention in stochastic differen-
+tial equations (19). When computing the prior deﬁned by Eq.
+2, we use ﬁxed parameters θ. When conditioning on data, we
+take an empirical Bayes approach and estimate θ through the
+log-marginal posterior.
+Coefﬁcients of Eq. 2 are assumed to be known, and we choose
+to update the numerical solution to the model, acknowledging
+that estimating Λ [using, e.g., maximum likelihood methods (20),
+Markov chain Monte Carlo (21), or inversion methods in general
+(22)] is also of utmost interest.
+Discretizing Eq. 2 using ﬁnite elements in space with an
+implicit or explicit Euler method in time,† denote by un ∈RM the
+FEM coefﬁcients at time n∆t, for time step ∆t. Further analy-
+sis of this discretization will be the focus of future work. For a
+potentially nonlinear system of equations FΛ, the resultant sys-
+tem can be expressed as (full construction is given in SI Appendix,
+sections 2 and 3)
+FΛ(un, un−1) + en−1 = 0.
+The vector en−1 represents Galerkin discretized increments of a
+Brownian motion process, en−1 ∼N(0, ∆tG(θn)).
+*It is available at https://github.com/connor-dufﬁn/statkdv-paper.
+†Crank–Nicolson may also be used to ensure stability.
+Unlike the elliptic example in the Introduction, for Eq. 2 the
+induced probability measure on the FEM coefﬁcients is not avail-
+able in closed form, and we present two approximations, based
+on the extended Kalman ﬁlter (EKF) and the ensemble Kalman
+ﬁlter (EnKF). The ﬁrst linearizes about the current solution with
+the Jacobian J of the nonlinear FΛ (evaluated at the current
+solution) to give a Gaussian approximation of p(un | θ1:n, Λ) ≈
+N(mn, Cn). The second uses an ensemble in which a perturbed
+system is solved, with realizations from en, at each time step.
+Summary statistics (e.g., mean, covariance) are then computed
+from this ensemble.
+For the prior, the deterministic FEM solution is identically
+equal to the mean in the EKF approach. However we have found
+in numerical experiments that the EKF method, due to the use
+of the Jacobian, inﬂates the covariance at points of high gra-
+dient with reduction at points approaching near-zero gradient,
+when using large time steps. This does not occur with the EnKF
+approach.
+Algorithm 1: EKF algorithm
+for n ≤nt do
+(Prediction step)
+Solve F(mn|n−1, mn−1|n−1) = 0.
+ˆCn|n−1 = (Jn)−1  Jn−1Cn−1|n−1(Jn−1)⊤ mbJn−⊤
+Estimate:
+arg maxθn,σn
+log p(yn | y1:n−1, θ1:n, σ1:n)
++ log p(θn) + log p(σn)	.
+Cn|n−1 = ˆCn|n−1 + ∆t(Jn)−1G(θn) Jn−⊤.
+Sn = HnCn|n−1H⊤
+n + σ2
+nI.
+(Analysis step)
+mn|n = mn|n−1 + Cn|n−1H⊤
+n S−1
+n (yn −Hnmn|n−1).
+Cn|n = Cn|n−1 −Cn|n−1H⊤
+n S−1
+n HnCn|n−1.
+Conditioning on Data. Data yn ∈RN are observed at time n∆t on
+the grid xobs. These data are corrupted with noise ηn ∼N(0, σ2
+nI)
+independent to the model un to give the data-generating pro-
+cess yn = Hnun + ηn, where the linear observation operator
+Hn : RM →RN maps from the computed solution grid to the
+observation grid, using the FEM interpolant.
+The
+ﬁltered
+distribution
+p(un | y1:n, θ1:n, σ1:n, Λ),
+where
+y1:n = (y1, y2, . . . , yn), is our primary object of interest.‡ We take
+a Bayesian interpretation and refer to this as the ﬁltered poste-
+rior distribution or just the posterior, when the context is clear.
+However, as this is a ﬁltering problem, non-Bayesian methods
+are perfectly valid. We assume that all distributions are Gaus-
+sian, so the posterior can be computed with standard methods
+in data assimilation (23); we use the EKF (24) and the EnKF
+(stochastic form) (25).
+The initial conditions are known (i.e., they are given a
+Dirac measure). For time n, we make a tentative prediction
+step according to the PDE model FΛ, propagating uncer-
+tainty in the previous time step [described by p(un−1 | y1:n−1,
+θ1:n−1, σ1:n−1)], to give the prediction measure p(un | y1:n−1,
+θ1:n−1, σ1:n−1).
+Parameters
+(θn, σn)
+are
+then
+estimated,
+and
+the
+full
+prediction
+step
+is
+completed
+to
+estimate
+p(un | y1:n−1, θ1:n, σ1:n). Data observed at time n∆t are then
+conditioned on to give the updated ﬁltering distribution
+p(un | y1:n, θ1:n, σ1:n).
+We assume the parameters are independent across time [i.e.,
+p(θn | θn−1) = p(θn)]. Parameters may also be time constant,
+which is discussed in the maximum likelihood setting in ref. 26
+and in the hierarchical Bayesian setting in ref. 27. SI Appendix
+‡From here on in, we implicitly condition on PDE coefﬁcients Λ.
+2 of 6
+|
+PNAS
+https://doi.org/10.1073/pnas.2015006118
+Dufﬁn et al.
+Statistical ﬁnite elements for misspeciﬁed models
+
+STATISTICS
+A
+B
+C
+D
+Fig. 1.
+Simulation study results (using EnKF). A shows a prior solution with ﬁxed hyperparameters θn with the data-generating process (DGP; as labeled)
+for two times with accompanying 95% credible intervals. Note the degree of model mismatch between the two proﬁles. B shows the DGP and the posterior
+mean and 95% credible intervals for the same times as the prior. Given the data, the model is highly certain about the updated mean, for which the model
+mismatch has been corrected. This is now using estimated hyperparameters θn for a fully data-driven approach. C shows the prior mean, DGP, and posterior
+mean over the entire simulation grid in space and time, and D shows the estimated parameters θn, σn across time, with the true value for σn shown as a
+dashed turquoise line.
+also contains a possible modiﬁcation of the method that accounts
+for time-invariant parameters. The following procedure pro-
+vides an overview of the method, and Algorithms 1 and 2 give
+pseudocode versions.
+Conditioning procedure. At time n, assume that the measure on
+the previous time is described by
+p(un−1 | y1:n−1, θ1:n−1, σ1:n−1) = N(mn−1|n−1, Cn−1|n−1).
+Then, proceed as follows:
+1) Compute the tentative prediction step:
+p(un | y1:n−1, θ1:n−1, σ1:n−1)
+=
+Z
+p(un | un−1)p(dun−1 | y1:n−1, θ1:n−1, σ1:n−1)
+≈N( ˆmn|n−1, ˆCn|n−1).
+2) Maximize the EKF log-marginal posterior to estimate param-
+eters:
+arg maxθn ,σn {log p(yn | y1:n−1, θ1:n, σ1:n)
++ log p(θn) + log p(σn)},
+where ˆG(θn) = ∆t(Jn)−1G(θn)(Jn)−⊤,
+p(yn | y1:n−1, θ1:n, σ1:n)
+= N(Hn ˆmn|n−1, Hn ˆCn|n−1H⊤
+n + Hn ˆG(θn)H⊤
+n + σ2
+nI).
+3) Compute the full prediction step:
+p(un | y1:n−1, θ1:n, σ1:n−1)
+=
+Z
+p(un | un−1, θn)p(dun−1 | y1:n−1, θ1:n−1, σ1:n−1)
+≈N(mn|n−1, Cn|n−1).
+4) Complete the analysis step:
+p(un | y1:n, θ1:n, σ1:n)
+∝p(yn | un, σn)p(un | y1:n−1, θ1:n, σ1:n−1)
+= N(mn|n, Cn|n).
+The prior p(un | θn, Λ) is recovered if only the full prediction
+step (step 3) is completed at each iteration; completing the full
+sequence gives the posterior. Optimization of the log-marginal
+posterior is done using the limited-memory Broyden–Fletcher–
+Goldfarb–Shanno algorithm (28) with starting points set to the
+previous estimates. This log-marginal posterior is calculable due
+to the Gaussian assumption made in step 1. Prior information
+on hyperparameters is incorporated through p(θn) and p(σn),
+which regularizes the optimization problem.
+Simulation Study. We condition on data generated from an
+extended Korteweg–de Vries (eKdV) equation with a cubic
+nonlinear term:
+wt + αwwx + βwxxx + εw 3wx = 0,
+Dufﬁn et al.
+Statistical ﬁnite elements for misspeciﬁed models
+PNAS
+|
+3 of 6
+https://doi.org/10.1073/pnas.2015006118
+
+Algorithm 2: EnKF algorithm
+for n ≤nt do
+(Prediction step)
+for i ≤Nens do
+Solve F(un,[i]
+pred, un−1,[i]) = 0.
+Compute mn|n−1 and ˆCn|n−1 from {un,[i]
+pred}
+Estimate:
+arg maxθn,σn
+log p(yn | y1:n−1, θ1:n, σ1:n)
++ log p(θn) + log p(σn)	
+for i ≤Nens do
+Solve F(un,[i]
+pred, un−1,[i]) + e[i]
+n−1 = 0.
+Compute mn|n−1 and ˆCn|n−1 from {un,[i]
+pred}
+Sn = HnCn|n−1H⊤
+n + σ2
+nI.
+(Analysis step)
+for i ≤Nens do
+un,[i] = un,[i]
+pred + Cn|n−1H⊤
+n S−1
+n
+
+yn + η[i]
+n −Hnun,[i]
+pred
+
+setting α = 1, β = 0.01, and ε = 20. The misspeciﬁed KdV model
+ut + αuux + βuxxx + ξθ = 0
+[3]
+has the same coefﬁcient values, with initial conditions set
+to a wave of depression u(x, 0) = −0.3sech2(x −15) on the
+space–time grid (x, t) ∈[0, 20] × [0, 50]. Boundary conditions are
+periodic. Gaussian random forcing ξθ has spatial covariance
+kθ(x, x ′) = τ 2 exp(−∥x −x ′∥2/(2ℓ2)) (we refer to τ as the scale
+parameter and ℓas the length parameter).
+KdV is discretized following ref. 29, using P1 trial functions
+and P0 testing functions, with a Crank–Nicolson method in time.
+The data-generating process is simulated using Dedalus (30) with
+1,024 grid points in space. This is then down sampled to 20 grid
+points and jittered with synthetic Gaussian observational noise
+(mean 0, variance 0.0012) to give the simulated dataset.
+We assume yn = Hun + ηn, where un is the Galerkin dis-
+cretized solution to Eq. 3 and ηn ∼N(0, σ2
+nI). Hyperparameters
+θn = (τn, ℓn) and noise level σn are estimated at each step by
+maximizing the log-marginal posterior, with the weakly informa-
+tive truncated Gaussian priors τn ∼N+(1, 12), ℓn ∼N+(1, 12),
+and σn ∼N+(0, 12). The EnKF is used in this section, with
+nx = 400, nt = 2,001, and Nens = 400. Results are presented in
+Fig. 1.
+For a ﬁxed set of hyperparameters τn = 0.0025, ℓn = 1 for all
+n, the data-generating process and estimated prior are shown in
+Fig. 1A, appearing visually mismatched in the mean via phase
+shift, increased oscillations, and increased wave interactions.
+Note that the stochastic forcing induces an uncertainty about the
+PDE solution, represented by the 95% credible intervals shown.
+Note also that the data-generating process is approximately
+contained within the credible intervals.
+Fig. 1B shows that the posterior mean approximates the data-
+generating process, and the posterior uncertainty bounds have
+shrunk as a result of conditioning, indicating high certainty about
+the posterior mean values. Model discrepancy between the data
+and the statFEM solution has been corrected for. The space–
+time view of the posterior, shown in Fig. 1C, shows that the
+posterior has incorporated the complex soliton interactions in
+the data, not present in the prior.
+Parameter estimates (Fig. 1D) indicate that the length and
+noise parameters are both stable, with the noise being slightly
+overestimated (i.e., σn ≈0.003 > 0.001). Times at which the
+noise is not identiﬁed result in it being set to the lower bound.
+The scale parameter quantiﬁes the accuracy of the model predic-
+tion step at each time step. In this case, model predictions vary
+in their accuracy and appear approximately bounded to within
+(10−5, 10−1).
+Case Study: Experimental Data
+We now apply the method to the experimental data collected in
+ref. 31. Experiments were conducted to study weakly nonlinear
+models for internal waves in lakes and consisted of generating
+internal waves in a two-layer stratiﬁed system, inside of a clear
+acrylic tank of dimensions 6 × 0.3 × 0.29 m. The tank contained
+an upper layer of fresh water and a lower layer of saline water,
+with a density gradient of ∆ρ = 20 kgm−3. The tank was able to
+rotate in order to establish the initial conditions, which were an
+inclined plane of angle ϑ = 0.5◦. This initial condition mimics the
+shear induced by strong winds in lakes. At time t = 0, the tank is
+rotated to restore it to the horizontal.
+Data were recorded at three spatially equidistant locations in
+the tank using ultrasonic wave gauges (Fig. 2), taking measure-
+ments approximately every 0.01 s, up to T = 1,000 s; we use data
+up to T = 300 s. Data are measured in voltages and are post-
+processed to give pynocline displacements in meters. These data
+are plotted in Fig. 3, where the small measurement error is visu-
+ally apparent. Transient behavior is observed before steepening,
+and a soliton wave train forms; three such steepening events
+are observed in the data we analyze. As T →1,000 s, dissipation
+results in the wave proﬁle approaching a ﬂat steady-state proﬁle.
+Our physical model is an eKdV equation with—for compu-
+tational simplicity—a linear dissipation term. We acknowledge
+that for laminar boundaries, other methods are preferred (31,
+32). Including some form of dissipation is important as other-
+wise, the model becomes impractically mismatched by the end of
+the simulation. The eKdV is given by
+ut + αuux + βuxxx + cux + νu + ξθ = 0
+[4]
+for u := u(x, t), x ∈[0, L], t ∈[0, T], and with coefﬁcients
+α = 3
+2
+c(h1 −h2)
+h1h2
+, β = ch1h2
+6
+, c =
+r
+g′h1h2
+H
+, g′ = ∆ρg
+ρ0 .
+We set ξθ as a GP as described previously, with spatial covari-
+ance kernel kθ set to a squared exponential with scale and length
+hyperparameters τ and ℓ. For the experiment under considera-
+tion, we have h1 = 0.232 m, h2 = 0.058 m, H = h1 + h2 = 0.29 m,
+and ρ0 = 1,000 kgm−3. The dissipation coefﬁcient ν is an inverse
+timescale, which is set to 3 × 10−3 s−1.
+Incorporation of reﬂective boundary conditions is done by
+solving the eKdV equation across the extended domain [0, 2L]
+with periodic boundary conditions and summing solutions in the
+(reﬂected) subdomains [0, L], [L, 2L]:
+uexact(x, t) := u(x, t) + u(2L −x, t),
+x ∈[0, L].
+Details on the derivation are in ref. 31. Solutions to the deter-
+ministic version of Eq. 4 at the locations of the wave gauges are
+Fig. 2.
+Schematic diagram of the experimental apparatus. Wave gauges
+(WGs) are labeled WG1, WG2, and WG3, and the initial conditions are shown
+as a gray line, labeled with initial angle ϑ◦.
+4 of 6
+|
+PNAS
+https://doi.org/10.1073/pnas.2015006118
+Dufﬁn et al.
+Statistical ﬁnite elements for misspeciﬁed models
+
+STATISTICS
+A
+B
+C
+D
+Fig. 3.
+Experimental data results; posterior computed by the EnKF. A shows the observed data, the deterministic solution to the misspeciﬁed model, and the
+posterior mean at the wave gauges with 95% credible intervals up to time T = 300 s. Model mismatch between the model and data is visually apparent and
+has been offset in the posterior mean. B shows the posterior mean wave proﬁle inside of the tank, with 95% credible intervals and the data, for three times.
+The wave proﬁle has been reconstructed by conditioning on the observed data. C shows the estimated hyperparameters θn, and D shows the estimated
+posterior mean over the space–time grid.
+shown in Fig. 3. We show the deterministic solution instead of the
+prior due to accumulation of errors for large simulation times.
+The eKdV model does not capture the observed behavior
+exactly. The model waves have higher velocity than the obser-
+vations, and model amplitudes are slightly larger than observed
+amplitudes. It is conjectured that this is due to misparameteriza-
+tion of dissipation, but in any case, the model is misspeciﬁed.
+Rather than estimating the eKdV parameters using inversion
+techniques, we sequentially update the model with observations
+to give the posterior p(un | y1:n, θ1:n, σ1:n).
+As before, we assume yn = Hun + ηn with known noise ηn ∼
+N(0, 1.3588 × 10−8I). As we solve on the extended domain
+[0, 2L] and sum solutions, the observation operator H is taken
+to be the sum of the appropriate function values given by our
+FEM interpolant (a linear operation). The observation points
+are unchanging, as is the solution mesh, so H is constant in time.
+The hyperparameters of ξθ, θn = (τn, ℓn), must be estimated at
+each iteration by maximizing the log-marginal posterior. Due to
+small data in space (three observations each time step), we use
+a projection method to estimate hyperparameters. This linearly
+projects the predicted mean mn|n−1 forward, estimated from the
+data points: yn
+i = an + bnmn|n−1(xi). Parameters an, bn are esti-
+mated to give the best least squares linear projection from the
+prediction to the data. This gives a projected dataset, ˜yn, using
+the linear shift: ˜yn = an + bnmn|n−1. The estimated hyperparam-
+eters are then given by arg maxθn {log p(˜yn | y1:n−1, θ1:n, σ1:n) +
+log p(θn)}, in which the observed data yn are replaced with the
+projected data ˜yn. We project to a grid of 100 points uniformly
+spaced across the solution grid. Note that this is only for the
+parameter estimation step, and we do not use this ˜yn as the data
+in the analysis step.
+We set weakly informative priors: τn ∼N+(1, 12) and ℓn ∼
+N+(1, 12). The posterior is computed using the ensemble
+method with nx = 200, nt = 1,001, and Nens = 2,048. Results
+are shown in Fig. 3. The posterior mean values of p(un | y1:n,
+θ1:n, σ1:n) at the wave gauges are shown in Fig. 3A and offer a
+close ﬁt to the data in comparison with the eKdV solution. The
+credible intervals shrink about the data (compare Fig. 3B) and
+are not seen on the ﬁgure.
+Posterior wave proﬁles are shown in Fig. 3B and demon-
+strate that given the data, the method is able to yield a sensible
+estimate for the underlying wave proﬁle and is hence able to
+reconstruct the wave proﬁle given sparse observations in space
+(Fig. 3D). Furthermore the provided uncertainty quantiﬁcation
+is physically sensible, with bounds contracting about the data and
+expanding near the boundaries.
+The hyperparameters, θn, are shown in Fig. 3C. The scale
+parameter is seen to vary between two distinct levels, indicating
+that the model predictions vary in their accuracy. The amplitude
+of these mismatch scales shows that in this case, model mismatch
+is a cumulative effect that takes some time before it is obviously
+occurring (Fig. 3A, eKdV solution). Repeated conditioning on
+data helps to mitigate these long timescale effects due to con-
+tinual updating. A space–time view of the posterior mean wave
+proﬁle is shown in Fig. 3D, demonstrating that the general behav-
+ior of the ﬂow (e.g., reﬂective boundary conditions, dissipation,
+wave train formation) is indeed captured.
+Conclusions
+We present a data-driven approach to the FEM that assim-
+ilates observations into nonlinear, time-dependent PDEs by
+embedding model misspeciﬁcation uncertainty in the governing
+equations and sequentially updating the discretized equations
+with observations in a ﬁltering context. Examples presented
+using the KdV equation (and the additional systems studied
+in SI Appendix) demonstrate that the method can approximate
+Dufﬁn et al.
+Statistical ﬁnite elements for misspeciﬁed models
+PNAS
+|
+5 of 6
+https://doi.org/10.1073/pnas.2015006118
+
+the data-generating process to give an interpretable posterior
+distribution, which reconstructs the observed phenomena.
+This work sets the foundation for future studies of embed-
+ding data within FEM models. The use of the underlying
+Kalman framework permits the drawing upon of ideas from high-
+dimensional data assimilation, which for the systems studied here,
+were not needed. Techniques from Bayesian inversion can also
+be used to provide uncertainty quantiﬁcation for physical quanti-
+ties of interest, which will also allow for more accurate prediction.
+Finally, we believe that the development of similar methodol-
+ogy for alternate discretizations (e.g., spectral methods) could
+also be of great beneﬁt, allowing for even broader application.
+Data Availability. Data and code have been deposited on GitHub (https://
+github.com/connor-dufﬁn/statkdv-paper).
+ACKNOWLEDGMENTS. We thank the two anonymous referees whose sug-
+gestions greatly improved the manuscript. C.D. was supported by a Bruce
+and Betty Green Postgraduate Research Scholarship and an Australian Gov-
+ernment Research Training Program Scholarship at the University of Western
+Australia. C.D. and E.C. were supported by Australian Research Coun-
+cil Industrial Transformation Research Hub Grant IH140100012. E.C. was
+supported by Australian Research Council Industrial Transformation Train-
+ing Centre Grant IC190100031. M.G. was supported by Engineering and
+Physical Sciences Research Council Grants EP/R034710/1, EP/R018413/1, EP/
+R004889/1, and EP/P020720/1 and a Royal Academy of Engineering Research
+Chair.
+1. M. C. Kennedy, A. O’Hagan, Bayesian calibration of computer models. J. Roy. Stat.
+Soc. B 63, 425–464 (2001).
+2. K. Judd, L. A. Smith, Indistinguishable states II: The imperfect model scenario. Phys.
+Nonlinear Phenom. 196, 224–242 (2004).
+3. J. O. Berger, L. A. Smith, On the statistical formalism of uncertainty quantiﬁcation.
+Annu Rev Stat Appl. 6, 433–460 (2019).
+4. M. Girolami, E. Febrianto, G. Yin, F. Cirak, The statistical ﬁnite element method (stat-
+FEM) for coherent synthesis of observation data and model predictions. Comput.
+Methods Appl. Mech. Eng., 10.17863/CAM.59639 (2020).
+5. P. F. J. Lermusiaux, Uncertainty estimation and prediction for interdisciplinary ocean
+dynamics. J. Comput. Phys. 217, 176–199 (2006).
+6. O. B. Fringer, C. N. Dawson, R. He, D. K. Ralston, Y. J. Zhang, The future of coastal
+and estuarine modeling: Findings from a workshop. Ocean Model. 143, 101458
+(2019).
+7. M. R. Alam, Predictability horizon of oceanic rogue waves. Geophys. Res. Lett. 41,
+8477–8485 (2014).
+8. A. J. Majda, M. Branicki, Lessons in uncertainty quantiﬁcation for turbulent dynamical
+systems. Discrete Contin. Dyn. Syst. Ser. A 32, 3133–3221 (2012).
+9. A. R. Osborne, T. L. Burch, Internal solitons in the Andaman Sea. Science 208, 451–460
+(1980).
+10. L. Boegman, M. Stastna, Sediment resuspension and transport by internal solitary
+waves. Annu. Rev. Fluid Mech. 51, 129–154 (2019).
+11. D. Cacchione, L. F. Pratson, A. Ogston, The shaping of continental slopes by internal
+tides. Science 296, 724–727 (2002).
+12. Y. H. Wang, C. F. Dai, Y. Y. Chen, Physical and ecological processes of internal waves
+on an isolated reef ecosystem in the South China Sea. Geophys. Res. Lett. 34, L18609
+(2007).
+13. X. Huang et al., An extreme internal solitary wave event observed in the northern
+South China Sea. Sci. Rep. 6, 30041 (2016).
+14. D. J. Korteweg, G. de Vries, On the change of form of long waves advancing in a
+rectangular canal, and on a new type of long stationary waves. Lond. Edinb. Dubl.
+Phil. Mag. J. Sci. 39, 422–443 (1895).
+15. P. G. Drazin, R. S. Johnson, Solitons: An Introduction (Cambridge University Press,
+1989).
+16. K. G. Lamb, L. Yan, The evolution of internal wave undular bores: Comparisons of a
+fully nonlinear numerical model with weakly nonlinear theory. J. Phys. Oceanogr. 26,
+2712–2734 (1996).
+17. P. E. Holloway, E. Pelinovsky, T. Talipova, A generalized Korteweg-de Vries model of
+internal tide transformation in the coastal zone. J. Geophys. Res. Oceans 104, 18333–
+18350 (1999).
+18. K. R. Helfrich, W. K. Melville, Long nonlinear internal waves. Annu. Rev. Fluid Mech.
+38, 395–425 (2006).
+19. B. Øksendal, Stochastic Differential Equations (Springer, 2003).
+20. E. L. Ionides, C. Bret ´o, A. A. King, Inference for nonlinear dynamical systems. Proc.
+Natl. Acad. Sci. U.S.A. 103, 18438–18443 (2006).
+21. M. Girolami, Bayesian inference for differential equations. Theor. Comput. Sci. 408,
+4–16 (2008).
+22. A. M. Stuart, Inverse problems: A Bayesian perspective. Acta Numer. 19, 451–559
+(2010).
+23. K. Law, A. Stuart, K. Zygalakis, Data Assimilation (Springer, Cham, Switzerland, 2015).
+24. A. H. Jazwinski, Stochastic Processes and Filtering Theory (Courier Corporation, 2007).
+25. G. Evensen, The ensemble Kalman ﬁlter: Theoretical formulation and practical
+implementation. Ocean Dynam. 53, 343–367 (2003).
+26. R. H. Shumway, D. S. Stoffer, Time Series Analysis and Its Applications: With R
+Examples(Springer Texts in Statistics, Springer International Publishing, ed. 4, 2017).
+27. M. Katzfuss, J. R. Stroud, C. K. Wikle, Ensemble Kalman methods for high-dimensional
+hierarchical dynamic space-time models. J. Am. Stat. Assoc., 1–43 (2019).
+28. J. Nocedal, S. Wright, Numerical Optimization (Springer Science & Business Media,
+2006).
+29. A. Debussche, J. Printems, Numerical simulation of the stochastic Korteweg–de Vries
+equation. Phys. Nonlinear Phenom. 134, 200–226 (1999).
+30. K. J. Burns, G. M. Vasil, J. S. Oishi, D. Lecoanet, B. P. Brown, Dedalus: A ﬂexible frame-
+work for numerical simulations with spectral methods. Phys. Rev. Res. 2, 023068
+(2020).
+31. D. Horn, J. Imberger, G. Ivey, L. Redekopp, A weakly nonlinear model of long internal
+waves in closed basins. J. Fluid Mech. 467, 269–287 (2002).
+32. R. Grimshaw, E. Pelinovsky, T. Talipova, Damping of large-amplitude solitary waves.
+Wave Motion 37, 351–364 (2003).
+6 of 6
+|
+PNAS
+https://doi.org/10.1073/pnas.2015006118
+Dufﬁn et al.
+Statistical ﬁnite elements for misspeciﬁed models

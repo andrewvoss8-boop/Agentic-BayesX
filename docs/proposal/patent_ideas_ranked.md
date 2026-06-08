@@ -1,3 +1,7 @@
+
+6-7-26
+Material whose microstructure is naturally attenuating to vibration like hyperstructures.  Developed with BOED.  Using concepts from micromechanics
+
 # Patentable / novel ideas, listed and ranked
 
 Andrew Voss. Created 2026-06-06. Lead agent: Claude Code.
@@ -10,6 +14,11 @@ things are done: (1) the white-space literature scan (operational modal analysis
 estimation, Bayesian force identification, complex joint impedance in CMS/FBS, dynamic StatFEM), and
 (2) a real patent-database / freedom-to-operate search. Sources for each idea are cited to
 notes/research_backlog.md (tags B1 to B5) and notes/project_vision.md (sections 5.0 to 5.4).
+
+> **[Lead-agent comments added 2026-06-06 — see "Lead-agent review comments" at the end of this file.
+> They include cross-cutting notes (Sec 101 anchoring, IP vehicle per idea, pipeline triage), per-rank
+> sharpenings, and one proposed NEW entry (statFEM-driven topology optimization + the Doehring/ABEMIS
+> collaboration path).]**
 
 Ranking criterion: a blend of defensible novelty, value to a real aerospace workflow, how
 demonstrable it is with the evidence we can produce, and prior-art risk. Higher rank = stronger
@@ -155,3 +164,77 @@ Why this rank: a useful conceptual enabler, but the apparent-mass framing itself
 3. A real patent-database / freedom-to-operate search.
 4. Disclose to the Senior IP Officer before any public disclosure (Substack, paper, talk), per the IP
    plan (project_vision 9).
+
+---
+
+## Lead-agent review comments (2026-06-06)
+
+These are my (Claude Code, lead agent) comments on the list above. They are judgment, not legal opinion,
+and they inherit the same honesty caveat: every novelty/prior-art read here is a hypothesis until the
+literature scan and a real patent-database / freedom-to-operate (FTO) search are done.
+
+### Cross-cutting (apply to the whole list)
+1. **Sec 101 / eligibility is the shared threat.** Every Rank 1-9 idea is algorithm-flavored, so it faces
+   the US abstract-idea (Alice) hurdle: "a method of computing a posterior" can be rejected. Anchor every
+   spearhead claim to a physical structure/process/article — e.g. "a method of TESTING / UPDATING a model
+   of / DETERMINING a design margin for a physical structure, comprising ... [the inventive step] ... and
+   producing [a load estimate / test profile / manufactured article]." You can also write apparatus/system
+   claims (sensors + actuator + processor configured to ...) WITHOUT building hardware — an enabling
+   written description is a "constructive reduction to practice." Suggest adding a one-line "Sec 101 anchor"
+   to each of Ranks 1-3.
+2. **Decide the IP VEHICLE per idea — the doc doesn't yet.** Who owns/files each is not stated. Options:
+   Purdue/PRF (they pay/prosecute, you are named inventor + ~1/3 share), Doehring/ABEMIS (existing patent
+   machine; see the new entry below), Relativity (needs a contract), or solo (you pay, you own). Different
+   ideas want different homes; sort ownership UP FRONT and keep the disclose-before-publish discipline.
+3. **These are pipeline candidates, not commitments.** Run cheap novelty triage (Lens.org / Google Patents
+   / Espacenet — the patent databases the lit reads could NOT reach) on the top 3 BEFORE investing. Your
+   bottleneck is triage + specificity + finishing ONE, not generating more ideas.
+4. **"Demonstrable now" is honest only for Ranks 2/6/7/9.** Ranks 1, 3, 4 are hypotheses; per
+   project_vision the patent exists only if the methods actually work. Consider relabeling 1/3/4 as
+   "Demonstrable: No (hypothesis)" so the table doesn't read stronger than the evidence.
+5. **Enforceability footnote.** A method run inside a private engineering workflow is hard to detect/
+   enforce (less important to you since you are not commercializing, but it affects whether a company or
+   Doehring would spend filing dollars). Apparatus/ARTICLE claims (a manufactured optimized structure) are
+   far easier to detect — another reason the design-side / topology track below is attractive.
+
+### Per-rank
+- **Rank 1 (bundle):** sharpen the novelty caveat. project_vision flags Schneider et al. (Kiran ref [184]):
+  a multiplicative model error correlated in both SPACE and FREQUENCY already exists. So the combination's
+  defensible novelty must rest on **unknown/output-only forcing + the load QOI + the StatFEM<->Bayesian-FE-
+  updating bridge**, NOT on discrepancy-correlation itself. Add this to the Rank-1 caveat.
+- **Rank 2 (F(k) method):** agree it is the spearhead, but "Demonstrable now: Yes" is optimistic — the
+  same-parameter-space version is reproduced as a FAILURE (Stage 3); the ORTHOGONAL output-space version
+  (the actual claim) is UNTESTED. The A/B IS the gating non-obviousness evidence; until it runs this is
+  "demonstrable in principle." Keep at #2.
+- **Rank 8 (sensor placement / echolocation):** re the robotic-OED-device idea discussed 2026-06-06 — a
+  physical robot would help Sec 101 but WORSEN novelty (robotics + OED + modal testing is crowded) and
+  explode scope (a "bigger plan" red flag vs the simple-objective steer). Cure Sec 101 via apparatus claims
+  on paper instead; keep the robot as future/vision, not a build.
+
+### Proposed NEW entry (adjacent DESIGN-SIDE track — deliberately not slotted into the updating table)
+**statFEM-discrepancy-driven / uncertainty-aware topology optimization.** Optimize or attenuate a structure
+against a StatFEM posterior that INCLUDES the calibrated model-form discrepancy (especially the Rank-2
+part-type / interface discrepancy), instead of against a deterministic nominal FE model. Plain version:
+"design this lattice/tray to attenuate vibration while accounting for the fact that the joints/interfaces
+have a calibrated, uncertain error we learned from test data."
+- Defensible novelty (provisional): **Medium-High.** The topology-optimization CORE is 30+ years crowded,
+  but the *uncertainty-aware-with-a-data-CALIBRATED-discrepancy* intersection looks sparse (papers-only
+  read): robust/stochastic TO propagates INPUT uncertainty through a TRUSTED model; StatFEM has not been
+  fed into a design loop.
+- Aerospace value: Medium-High (ties your calibration work to a real design decision — lighter trays /
+  attenuation; Relativity- and Doehring-relevant). Demonstrable now: No. Prior-art risk: Medium for the
+  intersection, HIGH for the TO core + heavy unseen industrial NVH/AM filing.
+- Role / vehicle: a SIBLING track and your clearest COLLABORATION path. Per a 2026-06-06 web read (papers
+  + Google Patents hits, NOT independently FTO-verified here), Doehring/ABEMIS holds a mesh-to-lattice-
+  generation + additive-manufacturing patent family (US10585420B2 / US11327465B2 / US12111630B2) that does
+  NOT claim dynamic/attenuation objectives, plus "AI provisionals" pending. Your discrepancy-aware design
+  objective sits ADJACENT TO BUT CLEAR OF his geometry claims -> a real co-invention opportunity with an
+  existing patent machine and attorney relationships. An ARTICLE claim (the optimized manufactured
+  structure) also sidesteps Sec 101 cleanly.
+- Action before investing: ask Doehring what the "AI provisionals" cover, to scope clear of his pending
+  art. Confirm everything with a real patent search; the white-space read is papers-not-patents.
+
+### One strategic note
+Even if the summer study yields no patent, the Rank-2 discrepancy work is the INPUT to this design-side
+track and to Ranks 3/4 — so the capability compounds. Treat the patent as a byproduct of finding what makes
+StatFEM actually work in your domain, not as a target to steer the research toward.

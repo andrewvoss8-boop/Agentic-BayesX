@@ -1,6 +1,6 @@
 # Subscale Avionics Tray Modal Test — Setup Status
 
-- **Date:** 2026-06-06
+- **Date:** 2026-06-08 (rev 2 — M3/M5 pin question resolved; original 2026-06-06)
 - **Authors:** Andrew Voss (lead experimenter) + Claude Code (lead agent, advisory)
 - **Status of rig:** DESIGN + PROCUREMENT in progress. Not yet assembled. Not yet instrumented.
 - **Scope:** Physical subscale rig. This is a **lab note**, not a Round-3 BayesX deliverable.
@@ -47,8 +47,8 @@ flagged as wrong-for-flight. Final decision: **stay non-isolated by choice**, so
 | 2 | **Struts (×6 links)** | Delta push rods L196-D8-M3: 196 mm eye-to-eye, 8 mm OD Al tube, **M3 rod-end bore** | **PURCHASED** | k_axial ≈ 5.5 MN/m (stiff; joints are the soft element). Strut 1st bending ~370 Hz (above band). Bond rod-ends into tubes (item 7). |
 | 3 | **Backing plate (source)** | Steel, free-free on bungees; candidate 4 ft × 3/8" (≈245 lb) | **NOT PURCHASED** | Modes (4ft×3/8"): ~21/31/38/55/55/96 Hz. **Size TBD** — must match the *actual* non-isolated tray fundamental (item: Open Risk #3). Heavy → rigging needed. |
 | 4 | **Clevis brackets (×6)** | Double-shear fork, **ear ≥6 mm**, jaw ~10 mm, **M3 pin**, **2× M6** base to grid | **NOT PURCHASED** | Sourcing via LLM-browser run. Opposed ¼"+ Al angle (drill-press) or COTS U-bracket. Thin ears (<6 mm) rejected — they steal joint compliance. |
-| 5 | **Spacers** | M3 rigid Al spacers (3.2 mm ID) + M3 shim washers, both sides each joint | **NEEDED (wrong size bought)** | Center the ball + set standoff; rigid metal, NOT elastomer. Per-joint requirement — all 12 joints. |
-| 6 | **Pin + nut** | M3 SHCS or shoulder screw ~20–25 mm + M3 nylon locknut | **NEEDED** | Must be **M3** to pass the rod-end bore. |
+| 5 | **Spacers** | M5 rigid Al spacers (5.2 mm ID; 1.5 & 3 mm) + M5 shim washers, both sides each joint | **PURCHASED** | Center the ball + set standoff; rigid metal, NOT elastomer. Per-joint — all 12 joints. |
+| 6 | **Pin + nut** | M5×30 SHCS + M5 nylon locknut | **PURCHASED** | Pin = **M5**: the rod-end *ball bore* takes M5 (the "M3" in the part code = rod-end's own *stud thread*). Confirm bore with calipers on arrival. |
 | 7 | **Adhesive** | J-B Weld 8276 KwikWeld | **PURCHASED** | Bond rod-ends into tubes (replaces friction set screws). Degrease/abrade; makes joint permanent. |
 
 ### Fasteners already purchased
@@ -56,10 +56,10 @@ flagged as wrong-for-flight. Final decision: **stay non-isolated by choice**, so
 |------|-----|--------|------|
 | M6×12 SHCS, 304 SS | 50 | PURCHASED | **Short** for thick bracket bases — get M6×16/20 if brackets are thick. |
 | M6 flat washers | 100 | PURCHASED | OK for base. |
-| M5 Al spacers (5.2 ID×8 OD, 1.5 & 3 mm) | ~15 | PURCHASED — **MISMATCH** | M5 ID is wrong for an M3 pin. Repurpose or return (window ~July). |
-| M5×30 SHCS | 30 | PURCHASED — **MISMATCH** | M5 won't fit M3 rod-end bore. |
-| M5 nylon locknuts | 50 | PURCHASED — **MISMATCH** | Wrong size for M3 pin. |
-| M5 flat washers (5 ID×12 OD) | 120 | PURCHASED — **MISMATCH** | Slops on M3 pin. |
+| M5 Al spacers (5.2 ID×8 OD, 1.5 & 3 mm) | ~15 | **PURCHASED ✓** | Clevis-pin spacers; center the ball both sides. |
+| M5×30 SHCS | 30 | **PURCHASED ✓** | Clevis **pin** — rod-end ball bore takes M5. |
+| M5 nylon locknuts | 50 | **PURCHASED ✓** | Pin locknut. |
+| M5 flat washers (5 ID×12 OD) | 120 | **PURCHASED ✓** | Pin centering / shims. |
 
 ---
 
@@ -117,21 +117,24 @@ Currently qualitative. To be made falsifiable before testing:
 
 ## 6. Open issues / risks (priority order)
 
-1. **M3 pin hardware mismatch** — bought M5; rod-end bore is M3. Must buy M3 pin + M3 spacers
-   + M3 locknuts before assembly. (Verify bore with calipers on arrival.)
-2. **Clevis brackets not sourced** — the main missing structural item.
-3. **Backing plate not sourced, and size depends on the (uncertain) non-isolated tray
+1. **Clevis brackets not sourced** — the main missing structural item.
+2. **Backing plate not sourced, and size depends on the (uncertain) non-isolated tray
    fundamental** — estimated joint-governed ~120–340 Hz rigid. **Estimate/measure the tray
    fundamental first, THEN size the plate so its modes bracket that resonance.** Do not lock
    the plate to ~85 Hz prematurely.
+3. **Instrumentation** — no force channel yet. Candidate path: Dewesoft miniature triaxial
+   (e.g., Dytran 3263A) + Dewesoft DAQ (IEPE + FRF software) + modal hammer + 740B02 strut
+   strain. Pursue LASIR borrow first; confirm model #/cal cert/sensitivity/mass; avoid the
+   unlabeled/"BROKEN" rental units.
 4. **Plate handling** — 245+ lb on bungees needs a frame/gantry + lift points + 2–3 people.
    Consider 3 ft (138 lb) if rigging is limited (recompute modes first).
 5. **Joint damping** — low, amplitude-dependent, least-repeatable element ⇒ expect nonlinearity.
    Mitigate: controlled/logged preload, low- vs high-level sweeps (amplitude-dependence check),
    assemble/reassemble repeats.
-6. **Instrumentation** — no force channel yet; need hammer + IEPE DAQ + strain sensors.
-   Pursue LASIR borrow first.
-7. **Acceptance criteria not yet quantified** (Section 5).
+6. **Acceptance criteria not yet quantified** (Section 5).
+7. **Confirm rod-end bore = 5 mm on arrival** — RESOLVED understanding: the "M3" in the strut
+   part code is the rod-end's own *stud thread*, not the ball bore; the bore takes the **M5 pin**
+   (M5 hardware already in hand and correct). One caliper check closes it definitively.
 8. **M6×12 base screws** short for thick brackets — may need M6×16/20.
 
 ---
@@ -149,7 +152,7 @@ Currently qualitative. To be made falsifiable before testing:
 
 ## 8. Immediate next actions
 
-- [ ] Order **M3 pin hardware** (pin/shoulder screw, M3 spacers 3.2 mm ID, M3 locknuts).
+- [ ] **Confirm rod-end ball bore = 5 mm** on strut arrival (M5 pin hardware already in hand).
 - [ ] Source **6 clevis brackets** (ear ≥6 mm, double-shear).
 - [ ] Get a **first estimate of the non-isolated tray fundamental**, then size the steel plate.
 - [ ] Plan **plate rigging** (frame + bungees + lift points).
