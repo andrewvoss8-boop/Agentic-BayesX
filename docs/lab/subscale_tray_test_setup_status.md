@@ -43,7 +43,7 @@ flagged as wrong-for-flight. Final decision: **stay non-isolated by choice**, so
 
 | # | Component | Spec / value | Status | Notes |
 |---|-----------|--------------|--------|-------|
-| 1 | **Tray (load)** | Thorlabs MB3030/M, 300×300×12.7 mm (½") solid Al, M6 tapped @ 25 mm grid, ~3.0 kg bare | **PURCHASED** ($109, used) | 1st elastic mode ~468 Hz (~5.5× above target) → acts rigid. Mass tunable via bolt-on ballast. |
+| 1 | **Tray (load)** | Thorlabs MB3030/M, 300×300×12.7 mm (½") solid Al, M6 tapped @ 25 mm grid. Bare mass ~3.0 kg as-built (tapped grid removes a few %); 3.09 kg idealized solid plate (geometry × density) | **PURCHASED** ($109, used) | 1st elastic mode well above the suspension band → acts rigid (estimate; confirm by FEM/test). **Phase-1 FEM uses the BARE tray, no ballast.** Mass remains tunable via bolt-on ballast for later phases. |
 | 2 | **Struts (×6 links)** | Delta push rods L196-D8-M3: 196 mm eye-to-eye, 8 mm OD Al tube, **M3 rod-end bore** | **PURCHASED** | k_axial ≈ 5.5 MN/m (stiff; joints are the soft element). Strut 1st bending ~370 Hz (above band). Bond rod-ends into tubes (item 7). |
 | 3 | **Backing plate (source)** | Steel, free-free on bungees; candidate 4 ft × 3/8" (≈245 lb) | **NOT PURCHASED** | Modes (4ft×3/8"): ~21/31/38/55/55/96 Hz. **Size TBD** — must match the *actual* non-isolated tray fundamental (item: Open Risk #3). Heavy → rigging needed. |
 | 4 | **Clevis brackets (×6)** | Double-shear fork, **ear ≥6 mm**, jaw ~10 mm, **M3 pin**, **2× M6** base to grid | **NOT PURCHASED** | Sourcing via LLM-browser run. Opposed ¼"+ Al angle (drill-press) or COTS U-bracket. Thin ears (<6 mm) rejected — they steal joint compliance. |

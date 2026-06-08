@@ -35,7 +35,7 @@ geometry + first ~6 mode shapes, and write a `results.json` in the common schema
   forward model, but **only run the eigensolve this phase** — no NUTS.
 - **Femap/Nastran DECK (NOT solved by you):** a ready-to-run bulk-data deck (`.bdf`,
   SOL 103, EIGRL for ~10 modes) + a short `RUN_IN_FEMAP.md` so the HUMAN solves and
-  visualizes in Femap. Deliver deck + procedure + the expected benchmark to check against.
+  visualizes in Femap. Deliver deck + procedure + your geometry/mesh and modeling notes.
   Do NOT invent solved numbers — leave the solved-frequency fields empty/null in
   `results.json` and mark `solved_by: human`.
 
@@ -44,12 +44,14 @@ geometry + first ~6 mode shapes, and write a `results.json` in the common schema
   z = 0.098 m; base (ground) at z = 0. State your frame in the report.
 - **Configuration:** tray-on-struts, **base ends FIXED** (grounded). Source plate NOT modeled.
 - **Tray:** Thorlabs MB3030/M — solid 6061-T6 plate, 300 × 300 × 12.7 mm.
-  E = 68.9 GPa, ν = 0.33, ρ = 2700 kg/m³. **Mass case: 3.1 kg** (bare; also report 5.0 kg).
-  Shell/plate elements preferred (shows the ~468 Hz tray flex modes); rigid body + lumped
+  E = 68.9 GPa, ν = 0.33, ρ = 2700 kg/m³. **Mass: BARE tray, NO ballast** — idealized solid
+  plate = 3.09 kg (geometry x density; emergent for meshed models, use 3.09 kg if lumping;
+  as-built ~3.0 kg with the tapped grid). Shell/plate elements preferred (resolve the tray's
+  own flexible modes); rigid body + lumped
   mass acceptable for low modes only.
 - **Struts (×6):** aluminum tube, 196 mm eye-to-eye, **8 mm OD, 1 mm wall (A ≈ 22 mm²,
-  nominal — confirm on arrival)**, E = 68.9 GPa, ρ = 2700. Beam preferred (confirm ~370 Hz
-  self-mode out of band); bar acceptable. **Spherical end releases** (release 3 rotations).
+  nominal — confirm on arrival)**, E = 68.9 GPa, ρ = 2700. Beam preferred (lets you check
+  the strut self-mode is out of band); bar acceptable. **Spherical end releases** (release 3 rotations).
 - **Joints:** RIGID this phase, placed as **explicit joint nodes** (stiff CBUSH k ≈ 1e9 N/m,
   or rigid link) at each strut end — so later compliance is a parameter change.
 - **Geometry — true 120° hexapod, struts 30° off horizontal.** Node coordinates (mm):
@@ -67,11 +69,21 @@ geometry + first ~6 mode shapes, and write a `results.json` in the common schema
   are 196 mm at 30° elevation.)
 - **Solve:** real eigenvalue / normal modes, first ~10 modes. No damping, no forcing.
 
-## Validation (every runner must check)
-- Lowest 6 modes vs benchmark (rigid joints, 3.1 kg): **73, 73, 155, 260, 387, 387 Hz**.
-- **Degenerate pairs present** (73/73, 387/387) ⇒ symmetry correct (the key check).
-- Tray flex modes near **~468 Hz**; if beam struts, strut self-mode near **~370 Hz**.
-- Report % difference from the benchmark and flag anything > ~5%.
+## Self-checks (every agent — NO pre-loaded frequency target, on purpose)
+We deliberately do NOT give you expected frequencies. The old hand-calc was an unverified
+rigid-joint upper bound, and handing it over would anchor your build (turn a verification
+into a fit-to-the-hand-calc). Solve from the spec and report what you find. Use checks that
+do NOT pre-load a magnitude:
+- Rigid-body check: with the base FIXED there should be no zero/near-zero modes; if you also
+  run a free-free variant, expect 6 near-zero rigid-body modes (sanity only).
+- Symmetry: the true-120° symmetric rigid tray should give NEAR-DEGENERATE mode pairs;
+  report whether pairs appear — a missing pair flags a broken-symmetry geometry bug. Do not
+  tune to it.
+- Mesh convergence: refine the mesh, report the frequency shift of the first ~10 modes.
+- Identify from the SHAPES which modes are suspension (tray-on-struts) vs tray-flex vs strut
+  self-modes; report their frequencies, whatever they are.
+- Label all rigid-joint frequencies a **provisional upper bound** (real compliant joints
+  lower them).
 
 ## Deliverables (per tool, in `runs/fem_phase1/<agent>/<tool>/`)
 For EACH of your four tools:
@@ -79,15 +91,15 @@ For EACH of your four tools:
 - `figures/`: undeformed mesh render + first ~6 mode-shape plots (nastran_deck: geometry
   render from the deck; mode shapes come from the human's Femap solve).
 - `results.json`: agent name, tool name, units, frame, mass case, first ~10 frequencies
-  (Hz) (null + `solved_by: human` for nastran_deck), benchmark % diff, element types/mesh,
-  mesh-convergence note.
+  (Hz) (null + `solved_by: human` for nastran_deck), element types/mesh,
+  mesh-convergence shift, mode-type label (suspension/tray-flex/strut-self) per mode.
 - `README.md`: one-command replay (calculix/tensormesh/jax); assumptions; what you did/
   didn't run.
 Plus one top-level `runs/fem_phase1/<agent>/files_changed.md`.
 
 ## Comparison (the master will assemble; each agent enables it)
 Emit each `results.json` in the common schema so the master can build the 3-agent x 4-tool
-frequency table (+ analytical oracle + the human's Femap solve) and MAC matrices on both
+frequency table (+ the human's Femap solve when available) and MAC matrices on both
 axes: CROSS-SOFTWARE (your four tools vs each other) and CROSS-AGENT (your tool vs the
 other two agents' same tool). Expect close agreement on the shared synthetic geometry;
 explain any divergence (mesh, element theory, lumped vs shell tray, transcription).
@@ -120,11 +132,15 @@ PASS/FAIL per item:
    or frequency tables between its own tools or copied another agent's results, and did not
    tune one build to match another. Assemble the 3-agent x 4-tool matrix.
 2. Units + coordinate frame stated and consistent; geometry matches the shared node table.
-3. First ~10 frequencies recomputed; cross-tool table built; %-diff vs the analytical
-   6-DOF benchmark (73,73,155,260,387,387 @ 3.1 kg) computed; anything >5% flagged.
-4. Degenerate pairs present (73/73, 387/387) = 120° symmetry; flag if missing.
+3. First ~10 frequencies recomputed from each artifact; the 3-agent x 4-tool table built;
+   cross-build spread per mode characterized. NO pre-loaded target to match. You MAY, AFTER
+   tabulating, run a reproducible analytical 6-DOF script as ONE provisional cross-reference
+   (rigid-joint upper bound) — labeled provisional, not ground truth.
+4. Near-degenerate mode pairs reported across builds; a missing pair flags a broken-symmetry
+   geometry bug (this is a geometry check, not a frequency-match check).
 5. Mode-shape MAC matrix between tools; matched-mode diagonal > 0.9; report mismatches.
-6. Tray-flex ~468 Hz and (if beam struts) strut self-mode ~370 Hz located and labeled.
+6. Suspension vs tray-flex vs strut-self modes identified from the SHAPES and labeled (by
+   shape, not by an assumed frequency).
 7. Element type + mesh density stated AND a convergence/refinement check shown (refine,
    report frequency shift) — Discretization Resolution gate.
 8. Rigid-joint frequencies labeled PROVISIONAL UPPER BOUND.
@@ -143,13 +159,13 @@ You are the PROJECT-FRAMING agent for Phase-1 FEM. Read notes/project_vision.md,
 notes/research_backlog.md, FEM_architecture.md, and this prompt. In plain English:
 - State the engineering DECISION this Phase-1 FEM supports and why a verified normal-modes
   model is the right first step toward the dynamic StatFEM twin + interface-load QOI.
-- Confirm the PRIORITY deliverables (geometry render; first ~10 modes + shapes; benchmark
-  match incl. degenerate pairs; 3-software comparison) are surfaced and unambiguous; flag
+- Confirm the PRIORITY deliverables (geometry render; first ~10 modes + shapes; the
+  3-agent x 4-tool comparison) are surfaced and unambiguous; flag
   any ambiguity to the human BEFORE builds run.
 - Flag SCOPE DRIFT in either direction: (a) creep INTO later-phase work now — damping,
   complex/FRF data, force-limiting, source-plate coupling, NUTS; (b) a build so reduced it
-  cannot show the modes that drive the QOI (e.g., lumped-rigid tray hiding the ~468 Hz
-  flex, or bar struts hiding the ~370 Hz self-mode when those matter).
+  cannot show the modes that drive the QOI (e.g., lumped-rigid tray hiding the tray's own
+  flexible modes, or bar struts hiding the strut self-modes when those matter).
 - State what would make Phase 1 the WRONG question (e.g., if the suspension modes the rig
   is built to study fall outside the band of interest at the chosen geometry).
 Output: framing.md (decision, objective, in/out of scope, open ambiguities, wrong-question

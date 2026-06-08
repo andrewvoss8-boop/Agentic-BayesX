@@ -26,31 +26,40 @@ Phase-1 configuration (deliberately simpler than the coupled run in §2):
   link at each strut end) so adding finite compliance/loss later (§3) is a parameter
   change, not a remodel.
 - Tray: shell/plate elements (6061-T6, 12.7 mm) to show both the rigid-body-on-struts
-  modes and the tray's own ~468 Hz flex modes; rigid body + lumped mass acceptable if
+  modes and the tray's own flexible modes; rigid body + lumped mass acceptable if
   only the low modes are wanted.
-- Struts (×6): beam (preferred — confirms the ~370 Hz self-mode is out of band) or bar,
+- Struts (×6): beam (preferred — lets you confirm the strut self-mode is out of band) or bar,
   with spherical end releases (3 rotations released) → two-force members.
 - Geometry: true 120° hexapod, struts 30° off horizontal (§6 + coordinate table in the
   runner prompt).
 - Solve: real eigenvalue / normal modes (e.g., Nastran SOL 103). No forcing, no damping.
 
-Phase-1 validation benchmark (analytical 6-DOF rigid-tray-on-6-axial-struts, fixed
-base, rigid joints — the FEM's lowest 6 modes should match):
-| joint stiffness                         | tray mass | lowest 6 modes (Hz)       |
-|-----------------------------------------|-----------|---------------------------|
-| rigid (k≈5.5 MN/m = tube EA, UPPER bnd) | 3.1 kg    | 73, 73, 155, 260, 387, 387|
-| rigid (k≈5.5 MN/m)                      | 5.0 kg    | 58, 58, 122, 204, 305, 305|
-Modes come in DEGENERATE PAIRS (73/73, 387/387) — that pairing is the 120°-symmetry
-check; no pairs ⇒ asymmetric geometry. Tray flex modes appear separately near ~468 Hz.
+Phase-1 mass case [DECISION 2026-06-08]: BARE TRAY ONLY — no ballast, no payload.
+Modeling mass = the idealized solid 6061 plate from geometry x density
+(0.300 x 0.300 x 0.0127 m x 2700 kg/m^3 = 3.09 kg). For a meshed solid/shell tray the
+mass is emergent from density; use 3.09 kg only if the tray is lumped. As-built bare tray
+~3.0 kg (the tapped M6 grid removes a few percent) — a known small difference to confirm
+by weighing on arrival. The earlier "3.1 kg" was this value rounded; the "5.0 kg" row was
+a ballast/payload case and is REMOVED from Phase 1.
 
-HONEST CAVEAT: absolute low-mode frequencies are PROVISIONAL — a rigid-joint upper
-bound that will drop once joint compliance is added (a soft k≈1 MN/m joint pulls the
-lowest pair to ~31 Hz). Mode SHAPES and the geometry are the robust Phase-1 products.
+NO PRE-LOADED FREQUENCY BENCHMARK [DECISION 2026-06-08]: we deliberately do NOT hand the
+builders the earlier analytical 6-DOF hand-calc frequencies. They were an unverified,
+rigid-joint UPPER-BOUND estimate with no saved derivation, and giving them over would
+anchor the builds (turn a verification into a fit-to-the-hand-calc). Each agent solves
+from the physical spec and reports whatever it finds. Agreement is judged by whether the
+independent builds CONVERGE across the 3-agent x 4-tool matrix, not against a typed target.
+- The one geometry sanity check that does NOT pre-load a magnitude: the true-120°
+  symmetric, rigid tray should produce NEAR-DEGENERATE MODE PAIRS; a missing pair flags a
+  broken-symmetry geometry bug. Report it; do not tune to it.
+- Optional, AFTER the builds: the master/reviewer MAY run a separate, reproducible
+  analytical 6-DOF script as ONE additional, clearly-provisional cross-reference
+  (rigid-joint upper bound). It is not ground truth; disagreement triggers investigation,
+  not auto-fail.
 
 Phase-1 deliverables: (1) undeformed mesh render; (2) first ~10 natural frequencies +
-plotted/animated mode shapes; (3) match to the benchmark (incl. degenerate pairs);
-built in THREE tools (Femap/Nastran deck, TensorMesh continuum, JAX) and compared.
-Runner prompt: docs/lab/fem_phase1_runner_prompt.md.
+plotted/animated mode shapes, each agent identifying from the SHAPES which modes are
+suspension (tray-on-struts) vs tray-flex vs strut self-modes; (3) the 3-agent x 4-tool
+comparison. Runner prompt: docs/lab/fem_phase1_runner_prompt.md.
 ================================================================================
 
 ================================================================================
@@ -84,8 +93,9 @@ Support agents (applied after the three builds land):
 - REVIEWER (Opus; integrity + technical + gates). Recompute the first ~10 frequencies
   from each saved artifact (do not trust the reported table); build the cross-tool
   frequency table and the mode-shape MAC matrix; check: units/coordinate frame stated;
-  degenerate pairs present (symmetry); benchmark %-diff honest and >5% flagged;
-  rigid-joint frequencies labeled PROVISIONAL UPPER BOUND; element type + mesh density +
+  near-degenerate mode pairs reported (a missing pair flags a broken-symmetry geometry
+  bug); convergence across the matrix characterized (NO pre-loaded target to match);
+  any frequencies labeled PROVISIONAL UPPER BOUND (rigid joints); element type + mesh density +
   a convergence/refinement check documented (Discretization Resolution gate); frequency
   axis log and no dB on any FRF-style plot, and any "apparent mass" pinned to the
   numerator/denominator/coordinate/BC contract (see apparent-mass-convention-postmortem.md
@@ -102,16 +112,19 @@ Support agents (applied after the three builds land):
   that drive the QOI. State what would make Phase 1 the wrong question. Output framing.md.
 
 Comparison and adjudication (master assembles; each builder enables it):
-- Oracle = the analytical 6-DOF rigid-tray-on-6-axial-struts benchmark (table above) plus
-  the ~468 Hz tray-flex and ~370 Hz strut-self-mode anchors. Agreement is judged against
-  the oracle, NOT by majority vote among agents/tools.
+- NO pre-loaded frequency target (see the "NO PRE-LOADED BENCHMARK" decision). Primary
+  agreement = convergence across the 3-agent x 4-tool matrix on identical inputs, NOT a
+  majority vote and NOT a typed target. A reproducible analytical 6-DOF script MAY be run
+  AFTER the builds as one additional, clearly-provisional cross-reference (rigid-joint
+  upper bound), never as ground truth.
 - The 3-agent x 4-tool matrix gives TWO comparison axes:
   - CROSS-SOFTWARE (per agent, across JAX/TensorMesh/CalculiX/Femap): physics +
     discretization verification (do the engines agree on identical inputs?).
   - CROSS-AGENT (per tool, across Opus/GPT/Composer): agent-implementation reproducibility
     (do three independent implementations in the SAME engine agree?).
-- Products: (1) the 3x4 frequency table (first ~10 modes) + analytical oracle + the human's
-  solved Femap result when available, %-diff per mode; (2) MAC matrices for mode-shape
+- Products: (1) the 3x4 frequency table (first ~10 modes) + the human's solved Femap result
+  when available (+ the optional post-hoc analytical cross-reference, labeled provisional),
+  with cross-build spread per mode; (2) MAC matrices for mode-shape
   agreement (diagonal > 0.9 for matched modes), both axes; (3) a short "where they disagree
   and why" note (mesh, element theory, lumped vs shell tray, joint-node idealization,
   agent transcription differences). Disagreements are explained physically, not hidden.
@@ -253,13 +266,15 @@ double shear, M5 nylon-insert locknut. Fully-threaded-in-bore is acceptable at m
 loads; a smooth-shank shoulder bolt would pivot more repeatably but is not required.
 Struts (×6): delta-printer Al push rods, L196-D8-M3 — 196 mm eye-to-eye, 8 mm tube OD,
 male M3-stud spherical rod-end each end. Bar element is fine for the axial QOI; use
-beam elements if confirming the ~370 Hz strut self-mode is out of band. The "M3" names
+beam elements if confirming the strut self-mode is out of band. The "M3" names
 the rod-end stud thread, not the ball bore (~5 mm → M5 pin).
 Tray (suspended mass): Thorlabs MB3030/M, solid aluminum (confirmed — resolve the
-solid-vs-sandwich caveat to solid plate), 300 × 300 × 12.7 mm, ~3.1 kg bare + payload
-(confirm total; ~3–5 kg). M6×1.0 tapped holes, 25 mm grid, 12.5 mm edge offset, 12×12.
-Tray's own modes ~468 Hz — acts rigid in the operating band; solid-vs-sandwich barely
-affects in-band results.
+solid-vs-sandwich caveat to solid plate), 300 × 300 × 12.7 mm. Phase-1 mass = BARE tray,
+NO ballast: idealized solid 6061 plate = 3.09 kg (geometry x density); as-built ~3.0 kg
+with the tapped grid (confirm by weighing). M6×1.0 tapped holes, 25 mm grid, 12.5 mm edge
+offset, 12×12. The tray's own first elastic mode is well above the suspension band, so it
+acts ~rigid there (agents report the actual value); solid-vs-sandwich barely affects
+in-band results.
 Tray-side mount: 2× M6×12 SHCS (304 SS) per base at 50 mm spacing, washers under heads,
 Loctite 243. (Retained because base is modeled, not thickened — see §4/§5.)
 
@@ -267,7 +282,7 @@ Loctite 243. (Retained because base is modeled, not thickened — see §4/§5.)
 
 Damping: structural loss factor η at the joint, frequency-domain. Keep forward
 model differentiable for NUTS.
-Strut self-mode: ~370 Hz (beam check) — verify out of band.
+Strut self-mode (beam check) — verify out of band (agents report the actual value).
 Pin-bore contact: fully-threaded pin on spherical bore is a minor nonlinear/contact
 source; not modeled in the linear forward model.
 RBE2 pin offset (16 mm): present in both Stage 1 and Stage 2 models.
