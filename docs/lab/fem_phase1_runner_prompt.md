@@ -5,35 +5,39 @@ block first). This is a **deterministic normal-modes (real-eigenvalue) task** �
 damping, no complex data, no force-limiting/coupling, no Bayesian/NUTS. Build the model
 in your assigned tool, solve normal modes, visualize, and report for cross-comparison.
 
-## Agent assignment (one agent, one tool — see FEM_architecture.md "AGENT ASSIGNMENT")
-- **Runner A = Composer (Cursor)** — CalculiX (recommended) or Femap/Nastran deck.
-- **Runner B = GPT (Codex)** — TensorMesh / discretize.
-- **Runner C = Opus (Claude Code)** — JAX hand-assembled FEM.
-Work only in your own `runs/fem_phase1/<tool>/`; do not copy another agent's results.
+## Who runs this (3 agents, each builds ALL FOUR — see FEM_architecture.md "AGENT ASSIGNMENT")
+You are ONE of three builder agents: **Opus (Claude Code), GPT (Codex), or Composer
+(Cursor).** Each of you independently builds the SAME Phase-1 model in **all four tools**
+below. Across the three agents this makes a 3-agent x 4-tool matrix the master will
+compare both ways (cross-software and cross-agent). Work only in your own
+`runs/fem_phase1/<agent>/<tool>/` (agent in {opus,codex,composer}; tool in
+{calculix,tensormesh,jax,nastran_deck}).
 
-## Your job (one tool per runner)
-Build the SAME Phase-1 model in your tool, solve for the first ~10 natural frequencies
-and mode shapes, render the geometry, and write a `results.json` so the three tools and
-the analytical benchmark can be compared. Results go to the master agent for refinement.
+**INTEGRITY RULE (do not break — it is the whole point):** use identical INPUTS in all four
+builds (the shared node table, materials, masses, BCs below). But build each tool as an
+INDEPENDENT re-derivation: do NOT copy your assembled K/M, eigen-results, or frequency
+table from one tool into another, and do NOT tune one tool to match another or to match
+another agent. The comparison is only meaningful if each engine is exercised on its own.
 
-- **Runner A — Composer (Cursor):**
-  - *Recommended (CalculiX, agent-runnable):* build a CalculiX `.inp` (solid/shell tray,
-    beam struts, spring/rigid joint nodes), run `ccx` *FREQUENCY normal modes, parse the
-    `.dat`/`.frd` for the first ~10 frequencies + mode shapes. Deliver code + freq table +
-    figures, one-command replay. This gives an independently SOLVED third result.
-  - *Alternative (Femap/Nastran deck, human-solved):* produce a ready-to-run Nastran
-    bulk-data deck (`.bdf`, SOL 103, EIGRL for ~10 modes) + a short `RUN_IN_FEMAP.md`; the
-    human solves in Femap and exports the table + mode images. Deliverable is the deck +
-    procedure + expected benchmark. Do NOT claim solved results you did not produce.
-  - The human picks CalculiX vs Femap before launch (see FEM_architecture.md DECISION).
-- **Runner B — GPT (Codex), TensorMesh:** continuum/structured-mesh model via
-  `discretize.TensorMesh` (tray as a plate/solid; struts as bar/spring members), assemble
-  M and K, sparse generalized eigensolve (`scipy.sparse.linalg.eigsh`). Deliver code +
-  freq table + figures.
-- **Runner C — Opus (Claude Code), JAX:** hand-assembled structural model (beam struts +
-  stiff joint springs + plate/lumped tray), assemble K and M, dense generalized eigensolve
+## Your job (all four tools)
+For each tool, build the model, solve (or, for Femap, produce the deck), render the
+geometry + first ~6 mode shapes, and write a `results.json` in the common schema.
+
+- **CalculiX (`ccx`, SOLVED):** build a CalculiX `.inp` (solid/shell tray, beam struts,
+  spring/rigid joint nodes), run `*FREQUENCY` normal modes, parse `.dat`/`.frd` for the
+  first ~10 frequencies + mode shapes. Code + freq table + figures + one-command replay.
+- **TensorMesh (`discretize`, SOLVED):** continuum/structured-mesh model (tray as
+  plate/solid; struts as bar/spring members), assemble M and K, sparse generalized
+  eigensolve (`scipy.sparse.linalg.eigsh`). Code + freq table + figures.
+- **JAX (SOLVED):** hand-assembled structural model (beam struts + stiff joint springs +
+  plate/lumped tray), assemble K and M, dense generalized eigensolve
   (`jax.scipy.linalg.eigh` or via `scipy`). Structure it as the future differentiable
   forward model, but **only run the eigensolve this phase** — no NUTS.
+- **Femap/Nastran DECK (NOT solved by you):** a ready-to-run bulk-data deck (`.bdf`,
+  SOL 103, EIGRL for ~10 modes) + a short `RUN_IN_FEMAP.md` so the HUMAN solves and
+  visualizes in Femap. Deliver deck + procedure + the expected benchmark to check against.
+  Do NOT invent solved numbers — leave the solved-frequency fields empty/null in
+  `results.json` and mark `solved_by: human`.
 
 ## Shared model spec (identical across all three)
 - **Units:** SI (m, kg, N). Coordinate frame: origin at tray center; +z up; tray plane at
@@ -69,27 +73,34 @@ the analytical benchmark can be compared. Results go to the master agent for ref
 - Tray flex modes near **~468 Hz**; if beam struts, strut self-mode near **~370 Hz**.
 - Report % difference from the benchmark and flag anything > ~5%.
 
-## Deliverables (in your isolated workspace `runs/fem_phase1/<tool>/`)
-- `code/` (B, C) or `model/model.bdf` + `RUN_IN_FEMAP.md` (A).
-- `figures/`: undeformed mesh render + first ~6 mode-shape plots.
-- `results.json`: tool name, units, frame, mass case, first ~10 frequencies (Hz),
-  benchmark % diff, notes on element types/mesh.
-- `README.md`: one-command replay (B, C); assumptions; what you did/didn't run.
-- `files_changed.md`.
+## Deliverables (per tool, in `runs/fem_phase1/<agent>/<tool>/`)
+For EACH of your four tools:
+- `code/` (calculix/tensormesh/jax) or `model/model.bdf` + `RUN_IN_FEMAP.md` (nastran_deck).
+- `figures/`: undeformed mesh render + first ~6 mode-shape plots (nastran_deck: geometry
+  render from the deck; mode shapes come from the human's Femap solve).
+- `results.json`: agent name, tool name, units, frame, mass case, first ~10 frequencies
+  (Hz) (null + `solved_by: human` for nastran_deck), benchmark % diff, element types/mesh,
+  mesh-convergence note.
+- `README.md`: one-command replay (calculix/tensormesh/jax); assumptions; what you did/
+  didn't run.
+Plus one top-level `runs/fem_phase1/<agent>/files_changed.md`.
 
-## Comparison (the master will assemble; each runner enables it)
-Emit `results.json` in the common schema above so a side-by-side table (3 tools +
-analytical) and a mode-shape comparison (MAC where feasible) can be built. Expect close
-agreement on the shared synthetic geometry; explain any divergence (mesh, element theory).
+## Comparison (the master will assemble; each agent enables it)
+Emit each `results.json` in the common schema so the master can build the 3-agent x 4-tool
+frequency table (+ analytical oracle + the human's Femap solve) and MAC matrices on both
+axes: CROSS-SOFTWARE (your four tools vs each other) and CROSS-AGENT (your tool vs the
+other two agents' same tool). Expect close agreement on the shared synthetic geometry;
+explain any divergence (mesh, element theory, lumped vs shell tray, transcription).
 
 ## Rules
-- No success claim without the frequency table + figures actually produced (Femap runner:
+- No success claim without the frequency table + figures actually produced (nastran_deck:
   deck + procedure only — do not invent solved numbers).
 - Label the rigid-joint frequencies as a **provisional upper bound** (drop with joint
   compliance later).
-- Declare units, coordinate frame, element types, and mesh density.
-- Work only in your own `runs/fem_phase1/<tool>/`; read this spec and FEM_architecture.md
-  read-only; do not copy another runner's results and present them as yours.
+- Declare units, coordinate frame, element types, and mesh density per build.
+- Work only in your own `runs/fem_phase1/<agent>/<tool>/`; read this spec and
+  FEM_architecture.md read-only; honor the INTEGRITY RULE (independent re-derivation per
+  tool, identical inputs, no porting/tuning between tools or agents).
 - OUT of scope (do not implement): damping/loss factor, complex/FRF data, force-limiting,
   source-plate coupling, NUTS/Bayesian inference.
 
@@ -104,7 +115,10 @@ You are the REVIEWER for the Phase-1 hexapod FEM cross-build. Read FEM_architect
 and log-frequency-plot-gp-postmortem, and each builder's runs/fem_phase1/<tool>/. Do NOT
 trust reported numbers — recompute/spot-check from saved artifacts. Check and record
 PASS/FAIL per item:
-1. Each agent used a DISTINCT software and did not copy another's results (inspect code).
+1. INDEPENDENCE: inspect code across each agent's four tools AND across agents per tool.
+   Inputs must be identical (shared spec), but no agent ported assembled K/M, eigen-results,
+   or frequency tables between its own tools or copied another agent's results, and did not
+   tune one build to match another. Assemble the 3-agent x 4-tool matrix.
 2. Units + coordinate frame stated and consistent; geometry matches the shared node table.
 3. First ~10 frequencies recomputed; cross-tool table built; %-diff vs the analytical
    6-DOF benchmark (73,73,155,260,387,387 @ 3.1 kg) computed; anything >5% flagged.

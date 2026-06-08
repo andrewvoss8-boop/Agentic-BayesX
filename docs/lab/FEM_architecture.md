@@ -56,29 +56,29 @@ Runner prompt: docs/lab/fem_phase1_runner_prompt.md.
 ================================================================================
 PHASE 1 — AGENT ASSIGNMENT AND REVIEW TOPOLOGY  (lead, 2026-06-08)
 ================================================================================
-Three BUILDER agents each build the SAME Phase-1 model (shared spec above + in the
-runner prompt) in a DIFFERENT modeling software, in their own isolated workspace, and
-emit a common-schema results.json so the builds can be compared. Then two SUPPORT
-agents are applied. No agent auto-runs in the master repo; each works only in
-runs/fem_phase1/<tool>/.
+[DECISION RESOLVED 2026-06-08] FOUR tools: three agent-SOLVED (JAX, TensorMesh,
+CalculiX) plus one Femap/Nastran DECK the human runs and visualizes. EACH of the three
+builder agents builds ALL FOUR -> a 3-agent x 4-tool matrix (12 builds). Chosen over
+deploying 12 single-cell agents: identical comparison matrix, far less human launch/
+handoff overhead for a file-mediated POC. Reserve the 12-agent fan-out only if context
+bloat degrades an agent's later builds, or a strict per-cell independence claim is wanted.
+No agent auto-runs in the master repo; each works only in runs/fem_phase1/<agent>/<tool>/.
 
-Builder agents and software (one each):
-- Opus  (Claude Code)      -> JAX hand-assembled structural FEM   -> runs/fem_phase1/jax/
-- GPT   (Codex)            -> TensorMesh / discretize continuum    -> runs/fem_phase1/tensormesh/
-- Composer (Cursor)        -> see DECISION below                   -> runs/fem_phase1/<calculix|nastran>/
+Builder agents: Opus (Claude Code), GPT (Codex), Composer (Cursor). Each produces all four:
+- CalculiX (ccx)        : .inp; run `ccx` *FREQUENCY; parse .dat/.frd -> first ~10 modes. SOLVED.
+- TensorMesh (discretize): assemble M,K; scipy.sparse.linalg.eigsh. SOLVED.
+- JAX                   : hand-assembled K,M; dense eigh (future differentiable forward
+                          model; eigensolve ONLY this phase). SOLVED.
+- Femap/Nastran DECK    : ready-to-run .bdf (SOL 103, EIGRL ~10) + RUN_IN_FEMAP.md. The
+                          HUMAN solves + visualizes in Femap. The agent does NOT solve it
+                          and must not invent solved numbers.
 
-[DECISION NEEDED — Composer's software] The existing spec named Femap/Nastran as the
-third tool, but a coding agent cannot auto-solve a Nastran deck without a licensed
-solver, so on that path Composer produces a .bdf deck + procedure and the HUMAN solves
-it (no independently-solved numbers from Composer). If you want three independently
-SOLVED results to compare, assign Composer to CalculiX (ccx, open-source, agent-runnable,
-.inp like Abaqus). Recommended: Composer -> CalculiX, and keep the Femap/Nastran deck as
-an optional 4th, human-solved cross-check. Confirm which before launch.
-
-Why these pairings: JAX is the production differentiable forward model (Opus owns the
-eventual NUTS path); TensorMesh is a continuum/sparse-eigensolve build (Codex is strong
-at numerical Python); CalculiX is an established, independent FEA engine with its own
-element library and solver (a genuine third "software", not another home-rolled stack).
+INTEGRITY RULE (makes the comparison valid). Identical INPUTS across tools are required
+and good (same node table, materials, masses, BCs from the shared spec). But each software
+build must be an INDEPENDENT re-derivation: do NOT port one tool's assembled K/M, eigen-
+results, or frequency table into another tool, and do NOT tune one tool to match another or
+to match another agent. Cross-software/cross-agent agreement is only meaningful if each
+engine is exercised independently. The reviewer verifies this.
 
 Support agents (applied after the three builds land):
 - REVIEWER (Opus; integrity + technical + gates). Recompute the first ~10 frequencies
@@ -89,9 +89,11 @@ Support agents (applied after the three builds land):
   a convergence/refinement check documented (Discretization Resolution gate); frequency
   axis log and no dB on any FRF-style plot, and any "apparent mass" pinned to the
   numerator/denominator/coordinate/BC contract (see apparent-mass-convention-postmortem.md
-  and log-frequency-plot-gp-postmortem.md); EACH agent used a DISTINCT software and did
-  NOT copy another agent's results; method summary present. Output review.md + checks.json
-  (PASS/FAIL per gate) under artifacts/reports/fem_phase1_review_<date>/.
+  and log-frequency-plot-gp-postmortem.md); each build is an INDEPENDENT re-derivation
+  (no porting of K/M, eigen-results, or tables between tools or between agents) while
+  sharing identical spec inputs; method summary present. Assemble the full 3-agent x
+  4-tool matrix. Output review.md + checks.json (PASS/FAIL per gate) under
+  artifacts/reports/fem_phase1_review_<date>/.
 - PROJECT FRAMING agent (Opus). Confirm this Phase-1 FEM serves the real objective
   (a trustworthy dynamic StatFEM twin + interface-load QOI), restate the engineering
   decision it supports, confirm the PRIORITY deliverables are surfaced, and flag scope
@@ -102,13 +104,19 @@ Support agents (applied after the three builds land):
 Comparison and adjudication (master assembles; each builder enables it):
 - Oracle = the analytical 6-DOF rigid-tray-on-6-axial-struts benchmark (table above) plus
   the ~468 Hz tray-flex and ~370 Hz strut-self-mode anchors. Agreement is judged against
-  the oracle and across tools, NOT by majority vote among agents.
-- Products: (1) frequency table, 3 softwares + analytical (+ optional Femap), %-diff per
-  mode; (2) MAC matrix between tools for mode-shape agreement (diagonal > 0.9 for matched
-  modes); (3) a short "where they disagree and why" note (mesh, element theory, lumped vs
-  shell tray, joint-node idealization). Disagreements are explained physically, not hidden.
-- Honesty: provisional-upper-bound labeling kept; runtime.json per builder; no result
-  claimed without the table + figures actually produced.
+  the oracle, NOT by majority vote among agents/tools.
+- The 3-agent x 4-tool matrix gives TWO comparison axes:
+  - CROSS-SOFTWARE (per agent, across JAX/TensorMesh/CalculiX/Femap): physics +
+    discretization verification (do the engines agree on identical inputs?).
+  - CROSS-AGENT (per tool, across Opus/GPT/Composer): agent-implementation reproducibility
+    (do three independent implementations in the SAME engine agree?).
+- Products: (1) the 3x4 frequency table (first ~10 modes) + analytical oracle + the human's
+  solved Femap result when available, %-diff per mode; (2) MAC matrices for mode-shape
+  agreement (diagonal > 0.9 for matched modes), both axes; (3) a short "where they disagree
+  and why" note (mesh, element theory, lumped vs shell tray, joint-node idealization,
+  agent transcription differences). Disagreements are explained physically, not hidden.
+- Honesty: provisional-upper-bound labeling kept; runtime.json per build; no result claimed
+  without the table + figures actually produced.
 ================================================================================
 
 1. Purpose and what the model must deliver

@@ -8,9 +8,12 @@ load QOI + real-time twin/health monitoring).*
 Bibliographic metadata (authors, year, venue, DOI) below were **machine-verified against the Crossref API**
 on 2026-06-08 — they are not hand-typed from memory. BUT content summaries differ in trust:
 - **[W] = full PDF in workspace, read substantially** — content claims are reliable.
+- **[W*] = open-access full text fetched via `scripts/litfetch.py` into `references/pdfs/` and read** —
+  content claims are reliable (verified against the fetched PDF).
 - **[X] = metadata Crossref-verified, full text NOT read here** — the *citation* is solid, but the content
   description is from title/venue + established domain knowledge and **must be confirmed on a full read**
   before being cited in a paper/disclosure. Do not treat [X] content claims as quotations.
+  (To upgrade an [X] to [W*], run: `python3 scripts/litfetch.py fetch <DOI>` — works for open-access only.)
 
 No DOIs, page numbers, or findings were invented. Where I am unsure of a paper's internals, I say so.
 
@@ -46,11 +49,16 @@ Plus the discrepancy/calibration foundations (Section E) and the updating/sample
 This is the direct answer to "KF + StatFEM": when the problem is **time-dependent**, statFEM's level-1
 state inference becomes a **filtering/smoothing** recursion, and the Girolami group solves it with Kalman-
 type and particle methods.
-- **[X] Duffin, Cripps, Stemler, Girolami (2021)** — *Statistical finite elements for misspecified models.*
-  PNAS 118 (Crossref issued 2020). DOI:10.1073/pnas.2015006118.
-  - Extends statFEM to **time-dependent / dynamical** PDE models; the data-model synthesis is run as a
-    **(extended) Kalman-filter** recursion over time, with the discrepancy carried in the state covariance.
-    *This is the canonical "dynamic statFEM = KF" reference.* (Internals to confirm on full read.)
+- **[W*] Duffin, Cripps, Stemler, Girolami (2020/2021)** — *Statistical finite elements for misspecified
+  models.* PNAS (vol. 118). DOI:10.1073/pnas.2015006118. *(Full text fetched via `scripts/litfetch.py`
+  from the Europe PMC open-access copy → `references/pdfs/2020_Duffin_..._misspecified_models.pdf`; read.)*
+  - **VERIFIED CONTENT (from the PDF):** presents a statFEM for **nonlinear, time-dependent** problems by
+    casting it as a **nonlinear Gaussian state–space model** and "updating the solution, in receipt of data,
+    in a **filtering framework**." Because the posterior over FE coefficients isn't closed-form for the
+    nonlinear case, they give two approximations: the **extended Kalman filter (EKF)** — linearize the
+    nonlinear FE operator about the current solution via its Jacobian `J` to get `p(uₙ|·) ≈ N(mₙ, Cₙ)` — and
+    the **ensemble Kalman filter (EnKF)**. Demonstrated on the Korteweg–de Vries equation (nonlinear internal
+    waves / solitons). **This is the canonical "dynamic statFEM = Kalman filtering" reference for us.**
 - **[X] Duffin, Cripps, Stemler, Girolami (2022)** — *Low-rank statistical finite elements for scalable
   model-data synthesis.* J. Comput. Phys. 463:111261. DOI:10.1016/j.jcp.2022.111261.
   - Makes the dynamic statFEM filter **scalable** via a low-rank covariance representation (the bottleneck
