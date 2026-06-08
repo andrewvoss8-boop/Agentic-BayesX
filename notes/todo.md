@@ -1,5 +1,30 @@
 # Todo
 
+## 2026-06-08 Pre-test sensitivity / FIM identifiability analysis (Opus tray FEM) — SPEC PENDING
+Artifact-backed answer to "how many parameters can the scrappy test support" + experiment design.
+- [ ] On the Opus Phase-1 tray FEM (runs/fem_phase1/opus/), define the candidate parameter menu
+      (joint axial k, joint lateral k, joint loss eta, base-plate compliance, strut EA, tray E, ...).
+- [ ] Compute the sensitivity Jacobian J = d(observable feature)/d(param) for the observable modes
+      AND d(load QOI)/d(param); assemble the Fisher Information Matrix (FIM) = J^T Sigma^-1 J.
+- [ ] FIM eigen-decomposition: report stiff vs sloppy parameter COMBINATIONS (sloppy-models view);
+      SVD/QR subset-selection downselect with a stated condition-number/collinearity threshold.
+- [ ] Do it for the 1-sensor (auto-spectrum) and 2-sensor (transmissibility, input cancelled) cases.
+- [ ] Output: "N identifiable params/combinations" with plots + where-to-hit / where-to-measure
+      (experiment design = FIM maximized over sensor/excitation). Confirm with profile likelihood.
+- [ ] Honesty: FIM = LOCAL/practical identifiability; confirm structural cases w/ profile likelihood;
+      run WITH the discrepancy present; held-out coverage is the referee.
+- Spec as an Opus runner task (awaiting human go).
+
+## 2026-06-08 Conical Shell StatFEM Digital-Twin Ladder
+- [x] Build a scoped Vibrationdata conical-shell source audit, FEM-vs-test comparison, and digital-twin launch packet.
+- [x] Treat `conical_shell.pdf` and `conical_shell3.nas` access/provenance as first-class gates.
+- [x] If the Nastran deck is unavailable, reconstruct a minimal shell FEM from the PDF and label it unmistakably. Deck was available via curl-like user agent, so reconstruction was not used.
+- [x] Add checker-backed artifacts: source manifest, assumptions ledger, quantity contracts, FEM/test comparison, mode-shape status artifact, StatFEM launch definition, and limitations.
+- [x] Ingest human Femap/Nastran solved frequencies and screenshot provenance.
+- [x] Add coarse digitized FRF peak features from the PDF plots with explicit secondary-data uncertainty.
+- [x] Add first modal-only StatFEM v1 and held-out validation.
+- [x] Add first FRF/QOI layer using digitized peak accelerance features.
+
 ## 2026-06-08 FEM Phase 1 — OPUS BUILDER (active; all 4 tools)
 Card: docs/lab/fem_phase1_runner_prompt.md. Workspace: runs/fem_phase1/opus/<tool>/.
 Decisions: runs/fem_phase1/opus/decisions_log.md.
@@ -24,6 +49,13 @@ Workspace: `runs/fem_phase1/codex/<tool>/`.
 - [x] CalculiX build solved with local `ccx` 2.23; parser uses CalculiX cycles/time column.
 - [x] Femap/Nastran deck generated: `model.bdf`, `RUN_IN_FEMAP.md`, geometry figure, null solved-frequency fields for human solve.
 - [x] `run_all.sh`, `priority_deliverables.md`, `decisions_log.md`, and `files_changed.md` updated.
+
+## 2026-06-08 Patent prior-art dossier v1 — fold-in + next searches
+- [x] Cue browser patent-DB prompt; receive dossier v1 (saved docs/proposal/patent_prior_art_dossier_v1.md; folded into patent_ideas_ranked.md).
+- [ ] Next browser session: run the dossier SEARCH NEXT list (ABEMIS full family + pending "AI provisionals"; arXiv 2604.12688; force-limiting clearance CPC G01M7/02; NVH joint-impedance CPC F16F; acoustic metamaterial CPC G10K11; OSP patents; TO-with-model-uncertainty CPC G06F30/23+G06N7/01).
+- [ ] Ask Doehring what the ABEMIS "AI provisionals" cover BEFORE any H/I filing.
+- [ ] Consider one PROVISIONAL over the A/D + B + H combination to lock priority (cheap), pending PRF/attorney + disclosure-first.
+- [ ] Professional claim-chart FTO before any filing (CPC F16F, G01M7/02, G10K11, G06F30/23; DE/JP/CN; defense/ITAR).
 
 ## 2026-06-05 Project Vision + IP Decision + Framing Challenger
 - [ ] Send corrected Beth email (research credits + MA 511; disclosure-vs-publication timing) and get the IP-ownership determination in writing.
