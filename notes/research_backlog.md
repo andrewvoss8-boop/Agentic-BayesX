@@ -5,6 +5,44 @@ Purpose: internalize/organize the brain-dump, respond with a take on each, and k
 Tags: [DECIDED] settled; [OPEN] needs a decision/work; [TAKE] my recommendation; [ANSWER] factual reply.
 Style: plain English; terms defined on first use.
 
+## BURN-DOWN 2026-06-08 (what is now closed / tracked elsewhere / still open)
+The detailed checklist below is the original audit trail; this block supersedes its status.
+
+CLOSED or moved to a durable home:
+- Novelty candidates (complex interface, param-selection, the method stack, tech-assisted workflow):
+  captured + ranked in docs/proposal/patent_ideas_ranked.md. Track there, not here.
+- B2 unknown-forcing == OMA; B3 "Bayesian modal updating already done"; "replace freq-ID w/ Bayesian
+  updating"; "how did the bridge paper use ambient data": ANSWERED. Bridge paper now cited in
+  docs/proposal/dr_b_briefing.md (Argyris/Papadimitriou, Metsovo).
+- B5 force-limiting/overtest reframe: DECIDED and reinforced by the framing challenge.
+- Compute (bigger compute / Colab GPUs / run-FEM-little): covered by docs/compute_protocol.md. FEM
+  Phase 1 confirmed the modal solves are tiny/fast -> the long pole will be NUTS, not the FEM (as
+  predicted); profile before optimizing still holds.
+- "What to ask Girolami": ANSWERED -> docs/proposal/girolami_questions.md (with an IP guardrail).
+- Agent-file bloat: PARTIALLY done (CLAUDE/AGENTS trimmed) but RE-OPENED: notes/memory.md ballooned
+  again with the FEM Phase-1 builder/reviewer logs -> owes an archive pass.
+
+UPDATED:
+- B1 novelty location: SHARPENED. The framing-challenge web fetch (2026-06-08) found StatFEM HAS now
+  gone dynamic/elastodynamic (recent arXiv, ~2026) + a digital-twin bridge paper. So "dynamic StatFEM"
+  alone is NOT the novelty. The still-open bundle = unknown/operational stochastic forcing + complex
+  lossy joint impedance + force-limiting LOAD QOI (+ tech-assisted workflow). Still a hypothesis;
+  lit scan + FTO still required before any claim.
+- Problem #3 tractability: partly answered (FEM is not the long pole; see Compute above).
+
+NEW (from the FEM Phase-1 framing challenge, artifacts/reports/fem_phase1_framing_challenge_20260608/):
+- BRIDGE EXPERIMENT: swap Opus's rigid joint for ONE compliant + lossy joint + add forcing + an
+  interface-force QOI on an independent synthetic truth, with a held-out check. Smallest change that
+  makes the model LEARNABLE and finally touches the novelty surface. (Phase 1 deliberately had none.)
+- HARNESS-AS-CONTRIBUTION: name/package the cross-agent verification harness that caught the codex
+  faked-independence + composer invalid deck. Near-free; already earned; Bilionis-relevant.
+- KILL the staged fidelity march on synthetic data (master_plan Stage 0->5) = the textbook drift
+  pattern.
+
+STILL OPEN (carried): the lit scan (NOT yet run); QOI-weighted likelihood (B4, not yet built);
+real-data run; drive-point/sensing studies (deferred); vibe-to-failure (parked); Bilionis Substack
+(disclosure-gated); Relativity lunch-and-learn (when there is a defensible result).
+
 ## The spine — your 3 core problems (everything else is an instance of these)
 1. **Match data quality+volume to the number of parameters (given the likelihood).** = the
    identifiability / over-counting problem. Full FRFs/mode shapes are highly correlated, so they carry
@@ -132,15 +170,20 @@ Style: plain English; terms defined on first use.
   how-to detail into skills/docs, and compress notes/memory.md (archive old CURRENT STATE blocks). Worth a
   dedicated cleanup pass.
 
-## Recommended priority (cheap + decisive first; do NOT over-plan)
-1. **Lit scan of the unknown-forcing fields (OMA / input-state estimation / Bayesian force-ID) + complex
-   joint impedance in FBS/CMS** -> tells us what's already owned and pins the real novelty (B1/B2).
-   Cheap, decisive, must precede any patent claim.
-2. **Pick ONE real public dataset and run the existing pipeline against it** (real data = the trust the
-   synthetic work lacks).
-3. **Decide the novelty framing** (complex-interface-impedance + unknown-forcing + force-limiting load)
-   and update vision 5.0; draft the Girolami questions + the Bilionis Substack outline.
-4. **One methodology upgrade:** a QOI-weighted likelihood (B4) instead of flat RMS.
-5. Defer (until a real result/run is the bottleneck): sensor/excitation-count studies, BOED automation,
-   GPU/cluster compute, vibe-to-failure. Capture, don't build yet.
+## Recommended priority (REVISED 2026-06-08; cheap + decisive first; do NOT over-plan)
+1. **BRIDGE EXPERIMENT (Opus): compliant + lossy joint + forcing + interface-force QOI on an
+   independent synthetic truth, held-out check.** Smallest change that makes the model learnable and
+   first touches the novelty surface. (Framing-challenge fork iii, item A.)
+2. **ONE real public dataset, existing pipeline.** First real VALIDATION (not just verification);
+   the trust the synthetic work lacks. (references/aerospace-vibration-data-candidates.md; framing item C.)
+3. **Lit scan (OMA / input-state / Bayesian force-ID + complex joint impedance in FBS/CMS).** Still
+   NOT run; must precede any patent claim. The Girolami questions (docs/proposal/girolami_questions.md)
+   partly substitute but do not replace it.
+4. **QOI-weighted likelihood (B4)** instead of flat RMS — one clean methodology upgrade.
+5. **Name/package the cross-agent verification harness** (framing item D) — near-free, already earned.
+6. **Girolami outreach** — questions ready (girolami_questions.md); gated on IP-officer disclosure
+   for anything substantive.
+- Housekeeping: archive the bloated notes/memory.md CURRENT STATE.
+- Defer (until a real result/run is the bottleneck): sensor/excitation-count studies, BOED automation,
+  GPU/cluster compute, vibe-to-failure. Capture, don't build yet.
 </content>
