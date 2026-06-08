@@ -21,21 +21,18 @@ def _shape_hex(xi: float, eta: float, zeta: float) -> np.ndarray:
 
 def _dshape_hex(xi: float, eta: float, zeta: float) -> np.ndarray:
     d = np.zeros((3, 8))
-    # dN/dxi
     d[0, :] = 0.125 * np.array([
         -(1 - eta) * (1 - zeta), (1 - eta) * (1 - zeta),
         (1 + eta) * (1 - zeta), -(1 + eta) * (1 - zeta),
         -(1 - eta) * (1 + zeta), (1 - eta) * (1 + zeta),
         (1 + eta) * (1 + zeta), -(1 + eta) * (1 + zeta),
     ])
-    # dN/deta
     d[1, :] = 0.125 * np.array([
         -(1 - xi) * (1 - zeta), -(1 + xi) * (1 - zeta),
         (1 + xi) * (1 - zeta), (1 - xi) * (1 - zeta),
         -(1 - xi) * (1 + zeta), -(1 + xi) * (1 + zeta),
         (1 + xi) * (1 + zeta), (1 - xi) * (1 + zeta),
     ])
-    # dN/dzeta
     d[2, :] = 0.125 * np.array([
         -(1 - xi) * (1 - eta), -(1 + xi) * (1 - eta),
         -(1 + xi) * (1 + eta), -(1 - xi) * (1 + eta),
@@ -56,7 +53,6 @@ def _elastic_matrix(E: float, nu: float) -> np.ndarray:
 
 
 def hex8_ke_me(coords: np.ndarray, E: float, nu: float, rho: float) -> tuple[np.ndarray, np.ndarray]:
-    """coords: (8,3) node coordinates. Returns 24x24 Ke, Me."""
     c = _elastic_matrix(E, nu)
     ke = np.zeros((24, 24))
     me = np.zeros((24, 24))

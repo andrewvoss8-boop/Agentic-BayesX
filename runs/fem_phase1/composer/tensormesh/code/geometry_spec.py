@@ -1,4 +1,4 @@
-"""Phase-1 INPUT spec (SI) — TensorMesh/scipy build uses these constants only."""
+"""Phase-1 INPUT spec (SI) — independent scipy.sparse build."""
 E_AL = 68.9e9
 NU_AL = 0.33
 RHO_AL = 2700.0

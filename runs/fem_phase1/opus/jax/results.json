@@ -181,5 +181,5 @@
     "note": "compact axial-suspension submodel; proves param->freq is jax-grad-able"
   },
   "integrity": "independent re-derivation; shares only shared/spec.py raw inputs; no porting of K/M, eigen-results, or frequency tables from other tools/agents",
-  "runtime_s": 4.37
+  "runtime_s": 7.6
 }

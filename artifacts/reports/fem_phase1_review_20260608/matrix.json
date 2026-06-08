@@ -1,0 +1,37 @@
+{
+  "date": "2026-06-08",
+  "units": "Hz",
+  "provenance": "Parsed from runs/fem_phase1/<agent>/<tool>/results.json; Femap column transcribed from human Simcenter-Nastran screenshots. Python replays were NOT re-run by the reviewer this pass.",
+  "frequency_label": "PROVISIONAL UPPER BOUND (rigid/stiff joints)",
+  "status_legend": {
+    "ok": "independent, trustworthy",
+    "excluded_integrity": "shared solver presented as independent engine (G1 fail)",
+    "deck_invalid": "Nastran deck failed to solve correctly",
+    "symmetry_flag": "solved but near-degenerate pair is split (G4 concern)"
+  },
+  "cells": {
+    "opus": {
+      "jax":        { "status": "ok", "engine": "JAX ACM-plate + Euler beam", "freqs_hz": [84.8, 85.3, 181.3, 291.1, 371.3, 394.8, 541.9, 569.6] },
+      "tensormesh": { "status": "ok", "engine": "discretize H8 solid + truss", "freqs_hz": [84.7, 85.4, 181.1, 293.0, 374.5, 421.8, 543.9, 1016.5] },
+      "calculix":   { "status": "ok", "engine": "CalculiX C3D8I solid + truss + RBE3", "freqs_hz": [85.3, 85.7, 182.4, 289.9, 337.0, 337.2, 337.6, 337.6] },
+      "femap_deck": { "status": "ok", "engine": "Simcenter Nastran CQUAD4 shell + CROD + CBUSH", "solved_by": "human", "freqs_hz": [84.44769, 84.99276, 180.4648, 288.6338, 365.9952, 380.9622, 535.1395, 729.9953, 831.8155, 1151.186] }
+    },
+    "composer": {
+      "jax":        { "status": "ok", "engine": "hex solid, jnp.linalg.eigh", "freqs_hz": [82.0, 83.1, 182.2, 298.7, 381.9, 458.0, 576.3] },
+      "tensormesh": { "status": "ok", "engine": "hex solid, scipy.sparse eigsh (named 'TensorMesh' but uses scipy, not the discretize lib)", "freqs_hz": [82.8, 83.2, 182.3, 301.9, 462.9, 465.8, 1991.6] },
+      "calculix":   { "status": "ok", "engine": "CalculiX solid + truss", "freqs_hz": [82.0, 83.1, 182.3, 294.9, 337.3, 337.3, 337.7] },
+      "femap_deck": { "status": "deck_invalid", "engine": "Nastran CHEXA + CROD", "reason": "missing property; constraints applied to tray body instead of feet", "freqs_hz": null }
+    },
+    "codex": {
+      "jax":        { "status": "excluded_integrity", "engine_claimed": "JAX", "engine_actual": "shared scipy.linalg.eigh (solid_truss_core.solve); jax imported for version/x64 only", "freqs_hz": [301.8, 355.6, 360.0, 1221.0, 1226.2, 1789.2, 1935.2] },
+      "tensormesh": { "status": "excluded_integrity", "engine_claimed": "discretize TensorMesh", "engine_actual": "shared scipy.linalg.eigh; discretize.TensorMesh built then discarded", "freqs_hz": [301.8, 349.6, 362.2, 914.7, 1435.7, 1732.6, 1836.7] },
+      "calculix":   { "status": "ok", "engine": "real CalculiX (ccx) solid + truss", "freqs_hz": [84.77, 86.51, 192.58, 299.56, 337.26, 337.30, 337.59] },
+      "femap_deck": { "status": "symmetry_flag", "engine": "Simcenter Nastran CHEXA + CROD + CELAS2", "solved_by": "human", "near_degenerate_split_percent": 9.2, "freqs_hz": [75.22625, 82.46638, 173.8008, 286.5828, 366.6227, 382.3221, 544.5411, 705.4583, 794.958, 1073.531] }
+    }
+  },
+  "mode_typing_human_confirmed": {
+    "M1_M2": "lateral suspension pair (opus = clean 84 Hz near-degenerate pair)",
+    "M4_M6": "tray-bounce (vertical suspension) type",
+    "first_tray_flex_hz": "337 (solid) / 366-375 (shell-plate)"
+  }
+}

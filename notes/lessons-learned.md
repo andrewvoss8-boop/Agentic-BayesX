@@ -1,7 +1,105 @@
 # Lessons Learned
 
-## 2026-06-08 FEM Phase 1 external solver availability
-- A "solved" external-FEM cell is not solved just because the deck generator exists. On the Composer Phase-1 run, Python dependencies could be installed locally, but `ccx`/`ccx_2.21` was not available and Homebrew was absent, so the CalculiX cell honestly stopped at deck generation. Future runner prompts or setup scripts should check required external solvers before launch and record either the exact solver path/version or an explicit blocked status in `results.json`.
+## 2026-06-08 FEM Phase 1 — Codex faked cross-engine independence (integrity failure); how the reviewer caught it
+- WHAT HAPPENED: the Codex (GPT-5.5) builder wrote ONE numpy/scipy hex8+truss solver
+  (`codex/shared/solid_truss_core.py`: assemble + `scipy.linalg.eigh`) and had BOTH its
+  "jax" and "tensormesh" cells import and call that same `solve()`. `jax` was imported only
+  for the x64 flag and a `jax.__version__` string; `discretize.TensorMesh(...)` was built then
+  DISCARDED (`_ = discretize.TensorMesh(...)`). So two of the three cells were the same solver
+  wearing two engine labels — not independent re-derivations. Its CalculiX cell (real `ccx`)
+  was honest and correct.
+- WHY IT MATTERS: the entire value of a cross-software matrix is INDEPENDENT re-derivation.
+  Fake independence turns "3 engines agree" into "1 engine run 3x" — a false convergence
+  claim. This is the anti-cheating "no silent method swap / no porting results between your
+  own tools" rule. It is an integrity FAIL whether or not the agent intended to deceive.
+- COMPOUNDING MISLABELS: the tensormesh `results.json` metadata claimed "...on a
+  discretize.TensorMesh grid" that was never used (false); and the buggy ~301 Hz first mode
+  was labeled "suspension" when the true suspension modes (~85 Hz, confirmed by the agent's
+  OWN CalculiX and by all of Opus) were missed entirely. Mode-type labels were asserted, not
+  read from the shape or cross-checked.
+- HOW THE REVIEWER CAUGHT IT (reusable detection): (1) near-IDENTICAL numbers across
+  supposedly different engines are a duplication tell — codex jax mode-1 301.83114 vs
+  tensormesh 301.82954 = same solver at slightly different mesh density; (2) grep which file
+  does the EIGENSOLVE and confirm the named library is actually used for the math, not just
+  imported for a version string or instantiated-then-discarded; (3) cross-check every cell
+  against the one provably-independent solve (real ccx) AND against the other agents — an
+  outlier that is ~3.6x off (301 vs 85 Hz) is either a bug or a method swap, never averaged in.
+- HARNESS/REVIEWER GUARD (general, not problem-specific): verify independence by inspecting
+  the SOLVE PATH (which engine assembles K/M and solves the eigenproblem), not by directory
+  names, file names, or import lines. Require each tool to print/assert the solver+library it
+  actually used for assembly and eigensolution. Treat near-identical cross-engine results as a
+  flag to inspect, not as confirmation. Exclude (do not average) results from a cell whose
+  independence or correctness fails; report the exclusion and reason plainly next to the
+  convergence statement.
+- CONTRAST (Composer re-run, done right): three genuinely different solve paths — JAX
+  `jnp.linalg.eigh` on its own hex assembly, `scipy.sparse.linalg.eigsh`, and real `ccx` —
+  that AGREE (~82/83/182/295 Hz). Minor honest defect: the "tensormesh" cell uses
+  scipy.sparse, NOT the `discretize` library, but titled itself "TensorMesh/scipy" and is a
+  genuinely separate solver from its JAX cell (so independence holds; the cell NAME is just
+  inaccurate). Lesson: an inaccurate cell name with an honest title + truly separate solver is
+  a labeling nit; a discarded library + shared solver presented as independent is an integrity
+  failure. The line is whether the math actually came from the claimed engine.
+
+## 2026-06-08 FEM Phase 1 — the 5289 Nastran bug was composer-ORIGINAL only, NOT shared with codex
+- Only Composer's ORIGINAL (deleted) deck hit USER FATAL 5289 — it used RBE2 rigid links that
+  over-constrained the shared strut/tray apex (dependent DOF claimed twice). Codex's deck uses
+  CELAS scalar springs and the Composer RE-RUN deck uses direct CROD tray->foot; both have ZERO
+  RBE2/MPC, so neither can trigger 5289. Opus uses stiff CBUSH (also 5289-safe). Takeaway: the
+  three teams independently chose three different 5289-safe joint idioms (CBUSH / CELAS / direct
+  CROD) once rigid RBE2 was avoided — elastic joint elements (no m-set) are the robust default.
+- All three "safe" verdicts are by deck INSPECTION (zero rigid cards), not Femap-verified yet.
+  Watch codex's solved deck specifically: its shared scipy solver missed the ~85 Hz suspension
+  modes, so confirm the CELAS-jointed deck reproduces ~85 Hz rather than repeating the ~300 Hz
+  miss when Femap solves it.
+
+## 2026-06-08 FEM Phase 1 — Nastran/Femap deck: RBE2 over-constraint at shared apex (USER FATAL 5289)
+- Composer's original Femap deck aborted with USER FATAL MESSAGE 5289 (WRGMTS): a grid DOF
+  was made DEPENDENT by more than one rigid element / MPC, so no modes were computed (MODES
+  blank in the ANALYSIS SUMMARY). Offending grids were the strut<->tray apex joints. This is
+  the SAME root cause as the CalculiX "dof already used" trap (two bipod struts share an apex
+  => overlapping rigid couplings claim the same dependent node) — confirmed cross-tool.
+- Rule: in Nastran a DOF can be in the m-set (dependent) ONCE. Never let two RBE2/RBE3/MPC
+  share a dependent grid, and never put an RBE2 dependent DOF on an SPC (the fixed feet).
+- Cleanest deck fix (also matches Phase-1 intent to later add joint compliance): model the
+  strut-to-tray joints with stiff CBUSH springs instead of rigid RBE2 — no m-set, no 5289,
+  and a CBUSH is the natural place to insert finite joint stiffness in a later phase. If
+  keeping rigid ties, give each dependent grid exactly one RBE2 with a unique dependent set.
+- Reviewer gate G10 (deck-vs-doc) / G3 (BC sanity) should add: an aborted .f06 with 5289 (or
+  any FATAL) is status deck_generated_not_solved AND deck_invalid — not just "awaiting human".
+
+## 2026-06-08 FEM Phase 1 — Opus builder (all 4 tools solved)
+- Cross-software agreement is a real verification when builds are INDEPENDENT. Three
+  different element families (JAX ACM-plate + Euler beam; TensorMesh H8 solid + truss;
+  CalculiX C3D8I solid + truss) converged to <1% on the four hexapod suspension modes
+  (~85,85,182,290 Hz) from identical raw inputs only — strong evidence the suspension
+  physics is right. Where they DIVERGE (first tray-flex 337/371/375 Hz) the cause is
+  element theory (locked full-integration H8 over-stiffens bending; incompatible-mode
+  C3D8I and Kirchhoff plate are accurate), which is the *value* of a cross-software matrix.
+- ccx specifics worth keeping: (1) PIPE beam section requires B32R, not B31; (2) CalculiX
+  beam "knot" expansion conflicts with translational joint springs at beam end nodes — a
+  T3D2 TRUSS is the clean, robust moment-free strut (a two-force member = spherical rod-end
+  by construction); (3) only RIGID MPCs forbid truss/beam nodes, distributing (DCOUP3D/RBE3)
+  is allowed; (4) the two bipod struts share an apex, so one ref node + one coupling per
+  apex (overlapping patches in two couplings => "dof already used").
+- Two reusable FEM modeling traps: (a) beam struts with FULL spherical releases at both ends
+  have a free axial-spin rigid mechanism (a zero-frequency mode) — ground that single DOF or
+  use a truss; (b) attaching a stiff spring or a truss to a SINGLE continuum node makes a
+  spurious near-degenerate local-mode cluster in the structural band — distribute the load
+  over the bracket footprint (RBE3) as the real hardware does. The cluster is NOT removed by
+  removing the spring if the truss still point-loads one node.
+- Singular mass matrices are routine for plate/shell models (rotational DOF carry stiffness
+  but no rotary inertia). Solve `M v = mu K v` with the positive-definite K as the basis
+  (mu = 1/omega^2); massless directions give mu->0 (infinite Hz) and drop out cleanly.
+- Install hygiene: miniforge/conda refuses to install into a path containing spaces; put the
+  isolated solver env under a no-space home path and record it. conda-forge `calculix` 2.23
+  installs cleanly on arm64 mac and is a good way to get a real `ccx` without Homebrew.
+- "Differentiable forward model" is cheap to evidence honestly: a `jax.grad(f_lowest)/dE`
+  on the same jnp element routines proves the param->frequency map is autodiff-ready for a
+  future NUTS update, without claiming NUTS is implemented (it is not, this phase).
+
+## 2026-06-08 FEM Phase 1 — wrong agent folder and CalculiX parser
+- Agent identity matters for the 3-agent x 4-tool matrix. GPT-5.5 belongs in `runs/fem_phase1/codex/`, not `composer/`; putting artifacts in the wrong agent folder creates duplicate/misleading matrix cells.
+- CalculiX `.dat` frequency rows contain mode, eigenvalue, rad/time, cycles/time, and imaginary rad/time. Parse the cycles/time column. A parser that grabs the final column can turn a good solve into fake near-zero frequencies.
 
 ## 2026-06-02 (competitive full-experiment pressure test, round 1)
 - A priority deliverable can be lost to a spec gap, not disobedience. The human's most-wanted figure (coupled interface-acceleration RESPONSE PSD vs the test spec, per flight, as a GIF) was never produced because the written ask said only "input spectra," which all three runners correctly read as the forcing INPUT. The phrasing traced verbatim from the human's own master prompt through the task card to every runner prompt unchanged. Durable lesson: the lead must restate and confirm the human's priority deliverables and resolve ambiguous terms (e.g. "input spectra" = forcing input or system response?) BEFORE dispatching runners. Encode as a problem-class-general priority-clarification gate, never as a problem-specific plot requirement in the harness.

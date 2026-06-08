@@ -1,0 +1,36 @@
+ ELEMENT           37 with label "T3D2   R" and with nodes:
+         99        105
+  is expanded into a "C3D8I BR" element with topology:
+        111        165        166        112        114        168        167        113          0          0
+          0
+
+ ELEMENT           38 with label "T3D2   R" and with nodes:
+        100        106
+  is expanded into a "C3D8I BR" element with topology:
+        120        174        175        121        123        177        176        122          0          0
+          0
+
+ ELEMENT           39 with label "T3D2   R" and with nodes:
+        101        107
+  is expanded into a "C3D8I BR" element with topology:
+        129        183        184        130        132        186        185        131          0          0
+          0
+
+ ELEMENT           40 with label "T3D2   R" and with nodes:
+        102        108
+  is expanded into a "C3D8I BR" element with topology:
+        138        192        193        139        141        195        194        140          0          0
+          0
+
+ ELEMENT           41 with label "T3D2   R" and with nodes:
+        103        109
+  is expanded into a "C3D8I BR" element with topology:
+        147        201        202        148        150        204        203        149          0          0
+          0
+
+ ELEMENT           42 with label "T3D2   R" and with nodes:
+        104        110
+  is expanded into a "C3D8I BR" element with topology:
+        156        210        211        157        159        213        212        158          0          0
+          0
+

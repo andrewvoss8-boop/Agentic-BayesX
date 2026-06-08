@@ -1,0 +1,7 @@
+{
+  "note": "Aggregate for the Opus Phase-1 build. active_runtime_s = sum of per-command execution time across the four tools' own runtime.json (jax, tensormesh, calculix) plus the nastran-deck generation; elapsed_wallclock_s = full run_all.sh replay wall time. Per-tool detail in <tool>/runtime.json.",
+  "per_tool_active_runtime_s": {"jax": 5.76, "tensormesh": 7.07, "calculix": 1.11, "nastran_deck": 0.5},
+  "active_runtime_s": 14.44,
+  "elapsed_wallclock_s": 25.93,
+  "one_command_replay": "bash run_all.sh"
+}

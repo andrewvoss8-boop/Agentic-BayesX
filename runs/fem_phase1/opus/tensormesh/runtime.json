@@ -2,13 +2,13 @@
   "commands": [
     {
       "name": "baseline",
-      "s": 4.212642192840576
+      "s": 1.9105799198150635
     },
     {
       "name": "convergence",
-      "s": 5.1868836879730225
+      "s": 5.163200616836548
     }
   ],
-  "active_runtime_s": 9.4,
-  "elapsed_wallclock_s": 10.03
+  "active_runtime_s": 7.07,
+  "elapsed_wallclock_s": 7.57
 }

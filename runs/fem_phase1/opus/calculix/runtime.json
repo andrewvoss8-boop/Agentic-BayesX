@@ -2,17 +2,17 @@
   "commands": [
     {
       "name": "baseline_h22",
-      "s": 0.34133005142211914
+      "s": 0.359724760055542
     },
     {
       "name": "coarse_h30",
-      "s": 0.17337918281555176
+      "s": 0.22685790061950684
     },
     {
       "name": "fine_h16",
-      "s": 0.46120595932006836
+      "s": 0.5191588401794434
     }
   ],
-  "active_runtime_s": 0.98,
-  "elapsed_wallclock_s": 1.53
+  "active_runtime_s": 1.11,
+  "elapsed_wallclock_s": 1.78
 }

@@ -1,0 +1,51 @@
+{
+  "agent": "codex",
+  "tool": "nastran_deck",
+  "solved_by": "human",
+  "solved_by_name": "Andrew Voss",
+  "status": "solved_human",
+  "solver": "Simcenter Nastran via Femap (Educational/Training license)",
+  "solver_version": "Simcenter Nastran (Femap, 2026-06-08 session)",
+  "date": "2026-06-08",
+  "result_provenance": "Frequencies transcribed by lead from human-provided Femap screenshot (Model Info > All Results). Recommend the human also save femap_export/frequencies.csv + the .f06/.op2 (or screenshot) under femap_export/ for traceability.",
+  "units": "SI: m, kg, N, Hz",
+  "frame": "Origin at tray center; +z up; tray mid-plane at z=0.098 m; base feet at z=0 fixed.",
+  "mass_case": "bare tray, no ballast",
+  "element_types": {
+    "tray": "Nastran CHEXA solid tray",
+    "struts": "CROD axial rods",
+    "joints": "explicit apex GRID tied to nearest tray solid node by three stiff CELAS2 translational springs"
+  },
+  "mesh": {
+    "nodes": 110,
+    "hex_elements": 36,
+    "crod_elements": 6,
+    "celas2_joint_springs": 18,
+    "tray_mass_kg_from_geometry": 3.0860999999999996,
+    "strut_area_m2": 2.199114857512855e-05
+  },
+  "frequencies": [
+    { "mode": 1, "frequency_hz": 75.22625, "mode_type": "suspension (lateral); see symmetry flag" },
+    { "mode": 2, "frequency_hz": 82.46638, "mode_type": "suspension (lateral); see symmetry flag" },
+    { "mode": 3, "frequency_hz": 173.8008, "mode_type": "suspension" },
+    { "mode": 4, "frequency_hz": 286.5828, "mode_type": "suspension (tray-bounce, human-confirmed)" },
+    { "mode": 5, "frequency_hz": 366.6227, "mode_type": "tray-flex (~366 Hz)" },
+    { "mode": 6, "frequency_hz": 382.3221, "mode_type": "suspension (tray-bounce, human-confirmed)" },
+    { "mode": 7, "frequency_hz": 544.5411, "mode_type": "tray-flex / higher (shape pending)" },
+    { "mode": 8, "frequency_hz": 705.4583, "mode_type": "tray-flex / higher (shape pending)" },
+    { "mode": 9, "frequency_hz": 794.958, "mode_type": "tray-flex / higher (shape pending)" },
+    { "mode": 10, "frequency_hz": 1073.531, "mode_type": "tray-flex / higher (shape pending)" }
+  ],
+  "frequency_label": "PROVISIONAL UPPER BOUND (rigid/stiff joints)",
+  "mesh_convergence": [],
+  "self_checks": {
+    "fixed_base_no_zero_modes": "PASS (lowest mode 75.23 Hz; no ~0 Hz modes)",
+    "rigid_joint_frequencies_are_provisional_upper_bound": true,
+    "near_degenerate_pair_gaps_percent": 9.2,
+    "symmetry_flag": "G4 CONCERN: modes 1&2 = 75.23/82.47 Hz are SPLIT by 9.2% rather than near-degenerate. Opus's equivalent lateral pair is 84.45/84.99 (0.64% gap). A split low pair on a true-120deg-symmetric structure suggests asymmetry in the codex deck (likely the CELAS2 joint springs / nearest-node tie not symmetric across the three bipods, or the coarse 36-hex tray mesh). Investigate before treating codex deck as converged.",
+    "human_check": "Solved SOL 103 in Femap; frequencies/mode types from shapes (human)."
+  },
+  "cross_check": "Modes 3-6 (173.8/286.6/366.6/382.3) agree with opus deck (180.5/288.6/366.0/~381) within ~1-4%. The DIVERGENCE is the lowest lateral pair: codex 75/82 (split, low) vs opus 84/85 (tight). This is the codex-deck symmetry/joint issue, NOT a cross-software element-theory effect.",
+  "deck_file": "model/model.bdf",
+  "runtime_s": 0.2854067910000001
+}

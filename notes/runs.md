@@ -8,13 +8,13 @@
 - Key metrics:
 - Lessons:
 
-## 2026-06-08 Composer FEM Phase 1 builder
-- Trial: Cursor/Composer execution of `docs/lab/fem_phase1_runner_prompt.md` under `runs/fem_phase1/composer/<tool>/`.
-  - Command: `PYTHONUNBUFFERED=1 runs/fem_phase1/composer/run_all.sh`
-  - Checker result: replay command completed with exit code 0. TensorMesh and JAX solved. CalculiX generated the input deck but did not solve because `ccx`/`ccx_2.21` was not available. Nastran deck generated for human Femap solve with null frequencies.
-  - Key metrics: TensorMesh first three modes = 301.8295, 349.5626, 362.1548 Hz. JAX first three modes = 300.3637, 334.3047, 343.7292 Hz. Both report fixed-base no-zero-mode checks and mesh-convergence shifts in `results.json`.
-  - Artifacts: `runs/fem_phase1/composer/tensormesh/results.json`, `runs/fem_phase1/composer/jax/results.json`, `runs/fem_phase1/composer/calculix/model/composer_hexapod_phase1.inp`, `runs/fem_phase1/composer/nastran_deck/model/model.bdf`, per-tool figures and READMEs, `priority_deliverables.md`, `decisions_log.md`, `files_changed.md`.
-  - Lessons: this machine needed local `pip --user` installs for `jax` and `discretize`; no `ccx` or Homebrew was available, so the CalculiX cell remains a deck-generation artifact until an external solver is installed.
+## 2026-06-08 Codex FEM Phase 1 builder
+- Trial: GPT-5.5/Codex execution of `docs/lab/fem_phase1_runner_prompt.md` under `runs/fem_phase1/codex/<tool>/`.
+  - Command: `PYTHONUNBUFFERED=1 runs/fem_phase1/codex/run_all.sh`
+  - Checker result: replay command completed with exit code 0. TensorMesh, JAX, and CalculiX solved. Nastran deck generated for human Femap solve with null frequencies.
+  - Key metrics: TensorMesh first three modes = 301.8295, 349.5626, 362.1548 Hz. JAX first three modes = 301.8311, 355.5598, 360.0483 Hz. CalculiX first three modes = 84.7719, 86.5072, 192.5830 Hz. All solved cells report fixed-base no-zero-mode checks in `results.json`.
+  - Artifacts: `runs/fem_phase1/codex/tensormesh/results.json`, `runs/fem_phase1/codex/jax/results.json`, `runs/fem_phase1/codex/calculix/model/hexapod_codex.inp`, `runs/fem_phase1/codex/nastran_deck/model/model.bdf`, per-tool figures and READMEs, `priority_deliverables.md`, `decisions_log.md`, `files_changed.md`.
+  - Lessons: the initial workspace name was wrong (`composer` instead of `codex`) and was corrected. CalculiX `.dat` parsing must use the cycles/time column, not the final imaginary-frequency column.
 
 ## 2026-06-02 Codex GPT-5.5 round-2 sequential vibe/modal/flight runner
 - Trial: isolated round-2 Codex runner focused on the priority coupled interface acceleration response PSD GIF, forcing overlay, flight tray `3*GRMS` reference overlay, real NumPyro NUTS, resolution sensitivity, and runtime accounting.

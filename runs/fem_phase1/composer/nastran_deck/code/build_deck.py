@@ -12,7 +12,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent.parent
 MODEL = ROOT / "model"
 FIG = ROOT / "figures"
 
@@ -29,27 +29,25 @@ FEET = {
 STRUTS = [("A0", "F0"), ("A0", "F1"), ("A1", "F2"), ("A1", "F3"), ("A2", "F4"), ("A2", "F5")]
 
 
-def build_mesh(n: int):
+def build_mesh(n):
     xs = np.unique(np.concatenate([np.linspace(-0.15, 0.15, n + 1), [p[0] for p in APEX.values()]]))
     ys = np.unique(np.concatenate([np.linspace(-0.15, 0.15, n + 1), [p[1] for p in APEX.values()]]))
     zs = [TRAY_Z_BOT, TRAY_Z_TOP]
-    nodes = {}
-    grid = {}
-    nid = 1
+    nodes, grid, nid = {}, {}, 1
     for k, z in enumerate(zs):
         for j, y in enumerate(ys):
             for i, x in enumerate(xs):
                 grid[(i, j, k)] = nid
                 nodes[nid] = (x, y, z)
                 nid += 1
-    hexes = []
-    eid = 1
+    hexes, eid = [], 1
     for k in range(len(zs) - 1):
         for j in range(len(ys) - 1):
             for i in range(len(xs) - 1):
-                n = [grid[(i, j, k)], grid[(i + 1, j, k)], grid[(i + 1, j + 1, k)], grid[(i, j + 1, k)],
-                     grid[(i, j, k + 1)], grid[(i + 1, j, k + 1)], grid[(i + 1, j + 1, k + 1)], grid[(i, j + 1, k + 1)]]
-                hexes.append((eid, n))
+                hexes.append((eid, [
+                    grid[(i, j, k)], grid[(i + 1, j, k)], grid[(i + 1, j + 1, k)], grid[(i, j + 1, k)],
+                    grid[(i, j, k + 1)], grid[(i + 1, j, k + 1)], grid[(i + 1, j + 1, k + 1)], grid[(i, j + 1, k + 1)],
+                ]))
                 eid += 1
     foot_start = nid
     for key in ["F0", "F1", "F2", "F3", "F4", "F5"]:
@@ -60,27 +58,16 @@ def build_mesh(n: int):
 
 def write_bdf(nodes, hexes, foot_start, next_eid):
     lines = [
-        "SOL 103",
-        "CEND",
-        "  ECHO = NONE",
-        "  SUBCASE 1",
-        "    LABEL = NORMAL MODES",
-        "    METHOD = 10",
-        "    SPC = 1",
-        "    DISPLACEMENT(PLOT) = ALL",
-        "    ELSTRESS(PLOT) = NONE",
-        "BEGIN BULK",
-        f"EIGRL,10,,,{10},,,,MASS",
-        f"MAT1,1,{E:.4E},,{NU:.4f},{RHO:.4E}",
+        "SOL 103", "CEND", "  ECHO = NONE", "  SUBCASE 1", "    LABEL = NORMAL MODES",
+        "    METHOD = 10", "    SPC = 1", "    DISPLACEMENT(PLOT) = ALL",
+        "BEGIN BULK", "EIGRL,10,,,,10,,,,MASS", f"MAT1,1,{E:.4E},,{NU:.4f},{RHO:.4E}",
     ]
     for nid, (x, y, z) in sorted(nodes.items()):
         lines.append(f"GRID,{nid},,{x:.6f},{y:.6f},{z:.6f}")
     for eid, conn in hexes:
         lines.append("CHEXA," + ",".join([str(eid), "1"] + [str(c) for c in conn]))
     top = [nid for nid, (_, _, z) in nodes.items() if abs(z - TRAY_Z_TOP) < 1e-9 and nid < foot_start]
-    apex = {}
-    for key, pt in APEX.items():
-        apex[key] = min(top, key=lambda k: np.linalg.norm(np.array(nodes[k]) - np.array(pt)))
+    apex = {k: min(top, key=lambda nid: np.linalg.norm(np.array(nodes[nid]) - np.array(pt))) for k, pt in APEX.items()}
     foot = {k: foot_start + i for i, k in enumerate(["F0", "F1", "F2", "F3", "F4", "F5"])}
     pid = 2
     lines.append(f"PROD,{pid},1,{A_STRUT}")
@@ -88,9 +75,8 @@ def write_bdf(nodes, hexes, foot_start, next_eid):
     for akey, fkey in STRUTS:
         lines.append(f"CROD,{eid},{pid},{apex[akey]},{foot[fkey]}")
         eid += 1
-    for key in ["F0", "F1", "F2", "F3", "F4", "F5"]:
-        fn = foot[key]
-        lines.append(f"SPC1,1,{fn},123")
+    for key in foot:
+        lines.append(f"SPC1,1,{foot[key]},123")
     lines.append("ENDDATA")
     return "\n".join(lines) + "\n"
 
@@ -100,27 +86,23 @@ def main():
     MODEL.mkdir(parents=True, exist_ok=True)
     FIG.mkdir(parents=True, exist_ok=True)
     nodes, hexes, foot_start, next_eid = build_mesh(8)
-    bdf = write_bdf(nodes, hexes, foot_start, next_eid)
-    (MODEL / "model.bdf").write_text(bdf)
+    (MODEL / "model.bdf").write_text(write_bdf(nodes, hexes, foot_start, next_eid))
     (ROOT / "RUN_IN_FEMAP.md").write_text("""# Run in Femap / Nastran
 
-1. Open `model/model.bdf` in Femap (or run MSC Nastran / NX Nastran with this bulk deck).
-2. Verify SOL 103, EIGRL requests 10 modes, SPC1 fixes translations at foot nodes F0–F5.
-3. Run normal modes. Export first 10 frequencies and plot first ~6 mode shapes.
-4. Drop solved frequencies into `results.json` (`solved_by: human`); do not invent numbers before solve.
+1. Open `model/model.bdf` in Femap (or MSC/NX Nastran).
+2. Verify SOL 103, EIGRL requests 10 modes, SPC1 fixes translations at foot nodes.
+3. Run normal modes; plot first ~6 mode shapes.
+4. Record solved frequencies in `results.json` (`solved_by: human`).
 
 Units: SI (m, kg, N). Frame: tray center origin, +z up, tray top z = 0.098 m.
-Tray: CHEXA solid 6061-T6. Struts: CROD axial, A = 22 mm².
 """)
     arr = np.array(list(nodes.values()))
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(111, projection="3d")
     ax.scatter(arr[:, 0], arr[:, 1], arr[:, 2], s=4)
-    fig.savefig(FIG / "undeformed_geometry.png", dpi=150)
-    plt.close(fig)
+    fig.savefig(FIG / "undeformed_geometry.png", dpi=150); plt.close(fig)
     out = {
-        "agent": "composer",
-        "tool": "nastran_deck",
+        "agent": "composer", "tool": "nastran_deck",
         "units": "SI (m, kg, N, Hz)",
         "coordinate_frame": "origin at tray center; +z up",
         "mass_case": "bare tray CHEXA solid",

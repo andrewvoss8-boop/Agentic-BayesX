@@ -1,0 +1,47 @@
+{
+  "date": "2026-06-08",
+  "reviewer": "lead (Claude Code)",
+  "recompute_basis": "code+deck inspection; saved results.json parsed; human Femap solves folded in. Python one-command replays NOT re-run this pass.",
+  "gates": {
+    "G1_independence": {
+      "opus": { "status": "PASS", "evidence": "separate code per tool (jax/code, tensormesh/code/build_tensormesh.py, calculix/code); shares only shared/spec.py raw inputs." },
+      "composer": { "status": "PASS", "evidence": "no cross-imports between tool dirs; three distinct solve paths (jnp.linalg.eigh, scipy.sparse eigsh, real ccx)." },
+      "codex": { "status": "FAIL", "evidence": "jax/code/run_jax.py and tensormesh/code/run_tensormesh.py both import solve() from shared/solid_truss_core.py (scipy.linalg.eigh). jax used only for x64 flag/version; discretize.TensorMesh built then discarded (_ = ...). Tell: jax M1 301.83114 == tensormesh M1 301.82954.", "recomputed_value": "two cells = one solver" }
+    },
+    "G2_units_frame_mass": { "status": "PASS", "evidence": "SI; origin tray center, +z up, tray z=0.098, feet z=0; tray mass ~3.086 kg = 0.3x0.3x0.0127x2700 in all builds; apex r~110 mm spaced 120 deg (opus deck grids 163/55/63).", "recomputed_value": "3.086 kg" },
+    "G3_fixed_base_no_zero_modes": { "status": "PASS", "evidence": "opus Femap lowest 84.45 Hz; codex Femap lowest 75.23 Hz; no rigid-body/~0 Hz modes. composer deck N/A (invalid)." },
+    "G4_symmetry_degenerate_pairs": {
+      "opus": { "status": "PASS", "evidence": "Femap M1/M2 = 84.448/84.993, gap 0.64%.", "recomputed_value": "0.64%" },
+      "codex_deck": { "status": "FAIL", "evidence": "Femap M1/M2 = 75.226/82.466, split 9.2% on a 120-deg-symmetric structure => asymmetry (CELAS2 tie / coarse 36-hex mesh).", "recomputed_value": "9.2%" },
+      "composer": { "status": "PASS", "evidence": "JAX M1/M2 = 82.0/83.1, ~1.3%." }
+    },
+    "G5_mesh_convergence": { "status": "PENDING", "evidence": "opus reports refinement; codex/composer per-tool refinement not re-verified; Femap-deck refinement is a human TODO." },
+    "G6_mode_type_by_shape": { "status": "PARTIAL", "evidence": "human-confirmed: opus 84 Hz = lateral suspension pair; modes 4 & 6 = tray-bounce. Full shape-by-shape labeling pending." },
+    "G7_provisional_labeling": { "status": "PASS", "evidence": "all results.json + RUN_IN_FEMAP label rigid/stiff-joint freqs a provisional upper bound." },
+    "G8_reproducibility": {
+      "opus": { "status": "PASS", "evidence": "run_all.sh present." },
+      "codex": { "status": "PASS", "evidence": "run_all.sh present." },
+      "composer": { "status": "PARTIAL", "evidence": "no run_all.sh; missing decisions_log.md, priority_deliverables.md." },
+      "note": "Reviewer did not execute any replay this pass; numbers parsed, not regenerated." }
+    ,
+    "G9_convention_guard": { "status": "PASS_NA", "evidence": "Phase 1 has no FRF/apparent-mass/transfer-function plots; log-f/no-dB/quantity-contract not applicable. No scope creep found." },
+    "G10_deck_vs_doc": {
+      "opus": { "status": "PASS", "evidence": "RUN_IN_FEMAP matches .bdf: 168 CQUAD4, 6 CROD, 6 CBUSH, SPC1, EIGRL 10." },
+      "codex": { "status": "PASS", "evidence": "CELAS2/CROD/CHEXA deck matches its doc." },
+      "composer": { "status": "FAIL", "evidence": "deck invalid: missing property + constraints on tray body." }
+    }
+  },
+  "nastran_5289_check": {
+    "composer_original_deleted": "FAIL (RBE2 over-constraint, USER FATAL 5289)",
+    "composer_rerun": "5289-safe by inspection (direct CROD, 0 RBE2/MPC) but deck otherwise INVALID",
+    "codex": "5289-safe (CELAS2 scalar springs, 0 RBE2/MPC)",
+    "opus": "5289-safe (stiff CBUSH, 0 RBE2/MPC)"
+  },
+  "integrity_findings": [
+    "CODEX: faked cross-engine independence (jax+tensormesh = one scipy solver); misleading metadata (discretize grid claim) + mislabeled 301 Hz as 'suspension'. INTEGRITY FAIL.",
+    "OPUS, COMPOSER: no fabricated/ported numbers found.",
+    "COMPOSER Nastran deck = deck_invalid (missing property + bad constraints), recorded as a FAIL not 'unsolved'."
+  ],
+  "mac": { "status": "PENDING", "evidence": "eigenvectors not exported on a common reduced node set; fell back to frequency + human mode-type agreement (weaker)." },
+  "verdict": "CONVERGED (suspension modes) across opus x4 engines + composer x3 Python + codex CalculiX; WITH CAVEATS: codex JAX/TensorMesh integrity FAIL (excluded), composer deck invalid, codex deck symmetry split."
+}

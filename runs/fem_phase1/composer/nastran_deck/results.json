@@ -1,84 +1,73 @@
 {
   "agent": "composer",
   "tool": "nastran_deck",
+  "units": "SI (m, kg, N, Hz)",
+  "coordinate_frame": "origin at tray center; +z up",
+  "mass_case": "bare tray CHEXA solid",
+  "provisional_upper_bound_note": "rigid joints; CROD struts",
   "solved_by": "human",
-  "status": "deck_generated_not_solved",
-  "units": "SI: m, kg, N, Hz",
-  "frame": "Origin at tray center; +z up; tray mid-plane at z=0.098 m; base feet at z=0 fixed.",
-  "mass_case": "bare tray, no ballast",
+  "status": "deck_invalid",
+  "deck_invalid_reason": "Human Femap solve (2026-06-08, Andrew Voss): deck has a MISSING PROPERTY and the constraints are applied wrong -- they land on the tray BODY instead of the feet. Modes are not trustworthy and are left null. This nastran_deck cell FAILS; the composer Python builds (jax/tensormesh/calculix) are unaffected and remain valid.",
   "element_types": {
-    "tray": "Nastran CQUAD4 shell plate with PSHELL thickness 12.7 mm",
-    "struts": "CROD axial rods for spherical rod-end two-force behavior",
-    "joints": "explicit apex joint GRID tied to nearest tray shell nodes by RBE2 translational components 123"
+    "tray": "CHEXA",
+    "struts": "CROD"
   },
   "mesh": {
-    "nodes": 61,
-    "tray_nodes": 49,
-    "cquad4_elements": 36,
-    "crod_elements": 6,
-    "rbe2_joint_ties": 6,
-    "tray_mass_kg_from_geometry": 3.0860999999999996,
-    "strut_area_m2": 2.199114857512855e-05
+    "n_div": 8,
+    "nelem_hex": 100,
+    "nnode": 248
   },
-  "frequencies": [
+  "modes": [
     {
-      "mode": 1,
+      "index": 1,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 2,
+      "index": 2,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 3,
+      "index": 3,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 4,
+      "index": 4,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 5,
+      "index": 5,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 6,
+      "index": 6,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 7,
+      "index": 7,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 8,
+      "index": 8,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 9,
+      "index": 9,
       "frequency_hz": null,
       "mode_type": null
     },
     {
-      "mode": 10,
+      "index": 10,
       "frequency_hz": null,
       "mode_type": null
     }
   ],
-  "mesh_convergence": [],
-  "self_checks": {
-    "fixed_base_no_zero_modes": null,
-    "near_degenerate_pair_gaps_percent": [],
-    "rigid_joint_frequencies_are_provisional_upper_bound": true,
-    "human_check": "Run SOL 103 in Femap/Nastran; then check no zero modes, near-degenerate symmetry pairs, and first ~10 mode-shape labels."
-  },
-  "deck_file": "model/model.bdf",
-  "runtime_s": 0.185759958
+  "runtime_s": 0.06209301948547363
 }

@@ -1,0 +1,83 @@
+{
+  "agent": "codex",
+  "tool": "calculix",
+  "solved_by": "agent",
+  "status": "solved",
+  "units": "SI: m, kg, N, Hz",
+  "frame": "Origin at tray center; +z up; tray mid-plane at z=0.098 m; base feet at z=0 fixed.",
+  "mass_case": "bare tray, no ballast",
+  "element_types": {
+    "tray": "CalculiX C3D8 solid hexahedra",
+    "struts": "CalculiX T3D2 axial trusses",
+    "joints": "explicit apex joint nodes constrained to distributed tray nodes by *EQUATION"
+  },
+  "mesh": {
+    "nodes": 110,
+    "hex_elements": 36,
+    "truss_elements": 6,
+    "tray_mass_kg_from_geometry": 3.0860999999999996,
+    "strut_area_m2": 2.199114857512855e-05
+  },
+  "frequencies": [
+    {
+      "mode": 1,
+      "frequency_hz": 84.77194,
+      "mode_type": null
+    },
+    {
+      "mode": 2,
+      "frequency_hz": 86.50716,
+      "mode_type": null
+    },
+    {
+      "mode": 3,
+      "frequency_hz": 192.583,
+      "mode_type": null
+    },
+    {
+      "mode": 4,
+      "frequency_hz": 299.5593,
+      "mode_type": null
+    },
+    {
+      "mode": 5,
+      "frequency_hz": 337.2607,
+      "mode_type": null
+    },
+    {
+      "mode": 6,
+      "frequency_hz": 337.3048,
+      "mode_type": null
+    },
+    {
+      "mode": 7,
+      "frequency_hz": 337.5925,
+      "mode_type": null
+    },
+    {
+      "mode": 8,
+      "frequency_hz": 337.5932,
+      "mode_type": null
+    },
+    {
+      "mode": 9,
+      "frequency_hz": 337.6027,
+      "mode_type": null
+    },
+    {
+      "mode": 10,
+      "frequency_hz": 337.7145,
+      "mode_type": null
+    }
+  ],
+  "mesh_convergence": [],
+  "self_checks": {
+    "fixed_base_no_zero_modes": true,
+    "rigid_joint_frequencies_are_provisional_upper_bound": true,
+    "strut_self_modes": "not represented by truss members"
+  },
+  "input_file": "model/hexapod_codex.inp",
+  "blocked_reason": null,
+  "solver_stdout_excerpt": "\n************************************************************\n\nCalculiX Version 2.23, Copyright(C) 1998-2025 Guido Dhondt\nCalculiX comes with ABSOLUTELY NO WARRANTY. This is free\nsoftware, and you are welcome to redistribute it under\ncertain conditions, see gpl.htm\n\n************************************************************\n\nYou are using an executable made on Fri Apr 24 17:56:05 UTC 2026\n\n  The numbers below are estimated upper bounds\n\n  number of:\n\n   nodes:          434\n   elements:           42\n   one-dimensional elements:            6\n   two-dimensional elements:            0\n   integration points per element:            8\n   degrees of freedom per node:            3\n   layers per element:            2\n\n   distributed facial loads:            0\n   distributed volumetric loads:            0\n   concentrated loads:            0\n   single point constraints:          594\n   multiple point constraints:          739\n   terms in all multiple point constraints:         4699\n   tie constraints:            0\n   dependent nodes tied by cyclic constraints:            0\n   dependent nodes in pre-tension constraints:            0\n\n   sets:            2\n   terms in all sets:           78\n\n   materials:            1\n   constants per material and temperature:            2\n   temperature points per material:            1\n   plastic data points per material:            0\n\n   orientations:            0\n   amplitudes:            1\n   data points in all amplitudes:            1\n   print requests:            0\n   transformations:            0\n   property cards:            0\n\n\n STEP            1\n\n *WARNING reading *FREQUENCY: parameter not recognized:\n          EIGENSOLVER=LANCZOS\n *WARNING reading *FREQUENCY. Card image:\n          *FREQUENCY,EIGENSOLVER=LANCZOS\n\n Frequency analysis was selected\n\n Decascading the MPC's\n\n Determining the structure of the matrix:\n Using up to 1 cpu(s) for setting up the structure of the matrix.\n number of equations\n 444\n number of nonzero lower triangu",
+  "runtime_s": 0.4147409999999999
+}

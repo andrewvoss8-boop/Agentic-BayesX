@@ -188,5 +188,5 @@
     "max_pct_shift_h22_to_h16": 3.32,
     "note": "suspension modes (1-4) are nearly mesh-independent; the dense tray-flex cluster (>=mode 5) shifts more as the overhanging-corner bending resolves."
   },
-  "runtime_s": 1.53
+  "runtime_s": 1.78
 }

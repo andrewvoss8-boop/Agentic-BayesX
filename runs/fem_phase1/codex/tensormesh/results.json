@@ -1,0 +1,145 @@
+{
+  "agent": "codex",
+  "tool": "tensormesh",
+  "solved_by": "agent",
+  "status": "solved",
+  "units": "SI: m, kg, N, Hz",
+  "frame": "Origin at tray center; +z up; tray mid-plane at z=0.098 m; base feet at z=0 fixed.",
+  "mass_case": "bare tray, no ballast",
+  "element_types": {
+    "tray": "C3D8-style solid hexahedra on a discretize.TensorMesh grid",
+    "struts": "3D axial truss/two-force members",
+    "joints": "explicit apex joint nodes tied by distributed stiff translational springs"
+  },
+  "mesh": {
+    "nodes": 110,
+    "tray_nodes": 98,
+    "hex_elements": 36,
+    "truss_elements": 6,
+    "joint_spring_sets": 6,
+    "tray_mass_kg_from_geometry": 3.0860999999999996,
+    "strut_area_m2": 2.199114857512855e-05,
+    "discretize_version": "0.10.0"
+  },
+  "frequencies": [
+    {
+      "mode": 1,
+      "frequency_hz": 301.82954030848566,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 2,
+      "frequency_hz": 349.56258678908995,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 3,
+      "frequency_hz": 362.1548106057525,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 4,
+      "frequency_hz": 914.7174774883149,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 5,
+      "frequency_hz": 1435.6864148383524,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 6,
+      "frequency_hz": 1732.5541142311681,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 7,
+      "frequency_hz": 1836.6845144512786,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 8,
+      "frequency_hz": 2443.6195122842482,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 9,
+      "frequency_hz": 3069.3242759892287,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 10,
+      "frequency_hz": 3414.316544662825,
+      "mode_type": "tray-flex"
+    }
+  ],
+  "mesh_convergence": [
+    {
+      "mode": 1,
+      "coarse_hz": 303.23217458844726,
+      "fine_hz": 301.82954030848566,
+      "relative_shift_percent": -0.4647107365727149
+    },
+    {
+      "mode": 2,
+      "coarse_hz": 367.22756869702863,
+      "fine_hz": 349.56258678908995,
+      "relative_shift_percent": -5.053453251447908
+    },
+    {
+      "mode": 3,
+      "coarse_hz": 369.6562119502092,
+      "fine_hz": 362.1548106057525,
+      "relative_shift_percent": -2.071324506751565
+    },
+    {
+      "mode": 4,
+      "coarse_hz": 1713.922957292872,
+      "fine_hz": 914.7174774883149,
+      "relative_shift_percent": -87.37183878885342
+    },
+    {
+      "mode": 5,
+      "coarse_hz": 1936.3222205092711,
+      "fine_hz": 1435.6864148383524,
+      "relative_shift_percent": -34.87083255066438
+    },
+    {
+      "mode": 6,
+      "coarse_hz": 2243.4668915507873,
+      "fine_hz": 1732.5541142311681,
+      "relative_shift_percent": -29.488993914994683
+    },
+    {
+      "mode": 7,
+      "coarse_hz": 2584.2935629140006,
+      "fine_hz": 1836.6845144512786,
+      "relative_shift_percent": -40.70427134221661
+    },
+    {
+      "mode": 8,
+      "coarse_hz": 3543.987323394157,
+      "fine_hz": 2443.6195122842482,
+      "relative_shift_percent": -45.03024327552968
+    },
+    {
+      "mode": 9,
+      "coarse_hz": 4563.870071747709,
+      "fine_hz": 3069.3242759892287,
+      "relative_shift_percent": -48.692991074616735
+    },
+    {
+      "mode": 10,
+      "coarse_hz": 4730.553993734213,
+      "fine_hz": 3414.316544662825,
+      "relative_shift_percent": -38.55053952536702
+    }
+  ],
+  "self_checks": {
+    "fixed_base_no_zero_modes": true,
+    "first_frequency_hz": 301.82954030848566,
+    "rigid_joint_frequencies_are_provisional_upper_bound": true,
+    "strut_self_modes": "not represented by axial truss members"
+  },
+  "runtime_s": 2.6827296250000003
+}

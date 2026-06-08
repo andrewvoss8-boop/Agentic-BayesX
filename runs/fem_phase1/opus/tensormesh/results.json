@@ -151,5 +151,5 @@
   "fixed_base_no_zero_modes": true,
   "fixed_base_lowest_mode_hz": 84.714,
   "integrity": "independent re-derivation; shares only shared/spec.py raw inputs; solid-hex tray + truss struts deliberately differ from the JAX plate-shell + beam build; no porting of K/M, eigen-results, or frequency tables.",
-  "runtime_s": 10.03
+  "runtime_s": 7.56
 }
