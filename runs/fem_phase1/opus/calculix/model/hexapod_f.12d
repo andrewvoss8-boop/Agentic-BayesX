@@ -1,0 +1,45 @@
+ a KNOT without rotation was generated
+        in node         1084
+
+ a KNOT without rotation was generated
+        in node         1085
+
+ a KNOT without rotation was generated
+        in node         1086
+
+ ELEMENT          649 with label "T3D2   R" and with nodes:
+       1084       1087
+  is expanded into a "C3D8I BR" element with topology:
+       1093       1147       1148       1094       1096       1150       1149       1095          0          0
+          0
+
+ ELEMENT          650 with label "T3D2   R" and with nodes:
+       1084       1088
+  is expanded into a "C3D8I BR" element with topology:
+       1102       1156       1157       1103       1105       1159       1158       1104          0          0
+          0
+
+ ELEMENT          651 with label "T3D2   R" and with nodes:
+       1085       1089
+  is expanded into a "C3D8I BR" element with topology:
+       1111       1165       1166       1112       1114       1168       1167       1113          0          0
+          0
+
+ ELEMENT          652 with label "T3D2   R" and with nodes:
+       1085       1090
+  is expanded into a "C3D8I BR" element with topology:
+       1120       1174       1175       1121       1123       1177       1176       1122          0          0
+          0
+
+ ELEMENT          653 with label "T3D2   R" and with nodes:
+       1086       1091
+  is expanded into a "C3D8I BR" element with topology:
+       1129       1183       1184       1130       1132       1186       1185       1131          0          0
+          0
+
+ ELEMENT          654 with label "T3D2   R" and with nodes:
+       1086       1092
+  is expanded into a "C3D8I BR" element with topology:
+       1138       1192       1193       1139       1141       1195       1194       1140          0          0
+          0
+

@@ -1,0 +1,192 @@
+{
+  "agent": "opus",
+  "tool": "calculix",
+  "solved_by": "opus",
+  "solver": "CalculiX ccx 2.23, *FREQUENCY (Lanczos/ARPACK)",
+  "units": "SI (m, kg, N, Hz)",
+  "frame": "origin at tray center; +z up; tray mid-plane z=0.098 m; base z=0",
+  "mass_case": "bare tray, no ballast; emergent C3D8I solid mass ~3.086 kg",
+  "boundary_condition": "feet fixed; source plate not modeled",
+  "joint_status": "RIGID (truss two-force => moment-free/spherical; RBE3 distributing over bracket footprint)",
+  "frequencies_hz": [
+    85.269,
+    85.709,
+    182.378,
+    289.878,
+    336.966,
+    337.162,
+    337.592,
+    337.593,
+    337.602,
+    337.725
+  ],
+  "frequency_label": "PROVISIONAL UPPER BOUND (rigid joints; real compliant joints lower these)",
+  "mode_type": [
+    "suspension",
+    "suspension",
+    "suspension",
+    "suspension",
+    "tray-flex",
+    "tray-flex",
+    "suspension",
+    "tray-flex",
+    "tray-flex",
+    "tray-flex"
+  ],
+  "mode_diagnostics": [
+    {
+      "rigid_frac": 0.9781939684848302
+    },
+    {
+      "rigid_frac": 0.9837349098972782
+    },
+    {
+      "rigid_frac": 0.9996142884790825
+    },
+    {
+      "rigid_frac": 0.9285162943729789
+    },
+    {
+      "rigid_frac": 0.7097090425712609
+    },
+    {
+      "rigid_frac": 0.4601655017348718
+    },
+    {
+      "rigid_frac": 0.908360958782108
+    },
+    {
+      "rigid_frac": 0.37541513294880413
+    },
+    {
+      "rigid_frac": 0.7021516502929108
+    },
+    {
+      "rigid_frac": 0.44931372030770456
+    }
+  ],
+  "element_types": {
+    "tray": "C3D8I 8-node incompatible-mode hexahedron (accurate bending vs plain C3D8)",
+    "struts": "T3D2 3-D truss (two-force, moment-free spherical rod-end)",
+    "joints": "RBE3 distributing coupling (DCOUP3D) over rod-end bracket footprint; feet fixed"
+  },
+  "mesh": {
+    "tray_grid": "13x15x3 nodes, 336 C3D8I, 6 T3D2",
+    "target_h_mm": 22.0,
+    "nz_cells": 2,
+    "bracket_footprint_radius_m": 0.018
+  },
+  "near_degenerate_pairs": [
+    [
+      1,
+      2,
+      0.0052
+    ],
+    [
+      5,
+      6,
+      0.0006
+    ],
+    [
+      6,
+      7,
+      0.0013
+    ],
+    [
+      7,
+      8,
+      0.0
+    ],
+    [
+      8,
+      9,
+      0.0
+    ],
+    [
+      9,
+      10,
+      0.0004
+    ],
+    [
+      10,
+      11,
+      0.0003
+    ],
+    [
+      11,
+      12,
+      0.0028
+    ],
+    [
+      12,
+      13,
+      0.0008
+    ],
+    [
+      13,
+      14,
+      0.0001
+    ],
+    [
+      14,
+      15,
+      0.0008
+    ],
+    [
+      15,
+      16,
+      0.0034
+    ],
+    [
+      40,
+      41,
+      0.0344
+    ]
+  ],
+  "fixed_base_no_zero_modes": true,
+  "fixed_base_lowest_mode_hz": 85.269,
+  "note_dense_flex_cluster": "the tray is supported at only the 3 apex points (radius 110 mm); its 4 corners/edges overhang and produce a dense set of low-participation corner/edge-flap tray-flex modes near ~337 Hz. These are physical (not spurious): C3D8I incompatible-mode bending is softer/more accurate than locked full-integration H8, so it places the first tray-flex cluster below the JAX-plate (371 Hz) and TensorMesh locked-H8 (374 Hz) values.",
+  "integrity": "independent re-derivation; shares only shared/spec.py raw inputs; C3D8I solid tray + truss struts; no porting of K/M, eigen-results, or frequency tables.",
+  "mesh_convergence": {
+    "coarse_h30_hz": [
+      85.287,
+      85.731,
+      182.391,
+      290.438,
+      336.977,
+      337.183,
+      337.592,
+      337.593,
+      337.602,
+      337.73
+    ],
+    "baseline_h22_hz": [
+      85.269,
+      85.709,
+      182.378,
+      289.878,
+      336.966,
+      337.162,
+      337.592,
+      337.593,
+      337.602,
+      337.725
+    ],
+    "fine_h16_hz": [
+      82.931,
+      84.348,
+      176.315,
+      292.034,
+      336.999,
+      337.105,
+      337.592,
+      337.593,
+      337.602,
+      337.702
+    ],
+    "max_abs_shift_h22_to_h16_hz": 6.063,
+    "max_pct_shift_h22_to_h16": 3.32,
+    "note": "suspension modes (1-4) are nearly mesh-independent; the dense tray-flex cluster (>=mode 5) shifts more as the overhanging-corner bending resolves."
+  },
+  "runtime_s": 1.53
+}

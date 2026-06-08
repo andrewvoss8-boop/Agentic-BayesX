@@ -8,5 +8,6 @@ artifacts/.matplotlib/
 .venv_nuts/
 .venv/
 .venv*/
+.conda_calculix/
 
 artifacts/reports/context_compaction_lit_review_20260604/raw/

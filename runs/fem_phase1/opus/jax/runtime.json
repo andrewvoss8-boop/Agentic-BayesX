@@ -1,0 +1,14 @@
+{
+  "commands": [
+    {
+      "name": "baseline_solve",
+      "s": 0.8405709266662598
+    },
+    {
+      "name": "convergence_solve",
+      "s": 2.016880989074707
+    }
+  ],
+  "active_runtime_s": 2.86,
+  "elapsed_wallclock_s": 4.37
+}

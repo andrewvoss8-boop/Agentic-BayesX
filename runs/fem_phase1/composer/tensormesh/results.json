@@ -1,0 +1,214 @@
+{
+  "agent": "composer",
+  "tool": "tensormesh",
+  "solved_by": "agent",
+  "status": "solved",
+  "units": "SI: m, kg, N, Hz",
+  "frame": "Origin at tray center; +z up; tray mid-plane at z=0.098 m; base feet at z=0 fixed.",
+  "mass_case": "bare tray, no ballast",
+  "element_types": {
+    "tray": "C3D8-style linear solid hexahedra on discretize.TensorMesh",
+    "struts": "3D axial truss/two-force members for spherical rod ends",
+    "joints": "explicit joint nodes tied to tray by k=1e9 N/m translational springs"
+  },
+  "mesh": {
+    "nxy": 6,
+    "nodes": 110,
+    "tray_nodes": 98,
+    "hex_elements": 36,
+    "truss_elements": 6,
+    "joint_spring_sets": 6,
+    "strut_lengths_m": [
+      0.19615809950139712,
+      0.19615809950139712,
+      0.19658331567048107,
+      0.19659348921060432,
+      0.19659348921060432,
+      0.19658331567048107
+    ],
+    "tray_mass_kg_from_geometry": 3.0860999999999996,
+    "strut_area_m2": 2.199114857512855e-05,
+    "discretize_version": "0.10.0"
+  },
+  "coarse_mesh": {
+    "nxy": 4,
+    "nodes": 62,
+    "tray_nodes": 50,
+    "hex_elements": 16,
+    "truss_elements": 6,
+    "joint_spring_sets": 6,
+    "strut_lengths_m": [
+      0.19615809950139712,
+      0.19615809950139712,
+      0.19658331567048107,
+      0.19659348921060432,
+      0.19659348921060432,
+      0.19658331567048107
+    ],
+    "tray_mass_kg_from_geometry": 3.0860999999999996,
+    "strut_area_m2": 2.199114857512855e-05,
+    "discretize_version": "0.10.0"
+  },
+  "frequencies": [
+    {
+      "mode": 1,
+      "frequency_hz": 301.8295403110093,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 2,
+      "frequency_hz": 349.56258679204535,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 3,
+      "frequency_hz": 362.1548106025284,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 4,
+      "frequency_hz": 914.7174774868596,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 5,
+      "frequency_hz": 1435.686414840123,
+      "mode_type": "suspension"
+    },
+    {
+      "mode": 6,
+      "frequency_hz": 1732.5541142329757,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 7,
+      "frequency_hz": 1836.6845144505564,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 8,
+      "frequency_hz": 2443.619512285606,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 9,
+      "frequency_hz": 3069.324275989891,
+      "mode_type": "tray-flex"
+    },
+    {
+      "mode": 10,
+      "frequency_hz": 3414.316544663411,
+      "mode_type": "tray-flex"
+    }
+  ],
+  "mesh_convergence": [
+    {
+      "mode": 1,
+      "coarse_hz": 303.23217459053785,
+      "fine_hz": 301.8295403110093,
+      "relative_shift_percent": -0.46471073642536
+    },
+    {
+      "mode": 2,
+      "coarse_hz": 367.2275686911007,
+      "fine_hz": 349.56258679204535,
+      "relative_shift_percent": -5.053453248863916
+    },
+    {
+      "mode": 3,
+      "coarse_hz": 369.656211952132,
+      "fine_hz": 362.1548106025284,
+      "relative_shift_percent": -2.071324508191205
+    },
+    {
+      "mode": 4,
+      "coarse_hz": 1713.922957291475,
+      "fine_hz": 914.7174774868596,
+      "relative_shift_percent": -87.37183878899882
+    },
+    {
+      "mode": 5,
+      "coarse_hz": 1936.322220508472,
+      "fine_hz": 1435.686414840123,
+      "relative_shift_percent": -34.87083255044239
+    },
+    {
+      "mode": 6,
+      "coarse_hz": 2243.466891551262,
+      "fine_hz": 1732.5541142329757,
+      "relative_shift_percent": -29.488993914886986
+    },
+    {
+      "mode": 7,
+      "coarse_hz": 2584.293562914783,
+      "fine_hz": 1836.6845144505564,
+      "relative_shift_percent": -40.70427134231451
+    },
+    {
+      "mode": 8,
+      "coarse_hz": 3543.98732339193,
+      "fine_hz": 2443.619512285606,
+      "relative_shift_percent": -45.03024327535796
+    },
+    {
+      "mode": 9,
+      "coarse_hz": 4563.870071746678,
+      "fine_hz": 3069.324275989891,
+      "relative_shift_percent": -48.69299107455109
+    },
+    {
+      "mode": 10,
+      "coarse_hz": 4730.553993733345,
+      "fine_hz": 3414.316544663411,
+      "relative_shift_percent": -38.550539525317824
+    }
+  ],
+  "self_checks": {
+    "fixed_base_no_zero_modes": true,
+    "first_frequency_hz": 301.8295403110093,
+    "near_degenerate_pair_gaps_percent": [
+      {
+        "modes": [
+          1,
+          2
+        ],
+        "gap_percent": 13.655078742575057
+      },
+      {
+        "modes": [
+          3,
+          4
+        ],
+        "gap_percent": 60.40801454919932
+      },
+      {
+        "modes": [
+          5,
+          6
+        ],
+        "gap_percent": 17.13468554627397
+      },
+      {
+        "modes": [
+          7,
+          8
+        ],
+        "gap_percent": 24.837540983103434
+      },
+      {
+        "modes": [
+          9,
+          10
+        ],
+        "gap_percent": 10.10428483008538
+      }
+    ],
+    "strut_self_modes": "not represented by axial truss members; this build uses the bar-member option.",
+    "rigid_joint_frequencies_are_provisional_upper_bound": true
+  },
+  "limitations": [
+    "Linear C3D8 solids with one element through thickness can shear-lock tray bending; mesh-convergence shifts are reported.",
+    "Axial truss struts match spherical two-force behavior but do not capture strut bending self-modes."
+  ],
+  "runtime_s": 2.049457542
+}

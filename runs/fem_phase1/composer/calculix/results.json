@@ -1,0 +1,98 @@
+{
+  "agent": "composer",
+  "tool": "calculix",
+  "units": "SI (m, kg, N, Hz)",
+  "coordinate_frame": "origin at tray center; +z up",
+  "mass_case": "bare tray solid C3D8",
+  "provisional_upper_bound_note": "rigid joints; T3D2 struts",
+  "solved_by": "agent",
+  "run_note": "",
+  "element_types": {
+    "tray": "C3D8",
+    "struts": "T3D2 beam/truss"
+  },
+  "mesh": {
+    "n_div": 8,
+    "nelem_c3d8": 100,
+    "nelem_strut": 6
+  },
+  "modes": [
+    {
+      "index": 1,
+      "frequency_hz": 82.02165,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 2,
+      "frequency_hz": 83.11444,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 3,
+      "frequency_hz": 182.3218,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 4,
+      "frequency_hz": 294.9356,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 5,
+      "frequency_hz": 337.3041,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 6,
+      "frequency_hz": 337.3397,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 7,
+      "frequency_hz": 337.6601,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 8,
+      "frequency_hz": 337.6609,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 9,
+      "frequency_hz": 337.6691,
+      "mode_type": "pending_shape_review"
+    },
+    {
+      "index": 10,
+      "frequency_hz": 337.779,
+      "mode_type": "pending_shape_review"
+    }
+  ],
+  "runtime_s": 0.14007878303527832,
+  "symmetry_degenerate_pairs_hz": [
+    [
+      82.02165,
+      83.11444
+    ],
+    [
+      337.3041,
+      337.3397
+    ],
+    [
+      337.3397,
+      337.6601
+    ],
+    [
+      337.6601,
+      337.6609
+    ],
+    [
+      337.6609,
+      337.6691
+    ],
+    [
+      337.6691,
+      337.779
+    ]
+  ]
+}

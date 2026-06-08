@@ -1,0 +1,52 @@
+{
+  "agent": "opus",
+  "tool": "nastran_deck",
+  "solved_by": "human",
+  "units": "SI (m, kg, N, Hz)",
+  "frame": "origin at tray center; +z up; tray mid-plane z=0.098 m; base z=0",
+  "mass_case": "bare tray, no ballast; PSHELL t=12.7 mm => ~3.086 kg",
+  "boundary_condition": "feet fixed (SPC1 123456); source plate not modeled",
+  "joint_status": "RIGID (stiff CBUSH K1=K2=K3=1e9 N/m, K4=K5=K6=0 => moment-free); CROD struts are two-force/moment-free",
+  "frequencies_hz": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "frequency_label": "PROVISIONAL UPPER BOUND (rigid joints) -- to be filled by human Femap solve",
+  "mode_type": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "element_types": {
+    "tray": "CQUAD4 shell (PSHELL t=12.7 mm), MAT1 6061-T6",
+    "struts": "CROD two-force rod (PROD: tube area + torsion J); faithful spherical rod-end",
+    "joints": "CBUSH stiff translational (PBUSH K1-3=1e9, K4-6=0 => moment-free); explicit joint node",
+    "base": "SPC1 123456 at the 6 feet"
+  },
+  "solver_setup": "SOL 103 normal modes; EIGRL,100 first 10 modes; PARAM,AUTOSPC,YES",
+  "mesh": {
+    "tray_grid": "13x15 shell grids, 168 CQUAD4, 6 CROD, 6 CBUSH",
+    "target_h_mm": 22.0
+  },
+  "mesh_convergence": null,
+  "near_degenerate_pairs": null,
+  "deck_file": "model/model.bdf",
+  "run_instructions": "RUN_IN_FEMAP.md",
+  "note": "Deck only -- agent did NOT solve. The human runs SOL 103 in Femap/Nastran, then fills frequencies_hz, mode_type, near_degenerate_pairs, and mesh_convergence. Do NOT invent solved numbers.",
+  "integrity": "independent re-derivation; shares only shared/spec.py raw inputs; CQUAD4 shell + CROD + CBUSH deck; no porting of K/M, eigen-results, or frequency tables."
+}

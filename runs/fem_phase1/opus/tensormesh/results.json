@@ -1,0 +1,155 @@
+{
+  "agent": "opus",
+  "tool": "tensormesh",
+  "solved_by": "opus",
+  "units": "SI (m, kg, N, Hz)",
+  "frame": "origin at tray center; +z up; tray mid-plane z=0.098 m; base z=0",
+  "mass_case": "bare tray, no ballast; emergent solid-hex mass ~3.086 kg",
+  "boundary_condition": "feet fixed (grounded via stiff joint springs)",
+  "joint_status": "RIGID (k_trans=1e9 N/m, translational => moment-free)",
+  "frequencies_hz": [
+    84.714,
+    85.391,
+    181.114,
+    293.014,
+    374.514,
+    421.806,
+    543.94,
+    1016.499,
+    1137.266,
+    1407.432
+  ],
+  "frequency_label": "PROVISIONAL UPPER BOUND (rigid joints; real compliant joints lower these)",
+  "mode_type": [
+    "suspension",
+    "suspension",
+    "suspension",
+    "suspension",
+    "tray-flex",
+    "tray-flex",
+    "tray-flex",
+    "tray-flex",
+    "tray-flex",
+    "tray-flex"
+  ],
+  "mode_diagnostics": [
+    {
+      "rigid_frac": 0.979290413193298,
+      "tray_amp": 9.77757841453055,
+      "strut_amp": 1.2763590471003665
+    },
+    {
+      "rigid_frac": 0.992402086464798,
+      "tray_amp": 9.814953954296822,
+      "strut_amp": 1.2850494898730926
+    },
+    {
+      "rigid_frac": 0.9996205253430059,
+      "tray_amp": 10.011713642196685,
+      "strut_amp": 1.243282672163418
+    },
+    {
+      "rigid_frac": 0.9538451886608159,
+      "tray_amp": 9.393188491426995,
+      "strut_amp": 1.3074544237849588
+    },
+    {
+      "rigid_frac": 0.3669975508488683,
+      "tray_amp": 9.887604199959656,
+      "strut_amp": 0.9195098333769144
+    },
+    {
+      "rigid_frac": 0.8418399236795584,
+      "tray_amp": 9.65024187105858,
+      "strut_amp": 1.194402919065537
+    },
+    {
+      "rigid_frac": 0.1710776532346977,
+      "tray_amp": 10.371701525445314,
+      "strut_amp": 1.1999865880756562
+    },
+    {
+      "rigid_frac": 0.008670441706168708,
+      "tray_amp": 10.27460018406341,
+      "strut_amp": 1.3552989384602474
+    },
+    {
+      "rigid_frac": 0.012428997310087286,
+      "tray_amp": 10.425249429859225,
+      "strut_amp": 0.3800342981280047
+    },
+    {
+      "rigid_frac": 0.004190822672267003,
+      "tray_amp": 10.830956378218433,
+      "strut_amp": 1.3600854352841378
+    }
+  ],
+  "element_types": {
+    "tray": "solid trilinear hexahedron H8 (3-D isotropic elasticity, 2x2x2 Gauss, full integration) on discretize.TensorMesh",
+    "struts": "3-D bar/truss (axial two-force member; matches spherical-jointed push-rod), consistent mass",
+    "joints": "explicit stiff translational springs (k=1e9 N/m)"
+  },
+  "mesh": {
+    "tray_grid": "17x16x3 nodes, 480 H8 elements",
+    "dof_total": 2484,
+    "target_h_mm": 20.0,
+    "nz_cells": 2
+  },
+  "mesh_convergence": {
+    "coarse_h30_hz": [
+      84.795,
+      85.557,
+      181.152,
+      296.11,
+      379.181,
+      433.594,
+      547.898,
+      1269.761,
+      1415.599,
+      1583.522
+    ],
+    "baseline_h20_hz": [
+      84.714,
+      85.391,
+      181.114,
+      293.014,
+      374.514,
+      421.806,
+      543.94,
+      1016.499,
+      1137.266,
+      1407.432
+    ],
+    "fine_h12_hz": [
+      84.626,
+      85.201,
+      181.056,
+      290.208,
+      370.527,
+      408.252,
+      540.331,
+      853.166,
+      982.185,
+      1271.373
+    ],
+    "max_abs_shift_h20_to_h12_hz": 163.333,
+    "max_pct_shift_h20_to_h12": 16.07,
+    "note": "trilinear H8 full integration is stiff in bending (shear locking); tray-flex modes converge from above and are the most mesh-sensitive. Suspension modes (rigid-tray) are nearly mesh-independent."
+  },
+  "near_degenerate_pairs": [
+    [
+      1,
+      2,
+      0.008
+    ],
+    [
+      10,
+      11,
+      0.0063
+    ]
+  ],
+  "fixed_base_no_zero_modes": true,
+  "fixed_base_lowest_mode_hz": 84.714,
+  "integrity": "independent re-derivation; shares only shared/spec.py raw inputs; solid-hex tray + truss struts deliberately differ from the JAX plate-shell + beam build; no porting of K/M, eigen-results, or frequency tables.",
+  "runtime_s": 10.03
+}

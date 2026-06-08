@@ -1,0 +1,84 @@
+{
+  "agent": "composer",
+  "tool": "nastran_deck",
+  "solved_by": "human",
+  "status": "deck_generated_not_solved",
+  "units": "SI: m, kg, N, Hz",
+  "frame": "Origin at tray center; +z up; tray mid-plane at z=0.098 m; base feet at z=0 fixed.",
+  "mass_case": "bare tray, no ballast",
+  "element_types": {
+    "tray": "Nastran CQUAD4 shell plate with PSHELL thickness 12.7 mm",
+    "struts": "CROD axial rods for spherical rod-end two-force behavior",
+    "joints": "explicit apex joint GRID tied to nearest tray shell nodes by RBE2 translational components 123"
+  },
+  "mesh": {
+    "nodes": 61,
+    "tray_nodes": 49,
+    "cquad4_elements": 36,
+    "crod_elements": 6,
+    "rbe2_joint_ties": 6,
+    "tray_mass_kg_from_geometry": 3.0860999999999996,
+    "strut_area_m2": 2.199114857512855e-05
+  },
+  "frequencies": [
+    {
+      "mode": 1,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 2,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 3,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 4,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 5,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 6,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 7,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 8,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 9,
+      "frequency_hz": null,
+      "mode_type": null
+    },
+    {
+      "mode": 10,
+      "frequency_hz": null,
+      "mode_type": null
+    }
+  ],
+  "mesh_convergence": [],
+  "self_checks": {
+    "fixed_base_no_zero_modes": null,
+    "near_degenerate_pair_gaps_percent": [],
+    "rigid_joint_frequencies_are_provisional_upper_bound": true,
+    "human_check": "Run SOL 103 in Femap/Nastran; then check no zero modes, near-degenerate symmetry pairs, and first ~10 mode-shape labels."
+  },
+  "deck_file": "model/model.bdf",
+  "runtime_s": 0.185759958
+}

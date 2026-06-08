@@ -1,5 +1,29 @@
 # Todo
 
+## 2026-06-08 FEM Phase 1 — OPUS BUILDER (active; all 4 tools)
+Card: docs/lab/fem_phase1_runner_prompt.md. Workspace: runs/fem_phase1/opus/<tool>/.
+Decisions: runs/fem_phase1/opus/decisions_log.md.
+- [x] Env: isolated .venv (numpy1.26.4/scipy1.10.1/jax0.4.30/discretize0.10.0/matplotlib);
+      CalculiX 2.23 via conda-forge at $HOME/miniforge3_bayesx_femphase1/envs/ccx.
+- [ ] shared/spec.py — node coords + materials + sections + masses + BCs (RAW INPUTS ONLY).
+- [ ] JAX: flat-shell tray (ACM plate + Q4 membrane) + 3D beam struts + stiff joint springs;
+      dense eigh; differentiable structure; self-check plate vs textbook SS plate.
+- [ ] TensorMesh: H8 solid hex tray on discretize + 3D bar struts; sparse eigsh; convergence.
+- [ ] CalculiX: C3D8I solid tray + B31 struts + spring/MPC joints; *FREQUENCY; parse .dat/.frd.
+- [ ] Nastran DECK: CQUAD4 shell + CBEAM + CBUSH + SPC; SOL103 EIGRL; RUN_IN_FEMAP.md (human solve).
+- [ ] per tool: undeformed render + first ~6 mode shapes; results.json; README; runtime.json.
+- [ ] self-checks (no near-zero modes/degenerate pairs/convergence/mode-type ID/provisional UB).
+- [ ] runs/fem_phase1/opus/files_changed.md.
+- INTEGRITY: identical inputs, independent K/M per tool, no porting/tuning.
+
+## 2026-06-08 FEM Phase 1 — COMPOSER BUILDER (Cursor execution pass)
+Workspace: `runs/fem_phase1/composer/<tool>/`.
+- [x] TensorMesh build replayed: C3D8-style solid tray on `discretize.TensorMesh`, axial truss struts, sparse eigensolve, figures, `results.json`, convergence.
+- [x] JAX build replayed: JAX-evaluated C3D8-style dense solid tray, axial truss struts, dense generalized eigensolve, figures, `results.json`, convergence.
+- [x] CalculiX build generated: `.inp`, geometry figure, blocked solver status because `ccx` was not available.
+- [x] Femap/Nastran deck generated: `model.bdf`, `RUN_IN_FEMAP.md`, geometry figure, null solved-frequency fields for human solve.
+- [x] `run_all.sh`, `priority_deliverables.md`, `decisions_log.md`, and `files_changed.md` updated.
+
 ## 2026-06-05 Project Vision + IP Decision + Framing Challenger
 - [ ] Send corrected Beth email (research credits + MA 511; disclosure-vs-publication timing) and get the IP-ownership determination in writing.
 - [ ] Finalize and share the Bilionis proposal (Purdue-supported patent framing; rewrite patent section to co-inventor-friendly).
@@ -7,6 +31,13 @@
 - [ ] Design the spatial-fails-vs-property-keyed-succeeds demo on the subscale tray (the Sec 103 non-obviousness evidence) under NUTS/HMC + convergence gate.
 - [ ] Run a real patent-database / freedom-to-operate search (Google Patents / Lens.org) or route to an attorney.
 - [ ] Review/steer the master-generated FRAMING CHALLENGER prompt (vs Stage 3 / Round 3 framing) BEFORE the human deploys it.
+
+## 2026-06-08 FEM Phase 1 (Composer agent)
+- [x] JAX: C3D8 + truss, results.json, figures (~82/83 Hz pair)
+- [x] TensorMesh-style: TET4 + scipy.sparse eigsh
+- [x] CalculiX deck; ccx not on PATH
+- [x] Nastran deck + RUN_IN_FEMAP.md (human solve)
+- [x] files_changed.md
 
 ## Active
 - [ ] Keep harness checkers immutable during trials.

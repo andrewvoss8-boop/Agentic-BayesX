@@ -1,5 +1,8 @@
 # Lessons Learned
 
+## 2026-06-08 FEM Phase 1 external solver availability
+- A "solved" external-FEM cell is not solved just because the deck generator exists. On the Composer Phase-1 run, Python dependencies could be installed locally, but `ccx`/`ccx_2.21` was not available and Homebrew was absent, so the CalculiX cell honestly stopped at deck generation. Future runner prompts or setup scripts should check required external solvers before launch and record either the exact solver path/version or an explicit blocked status in `results.json`.
+
 ## 2026-06-02 (competitive full-experiment pressure test, round 1)
 - A priority deliverable can be lost to a spec gap, not disobedience. The human's most-wanted figure (coupled interface-acceleration RESPONSE PSD vs the test spec, per flight, as a GIF) was never produced because the written ask said only "input spectra," which all three runners correctly read as the forcing INPUT. The phrasing traced verbatim from the human's own master prompt through the task card to every runner prompt unchanged. Durable lesson: the lead must restate and confirm the human's priority deliverables and resolve ambiguous terms (e.g. "input spectra" = forcing input or system response?) BEFORE dispatching runners. Encode as a problem-class-general priority-clarification gate, never as a problem-specific plot requirement in the harness.
 - A passing checker is not a converged posterior. Two of three runners "passed" (artifact existence + immutable hashes + a nuts_active boolean) while their own diagnostics showed R-hat up to 1.83/4.57 and ESS in single digits. Add a convergence gate over ALL sampled variables (including raw hierarchical latents), not just headline marginals.

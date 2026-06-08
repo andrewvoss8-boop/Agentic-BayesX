@@ -1,0 +1,21 @@
+{
+  "NX": 13,
+  "NY": 15,
+  "NZ": 3,
+  "nhex": 336,
+  "ntruss": 6,
+  "target_h_mm": 22.0,
+  "nmodes": 16,
+  "r_patch_m": 0.018,
+  "patch_sizes": {
+    "A1_b90": 3,
+    "A2_b210": 3,
+    "A3_b330": 3
+  },
+  "ref_nodes": {
+    "A1_b90": 586,
+    "A2_b210": 587,
+    "A3_b330": 588
+  },
+  "joint": "RBE3 distributing coupling over rod-end bracket footprint (r_patch); truss two-force struts (moment-free); feet fixed"
+}

@@ -121,37 +121,10 @@ explain any divergence (mesh, element theory, lumped vs shell tray, transcriptio
 ## Support-agent prompts (applied AFTER the three builds land)
 
 ### Reviewer agent (Opus — integrity + technical + gates)
-```text
-You are the REVIEWER for the Phase-1 hexapod FEM cross-build. Read FEM_architecture.md
-(PHASE 1 + AGENT ASSIGNMENT), this runner prompt, the apparent-mass-convention-postmortem
-and log-frequency-plot-gp-postmortem, and each builder's runs/fem_phase1/<tool>/. Do NOT
-trust reported numbers — recompute/spot-check from saved artifacts. Check and record
-PASS/FAIL per item:
-1. INDEPENDENCE: inspect code across each agent's four tools AND across agents per tool.
-   Inputs must be identical (shared spec), but no agent ported assembled K/M, eigen-results,
-   or frequency tables between its own tools or copied another agent's results, and did not
-   tune one build to match another. Assemble the 3-agent x 4-tool matrix.
-2. Units + coordinate frame stated and consistent; geometry matches the shared node table.
-3. First ~10 frequencies recomputed from each artifact; the 3-agent x 4-tool table built;
-   cross-build spread per mode characterized. NO pre-loaded target to match. You MAY, AFTER
-   tabulating, run a reproducible analytical 6-DOF script as ONE provisional cross-reference
-   (rigid-joint upper bound) — labeled provisional, not ground truth.
-4. Near-degenerate mode pairs reported across builds; a missing pair flags a broken-symmetry
-   geometry bug (this is a geometry check, not a frequency-match check).
-5. Mode-shape MAC matrix between tools; matched-mode diagonal > 0.9; report mismatches.
-6. Suspension vs tray-flex vs strut-self modes identified from the SHAPES and labeled (by
-   shape, not by an assumed frequency).
-7. Element type + mesh density stated AND a convergence/refinement check shown (refine,
-   report frequency shift) — Discretization Resolution gate.
-8. Rigid-joint frequencies labeled PROVISIONAL UPPER BOUND.
-9. Any FRF-style plot: log frequency axis, no dB; any "apparent mass" carries the
-   numerator/denominator/coordinate/BC contract (else FAIL per the postmortem).
-10. Method summary present; one-command replay works (B, C); no success claim without the
-    table + figures actually produced.
-Output: artifacts/reports/fem_phase1_review_<date>/review.md + checks.json (per-gate
-PASS/FAIL, recomputed numbers, and the cross-tool table + MAC). Do not fix the builds;
-report. Surface the worst disagreement next to any "agreement" claim.
-```
+Full spec: **docs/lab/fem_phase1_reviewer_prompt.md** (recompute-from-artifacts, the 3x4
+matrix on both axes, MAC, the G1-G10 gate checklist, integrity findings, Femap handling,
+disagreement interpretation, and the verdict). Run it as a fresh Opus session after the
+builds land and after at least one Femap deck is solved.
 
 ### Project-framing agent (Opus)
 ```text
