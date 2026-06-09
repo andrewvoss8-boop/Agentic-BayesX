@@ -1,0 +1,19 @@
+UTC 2026-06-09T10:27:41Z
+Disk before FEM download:
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   198Gi   5.8Gi    98%    1.4M   61M    2%   /System/Volumes/Data
+/dev/disk3s5   228Gi   198Gi   5.8Gi    98%    1.4M   61M    2%   /System/Volumes/Data
+URL: https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip
+
+HTTP_STATUS:200
+SIZE_DOWNLOAD:2025227962
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip
+artifacts/reports/shocksat_statfem_runner_20260609/sources/FEM_and_CAD.zip: Zip archive data, at least v2.0 to extract, compression method=store
+-rw-r--r--@ 1 avoss  361602666   1.9G Jun  9 07:08 artifacts/reports/shocksat_statfem_runner_20260609/sources/FEM_and_CAD.zip
+c917ce2f933b8bdc60cfc9d6c7c9467088788e4d08fb4a2183ea87e2f70e62bb  artifacts/reports/shocksat_statfem_runner_20260609/sources/FEM_and_CAD.zip
+Disk after FEM download:
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   184Gi    20Gi    91%    1.2M  208M    1%   /System/Volumes/Data
+/dev/disk3s5   228Gi   184Gi    20Gi    91%    1.2M  208M    1%   /System/Volumes/Data
+UTC 2026-06-09T11:09:01Z

@@ -1,0 +1,18 @@
+{
+  "active_runtime_s": 18.588934,
+  "all_required_files_exist": true,
+  "elapsed_wallclock_s": 18.588934,
+  "free_boundary_documented": true,
+  "frf_twin_not_overclaimed": true,
+  "image_legibility_basic_pass": true,
+  "missing_files": [],
+  "missing_third_fea_not_fabricated": true,
+  "modal_statfem_v1_active": true,
+  "nastran_parser_reports_model": true,
+  "pass": true,
+  "percent_errors_computed": true,
+  "published_test_and_fea_modes_present": true,
+  "source_metadata_has_checksums": true,
+  "source_nas_fetched": true,
+  "source_pdf_fetched": true
+}

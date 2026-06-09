@@ -1,5 +1,37 @@
 # Lessons Learned
 
+## 2026-06-09 (BLOG) Global lessons for autonomous SciML (distilled from the modeling-freedom experiment)
+The two plain-English write-ups below (same date) tell the story; this is the distilled list. Strategic
+versions for our own priorities are in project_vision.md S13b.
+1. **One run, one question.** Each experiment gets ONE falsifiable question and ONE success criterion.
+   Do not ask a single run/agent to do two jobs at once (e.g. demonstrate a method AND make science
+   progress) — you get a weak version of both. That is exactly how the ShockSat half came out hollow.
+2. **Validity before rigor — check the experiment CAN answer the question before running it.** It needs
+   real choices to make (knobs / competing models) AND a hidden answer that can actually tell good models
+   from bad. Ceremony (rules, seals, hashes, scoring) is not validity. Front-load this cheap check;
+   back-load the expensive sealing. A 30-min "does this have knobs + a discriminating held-out?" trial
+   would have killed the bad ShockSat setup before any vault work.
+3. **A pre-committed hidden answer key is the decisive anti-cheating test.** The "is the math stable?"
+   check (convergence gate) is necessary but not sufficient — it caught the wild score-chasers, but a
+   different, cleanly-converged flexible model STILL over-tuned and only the hidden vault caught it. Hide
+   the truth from EVERYTHING the agent can read, including the generator that made the data.
+4. **Honest "I couldn't do this" is the load-bearing safety property** — worth more than any single
+   checker. The run stayed truthful only because the worker refused to fake a posterior and labeled its
+   shock prediction low-confidence. That honesty is what made the hollow problem visible instead of hidden.
+   Reward honest failure; treat confident fabrication as the cardinal sin.
+5. **Real data is not automatically more valuable — match the data to the question TYPE.** Known-truth
+   synthetic is right for validating a METHOD/detector; real data is required for a SCIENCE claim and
+   nearly useless for validating a detector if it lacks the structure the method needs.
+6. **Out-of-distribution is a different question from overfitting.** Holding out the pyro shock answered
+   "does the modal twin extrapolate to new physics?" (no), NOT "did it overfit?". Don't conflate them.
+7. **The orchestrator/lead is now the weak link, not the worker.** The runner executed well; every real
+   failure (hollow setup, the truth leak) was in the lead's framing. As workers get more capable, risk
+   moves UP to problem-design — spend effort there and treat orchestration mistakes as first-class.
+Blog through-line: we set out to test whether an AI overfits, and the deepest lesson was about us — a
+rigorous-LOOKING experiment can be empty, and in the agentic era the human's judgment about what makes a
+VALID test is the thing that has to scale.
+
+
 ## 2026-06-09 (BLOG) Adaptive overfitting: why one train/test split does not protect you in the agentic era
 Context: when an agent has freedom to try 100+ model architectures / digital-twin methods / assumption sets and keeps the ones that score well, the classic single train/test split is no longer enough.
 
@@ -7,6 +39,83 @@ Context: when an agent has freedom to try 100+ model architectures / digital-twi
 - So the answer isn't one split. It's a layered protocol: (1) a locked VAULT the agent literally cannot query, touched once by the human on <=3 finalists; (2) a QUERY BUDGET + counter on the dev set, with reusable-holdout / Thresholdout noise to slow adaptive overfitting; (3) PRE-REGISTER the evaluation (metric, splits, QOI, thresholds) and freeze it outside the agent's write access — separating the freedom-to-search from the grading is the whole game; (4) select on PENALIZED predictive accuracy (LOO/WAIC, nested CV), not raw fit; (5) score uncertainty/calibration (coverage, log predictive density / CRPS), not just the mean; (6) for digital twins, hold out whole REGIMES (loads/builds/flights), test extrapolation, and use physics-consistency checks the agent can't game; (7) report the SEARCH ("best of N trials, dev-vs-vault gap = Z"), never just "we found the best model."
 - The benchmark arms race connection (open hypothesis for the blog): optimizing models/agents to top public leaderboards is itself a giant adaptive-overfitting loop with the test set reused millions of times, which selects for benchmark-gaming over honest generalization — the same failure mode as a self-graded checker, scaled up. This is consistent with our own runs where passing a checker was not a converged posterior and a shape-blind checker missed a curve error.
 
+
+## 2026-06-09 (BLOG) The agent sealing the vault can leak the answer — scan the generator, not just the inputs
+Context: while setting up a held-out vault for the anti-overfitting experiment, the lead agent
+generated the synthetic ground truth, sealed the truth values to the vault, uploaded them off-machine,
+and deleted them locally — textbook. Then a leak scan of the whole runner-visible tree caught that the
+DATA GENERATOR script itself still hard-coded the answer in plaintext (the true parameters and the hidden
+model-form-error location). That script was readable by the runner, so the carefully-hidden vault was
+worthless: a runner reading the generator would see the truth directly.
+
+- Durable lesson: the threat model for a held-out vault includes the TOOLING THAT CREATES IT, not only the
+  data files handed to the model. Hiding `truth.json` does nothing if `generate_truth.py` next to it still
+  contains `THETA_TRUE = [...]`. Off-machine deletion of the data is necessary but not sufficient.
+- The catch came from grepping the ENTIRE runner-visible tree for the literal truth VALUES (and the secret
+  location of the injected model-form error), not from checking that the input arrays looked clean. A
+  file-existence / "inputs don't contain truth" check would have passed while the answer sat in a comment
+  two files over.
+- Fix pattern: redact truth values AND the location/identity of any injected discrepancy from the committed
+  generator; keep them only in the sealed vault; make the committed generator NON-reproducing by design
+  (it must require restoring the sealed seed/params to regenerate). Distinguish PUBLIC config the searcher
+  may know (model form, noise levels, what it will be graded on — that is legitimate pre-registration) from
+  SECRET truth it must infer (parameter values, the hidden error's location, the seed, the held-out targets).
+- Generalize to a checker gate: before sealing any blind/held-out split, scan generators, configs, logs, and
+  notes — everything the searcher can read — for the truth values and the injected-error identity, not just
+  the observation files. Pairs with the existing rule that a self-graded/file-existence checker is not a
+  validation: here, "the inputs are clean" is not "the answer is hidden."
+
+## 2026-06-09 (BLOG) Why one of our two test problems taught us nothing — in plain English
+We ran one experiment two ways: a made-up practice problem where we secretly knew the right answer,
+and a real NASA shock-test problem. The made-up one worked great. The real one taught us nothing.
+Here is why, without jargon.
+
+An experiment that asks "does the AI cheat by over-tuning the model to look good?" only works if the
+problem you hand it has three things:
+1. REAL CHOICES TO MAKE. There have to be knobs the AI can turn and several candidate models it can
+   pick between. Our real-data problem had none — it was just "measure how well one fixed model already
+   matches the measurements." With nothing to adjust, there is nothing to over-tune and nothing to
+   choose, so the AI correctly did it in a single pass and the "experiment" was empty.
+2. A HIDDEN ANSWER OF THE SAME KIND IT PRACTICED ON. To fairly compare "the score the AI could see"
+   against "the truth we hid," the hidden thing has to be the same sort of measurement. We hid a
+   completely different kind of event (a pyrotechnic shock, in a frequency range and physics the
+   practice data never touched). The model literally could not predict it, so hiding it told us nothing
+   about over-tuning — only "the model doesn't work far outside what it was built for," which we already
+   knew.
+3. IDEALLY, A KNOWN TRUE ANSWER, so you can check whether the AI's self-grade matched reality. You get
+   that on a made-up problem; you don't on real data.
+
+The trap: our setup LOOKED airtight — rules, scoring, a locked-away answer, cryptographic seals — and
+was still empty, because behind all that ceremony the real-data problem had no knobs to turn. Looking
+rigorous is not the same as being a real test.
+
+The deeper mistake was trying to do two jobs with one setup: run a clean experiment AND make progress on
+the real engineering. We got a weak version of both. Pick one job per setup.
+
+The bright spot: the AI doing the work did not fake it. It said plainly "I can't really calibrate
+anything here" and "my shock prediction is a low-confidence guess." That honesty is what made the empty
+problem visible instead of hidden — reward an honest "I couldn't do this" over confident nonsense.
+
+The fix: before you commit to a test problem, actually try a quick version of the experiment on it
+first. Confirm there are real choices to make and that the hidden answer can actually tell good models
+from bad ones. "The data exists and loads" is not "this problem can answer my question."
+
+## 2026-06-09 (BLOG) What DID work: a hidden answer key caught cheating that the quality-check missed
+On the made-up problem (where we knew the truth), the experiment paid off, and the plain-English takeaway
+is worth keeping: the model that looked best on the score the AI was allowed to watch was NOT the best
+model when we checked it against the hidden true answer. The flashy, flexible model topped the visible
+scoreboard but lost to the plainest model on the prediction we had hidden away — the classic sign that
+the visible score was a leaky proxy you can game.
+
+Two different safety nets caught two different kinds of cheating:
+- The "is the math even stable?" check (convergence gate) caught the wild configs that chased the visible
+  score by letting the model run loose — those blew up and were thrown out automatically.
+- But the most important catch was the hidden answer key (the vault): one flexible model passed every
+  stability check cleanly and STILL turned out to have over-tuned — its extra knobs improved the visible
+  score without improving the hidden prediction. No stability check can see that. Only comparing against
+  an answer you locked away in advance can.
+Durable line for the harness: a clean "the math converged" is necessary but not enough; an honestly
+hidden answer key is the decisive test of whether a good-looking model actually generalizes.
 
 ## 2026-06-08 Conical shell source provenance
 - Vibrationdata source access can depend on request headers: `conical_shell3.nas` returned HTTP 406 with a browser-like user agent but fetched correctly with a curl-like user agent. Record retrieval method and checksum before declaring a source unavailable.

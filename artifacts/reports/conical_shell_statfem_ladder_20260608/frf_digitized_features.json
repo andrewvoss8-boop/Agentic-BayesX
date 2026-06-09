@@ -1,0 +1,52 @@
+{
+  "features": [
+    {
+      "digitization": "coarse visual from PDF plot",
+      "figure": "Figure 2",
+      "frequency_hz": 97.6,
+      "hit_location": "12 inches from aft end",
+      "magnitude_g_per_lbf": 17.5,
+      "magnitude_uncertainty_g_per_lbf": 3.0,
+      "response": "aft accelerometer"
+    },
+    {
+      "digitization": "coarse visual from PDF plot",
+      "figure": "Figure 2",
+      "frequency_hz": 278.0,
+      "hit_location": "12 inches from aft end",
+      "magnitude_g_per_lbf": 2.4,
+      "magnitude_uncertainty_g_per_lbf": 0.8,
+      "response": "aft accelerometer"
+    },
+    {
+      "digitization": "coarse visual from PDF plot",
+      "figure": "Figure 2",
+      "frequency_hz": 529.0,
+      "hit_location": "12 inches from aft end",
+      "magnitude_g_per_lbf": 1.6,
+      "magnitude_uncertainty_g_per_lbf": 0.7,
+      "response": "aft accelerometer"
+    },
+    {
+      "digitization": "coarse visual from PDF plot",
+      "figure": "Figure 3",
+      "frequency_hz": 97.6,
+      "hit_location": "12 inches from aft end",
+      "magnitude_g_per_lbf": 8.5,
+      "magnitude_uncertainty_g_per_lbf": 2.0,
+      "response": "midpoint accelerometer"
+    },
+    {
+      "digitization": "coarse visual from PDF plot",
+      "figure": "Figure 3",
+      "frequency_hz": 278.0,
+      "hit_location": "12 inches from aft end",
+      "magnitude_g_per_lbf": 2.0,
+      "magnitude_uncertainty_g_per_lbf": 0.8,
+      "response": "midpoint accelerometer"
+    }
+  ],
+  "raw_ordinates_available": false,
+  "source": "Vibrationdata conical_shell.pdf Figures 2-4, coarse visual digitization",
+  "warning": "Peak magnitudes are secondary visual estimates with intentionally large uncertainty; do not use them as raw FRF data."
+}

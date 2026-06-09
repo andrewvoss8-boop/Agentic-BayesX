@@ -1,0 +1,37 @@
+{
+  "calibration_modes": [
+    1,
+    2
+  ],
+  "holdout_modes": [
+    4
+  ],
+  "holdout_predictions": [
+    {
+      "base_human_nastran_hz": 524.29385,
+      "covered_by_90pct_interval": true,
+      "mode": 4,
+      "observed_hz": 529.0,
+      "predictive_q05_hz": 497.62775835571375,
+      "predictive_q50_hz": 527.6993547893547,
+      "predictive_q95_hz": 557.7799142450534
+    }
+  ],
+  "method": "exact grid quadrature over one stiffness-scale parameter; not NUTS/HMC",
+  "model_equation": "f_obs_i = sqrt(k_scale) * f_fem_i + discrepancy_i + observation_noise_i",
+  "posterior": {
+    "frequency_scale_mean": 1.006551010085991,
+    "k_scale_mean": 1.0133492863875435,
+    "k_scale_q05": 0.966272776585552,
+    "k_scale_q50": 1.0130330166737171,
+    "k_scale_q95": 1.060933318466979,
+    "logk_grid_count": 2401
+  },
+  "reason_not_nuts_hmc": "The v1 posterior has one parameter and is evaluated exactly on a dense grid, which is more transparent than sampling. Do not generalize this to future multi-parameter updates.",
+  "sigma_disc_rel": 0.02,
+  "sigma_obs_rel": 0.004,
+  "statfem_active": true,
+  "unmatched_modes_not_used": [
+    3
+  ]
+}

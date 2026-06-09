@@ -1,0 +1,259 @@
+{
+  "flexible_pairs": [
+    {
+      "frequencies_hz": [
+        97.6352,
+        97.63943
+      ],
+      "mean_hz": 97.637315,
+      "modes": [
+        7,
+        8
+      ],
+      "pair_index": 1,
+      "split_percent_of_mean": 0.004332360020353734
+    },
+    {
+      "frequencies_hz": [
+        274.0179,
+        274.018
+      ],
+      "mean_hz": 274.01795,
+      "modes": [
+        9,
+        10
+      ],
+      "pair_index": 2,
+      "split_percent_of_mean": 3.649395960187935e-05
+    },
+    {
+      "frequencies_hz": [
+        524.2933,
+        524.2944
+      ],
+      "mean_hz": 524.29385,
+      "modes": [
+        11,
+        12
+      ],
+      "pair_index": 3,
+      "split_percent_of_mean": 0.0002098060085868356
+    },
+    {
+      "frequencies_hz": [
+        728.8799,
+        729.0839
+      ],
+      "mean_hz": 728.9819,
+      "modes": [
+        13,
+        14
+      ],
+      "pair_index": 4,
+      "split_percent_of_mean": 0.027984233902097005
+    },
+    {
+      "frequencies_hz": [
+        764.5729,
+        764.578
+      ],
+      "mean_hz": 764.57545,
+      "modes": [
+        15,
+        16
+      ],
+      "pair_index": 5,
+      "split_percent_of_mean": 0.0006670368503161264
+    },
+    {
+      "frequencies_hz": [
+        847.8621,
+        847.8621
+      ],
+      "mean_hz": 847.8621,
+      "modes": [
+        17,
+        18
+      ],
+      "pair_index": 6,
+      "split_percent_of_mean": 0.0
+    },
+    {
+      "frequencies_hz": [
+        939.8801,
+        939.8808
+      ],
+      "mean_hz": 939.88045,
+      "modes": [
+        19,
+        20
+      ],
+      "pair_index": 7,
+      "split_percent_of_mean": 7.447755723099244e-05
+    }
+  ],
+  "interpretation": "six near-zero free-free rigid-body modes followed by nearly degenerate flexible shell mode pairs",
+  "modes": [
+    {
+      "family": "rigid",
+      "frequency_hz": 0.000356985,
+      "label": "free-free rigid-body numerical zero",
+      "mode": 1,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "rigid",
+      "frequency_hz": 0.000247458,
+      "label": "free-free rigid-body numerical zero",
+      "mode": 2,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "rigid",
+      "frequency_hz": 0.000177593,
+      "label": "free-free rigid-body numerical zero",
+      "mode": 3,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "rigid",
+      "frequency_hz": 9.00516e-05,
+      "label": "free-free rigid-body numerical zero",
+      "mode": 4,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "rigid",
+      "frequency_hz": 0.000163569,
+      "label": "free-free rigid-body numerical zero",
+      "mode": 5,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "rigid",
+      "frequency_hz": 0.000260647,
+      "label": "free-free rigid-body numerical zero",
+      "mode": 6,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 97.6352,
+      "label": "flexible shell mode pair",
+      "mode": 7,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 97.63943,
+      "label": "flexible shell mode pair",
+      "mode": 8,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 274.0179,
+      "label": "flexible shell mode pair",
+      "mode": 9,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 274.018,
+      "label": "flexible shell mode pair",
+      "mode": 10,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 524.2933,
+      "label": "flexible shell mode pair",
+      "mode": 11,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 524.2944,
+      "label": "flexible shell mode pair",
+      "mode": 12,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 728.8799,
+      "label": "flexible shell mode pair",
+      "mode": 13,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 729.0839,
+      "label": "flexible shell mode pair",
+      "mode": 14,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 764.5729,
+      "label": "flexible shell mode pair",
+      "mode": 15,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 764.578,
+      "label": "flexible shell mode pair",
+      "mode": 16,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 847.8621,
+      "label": "flexible shell mode pair",
+      "mode": 17,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 847.8621,
+      "label": "flexible shell mode pair",
+      "mode": 18,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 939.8801,
+      "label": "flexible shell mode pair",
+      "mode": 19,
+      "source": "human Femap/Nastran screenshot"
+    },
+    {
+      "family": "shell",
+      "frequency_hz": 939.8808,
+      "label": "flexible shell mode pair",
+      "mode": 20,
+      "source": "human Femap/Nastran screenshot"
+    }
+  ],
+  "screenshots": [
+    {
+      "cached_path": "artifacts/reports/conical_shell_statfem_ladder_20260608/sources/human_femap_IMG_9814.jpg",
+      "role": "human-supplied Femap/Nastran screenshot provenance",
+      "sha256": "73868b8d9612b3a27d9e617b5b9badd838c089fd6b2abf28b2dafb73f56d9cff",
+      "source_path": "/Users/avoss/Downloads/IMG_9814.jpg"
+    },
+    {
+      "cached_path": "artifacts/reports/conical_shell_statfem_ladder_20260608/sources/human_femap_IMG_9815.jpg",
+      "role": "human-supplied Femap/Nastran screenshot provenance",
+      "sha256": "6b291cd48e270eb02fe6c2d94f6abffc8ed576cf62161254bbea2bd60312aecd",
+      "source_path": "/Users/avoss/Downloads/IMG_9815.jpg"
+    },
+    {
+      "cached_path": "artifacts/reports/conical_shell_statfem_ladder_20260608/sources/human_femap_IMG_9816.jpg",
+      "role": "human-supplied Femap/Nastran screenshot provenance",
+      "sha256": "703068a58c03d25ebde9595d424cd56dc244952ef25b8852e4ae14f4e1ccd3e5",
+      "source_path": "/Users/avoss/Downloads/IMG_9816.jpg"
+    }
+  ],
+  "source": "Human-provided Femap/Nastran run screenshots, 2026-06-08"
+}

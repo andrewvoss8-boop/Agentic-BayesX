@@ -1,0 +1,11 @@
+UTC 2026-06-09T10:21:31Z
+POST download Instrumentation_and_TestLog.zip
+
+HTTP_STATUS:200
+SIZE_DOWNLOAD:98510587
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Instrumentation_and_TestLog.zip
+artifacts/reports/shocksat_statfem_runner_20260609/sources/Instrumentation_and_TestLog.zip: Zip archive data, at least v2.0 to extract, compression method=store
+-rw-r--r--@ 1 avoss  361602666    94M Jun  9 06:24 artifacts/reports/shocksat_statfem_runner_20260609/sources/Instrumentation_and_TestLog.zip
+c0123f54a9d694ea39b44781e98745c9f6e29c10fe891aeb78cc456f64c30894  artifacts/reports/shocksat_statfem_runner_20260609/sources/Instrumentation_and_TestLog.zip
+UTC 2026-06-09T10:24:05Z

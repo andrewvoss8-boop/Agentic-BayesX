@@ -1,0 +1,8 @@
+{
+  "active_runtime_note": "active_runtime_s is capped at elapsed_wallclock_s to respect the harness invariant; raw logged command real-time sum is also recorded.",
+  "active_runtime_s": 1245.9094719982147,
+  "elapsed_wallclock_s": 10930.923181,
+  "generated_utc": "2026-06-09T13:21:37+00:00",
+  "raw_sum_logged_real_s": 1225.26,
+  "script_elapsed_s": 20.64947199821472
+}

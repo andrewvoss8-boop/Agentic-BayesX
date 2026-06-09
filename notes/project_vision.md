@@ -214,6 +214,59 @@ Patentability strategy:
 - Claim family: independent claim (A inside a testing/updating workflow) + dependents (B orthogonality
   trick, C placement, force-limit/apparent-mass use case).
 
+### 5.5 Substructuring (FBS / CMS): the structural backbone of the 7004C center (2026-06-08)
+NASA-HDBK-7004C force limiting IS a two-substructure impedance problem — source apparent mass vs load
+apparent mass at the interface — so substructuring is NOT a side branch; it is the native math of this
+project.
+- **FBS (Frequency-Based Substructuring) = the headline framework.** Data-driven, frequency-domain,
+  7004C-native (apparent mass M=F/a is an FBS primitive). It hands you the interface force (the netCG QOI)
+  from the coupled admittance, and fits the "characterize source + load by apparent mass, couple, read off
+  the interface force" workflow — including when the source is known only as an apparent mass / test
+  environment.
+- **CMS (Craig-Bampton) = the tractability tool.** Reduce each component FEM to interface + modal DOF so
+  the StatFEM calibration stays affordable. Use BOTH: CMS to reduce, FBS to couple.
+- **Why this solves several hard problems at once.** FBS lives in measured admittance (OUTPUT) space —
+  exactly where the discrepancy must sit (orthogonal to the component stiffness, per 5.2 / Stage 3). It
+  also LOCALIZES the model-form error to the interface (where the model is most wrong AND where the load
+  lives AND where 7004C operates) -> fewer, physically-meaningful, more-identifiable parameters.
+- **Novelty placement (do / don't).** DON'T claim FBS or CMS (mature: Craig-Bampton 1968; LM-FBS de
+  Klerk/Rixen/Voormeeren 2008) or "uncertainty in FBS" generally (Trainotti/Haussler/Rixen already
+  propagate measurement uncertainty). DO consider: a StatFEM-calibrated model-form discrepancy AT THE
+  INTERFACE ADMITTANCE -> a probabilistic, data-updated FORCE-LIMITED interface load (the 7004C endpoint)
+  under unknown forcing, held-out validated. This promotes idea C in patent_ideas_ranked.md from a side
+  idea to the structural backbone.
+- **6-interface-point practicality.** Multi-point interfaces in experimental FBS are handled by the
+  Virtual Point Transformation (van der Seijs / Rixen): reduce each interface location's sensor/impact
+  cluster to a 6-DOF virtual point (assuming the local interface region is rigid), giving collocated
+  forces/responses and the rotational DOF you cannot measure directly; LM-FBS then enforces compatibility
+  + equilibrium over ALL interface DOF. The interface inversion (B Y B^T) is the ill-conditioned,
+  noise-amplifying weak point -> exactly where the Bayesian/StatFEM uncertainty treatment adds value.
+- **Honest caution.** The automotive-NVH joint-impedance reservoir is unsearched; Bayesian/stochastic
+  substructuring may have prior art -> needs the targeted scan before any novelty claim.
+
+### 5.6 What we CLAIM vs. the value story (2026-06-08, after Session-3 scan + the Siemens TPA find)
+A flight decision (launch go/no-go) and "using a model to set a force limit" are NOT the invention:
+- People already set model-based force limits and make launch calls from correlated FEMs every day; the
+  Siemens/LMS patent US8731868B2 (Transfer Path Analysis, active ~2030) even claims DETERMINISTIC
+  model-based INTERFACE-LOAD characterization from operational data. So "first to use StatFEM/Bayesian for
+  an existing task" = obvious substitution (KSR) = NOT patentable; and a decision is not a patentable step
+  (and is Sec 101-exposed).
+- THE CLAIM is the specific ARTIFACT + the technical effect it delivers that the prior art cannot: a force
+  limit (the NOTCH programmed into the shaker controller for a qual test) produced as a CALIBRATED
+  POSTERIOR that (a) separates interface model-form error from physics (the orthogonal interface-admittance
+  discrepancy), (b) under unknown operational forcing, (c) with uncertainty VALIDATED by held-out coverage
+  -> a probabilistic, discrepancy-aware, defensibly-less-conservative notch.
+- Non-obviousness is NOT "we added error bars." It is the demonstrated technical effect: deterministic
+  (Marchand/Kolaini/C^2) and measurement-noise (Trainotti/Rixen) methods CANNOT separate model error from
+  physics, so any naive uncertainty they add is wrong (the confounding/ridge); ours passes held-out
+  coverage, enabling a less-conservative-yet-defensible limit. That is the "unexpected result."
+- Design-around target = US8731868B2 (Siemens TPA): claim around it by REQUIRING the three things it lacks
+  — (1) a calibrated model-form discrepancy at the interface admittance, (2) a probabilistic
+  force-limit/apparent-mass output, (3) held-out coverage as the acceptance criterion.
+- The flight decision / lighter-and-safer structures stays the WHY-IT-MATTERS (value story), NEVER the
+  claim.
+- Hard gate: no held-out result on real data -> no patent.
+
 ## 6. Scope — the singular objective
 Per Bilionis's mandate (one objective, not ten loosely connected things):
 > Take StatFEM onto the track: build and validate a dynamic digital twin of a realistic aerospace part
@@ -313,6 +366,34 @@ The unifying object that serves almost everyone: the subscale tray testbed with 
 - Prior-art read was literature-only; NO patent-database / freedom-to-operate search has been run.
 - IP ownership determination is PENDING (Beth). Treat ownership/share statements as provisional.
 - Not legal advice; Sec 101 eligibility is the most uncertain area -> attorney review required.
+
+## 13b. Global lessons for how we run autonomous SciML (added 2026-06-09, from the modeling-freedom experiment)
+These shape our top-level priorities, not just one run. (Full plain-English write-ups in lessons-learned.md.)
+1. **One run, one question.** Each experiment gets a single falsifiable question and a single success
+   criterion. Do NOT bundle a method-demonstration with a science deliverable in one run — you get a weak
+   version of both (this is exactly how the ShockSat half came out hollow).
+2. **Validity before rigor: prove the experiment CAN answer the question before running it.** A run needs
+   genuine free choices (parameters/competing models) AND a held-out check that can actually tell good
+   models from bad. Ceremony (rules, seals, hashes, scoring) is not validity. Make "can this experiment
+   discriminate hypotheses?" a standing gate alongside the convergence gate — our real trust gate
+   (held-out calibration on real data) must clear it or it will repeat the hollow ShockSat setup.
+3. **A pre-committed hidden answer key is the decisive trust test.** The convergence/quality gate is
+   necessary but not sufficient; only an honestly hidden held-out answer caught the gate-passing,
+   flexible-model overfit. This validates the project's "held-out calibration is the trust gate" stance —
+   and it must be hidden from EVERYTHING the agent can read, including the code/generator that made it.
+4. **Honest "I couldn't do this" is the load-bearing safety property** — worth more than any single checker.
+   The run stayed truthful only because the worker refused to fake a StatFEM posterior and labeled its
+   shock prediction low-confidence. Keep honest-labeling a non-negotiable top-level rule.
+5. **Real data is not automatically more valuable — match the data to the question's TYPE.** Known-truth
+   synthetic is right for validating a METHOD/detector; real data is required for a SCIENCE claim. Don't
+   reach for real data reflexively when the question is methodological.
+6. **Out-of-distribution ≠ overfitting test.** Holding out the pyro regime answered "does the modal twin
+   extrapolate to new physics?" (no — 99.9% of shock energy sits above its ~152 Hz valid band), NOT "did
+   it overfit?". The unknown-forcing/marginalization work must be designed for the regime where the QOI
+   lives, not assumed to carry from the modal band.
+7. **The orchestrator is now the weak link, not the worker.** The runner executed well; every real failure
+   (hollow setup, the truth leak) was in the LEAD's framing. As workers get more capable, risk moves up to
+   problem-design — spend disproportionate effort there and treat orchestration mistakes as first-class.
 
 ## 13. Immediate next actions
 1. **Get real (or realistic-validated) inputs.** (a) Plan/begin the McCallie subscale tray test; and/or

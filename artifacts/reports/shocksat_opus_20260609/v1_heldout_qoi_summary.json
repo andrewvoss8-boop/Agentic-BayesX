@@ -1,0 +1,119 @@
+{
+  "provenance": {
+    "predictions_from": "modeling_freedom_experiment_20260609/runner_opus/finalists.json (modal-correlation StatFEM v1, NUTS, locked before vault access)",
+    "finalists_sha256_matches_pin": true,
+    "actuals_from": "sealed synthetic vault truth.json (truth-known) + graded ShockSat pyro",
+    "not_refit_to_truth": true
+  },
+  "qoi_definition": "peak |H_{out,in}(w)| over 10-600 Hz, m/N, zeta=0.02",
+  "theta_true": [
+    1.15,
+    0.88,
+    1.06,
+    0.8
+  ],
+  "rows": [
+    {
+      "finalist": "F1_freqshape_full",
+      "discrepancy": "freqshape",
+      "qoi": "QOI_ref (in-regime, 11<-0)",
+      "regime": "in",
+      "pred_median": 8.230294317963128e-06,
+      "pred_sd": 5.956113228796984e-07,
+      "ci95_lo": 7.062917567126542e-06,
+      "ci95_hi": 9.397671068799713e-06,
+      "actual": 9.127630960117557e-06,
+      "err_pct": -9.830991700642471,
+      "ci95_covers_actual": true,
+      "gate_pass": true,
+      "max_rhat": 1.014587074084647,
+      "min_ess": 370.45281794050806
+    },
+    {
+      "finalist": "F1_freqshape_full",
+      "discrepancy": "freqshape",
+      "qoi": "QOI_heldout (OOD, 5<-8)",
+      "regime": "ood",
+      "pred_median": 4.597993753283653e-05,
+      "pred_sd": 3.0388901200990317e-06,
+      "ci95_lo": 4.002382229748675e-05,
+      "ci95_hi": 5.193605276818631e-05,
+      "actual": 3.247254921977341e-05,
+      "err_pct": 41.5963287071965,
+      "ci95_covers_actual": false,
+      "gate_pass": true,
+      "max_rhat": 1.014587074084647,
+      "min_ess": 370.45281794050806
+    },
+    {
+      "finalist": "F2_freq_full",
+      "discrepancy": "freq",
+      "qoi": "QOI_ref (in-regime, 11<-0)",
+      "regime": "in",
+      "pred_median": 8.319086972369139e-06,
+      "pred_sd": 6.238663225292673e-07,
+      "ci95_lo": 7.0963314393993866e-06,
+      "ci95_hi": 9.541842505338891e-06,
+      "actual": 9.127630960117557e-06,
+      "err_pct": -8.85820199437604,
+      "ci95_covers_actual": true,
+      "gate_pass": true,
+      "max_rhat": 1.0156479302814336,
+      "min_ess": 448.4260578241273
+    },
+    {
+      "finalist": "F2_freq_full",
+      "discrepancy": "freq",
+      "qoi": "QOI_heldout (OOD, 5<-8)",
+      "regime": "ood",
+      "pred_median": 4.676661994688197e-05,
+      "pred_sd": 3.357682944405932e-06,
+      "ci95_lo": 4.018568225243234e-05,
+      "ci95_hi": 5.33475576413316e-05,
+      "actual": 3.247254921977341e-05,
+      "err_pct": 44.01893621091046,
+      "ci95_covers_actual": false,
+      "gate_pass": true,
+      "max_rhat": 1.0156479302814336,
+      "min_ess": 448.4260578241273
+    },
+    {
+      "finalist": "F3_none_full",
+      "discrepancy": "none",
+      "qoi": "QOI_ref (in-regime, 11<-0)",
+      "regime": "in",
+      "pred_median": 8.114102220728734e-06,
+      "pred_sd": 2.2175173920249148e-07,
+      "ci95_lo": 7.679476794954462e-06,
+      "ci95_hi": 8.548727646503005e-06,
+      "actual": 9.127630960117557e-06,
+      "err_pct": -11.10396272392426,
+      "ci95_covers_actual": false,
+      "gate_pass": true,
+      "max_rhat": 1.002427820181849,
+      "min_ess": 1053.7742951421412
+    },
+    {
+      "finalist": "F3_none_full",
+      "discrepancy": "none",
+      "qoi": "QOI_heldout (OOD, 5<-8)",
+      "regime": "ood",
+      "pred_median": 4.5479684902406426e-05,
+      "pred_sd": 1.0743747729301184e-06,
+      "ci95_lo": 4.337394902495522e-05,
+      "ci95_hi": 4.758542077985763e-05,
+      "actual": 3.247254921977341e-05,
+      "err_pct": 40.055788643512535,
+      "ci95_covers_actual": false,
+      "gate_pass": true,
+      "max_rhat": 1.002427820181849,
+      "min_ess": 1053.7742951421412
+    }
+  ],
+  "headline": {
+    "in_regime_qoi": "finalists under-predict by ~9-11%; F1's wider CI covers truth, F3's narrow CI misses (overconfident).",
+    "ood_heldout_qoi": "ALL finalists over-predict the held-out OOD QOI by ~40-44% and NO 95% CI covers the sealed actual -> a converged, gate-passing twin is confidently wrong out of its calibrated regime.",
+    "real_pyro": "directional only; 99.9% of pyro energy is above the twin band -> twin cannot resolve the regime (committed direction confirmed)."
+  },
+  "convergence_note": "All three finalists PASS the gate (max R-hat <=1.016, min ESS >=370, 0 divergences); coverage failure on OOD QOI is a generalization failure, NOT a sampling failure -- the held-out set is the only detector of it."
+}

@@ -11,3 +11,10 @@ artifacts/.matplotlib/
 .conda_calculix/
 
 artifacts/reports/context_compaction_lit_review_20260604/raw/
+
+# Large fetched raw data: keep provenance via download_log.md + SHA256 manifests, not git.
+# Whitelist small cited source sets explicitly (last matching pattern wins for the dir).
+artifacts/reports/*/sources/
+artifacts/reports/*/extracted/
+!artifacts/reports/conical_shell_statfem_ladder_20260608/sources/
+artifacts/reports/*/logs/*.bin

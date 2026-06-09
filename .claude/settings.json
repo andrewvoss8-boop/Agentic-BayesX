@@ -1,4 +1,16 @@
 {
-  "agent": "lead"
+  "agent": "lead",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=\"$CLAUDE_FILE_PATH\"; case \"$f\" in *.py) if grep -lqE 'matplotlib|pyplot|seaborn|plotly' \"$f\" 2>/dev/null; then echo '[tufte] plotting file touched — run: python3 .claude/skills/tufte-data-graphics/scripts/tufte_lint.py '\"$f\"' and apply the SKILL.md checklist'; python3 .claude/skills/tufte-data-graphics/scripts/tufte_lint.py \"$f\"; fi;; esac"
+          }
+        ]
+      }
+    ]
+  }
 }
-

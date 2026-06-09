@@ -1,0 +1,388 @@
+{
+  "datasets": [
+    {
+      "archive": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip",
+      "channels": [
+        1,
+        50,
+        87,
+        116
+      ],
+      "configuration": "tap_impact",
+      "extraction": {
+        "archive": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip",
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/Test07_ImpactHammer_990x/Test07_impacthammer_990x_001_5_20_2021_2_32_37 PM.mat",
+        "mat_members_count": 4,
+        "member": "Test07_ImpactHammer_990x/Test07_impacthammer_990x_001_5_20_2021_2_32_37 PM.mat",
+        "status": "extracted"
+      },
+      "label": "hammer_impact_test07_990x",
+      "load_status": "loaded",
+      "mat_format": "per_recorder_struct",
+      "mat_variables_loaded": [
+        "Recorder1",
+        "Recorder50",
+        "Recorder87",
+        "Recorder116"
+      ],
+      "preferred_regex": "Test.*001.*\\.mat$|\\.mat$",
+      "sample_rate_warnings": [
+        "DAQ channel 1 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s.",
+        "DAQ channel 50 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s.",
+        "DAQ channel 87 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s.",
+        "DAQ channel 116 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s."
+      ],
+      "whosmat_count": 128,
+      "whosmat_sample": [
+        {
+          "class": "struct",
+          "name": "Recorder1",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder2",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder3",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder4",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder5",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder6",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder7",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder8",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder9",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder10",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder11",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder12",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test_Data_Pyro_NSI_NSD.zip",
+      "channels": [
+        1,
+        50,
+        87,
+        100
+      ],
+      "configuration": "nsi_nsd_parametric",
+      "extraction": {
+        "archive": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test_Data_Pyro_NSI_NSD.zip",
+        "central_directory_status": "unavailable_or_parse_failed: BadZipFile('File is not a zip file')",
+        "compressed_size": 183204999,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat",
+        "mat_members_count": 1,
+        "member": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat",
+        "partial_archive_bytes_available": 251658240,
+        "status": "extracted_from_partial_zip_local_header",
+        "uncompressed_size": 384386176
+      },
+      "label": "pyro_nsd1",
+      "load_status": "loaded",
+      "mat_format": "per_recorder_struct",
+      "mat_variables_loaded": [
+        "Recorder1",
+        "Recorder50",
+        "Recorder87",
+        "Recorder100"
+      ],
+      "preferred_regex": "NSD1.*\\.mat$|990x001.*\\.mat$|\\.mat$",
+      "sample_rate_warnings": [
+        "DAQ channel 1 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s.",
+        "DAQ channel 50 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s.",
+        "DAQ channel 87 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s.",
+        "DAQ channel 100 MAT dXstep gives 250000 samples/s; README general value is 100000 samples/s."
+      ],
+      "whosmat_count": 128,
+      "whosmat_sample": [
+        {
+          "class": "struct",
+          "name": "Recorder1",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder2",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder3",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder4",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder5",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder6",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder7",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder8",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder9",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder10",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder11",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "class": "struct",
+          "name": "Recorder12",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_utc": "2026-06-09T13:21:28+00:00",
+  "processing": {
+    "baseline_removal": "subtract pre-window/channel mean before plotting and PSD",
+    "filtering": "no digital bandpass filter in first plot",
+    "psd_method": "scipy.signal.welch with Hann window; nperseg chosen from available length",
+    "srs": "not computed in this first subset; PSD is used instead of SRS"
+  },
+  "readme_sample_rate_sps": 100000,
+  "sample_rate_policy": "use per-file MAT dXstep when present; README value is treated as general metadata, not a forced override",
+  "selected_channels": [
+    {
+      "daq_channel": 1,
+      "dataset": "hammer_impact_test07_990x",
+      "description": "Source +X Face -Y Edge (100k)",
+      "mat_channel_name": "Ch A01",
+      "record_title": "Test07_impacthammer_990x_001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "2021-05-20 19:32:47.811952",
+      "time_window_s": 0.05,
+      "units": "g"
+    },
+    {
+      "daq_channel": 50,
+      "dataset": "hammer_impact_test07_990x",
+      "description": "Steel Box Below Bolted Joint (+X Center)",
+      "mat_channel_name": "Ch B18",
+      "record_title": "Test07_impacthammer_990x_001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "2021-05-20 19:32:47.811952",
+      "time_window_s": 0.05,
+      "units": "g"
+    },
+    {
+      "daq_channel": 87,
+      "dataset": "hammer_impact_test07_990x",
+      "description": "Cross Center",
+      "mat_channel_name": "Ch C23",
+      "record_title": "Test07_impacthammer_990x_001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "2021-05-20 19:32:47.811952",
+      "time_window_s": 0.05,
+      "units": "g"
+    },
+    {
+      "daq_channel": 116,
+      "dataset": "hammer_impact_test07_990x",
+      "description": "Hammer",
+      "mat_channel_name": "Ch D20",
+      "record_title": "Test07_impacthammer_990x_001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "2021-05-20 19:32:47.811952",
+      "time_window_s": 0.05,
+      "units": "lb"
+    },
+    {
+      "daq_channel": 1,
+      "dataset": "pyro_nsd1",
+      "description": "Source +X Face -Y Edge (100k)",
+      "mat_channel_name": "Ch A01",
+      "record_title": "Pyro_NSD_990x001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "0001-01-01 00:00:00.000000",
+      "time_window_s": 0.05,
+      "units": "g"
+    },
+    {
+      "daq_channel": 50,
+      "dataset": "pyro_nsd1",
+      "description": "Steel Box Below Bolted Joint (+X Center)",
+      "mat_channel_name": "Ch B18",
+      "record_title": "Pyro_NSD_990x001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "0001-01-01 00:00:00.000000",
+      "time_window_s": 0.05,
+      "units": "g"
+    },
+    {
+      "daq_channel": 87,
+      "dataset": "pyro_nsd1",
+      "description": "Cross Center",
+      "mat_channel_name": "Ch C23",
+      "record_title": "Pyro_NSD_990x001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "0001-01-01 00:00:00.000000",
+      "time_window_s": 0.05,
+      "units": "g"
+    },
+    {
+      "daq_channel": 100,
+      "dataset": "pyro_nsd1",
+      "description": "Mass Top (+X)",
+      "mat_channel_name": "Ch D04",
+      "record_title": "Pyro_NSD_990x001",
+      "sample_interval_s": 4e-06,
+      "sample_rate_source": "MAT Segments.Data.dXstep",
+      "sample_rate_sps": 250000.0,
+      "time_of_first_sample": "0001-01-01 00:00:00.000000",
+      "time_window_s": 0.05,
+      "units": "g"
+    }
+  ],
+  "status": "plotted"
+}

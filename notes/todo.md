@@ -1,5 +1,22 @@
 # Todo
 
+## 2026-06-09 ShockSat StatFEM Runner
+Workspace: `artifacts/reports/shocksat_statfem_runner_20260609/`.
+- [x] Phase 0: write priority deliverables, question framing, decisions log, and re-grounding state.
+- [x] Phase 1: fetch ShockSat README, overview PDF, and Instrumentation/TestLog zip with provenance; disk-check and attempt header/range/listing for larger archives.
+- [x] Phase 2: inventory fetched archives with sizes, SHA256 checksums, archive listings, extraction status, and minimum extracted working subset.
+- [x] Phase 3: audit FEM/CAD package if fetched or document precise blocker; identify solver/file formats, units, node/element/material metadata when parseable.
+- [x] Phase 4: extract instrumentation/test-log channel map and test metadata before plotting time histories.
+- [x] Phase 5: generate first measured-data plots only after units/sample rates/channel map are credible.
+- [x] Phase 6: write quantity contracts for acceleration, SRS, FRF, cross-channel transfer, modal frequency, mode shape/MAC, observation, and QOI.
+- [x] Phase 7: write FEM/test alignment assessment with supported comparisons and blockers.
+- [x] Phase 8: write StatFEM digital-twin v1 launch definition with observations, inferred variables, discrepancy, QOI, and held-out validation.
+- [x] Phase 9: implement a checked StatFEM stub only if likelihood inputs and validation support it; otherwise stop at launch definition. Decision: stopped at launch definition because FRF/MAC likelihood inputs and held-out validation are not ready.
+- [x] Phase 10: write the review packet, manifest, checker report, runtime accounting, and one-command replay.
+- [x] ShockSat next action: extract/parse NASA correlation FRF assets and compute hammer accelerance FRFs from Test07 force channel 116 to selected response channels, then map those response channels to verified FEM grids for the first held-out FRF comparison. Result: FRF diagnostic computed and mapped, but low coherence and NASA/Test07 grid-convention mismatch keep it out of the likelihood.
+- [x] ShockSat next action: recover more valid hammer hits/full Test07 archive and source-location metadata, then average impact FRFs and reconcile 9900001-style shock grids with NASA 11101/11110 SOL 111 correlation grids before any FEM/test FRF overlay. Result: full Test07 archive fetched and verified; four MAT hammer hits loaded and averaged; source metadata recorded; low coherence and source/grid convention mismatch still block FEM/test overlay.
+- [ ] ShockSat next action: build an explicit Test07 source/response mapping audit that reconciles physical TestLog impact points and 9900001-style response grids with NASA SOL 111 force grids 11101X/11110Y and modal-test response grids; only then attempt a FEM/test FRF overlay.
+
 ## 2026-06-08 Pre-test sensitivity / FIM identifiability analysis (Opus tray FEM) — SPEC PENDING
 Artifact-backed answer to "how many parameters can the scrappy test support" + experiment design.
 - [ ] On the Opus Phase-1 tray FEM (runs/fem_phase1/opus/), define the candidate parameter menu

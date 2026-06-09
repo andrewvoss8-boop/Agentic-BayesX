@@ -1,0 +1,175 @@
+{
+  "rows": [
+    {
+      "assumption": "Shell thickness",
+      "rationale": "Published preliminary FEM value.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "inch",
+      "value": 0.1,
+      "where_used": "FEM metadata, sensitivity"
+    },
+    {
+      "assumption": "Young modulus",
+      "rationale": "Adjusted in the preliminary FEM so the fundamental matched test.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "lbf/in^2",
+      "value": 16317180.0,
+      "where_used": "FEM metadata, digital-twin launch"
+    },
+    {
+      "assumption": "Poisson ratio",
+      "rationale": "Published preliminary FEM value.",
+      "sensitivity_priority": "low",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "dimensionless",
+      "value": 0.33,
+      "where_used": "FEM metadata"
+    },
+    {
+      "assumption": "Mass density",
+      "rationale": "Published preliminary FEM value; report writes lbf sec^2/in but shell density units are interpreted in inch-lbf-second consistency.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "lbf*s^2/in^4",
+      "value": 0.000126941,
+      "where_used": "FEM metadata, sensitivity"
+    },
+    {
+      "assumption": "Overall length",
+      "rationale": "Published approximate radome length.",
+      "sensitivity_priority": "medium",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "inch",
+      "value": 45.0,
+      "where_used": "geometry check"
+    },
+    {
+      "assumption": "Base diameter",
+      "rationale": "Published approximate base diameter.",
+      "sensitivity_priority": "medium",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "inch",
+      "value": 14.0,
+      "where_used": "geometry check"
+    },
+    {
+      "assumption": "Boundary condition",
+      "rationale": "Radome rested on compliant foam; preliminary FEM omitted foam.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF test configuration",
+      "units": "categorical",
+      "value": "approximately free-free",
+      "where_used": "comparison, digital-twin launch"
+    },
+    {
+      "assumption": "Fundamental damping",
+      "rationale": "Measured first-mode damping; not enough to infer a damping curve.",
+      "sensitivity_priority": "medium",
+      "source": "Vibrationdata PDF introduction/damping section",
+      "units": "percent critical",
+      "value": 0.6,
+      "where_used": "digital-twin launch"
+    },
+    {
+      "assumption": "Measured modes",
+      "rationale": "Published modal-test frequencies used as observed data.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Table 1",
+      "units": "Hz",
+      "value": [
+        97.6,
+        278.0,
+        429.0,
+        529.0
+      ],
+      "where_used": "FEM-vs-test comparison"
+    },
+    {
+      "assumption": "Published preliminary FEA modes",
+      "rationale": "Published FEM values; missing third mode retained as missing, not filled.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Table 1",
+      "units": "Hz",
+      "value": [
+        97.6,
+        274.0,
+        null,
+        523.0
+      ],
+      "where_used": "FEM-vs-test comparison"
+    },
+    {
+      "assumption": "Human Femap/Nastran flexible pair means",
+      "rationale": "Local solve evidence: six near-zero rigid-body modes followed by nearly degenerate flexible shell pairs.",
+      "sensitivity_priority": "high",
+      "source": "Human-supplied Femap/Nastran screenshots",
+      "units": "Hz",
+      "value": [
+        97.637315,
+        274.01795,
+        524.29385,
+        728.9819,
+        764.57545,
+        847.8621,
+        939.88045
+      ],
+      "where_used": "local solve comparison, StatFEM v1"
+    },
+    {
+      "assumption": "FRF peak digitization",
+      "rationale": "Raw FRF ordinates are not available; amplitudes are secondary visual estimates with large uncertainty.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Figures 2-4",
+      "units": "categorical",
+      "value": "coarse visual peak features only",
+      "where_used": "FRF/QOI layer"
+    },
+    {
+      "assumption": "Modal StatFEM v1 observation noise",
+      "rationale": "Small term for reading/reporting frequency uncertainty.",
+      "sensitivity_priority": "medium",
+      "source": "engineering assumption",
+      "units": "fraction of modal frequency",
+      "value": 0.004,
+      "where_used": "modal likelihood"
+    },
+    {
+      "assumption": "Modal StatFEM v1 discrepancy scale",
+      "rationale": "Represents model-form error after the preliminary FEM tuning.",
+      "sensitivity_priority": "high",
+      "source": "engineering assumption",
+      "units": "fraction of modal frequency",
+      "value": 0.02,
+      "where_used": "modal likelihood, held-out validation"
+    },
+    {
+      "assumption": "Modal StatFEM v1 prior log stiffness sigma",
+      "rationale": "Allows roughly +/-17% one-sigma stiffness variation while keeping v1 identifiable.",
+      "sensitivity_priority": "medium",
+      "source": "engineering assumption",
+      "units": "natural log units",
+      "value": 0.16,
+      "where_used": "modal posterior"
+    },
+    {
+      "assumption": "Source FEM tuning",
+      "rationale": "This prevents treating the first-mode agreement as independent validation.",
+      "sensitivity_priority": "high",
+      "source": "Vibrationdata PDF Appendix A",
+      "units": "categorical",
+      "value": "E and density adjusted to match the fundamental",
+      "where_used": "limitations, digital-twin launch"
+    },
+    {
+      "assumption": "StatFEM active",
+      "rationale": "A one-parameter modal-only StatFEM-style grid update is active; no NUTS/HMC claim is made.",
+      "sensitivity_priority": "high",
+      "source": "This phase",
+      "units": "boolean",
+      "value": true,
+      "where_used": "checker, report"
+    }
+  ]
+}

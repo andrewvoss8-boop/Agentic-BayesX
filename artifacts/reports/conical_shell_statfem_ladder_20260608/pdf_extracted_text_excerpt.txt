@@ -1,0 +1,397 @@
+ 
+1
+Conical Shell Modal Test and Finite Element Analysis 
+ 
+ 
+By Tom Irvine 
+Email:  tomirvine@aol.com 
+ 
+July 2, 2006 
+ 
+______________________________________________________________________ 
+ 
+ 
+The conical shell was a radome.  Certain details about this test are omitted for 
+proprietary reasons. 
+ 
+ 
+Introduction 
+ 
+The purpose of this test was to determine the fundamental frequency of the radome with 
+free boundary conditions.  The frequency is needed so that the elastic modulus can be 
+determined indirectly via a finite element model. 
+ 
+The resulting fundamental frequency is 97.6 Hz with 0.6% damping for the free boundary 
+condition. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1. 
+ 
+Aft  
+Accel 
+Midpoint 
+Accel 
+Hit 
+Location 
+Foam 
+Floor
+
+ 
+2
+ 
+ 
+Test Configuration 
+ 
+The radome was mounted on compliant foam for the initial test.  A diagram is shown in 
+Figure 1.  The foam approximates a free boundary condition. 
+ 
+The radome was excited with an impulse hammer.  The response was measured at two 
+locations, via accelerometers.  The instrumentation list is given in Appendix B. 
+ 
+ 
+Analysis Approach 
+ 
+A series of tests were performed by varying the hit location, accelerometer mounting 
+locations, and even the radome’s position and boundary conditions.  The only results 
+given in this report are for the configuration shown in Figure 1, however.   
+ 
+This subset is justified on the basis of the close match between the test results for the 
+configuration in Figure 1 with the simplified finite element model, given in Appendix A.  
+The purpose of this preliminary finite element model was to serve as a guideline for 
+interpreting the test results.  The simplified model only approximates the dimensions and 
+geometry of the radome.  Nevertheless, very good agreement was obtained for three of 
+the four measured frequencies.  The matching of the second mode was particularly 
+important for verifying the entire approach. 
+ 
+The simplified finite element model is also useful for visualizing the mode shapes 
+corresponding to the measured frequencies. 
+ 
+A refined finite element model with accurate dimensions will be needed to determine the 
+elastic modulus. 
+ 
+ 
+Results 
+ 
+The measured frequency response functions for the aft and midpoint hit locations are 
+shown in Figures 2 and 3, respectively.  The functions are shown together in Figure 4. 
+ 
+Each frequency response function represents the average of ten hit and response pairs. 
+
+ 
+3
+ 
+0
+5
+10
+15
+20
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+FREQUENCY (Hz)
+MAGNITUDE (G/LBF)
+FRF   ACCELERATION/FORCE    RADOME
+ACCELEROMETER MOUNTED AT AFT END.  HIT LOCATION AT 12 INCHES FROM AFT END.
+ 
+Figure 2. 
+ 
+ 
+ 
+ 
+
+ 
+4
+0
+2
+4
+6
+8
+10
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+FREQUENCY (Hz)
+MAGNITUDE (G/LBF)
+FRF   ACCELERATION/FORCE    RADOME
+ACCELEROMETER MOUNTED AT MIDPOINT.  HIT LOCATION AT 12 INCHES FROM AFT END.
+ 
+ 
+Figure 3.
+
+ 
+5
+ 
+0
+5
+10
+15
+20
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+Aft End Response
+Midpoint Response
+FREQUENCY (Hz)
+MAGNITUDE (G/LBF)
+FRF   ACCELERATION/FORCE    RADOME
+HIT LOCATION AT 12 INCHES FROM AFT END
+ 
+ 
+Figure 4.
+
+ 
+6
+Frequency Comparison 
+ 
+The frequency comparison is shown in Table 1 using the measured results from Figure 2 
+and the finite element results from Appendix A.  Again, the finite element results are from 
+the preliminary model. 
+ 
+ 
+Table 1.  Frequency Comparison 
+Measured (Hz) 
+FEA (Hz) 
+97.6 
+97.6 
+278 
+274 
+429 
+- 
+529 
+523 
+ 
+ 
+ 
+Conical Shell Frequency Equation 
+ 
+This section is included for reference only. 
+The natural frequency f n for a complete conical shell with a free base is 
+ 
+ 
+E
+fn
+n
+= α
+ρ
+                                                                                       (1) 
+ 
+ 
+where 
+ 
+n
+α  is a constant that depends on the geometry and mode number 
+E  
+is the elastic modulus 
+ρ  
+is the mass per volume 
+ 
+Furthermore, the subscript n is the integer mode number. 
+ 
+Equation (1) is taken from Reference 1.   
+ 
+A refined finite element model is needed to solve for the elastic modulus E in an iterative 
+manner given the measured fundamental frequency.  This assumes the density ρ is 
+known.  The 
+n
+α  constant will be effectively determined via the iterative finite element 
+analysis, but it is not explicitly required. 
+ 
+
+ 
+7
+Damping Measurement 
+ 
+ 
+-0.6
+-0.5
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+12.2
+12.3
+12.4
+12.5
+12.6
+12.7
+12.8
+12.9
+13.0
+13.1
+13.2
+Synthesis
+Measured
+TIME (SEC)
+ACCEL (G)
+RADOME   ACCELEROMETER MOUNTED AT AFT END.  HIT LOCATION AT 12 INCHES FROM AFT END.
+LOWPASS FILTERED AT 200 Hz.    fn = 97.6 Hz.    Damping = 0.6% or Q=83.
+ 
+ 
+Figure 5. 
+ 
+ 
+Damping can be determined in either the frequency or time domain.  A time domain 
+example is shown in Figure 5.  The method uses a trial-and-error curve-fit, as taken from 
+Reference 2. 
+ 
+The two curves in Figure 5 are nearly identical and thus nearly indistinguishable from 
+one another. 
+ 
+ 
+Reference  
+1. R. Blevins, Formulas for Natural Frequency and Mode Shapes, R, Krieger, 
+Malabar, Florida, 1979. 
+2. T. Irvine, A Time Domain, Curve-Fitting Method for Accelerometer Data Analysis, 
+Vibrationdata, Mesa, AZ, AIAA-2003-1972, 44th AIAA/ASME/ASCE/AHS/ASC 
+Structures, Structural Dynamics, and Materials Conference, Norfolk, Virginia, 
+Apr. 7-10, 2003 
+ 
+
+ 
+8
+APPENDIX A 
+ 
+Simplified, Preliminary Finite Element Model 
+ 
+ 
+ 
+ 
+ 
+Figure A-1.   Undeformed Model 
+ 
+ 
+The model name is conical_shell3.nas.  It is included as an attachment file to this report. 
+ 
+The boundary conditions were completely free.  The effect of the foam was not included. 
+ 
+The modeled used plate elements. 
+ 
+The elastic modulus, mass density, and the thickness in the model were chosen 
+somewhat arbitrarily.  These values were adjusted so that the finite element fundamental 
+frequency matched the measured fundamental frequency.   
+ 
+Here is a summary of the model values: 
+ 
+Thickness 
+= 0.1 inch 
+Young’s Modulus 
+= 16317180. lbf/in^2 
+Poisson’s Ratio 
+= 0.33 
+Mass Density 
+= 1.26941E-4 lbf sec^2/in 
+Overall Length 
+= 45 inch 
+The base diameter 
+= 14 inches. 
+
+ 
+9
+ 
+ 
+Furthermore, this approach yielded a very good match for three of the four measured 
+frequencies, as shown in Table 1 in the main text. 
+ 
+The mode shapes in the following figures show that the radome undergoes shell 
+deformation primarily at its aft end for the first four modes.  The nose tip does not appear 
+to participate in the modal responses. 
+ 
+
+ 
+10
+ 
+ 
+ 
+Figure A-2.  Mode at 97.6 Hz 
+ 
+ 
+Figure A-3.  Mode at 274 Hz 
+ 
+
+ 
+11
+ 
+Figure A-4.  Mode at 523 Hz 
+ 
+ 
+ 
+
+ 
+12
+APPENDIX B 
+ 
+Instrumentation 
+ 
+ 
+ 
+Item 
+Model 
+S/N 
+Cal Date 
+Cal Due 
+Data Acquisition 
+System 
+Nicolet Vision 16 
+ICN0301097 
+7/1/05 
+7/1/06 
+Accelerometer 1 
+PCB WJ356A22 
+27243 
+5/10/04 
+10/21/06 
+Accelerometer 2 
+PCB WJ356A22 
+27245 
+6/8/04 
+10/21/06 
+Impulse Hammer 
+Kistler 9722A2000 
+2036596 
+4/19/06 
+4/19/07 
+ 
+ 
+The impulse hammer was used with the steel tip and mass extender. 
+ 
+ 
+ 

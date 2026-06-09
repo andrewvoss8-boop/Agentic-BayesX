@@ -1,0 +1,375 @@
+{
+  "direct_asset_route_note": "Direct nescacademy /shocksat URLs returned 404. The browser page posts a hidden url field and redirects to mediaex-server.larc.nasa.gov; direct mediaex URLs support HEAD and byte-range requests.",
+  "generated_utc": "2026-06-09T13:21:19+00:00",
+  "overview_pdf": {
+    "exists": true,
+    "keywords_found": {
+      "108": true,
+      "36 accelerometers": false,
+      "Nastran": false,
+      "correlated": true,
+      "hammer": true,
+      "pyro": true,
+      "shock": true
+    },
+    "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/_ShockSat_Overview_20220606.pdf",
+    "mtime_utc": "2026-06-09T10:21:10+00:00",
+    "page_count": 40,
+    "sha256": "f1eaf2a81731da9d454e9606718c4013c94d26c3b72e16496200a0849be9f058",
+    "size_bytes": 6564319,
+    "text_excerpt_path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/overview_text_excerpt.txt",
+    "text_extract_status": "extracted_first_12_pages"
+  },
+  "run_date": "2026-06-09",
+  "source_entries": [
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/_README.txt",
+      "kind": "file",
+      "listed_size": "2.88 kB",
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/_README.txt",
+        "mtime_utc": "2026-06-09T10:21:02+00:00",
+        "sha256": "db988b6949bd2cd853a156072d016cedcad6df859d458d29e51949481ab83e59",
+        "size_bytes": 2949
+      },
+      "name": "_README.txt",
+      "priority": "required",
+      "range_first_byte_probe": {
+        "exists": false
+      },
+      "source_browser_path": "/shocksat/_README.txt",
+      "state": "fetched",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/_ShockSat_Overview_20220606.pdf",
+      "kind": "file",
+      "listed_size": "6.26 MB",
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/_ShockSat_Overview_20220606.pdf",
+        "mtime_utc": "2026-06-09T10:21:10+00:00",
+        "sha256": "f1eaf2a81731da9d454e9606718c4013c94d26c3b72e16496200a0849be9f058",
+        "size_bytes": 6564319
+      },
+      "name": "_ShockSat_Overview_20220606.pdf",
+      "priority": "required",
+      "range_first_byte_probe": {
+        "exists": false
+      },
+      "source_browser_path": "/shocksat/_ShockSat_Overview_20220606.pdf",
+      "state": "fetched",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip",
+      "kind": "archive",
+      "listed_size": "1.89 GB",
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/FEM_and_CAD.zip",
+        "mtime_utc": "2026-06-09T11:08:55+00:00",
+        "sha256": "c917ce2f933b8bdc60cfc9d6c7c9467088788e4d08fb4a2183ea87e2f70e62bb",
+        "size_bytes": 2025227962
+      },
+      "name": "FEM_and_CAD.zip",
+      "priority": "high",
+      "range_first_byte_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_FEM_and_CAD.zip.first_byte",
+        "mtime_utc": "2026-06-09T10:26:01+00:00",
+        "sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2",
+        "size_bytes": 1
+      },
+      "source_browser_path": "/shocksat/FEM_and_CAD.zip",
+      "state": "fetched",
+      "tail_range_listing_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_FEM_and_CAD.zip.tail_4MiB.bin",
+        "mtime_utc": "2026-06-09T10:26:40+00:00",
+        "sha256": "3ca45dd90ad09d5754fa0611af819910b31c86aae915e7dec49c2549bff038d9",
+        "size_bytes": 4194304
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Instrumentation_and_TestLog.zip",
+      "kind": "archive",
+      "listed_size": "93.95 MB",
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Instrumentation_and_TestLog.zip",
+        "mtime_utc": "2026-06-09T10:24:04+00:00",
+        "sha256": "c0123f54a9d694ea39b44781e98745c9f6e29c10fe891aeb78cc456f64c30894",
+        "size_bytes": 98510587
+      },
+      "name": "Instrumentation_and_TestLog.zip",
+      "priority": "required",
+      "range_first_byte_probe": {
+        "exists": false
+      },
+      "source_browser_path": "/shocksat/Instrumentation_and_TestLog.zip",
+      "state": "fetched",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/",
+      "kind": "folder",
+      "listed_size": null,
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test_Data_Impact_file_browser.html",
+        "mtime_utc": "2026-06-09T10:24:25+00:00",
+        "sha256": "b943926d54715272d03a78ab82867120878d55265833a3e3501929667a82657b",
+        "size_bytes": 6654
+      },
+      "name": "Test_Data_Impact",
+      "priority": "high",
+      "range_first_byte_probe": {
+        "exists": false
+      },
+      "source_browser_path": "/shocksat/Test_Data_Impact/",
+      "state": "fetched",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Parametric.zip",
+      "kind": "archive",
+      "listed_size": "3.33 GB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test_Data_Parametric.zip",
+      "priority": "deferred_if_disk_tight",
+      "range_first_byte_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Parametric.zip.first_byte",
+        "mtime_utc": "2026-06-09T10:26:05+00:00",
+        "sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2",
+        "size_bytes": 1
+      },
+      "source_browser_path": "/shocksat/Test_Data_Parametric.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Parametric.zip.tail_4MiB.bin",
+        "mtime_utc": "2026-06-09T10:27:06+00:00",
+        "sha256": "510c7d40da01b99a8da00856dffb4195dc11ecb49d9c1a55823bc90d006da9d9",
+        "size_bytes": 4194304
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_Frangible_Joints.zip",
+      "kind": "archive",
+      "listed_size": "7.81 GB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test_Data_Pyro_Frangible_Joints.zip",
+      "priority": "deferred_if_disk_tight",
+      "range_first_byte_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_Frangible_Joints.zip.first_byte",
+        "mtime_utc": "2026-06-09T10:26:06+00:00",
+        "sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2",
+        "size_bytes": 1
+      },
+      "source_browser_path": "/shocksat/Test_Data_Pyro_Frangible_Joints.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_Frangible_Joints.zip.tail_4MiB.bin",
+        "mtime_utc": "2026-06-09T10:27:13+00:00",
+        "sha256": "3057788bc662a6e7a0585ac0c1b0e31db76a0c9c91bc9134003fb42ee9270b2b",
+        "size_bytes": 4194304
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_NSI_NSD.zip",
+      "kind": "archive",
+      "listed_size": "1.41 GB",
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test_Data_Pyro_NSI_NSD.zip",
+        "mtime_utc": "2026-06-09T12:25:21+00:00",
+        "sha256": "427497e3085c976b0b14c858089e26826e51fd38809720466b36879ff275b9f9",
+        "size_bytes": 251658240
+      },
+      "name": "Test_Data_Pyro_NSI_NSD.zip",
+      "priority": "high",
+      "range_first_byte_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_NSI_NSD.zip.first_byte",
+        "mtime_utc": "2026-06-09T10:26:04+00:00",
+        "sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2",
+        "size_bytes": 1
+      },
+      "source_browser_path": "/shocksat/Test_Data_Pyro_NSI_NSD.zip",
+      "state": "partial_download",
+      "tail_range_listing_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_NSI_NSD.zip.tail_4MiB.bin",
+        "mtime_utc": "2026-06-09T10:27:01+00:00",
+        "sha256": "dc2bb5ecbe4814acf62571f23373168c8e28fecb4bd852d9cc703a2bd6761829",
+        "size_bytes": 4194304
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Impact_Hammer_Videos.zip",
+      "kind": "impact_archive",
+      "listed_size": "463.80 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Impact_Hammer_Videos.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Impact_Hammer_Videos.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test01_ModalHammer_990x.zip",
+      "kind": "impact_archive",
+      "listed_size": "1.00 GB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test01_ModalHammer_990x.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test01_ModalHammer_990x.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test02_ModalHammer_990z.zip",
+      "kind": "impact_archive",
+      "listed_size": "908.21 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test02_ModalHammer_990z.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test02_ModalHammer_990z.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test03_ModalHammer_990y.zip",
+      "kind": "impact_archive",
+      "listed_size": "644.75 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test03_ModalHammer_990y.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test03_ModalHammer_990y.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test04_ModalHammer_990xy.zip",
+      "kind": "impact_archive",
+      "listed_size": "922.86 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test04_ModalHammer_990xy.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test04_ModalHammer_990xy.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test06_ModalHammer_900z.zip",
+      "kind": "impact_archive",
+      "listed_size": "880.93 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test06_ModalHammer_900z.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test06_ModalHammer_900z.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test07_ImpactHammer_990x.zip",
+      "kind": "impact_archive",
+      "listed_size": "566.35 MB",
+      "local": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip",
+        "mtime_utc": "2026-06-09T13:18:56+00:00",
+        "sha256": "df104a731f98a8b5429bfd24e4a0bff07b8fce0a567ac8ac02d6922b39c320b6",
+        "size_bytes": 593859074
+      },
+      "name": "Test07_ImpactHammer_990x.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test07_ImpactHammer_990x.zip",
+      "state": "fetched",
+      "tail_range_listing_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test07_ImpactHammer_990x.zip.tail_4MiB.bin",
+        "mtime_utc": "2026-06-09T10:26:48+00:00",
+        "sha256": "b46ff03a83fd237d456ef59bdb9f193ea8572583a340a69b280ffbf502dad89e",
+        "size_bytes": 4194304
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test08_ImpactHammer_990z.zip",
+      "kind": "impact_archive",
+      "listed_size": "626.24 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test08_ImpactHammer_990z.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test08_ImpactHammer_990z.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": true,
+        "local_path": "artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test08_ImpactHammer_990z.zip.tail_4MiB.bin",
+        "mtime_utc": "2026-06-09T10:26:54+00:00",
+        "sha256": "29aee8f99ea5516c8f439cf233193d08f473483ac400293186ae40022a0e2367",
+        "size_bytes": 4194304
+      }
+    },
+    {
+      "download_url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test10_ImpactHammer_900z.zip",
+      "kind": "impact_archive",
+      "listed_size": "736.65 MB",
+      "local": {
+        "exists": false
+      },
+      "name": "Test10_ImpactHammer_900z.zip",
+      "priority": "candidate_hammer_data",
+      "source_browser_path": "/shocksat/Test_Data_Impact/Test10_ImpactHammer_900z.zip",
+      "state": "too_large_deferred",
+      "tail_range_listing_probe": {
+        "exists": false
+      }
+    }
+  ],
+  "workshop_url": "https://nescacademy.nasa.gov/workshops/ShockSat/ShockSat1",
+  "workspace": "artifacts/reports/shocksat_statfem_runner_20260609"
+}

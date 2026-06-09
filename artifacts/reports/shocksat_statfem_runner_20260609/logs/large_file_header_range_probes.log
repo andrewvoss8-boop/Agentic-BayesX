@@ -1,0 +1,288 @@
+UTC 2026-06-09T10:26:00Z
+Disk space before large-file probes:
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   198Gi   5.9Gi    98%    1.4M   62M    2%   /System/Volumes/Data
+/dev/disk3s5   228Gi   198Gi   5.9Gi    98%    1.4M   62M    2%   /System/Volumes/Data
+
+==== LARGE PROBE FEM_and_CAD.zip
+URL https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip
+-- HEAD browser-like
+HTTP/2 200 
+content-length: 2025227962
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:35:18 GMT
+accept-ranges: bytes
+etag: "5b4bab6bb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:25:59 GMT
+
+-- HEAD curl-like
+HTTP/2 200 
+content-length: 2025227962
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:35:18 GMT
+accept-ranges: bytes
+etag: "5b4bab6bb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:01 GMT
+
+-- RANGE 0-0 browser-like
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     1  100     1    0     0      3      0 --:--:-- --:--:-- --:--:--     3
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:1
+CONTENT_RANGE:{"content-type":["application/x-zip-compressed"],
+"last-modified":["Mon, 06 Jun 2022 15:35:18 GMT"],
+"accept-ranges":["bytes"],
+"etag":["\"5b4bab6bb79d81:0\""],
+"server":["Microsoft-IIS/10.0"],
+"strict-transport-security":["max-age=31536000"],
+"access-control-allow-origin":["*"],
+"date":["Tue, 09 Jun 2026 10:26:01 GMT"],
+"content-length":["1"],
+"content-range":["bytes 0-0/2025227962"]
+}
+-rw-r--r--@ 1 avoss  361602666     1B Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_FEM_and_CAD.zip.first_byte
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_FEM_and_CAD.zip.first_byte
+
+==== LARGE PROBE Test07_ImpactHammer_990x.zip
+URL https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test07_ImpactHammer_990x.zip
+-- HEAD browser-like
+HTTP/2 200 
+content-length: 593859074
+content-type: application/x-zip-compressed
+last-modified: Fri, 21 Jan 2022 21:42:44 GMT
+accept-ranges: bytes
+etag: "a61daed2ffd81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:01 GMT
+
+-- HEAD curl-like
+HTTP/2 200 
+content-length: 593859074
+content-type: application/x-zip-compressed
+last-modified: Fri, 21 Jan 2022 21:42:44 GMT
+accept-ranges: bytes
+etag: "a61daed2ffd81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:02 GMT
+
+-- RANGE 0-0 browser-like
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     1  100     1    0     0      3      0 --:--:-- --:--:-- --:--:--     3
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:1
+CONTENT_RANGE:{"content-type":["application/x-zip-compressed"],
+"last-modified":["Fri, 21 Jan 2022 21:42:44 GMT"],
+"accept-ranges":["bytes"],
+"etag":["\"a61daed2ffd81:0\""],
+"server":["Microsoft-IIS/10.0"],
+"strict-transport-security":["max-age=31536000"],
+"access-control-allow-origin":["*"],
+"date":["Tue, 09 Jun 2026 10:26:02 GMT"],
+"content-length":["1"],
+"content-range":["bytes 0-0/593859074"]
+}
+-rw-r--r--@ 1 avoss  361602666     1B Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test07_ImpactHammer_990x.zip.first_byte
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test07_ImpactHammer_990x.zip.first_byte
+
+==== LARGE PROBE Test08_ImpactHammer_990z.zip
+URL https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test08_ImpactHammer_990z.zip
+-- HEAD browser-like
+HTTP/2 200 
+content-length: 656660250
+content-type: application/x-zip-compressed
+last-modified: Fri, 21 Jan 2022 21:42:56 GMT
+accept-ranges: bytes
+etag: "8a91d7d9ffd81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:02 GMT
+
+-- HEAD curl-like
+HTTP/2 200 
+content-length: 656660250
+content-type: application/x-zip-compressed
+last-modified: Fri, 21 Jan 2022 21:42:56 GMT
+accept-ranges: bytes
+etag: "8a91d7d9ffd81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:03 GMT
+
+-- RANGE 0-0 browser-like
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     1  100     1    0     0      3      0 --:--:-- --:--:-- --:--:--     3
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:1
+CONTENT_RANGE:{"content-type":["application/x-zip-compressed"],
+"last-modified":["Fri, 21 Jan 2022 21:42:56 GMT"],
+"accept-ranges":["bytes"],
+"etag":["\"8a91d7d9ffd81:0\""],
+"server":["Microsoft-IIS/10.0"],
+"strict-transport-security":["max-age=31536000"],
+"access-control-allow-origin":["*"],
+"date":["Tue, 09 Jun 2026 10:26:03 GMT"],
+"content-length":["1"],
+"content-range":["bytes 0-0/656660250"]
+}
+-rw-r--r--@ 1 avoss  361602666     1B Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test08_ImpactHammer_990z.zip.first_byte
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test08_ImpactHammer_990z.zip.first_byte
+
+==== LARGE PROBE Test_Data_Pyro_NSI_NSD.zip
+URL https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_NSI_NSD.zip
+-- HEAD browser-like
+HTTP/2 200 
+content-length: 1517694471
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:37:12 GMT
+accept-ranges: bytes
+etag: "e1ec5f4abb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:03 GMT
+
+-- HEAD curl-like
+HTTP/2 200 
+content-length: 1517694471
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:37:12 GMT
+accept-ranges: bytes
+etag: "e1ec5f4abb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:04 GMT
+
+-- RANGE 0-0 browser-like
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     1  100     1    0     0      3      0 --:--:-- --:--:-- --:--:--     3
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:1
+CONTENT_RANGE:{"content-type":["application/x-zip-compressed"],
+"last-modified":["Mon, 06 Jun 2022 15:37:12 GMT"],
+"accept-ranges":["bytes"],
+"etag":["\"e1ec5f4abb79d81:0\""],
+"server":["Microsoft-IIS/10.0"],
+"strict-transport-security":["max-age=31536000"],
+"access-control-allow-origin":["*"],
+"date":["Tue, 09 Jun 2026 10:26:04 GMT"],
+"content-length":["1"],
+"content-range":["bytes 0-0/1517694471"]
+}
+-rw-r--r--@ 1 avoss  361602666     1B Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_NSI_NSD.zip.first_byte
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_NSI_NSD.zip.first_byte
+
+==== LARGE PROBE Test_Data_Parametric.zip
+URL https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Parametric.zip
+-- HEAD browser-like
+HTTP/2 200 
+content-length: 3571448297
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:35:48 GMT
+accept-ranges: bytes
+etag: "4e8ac218bb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:04 GMT
+
+-- HEAD curl-like
+HTTP/2 200 
+content-length: 3571448297
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:35:48 GMT
+accept-ranges: bytes
+etag: "4e8ac218bb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:05 GMT
+
+-- RANGE 0-0 browser-like
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     1  100     1    0     0      3      0 --:--:-- --:--:-- --:--:--     3
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:1
+CONTENT_RANGE:{"content-type":["application/x-zip-compressed"],
+"last-modified":["Mon, 06 Jun 2022 15:35:48 GMT"],
+"accept-ranges":["bytes"],
+"etag":["\"4e8ac218bb79d81:0\""],
+"server":["Microsoft-IIS/10.0"],
+"strict-transport-security":["max-age=31536000"],
+"access-control-allow-origin":["*"],
+"date":["Tue, 09 Jun 2026 10:26:05 GMT"],
+"content-length":["1"],
+"content-range":["bytes 0-0/3571448297"]
+}
+-rw-r--r--@ 1 avoss  361602666     1B Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Parametric.zip.first_byte
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Parametric.zip.first_byte
+
+==== LARGE PROBE Test_Data_Pyro_Frangible_Joints.zip
+URL https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_Frangible_Joints.zip
+-- HEAD browser-like
+HTTP/2 200 
+content-length: 8382986243
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:36:59 GMT
+accept-ranges: bytes
+etag: "c3bac042bb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:05 GMT
+
+-- HEAD curl-like
+HTTP/2 200 
+content-length: 8382986243
+content-type: application/x-zip-compressed
+last-modified: Mon, 06 Jun 2022 15:36:59 GMT
+accept-ranges: bytes
+etag: "c3bac042bb79d81:0"
+server: Microsoft-IIS/10.0
+strict-transport-security: max-age=31536000
+access-control-allow-origin: *
+date: Tue, 09 Jun 2026 10:26:06 GMT
+
+-- RANGE 0-0 browser-like
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     1  100     1    0     0      3      0 --:--:-- --:--:-- --:--:--     3
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:1
+CONTENT_RANGE:{"content-type":["application/x-zip-compressed"],
+"last-modified":["Mon, 06 Jun 2022 15:36:59 GMT"],
+"accept-ranges":["bytes"],
+"etag":["\"c3bac042bb79d81:0\""],
+"server":["Microsoft-IIS/10.0"],
+"strict-transport-security":["max-age=31536000"],
+"access-control-allow-origin":["*"],
+"date":["Tue, 09 Jun 2026 10:26:06 GMT"],
+"content-length":["1"],
+"content-range":["bytes 0-0/8382986243"]
+}
+-rw-r--r--@ 1 avoss  361602666     1B Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_Frangible_Joints.zip.first_byte
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_Frangible_Joints.zip.first_byte
+UTC 2026-06-09T10:26:06Z

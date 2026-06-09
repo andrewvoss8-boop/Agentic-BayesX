@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-06-08T20:19:46Z",
+  "nas": {
+    "content_length": 132126,
+    "content_type": null,
+    "elapsed_s": 0.335814375,
+    "http_status": 200,
+    "path": "artifacts/reports/conical_shell_statfem_ladder_20260608/sources/conical_shell3.nas",
+    "sha256": "afdb9e9dce36c3a112ef821b1992716c2ad5aa2df1bb95bc28442e514d63824c",
+    "status": "fetched",
+    "url": "http://www.vibrationdata.com/tutorials_alt/conical_shell3.nas",
+    "user_agent": "curl/8.0"
+  },
+  "nas_browser_like_access": {
+    "http_status": 406,
+    "reason": "Not Acceptable",
+    "status": "http_error",
+    "url": "http://www.vibrationdata.com/tutorials_alt/conical_shell3.nas",
+    "user_agent": "Mozilla/5.0"
+  },
+  "notes": [
+    "The Nastran deck is reachable with a curl-like user agent.",
+    "The browser-like user agent returned HTTP 406 during this run.",
+    "Source files are cached for traceability; do not present source figures as generated figures."
+  ],
+  "pdf": {
+    "content_length": 403886,
+    "content_type": "application/pdf",
+    "elapsed_s": 0.4557720409999999,
+    "http_status": 200,
+    "path": "artifacts/reports/conical_shell_statfem_ladder_20260608/sources/conical_shell.pdf",
+    "sha256": "f884540b24aefbee9e97a71b1c0f8eedb28d7087baed7837eb1d74df34fc236d",
+    "status": "fetched",
+    "url": "http://www.vibrationdata.com/tutorials_alt/conical_shell.pdf",
+    "user_agent": "curl/8.0"
+  },
+  "structural_fe_index": "https://www.vibrationdata.com/StructuralFE.htm"
+}

@@ -1,0 +1,492 @@
+UTC 2026-06-09T10:26:34Z
+
+==== TAIL RANGE FEM_and_CAD.zip
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:4194304
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip
+-rw-r--r--@ 1 avoss  361602666   4.0M Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_FEM_and_CAD.zip.tail_4MiB.bin
+3ca45dd90ad09d5754fa0611af819910b31c86aae915e7dec49c2549bff038d9  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_FEM_and_CAD.zip.tail_4MiB.bin
+-- filename-like strings sample
+<Fem
+Hardware_CAD_Drawings_Pictures/Pictures/ShockSat1_VerticalWeld.jpg
+Cv.NsD'1A
+CnSIf
+iTFem
+3nsD-
+Hardware_CAD_Drawings_Pictures/Pictures/ShockSat_Flange.jpg
+IQCaD
+caDNN
+NSim
+CaDO
+ensdjz)
+Hardware_CAD_Drawings_Pictures/Pictures/Top_Dish_and_MassSims_No_CAD.jpg
+FEM/
+FEM/Correlation/
+FEM/Correlation/Final_Summary_Documentation_101521_rev1.pptx
+FEM/Correlation/FRF_Verification/
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_10101X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_10102Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_10103X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_10104Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1101Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1102Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1102Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1103X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1103Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1104Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1104Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1105X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_1105Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11101X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11102X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11103Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11104Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11105Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11106X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11107X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11108X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11109Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11110Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11111Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_11112X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2101X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2101Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2101Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2102X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2102Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2102Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2103X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2103Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2103Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2104X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2104Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_2104Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3101X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3101Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3101Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3102X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3102Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3102Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3103X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3103Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3103Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3104X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3104Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3104Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3201Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3202Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3203Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3204Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_3205Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_4101X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_4102Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_4103X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_4104Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_5101X+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_5101Y+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_5101Z+.png
+FEM/Correlation/FRF_Verification/11101X_Impact_Comparison/Acceleration_5102X+.png
+
+==== TAIL RANGE Test07_ImpactHammer_990x.zip
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:4194304
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test07_ImpactHammer_990x.zip
+-rw-r--r--@ 1 avoss  361602666   4.0M Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test07_ImpactHammer_990x.zip.tail_4MiB.bin
+b46ff03a83fd237d456ef59bdb9f193ea8572583a340a69b280ffbf502dad89e  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test07_ImpactHammer_990x.zip.tail_4MiB.bin
+-- filename-like strings sample
+nSd"
+rNsiJ
+xnSI9o
+rnSi'
+NsiPQ
+Test07_ImpactHammer_990x/Test001_DataPlots/PK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_1.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_10.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_100.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_101.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_102.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_103.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_104.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_105.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_106.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_107.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_108.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_109.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_11.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_110.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_111.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_113.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_114.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_115.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_116.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_12.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_13.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_14.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_15.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_17.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_18.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_19.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_2.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_20.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_21.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_22.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_23.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_24.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_25.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_26.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_27.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_28.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_29.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_29_accvel_zoom.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_3.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_30.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_31.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_33.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_34.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_35.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_36.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_37.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_38.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_39.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_4.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_40.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_41.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_42.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_43.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_44.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_45.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_46.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_47.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_49.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_5.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_50.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_51.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_52.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_53.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_54.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_55.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_56.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_57.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_58.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_59.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_6.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_60.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_61.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_62.pngPK
+Test07_ImpactHammer_990x/Test001_DataPlots/channel_63.pngPK
+
+==== TAIL RANGE Test08_ImpactHammer_990z.zip
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:4194304
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test08_ImpactHammer_990z.zip
+-rw-r--r--@ 1 avoss  361602666   4.0M Jun  9 06:26 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test08_ImpactHammer_990z.zip.tail_4MiB.bin
+29aee8f99ea5516c8f439cf233193d08f473483ac400293186ae40022a0e2367  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test08_ImpactHammer_990z.zip.tail_4MiB.bin
+-- filename-like strings sample
+:FEm
+nsd'
+nSdC
+8cad
+Test08_ImpactHammer_990z/Test002_DataPlots/PK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_1.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_10.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_100.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_101.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_102.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_103.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_104.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_105.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_106.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_107.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_108.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_109.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_11.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_110.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_111.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_113.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_114.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_115.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_116.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_12.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_13.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_14.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_15.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_17.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_18.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_19.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_2.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_20.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_21.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_22.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_23.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_24.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_25.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_26.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_26_accvel_zoom.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_27.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_28.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_28_accvel_zoom.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_29.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_3.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_30.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_31.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_33.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_34.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_35.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_36.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_37.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_38.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_39.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_39_accvel_zoom.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_4.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_40.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_41.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_42.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_43.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_44.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_45.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_46.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_47.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_49.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_5.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_50.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_51.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_52.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_53.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_54.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_55.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_56.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_57.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_58.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_59.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_6.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_60.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_61.pngPK
+Test08_ImpactHammer_990z/Test002_DataPlots/channel_62.pngPK
+
+==== TAIL RANGE Test_Data_Pyro_NSI_NSD.zip
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:4194304
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_NSI_NSD.zip
+-rw-r--r--@ 1 avoss  361602666   4.0M Jun  9 06:27 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_NSI_NSD.zip.tail_4MiB.bin
+dc2bb5ecbe4814acf62571f23373168c8e28fecb4bd852d9cc703a2bd6761829  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_NSI_NSD.zip.tail_4MiB.bin
+-- filename-like strings sample
+PfEmd>
+s/nsIL
+nSD5
+UNsID
+.jpG
+Pyro_NSI_NSD/
+Pyro_NSI_NSD/ESTA_LaserData_NSD1234.xlsx
+Pyro_NSI_NSD/NSD1_Test/
+Pyro_NSI_NSD/NSD1_Test/20211013_NSDfromScreen.MOV
+Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat
+Pyro_NSI_NSD/NSD2_Test/
+Pyro_NSI_NSD/NSD2_Test/Pyro_NSD_990x002_10_13_2021_3_22_53 PM.mat
+Pyro_NSI_NSD/NSD3_Test/
+Pyro_NSI_NSD/NSD3_Test/Pyro_NSD_990x003_10_14_2021_10_58_54 AM.mat
+/$Pyro_NSI_NSD/NSD4_Test/
+/$Pyro_NSI_NSD/NSD4_Test/Pyro_NSD_990x004_10_14_2021_12_42_26 PM.mat
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel1.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel10.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel100.png
+K!/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel101.png
+l-%/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel102.png
+(/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel103.png
++/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel104.png
+./Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel105.png
+1/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel106.png
+PU5/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel107.png
+8/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel108.png
+;/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel109.png
+(?/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel11.png
+fB/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel110.png
+F/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel111.png
+I/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel113.png
+M/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel114.png
+vP/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel115.png
+S/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel116.png
+,X/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel12.png
+Z[/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel13.png
+^/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel14.png
+a/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel15.png
+d/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel17.png
+g/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel18.png
+\ek/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel19.png
+n/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel2.png
+q/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel20.png
+u/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel21.png
+Bx/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel22.png
+-K{/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel23.png
+Tu~/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel24.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel25.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel26.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel27.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel28.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel29.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel3.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel30.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel31.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel33.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel34.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel35.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel36.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel37.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel38.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel39.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel4.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel40.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel41.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel42.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel43.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel44.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel45.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel46.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel47.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel49.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel5.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel50.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel51.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel52.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel53.png
+/Pyro_NSI_NSD/NSD_All_Post_Data_Plots/channel54.png
+
+==== TAIL RANGE Test_Data_Parametric.zip
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:4194304
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Parametric.zip
+-rw-r--r--@ 1 avoss  361602666   4.0M Jun  9 06:27 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Parametric.zip.tail_4MiB.bin
+510c7d40da01b99a8da00856dffb4195dc11ecb49d9c1a55823bc90d006da9d9  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Parametric.zip.tail_4MiB.bin
+-- filename-like strings sample
+ansdW
+/nsD
+9nsd
+cAd6
+z-fEm,
+-NSD
+*Nsi?=]O<^##&
+GynsI
+-7nSi
+nsi8
+Impact_Parametric/Parametric_990x_025ip001_2_28_2022_2_48_13 PM.mat
+Impact_Parametric/Parametric_990x_025ip002_2_28_2022_2_49_33 PM.mat
+Impact_Parametric/Parametric_990x_025ip003_2_28_2022_2_50_06 PM.mat
+Impact_Parametric/Parametric_990x_025ip004_2_28_2022_2_50_47 PM.mat
+)Impact_Parametric/Parametric_990x_050ip001_2_28_2022_2_58_09 PM.mat
+,T4Impact_Parametric/Parametric_990x_050ip002_2_28_2022_2_59_05 PM.mat
+?Impact_Parametric/Parametric_990x_050ip003_2_28_2022_2_59_26 PM.mat
+IImpact_Parametric/Parametric_990x_050ip006_2_28_2022_3_00_23 PM.mat
+SImpact_Parametric/Parametric_990x_075ip001_2_28_2022_3_05_27 PM.mat
+H^Impact_Parametric/Parametric_990x_075ip002_2_28_2022_3_07_04 PM.mat
+CiImpact_Parametric/Parametric_990x_075ip003_2_28_2022_3_07_23 PM.mat
+tImpact_Parametric/Parametric_990x_075ip004_2_28_2022_3_07_40 PM.mat
+~Impact_Parametric/Parametric_990x_100ip001_2_28_2022_3_13_51 PM.mat
+Impact_Parametric/Parametric_990x_100ip002_2_28_2022_3_14_09 PM.mat
+Impact_Parametric/Parametric_990x_100ip003_2_28_2022_3_14_25 PM.mat
+Impact_Parametric/Parametric_990x_100ip004_2_28_2022_3_14_43 PM.mat
+Impact_Parametric/Parametric_990x_125ip001_2_28_2022_3_20_51 PM.mat
+Impact_Parametric/Parametric_990x_125ip002_2_28_2022_3_21_06 PM.mat
+Impact_Parametric/Parametric_990x_125ip003_2_28_2022_3_21_24 PM.mat
+Impact_Parametric/Parametric_990x_125ip004_2_28_2022_3_21_39 PM.mat
+
+==== TAIL RANGE Test_Data_Pyro_Frangible_Joints.zip
+
+HTTP_STATUS:206
+SIZE_DOWNLOAD:4194304
+CONTENT_TYPE:application/x-zip-compressed
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_Frangible_Joints.zip
+-rw-r--r--@ 1 avoss  361602666   4.0M Jun  9 06:27 artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_Frangible_Joints.zip.tail_4MiB.bin
+3057788bc662a6e7a0585ac0c1b0e31db76a0c9c91bc9134003fb42ee9270b2b  artifacts/reports/shocksat_statfem_runner_20260609/logs/range_Test_Data_Pyro_Frangible_Joints.zip.tail_4MiB.bin
+-- filename-like strings sample
+nNSI`J
+1nsI
+Nsdl
+.1CAd
+Pyro_Frangible_Joint/FJ_post_allTests.py
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220228_205137626_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220228_205143894_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220228_205159354_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_080052.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_080108.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_080120.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_080150.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_085400.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_085407.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_085417.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_093636.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_093640.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125704.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125714.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125723.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125731.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125738.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125751.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125756.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125807.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125812.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125828.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125832.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125839.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125847.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125853.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125901.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125908.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125919.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125926.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_125947.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_131025.jpg
+2{vPyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_131036.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_131935.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_131943.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_131955.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132020.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132024.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132030.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132041.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132048.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132055.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_132112.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_134301.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_190132428_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_190139030_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_191939332_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/20220301_192033978_iOS.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pictures/Firing #1.jpg
+Pyro_Frangible_Joint/FJ1_OutsideMount/Pyro_Frang001_3_1_2022_1_13_44_PM.mat
+l-$Pyro_Frangible_Joint/FJ1_OutsideMount/Pyro_Frang001_3_1_2022_1_13_44_PM_wrong6263.mat
+C -1Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/1Before.jpg
+<@1Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_100920.jpg
+1Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_100929.jpg
+2Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_100935.jpg
+l2Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_100938.jpg
+2Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_100946.jpg
+23Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101004.jpg
+3Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101007.jpg
+3Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101042.jpg
+S4Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101049.jpg
+4Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101054.jpg
+5Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101104.jpg
+]5Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_101107.jpg
+5Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_103328.jpg
+6Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_103334.jpg
+~V6Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_131412.jpg
+6Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_131418.jpg
+7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151008888_iOS.jpg
+7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151009938_iOS.jpg
+,7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151018226_iOS.jpg
+]R7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151046113_iOS.jpg
+a7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151104830_iOS.jpg
+d1p7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151119908_iOS.jpg
+7Pyro_Frangible_Joint/FJ2_OutsideMount_FailSep/Pictures/20220317_151203539_iOS.jpg
+UTC 2026-06-09T10:27:14Z

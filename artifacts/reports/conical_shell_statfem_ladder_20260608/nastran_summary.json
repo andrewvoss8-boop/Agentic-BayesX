@@ -1,0 +1,54 @@
+{
+  "bbox": {
+    "x_max_in": 45.0,
+    "x_min_in": 0.0,
+    "y_max_in": 7.0,
+    "y_min_in": -7.0,
+    "z_max_in": 7.0,
+    "z_min_in": -7.0
+  },
+  "card_counts": {
+    "+MT    1": 1,
+    "+NEINAC1": 1,
+    "+NEINAC2": 1,
+    "BEGIN BU": 1,
+    "CEND": 1,
+    "CORD2C": 1,
+    "CORD2S": 1,
+    "CQUADR": 872,
+    "CTRIAR": 40,
+    "DISPLA": 1,
+    "ECHO =": 1,
+    "EIGRL": 1,
+    "ENDDATA": 1,
+    "ESE(PL": 1,
+    "GRID": 961,
+    "ID C,NEi": 1,
+    "MAT1": 1,
+    "MAT4": 1,
+    "METHOD": 1,
+    "PARAM,AU": 1,
+    "PARAM,GR": 1,
+    "PARAM,OG": 1,
+    "PSHELL": 1,
+    "SOL SEMO": 1,
+    "SPCFOR": 1,
+    "TITLE": 1
+  },
+  "cquadr_count": 872,
+  "ctriar_count": 40,
+  "eigrl": "EIGRL          1                      20                            MASS",
+  "element_count": 912,
+  "free_boundary_condition": true,
+  "mat1_raw": [
+    "MAT1           11.632E+7            0.331.269E-41.265E-5     70.        +MT    1"
+  ],
+  "node_count": 961,
+  "pshell": {
+    "mid1": "1",
+    "pid": "1",
+    "raw": "PSHELL         1       1     0.1       1               1              0.",
+    "thickness_in": 0.1
+  },
+  "solution": "SOL SEMODES"
+}

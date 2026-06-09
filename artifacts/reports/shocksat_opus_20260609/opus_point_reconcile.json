@@ -1,0 +1,302 @@
+{
+  "purpose": "point/unit reconciliation to remedy FEM-vs-test FRF normalization",
+  "force_points_in": {
+    "11101": [
+      8.937482,
+      -0.499999,
+      2.774995
+    ],
+    "11110": [
+      0.0,
+      -8.93748,
+      2.774995
+    ]
+  },
+  "force_to_hammer_match": {
+    "11101": {
+      "force_xyz": [
+        8.937482,
+        -0.499999,
+        2.774995
+      ],
+      "nearest_hammer": "6|tap",
+      "hammer_xyz": [
+        9.0,
+        -0.5,
+        0.0
+      ],
+      "dist_in": 2.776
+    },
+    "11110": {
+      "force_xyz": [
+        0.0,
+        -8.93748,
+        2.774995
+      ],
+      "nearest_hammer": "6|tap",
+      "hammer_xyz": [
+        9.0,
+        -0.5,
+        0.0
+      ],
+      "dist_in": 12.645
+    }
+  },
+  "channel_match_sample": {
+    "1": {
+      "tap_grid": 9900001,
+      "tap_xyz": [
+        9.0,
+        -5.375,
+        2.375
+      ],
+      "axis": "X",
+      "nearest_sol111_resp_grid": 7108,
+      "resp_xyz": [
+        8.937482,
+        -8.28706,
+        19.19441
+      ],
+      "dist_in": 17.07,
+      "desc": "Source +X Face -Y Edge (100k)"
+    },
+    "2": {
+      "tap_grid": 9900001,
+      "tap_xyz": [
+        9.0,
+        -5.375,
+        2.375
+      ],
+      "axis": "Y",
+      "nearest_sol111_resp_grid": 7108,
+      "resp_xyz": [
+        8.937482,
+        -8.28706,
+        19.19441
+      ],
+      "dist_in": 17.07,
+      "desc": "Source +X Face -Y Edge (100k)"
+    },
+    "3": {
+      "tap_grid": 9900001,
+      "tap_xyz": [
+        9.0,
+        -5.375,
+        2.375
+      ],
+      "axis": "Z",
+      "nearest_sol111_resp_grid": 7108,
+      "resp_xyz": [
+        8.937482,
+        -8.28706,
+        19.19441
+      ],
+      "dist_in": 17.07,
+      "desc": "Source +X Face -Y Edge (100k)"
+    },
+    "4": {
+      "tap_grid": 9900002,
+      "tap_xyz": [
+        9.0,
+        -1.5,
+        2.3125
+      ],
+      "axis": "X",
+      "nearest_sol111_resp_grid": 7101,
+      "resp_xyz": [
+        8.937482,
+        0.0,
+        19.19441
+      ],
+      "dist_in": 16.949,
+      "desc": "Source +X Face Center (100k)"
+    },
+    "5": {
+      "tap_grid": 9900002,
+      "tap_xyz": [
+        9.0,
+        -1.5,
+        2.3125
+      ],
+      "axis": "-Y",
+      "nearest_sol111_resp_grid": 7101,
+      "resp_xyz": [
+        8.937482,
+        0.0,
+        19.19441
+      ],
+      "dist_in": 16.949,
+      "desc": "Source +X Face Center (100k)"
+    },
+    "6": {
+      "tap_grid": 9900002,
+      "tap_xyz": [
+        9.0,
+        -1.5,
+        2.3125
+      ],
+      "axis": "Z",
+      "nearest_sol111_resp_grid": 7101,
+      "resp_xyz": [
+        8.937482,
+        0.0,
+        19.19441
+      ],
+      "dist_in": 16.949,
+      "desc": "Source +X Face Center (100k)"
+    },
+    "7": {
+      "tap_grid": 9900003,
+      "tap_xyz": [
+        9.0,
+        6.0625,
+        2.1875
+      ],
+      "axis": "X",
+      "nearest_sol111_resp_grid": 7102,
+      "resp_xyz": [
+        8.937482,
+        7.499985,
+        19.19441
+      ],
+      "dist_in": 17.068,
+      "desc": "Source +X Face +Y Edge (100k)"
+    },
+    "8": {
+      "tap_grid": 9900003,
+      "tap_xyz": [
+        9.0,
+        6.0625,
+        2.1875
+      ],
+      "axis": "-Y",
+      "nearest_sol111_resp_grid": 7102,
+      "resp_xyz": [
+        8.937482,
+        7.499985,
+        19.19441
+      ],
+      "dist_in": 17.068,
+      "desc": "Source +X Face +Y Edge (100k)"
+    },
+    "9": {
+      "tap_grid": 9900003,
+      "tap_xyz": [
+        9.0,
+        6.0625,
+        2.1875
+      ],
+      "axis": "Z",
+      "nearest_sol111_resp_grid": 7102,
+      "resp_xyz": [
+        8.937482,
+        7.499985,
+        19.19441
+      ],
+      "dist_in": 17.068,
+      "desc": "Source +X Face +Y Edge (100k)"
+    },
+    "10": {
+      "tap_grid": 9900004,
+      "tap_xyz": [
+        -7.5,
+        9.0,
+        2.0
+      ],
+      "axis": "X",
+      "nearest_sol111_resp_grid": 7104,
+      "resp_xyz": [
+        -8.93748,
+        8.249985,
+        19.19441
+      ],
+      "dist_in": 17.271,
+      "desc": "Source +Y Face -X Edge (100k)"
+    },
+    "11": {
+      "tap_grid": 9900004,
+      "tap_xyz": [
+        -7.5,
+        9.0,
+        2.0
+      ],
+      "axis": "Y",
+      "nearest_sol111_resp_grid": 7104,
+      "resp_xyz": [
+        -8.93748,
+        8.249985,
+        19.19441
+      ],
+      "dist_in": 17.271,
+      "desc": "Source +Y Face -X Edge (100k)"
+    },
+    "12": {
+      "tap_grid": 9900004,
+      "tap_xyz": [
+        -7.5,
+        9.0,
+        2.0
+      ],
+      "axis": "Z",
+      "nearest_sol111_resp_grid": 7104,
+      "resp_xyz": [
+        -8.93748,
+        8.249985,
+        19.19441
+      ],
+      "dist_in": 17.271,
+      "desc": "Source +Y Face -X Edge (100k)"
+    }
+  },
+  "verdict": {
+    "fem_force_is_unit_flat": true,
+    "fem_force_units_assumed": "lbf (consistent with inch geometry; confirm via model PARAM/material)",
+    "pch_is_accelerance": "yes: g per 1.0 applied force unit (TABLED1 1001 flat 1.0, FORCE 1.0)",
+    "sol111_force_points_in": {
+      "11101": [
+        8.937482,
+        -0.499999,
+        2.774995
+      ],
+      "11110": [
+        0.0,
+        -8.93748,
+        2.774995
+      ]
+    },
+    "force_to_hammer_match": {
+      "11101": {
+        "force_xyz": [
+          8.937482,
+          -0.499999,
+          2.774995
+        ],
+        "nearest_hammer": "6|tap",
+        "hammer_xyz": [
+          9.0,
+          -0.5,
+          0.0
+        ],
+        "dist_in": 2.776
+      },
+      "11110": {
+        "force_xyz": [
+          0.0,
+          -8.93748,
+          2.774995
+        ],
+        "nearest_hammer": "6|tap",
+        "hammer_xyz": [
+          9.0,
+          -0.5,
+          0.0
+        ],
+        "dist_in": 12.645
+      }
+    },
+    "test07_is_input_matched_to_11101X": false,
+    "tap_accel_coincident_with_sol111_resp_count": 6,
+    "tap_accel_total": 108,
+    "normalization_blocker": "No extracted hammer test drives at the SOL111 force point(s) within 1 in; a true input-matched magnitude overlay needs either the matching test or a NASTRAN SOL111 run at the actual hammer drive point. Frequency (peak) comparison remains valid."
+  }
+}

@@ -1,0 +1,63 @@
+UTC 2026-06-09T11:18:00Z
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   184Gi    20Gi    91%    1.2M  205M    1%   /System/Volumes/Data
+/dev/disk3s5   228Gi   184Gi    20Gi    91%    1.2M  205M    1%   /System/Volumes/Data
+artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip: Zip archive data, at least v2.0 to extract, compression method=store
+-rw-r--r--@ 1 avoss  361602666   145M Jun  9 07:20 artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip
+cc286c3602fe4177fd39f4d6fccd0ec47aa186e976e83942b70161ca172e10bf  artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   185Gi    19Gi    91%    1.2M  202M    1%   /System/Volumes/Data
+/dev/disk3s5   228Gi   185Gi    19Gi    91%    1.2M  202M    1%   /System/Volumes/Data
+UTC 2026-06-09T11:27:07Z
+UTC 2026-06-09T11:27:30Z resume_test07
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   185Gi    19Gi    91%    1.2M  202M    1%   /System/Volumes/Data
+/dev/disk3s5   228Gi   185Gi    19Gi    91%    1.2M  202M    1%   /System/Volumes/Data
+
+HTTP_STATUS:000
+SIZE_DOWNLOAD:0
+CONTENT_TYPE:
+URL_EFFECTIVE:https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test07_ImpactHammer_990x.zip
+artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip: Zip archive data, at least v2.0 to extract, compression method=store
+-rw-r--r--@ 1 avoss  361602666   145M Jun  9 07:29 artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip
+cc286c3602fe4177fd39f4d6fccd0ec47aa186e976e83942b70161ca172e10bf  artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   185Gi    19Gi    91%    1.2M  201M    1%   /System/Volumes/Data
+/dev/disk3s5   228Gi   185Gi    19Gi    91%    1.2M  201M    1%   /System/Volumes/Data
+UTC 2026-06-09T11:31:01Z resume_test07_done
+UTC 2026-06-09T11:56:55Z chunked_test07_start
+Fetching range 151539712-168316927
+UTC 2026-06-09T11:57:36Z chunked_test07_exact_start
+Fetching range 151539712-159928319
+HTTP=206 got=8388608 expect=8388608
+ZIP now 159928320 bytes
+Fetching range 159928320-168316927
+HTTP=206 got=8388608 expect=8388608
+ZIP now 168316928 bytes
+Fetching range 168316928-176705535
+HTTP=206 got=8388608 expect=8388608
+ZIP now 176705536 bytes
+Fetching range 176705536-185094143
+HTTP=206 got=8388608 expect=8388608
+ZIP now 185094144 bytes
+Fetching range 185094144-193482751
+HTTP=206 got=8388608 expect=8388608
+ZIP now 193482752 bytes
+Fetching range 193482752-201871359
+HTTP=206 got=8388608 expect=8388608
+ZIP now 201871360 bytes
+Fetching range 201871360-210259967
+HTTP=206 got=8388608 expect=8388608
+ZIP now 210259968 bytes
+Fetching range 210259968-218648575
+HTTP=206 got=8388608 expect=8388608
+ZIP now 218648576 bytes
+Fetching range 218648576-227037183
+HTTP=206 got=8388608 expect=8388608
+ZIP now 227037184 bytes
+Fetching range 227037184-229163461
+HTTP=206 got=2126278 expect=2126278
+ZIP now 229163462 bytes
+Reached target bytes: 229163462 >= 229163462
+8a723e534b23f9c905673d6f108177caf6f211852bbb5ddb269d191e38eb5fa3  artifacts/reports/shocksat_statfem_runner_20260609/sources/Test07_ImpactHammer_990x.zip
+UTC 2026-06-09T12:02:51Z chunked_test07_exact_done

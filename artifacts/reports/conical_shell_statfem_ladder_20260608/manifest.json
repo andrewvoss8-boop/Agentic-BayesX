@@ -1,0 +1,24 @@
+{
+  "checker_report": "artifacts/reports/conical_shell_statfem_ladder_20260608/checker_report.json",
+  "figures": [
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/digitized_frf_peak_features.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/frf_qoi_peak_accelerance.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/human_nastran_frequency_table.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/local_solve_vs_published_modal_comparison.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/modal_statfem_v1_posterior_and_holdout.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/mode_shape_status_not_solver_output.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/published_frequency_error.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/published_modal_frequency_comparison.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/published_peak_evidence_log_frequency.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/source_nastran_mesh.png",
+    "artifacts/reports/conical_shell_statfem_ladder_20260608/figures/statfem_launch_graphical_model.png"
+  ],
+  "frequency_axis_policy": {
+    "published_frequency_error.png": "mode-index axis, not frequency-domain FRF",
+    "published_modal_frequency_comparison.png": "mode-index axis, not frequency-domain FRF",
+    "published_peak_evidence_log_frequency.png": "log frequency x-axis"
+  },
+  "packet": "artifacts/reports/conical_shell_statfem_ladder_20260608/conical_shell_packet.md",
+  "source_manifest": "artifacts/reports/conical_shell_statfem_ladder_20260608/source_manifest.json",
+  "statfem_active": true
+}

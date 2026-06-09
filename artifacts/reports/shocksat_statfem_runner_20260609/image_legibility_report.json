@@ -1,0 +1,76 @@
+{
+  "figures": [
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/channel_comparison_overview.png",
+      "height_px": 1080,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/fem_file_tree.png",
+      "height_px": 1260,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/fem_mesh_preview.png",
+      "height_px": 1440,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 1800
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/fem_test_comparison_summary.png",
+      "height_px": 1080,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/first_srs_or_psd.png",
+      "height_px": 1260,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/first_time_histories.png",
+      "height_px": 1260,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/hammer_frf_accelerance_subset.png",
+      "height_px": 1260,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/hammer_frf_coherence_subset.png",
+      "height_px": 1080,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/nasa_correlation_frf_asset_summary.png",
+      "height_px": 1080,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    },
+    {
+      "dimension_pass": true,
+      "figure": "artifacts/reports/shocksat_statfem_runner_20260609/figures/statfem_graphical_model.png",
+      "height_px": 1260,
+      "manual_residual_risk": "Automated check covers dimensions only; text overlap requires human spot-check.",
+      "width_px": 2160
+    }
+  ],
+  "generated_utc": "2026-06-09T13:21:37+00:00",
+  "pass": true
+}

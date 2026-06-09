@@ -32,7 +32,7 @@ candidate to be (or anchor) the core patent claim.
 |------|------|----------------------------------|-----------------|------------------|----------------|------|
 | 1 | The bundle: dynamic StatFEM + unknown stochastic forcing + complex interface impedance + force-limiting load QOI, in a tech-assisted workflow | Medium-High (as a combination) | High | Partly | Medium (combination less owned than parts) | Recommended independent claim architecture |
 | 2 | Orthogonal, part-type / stiffness-indexed GP model-form error (the "F(k)" / error-by-part-type method) in dynamic StatFEM | Medium (orthogonality is Plumlee's; the physical indexing + dynamic/FBS context is the distinguisher) | Medium-High | Yes (planned A/B; failure mode already reproduced) | Medium-High | Most testable spearhead / core method claim |
-| 3 | Complex (frequency-dependent, lossy) joint/interface impedance as the StatFEM discrepancy/parameter in FBS/CMS (the "rattlebasket") | High (if it survives the joint-dynamics literature) | High (the load lives at the interface; Relativity-relevant) | Not yet | High (jointed-structure dynamics is a deep field) | Candidate core mechanism inside Rank 1 |
+| 3 | Complex (frequency-dependent, lossy) joint/interface impedance as the StatFEM discrepancy/parameter in FBS/CMS (the "rattlebasket") | High (if it survives the joint-dynamics literature) | High (the load lives at the interface; Relativity-relevant) | Not yet | High (jointed-structure dynamics is a deep field) | STRUCTURAL BACKBONE of StatFEM+7004C (FBS); CMS = tractability; promote |
 | 4 | Unknown-stochastic-forcing dynamic StatFEM (output-only / ambient) carried to a load QOI | Medium-High (Kiran review flags output-only updating as un-researched) | High | Not yet | Medium-High (OMA / input-state estimation is mature) | Candidate core axis inside Rank 1 |
 | 5 | Tech-assisted / autonomous updating from technician-collected data on installed parts | Medium (as a system/workflow) | High (real pain point; most fundable) | Partly (the agentic harness exists) | Medium | Workflow / system claim; commercial story |
 | 6 | QOI-weighted / decision-relevant likelihood (weight the fit near the load-driving resonance, not flat RMS) | Low-Medium | Medium | Yes (clean methodological change) | Medium (weighted-loss calibration exists, e.g. Plumlee 2.3) | Dependent claim / paper result |
@@ -82,6 +82,18 @@ Why this rank: highest potential value (the interface is where the load of inter
 the model is most wrong) and possibly the strongest novelty, but it is unproven by us and sits on top
 of a deep jointed-structure-dynamics literature (Brake, Allen, Iwan/whole-joint models), so the
 prior-art risk is high until the scan. Best treated as the core mechanism inside Rank 1.
+UPDATE (2026-06-08): this is now the STRUCTURAL BACKBONE of the StatFEM+7004C center, not a side idea.
+NASA-HDBK-7004C force limiting is itself a two-substructure impedance problem (source apparent mass vs load
+apparent mass at the interface), so Frequency-Based Substructuring (FBS) is the native math: apparent mass
+M=F/a is an FBS primitive, FBS gives the interface force (netCG QOI) from the coupled admittance, and FBS
+lives in measured-admittance (OUTPUT) space — exactly where the orthogonal discrepancy (Rank 2) must sit.
+CMS (Craig-Bampton) is the tractability tool (reduce components to interface+modal DOF). Multi-point (e.g.
+6-point) interfaces are handled by the Virtual Point Transformation (van der Seijs/Rixen): one 6-DOF virtual
+point per interface location (local-rigidity reduction) gives collocated forces/responses + the rotational
+DOF you can't measure; LM-FBS then enforces compatibility+equilibrium over all interface DOF. DO NOT claim
+FBS/CMS or FBS-measurement-uncertainty (Trainotti/Haussler/Rixen, published); DO consider the StatFEM-
+calibrated interface-admittance discrepancy -> probabilistic force-limited interface load endpoint. FTO
+reservoir = automotive-NVH joint impedance (unsearched) + Bayesian/stochastic substructuring (scan next).
 
 ### Rank 4. Unknown-stochastic-forcing dynamic StatFEM
 What it is: run StatFEM output-only, with the forcing unknown and stochastic (operational/ambient),
@@ -238,3 +250,101 @@ have a calibrated, uncertain error we learned from test data."
 Even if the summer study yields no patent, the Rank-2 discrepancy work is the INPUT to this design-side
 track and to Ranks 3/4 — so the capability compounds. Treat the patent as a byproduct of finding what makes
 StatFEM actually work in your domain, not as a target to steer the research toward.
+
+---
+
+## Prior-art dossier v1 fold-in (2026-06-08, browser patent-DB screening)
+
+Source: browser Claude patent-database + white-space screening pass; raw dossier saved at
+docs/proposal/patent_prior_art_dossier_v1.md. SCREENING PASS, NOT a clearance opinion.
+
+Verified facts (claims actually read):
+- ABEMIS/Doehring: US10585420B2 = verified GEOMETRY-GENERATION + additive manufacturing only; NO
+  dynamic/attenuation objective in the issued CLAIMS. (Doehring et al. 2020, Sci. Reports 10:21484, shows
+  vibration-damping + meta-topology-optimization results, but as a PAPER, not claims -> strongest H/I
+  obviousness hurdle AND the collaboration hook.) [UNVERIFIED: the continuation numbers US11327465B2 /
+  US12111630B2 did NOT confirm as ABEMIS in Session 2 (the nearby "lattice mesh" hits were an unrelated
+  Anduril networking patent) -> likely mis-transcribed or differently assigned; DO NOT cite until verified
+  via Lens/Espacenet assignee search.]
+  => Idea H (discrepancy-aware topology optimization) sits CLEAR of ABEMIS, and the Doehring collaboration
+  vehicle is real. CONFIRM pending "AI provisionals" before any H/I filing.
+- Siemens US11010504 = deterministic lattice TO, no Bayesian discrepancy -> H still clear.
+- CN114444366A = civil bridge digital-twin updating, input-load-driven, not output-only / load-QOI -> A/D
+  distinct.
+- No blocking patent surfaced for A/B/D/H as scoped THIS pass.
+
+White-space ranking from the dossier (file-first logic):
+1. A/D — force-limited interface-load QOI from output-only dynamic StatFEM (cleanest in patents found;
+   101 anchor = a force-limited TEST process). Candidate FIRST provisional.
+2. H — discrepancy-aware topology optimization (verified clear of ABEMIS/Siemens; 101 anchor = manufactured
+   ARTICLE + process; Doehring vehicle). Candidate second provisional.
+3. B — part-type orthogonal GP discrepancy (clean in patents found; method backbone).
+4. I — BOED metamaterial (promising; needs the acoustic-metamaterial patent scan).
+5. C / G — FTO-exposed (automotive/defense NVH for C; OSP patents for G) until searched.
+
+HONEST CAVEATS (do not let the optimistic read inflate the ranks):
+- "No blocking patent found" mostly means NOT SEARCHED for the high-risk reservoirs: automotive/defense
+  NVH (C), OSP patents (G), acoustic metamaterial (I), aerospace/DEFENSE force-limiting (A). The #1
+  file-first candidate's clearance (A/D) literally depends on the still-unsearched force-limiting filings.
+- Patent-whitespace and DEMONSTRABILITY diverge: A/D ranks #1 to file but is the LEAST demonstrated (and
+  partially eroded by the 2026 elastodynamic StatFEM paper, arXiv 2604.12688); B is the most testable.
+  Resolution: a cheap PROVISIONAL over the A/D + B + H combination locks priority now, while the
+  orthogonal-vs-same-space A/B demo (B's non-obviousness evidence) is still what the full filing needs.
+- This remains a screening pass; a PROFESSIONAL claim-chart FTO in CPC F16F, G01M7/02, G10K11, G06F30/23
+  (+ DE/JP/CN families, defense/ITAR) is required before any filing decision.
+
+Recommended rank tweaks to CONSIDER (not yet applied to the table above): elevate A/D and H toward the top
+alongside B; keep B as the testable spearhead; relabel every "no-blocking-found" as PROVISIONAL pending the
+SEARCH NEXT reservoirs. Next browser session = the dossier's SEARCH NEXT list.
+
+---
+
+## Prior-art dossier — Session 3 fold-in (2026-06-08, substructuring / FBS-CMS / probabilistic 7004C)
+
+Source: browser Session-3 scan; raw saved at docs/proposal/patent_prior_art_dossier_v2_substructuring.md.
+Screening pass, not clearance.
+
+Results:
+- Q1 (StatFEM/Bayesian model-form discrepancy AT a substructure interface in FBS/CMS): UNOCCUPIED in
+  records found. Closest = FBS measurement-uncertainty PROPAGATION (Voormeeren/de Klerk/Rixen 2010;
+  Trainotti/Haussler/Rixen 2020 MSSP) — propagate measurement NOISE, NOT a calibrated model-form
+  discrepancy. Novelty High.
+- Q2 (Bayesian / data-updated force-limited interface load = "Bayesian 7004C"): UNOCCUPIED (no patent).
+  Deterministic force-limit work only (Marchand 2016; Kolaini 2013; semi-empirical C^2). Bayesian force
+  work is RECONSTRUCTION / input-state (Sedehi; Aucejo), NOT a force-LIMIT notch. Novelty High.
+- Q3 (substructuring patents / NVH reservoir): ONE active blocker-adjacent patent = US8731868B2
+  (Siemens/LMS, Transfer Path Analysis, active ~2030) — DETERMINISTIC parametric interface-LOAD
+  characterization from operational data; no Bayesian posterior, no model-form discrepancy, no force-limit
+  endpoint. THIS IS THE DESIGN-AROUND TARGET.
+- Q4 (multi-point / 6-DOF Bayesian FBS): UNOCCUPIED for the specific combination. Strong dependent-claim
+  cluster (6-DOF interface + calibrated discrepancy + force-limit + held-out).
+
+CLAIM-FRAMING CORRECTION (important — supersedes any "first to use StatFEM for a decision" wording):
+- Do NOT frame the patent as "first to use StatFEM/Bayesian to set a force limit or make a flight
+  decision." People already set model-based force limits and make launch calls daily, and Siemens
+  US8731868B2 already patents model-based interface-LOAD characterization -> that framing = obvious
+  substitution (KSR), and a decision is not a patentable step (Sec 101-exposed).
+- DO claim the ARTIFACT + technical effect: a force-limit NOTCH produced as a CALIBRATED POSTERIOR that
+  separates interface model-form error from physics under unknown forcing, VALIDATED by held-out coverage
+  (a probabilistic, discrepancy-aware, defensibly-less-conservative notch). Non-obviousness = the
+  demonstrated technical effect (deterministic/measurement-noise methods CONFOUND model error with physics,
+  so their uncertainty is untrustworthy; ours passes held-out coverage), NOT "we added error bars." The
+  flight decision / lighter-safer structures = the value story, never the claim. See project_vision 5.6.
+
+Design-around US8731868B2 by REQUIRING the 3 differentiators it lacks:
+1. a CALIBRATED model-form discrepancy at the interface admittance (vs measurement-noise propagation /
+   deterministic parametric mount models);
+2. a PROBABILISTIC force-limit / apparent-mass output (posterior notch w/ uncertainty, vs deterministic
+   C^2 / envelope);
+3. held-out coverage as the acceptance criterion (+ optionally a 6-DOF multi-point interface, output-only
+   forcing).
+Sec 101 anchor: claim CONDUCTING a force-limited vibration test where the notch is computed from the
+calibrated posterior, with measured interface forces + shaker notching + 6-DOF interface hardware.
+
+Still needs professional search: claim-chart vs US8731868B2 + INPADOC family + US8306793; assignee
+deep-dives (Siemens/AVL/Bosch/Hyundai + aerospace/defense) in G01H, G01M7/02, F16F, G06F30/15-23;
+non-English (DE/JP/CN); VIBES.technology / TUM virtual-point + blocked-force FBS patents.
+
+Net: idea C ("Bayesian 7004C via a calibrated interface-admittance discrepancy") = the cleanest claim
+across 3 sessions, with ONE active patent to design around. C is the substructuring-native mechanism for
+A/D.

@@ -1,0 +1,136 @@
+{
+  "generated_utc": "2026-06-09T17:39:15Z",
+  "purpose": "corrected impact-hammer FRF for ShockSat Test07; tests Codex 'low coherence' verdict",
+  "n_hits": 4,
+  "fs_sps": 250000.0,
+  "frame_len_samples": 62582,
+  "freq_resolution_hz": 3.9947588763542234,
+  "modal_band_hz": [
+    10.0,
+    400.0
+  ],
+  "force_channel": 116,
+  "response_channels": [
+    1,
+    50,
+    87
+  ],
+  "method_A_codex_per_transient_welch": {
+    "1": {
+      "per_hit_median_coh_10_400": [
+        0.04875794763857798,
+        0.05690125445139045,
+        0.062439074865212295,
+        0.05513863038462766
+      ]
+    },
+    "50": {
+      "per_hit_median_coh_10_400": [
+        0.050734437655938845,
+        0.0471700193719968,
+        0.07772557361725888,
+        0.03880632114627816
+      ]
+    },
+    "87": {
+      "per_hit_median_coh_10_400": [
+        0.05245588515687063,
+        0.06956307937872755,
+        0.05958405656963222,
+        0.033904902748074936
+      ]
+    }
+  },
+  "method_B_opus_ensemble": {
+    "1": {
+      "median_coh_10_400": 0.3072220938126076,
+      "max_coh_10_400": 0.8870329434297969,
+      "frac_coh_ge_0p8_10_400": 0.05102040816326531,
+      "frac_coh_ge_0p9_10_400": 0.0,
+      "test_modal_peaks_hz": [
+        51.931865392604905,
+        75.90041865073024,
+        119.8427662906267,
+        139.81656067239783,
+        163.78511393052315,
+        219.71173819948228,
+        227.70125595219073,
+        243.68029145760764,
+        279.63312134479565,
+        303.601674602921,
+        351.5387811191717,
+        367.51781662458853
+      ]
+    },
+    "50": {
+      "median_coh_10_400": 0.23629454430410232,
+      "max_coh_10_400": 0.8281425980645173,
+      "frac_coh_ge_0p8_10_400": 0.01020408163265306,
+      "frac_coh_ge_0p9_10_400": 0.0,
+      "test_modal_peaks_hz": [
+        75.90041865073024,
+        119.8427662906267,
+        163.78511393052315,
+        187.7536671886485,
+        223.70649707583652,
+        243.68029145760764,
+        251.6698092103161,
+        279.63312134479565,
+        299.60691572656674,
+        323.5754689846921,
+        367.51781662458853,
+        391.4863698827139
+      ]
+    },
+    "87": {
+      "median_coh_10_400": 0.3866989759341887,
+      "max_coh_10_400": 0.8376546069430383,
+      "frac_coh_ge_0p8_10_400": 0.030612244897959183,
+      "frac_coh_ge_0p9_10_400": 0.0,
+      "test_modal_peaks_hz": [
+        83.8899364034387,
+        95.87421303250136,
+        119.8427662906267,
+        139.81656067239783,
+        159.79035505416894,
+        171.7746316832316,
+        227.70125595219073,
+        255.6645680866703,
+        271.6436035920872,
+        307.5964334792752,
+        351.5387811191717,
+        367.51781662458853
+      ]
+    }
+  },
+  "fem_sol111_11101X": {
+    "points_parsed": 76,
+    "modal_peaks_hz": [
+      54.625,
+      73.5,
+      88.0,
+      135.875,
+      154.5,
+      184.0,
+      211.125,
+      231.0,
+      252.125,
+      270.125,
+      311.875,
+      373.75
+    ],
+    "units": "g per applied SOL111 load (force amplitude normalization = OPEN; see notes)"
+  },
+  "caveats": [
+    "Only 4 hits at slightly different impact points (TestLog y=8.0-8.75, z=0-1) -> ensemble coherence has weak statistical power and point variation; per-hit repeatability is the primary few-hit quality metric.",
+    "Exponential response window adds known artificial damping (lowers Q, raises inter-mode floor); acceptable for peak-location/diagnostic, not for damping extraction.",
+    "FEM vs test overlay is resonance-frequency alignment only; response points (FEM 1101 vs test 9900001) and force amplitude units are NOT yet matched -> no magnitude likelihood.",
+    "df ~ 4.0 Hz at this frame length merges closely-spaced modes; refine frame for final."
+  ],
+  "not_claimed": [
+    "StatFEM posterior",
+    "NUTS/HMC active",
+    "validated FEM-test magnitude agreement",
+    "FRF likelihood readiness"
+  ]
+}

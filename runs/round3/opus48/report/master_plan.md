@@ -1,3 +1,25 @@
+> # ⛔ SUPERSEDED / KILLED — 2026-06-08 (human decision: Andrew)
+> The **Stage 0→5 march below is retired.** The 2026-06-08 framing challenge
+> ([artifacts/reports/fem_phase1_framing_challenge_20260608/framing_challenge.md](../../../../artifacts/reports/fem_phase1_framing_challenge_20260608/framing_challenge.md))
+> identified this staged plan as the **textbook scope-drift pattern** flagged in
+> [notes/lessons-learned.md](../../../../notes/lessons-learned.md) (2026-06-05): progressive
+> fidelity on a *synthetic* problem that defers the real question (a load QOI under unknown
+> forcing, learned at the joint). Andrew approved killing it.
+>
+> **Replacement = a 2-gate plan** (framing-challenge items A, C, E):
+> - **Gate 1 (item A):** swap the rigid joint for ONE compliant + lossy joint (free `k`,
+>   structural loss `η`) + forcing + an interface-force QOI on an *independent richer* synthetic
+>   truth, with a held-out honesty check — the smallest change that makes the model *learnable*.
+>   (The rigid joint to change = `JOINT["k_trans"]=1.0e9` in
+>   [runs/fem_phase1/opus/shared/spec.py](../../../../runs/fem_phase1/opus/shared/spec.py).)
+> - **Gate 2 (item C — IN WORK):** run the same pipeline on ONE real public dataset = the first
+>   actual *validation* (not verification).
+> - **Park** Stages 2–4 (more params, property-GP, higher-fidelity FEM) until a *measured*
+>   shortfall demands them. Do not execute them on synthetic data by default.
+>
+> The text below is kept for traceability only. Do NOT execute it as the roadmap.
+> ---
+
 # Master plan — toward a trustworthy, realistic aerospace StatFEM digital twin
 
 Claude Code (lead/runner) for runs/round3/opus48. A staged, iterative plan that (1) resolves the

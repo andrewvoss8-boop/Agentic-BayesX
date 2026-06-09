@@ -1,0 +1,117 @@
+UTC 2026-06-09T10:19:27Z
+Disk space before downloads:
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   198Gi   4.7Gi    98%    1.4M   49M    3%   /System/Volumes/Data
+/dev/disk3s5   228Gi   198Gi   4.7Gi    98%    1.4M   49M    3%   /System/Volumes/Data
+
+Directory HEAD browser-like:
+HTTP/1.1 200 OK
+Date: Tue, 09 Jun 2026 10:19:28 GMT
+Server: Apache
+Cache-Control: max-age=0, must-revalidate, private
+Expires: Tue, 09 Jun 2026 10:19:28 GMT
+X-Frame-Options: sameorigin
+Strict-Transport-Security: max-age=31536000
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+
+Directory GET first 80 lines browser-like:
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>ShockSat</title>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+						<link rel="stylesheet" href="/build/9746.05d04ed3.css"><link rel="stylesheet" href="/build/shocksat.18ef101d.css">
+		
+	<style>
+		.table-borderless th,
+		.table-borderless td {
+			border-top: none !important;
+		}
+	</style>
+
+					<script src="/build/runtime.e0131ae9.js" defer></script><script src="/build/4692.e0ed4a3b.js" defer></script><script src="/build/9746.de06b36c.js" defer></script><script src="/build/shocksat.de8adf84.js" defer></script>
+					
+								<script type='text/javascript' src='https://pulse.nasa.gov/track.js'></script>
+			<script>
+				try {
+					Pulse.track("NAO", {
+						auid: "",
+						server: "prod",
+					});
+				} catch (e) {
+					var Pulse = (function () {
+						var module = {};
+						module.track = function () {};
+						module.logInfo = function () {};
+						module.logWarn = function () {};
+						module.logError = function () {};
+						module.event = function () {};
+						return module;
+					})();
+				}
+			</script>
+			</head>
+	<body class="bg-dark">
+        <header>
+            <nav class="navbar navbar-dark bg-primary navbar-expand-md text-light">
+                <div class="container bg-primary justify-content-start">
+                    <a class="navbar-brand" href="/workshops/ShockSat"><i class='fas fa-home'></i> ShockSat</a>
+                    <a class="navbar-brand" href="/workshops/ShockSat/ShockSat1">ShockSat1 Files</a>
+                </div>
+            </nav>
+        </header>
+        <main class="py-4 flex-grow-1">
+            	<div class="container bg-white rounded border shadow-sm">
+        <h1 class="text-center">ShockSat1 File Browser</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 rounded bg-secondary bg-opacity-10">
+                                                                            <li class="breadcrumb-item active" aria-current="page">Shocksat </li>
+                                                </ol>
+        </nav>
+
+        <form role="form" id="files" method="post">
+            <input type="hidden" id="url" name="url" value="">
+            <div class="list-group mb-3">
+                                                <button class="list-group-item list-group-item-action text-left" data-text="_README.txt" data-link="/shocksat/_README.txt" data-folder="1">
+                                        <i class="fas fa-file me-2"></i> <span class="me-5 fw-bold">_README.txt</span>2.88 kB
+                </button>
+                                <button class="list-group-item list-group-item-action text-left" data-text="_ShockSat_Overview_20220606.pdf" data-link="/shocksat/_ShockSat_Overview_20220606.pdf" data-folder="1">
+                                        <i class="fas fa-file me-2"></i> <span class="me-5 fw-bold">_ShockSat_Overview_20220606.pdf</span>6.26 MB
+                </button>
+                                <button class="list-group-item list-group-item-action text-left" data-text="FEM_and_CAD.zip" data-link="/shocksat/FEM_and_CAD.zip" data-folder="1">
+                                        <i class="fas fa-file me-2"></i> <span class="me-5 fw-bold">FEM_and_CAD.zip</span>1.89 GB
+                </button>
+                                <button class="list-group-item list-group-item-action text-left" data-text="Instrumentation_and_TestLog.zip" data-link="/shocksat/Instrumentation_and_TestLog.zip" data-folder="1">
+                                        <i class="fas fa-file me-2"></i> <span class="me-5 fw-bold">Instrumentation_and_TestLog.zip</span>93.95 MB
+                </button>
+                                <button class="list-group-item list-group-item-action text-left" data-text="Test_Data_Impact" data-link="/shocksat/Test_Data_Impact/" data-folder="">
+                                        <i class="fas fa-folder me-2"></i> <span class="me-5 fw-bold">Test_Data_Impact</span>
+                </button>
+                                <button class="list-group-item list-group-item-action text-left" data-text="Test_Data_Parametric.zip" data-link="/shocksat/Test_Data_Parametric.zip" data-folder="1">
+                                        <i class="fas fa-file me-2"></i> <span class="me-5 fw-bold">Test_Data_Parametric.zip</span>3.33 GB
+                </button>
+
+Directory HEAD curl-like:
+HTTP/1.1 200 OK
+Date: Tue, 09 Jun 2026 10:19:29 GMT
+Server: Apache
+Cache-Control: max-age=0, must-revalidate, private
+Expires: Tue, 09 Jun 2026 10:19:29 GMT
+X-Frame-Options: sameorigin
+Strict-Transport-Security: max-age=31536000
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+Connection: close
+Content-Type: text/html; charset=UTF-8
+

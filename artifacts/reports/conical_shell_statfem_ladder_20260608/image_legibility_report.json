@@ -1,0 +1,60 @@
+{
+  "figures": {
+    "digitized_frf_peak_features.png": {
+      "basic_size_pass": true,
+      "height_px": 768,
+      "width_px": 1360
+    },
+    "frf_qoi_peak_accelerance.png": {
+      "basic_size_pass": true,
+      "height_px": 736,
+      "width_px": 1280
+    },
+    "human_nastran_frequency_table.png": {
+      "basic_size_pass": true,
+      "height_px": 800,
+      "width_px": 1440
+    },
+    "local_solve_vs_published_modal_comparison.png": {
+      "basic_size_pass": true,
+      "height_px": 800,
+      "width_px": 1440
+    },
+    "modal_statfem_v1_posterior_and_holdout.png": {
+      "basic_size_pass": true,
+      "height_px": 720,
+      "width_px": 1760
+    },
+    "mode_shape_status_not_solver_output.png": {
+      "basic_size_pass": true,
+      "height_px": 768,
+      "width_px": 1440
+    },
+    "published_frequency_error.png": {
+      "basic_size_pass": true,
+      "height_px": 720,
+      "width_px": 1280
+    },
+    "published_modal_frequency_comparison.png": {
+      "basic_size_pass": true,
+      "height_px": 768,
+      "width_px": 1280
+    },
+    "published_peak_evidence_log_frequency.png": {
+      "basic_size_pass": true,
+      "height_px": 608,
+      "width_px": 1280
+    },
+    "source_nastran_mesh.png": {
+      "basic_size_pass": true,
+      "height_px": 960,
+      "width_px": 1440
+    },
+    "statfem_launch_graphical_model.png": {
+      "basic_size_pass": true,
+      "height_px": 896,
+      "width_px": 1600
+    }
+  },
+  "pass": true
+}

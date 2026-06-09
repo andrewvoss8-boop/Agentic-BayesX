@@ -1,0 +1,20 @@
+{
+  "assumptions_include_tuning_warning": true,
+  "browser_access_quirk_recorded": true,
+  "checksums_recorded": true,
+  "free_boundary_recorded": true,
+  "frf_qoi_present_and_labeled": true,
+  "human_nastran_modes_ingested": true,
+  "image_legibility_basic_pass": true,
+  "local_solve_comparison_present": true,
+  "missing_fea_mode_preserved": true,
+  "missing_files": [],
+  "missing_snippets": [],
+  "modal_statfem_active": true,
+  "nastran_metadata_present": true,
+  "pass": true,
+  "published_modes_present": true,
+  "source_nas_fetched": true,
+  "source_pdf_fetched": true,
+  "statfem_not_overclaimed": true
+}

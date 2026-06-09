@@ -1,0 +1,26 @@
+UTC 2026-06-09T10:20:05Z
+==== FETCH _README.txt
+URL: https://nescacademy.nasa.gov/shocksat/_README.txt
+
+HTTP_STATUS:404
+SIZE_DOWNLOAD:0
+CONTENT_TYPE:text/html; charset=UTF-8
+URL_EFFECTIVE:https://nescacademy.nasa.gov/shocksat/_README.txt
+
+==== FETCH _ShockSat_Overview_20220606.pdf
+URL: https://nescacademy.nasa.gov/shocksat/_ShockSat_Overview_20220606.pdf
+
+HTTP_STATUS:404
+SIZE_DOWNLOAD:0
+CONTENT_TYPE:text/html; charset=UTF-8
+URL_EFFECTIVE:https://nescacademy.nasa.gov/shocksat/_ShockSat_Overview_20220606.pdf
+
+==== FETCH Instrumentation_and_TestLog.zip
+URL: https://nescacademy.nasa.gov/shocksat/Instrumentation_and_TestLog.zip
+
+HTTP_STATUS:404
+SIZE_DOWNLOAD:0
+CONTENT_TYPE:text/html; charset=UTF-8
+URL_EFFECTIVE:https://nescacademy.nasa.gov/shocksat/Instrumentation_and_TestLog.zip
+
+UTC 2026-06-09T10:20:07Z

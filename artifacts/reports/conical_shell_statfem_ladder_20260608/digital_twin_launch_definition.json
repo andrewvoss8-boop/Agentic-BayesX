@@ -1,0 +1,102 @@
+{
+  "active_v1_results": {
+    "holdout_predictions": [
+      {
+        "base_human_nastran_hz": 524.29385,
+        "covered_by_90pct_interval": true,
+        "mode": 4,
+        "observed_hz": 529.0,
+        "predictive_q05_hz": 497.62775835571375,
+        "predictive_q50_hz": 527.6993547893547,
+        "predictive_q95_hz": 557.7799142450534
+      }
+    ],
+    "posterior": {
+      "frequency_scale_mean": 1.006551010085991,
+      "k_scale_mean": 1.0133492863875435,
+      "k_scale_q05": 0.966272776585552,
+      "k_scale_q50": 1.0130330166737171,
+      "k_scale_q95": 1.060933318466979,
+      "logk_grid_count": 2401
+    },
+    "qoi": {
+      "approx_90pct_interval_g_per_lbf": [
+        12.565,
+        22.435000000000002
+      ],
+      "frequency_shifted_by_modal_posterior_hz": 98.23395232255407,
+      "median_peak_g_per_lbf": 17.5,
+      "name": "aft peak accelerance near first flexible shell mode",
+      "source_feature": {
+        "digitization": "coarse visual from PDF plot",
+        "figure": "Figure 2",
+        "frequency_hz": 97.6,
+        "hit_location": "12 inches from aft end",
+        "magnitude_g_per_lbf": 17.5,
+        "magnitude_uncertainty_g_per_lbf": 3.0,
+        "response": "aft accelerometer"
+      },
+      "units": "G/LBF",
+      "warning": "Amplitude is digitized secondary evidence, not a FEM-predicted accelerance. This QOI is a plumbing artifact until raw FRF or a modal participation model is added."
+    }
+  },
+  "published_mode_rows": [
+    {
+      "measured_hz": 97.6,
+      "percent_error_fea_vs_measured": 0.0,
+      "published_mode_index": 1,
+      "published_preliminary_fea_hz": 97.6
+    },
+    {
+      "measured_hz": 278.0,
+      "percent_error_fea_vs_measured": -1.4388489208633093,
+      "published_mode_index": 2,
+      "published_preliminary_fea_hz": 274.0
+    },
+    {
+      "measured_hz": 429.0,
+      "percent_error_fea_vs_measured": null,
+      "published_mode_index": 3,
+      "published_preliminary_fea_hz": null
+    },
+    {
+      "measured_hz": 529.0,
+      "percent_error_fea_vs_measured": -1.1342155009451795,
+      "published_mode_index": 4,
+      "published_preliminary_fea_hz": 523.0
+    }
+  ],
+  "recommended_v1_model": {
+    "discrepancy": "zero-mean output-space GP over mode index for modal-only v1; switch to log-frequency GP when FRF ordinates are available",
+    "fixed_initial_assumptions": [
+      "free-free boundary approximation",
+      "source thickness/density/geometry from Appendix A",
+      "third published FEA mode missing, not imputed"
+    ],
+    "forward_model": "modal surrogate built from the human Femap/Nastran flexible pair means",
+    "held_out_validation": "mode 4 is held out from the scalar stiffness calibration; the 429 Hz feature remains an unmatched model-class warning",
+    "inferred_variables": [
+      "global shell stiffness scale",
+      "modal-only output discrepancy integrated as fixed covariance",
+      "FRF peak QOI uncertainty from digitization uncertainty"
+    ],
+    "observations": "measured modal frequencies [97.6, 278, 429, 529] Hz plus coarse digitized FRF peak features",
+    "qoi_candidates": [
+      "held-out flexible-mode frequency",
+      "peak accelerance near a selected measured mode after FRF digitization",
+      "modal amplification factor for a chosen response location"
+    ]
+  },
+  "source_model_size": {
+    "elements": 912,
+    "nodes": 961,
+    "quads": 872,
+    "tris": 40
+  },
+  "statfem_active": true,
+  "why_not_active_yet": [
+    "A modal-only one-parameter update is active, but a full FRF digital twin is not active yet.",
+    "The source FEM was tuned to match the measured fundamental frequency.",
+    "Raw FRF ordinates were not extracted; only coarse peak features are available."
+  ]
+}

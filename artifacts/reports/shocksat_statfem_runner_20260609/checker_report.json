@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "channel_inventory_exists": true,
+    "fem_cad_archive_status_documented": true,
+    "fem_test_comparison_or_blocker_exists": true,
+    "hammer_frf_manifest_exists": true,
+    "hammer_frf_not_promoted_to_likelihood": true,
+    "image_legibility_dimensions_pass": true,
+    "image_legibility_report_exists": true,
+    "instrumentation_fetched_or_failure_documented": true,
+    "nasa_correlation_frf_assets_indexed": true,
+    "no_active_statfem_claim_without_inputs": true,
+    "overview_fetched_or_failure_documented": true,
+    "quantity_contracts_exist": true,
+    "raw_derived_model_assumption_distinction_in_report": true,
+    "readme_fetched_or_failure_documented": true,
+    "real_measured_data_plot_exists_unless_access_failed": true,
+    "runtime_accounting_exists": true,
+    "source_manifest_exists": true,
+    "statfem_launch_definition_exists": true,
+    "test_log_inventory_exists": true,
+    "units_sample_rate_channel_map_before_plotting": true
+  },
+  "generated_utc": "2026-06-09T13:21:37+00:00",
+  "known_blockers": [
+    "Hammer FRF is computed only as a low-coherence diagnostic; do not use as a StatFEM likelihood until coherence and source/response mapping are resolved.",
+    "NASA SOL 111 FRF assets and Test07 shock-channel FRFs are not directly overlayable until source/response grid conventions are reconciled."
+  ],
+  "overall_pass": true
+}

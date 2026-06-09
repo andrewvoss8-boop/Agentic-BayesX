@@ -1,0 +1,32 @@
+{
+  "discrepancy": "output-space discrepancy over log frequency or mode index; do not put discrepancy in the same stiffness parameter space as calibrated stiffness",
+  "fixed_variables": [
+    "geometry and mass properties from NASA correlated FEM",
+    "sensor calibration from instrumentation workbook unless calibration uncertainty is added later",
+    "file-specific sample interval from MAT dXstep for plotted/test subsets; README 100000 samples/s retained as general-release metadata until reconciled"
+  ],
+  "generated_utc": "2026-06-09T13:21:37+00:00",
+  "held_out_validation": [
+    "hold out at least one channel",
+    "hold out one test or one frequency band/mode family",
+    "pyro validation after hammer/modal updating is the strongest trust test"
+  ],
+  "inferred_variables": [
+    "small number of stiffness scales grouped by source box, bolted-joint/interface region, upper structure, or struts",
+    "possibly damping scale only if repeat/FRF metadata support it"
+  ],
+  "noise": "use sensor/test metadata when available; otherwise transparent assumed g/lbf noise with sensitivity priority",
+  "observations": [
+    {
+      "name": "selected hammer accelerance FRFs or modal frequencies",
+      "reason": "Hammer force channel exists and supports input-output dynamics before unknown-forcing pyro validation."
+    },
+    {
+      "name": "pyro NSD response/SRS features as held-out validation or QOI",
+      "reason": "Pyro is higher-magnitude shock response but forcing is not directly measured."
+    }
+  ],
+  "qoi": "payload-like, interface/bolted-joint, or far-field panel shock response metric at a held-out channel",
+  "statfem_stub_status": "deferred unless raw MAT data, force/FRF inputs, FEM mapping, and held-out validation are all available",
+  "v1_recommendation": "hammer_or_modal_first_if_force_and_FRF_data_are_parseable"
+}

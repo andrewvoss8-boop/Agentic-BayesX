@@ -8,6 +8,28 @@
 - Key metrics:
 - Lessons:
 
+## 2026-06-09 ShockSat StatFEM runner continuation
+- Trial: resume the interrupted full Test07 impact-hammer archive download, verify the archive, regenerate the ShockSat packet, and upgrade the hammer FRF layer from a single-hit diagnostic to a four-hit averaged diagnostic.
+  - Command: `bash artifacts/reports/shocksat_statfem_runner_20260609/run_all.sh`
+  - Checker result: pass. `artifacts/reports/shocksat_statfem_runner_20260609/checker_report.json` reports `overall_pass = true` with known blockers preserved.
+  - Key metrics: `Test07_ImpactHammer_990x.zip` fetched at 593,859,074 bytes with SHA256 `df104a731f98a8b5429bfd24e4a0bff07b8fce0a567ac8ac02d6922b39c320b6`; ZIP integrity check reported no bad member; archive contains four MAT hammer hits. Multi-hit H1 diagnostic used force channel 116 and response channels 1, 50, and 87 at 250,000 samples/s. Median coherence from 100-10,000 Hz remained low: ch1 = 0.0722, ch50 = 0.0706, ch87 = 0.0681; fraction with coherence >= 0.8 was 0.0 for all three selected channels.
+  - Artifacts: updated `shocksat_statfem_packet.md`, `source_manifest.json`, `hammer_frf_subset_manifest.json`, `hammer_frf_alignment.md`, `hammer_frf_hit_summary.csv`, `figures/hammer_frf_accelerance_subset.png`, and `figures/hammer_frf_coherence_subset.png`.
+  - Lessons: recovering repeated hammer hits improved provenance but did not make the FRF likelihood-ready. The TestLog has six Test07 rows while the archive exposes four MAT files, so source-location metadata must be reconciled before assuming a one-to-one test-hit map. The next engineering action is a source/response grid mapping audit between Test07 impact points, 9900001-style response grids, and NASA SOL 111 grids 11101X/11110Y.
+
+## 2026-06-08 Vibrationdata conical-shell StatFEM ladder
+- Trial: scoped source audit, FEM-vs-published-test comparison, and StatFEM launch definition for the Vibrationdata conical shell only.
+  - Command: `bash scripts/run_conical_shell_statfem_ladder.sh`
+  - Checker result: pass. Internal `checker_report.json` and external `checker_report_external.json` both report `pass = true`.
+  - Key metrics: `conical_shell.pdf` fetched; `conical_shell3.nas` fetched with curl-like user agent; browser-like user agent returned HTTP 406 and is recorded. Parsed source deck: `SOL SEMODES`, 961 GRID nodes, 872 CQUADR, 40 CTRIAR, PSHELL thickness 0.1 inch, no SPC/SPC1 constraints. Published measured modes: 97.6, 278, 429, 529 Hz. Published preliminary FEA modes: 97.6, 274, missing, 523 Hz. FEA-vs-measured errors for available modes: 0.00%, -1.44%, -1.13%.
+  - Artifacts: `artifacts/reports/conical_shell_statfem_ladder_20260608/conical_shell_packet.md`, source manifest, Nastran summary, assumptions ledger, quantity contracts, digital-twin launch definition, checker reports, source cache, and figures.
+  - Lessons: this is a good public conical-shell sandbox, but not yet an active StatFEM digital twin. The source report says the preliminary FEM material properties were adjusted to match the fundamental, so mode-1 agreement is provenance rather than independent validation. No local shell solver was run; raw FRF ordinates were not extracted.
+- Trial update: continued with human Femap/Nastran solve ingestion, coarse FRF peak digitization, modal-only StatFEM v1, and first FRF/QOI layer.
+  - Command: `bash scripts/run_conical_shell_statfem_ladder.sh`
+  - Checker result: pass. External checker reports `modal_statfem_active = true`, `human_nastran_modes_ingested = true`, `frf_qoi_present_and_labeled = true`, and `statfem_not_overclaimed = true`.
+  - Key metrics: human Femap/Nastran modes 1-6 are near-zero free-free rigid-body modes; flexible pair means are 97.6373, 274.0179, 524.2939, 728.9819, 764.5755, 847.8621, 939.8805 Hz. Local solve vs measured errors for matched published modes: +0.04%, -1.43%, unmatched 429 Hz, -0.89%. Modal-only StatFEM v1 uses exact grid quadrature, not NUTS/HMC; posterior stiffness scale median = 1.0130 with 90% interval [0.9663, 1.0609]. Held-out mode 4 observed 529.0 Hz and predictive 90% interval [497.6, 557.8] Hz covers it. First FRF/QOI layer reports coarse visual aft peak accelerance near mode 1 = 17.5 G/LBF with approximate 90% interval [12.56, 22.44] G/LBF.
+  - Artifacts added: `human_nastran_solution.json`, `local_solve_comparison.json`, `frf_digitized_features.json`, `modal_statfem_v1_results.json`, `frf_qoi_summary.json`, figures for local solve comparison, modal posterior/holdout, digitized FRF features, and QOI.
+  - Lessons: screenshots are valid provenance for frequencies and qualitative mode family, but not machine-readable mode shapes for MAC or mode-shape updating. The 429 Hz measured feature remains an explicit model-class warning rather than something to force-fit with a scalar stiffness scale.
+
 ## 2026-06-08 Codex FEM Phase 1 builder
 - Trial: GPT-5.5/Codex execution of `docs/lab/fem_phase1_runner_prompt.md` under `runs/fem_phase1/codex/<tool>/`.
   - Command: `PYTHONUNBUFFERED=1 runs/fem_phase1/codex/run_all.sh`

@@ -1,0 +1,4 @@
+daq_channel,description,response_units,accelerance_units,structural_axis,fem_grid,fem_grid_verified_in_main_model,x_in,y_in,z_in,median_abs_h1_100_10000_g_per_lbf,max_abs_h1_100_10000_g_per_lbf,max_abs_h1_frequency_hz,median_coherence_100_10000,fraction_coherence_ge_0p8_100_10000,frf_likelihood_ready,frf_likelihood_blocker
+1,Source +X Face -Y Edge (100k),g,g/lbf,X,9900001,True,9,-5.375,2.375,2.735261787035499,88.74228973043397,679.01611328125,0.0721795754776303,0.0,False,low coherence and/or source-grid convention not reconciled
+50,Steel Box Below Bolted Joint (+X Center),g,g/lbf,X,9900016,True,9,-0.3125,16.625,1.8273274092664884,37.73245680431253,1792.90771484375,0.07063222288097781,0.0,False,low coherence and/or source-grid convention not reconciled
+87,Cross Center,g,g/lbf,X,9900028,True,-0.625,-0.375,42,0.644797824876884,23.714580039136806,663.75732421875,0.06807039309612166,0.0,False,low coherence and/or source-grid convention not reconciled

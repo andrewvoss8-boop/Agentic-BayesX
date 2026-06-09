@@ -1,0 +1,65 @@
+UTC 2026-06-09T12:07:36Z chunked_nsd_start
+{"bytes": 0, "complete_mats": [], "entries": 0, "incomplete": null, "preferred_complete": []}
+Fetching NSD range 0-16777215
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 16777216 bytes
+{"bytes": 16777216, "complete_mats": [], "entries": 2, "incomplete": {"complete": false, "compressed_size": 32757971, "compression": 8, "data_end": 32758084, "data_start": 113, "name": "Pyro_NSI_NSD/ESTA_LaserData_NSD1234.xlsx", "uncompressed_size": 32793073}, "preferred_complete": []}
+Fetching NSD range 16777216-33554431
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 33554432 bytes
+{"bytes": 33554432, "complete_mats": [], "entries": 4, "incomplete": {"complete": false, "compressed_size": 27644368, "compression": 8, "data_end": 60402584, "data_start": 32758216, "name": "Pyro_NSI_NSD/NSD1_Test/20211013_NSDfromScreen.MOV", "uncompressed_size": 28051385}, "preferred_complete": []}
+Fetching NSD range 33554432-50331647
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 50331648 bytes
+{"bytes": 50331648, "complete_mats": [], "entries": 4, "incomplete": {"complete": false, "compressed_size": 27644368, "compression": 8, "data_end": 60402584, "data_start": 32758216, "name": "Pyro_NSI_NSD/NSD1_Test/20211013_NSDfromScreen.MOV", "uncompressed_size": 28051385}, "preferred_complete": []}
+Fetching NSD range 50331648-67108863
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 67108864 bytes
+{"bytes": 67108864, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 67108864-83886079
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 83886080 bytes
+{"bytes": 83886080, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 83886080-100663295
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 100663296 bytes
+{"bytes": 100663296, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 100663296-117440511
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 117440512 bytes
+{"bytes": 117440512, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 117440512-134217727
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 134217728 bytes
+{"bytes": 134217728, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 134217728-150994943
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 150994944 bytes
+{"bytes": 150994944, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 150994944-167772159
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 167772160 bytes
+{"bytes": 167772160, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 167772160-184549375
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 184549376 bytes
+{"bytes": 184549376, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 184549376-201326591
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 201326592 bytes
+{"bytes": 201326592, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 201326592-218103807
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 218103808 bytes
+{"bytes": 218103808, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 218103808-234881023
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 234881024 bytes
+{"bytes": 234881024, "complete_mats": [], "entries": 5, "incomplete": {"complete": false, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": []}
+Fetching NSD range 234881024-251658239
+HTTP=206 got=16777216 expect=16777216
+NSD ZIP now 251658240 bytes
+{"bytes": 251658240, "complete_mats": [{"complete": true, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}], "entries": 7, "incomplete": {"complete": false, "compressed_size": 182239236, "compression": 8, "data_end": 425847062, "data_start": 243607826, "name": "Pyro_NSI_NSD/NSD2_Test/Pyro_NSD_990x002_10_13_2021_3_22_53 PM.mat", "uncompressed_size": 384386176}, "preferred_complete": [{"complete": true, "compressed_size": 183204999, "compression": 8, "data_end": 243607678, "data_start": 60402679, "name": "Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat", "uncompressed_size": 384386176}]}
+Found complete preferred NSD MAT member.
+427497e3085c976b0b14c858089e26826e51fd38809720466b36879ff275b9f9  artifacts/reports/shocksat_statfem_runner_20260609/sources/Test_Data_Pyro_NSI_NSD.zip
+UTC 2026-06-09T12:25:21Z chunked_nsd_done

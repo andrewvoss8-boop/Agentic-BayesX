@@ -1,0 +1,130 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "exists:opus_frf_summary.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:opus_frf_estimates.npz",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:runtime.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:figures/opus_frf_repeatability_ch1.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:figures/opus_coherence_method_compare_ch1.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:figures/opus_fem_vs_test_peaks.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:review_of_codex_run.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:packet.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:opus_point_reconcile.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:opus_normalization_findings.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:v1_heldout_qoi_table.csv",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:v1_heldout_qoi_summary.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:statfem_v1_heldout.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:figures/v1_heldout_qoi_sidebyside.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:figures/v1_modal_freq_calibration.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exists:figures/v1_shocksat_pyro_directional.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "corrected_method_>=3x_codex_median_coh",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "near_resonance_coh_ge_0.7",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fem_sol111_parsed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "honesty_no_overclaim",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "modal_band_correct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "normalization_reconciled_honestly",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v1_predictions_integrity_pinned",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v1_heldout_qoi_has_ci_and_actual",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v1_ood_miscoverage_reported",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

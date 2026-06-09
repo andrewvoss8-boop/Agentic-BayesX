@@ -1,0 +1,18 @@
+{
+  "directly_comparable_now": [
+    "Instrumentation FEM grid IDs can be checked against parsed deck GRID cards; expected shock accelerometer grids are present in the parsed main FEM aggregate.",
+    "Hammer force channel exists in instrumentation map (channel 116, lbf).",
+    "At least one real MAT data subset was plotted with channel metadata.",
+    "A measured Test07 hammer H1 accelerance diagnostic can be computed from force channel 116 to selected response channels."
+  ],
+  "first_data_status": "plotted",
+  "generated_utc": "2026-06-09T13:21:36+00:00",
+  "hammer_frf_comparison_status": "not_directly_overlayable_currently",
+  "hammer_frf_status": "computed_multi_hit_low_coherence_diagnostic",
+  "nasa_well_correlated_status": "Tail/full FEM evidence includes FEM/Correlation assets; whether the evidence proves correlation requires inspecting extracted correlation documents.",
+  "not_comparable_yet_or_blocked": [
+    "The measured hammer H1 accelerance estimate has low coherence and is not likelihood-ready.",
+    "NASA SOL 111 FRF assets and Test07 shock-channel FRFs are not directly overlayable until source/response grid conventions are reconciled."
+  ],
+  "sensor_to_fem_map_status": "Instrumentation workbook FEM grids are verified in the parsed main FEM_20211021 aggregate; the expected ShockSat accelerometer grids are present."
+}
