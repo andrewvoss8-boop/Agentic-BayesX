@@ -1,0 +1,205 @@
+{
+ "hashed_at": "2026-06-09T16:09:42",
+ "files": {
+  "../shocksat_opus_20260609/opus_point_reconcile.json": {
+   "sha256": "d8d7bf2bdc54bad6aad92f2f482944398f22e2f125f9d71f59b4d42d8ef1ec35",
+   "bytes": 6085
+  },
+  "../shocksat_statfem_runner_20260609/channel_map.csv": {
+   "sha256": "44f66d98ac3a182355547a3395b7b90138e8cc7f65a576ca707d70c800b0e3bc",
+   "bytes": 57724
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/FRF_Verification/SOL_111_Free_Free_Force_11101X.bdf": {
+   "sha256": "1ce27db5bdd7b060577ea2353b4cf25243241548f4bcfbff6363e886fcfa6ba9",
+   "bytes": 2304
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/FRF_Verification/SOL_111_Free_Free_Force_11101X.pch": {
+   "sha256": "f39a25f6ad4560ede7dd9cff615e45deb8e5de5a0973146f896244fe47811a05",
+   "bytes": 77906367
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/FRF_Verification/SOL_111_Free_Free_Force_11110Y.bdf": {
+   "sha256": "d3fb6936b73777e13f0976c399338b50c580b9934baccf5c795d108521382da0",
+   "bytes": 2304
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/FRF_Verification/SOL_111_Free_Free_Force_11110Y.pch": {
+   "sha256": "d6c84c74a20a4d0d8bcca71dfa4ae46f9b6250e7dc6161b30b380825ef15754f",
+   "bytes": 77906367
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Final_Summary_Documentation_101521_rev1.pptx": {
+   "sha256": "04efa1660b9db0d0aa06d5d0b908f9ff85a3dbc254fe67c0eef241d8b2d4cae9",
+   "bytes": 74518670
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Instrumentation_locations.xlsx": {
+   "sha256": "2ce6cb00fbc44a39df34abdef923323479be602311178a3f6d5de2d246c6c34d",
+   "bytes": 361210
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/FF_Final_Data/ShkSat Free Free Mode Shapes Summary VJS.xlsx": {
+   "sha256": "b9c694df32f56261c09c8128bad6b3f1d5784f38fae4ae6bd6333ef5d3473ed8",
+   "bytes": 145677
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/FF_Final_Data/ShkSat_78_Burst_5105_8109_9206_higher_Test_Report.xlsx": {
+   "sha256": "12b313464f1b9f13aca2695df9b17f4d716f692be79581dd972a8964004f984a",
+   "bytes": 145020
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/IRKE_ASET.blk": {
+   "sha256": "bb3fcb32bd7227c92139343fd9ed59b7f2a1aba8c7a15dec767b637afdaac4c3",
+   "bytes": 1029
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/IRKE_DISP.blk": {
+   "sha256": "3335539c2af58e80df10aceafe467993e90593d24b6aff4061e717a4ca299ed5",
+   "bytes": 583
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/Modes.dat": {
+   "sha256": "ddceb506e0ad4a872b51bf90f91a8778478b78696864a37f23561bd5f3b602e0",
+   "bytes": 628
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/Modes.pch": {
+   "sha256": "7b99862f5f22e6150aabb9113e310d5ffd8d6573aa3cccf987ec5d2866de1163",
+   "bytes": 595188
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/TAM.dat": {
+   "sha256": "6bd5fbae4f40d8a7cf16953c1ba4480e4a11dc4bf92533175754667df5278b07",
+   "bytes": 863
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/TAM.pch": {
+   "sha256": "e495eebfddc80e1707ce971d8be161ead0d2d53389aff73b6b96c9e96c5e7af5",
+   "bytes": 6447820
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/TDM_FF_1_04152021_v2.blk": {
+   "sha256": "5eba5a0b9a71ab8808b537dce94dde5a83bf859bfd8511cd2b254ad1ebff71e7",
+   "bytes": 12762
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/Model/ShockSat_L_04292021.blk": {
+   "sha256": "22aca3cd3a8eb1e3edd5164c4bc6ef11f4100d0ad49287816cf4e41a15ee203b",
+   "bytes": 731841
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/Model/ShockSat_L_04292021_FB.dat": {
+   "sha256": "d7a50116a04abdb55d7d1c57f812654702160520f6dfae1b2ac7893711e09210",
+   "bytes": 949
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/Model/ShockSat_L_04292021_FB.f06": {
+   "sha256": "ff886ac1ff32d500cc8d96d639580dd767eb198ba8152cabbd6ce0cc71c651ac",
+   "bytes": 815585
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/Model/ShockSat_L_04292021_FB.op2": {
+   "sha256": "5da1bc62781f7d87aae252ea2b4b13ce697918f5143be8cfa48997ce5416be91",
+   "bytes": 52418940
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/ShkSat_Final_Shapes_VJS/ShkSat_139_Burst Data Review and Modal Results Final 07162021.pptx": {
+   "sha256": "f6102c595538ab392b73b60179622d1545c68513c0a9725018c560f31ac7e423",
+   "bytes": 5444800
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/ShkSat_Final_Shapes_VJS/ShkSat_139_burst_8109_4105_1101_highest_VJS_RevC.xlsx": {
+   "sha256": "dc694685e6bba8e84488be2438309f460ceb7f102c95159618540dd020cfca18",
+   "bytes": 45881
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/IRKE_ASET.blk": {
+   "sha256": "a962b97d36b3287a3caa3aad0955a3362d604af8264c8a4e194337f2f0e0f2c3",
+   "bytes": 951
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/IRKE_DISP.blk": {
+   "sha256": "e84d8cb647a3ab96a9c79edc6c5bd5875aa59e652e96e94c633fc5d8b153fb0a",
+   "bytes": 535
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/Modes.dat": {
+   "sha256": "232b8f8398635cc9602d9436806b3cf934a86ae09bba1e1ef060ec4d86475325",
+   "bytes": 690
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/Modes.pch": {
+   "sha256": "7c9aca84b8402559a7f1d17af66326810be589b734ea0cad46a5c14b0ac163c5",
+   "bytes": 426870
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/TAM.dat": {
+   "sha256": "3e65ef066438ee6f8a3a5941c17a7011a1a27c5a9255ccf720bfcfb17cde6aac",
+   "bytes": 925
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/TAM.pch": {
+   "sha256": "8088c04319fbb6deca66c7bbb15d59d22df257376ca72b63d7d794138131b6ff",
+   "bytes": 5675695
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/TDM_FB_4262021.blk": {
+   "sha256": "b8d4d15e5ecc218e68b036e27bee48c7f2580adab1953b07d678e08d3423159a",
+   "bytes": 12631
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/Instrumentation_locations.xlsx": {
+   "sha256": "2ce6cb00fbc44a39df34abdef923323479be602311178a3f6d5de2d246c6c34d",
+   "bytes": 361210
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/Modal_test_plan_02232021.pptx": {
+   "sha256": "2a7582b7134c622d96cd0d7143bcd6230cbe4415738f6cd699669601119c7965",
+   "bytes": 2787795
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/ShockSat_measured_weights.xlsx": {
+   "sha256": "2663e17979fe38137ce5e258ef495b9886e40cb0cf671df7c9f63c68fb0c6b9c",
+   "bytes": 11686
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/Test_log_4-29-21.xlsx": {
+   "sha256": "875782ff216ac42e6d9bd5b600e60c7699072e46d8561a19f9982af9b7391e13",
+   "bytes": 2518191
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/ShockSat_TAM_101521.dat": {
+   "sha256": "c77e6e6c6f98b36b4685bd4485d14cd3ccee3be029775bde9d9b724c4e34c97b",
+   "bytes": 1761
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/ShockSat_measured_weights.xlsx": {
+   "sha256": "2663e17979fe38137ce5e258ef495b9886e40cb0cf671df7c9f63c68fb0c6b9c",
+   "bytes": 11686
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Test_Mode_Shapes/TDM_FF_091721.blk": {
+   "sha256": "4e6137976e2b30399af56951a86ef240eb7d13cf0c519a4d58d9523d36fb356a",
+   "bytes": 13857
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Angle_Brackets_101521.blk": {
+   "sha256": "65137933971f7e7fd7383719affec7bc96d8e6268308ca460c09011dc8c600ce",
+   "bytes": 109222
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Bottom_Box_101521.blk": {
+   "sha256": "3eb69c4f36f9243b961953af8dbee0f2de5fc1574f08165022d6a3f3d3031572",
+   "bytes": 3182281
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Cross_Beam_101521.blk": {
+   "sha256": "e7ac4193634b3a31543fdc670d7f8928b2977879a4ee70b4e68ab8eac57574ff",
+   "bytes": 214561
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Joint_Connections_101521.blk": {
+   "sha256": "60c4426c1c5886dc0ec660f3002e0ba44802b3049725f9ab277e7b6b16dd45ef",
+   "bytes": 8590
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Material_Properties_101521.blk": {
+   "sha256": "78f88c7d26718a326d8bbf2340799187ef2f6510773f9354ffa8500ae8437cc3",
+   "bytes": 663
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Modal_Test_Instrumentation_092721.blk": {
+   "sha256": "5dd469a3a9019a65fa5559b5b57d955b881e43e9307d21406e6c488a76e9a6b3",
+   "bytes": 22447
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Modes.dat": {
+   "sha256": "714e5953568f5901e2dbf2f2b289a44f0102170fc11e190c111687436610e49d",
+   "bytes": 811
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Rectangular_Plate_Contact_101521.blk": {
+   "sha256": "5d65dec6f5309619831e689ddfe0bbccbb1cef371ec54f018204da0c72e6f3ff",
+   "bytes": 5222
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Rectangular_Plates_101521.blk": {
+   "sha256": "8c143548f921eac129fa430564b96d940ce30be47a9237e0ae82f3001e27e9b9",
+   "bytes": 124592
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Shock_Test_Instrumentation.blk": {
+   "sha256": "395e3fd3491e4cc8eb9cb1300abd310478ee6d2c4510e05cdebf4b277ae20af8",
+   "bytes": 4639
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Top_Box_101521.blk": {
+   "sha256": "fbc7e051c9618e9912c38ef6125a6129531aadf558bcc7b60a51622b75b9fac8",
+   "bytes": 4425625
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Top_Brackets_101521.blk": {
+   "sha256": "552107afaf9a46bb1b77e896dec8f6e78b11693da4f75e13b68a098412f6db72",
+   "bytes": 201104
+  },
+  "../shocksat_statfem_runner_20260609/extracted/FEM/FEM_20211021/Top_Circular_Plate_101521.blk": {
+   "sha256": "2b42d81b9986c08a0554346884a3f522611d5093fcca50961ce38630d054dc3f",
+   "bytes": 567048
+  }
+ }
+}

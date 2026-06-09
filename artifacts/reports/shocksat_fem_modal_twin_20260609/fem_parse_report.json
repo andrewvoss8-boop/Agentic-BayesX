@@ -1,0 +1,446 @@
+{
+ "n_grids": 67720,
+ "n_cquad4": 67366,
+ "n_ctria3": 428,
+ "n_cbush": 166,
+ "n_conm2": 80,
+ "n_rbe2": 187,
+ "n_rbe2_dep_grids": 2261,
+ "pshell": {
+  "101": {
+   "mid1": 1002,
+   "t": 0.118,
+   "mid2": 1002,
+   "bend_ratio": 1.0,
+   "mid3": 1002,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Bottom_Box"
+  },
+  "102": {
+   "mid1": 1002,
+   "t": 0.125,
+   "mid2": 1002,
+   "bend_ratio": 1.0,
+   "mid3": 1002,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Bottom_Box"
+  },
+  "103": {
+   "mid1": 1002,
+   "t": 0.118,
+   "mid2": 1002,
+   "bend_ratio": 1.0,
+   "mid3": 1002,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Bottom_Box"
+  },
+  "104": {
+   "mid1": 1004,
+   "t": 0.10622,
+   "mid2": 1004,
+   "bend_ratio": 1.0,
+   "mid3": 1004,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Bottom_Box"
+  },
+  "105": {
+   "mid1": 1004,
+   "t": 0.236,
+   "mid2": 1004,
+   "bend_ratio": 1.0,
+   "mid3": 1004,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Bottom_Box"
+  },
+  "106": {
+   "mid1": 1004,
+   "t": 0.1768,
+   "mid2": 1004,
+   "bend_ratio": 1.0,
+   "mid3": 1004,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Bottom_Box"
+  },
+  "201": {
+   "mid1": 1001,
+   "t": 0.122,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Box"
+  },
+  "202": {
+   "mid1": 1001,
+   "t": 0.125,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Box"
+  },
+  "203": {
+   "mid1": 1001,
+   "t": 0.122,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Box"
+  },
+  "204": {
+   "mid1": 1003,
+   "t": 0.11227,
+   "mid2": 1003,
+   "bend_ratio": 1.0,
+   "mid3": 1003,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Box"
+  },
+  "205": {
+   "mid1": 1003,
+   "t": 0.232,
+   "mid2": 1003,
+   "bend_ratio": 1.0,
+   "mid3": 1003,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Box"
+  },
+  "206": {
+   "mid1": 1003,
+   "t": 0.1785,
+   "mid2": 1003,
+   "bend_ratio": 1.0,
+   "mid3": 1003,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Box"
+  },
+  "301": {
+   "mid1": 1001,
+   "t": 0.125,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Angle_Brackets"
+  },
+  "302": {
+   "mid1": 1001,
+   "t": 0.13,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Angle_Brackets"
+  },
+  "401": {
+   "mid1": 1001,
+   "t": 0.125,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Cross_Beam"
+  },
+  "501": {
+   "mid1": 1001,
+   "t": 0.777,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Rectangular_Plates"
+  },
+  "601": {
+   "mid1": 1001,
+   "t": 1.0,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Brackets"
+  },
+  "701": {
+   "mid1": 1001,
+   "t": 0.777,
+   "mid2": 1001,
+   "bend_ratio": 1.0,
+   "mid3": 1001,
+   "ts_t": 0.833333,
+   "nsm": 0.0,
+   "file": "Top_Circular_Plate"
+  }
+ },
+ "pbush": {
+  "801": {
+   "k": [
+    1000000.0,
+    1000000.0,
+    5000000.0,
+    12240.0,
+    10000000.0,
+    10000000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "802": {
+   "k": [
+    813660.0,
+    813660.0,
+    19100000.0,
+    770000.0,
+    10000000.0,
+    10000000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "803": {
+   "k": [
+    186000.0,
+    186000.0,
+    5000000.0,
+    1000000.0,
+    10000000.0,
+    10000000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "804": {
+   "k": [
+    691000.0,
+    5000000.0,
+    691000.0,
+    16660.0,
+    10000000.0,
+    10000000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "805": {
+   "k": [
+    899790.0,
+    5000000.0,
+    899790.0,
+    10000000.0,
+    10000000.0,
+    946000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "806": {
+   "k": [
+    5000000.0,
+    100000.0,
+    100000.0,
+    10000000.0,
+    32000.0,
+    10000000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "807": {
+   "k": [
+    5000000.0,
+    324000.0,
+    324000.0,
+    10000000.0,
+    10000000.0,
+    869000.0
+   ],
+   "file": "Joint_Connections"
+  },
+  "902": {
+   "k": [
+    6800.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "file": "Rectangular_Plate_Contact"
+  },
+  "99": {
+   "k": [
+    1000000.0,
+    1000000.0,
+    1000000.0,
+    10000000.0,
+    10000000.0,
+    10000000.0
+   ],
+   "file": "Modal_Test_Instrumentation"
+  }
+ },
+ "mat1": {
+  "1001": {
+   "E": 9702000.0,
+   "G": 3724000.0,
+   "nu": 0.33,
+   "rho": 0.0002536
+  },
+  "1002": {
+   "E": 26989000.0,
+   "G": 10796000.0,
+   "nu": 0.27,
+   "rho": 0.0007402
+  },
+  "1003": {
+   "E": 9999000.0,
+   "G": 3838000.0,
+   "nu": 0.33,
+   "rho": 0.0002536
+  },
+  "1004": {
+   "E": 28420000.0,
+   "G": 10976000.0,
+   "nu": 0.27,
+   "rho": 0.0007402
+  }
+ },
+ "cords": {
+  "801": {
+   "type": "CORD2R",
+   "origin": [
+    0.0,
+    0.0,
+    18.43746
+   ],
+   "R": [
+    [
+     0.0,
+     1.0,
+     -0.0
+    ],
+    [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  "802": {
+   "type": "CORD2R",
+   "origin": [
+    0.0,
+    0.0,
+    18.43746
+   ],
+   "R": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  "4": {
+   "type": "CORD2C",
+   "origin": [
+    0.0,
+    0.0,
+    57.74989
+   ],
+   "R": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  }
+ },
+ "counts": {
+  "Angle_Brackets:CQUAD4": 768,
+  "Angle_Brackets:GRID": 880,
+  "Angle_Brackets:PSHELL": 2,
+  "Angle_Brackets:RBE2": 12,
+  "Bottom_Box:CQUAD4": 24542,
+  "Bottom_Box:CTRIA3": 46,
+  "Bottom_Box:GRID": 24211,
+  "Bottom_Box:PSHELL": 6,
+  "Bottom_Box:RBE2": 28,
+  "Cross_Beam:CQUAD4": 1568,
+  "Cross_Beam:CTRIA3": 4,
+  "Cross_Beam:GRID": 1717,
+  "Cross_Beam:PSHELL": 1,
+  "Cross_Beam:RBE2": 8,
+  "Joint_Connections:CBUSH": 60,
+  "Joint_Connections:CORD2R": 2,
+  "Joint_Connections:GRID": 8,
+  "Joint_Connections:PBUSH": 7,
+  "Joint_Connections:RBE2": 8,
+  "Material_Properties:MAT1": 4,
+  "Modal_Test_Instrumentation:CBUSH": 76,
+  "Modal_Test_Instrumentation:CONM2": 80,
+  "Modal_Test_Instrumentation:CORD2C": 1,
+  "Modal_Test_Instrumentation:GRID": 76,
+  "Modal_Test_Instrumentation:PBUSH": 1,
+  "Rectangular_Plate_Contact:CBUSH": 30,
+  "Rectangular_Plate_Contact:GRID": 30,
+  "Rectangular_Plate_Contact:PBUSH": 1,
+  "Rectangular_Plate_Contact:RBE2": 30,
+  "Rectangular_Plates:CQUAD4": 896,
+  "Rectangular_Plates:GRID": 1020,
+  "Rectangular_Plates:PSHELL": 1,
+  "Rectangular_Plates:RBE2": 8,
+  "Shock_Test_Instrumentation:GRID": 37,
+  "Shock_Test_Instrumentation:RBE2": 37,
+  "Top_Box:CQUAD4": 34096,
+  "Top_Box:CTRIA3": 42,
+  "Top_Box:GRID": 33768,
+  "Top_Box:PSHELL": 6,
+  "Top_Box:RBE2": 36,
+  "Top_Brackets:CQUAD4": 1440,
+  "Top_Brackets:GRID": 1668,
+  "Top_Brackets:PSHELL": 1,
+  "Top_Brackets:RBE2": 12,
+  "Top_Circular_Plate:CQUAD4": 4056,
+  "Top_Circular_Plate:CTRIA3": 336,
+  "Top_Circular_Plate:GRID": 4305,
+  "Top_Circular_Plate:PSHELL": 1,
+  "Top_Circular_Plate:RBE2": 8
+ }
+}

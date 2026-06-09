@@ -1,0 +1,11 @@
+{
+ "note": "session 1 partial accounting; final runtime.json due at task end",
+ "session1": {
+  "start_epoch": 1781035781,
+  "end_epoch": 1781037579,
+  "elapsed_wallclock_s": 1798,
+  "active_runtime_s_approx": 120,
+  "active_runtime_basis": "sum of executed command times (hashing ~1s, parses/probes ~20x0.5s, element validation ~3x1s, assembly 15s, misc); approximate, dominated by assembly",
+  "machine": "Mac CPU"
+ }
+}

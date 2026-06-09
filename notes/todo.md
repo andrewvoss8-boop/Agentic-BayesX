@@ -1,7 +1,19 @@
 # Todo
 
+## 2026-06-09 ShockSat FEM modal twin runner — IN FLIGHT, session 1 ended (out of credits)
+Workspace: `artifacts/reports/shocksat_fem_modal_twin_20260609/`. Full handoff in
+its `next_prompt.md` (read that first; also `decisions_log.md` D1-D8).
+- [x] Task 0 RESOLVED: measured modes = `Final_FF_Test_Shapes_100121.ash` (33 modes
+      w/ shapes on 76 nodes, parsed + validated); Modes.pch proven FEM-not-test.
+- [x] NASTRAN deck parsed (67,720 grids); element library written + validated.
+- [x] Per-PID stiffness blocks + mass assembled (~15 s runtime).
+- [ ] BLOCKER: RBE2 double-dependency (Shock_Test_Instrumentation.blk) — fix per
+      next_prompt.md, then nominal eigensolve vs NASA pptx freqs.
+- [ ] Reduction, NUTS calibration, held-out QOI side-by-side, sensitivity,
+      femap_handoff, checker, packet (plan + acceptance values in next_prompt.md).
+
 ## 2026-06-09 Proposed next 3 steps (post-cleanup; awaiting human go)
-- [ ] 1. Launch the ShockSat full parametric FEM modal twin runner (`docs/lab/shocksat_fem_modal_twin_runner_prompt.md`). Task 0 measured-modes provenance gates everything; human runs the FEMAP cross-check; lead reviews convergence + held-out coverage.
+- [x] 1. Launch the ShockSat full parametric FEM modal twin runner (`docs/lab/shocksat_fem_modal_twin_runner_prompt.md`). Task 0 measured-modes provenance gates everything; human runs the FEMAP cross-check; lead reviews convergence + held-out coverage. STATUS: launched 2026-06-09, session 1 handed off mid-assembly (see top of this file).
 - [ ] 2. Unblock the IP track: send the Beth email, write the dated invention-disclosure/conception record (Bayesian-7004C + F(k)), decide on the cheap provisional over A/D + B + H. Gates all public disclosure, including the blog.
 - [ ] 3. Draft the Bilionis blog post from the seven BLOG-tagged entries in `notes/lessons-learned.md` (draft in chat first); publication waits on step 2's disclose-before-publish sequence.
 - Runner-up: the FIM identifiability pre-test analysis (spec below) once the modal twin runner is in flight.

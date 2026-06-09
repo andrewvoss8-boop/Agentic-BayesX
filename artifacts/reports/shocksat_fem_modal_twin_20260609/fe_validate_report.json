@@ -1,0 +1,51 @@
+{
+ "V1_qm6_zero_modes": {
+  "n_zero": 3,
+  "expected": 3,
+  "ok": true
+ },
+ "V2_qm6_cantilever": {
+  "fem": 0.02769378276454966,
+  "beam": 0.027797759999999998,
+  "err_pct": -0.37404897175289387,
+  "ok": true
+ },
+ "V3_mitc4_zero_modes": {
+  "n_zero": 3,
+  "expected": 3,
+  "ok": true
+ },
+ "V3b_mitc4_rigid_tilt": {
+  "resid_x": 3.043298792380092e-16,
+  "resid_y": 3.043298792380092e-16,
+  "ok": true
+ },
+ "V4_mitc4_ss_plate": {
+  "fem": 189.24363949537877,
+  "analytic": 190.13783703825865,
+  "err_pct": -0.4702891106833973,
+  "ok": true
+ },
+ "V5a_dkt_zero_modes": {
+  "n_zero": 3,
+  "expected": 3,
+  "ok": true
+ },
+ "V5c_dkt_rigid_tilt": {
+  "resid_x": 2.229529695926316e-16,
+  "resid_y": 2.229529695926316e-16,
+  "ok": true
+ },
+ "V5b_dkt_ss_plate": {
+  "fem": 189.50991771519506,
+  "analytic": 190.13783703825865,
+  "err_pct": -0.33024427586038074,
+  "ok": true
+ },
+ "V6_cst_patch": {
+  "fem": 2.0,
+  "analytic": 1.9999999999999998,
+  "ok": true
+ },
+ "ALL_OK": true
+}
