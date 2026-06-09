@@ -1,0 +1,6 @@
+vault/tray/
+*.tar.gz
+vault/shocksat/*.mat
+runner_opus/finalists.json
+vault_grading_result.json
+.DS_Store

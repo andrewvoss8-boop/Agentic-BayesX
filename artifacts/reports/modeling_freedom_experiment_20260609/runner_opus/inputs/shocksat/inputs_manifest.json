@@ -1,0 +1,63 @@
+{
+  "substrate": "shocksat_real",
+  "observation_layer": "modal correlation (MAC + frequency) on 1101-7105 grids",
+  "dev_scheme": "leave-one-mode-out cross-validation within the free-free modal set",
+  "access": "read-only (do not copy, do not edit)",
+  "train_dev": [
+    {
+      "role": "train_dev_modal",
+      "kind": "test_modes_free_free",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/Modes.pch",
+      "note": "Free-free modal mode shapes on the 1101-7105 grid set (the correlation layer).",
+      "sha256": "7b99862f5f22e6150aabb9113e310d5ffd8d6573aa3cccf987ec5d2866de1163",
+      "bytes": 595188
+    },
+    {
+      "role": "train_dev_modal",
+      "kind": "tam_free_free",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/TAM_FF/TAM.pch",
+      "note": "Test-Analysis Model (reduced FEM) for the free-free MAC correlation.",
+      "sha256": "e495eebfddc80e1707ce971d8be161ead0d2d53389aff73b6b96c9e96c5e7af5",
+      "bytes": 6447820
+    },
+    {
+      "role": "train_dev_modal",
+      "kind": "modes_fixed_base",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/Modes.pch",
+      "note": "Fixed-base modal set (available as additional modal content / alt boundary condition).",
+      "sha256": "7c9aca84b8402559a7f1d17af66326810be589b734ea0cad46a5c14b0ac163c5",
+      "bytes": 426870
+    },
+    {
+      "role": "train_dev_modal",
+      "kind": "tam_fixed_base",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_fixed_base/TAM_FB/TAM.pch",
+      "note": "Fixed-base Test-Analysis Model.",
+      "sha256": "8088c04319fbb6deca66c7bbb15d59d22df257376ca72b63d7d794138131b6ff",
+      "bytes": 5675695
+    },
+    {
+      "role": "train_supplementary",
+      "kind": "impact_hammer_hit",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/Test07_ImpactHammer_990x/Test07_impacthammer_990x_001_5_20_2021_2_32_37 PM.mat",
+      "note": "Measured modal hammer hit (force ch116 -> accel), 10-400 Hz; frequency content.",
+      "sha256": "166985945ff0d56b1cae504de1eac079e727796b54434984f39d64358eb26191",
+      "bytes": 256391296
+    }
+  ],
+  "diagnostic_only": [
+    {
+      "kind": "fem_frf_sol111_x",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/FEM/Correlation/FRF_Verification/SOL_111_Free_Free_Force_11101X.pch",
+      "sha256": "f39a25f6ad4560ede7dd9cff615e45deb8e5de5a0973146f896244fe47811a05",
+      "bytes": 77906367
+    },
+    {
+      "kind": "fem_frf_sol111_y",
+      "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/FEM/Correlation/FRF_Verification/SOL_111_Free_Free_Force_11110Y.pch",
+      "sha256": "d6c84c74a20a4d0d8bcca71dfa4ae46f9b6250e7dc6161b30b380825ef15754f",
+      "bytes": 77906367
+    }
+  ],
+  "diagnostic_note": "SOL111 FRF: frequency-alignment diagnostic ONLY; NOT a magnitude likelihood (transfer-path mismatch, per ShockSat-Opus normalization finding)."
+}

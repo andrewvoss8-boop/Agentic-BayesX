@@ -1,0 +1,24 @@
+{
+  "substrate": "shocksat_real",
+  "held_out": {
+    "regime": "pyro_shock_NSD",
+    "band_hz": [
+      100,
+      10000
+    ],
+    "forcing": "unknown (pyrotechnic source)",
+    "qoi": "force-limiting load metric / peak shock response (defined in contract.md)",
+    "path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat",
+    "staged_vault_copy": "vault/shocksat/Pyro_NSD_990x001_HELDOUT.mat",
+    "holdout_mechanism": "PHYSICAL (airtight, same as synthetic): staged to vault, uploaded to Google Drive, then DELETED from local disk including the parked sibling run, until grading. SHA256 pinned; re-download + verify at grading.",
+    "runner_rule": "runner must never read this regime; checker also greps for the path (defense-in-depth even though the file is physically removed).",
+    "restoration": {
+      "original_path": "artifacts/reports/shocksat_statfem_runner_20260609/extracted/Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat",
+      "refetch": "NASA/NESC ShockSat public release (re-fetchable)",
+      "note": "after the experiment, restore to original_path and verify SHA256; this re-enables the parked sibling run's pyro replay."
+    },
+    "note": "Out-of-distribution regime: unknown forcing + load QOI live here, not in the modal band. Grading this regime tests EXTRAPOLATION from the modal-band fit.",
+    "sha256": "03e476faa95234b21a1c2108c76f0aa2b56038bbc4edc9b4a2fd8dabd66f6944",
+    "bytes": 384386176
+  }
+}

@@ -1,0 +1,18 @@
+DRIVE-VAULTED HELD-OUT DATA — SHA256 PINS (verify on re-download at grading)
+===========================================================================
+These files were uploaded to Andrew's Google Drive and DELETED from local disk on 2026-06-09.
+At grading: re-download each, recompute SHA256, confirm it matches the pin below BEFORE scoring.
+A mismatch means the held-out truth was altered between sealing and grading -> do not score.
+
+1. Synthetic tray truth archive (contains vault/tray/truth.json + vault_observations.npz):
+   filename : vault_tray_synthetic_truth.tar.gz
+   sha256   : 0cc799b457fd0ede438087c6d44f25a85c19216447caba5af63ebc3ada612271
+
+2. ShockSat held-out pyro regime (out-of-distribution validation):
+   filename : Pyro_NSD_990x001_HELDOUT.mat
+   sha256   : 03e476faa95234b21a1c2108c76f0aa2b56038bbc4edc9b4a2fd8dabd66f6944
+   restore-to (after experiment): artifacts/reports/shocksat_statfem_runner_20260609/extracted/
+                                  Pyro_NSI_NSD/NSD1_Test/Pyro_NSD_990x001_10_13_2021_2_20_42 PM.mat
+   (re-fetchable from the NASA/NESC ShockSat public release if Drive copy is lost.)
+
+This pins file is itself listed in ../manifest.sha256 so it cannot be silently edited.

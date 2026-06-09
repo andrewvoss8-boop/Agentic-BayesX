@@ -1,0 +1,37 @@
+{
+  "substrate": "synthetic_tray_modal",
+  "N": 12,
+  "groups": 4,
+  "k0_nominal": 3000000.0,
+  "m_modes": 6,
+  "sensor_dofs": [
+    0,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9,
+    11
+  ],
+  "zeta": 0.02,
+  "freq_band_hz": [
+    10.0,
+    600.0
+  ],
+  "qoi_ref_path": {
+    "out": 11,
+    "in": 0
+  },
+  "qoi_heldout_path": {
+    "out": 5,
+    "in": 8
+  },
+  "sigma_f_rel": 0.005,
+  "sigma_phi": 0.02,
+  "n_train": 8,
+  "n_dev": 4,
+  "n_vault": 6,
+  "candidate_model": "grounded 12-DOF chain, 4 group stiffness scale factors theta; NO cross-link joint (the model-form error the runner must contend with)",
+  "note": "Truth values, the joint, noiseless modes, both QOIs, and the seed are NOT here. They are sealed in the vault."
+}

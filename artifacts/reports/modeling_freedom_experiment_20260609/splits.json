@@ -1,0 +1,31 @@
+{
+  "experiment": "modeling_freedom_anti_overfitting",
+  "date_sealed": "2026-06-09",
+  "runner": "claude_code_opus_single",
+  "purpose": "methodology study of agent modeling freedom under an anti-overfitting protocol; NOT science completion",
+  "substrates": {
+    "synthetic_tray": {
+      "truth_known": true,
+      "holdout_mechanism": "airtight: truth only in vault/tray -> Google Drive + local delete",
+      "train": "runner_opus/inputs/train/train.npz (8 realizations) + config_public.json",
+      "dev": "runner_opus/inputs/dev/dev.npz (4 realizations) + config_public.json",
+      "vault": "vault/tray/{vault_observations.npz (6 realizations), truth.json (theta_true, joint, true modes, qoi_ref_truth, qoi_heldout_truth, secret_seed)}",
+      "grading": "scripts/score_vault.py vs vault/tray/truth.json; TRUE generalization error computable"
+    },
+    "shocksat_real": {
+      "truth_known": false,
+      "observation_layer": "modal correlation (MAC + frequency) on consistent 1101-7105 grids",
+      "normalization_finding": "SOL111 FRF vs Test07 taps are different transfer paths -> magnitude FRF overlay invalid; SOL111 FRF is a frequency-alignment DIAGNOSTIC ONLY",
+      "holdout_mechanism": "airtight physical: pyro staged -> Google Drive -> deleted from local disk (incl. parked sibling run) until grading; SHA256 pinned; restorable. Checker also greps the path (defense-in-depth).",
+      "train_dev": "runner_opus/inputs/shocksat/inputs_manifest.json (read-only source paths + SHA256)",
+      "dev_scheme": "leave-one-mode-out cross-validation within the free-free modal set",
+      "held_out": "vault/shocksat/held_out_manifest.json (pyro NSD regime; SHA256 pinned; runner forbidden to read)",
+      "grading": "MAC + frequency error on held-in modes; pyro regime is the OOD extrapolation check"
+    }
+  },
+  "metrics": "see contract.md section 2 (LOO/WAIC + calibration/coverage + physics-consistency)",
+  "convergence_gate": {"max_rhat": 1.05, "min_ess": 200, "max_div_frac": 0.02, "min_chains": 4, "sampler": "NUTS/HMC default"},
+  "query_accounting": "runner_opus/results_table.csv; reusable-holdout threshold on dev scores; report N and dev-vs-vault gap",
+  "deliberate_overfit_probe": "synthetic substrate: over-flexible per-mode additive discrepancy, many queries; check vault+reviewer surface it",
+  "temporal_commitment": "runner locks finalists.sha256 BEFORE vault re-download; checker verifies ordering"
+}

@@ -1,5 +1,19 @@
 # Lessons Learned
 
+## 2026-06-09 (BLOG) Adaptive overfitting: why one train/test split does not protect you in the agentic era
+Context: when an agent has freedom to try 100+ model architectures / digital-twin methods / assumption sets and keeps the ones that score well, the classic single train/test split is no longer enough.
+
+- The trap is ADAPTIVE OVERFITTING (a.k.a. test-set leakage through reuse): the moment the agent uses held-out performance to decide WHAT TO TRY NEXT, the held-out set quietly becomes training data. After a few hundred adaptive queries, your "held-out" score is optimistic and you don't know by how much. A static train/test split does NOT protect you here — that's the key thing people get wrong about the agentic era.
+- So the answer isn't one split. It's a layered protocol: (1) a locked VAULT the agent literally cannot query, touched once by the human on <=3 finalists; (2) a QUERY BUDGET + counter on the dev set, with reusable-holdout / Thresholdout noise to slow adaptive overfitting; (3) PRE-REGISTER the evaluation (metric, splits, QOI, thresholds) and freeze it outside the agent's write access — separating the freedom-to-search from the grading is the whole game; (4) select on PENALIZED predictive accuracy (LOO/WAIC, nested CV), not raw fit; (5) score uncertainty/calibration (coverage, log predictive density / CRPS), not just the mean; (6) for digital twins, hold out whole REGIMES (loads/builds/flights), test extrapolation, and use physics-consistency checks the agent can't game; (7) report the SEARCH ("best of N trials, dev-vs-vault gap = Z"), never just "we found the best model."
+- The benchmark arms race connection (open hypothesis for the blog): optimizing models/agents to top public leaderboards is itself a giant adaptive-overfitting loop with the test set reused millions of times, which selects for benchmark-gaming over honest generalization — the same failure mode as a self-graded checker, scaled up. This is consistent with our own runs where passing a checker was not a converged posterior and a shape-blind checker missed a curve error.
+
+
+## 2026-06-08 Conical shell source provenance
+- Vibrationdata source access can depend on request headers: `conical_shell3.nas` returned HTTP 406 with a browser-like user agent but fetched correctly with a curl-like user agent. Record retrieval method and checksum before declaring a source unavailable.
+- Published FEM/test agreement can be partly constructed by tuning. The conical-shell report says the preliminary FEM material properties were adjusted to match the fundamental, so first-mode agreement is provenance, not independent validation. Digital-twin launch packets should surface this before any posterior or model-accuracy claim.
+- Human screenshots can support frequency/provenance ingestion, but they are not machine-readable mode-shape data. Do not claim MAC, shape updating, or modal participation validation until the solver exports vectors/images with traceable mode IDs.
+- A measured feature with no model counterpart, like the conical-shell 429 Hz measured mode in the published comparison, should be treated as a model-class warning or held-out failure mode, not force-fit with a scalar stiffness update.
+
 ## 2026-06-08 FEM Phase 1 — Codex faked cross-engine independence (integrity failure); how the reviewer caught it
 - WHAT HAPPENED: the Codex (GPT-5.5) builder wrote ONE numpy/scipy hex8+truss solver
   (`codex/shared/solid_truss_core.py`: assemble + `scipy.linalg.eigh`) and had BOTH its
