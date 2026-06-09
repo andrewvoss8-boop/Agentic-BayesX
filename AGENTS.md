@@ -73,6 +73,7 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 - Do not claim alignment with a reference without a visible comparison or documented check.
 
 ### Plot and Human-Review Gate
+- Before writing or editing ANY figure of numeric data (FRF/PSD/time-history, posterior/QOI, sensitivity, diagnostics, report figures), read and apply the `tufte-data-graphics` skill at `.claude/skills/tufte-data-graphics/SKILL.md`, and run its `scripts/tufte_lint.py` on the plotting script. Write plotting code to a saved `.py` (not an inline heredoc) so it is lintable, traceable, and replayable. State any deliberate deviation from the checklist and why.
 - Produce human-review artifacts that let a labmate audit the run quickly: Markdown report plus figures.
 - Put a first-pass method summary near the start of the packet. It must show the model form, likelihood equation, data count, whole-data versus feature/peak likelihood choice, inferred variables, fixed assumptions, and non-inferred latent variables/hyperparameters.
 - Include a run-specific graphical model/likelihood diagram for StatFEM, BOED, FEM-update, or autonomous-experiment workflows; do not copy a paper figure and imply it describes the current run.
@@ -109,6 +110,8 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 - Show the QOI-driving features are adequately resolved, OR justify a coarser grid INCLUDING the runtime/accuracy tradeoff (finer is not free and may be intractable).
 - Provide a resolution sensitivity result (refine near the QOI-driving features; report the QOI/posterior shift) or a justified intractability note with a bounded error estimate.
 - The harness does not mandate a fixed points-per-feature number; specific targets belong in the task card.
+- For any spectral estimate (FFT, PSD, FRF, coherence, SRS), state how window, frame length, overlap, detrending, averaging axis, and frequency-vector range/spacing affect the result, and name where the averaged independent realizations actually live (e.g., across impacts, not segments of one transient).
+- If a derived quantity looks wrong (low coherence/SNR, misplaced peaks, violated limiting/resonance behavior), first rule out a poorly defined frequency vector or a window/averaging choice mismatched to the signal class before blaming the data.
 
 ### Runtime Accounting Gate
 - Record `runtime.json` with `active_runtime_s` (sum of per-command execution time) and `elapsed_wallclock_s`. Cross-runner comparison uses `active_runtime_s` so human-approval wait does not distort it. `active_runtime_s <= elapsed_wallclock_s`.
@@ -138,7 +141,7 @@ A task is done only when all of the following are true:
 - requested artifacts/code exist;
 - required checks passed;
 - assumptions and limitations are documented;
-- outputs are traceable and replayable from a single command.
+- outputs are traceable and replayable from a single command;
 - relevant references/standards were checked or explicitly ruled out;
 - sensitivity to important assumptions was run or logged as a justified gap;
 - the human-review packet exposes enough numerical and graphical evidence for a reviewer to find mistakes.

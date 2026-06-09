@@ -15,7 +15,7 @@ STANCE (read notes/project_vision.md S3.5): we are TEST-DRIVING StatFEM and its 
 structural-dynamics problems Andrew is a genuine expert in; the patentable bit is whatever makes these
 tools WORK in a real aerospace workflow, discovered AS we test. Your job is to chart the territory.
 
-START FROM THE IN-REPO PAPERS (use them as the map, then go outward):
+START FROM THE IN-REPO PAPERS (now under references/pdfs/; use them as the map, then go outward):
 - "review of Bayesian finite element model updating techniques for structural systems copy.pdf"
   (Kiran, Das & Bansal 2025) -- the state-of-the-art map of Bayesian FE model updating. Use its taxonomy
   and reference list as your spine. KEY in-repo findings to verify and build on: (a) Bayesian FE model

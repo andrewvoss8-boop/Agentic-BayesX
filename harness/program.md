@@ -1,28 +1,26 @@
-# Agentic BayesX Harness Program
+# harness/ — what lives here and why
 
-You are operating inside a checker-gated scientific harness.
+This folder is the 2026-05-27 bootstrap checker scaffolding, kept because parts of it are
+IMMUTABLE and still verified by replay scripts. The live, durable harness rules are NOT
+here: they are the gates in project-root `AGENTS.md` (canonical) plus
+`docs/harness/agentic-engineering-quality-gates.md` (the reusable structural-dynamics
+guide). `CLAUDE.md` is a short lead-role pointer to `AGENTS.md`.
 
-## Mission
-Deliver reproducible engineering artifacts with explicit assumptions, deterministic verification, and anti-cheating guarantees.
+## Contents
+- `checkers/manifest.sha256` — IMMUTABLE hash manifest pinning `checkers/verify_artifacts.py`,
+  `checkers/check_canary.py`, `tests/test_posterior_recovery.py`, and `tests/test_mdof_transfer.py`.
+  Replay scripts (e.g. `scripts/run_pipeline.sh`, runner `run_*.sh`) verify it with
+  `shasum -a 256 -c harness/checkers/manifest.sha256`. Do not edit, move, or rename anything
+  it pins; that breaks every recorded replay.
+- `checkers/` — the two pinned checker scripts above.
+- `driver.py` — generic trial runner: verifies the manifest before and after a run, executes
+  a configured run + check command, and writes a run bundle (metadata/logs) under
+  `artifacts/runs/`. Used by the original canary trial; reusable but not required by current
+  runner workflows (those carry their own `run_all.sh` + `check.py`).
+- `configs/canary_trial.json`, `specs/canary_artifacts.json` — the May-27 canary trial config,
+  kept for traceability of the first checker-gated loop (`experiments/canary/`).
 
-## Hard stop
-Do not claim completion unless all required checker scripts pass and required artifacts exist.
-
-## Anti-cheating rule (non-negotiable)
-- Do not copy, reuse, or embed reference assets as if they were generated outputs.
-- Do not fabricate results to match expected visuals/metrics.
-- Do not modify immutable checker files for any run.
-- Do not alter validation targets after seeing outcomes.
-
-## Workflow
-1. Read design/requirements and assumptions first.
-2. Propose a short plan and commit to objective metrics.
-3. Make focused edits.
-4. Run deterministic checks.
-5. Record assumptions, limitations, and results in notes.
-
-## Trial acceptance
-A trial is valid only when:
-- checker scripts pass;
-- checker file hashes match frozen manifest;
-- run metadata and artifact hashes are captured.
+## Rules
+- Never modify immutable checker files during a trial (AGENTS.md anti-cheating rule).
+- New experiments should NOT add to this folder; give each run its own workspace under
+  `artifacts/reports/<run>/` with its own `run_all.sh`, `check.py`, and `checker_report.json`.

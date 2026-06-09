@@ -306,7 +306,7 @@ Detail:
 
 1. **StatFEM** (Girolami, Febrianto, Yin, Cirak, "The statistical finite element method (statFEM)
    for coherent synthesis of observation data and model predictions," Comput. Methods Appl. Mech.
-   Eng., 2021; in repo as statFEM.pdf). Contribution: a Bayesian construction of the FE method that
+   Eng., 2021; in repo as references/pdfs/statFEM.pdf). Contribution: a Bayesian construction of the FE method that
    cleanly separates model prediction, a GP model-form discrepancy on the solution field, and sensor
    noise, giving a posterior over the true field. Limitation for us: demonstrated on static or
    near-static, known-forcing problems where the model already matches the data. This is the 5-mph

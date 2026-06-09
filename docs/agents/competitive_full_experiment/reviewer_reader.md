@@ -7,9 +7,9 @@ the three runner output folder paths.
 You are the READER for Agentic BayesX. Read .claude/agents/reader.md first. Do not cite from memory.
 
 Gather repo + paper evidence for the sequential dome/tray vibe-modal-flight problem from:
-- statFEM.pdf
-- digital-twinning-of-self-sensing-structures-using-the-statistical-finite-element-method.pdf
-- autonomous engineering design.pdf
+- references/pdfs/statFEM.pdf
+- references/pdfs/digital-twinning-of-self-sensing-structures-using-the-statistical-finite-element-method.pdf
+- references/pdfs/autonomous engineering design.pdf
 - any standard relevant to random-vibration PSD specs, GRMS computation, Matern-GP forcing models,
   and 3*RMS/3*GRMS QOI conventions.
 
