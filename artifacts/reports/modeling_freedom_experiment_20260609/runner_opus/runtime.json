@@ -1,0 +1,6 @@
+{
+  "active_runtime_s": 436,
+  "elapsed_wallclock_s": 436,
+  "breakdown_s": {"search": 433, "shocksat": 1, "figures": 2},
+  "note": "active = sum of per-stage execution time; <= wallclock. See runtime_search.json for per-NUTS-fit sum."
+}

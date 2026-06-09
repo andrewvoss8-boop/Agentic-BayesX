@@ -1,0 +1,6 @@
+{
+  "active_runtime_s": 422.0,
+  "elapsed_wallclock_s": 431.4,
+  "n_configs": 31,
+  "note": "active = sum of per-NUTS-fit wall time"
+}

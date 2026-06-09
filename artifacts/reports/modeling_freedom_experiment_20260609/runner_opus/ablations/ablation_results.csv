@@ -1,0 +1,8 @@
+stage,disc,prior_width,nmodes,noncentered,dev_lpd,waic_elpd,max_rhat,min_ess,div_frac,gate_pass,theta1,theta2,theta3,theta4
+ABL_dropdisc,none,0.3,6,True,323.179,631.574,1.0024,1053.8,0.0,True,1.3178,0.979,1.3831,0.897
+ABL_prior,freqshape,0.1,6,True,569.062,1090.757,1.0206,274.5,0.0,True,1.2044,0.9647,1.1907,0.8659
+ABL_prior,freqshape,0.7,6,True,568.908,1090.765,1.0122,343.7,0.0,True,1.3322,0.9828,1.3975,0.9044
+ABL_coarse,freqshape,0.3,4,True,377.891,721.412,1.0098,508.8,0.0,True,1.4446,0.9616,1.5369,0.8778
+ABL_coarse,freqshape,0.3,3,True,279.843,536.291,1.0054,506.9,0.0004,True,1.488,1.1408,1.8734,0.8408
+ABL_param,freqshape,0.3,6,False,562.161,-2977.481,32.8506,2.0,0.0,False,1.05,0.7818,1.1416,1.8767
+ABL_param,freqshape,0.3,6,True,569.127,1090.947,1.0146,370.5,0.0,True,1.3028,0.9722,1.3536,0.8914

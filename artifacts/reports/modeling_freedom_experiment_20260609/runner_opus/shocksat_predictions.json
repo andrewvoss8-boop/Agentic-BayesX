@@ -1,0 +1,37 @@
+{
+  "substrate": "shocksat_real_free_free",
+  "twin": "TAM_FF reduced model (KAAX/MAAX) vs test Modes.pch on 1101-7105 grids",
+  "committed_before_pyro_redownload": true,
+  "observation_layer": "MAC + frequency error, leave-one-mode-out (each mode an independent held-out correlation; no params fit to the held-out mode)",
+  "physics_checks": {
+    "n_rigid_body_modes_below_1Hz": 6,
+    "rigid_body_freqs_hz": [
+      0.00235,
+      0.00838,
+      0.01834,
+      0.02032,
+      0.03162,
+      0.03631
+    ],
+    "rigid_body_ok": true
+  },
+  "held_in_modal_self_estimate": {
+    "n_elastic_paired": 38,
+    "MAC_median": 0.9558,
+    "MAC_min": 0.2728,
+    "MAC_frac_above_0.9": 0.658,
+    "freq_err_median_abs": 0.10003,
+    "freq_err_max_abs": 0.23469,
+    "first_elastic_test_hz": 59.1906,
+    "twin_validated_band_hz": 152.27
+  },
+  "pyro_regime_qoi_OOD": {
+    "_LABEL": "COMMITTED OUT-OF-DISTRIBUTION EXTRAPOLATION \u2014 LOW CONFIDENCE.",
+    "_caveat": "The exact pyro-NSD QOI definition lives in the held-out (forbidden) manifest; this runner did NOT read it. This is a methodology placeholder, NOT a validated science number. The modal-band twin cannot supply absolute pyro-shock levels (no pyro forcing in the modal data).",
+    "qoi_definition_used": "predicted relative frequency-error of the TAM twin at the edge of the analysis band, as a proxy for twin fidelity in the high-frequency pyro regime",
+    "predicted_freq_err_trend_per_hz": 0.00029958,
+    "predicted_twin_freq_err_at_400Hz": 0.1258,
+    "directional_prediction": "twin UNDER-resolves the pyro regime (modal truncation + growing high-mode freq error) -> twin will UNDER-predict pyro response; treat extrapolation as a lower bound on error",
+    "confidence": "low (OOD beyond validated band ~152 Hz)"
+  }
+}
