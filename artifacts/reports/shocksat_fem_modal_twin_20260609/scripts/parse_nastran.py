@@ -22,7 +22,10 @@ FILES = [
     "Cross_Beam_101521.blk", "Rectangular_Plates_101521.blk",
     "Top_Brackets_101521.blk", "Top_Circular_Plate_101521.blk",
     "Joint_Connections_101521.blk", "Rectangular_Plate_Contact_101521.blk",
-    "Modal_Test_Instrumentation_092721.blk", "Shock_Test_Instrumentation.blk",
+    "Modal_Test_Instrumentation_092721.blk",
+    # "Shock_Test_Instrumentation.blk" DROPPED (decision D10): contains ONLY
+    # 37 GRID + 37 RBE2 (zero mass/stiffness shock-response spiders) whose
+    # dependent structure grids collide with Joint_Connections RBE2 spiders.
 ]
 
 NUMRE = re.compile(r'^([+-]?(?:\d+\.?\d*|\.\d+))([+-]\d+)$')

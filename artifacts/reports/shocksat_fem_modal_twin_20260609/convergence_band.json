@@ -1,0 +1,22 @@
+{
+ "per_variable": {
+  "sigma_f": {
+   "r_hat_max": 1.034897089091047,
+   "ess_min": 69.92663824145818
+  },
+  "theta": {
+   "r_hat_max": 1.0763089883417605,
+   "ess_min": 62.97662576866525
+  }
+ },
+ "worst_rhat": 1.0763089883417605,
+ "min_ess": 62.97662576866525,
+ "divergences": 0,
+ "divergence_fraction": 0.0,
+ "gate_pass": false,
+ "thresholds": {
+  "rhat": 1.05,
+  "ess": 200,
+  "div_frac": 0.02
+ }
+}

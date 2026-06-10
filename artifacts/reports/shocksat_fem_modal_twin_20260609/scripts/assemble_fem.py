@@ -14,7 +14,7 @@ import time
 import numpy as np
 import scipy.sparse as sp
 from fe_core import (quad_local_frames, qm6_membrane, mitc4_bending,
-                     cst_membrane, dkt_bending)
+                     cst_membrane, dkt_bending, _q4_dN)
 
 K6ROT = 100.0          # PARAM,K6ROT from Modes.dat
 GRAV = 386.088         # in/s^2 (NASA standard for lb->lbf*s^2/in)
@@ -79,10 +79,34 @@ def shell_K_M(pid):
         bi = np.array([6 * a + c for a in range(nn) for c in (2, 3, 4)])
         Kl[:, mi[:, None], mi[None, :]] += Km
         Kl[:, bi[:, None], bi[None, :]] += Kb
-        # drilling penalty (NX K6ROT): k = K6ROT*1e-6*G*t*A per node
+        # drilling penalty (NX K6ROT concept): penalize the MISMATCH between
+        # the drilling DOF theta_z and the membrane in-plane rotation
+        # omega = 1/2(dv/dx - du/dy) at the element center. A bare diagonal
+        # theta_z penalty (session-1 version) is NOT rigid-rotation invariant
+        # and put ~1.7e-5 relative strain energy into rigid rotations
+        # (~3-4 Hz spurious RBM frequencies). This form vanishes for all six
+        # rigid-body motions. k = K6ROT*1e-6*G*t*A per node (same scale).
+        if kind == "q":
+            dN0 = _q4_dN(0.0, 0.0)                        # (2,4) at center
+            J = np.einsum('ka,eaj->ekj', dN0, Xl2)        # (ne,2,2)
+            dN_xy = np.linalg.solve(J, np.broadcast_to(
+                dN0, (ne, 2, nn)).copy())                 # (ne,2,nn) d/dx,d/dy
+            dNdx, dNdy = dN_xy[:, 0, :], dN_xy[:, 1, :]
+        else:
+            x1, y1 = Xl2[:, 0, 0], Xl2[:, 0, 1]
+            x2, y2 = Xl2[:, 1, 0], Xl2[:, 1, 1]
+            x3, y3 = Xl2[:, 2, 0], Xl2[:, 2, 1]
+            A2 = (x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)
+            dNdx = np.stack([y2 - y3, y3 - y1, y1 - y2], axis=1) / A2[:, None]
+            dNdy = np.stack([x3 - x2, x1 - x3, x2 - x1], axis=1) / A2[:, None]
+        Bw = np.zeros((ne, 6 * nn))                       # row of omega
+        Bw[:, 0::6] = -0.5 * dNdy                         # u coefficients
+        Bw[:, 1::6] = 0.5 * dNdx                          # v coefficients
         kdr = K6ROT * 1e-6 * G * t * area / nn            # (ne,)
         for a in range(nn):
-            Kl[:, 6 * a + 5, 6 * a + 5] += kdr
+            Ba = -Bw.copy()                               # (theta_z_a - omega)
+            Ba[:, 6 * a + 5] += 1.0
+            Kl += kdr[:, None, None] * np.einsum('ei,ej->eij', Ba, Ba)
         # rotate to global: u_local = R u_global per 3-block
         Kl4 = Kl.reshape(ne, 2 * nn, 3, 2 * nn, 3)
         Kg = np.einsum('eki,eakbl,elj->eaibj', R, Kl4, R).reshape(

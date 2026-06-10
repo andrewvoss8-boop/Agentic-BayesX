@@ -1,0 +1,134 @@
+{
+ "gates": {
+  "inputs_sha256_unchanged": {
+   "level": "green",
+   "value": null,
+   "note": "50 files"
+  },
+  "task0_provenance_resolved": {
+   "level": "green",
+   "value": null,
+   "note": "measured = Final_FF_Test_Shapes_100121.ash (.ash)"
+  },
+  "mass_within_1pct": {
+   "level": "green",
+   "value": -0.084,
+   "note": "vs NASA 127.89 lb"
+  },
+  "cg_z_within_0p2in": {
+   "level": "green",
+   "value": 28.014,
+   "note": ""
+  },
+  "rigid_energy_small": {
+   "level": "green",
+   "value": 1.8574712628901414e-07,
+   "note": ""
+  },
+  "six_rigid_body_modes": {
+   "level": "green",
+   "value": 1.133,
+   "note": ""
+  },
+  "nominal_vs_nasa_fem_median_under_6pct": {
+   "level": "green",
+   "value": 4.88,
+   "note": "element-formulation error vs NASA NX Nastran, not tuned"
+  },
+  "reduction_nominal_exact": {
+   "level": "green",
+   "value": 6.377987455823985e-10,
+   "note": ""
+  },
+  "reduction_error_at_posterior_theta_under_1pct": {
+   "level": "green",
+   "value": 0.00068,
+   "note": "reduced vs full eigsh at posterior-median theta, <280 Hz"
+  },
+  "convergence_band": {
+   "level": "yellow",
+   "value": {
+    "worst_rhat": 1.0763,
+    "min_ess": 63.0,
+    "div_frac": 0.0,
+    "n_vars": 2
+   },
+   "note": "gate 1.05/200/2% over ALL vars; GREEN=met, YELLOW=documented not-converged finding (intervals not-trustworthy, worst R-hat/ESS surfaced), never reported as converged"
+  },
+  "convergence_full": {
+   "level": "green",
+   "value": {
+    "worst_rhat": 1.0224,
+    "min_ess": 232.0,
+    "div_frac": 0.0,
+    "n_vars": 2
+   },
+   "note": "gate 1.05/200/2% over ALL vars; GREEN=met, YELLOW=documented not-converged finding (intervals not-trustworthy, worst R-hat/ESS surfaced), never reported as converged"
+  },
+  "convergence_lomo_worst_over_runs": {
+   "level": "yellow",
+   "value": {
+    "worst_rhat": 2.5034,
+    "min_ess": 2.0,
+    "max_div": 0
+   },
+   "note": "YELLOW=documented not-converged finding; held-out coverage still reported honestly"
+  },
+  "heldout_band_table": {
+   "level": "green",
+   "value": {
+    "n": 12,
+    "coverage_pred": 0.833
+   },
+   "note": "coverage reported honestly; misses are findings, not failures"
+  },
+  "heldout_lomo_table": {
+   "level": "green",
+   "value": {
+    "n": 18,
+    "coverage_pred": 1.0
+   },
+   "note": "coverage reported honestly; misses are findings, not failures"
+  },
+  "modal_identifiability_se_reported": {
+   "level": "green",
+   "value": {
+    "closure": 1.0,
+    "n_groups": 9
+   },
+   "note": "strain-energy decomposition links each group to the modes; cause of (un)identifiability stated with finite-perturbation check"
+  },
+  "heldout_lock_present": {
+   "level": "green",
+   "value": null,
+   "note": "held-out freqs never entered the likelihood (by construction)"
+  },
+  "modal_only_no_frf_likelihood": {
+   "level": "green",
+   "value": null,
+   "note": "likelihood on log-frequency (+optional MAC), eigensolve-based"
+  },
+  "figures_present": {
+   "level": "green",
+   "value": [
+    "figures/nominal_correlation.png",
+    "figures/heldout_qoi_sidebyside_band.png",
+    "figures/heldout_qoi_sidebyside_lomo.png",
+    "figures/theta_posterior_band.png",
+    "figures/graphical_model.png",
+    "figures/convergence_summary.png"
+   ],
+   "note": ""
+  }
+ },
+ "n_gates": 18,
+ "n_green": 16,
+ "n_yellow": 2,
+ "n_red": 0,
+ "overall": "yellow",
+ "legend": {
+  "green": "threshold met; trustworthy",
+  "yellow": "threshold NOT met but documented/understood and non-fatal; usable only with caveat; never 'converged'/success",
+  "red": "blocking: missing/fabricated/broken/integrity/undocumented or claim stronger than evidence"
+ }
+}

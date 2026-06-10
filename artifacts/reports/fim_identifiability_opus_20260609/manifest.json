@@ -1,0 +1,121 @@
+{
+  "workspace": "artifacts/reports/fim_identifiability_opus_20260609",
+  "date": "2026-06-09",
+  "kind": "pre-test FIM identifiability + experiment design",
+  "sampler": "none (Fisher-information + profile-likelihood; NOT a posterior sampler)",
+  "env": "runs/fem_phase1/opus/.venv (jax 0.4.30, numpy 1.26.4, scipy 1.10.1)",
+  "files": {
+    "arrays_fim.npz": {
+      "sha256": "2e78c10a44e2332c9fff35b40b5d291269ec704f2606290209d563ce68b20abf",
+      "bytes": 8930
+    },
+    "assumptions_ledger.md": {
+      "sha256": "4f3d9afdd8b9f3b16b634ada532f91babb2ef1f78748e30e6e9a6f54e467133b",
+      "bytes": 3928
+    },
+    "check.py": {
+      "sha256": "000bc93c28326247a3e3f355eed2cbaa71d72cf762c46981ae7735fc90029af1",
+      "bytes": 6058
+    },
+    "checker_report.json": {
+      "sha256": "8095507de8becd81d9e5ee1e760ebe58d3b487b5a5c375baeba62030c7e0f28c",
+      "bytes": 2475
+    },
+    "decisions_log.md": {
+      "sha256": "fc831d79b07fec261c191f420df3bf58acf9a622a6eb56cdbe76f71ca9524872",
+      "bytes": 3347
+    },
+    "files_changed.md": {
+      "sha256": "0dcaba8609941dc0b3f0c2bb3fea60ce9032572126660f23703354b71dc0a678",
+      "bytes": 1253
+    },
+    "fim_results.json": {
+      "sha256": "f12ae376d9b04e5991718d167390aaaabc68a001c8a3b9e7049d976ddd6da571",
+      "bytes": 49033
+    },
+    "next_prompt.md": {
+      "sha256": "241bafb208104ab47097eb9ef1bab2f89b53a557b795c8556a543437eb180cb0",
+      "bytes": 2044
+    },
+    "packet.md": {
+      "sha256": "2a5b61512d012731730213e91cd8f2b391a67e9babb6f80bbe406e4d9fb887b9",
+      "bytes": 9333
+    },
+    "priority_deliverables.md": {
+      "sha256": "207dd0320469749927b2c75bb91f28ae21bf85bb7b370060fcb206895db2e296",
+      "bytes": 3254
+    },
+    "profile_likelihood.json": {
+      "sha256": "1b54cf172e85784b2b418e94f178762af162e422742c787f862e6039294ab65a",
+      "bytes": 5752
+    },
+    "quantity_contracts.md": {
+      "sha256": "d31b54b70550bf22de62faddf046420bd27f239e9b551bfa6a90f79da1843fda",
+      "bytes": 3343
+    },
+    "run_all.sh": {
+      "sha256": "202055c8acb1e6990b84e001f160e35aa9cc35eda0ec6698972cac82183e6d25",
+      "bytes": 1561
+    },
+    "runtime.json": {
+      "sha256": "40ddd4923ba91514621f67367313744ca687b5b41514796b6215f782246ba864",
+      "bytes": 143
+    },
+    "code/fim_model.py": {
+      "sha256": "a6f877f583d4286ee2465f056b7d604785b398a97411556cc4e38b58cd77248d",
+      "bytes": 12573
+    },
+    "code/make_figures.py": {
+      "sha256": "d9c4f44bd905519b7a01364a849249015844fbebebe45349abd3c4057475f598",
+      "bytes": 13592
+    },
+    "code/profile_likelihood.py": {
+      "sha256": "60870b831aa5d762a781ea9cfff86992b84e88d27d9da8d54a05c163b727826a",
+      "bytes": 6679
+    },
+    "code/run_fim.py": {
+      "sha256": "c735cdf70abe4c140c60f93888bc6f629f1c06d79b39f67f3f712951edfdb653",
+      "bytes": 20455
+    },
+    "figures/fig1_fim_eigenspectrum.png": {
+      "sha256": "13c8b4cf1e28fefd0e1229f52a534180aa2eba7ac487162b1f04b67d0c8f154d",
+      "bytes": 64495
+    },
+    "figures/fig2_sensitivity_heatmap.png": {
+      "sha256": "a5a21f69f911e70db3939e1279a208024d2452128306584a5a733b32c0af33fc",
+      "bytes": 70346
+    },
+    "figures/fig3_param_identifiability.png": {
+      "sha256": "785235cefa8bb6806868b2354f976bdaaa3264e510aed0b527ec45d89905ed04",
+      "bytes": 51417
+    },
+    "figures/fig4_band_sensitivity.png": {
+      "sha256": "c8c9174c65f267f74bf067fd71ad5ea9f22ee19669c13f9ab08c4f3e1b77a8d5",
+      "bytes": 87026
+    },
+    "figures/fig5_experiment_design.png": {
+      "sha256": "b688537202e02ce84dfbfd30caadfe0b14d9b7cee9476a8796bb0e27d63c573e",
+      "bytes": 175004
+    },
+    "figures/fig6_qoi_vs_data.png": {
+      "sha256": "f53b85c166a4f9daf078f1c97d6f5a3bfdeae5d231939d0b96e7062b11b37c6f",
+      "bytes": 44720
+    },
+    "figures/fig7_profile_likelihood.png": {
+      "sha256": "b39ddadf0cc5163351903cf06ebe877e79776ef26c6937ed16a73a7db79605d1",
+      "bytes": 57183
+    },
+    "inputs/INPUT_SHA256.txt": {
+      "sha256": "144ae2cc7f0ba250894ba046c015057489ab690bd2a353806ac56fad6249289b",
+      "bytes": 169
+    },
+    "inputs/fe_elements.py": {
+      "sha256": "b3d0e7f3660a9346d32daff4d41820ca13dfcbe1410b5c8c1405ac75d4447659",
+      "bytes": 10325
+    },
+    "inputs/spec.py": {
+      "sha256": "fa9063e21ad1daff06333a09fe646b4bede35e0b10c18d57246774eec4710c19",
+      "bytes": 4682
+    }
+  }
+}

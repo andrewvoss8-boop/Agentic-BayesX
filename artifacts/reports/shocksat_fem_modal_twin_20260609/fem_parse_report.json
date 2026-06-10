@@ -1,11 +1,11 @@
 {
- "n_grids": 67720,
+ "n_grids": 67683,
  "n_cquad4": 67366,
  "n_ctria3": 428,
  "n_cbush": 166,
  "n_conm2": 80,
- "n_rbe2": 187,
- "n_rbe2_dep_grids": 2261,
+ "n_rbe2": 150,
+ "n_rbe2_dep_grids": 2118,
  "pshell": {
   "101": {
    "mid1": 1002,
@@ -426,8 +426,6 @@
   "Rectangular_Plates:GRID": 1020,
   "Rectangular_Plates:PSHELL": 1,
   "Rectangular_Plates:RBE2": 8,
-  "Shock_Test_Instrumentation:GRID": 37,
-  "Shock_Test_Instrumentation:RBE2": 37,
   "Top_Box:CQUAD4": 34096,
   "Top_Box:CTRIA3": 42,
   "Top_Box:GRID": 33768,

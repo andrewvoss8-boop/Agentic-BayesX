@@ -1,0 +1,82 @@
+{
+  "overall_pass": true,
+  "n_checks": 15,
+  "n_pass": 15,
+  "checks": [
+    {
+      "name": "input_sha256_spec.py",
+      "pass_": true,
+      "detail": "fa9063e21ad1daff06333a09fe646b4bede35e0b10c18d57246774eec4710c19"
+    },
+    {
+      "name": "input_sha256_fe_elements.py",
+      "pass_": true,
+      "detail": "b3d0e7f3660a9346d32daff4d41820ca13dfcbe1410b5c8c1405ac75d4447659"
+    },
+    {
+      "name": "forward_reproduces_jax_nominal_modes",
+      "pass_": true,
+      "detail": "max|df|=0.000407 Hz (<0.01)"
+    },
+    {
+      "name": "reduction_error_small",
+      "pass_": true,
+      "detail": "{'nominal': 0.0, 'stiffened_1p2': 0.0}"
+    },
+    {
+      "name": "identifiable_count_3_all_designs",
+      "pass_": true,
+      "detail": "{'freq_only': 3, 'one_sensor_corner_z': 3, 'two_sensor_transmissibility': 3}"
+    },
+    {
+      "name": "stiff_sloppy_gap_present",
+      "pass_": true,
+      "detail": "{'freq_only': '1.46e+09', 'one_sensor_corner_z': '1.01e+05', 'two_sensor_transmissibility': '1.43e+07'}"
+    },
+    {
+      "name": "joints_unidentifiable_near_prior",
+      "pass_": true,
+      "detail": "{'freq_only:joint_axial': 0.29996, 'freq_only:joint_lateral': 0.3, 'one_sensor_corner_z:joint_axial': 0.29964, 'one_sensor_corner_z:joint_lateral': 0.3, 'two_sensor_transmissibility:joint_axial': 0.29996, 'two_sensor_transmissibility:joint_lateral': 0.3}"
+    },
+    {
+      "name": "strut_tray_params_learned_full_band",
+      "pass_": true,
+      "detail": ""
+    },
+    {
+      "name": "band_sensitivity_monotone_to_3",
+      "pass_": true,
+      "detail": "[1, 1, 2, 2, 3, 3]"
+    },
+    {
+      "name": "count_robust_to_noise",
+      "pass_": true,
+      "detail": "[3, 3, 3, 3]"
+    },
+    {
+      "name": "profile_confirms_fim",
+      "pass_": true,
+      "detail": "{'tray_E': False, 'strut_EA': False, 'strut_EI': False, 'joint_axial': True, 'joint_lateral': True}"
+    },
+    {
+      "name": "qoi_gradient_and_projection_present",
+      "pass_": true,
+      "detail": "{'freq_only': 0.0, 'one_sensor_corner_z': 0.0, 'two_sensor_transmissibility': 0.0}"
+    },
+    {
+      "name": "experiment_design_present",
+      "pass_": true,
+      "detail": "logdet spread=20.88"
+    },
+    {
+      "name": "all_figures_present",
+      "pass_": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no_unbacked_nuts_or_posterior_claim",
+      "pass_": true,
+      "detail": "packet explicitly labels this as Fisher/profile, not a sampler"
+    }
+  ]
+}

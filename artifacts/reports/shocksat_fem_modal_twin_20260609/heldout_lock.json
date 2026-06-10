@@ -1,0 +1,37 @@
+{
+ "protocol": "held-out frequencies never enter the likelihood; predictions are a function of the held-in posterior only",
+ "designs": {
+  "band": {
+   "n": 12,
+   "held_in": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "held_out": [
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    21,
+    25
+   ],
+   "prediction_sha256": "f75a467f3cef990432e236920104fd540ce3d960723d23b9a06be19a84f47dde"
+  },
+  "lomo": {
+   "n": 18,
+   "held_in": null,
+   "held_out": null,
+   "prediction_sha256": "e35a96f8b8f5d2fc715e8f82c2bf5bf38f0a4ea6b53530cc8cba1dad8cdadfbd"
+  }
+ }
+}

@@ -1,0 +1,6 @@
+[    0.0s] design=band use_mac=False r=74 calib=[1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 25]
+[    0.0s] held_in (<=120Hz): [1, 3, 4, 5, 6, 7]
+[    0.0s] held_out (>120Hz): [8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 25]
+[  852.5s] convergence: worst_rhat 1.9158 min_ess 3 div 0 pass False
+[  854.9s] held-out predictive coverage = 0.92 (11/12)
+[  854.9s] done

@@ -1,0 +1,124 @@
+{
+ "arms": [
+  {
+   "name": "prior_sd_0.15",
+   "nsig": 0.15,
+   "use_mac": false,
+   "fmax": 120.0,
+   "n_held_in": 6,
+   "n_held_out": 12,
+   "coverage_pred": 0.8333333333333334,
+   "median_abs_err_pct": 4.052498631211687,
+   "worst_rhat": 1.1034449089032226,
+   "gate_pass": false,
+   "divergences": 0,
+   "theta_median": {
+    "al_welds": 0.9898031432874859,
+    "angle_brackets": 1.0541359801409298,
+    "bottom_box": 1.0058766186780437,
+    "contact": 1.0471881002824568,
+    "cross_beam": 1.0627313168263302,
+    "joints": 0.9678000125367816,
+    "plates": 0.8866819451469712,
+    "steel_welds": 1.014126290166689,
+    "top_box": 1.0667170315759456
+   }
+  },
+  {
+   "name": "baseline_sd_0.25",
+   "nsig": 0.25,
+   "use_mac": false,
+   "fmax": 120.0,
+   "n_held_in": 6,
+   "n_held_out": 12,
+   "coverage_pred": 0.8333333333333334,
+   "median_abs_err_pct": 4.509405382215376,
+   "worst_rhat": 1.1570065980735569,
+   "gate_pass": false,
+   "divergences": 0,
+   "theta_median": {
+    "al_welds": 1.0593889416709663,
+    "angle_brackets": 1.0180156283678732,
+    "bottom_box": 0.9980067837249368,
+    "contact": 0.9292864232842879,
+    "cross_beam": 1.0159517336633743,
+    "joints": 0.915836790045856,
+    "plates": 0.8738897914680457,
+    "steel_welds": 1.0387491049866229,
+    "top_box": 1.095731461227389
+   }
+  },
+  {
+   "name": "prior_sd_0.40",
+   "nsig": 0.4,
+   "use_mac": false,
+   "fmax": 120.0,
+   "n_held_in": 6,
+   "n_held_out": 12,
+   "coverage_pred": 0.75,
+   "median_abs_err_pct": 4.008365511816575,
+   "worst_rhat": 1.3482560537773614,
+   "gate_pass": false,
+   "divergences": 0,
+   "theta_median": {
+    "al_welds": 0.9578686164811387,
+    "angle_brackets": 1.189422988128288,
+    "bottom_box": 1.0038569914306317,
+    "contact": 1.15523285835267,
+    "cross_beam": 1.0623591657935216,
+    "joints": 0.8508124464364983,
+    "plates": 0.814552755003068,
+    "steel_welds": 1.0458044789601477,
+    "top_box": 1.0733997283466477
+   }
+  },
+  {
+   "name": "freq+MAC_sd_0.25",
+   "nsig": 0.25,
+   "use_mac": true,
+   "fmax": 120.0,
+   "n_held_in": 6,
+   "n_held_out": 12,
+   "coverage_pred": 1.0,
+   "median_abs_err_pct": 3.658204883548127,
+   "worst_rhat": 2.971053227841621,
+   "gate_pass": false,
+   "divergences": 82,
+   "theta_median": {
+    "al_welds": 0.9426466496964987,
+    "angle_brackets": 1.070079440116094,
+    "bottom_box": 1.0091982549671656,
+    "contact": 1.0126353926004406,
+    "cross_beam": 0.9740172852231235,
+    "joints": 0.9336474582424381,
+    "plates": 0.907583156458273,
+    "steel_welds": 1.0806783396790955,
+    "top_box": 1.0377518601845268
+   }
+  },
+  {
+   "name": "band_le150_sd_0.25",
+   "nsig": 0.25,
+   "use_mac": false,
+   "fmax": 150.0,
+   "n_held_in": 8,
+   "n_held_out": 10,
+   "coverage_pred": 0.7,
+   "median_abs_err_pct": 5.914015318320298,
+   "worst_rhat": 4.252320856631524,
+   "gate_pass": false,
+   "divergences": 0,
+   "theta_median": {
+    "al_welds": 1.0447834047217333,
+    "angle_brackets": 1.119639760750478,
+    "bottom_box": 0.998462350774844,
+    "contact": 0.677465225567749,
+    "cross_beam": 1.0569447733655721,
+    "joints": 0.9306020137357454,
+    "plates": 0.7437360474389076,
+    "steel_welds": 1.0811249206374478,
+    "top_box": 1.1349783150594885
+   }
+  }
+ ]
+}

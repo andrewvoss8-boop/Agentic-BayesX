@@ -21,6 +21,14 @@ Build for correctness, reproducibility, traceability, and continuity.
   - Do not fabricate plots/metrics to look successful.
   - Do not swap methods without explicit labeling.
 
+## Result Status Standard (green / yellow / red)
+Report every gate AND the overall result on a three-tier light, not binary pass/fail:
+- GREEN: the acceptance threshold is met; the result is trustworthy as stated.
+- YELLOW: the threshold is NOT met, but the miss is understood, documented, and non-fatal — the result is usable ONLY with the stated caveat (e.g. a non-converged posterior whose held-out coverage is still informative). Yellow MUST carry its caveat and worst-case numbers; yellow is NEVER reported as success, "passing", or "green".
+- RED: blocking — a missing/fabricated artifact, broken pipeline, integrity violation (e.g. inputs changed), an undocumented gate miss, or a claim stronger than the evidence. Red must be fixed or the result withdrawn.
+- Overall = RED if any gate is red; else YELLOW if any gate is yellow; else GREEN. A checker / one-command replay exits non-zero ONLY on RED, so documented yellow findings do not abort replay — but the report and the human-review packet must surface every yellow prominently.
+This three-tier scheme does NOT relax any gate: a non-converged sampler is YELLOW at best (a documented not-yet-converged finding) and may never be called "NUTS active" / converged / green. Yellow is an honesty tier, not a softened pass.
+
 ## NUTS/HMC Sampler Rule
 - Future Bayesian updating work should use NUTS/HMC as the default sampler.
 - Existing random-walk Metropolis or random-scan Metropolis results are prototype/legacy results.
@@ -30,7 +38,7 @@ Build for correctness, reproducibility, traceability, and continuity.
 ## Convergence Gate
 - "NUTS/HMC active" requires PASSING convergence diagnostics, not just that a sampler ran. Report R-hat and ESS over ALL sampled variables, including raw hierarchical latents, not only headline marginals.
 - Default acceptance (state and justify any deviation): max R-hat <= 1.05 (prefer <= 1.01 where a primary source supports it), min ESS >= 200 for reported parameters (documented for nuisance latents), divergence fraction < 2%. Use >= 4 chains and a non-centered parameterization for hierarchical variance models unless justified.
-- If convergence fails, do NOT report a clean "pass" or "NUTS active"; surface the worst-case R-hat/ESS next to any interval and label the intervals as not-yet-converged.
+- If convergence fails, do NOT report a clean "pass" or "NUTS active"; surface the worst-case R-hat/ESS next to any interval and label the intervals as not-yet-converged. On the Result Status Standard this is YELLOW at best (a documented finding), never green.
 
 ## Sampler Decision
 - NUTS/HMC is the default. If the sampler library is unavailable, either install it in an isolated environment or use a clearly labeled alternative WITH a stated reason. Never present a non-NUTS sampler as NUTS. Honest labeling of a fallback is acceptable; misleading success framing is not.
@@ -75,6 +83,7 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 ### Plot and Human-Review Gate
 - Before writing or editing ANY figure of numeric data (FRF/PSD/time-history, posterior/QOI, sensitivity, diagnostics, report figures), read and apply the `tufte-data-graphics` skill at `.claude/skills/tufte-data-graphics/SKILL.md`, and run its `scripts/tufte_lint.py` on the plotting script. Write plotting code to a saved `.py` (not an inline heredoc) so it is lintable, traceable, and replayable. State any deliberate deviation from the checklist and why.
 - Produce human-review artifacts that let a labmate audit the run quickly: Markdown report plus figures.
+- Every figure of numeric data must state which run/dataset it came from and flag any invalidity (e.g. non-converged intervals, failed gate, stale/preliminary data) ON the figure or its caption, not only in prose — unless obviously unnecessary (e.g. a pure schematic/graphical-model diagram). For non-converged posteriors, print the worst-case R-hat/ESS on the figure next to the intervals and label them not-trustworthy.
 - Put a first-pass method summary near the start of the packet. It must show the model form, likelihood equation, data count, whole-data versus feature/peak likelihood choice, inferred variables, fixed assumptions, and non-inferred latent variables/hyperparameters.
 - Include a run-specific graphical model/likelihood diagram for StatFEM, BOED, FEM-update, or autonomous-experiment workflows; do not copy a paper figure and imply it describes the current run.
 - Show clean truth vs observed/simulated data when synthetic truth exists.
@@ -94,6 +103,13 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 - Vary the assumptions most likely to change the decision or QOI, not only the easiest parameter.
 - Separate synthetic-data sensitivity, posterior sensitivity, and decision/BOED sensitivity.
 - Report when conclusions are fragile or dominated by model discrepancy/objective framing.
+
+### Modal / Eigenproblem Identifiability Gate
+Applies to ANY task that infers element/group/material/joint parameters from modal data (eigenfrequencies, mode shapes, MAC) or uses an eigenproblem-based forward model, and to any claim that a parameter is or is not identifiable from such data.
+- Compute and report the parameter->mode sensitivity that physically links each inferred parameter to the modes: the modal strain-energy fraction each calibration mode stores in each parameter group, `f_{i,g} = (phi_i^T K_g phi_i) / lambda_i` (= 2*SE/lambda for mass-normalized modes), normalized to sum to 1 over groups; report which modes drive which parameters and each parameter's typical and peak sensitivity. (For shape/MAC observations, report the analogous eigenvector sensitivity.) Do this BEFORE concluding identifiable vs not.
+- When a parameter is poorly identified, state the CAUSE with evidence and distinguish: (a) low sensitivity but IN the load path (near-rigid, or signal below the noise / model-discrepancy floor) — confirm with a finite parameter perturbation that DOES move the eigenvalues/QOI; vs (b) genuinely OUT of the load path (~zero strain energy AND a finite perturbation moves ~nothing). Never assert a parameter is "irrelevant" / "out of the load path" without BOTH the strain-energy decomposition and the finite-perturbation check.
+- Compare each parameter's modal sensitivity to the inferred discrepancy/noise level: a parameter whose sensitivity sits below that floor is unidentifiable due to discrepancy/noise, not absence — say so, and give the pre-test lever (which modes/bands carry its signal, or how much discrepancy reduction would resolve it).
+- This ties identifiability claims to physical mechanism and to pre-test design (cf. Fisher-information/sensitivity analyses); it is method-agnostic (applies whether or not a sampler is run).
 
 ### Verification Gate
 - Add checker-backed acceptance conditions for new artifacts.
@@ -118,6 +134,7 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 
 ## Compute
 - For where to run multi-hour NUTS / TMCMC / FEM jobs (CPU+High-RAM now; Colab A100+float64 only when the method is validated AND the work is parallel-shaped; H100 reserve) and the non-negotiables for any remote/GPU run, follow `docs/compute_protocol.md`. Do NOT use T4/L4/TPU for the posterior/eigen math (float64).
+- Detached-launch gate: any compute job expected to exceed the agent tool's command timeout (e.g. NUTS/TMCMC, full-order eigensolves, sensitivity sweeps) MUST be launched detached (`nohup … > logs/x.log 2>&1 & disown`) and monitored with short chained until-loops or a background watcher; never rely on the foreground tool to keep a long job alive. The tool's timeout has killed long jobs and wasted hours. Make jobs resumable (write partial results, skip finished work on relaunch) so a killed/relaunched run does not start over. Pin BLAS threads (`OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1`) for small dense eigh/posterior math where multi-thread BLAS thrashes.
 
 ## Memory
 - Do not rely on conversational memory across sessions.

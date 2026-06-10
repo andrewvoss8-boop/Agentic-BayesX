@@ -1,0 +1,361 @@
+{
+ "workspace": "artifacts/reports/shocksat_fem_modal_twin_20260609",
+ "replay": "bash run_all.sh ; python3 check.py",
+ "n_artifacts": 70,
+ "authorship_map": "files_changed.md + decisions_log.md D19",
+ "headline": "full 18-mode posterior CONVERGES (gate PASS); band+LOMO held-out designs NON-converged (multimodal, documented finding); ~4/9 theta groups identified; held-out frequency coverage band 10/12, LOMO 18/18",
+ "checker": "checker_report.json (green/yellow/red): overall YELLOW = 15 green, 2 yellow (convergence_band, convergence_lomo = documented not-converged findings, never faked), 0 red; check.py exits 0 (blocks only on red)",
+ "matrices_note": "matrices/*.npz (35) + reduced_blocks.npz are large derived assembly blocks; reproduced by run_all.sh steps 1-7",
+ "artifacts": [
+  {
+   "path": "assembly_meta.json",
+   "bytes": 4536,
+   "producer": "assemble_fem.py"
+  },
+  {
+   "path": "assumptions_ledger.md",
+   "bytes": 3980,
+   "producer": "report/doc"
+  },
+  {
+   "path": "check.py",
+   "bytes": 6216,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "checker_report.json",
+   "bytes": 2619,
+   "producer": "check.py (S2/S3)"
+  },
+  {
+   "path": "convergence_band.json",
+   "bytes": 402,
+   "producer": "run_nuts.py band"
+  },
+  {
+   "path": "convergence_full.json",
+   "bytes": 403,
+   "producer": "run_full.py"
+  },
+  {
+   "path": "decisions_log.md",
+   "bytes": 19325,
+   "producer": "report/doc"
+  },
+  {
+   "path": "fe_validate_report.json",
+   "bytes": 969,
+   "producer": "fe_validate.py"
+  },
+  {
+   "path": "fem_assembly_report.md",
+   "bytes": 6046,
+   "producer": "report/doc"
+  },
+  {
+   "path": "fem_model.npz",
+   "bytes": 1084916,
+   "producer": "assemble_fem.py"
+  },
+  {
+   "path": "fem_parse_report.json",
+   "bytes": 7071,
+   "producer": "parse_nastran.py"
+  },
+  {
+   "path": "femap_handoff/femap_instructions.md",
+   "bytes": 2606,
+   "producer": "FEMAP cross-check handoff (make_femap_deck.py / manual)"
+  },
+  {
+   "path": "femap_handoff/shocksat_modal_twin_nominal.dat",
+   "bytes": 7068766,
+   "producer": "FEMAP cross-check handoff (make_femap_deck.py / manual)"
+  },
+  {
+   "path": "femap_handoff/shocksat_modal_twin_posterior.dat",
+   "bytes": 7069270,
+   "producer": "FEMAP cross-check handoff (make_femap_deck.py / manual)"
+  },
+  {
+   "path": "femap_handoff/theta_posterior_mean.json",
+   "bytes": 304,
+   "producer": "FEMAP cross-check handoff (make_femap_deck.py / manual)"
+  },
+  {
+   "path": "figures/convergence_summary.png",
+   "bytes": 81921,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "figures/graphical_model.png",
+   "bytes": 151186,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "figures/heldout_qoi_sidebyside_band.png",
+   "bytes": 98601,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "figures/heldout_qoi_sidebyside_lomo.png",
+   "bytes": 168916,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "figures/nominal_correlation.png",
+   "bytes": 88400,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "figures/theta_posterior_band.png",
+   "bytes": 55816,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "figures/theta_posterior_full.png",
+   "bytes": 85094,
+   "producer": "figure (make_figures*.py)"
+  },
+  {
+   "path": "files_changed.md",
+   "bytes": 3357,
+   "producer": "report/doc"
+  },
+  {
+   "path": "groups.json",
+   "bytes": 745,
+   "producer": "reduce_model.py/manual"
+  },
+  {
+   "path": "heldout_band.json",
+   "bytes": 8174,
+   "producer": "run_nuts.py band"
+  },
+  {
+   "path": "heldout_lock.json",
+   "bytes": 602,
+   "producer": "make_lock.py"
+  },
+  {
+   "path": "heldout_lomo.json",
+   "bytes": 8741,
+   "producer": "lomo_parallel.py --drive"
+  },
+  {
+   "path": "inputs_sha256_end.json",
+   "bytes": 11558,
+   "producer": "hash_inputs.py end (D30)"
+  },
+  {
+   "path": "inputs_sha256_start.json",
+   "bytes": 11558,
+   "producer": "S1 hasher"
+  },
+  {
+   "path": "lead_code_review.md",
+   "bytes": 3092,
+   "producer": "report/doc"
+  },
+  {
+   "path": "measured_modes.npz",
+   "bytes": 62794,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "measured_modes_provenance.md",
+   "bytes": 5008,
+   "producer": "report/doc"
+  },
+  {
+   "path": "measured_modes_summary.json",
+   "bytes": 940,
+   "producer": "parse_ash.py"
+  },
+  {
+   "path": "next_prompt.md",
+   "bytes": 8268,
+   "producer": "report/doc"
+  },
+  {
+   "path": "noise_floor.json",
+   "bytes": 2147,
+   "producer": "noise_floor.py"
+  },
+  {
+   "path": "nominal_mac_table.json",
+   "bytes": 5738,
+   "producer": "solve_nominal.py"
+  },
+  {
+   "path": "nominal_modes.json",
+   "bytes": 5347,
+   "producer": "solve_nominal.py"
+  },
+  {
+   "path": "nuts_band_samples.npz",
+   "bytes": 599756,
+   "producer": "run_nuts.py band"
+  },
+  {
+   "path": "nuts_full_samples.npz",
+   "bytes": 300083,
+   "producer": "run_full.py"
+  },
+  {
+   "path": "packet.md",
+   "bytes": 21063,
+   "producer": "S3 hand-written"
+  },
+  {
+   "path": "pairing.json",
+   "bytes": 6785,
+   "producer": "pairing.py"
+  },
+  {
+   "path": "posterior_validation.json",
+   "bytes": 2601,
+   "producer": "validate_posterior.py"
+  },
+  {
+   "path": "priority_deliverables.md",
+   "bytes": 2977,
+   "producer": "report/doc"
+  },
+  {
+   "path": "quantity_contracts.md",
+   "bytes": 2806,
+   "producer": "report/doc"
+  },
+  {
+   "path": "question_framing.md",
+   "bytes": 2233,
+   "producer": "report/doc"
+  },
+  {
+   "path": "reduction_report.json",
+   "bytes": 5313,
+   "producer": "reduce_model.py"
+  },
+  {
+   "path": "run_all.sh",
+   "bytes": 2626,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "runtime.json",
+   "bytes": 2382,
+   "producer": "S3 hand-written"
+  },
+  {
+   "path": "scripts/assemble_fem.py",
+   "bytes": 13390,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/enrich_basis.py",
+   "bytes": 5560,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/fe_core.py",
+   "bytes": 13699,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/fe_validate.py",
+   "bytes": 8562,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/hash_inputs.py",
+   "bytes": 1379,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/lomo_parallel.py",
+   "bytes": 3804,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/make_femap_deck.py",
+   "bytes": 6063,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/make_figures.py",
+   "bytes": 7525,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/make_figures2.py",
+   "bytes": 7586,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/make_lock.py",
+   "bytes": 1418,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/noise_floor.py",
+   "bytes": 2862,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/pairing.py",
+   "bytes": 2797,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/parse_ash.py",
+   "bytes": 3781,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/parse_nastran.py",
+   "bytes": 7509,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/reduce_model.py",
+   "bytes": 5529,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/run_full.py",
+   "bytes": 2526,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/run_nuts.py",
+   "bytes": 10963,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/sensitivity.py",
+   "bytes": 2285,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/solve_nominal.py",
+   "bytes": 5348,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "scripts/validate_posterior.py",
+   "bytes": 2651,
+   "producer": "see files_changed.md"
+  },
+  {
+   "path": "sensitivity.json",
+   "bytes": 3238,
+   "producer": "sensitivity.py"
+  },
+  {
+   "path": "theta_full.json",
+   "bytes": 8683,
+   "producer": "run_full.py"
+  }
+ ]
+}

@@ -1,11 +1,34 @@
 {
- "note": "session 1 partial accounting; final runtime.json due at task end",
- "session1": {
-  "start_epoch": 1781035781,
-  "end_epoch": 1781037579,
-  "elapsed_wallclock_s": 1798,
-  "active_runtime_s_approx": 120,
-  "active_runtime_basis": "sum of executed command times (hashing ~1s, parses/probes ~20x0.5s, element validation ~3x1s, assembly 15s, misc); approximate, dominated by assembly",
-  "machine": "Mac CPU"
+ "metric_definitions": {
+  "active_runtime_s": "sum of per-command execution times (the cross-runner comparison metric; excludes human-approval wait)",
+  "elapsed_wallclock_s": "task calendar span incl. overnight human-approval gap",
+  "note": "LOMO ran 4 workers in parallel, so its command-time SUM (21573 s) is larger than its wall-clock (~1.5 h); active_runtime_s therefore counts total compute work, and active_runtime_s <= elapsed_wallclock_s holds against the calendar span."
+ },
+ "active_runtime_s": 38099,
+ "elapsed_wallclock_s": 63791,
+ "machine": "Mac CPU, single-threaded per process (OMP/VECLIB=1); .venv_nuts jax 0.4.30 / numpyro 0.15.3 for NUTS",
+ "components_active_s": {
+  "session1_build_parse_assemble": 120,
+  "session2_nominal_eigsh_reduction_probes_enrich": 1770,
+  "band_failrun1_1000+1000_d8": 855,
+  "band_remedy_2000+2000_d10": 8430,
+  "full_calibration_1000+1000_d8": 885,
+  "lomo_18_runs_command_sum_4x_parallel": 21573,
+  "sensitivity_5_arms_600+600": 4215,
+  "posterior_validation_full_eigsh": 251
+ },
+ "components_basis": {
+  "session2_nominal_eigsh_reduction_probes_enrich": "APPROX: nominal 400k-DOF eigsh ~360 s + two reduction probes ~720 s + abandoned enrich snapshot ~600 s + parse/assemble/pairing/noise_floor ~90 s",
+  "band_failrun1_1000+1000_d8": "logs/nuts_band.log final timestamp 855 s",
+  "band_remedy_2000+2000_d10": "logs/nuts_band_long.log final timestamp 8430 s",
+  "full_calibration_1000+1000_d8": "theta_full.json runtime_s 885 s",
+  "lomo_18_runs_command_sum_4x_parallel": "sum of 18 logs/lomo_partial_*.json runtime_s = 21573 s; wall ~1.5 h at 4 workers",
+  "sensitivity_5_arms_600+600": "logs/sensitivity.log final timestamp 4215 s",
+  "posterior_validation_full_eigsh": "logs/validate_posterior.log final timestamp 251 s"
+ },
+ "sessions": {
+  "session1": {"date": "2026-06-09", "elapsed_wallclock_s": 1798, "active_runtime_s_approx": 120, "scope": "Task0 + parse + element validation + assembly"},
+  "session2": {"date": "2026-06-09 evening", "scope": "drilling-penalty fix, nominal solve, reduction, pairing, noise floor, NUTS draft, sensitivity/lock/figure/checker scripts, failrun1 band, D9-D23"},
+  "session3": {"date": "2026-06-10", "scope": "verified pinned-venv jobs (D24), LOMO merge, band remedy, full calibration, posterior validation, sensitivity, packet, hash-format fix (D30), checker, this file; D24-D30"}
  }
 }

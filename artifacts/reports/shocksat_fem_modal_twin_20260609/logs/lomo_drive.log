@@ -1,0 +1,38 @@
+LOMO modes: [1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 25]; to run: [1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 25]
+spawned worker 1
+spawned worker 3
+spawned worker 4
+spawned worker 5
+worker 4 exited 0
+spawned worker 6
+worker 1 exited 0
+spawned worker 7
+worker 3 exited 0
+worker 5 exited 0
+spawned worker 8
+spawned worker 10
+worker 8 exited 0
+spawned worker 11
+worker 6 exited 0
+spawned worker 12
+worker 7 exited 0
+spawned worker 13
+worker 10 exited 0
+spawned worker 14
+worker 11 exited 0
+spawned worker 15
+worker 12 exited 0
+spawned worker 16
+worker 13 exited 0
+spawned worker 17
+worker 14 exited 0
+spawned worker 18
+worker 15 exited 0
+spawned worker 21
+worker 16 exited 0
+spawned worker 25
+worker 17 exited 0
+worker 18 exited 0
+worker 21 exited 0
+worker 25 exited 0
+LOMO merged: coverage_pred 1.00, coverage_param 0.50, worst rhat 2.5034, min ess 2

@@ -1,5 +1,20 @@
 # Todo
 
+## 2026-06-10 ShockSat modal twin — recommended follow-up (logged, not started)
+- [ ] **Differentiable subspace-MAC pseudo-likelihood (degenerate-mode fix).**
+      The current MAC sensitivity arm diverges (82 div, R-hat 2.97) because the
+      `eigh` backward has a `1/(λ_i−λ_j)` term that blows up at near-degenerate
+      pairs (e.g. modes 6 & 7 at 117.63/118.53 Hz). Fix = make the shape
+      likelihood operate on the INVARIANT SUBSPACE of each near-degenerate
+      cluster, not individual eigenvectors: subspace-MAC / principal angles /
+      mass-weighted cross-orthogonality (smooth in θ, no singularity). Lets MAC
+      enter the headline likelihood with 0 divergences. Alt mitigations noted:
+      repeated-eigenvalue sensitivity (Mills-Curran/Dailey/Friswell) or
+      Lorentzian-broadened eigh backward. PRIOR ART IS RICH — NOT a patent
+      candidate without a real FTO/lit scan (see chat 2026-06-10). Workspace
+      `artifacts/reports/shocksat_fem_modal_twin_20260609/`; touch `run_nuts.py`
+      `model`/`forward` + add as a new sensitivity arm.
+
 ## 2026-06-09 ShockSat FEM modal twin runner — IN FLIGHT, session 1 ended (out of credits)
 Workspace: `artifacts/reports/shocksat_fem_modal_twin_20260609/`. Full handoff in
 its `next_prompt.md` (read that first; also `decisions_log.md` D1-D8).
@@ -35,20 +50,19 @@ Workspace: `artifacts/reports/shocksat_statfem_runner_20260609/`.
 - [x] ShockSat next action: recover more valid hammer hits/full Test07 archive and source-location metadata, then average impact FRFs and reconcile 9900001-style shock grids with NASA 11101/11110 SOL 111 correlation grids before any FEM/test FRF overlay. Result: full Test07 archive fetched and verified; four MAT hammer hits loaded and averaged; source metadata recorded; low coherence and source/grid convention mismatch still block FEM/test overlay.
 - [ ] ShockSat next action: build an explicit Test07 source/response mapping audit that reconciles physical TestLog impact points and 9900001-style response grids with NASA SOL 111 force grids 11101X/11110Y and modal-test response grids; only then attempt a FEM/test FRF overlay.
 
-## 2026-06-08 Pre-test sensitivity / FIM identifiability analysis (Opus tray FEM) — SPEC PENDING
+## 2026-06-08 Pre-test sensitivity / FIM identifiability analysis (Opus tray FEM) — DONE 2026-06-09
 Artifact-backed answer to "how many parameters can the scrappy test support" + experiment design.
-- [ ] On the Opus Phase-1 tray FEM (runs/fem_phase1/opus/), define the candidate parameter menu
-      (joint axial k, joint lateral k, joint loss eta, base-plate compliance, strut EA, tray E, ...).
-- [ ] Compute the sensitivity Jacobian J = d(observable feature)/d(param) for the observable modes
-      AND d(load QOI)/d(param); assemble the Fisher Information Matrix (FIM) = J^T Sigma^-1 J.
-- [ ] FIM eigen-decomposition: report stiff vs sloppy parameter COMBINATIONS (sloppy-models view);
-      SVD/QR subset-selection downselect with a stated condition-number/collinearity threshold.
-- [ ] Do it for the 1-sensor (auto-spectrum) and 2-sensor (transmissibility, input cancelled) cases.
-- [ ] Output: "N identifiable params/combinations" with plots + where-to-hit / where-to-measure
-      (experiment design = FIM maximized over sensor/excitation). Confirm with profile likelihood.
-- [ ] Honesty: FIM = LOCAL/practical identifiability; confirm structural cases w/ profile likelihood;
-      run WITH the discrepancy present; held-out coverage is the referee.
-- Spec as an Opus runner task (awaiting human go).
+Executed by lead (Andrew's "execute this" go). Workspace `artifacts/reports/fim_identifiability_opus_20260609/`,
+`bash run_all.sh`, checker 15/15 PASS. See packet.md.
+- [x] Candidate parameter menu: tray_E, strut_EA, strut_EI, joint_axial, joint_lateral (5).
+- [x] Sensitivity Jacobian (exact analytic eigen/Fox-Kapoor) for modes AND load QOI; FIM = J^T Σ^-1 J.
+- [x] FIM eigendecomposition (stiff/sloppy combos) + column-pivoted QR subset (cond≤100).
+- [x] 1-sensor (auto-spectrum) and 2-sensor (transmissibility) cases — same headline.
+- [x] "N identifiable" = 3 (band-conditional 1→2→3); joints unidentifiable; plots + where-to-hit/measure.
+- [x] Profile-likelihood confirmation (joints flat across ±30%).
+- [x] Honesty: labeled LOCAL FIM + profile; discrepancy NOT included (upper bound) — flagged in packet.
+- FOLLOW-UPS (next_prompt.md): redesign to make joints observable; promote 3-of-5 to a real NUTS update;
+  band-aware test plan; repeat WITH discrepancy. Possible reusable pre-test FIM gate — needs Andrew's OK.
 
 ## 2026-06-08 Patent prior-art dossier v1 — fold-in + next searches
 - [x] Cue browser patent-DB prompt; receive dossier v1 (saved docs/proposal/patent_prior_art_dossier_v1.md; folded into patent_ideas_ranked.md).
