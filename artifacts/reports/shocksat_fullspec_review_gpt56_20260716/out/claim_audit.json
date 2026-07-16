@@ -1,0 +1,211 @@
+{
+  "C1": {
+    "status": "OVER-CLAIMED",
+    "gate_status": "YELLOW",
+    "file_checked": [
+      "code/enrich_wide.py:23-92",
+      "code/rescore_freeze.py:31-90",
+      "out/exact_freeze_scores.json",
+      "out/recomputed_checks.json"
+    ],
+    "recomputed_number": {
+      "screening_D_minus_R": 0.01375363394013346,
+      "exact_D_minus_R": -0.0017163324443401767,
+      "exact_paired_SE": 0.009378537657913405,
+      "remodel_candidates_exact_rescored": "2/28"
+    },
+    "study_number": {
+      "screening_D_minus_R": 0.0138,
+      "exact_D_minus_R": -0.0017,
+      "self_consistency_pct": 0.0
+    },
+    "note": "The selected D and R winners are rescored with the same drives, bands, warp, and gain machinery. The 0% check is algebraic self-consistency after theta_MAP is folded into its own eigenbasis, not an independent accuracy check. Only 2 of 28 remodel candidates were exact-rescored, so the full exact ranking and best-of-14 conclusion remain unverified.",
+    "corrected_statement": "The screening winners reverse on their own exact-at-theta_MAP bases and are statistically tied, but a full exact rerank is required before claiming the agent track ties random globally."
+  },
+  "C2": {
+    "status": "WRONG",
+    "gate_status": "RED",
+    "file_checked": [
+      "code/identifiability.py:65-126",
+      "code/arm_b_nuts.py:148-177",
+      "out/identifiability.json",
+      "out/nuts_diagnostics.json",
+      "out/fim_step_sensitivity.json",
+      "figures/fig_identifiability.png"
+    ],
+    "recomputed_number": {
+      "FIM_steps_logtheta": [0.005, 0.01, 0.02, 0.04],
+      "minimum_FIM_eigenvalue_range": [1454.2206423289929, 2195.557458922865],
+      "minimum_correlated_covariance_FIM_eigenvalue_range": [5558.368288604647, 8717.811914473252],
+      "prior_precision": 16.0,
+      "worst_Rhat": 360.63406923662427,
+      "worst_ESS": 2.0020643780987712
+    },
+    "study_number": {
+      "FIM_eigenvalue_range": [1641.17, 3579278.91],
+      "identified_combinations": "9/9",
+      "claim": "multimodal, not under-identified"
+    },
+    "note": "The local FIM is robustly full rank under step and covariance sensitivity, so the likelihood is not locally flat near theta_MAP. That does not establish global parameter identification. Multiple separated parameter modes fitting comparably in data space are global under-identification under the canonical gate. The non-converged NUTS output cannot support posterior intervals. The FIM figure omits the worst R-hat/ESS and overstates the conclusion.",
+    "corrected_statement": "All nine local directions are stiff near theta_MAP, but global identification is unresolved and the posterior is not converged. MAP scores are deterministic optimizer results, not Bayesian posterior results."
+  },
+  "C3": {
+    "status": "OVER-CLAIMED",
+    "gate_status": "YELLOW",
+    "file_checked": [
+      "code/wide_distill.py:44-167",
+      "out/overlap_validation.json",
+      "data/force_health.json",
+      "out/recomputed_checks.json"
+    ],
+    "recomputed_number": {
+      "drives_matching": "5/5",
+      "minimum_channel_correlation": 0.9999999999999998,
+      "median_abs_dlog10": 0.0,
+      "used_force_peak_lbf_range": [207.4358269003137, 1083.2372091096677],
+      "used_hits": 28
+    },
+    "study_number": {
+      "correlation": 1.0,
+      "median_abs_dlog10": 0.0,
+      "claim": "closes Gate W"
+    },
+    "note": "Direct NPZ recomputation confirms exact overlap and live force. The wide cache uses the same hits, loader, spectra routine, frame, and window as the existing cache, so equality is expected by construction. It verifies provenance and reproducibility, not the window/H1 implementation independently.",
+    "corrected_statement": "All five caches were reproduced exactly from archived raw hits with live force using the same distiller. This closes the provenance and force-health gap, but not an independent processing-method validation."
+  },
+  "C4": {
+    "status": "OVER-CLAIMED",
+    "gate_status": "YELLOW",
+    "file_checked": [
+      "code/full_eig2.py:18-70",
+      "code/filter_basis.py:13-48",
+      "out/full_eig_summary.json",
+      "out/full_eig_crosscheck.json",
+      "out/certified_ceiling.json",
+      "out/recomputed_checks.json"
+    ],
+    "recomputed_number": {
+      "raw_modes": 560,
+      "kept_modes": 215,
+      "removed_by_1Hz_cut": 345,
+      "exact_top_plateau_count": 39,
+      "last_345_frequency_range_hz": [667.2884123828405, 668.0949729719728],
+      "crossvalidated_to_hz": 639.0,
+      "639_div_1p25_hz": 511.2,
+      "minimum_median_coherence_500_1000": 0.6335661206668397
+    },
+    "study_number": {
+      "claimed_clamped_modes": 338,
+      "summary_n_clamped_dropped": 19,
+      "credible_ceiling_hz": 640,
+      "score_cap_hz": 500
+    },
+    "note": "The dense 667.3-668.1 Hz pile-up is clearly an eigensolver edge artifact, and the independent slices support modes through 639 Hz. The 500 Hz cap is sound. The reported dropped-mode count is internally inconsistent, and one failed 16 GB ARPACK configuration does not prove that 1250 Hz is intrinsically infeasible. All drives have median coherence above 0.63 from 500-1000 Hz, while support above 1 kHz varies by drive.",
+    "corrected_statement": "The present basis is independently credible through 639 Hz, so scoring at 500 Hz is conservative. Extending to 1250 Hz was infeasible with the attempted 16 GB ARPACK setup, not proven infeasible in general."
+  },
+  "C5": {
+    "status": "WRONG",
+    "gate_status": "RED",
+    "file_checked": [
+      "code/netcg_wide.py:30-208",
+      "out/netcg_results.json",
+      "out/verdicts.json",
+      "packet.md:97-102"
+    ],
+    "recomputed_number": {
+      "width_ratio_vs_delivered_factor": {
+        "shear_x": 5.447019867549669,
+        "shear_y": 1.5913043478260871,
+        "normal_z": 2.0225296442687746
+      },
+      "widen_audit": {
+        "shear_x": 1.0,
+        "shear_y": 1.225,
+        "normal_z": 1.003
+      }
+    },
+    "study_number": {
+      "reimplementation_width_ratios": [8.225, 3.66, 5.117],
+      "delivered_width_ratios": [1.51, 2.3, 2.53],
+      "status": "not validly assessable"
+    },
+    "note": "The report is right not to interpret the mismatched bands as a real regression. But an invalid reimplementation means S3/S4 are unresolved, not falsified or not-met. The required QOI deliverable is missing. Only shear_y responds to the hide-top-3 audit; shear_x and normal_z do not.",
+    "corrected_statement": "S3 and S4 are CANNOT-VERIFY until the wide package reproduces the delivered net-CG reference before any arm comparison."
+  },
+  "C6": {
+    "status": "WRONG",
+    "gate_status": "RED",
+    "file_checked": [
+      "code/arm_c_score.py:90-126",
+      "code/rescore_freeze.py:74-82",
+      "out/exact_freeze_scores.json:278-370"
+    ],
+    "recomputed_number": {
+      "fold_specific_screening_MAPs": 4,
+      "exact_MAPs_used": 1,
+      "folds_scored_with_a_map_that_saw_their_heldout_drive": "3/4",
+      "screening_to_exact_mean": [0.1893399394253291, 0.15696699007007647]
+    },
+    "study_number": {
+      "exact_C_sub200": 0.157,
+      "label": "representative check"
+    },
+    "note": "The exact C calculation uses the m_xpos_990x fold-1 shape MAP for all four folds. That MAP was trained on the other three drives, which become held-out drives in the other folds. Three of four exact scores therefore use a shape field trained on their own held-out drive. The caveat does not make the aggregate a valid held-out score.",
+    "corrected_statement": "Arm C has no valid exact-basis LODO aggregate. Refit the shape MAP separately on each exact fold before asserting that C collapses."
+  },
+  "C7": {
+    "status": "OVER-CLAIMED",
+    "gate_status": "YELLOW",
+    "file_checked": [
+      "out/query_log.jsonl",
+      "out/candidate_specs/*.json",
+      "findings.md:49-66",
+      "../shocksat_true_remodel_loop_20260706/findings.md"
+    ],
+    "recomputed_number": {
+      "agent_candidates": 14,
+      "agent_genuine_model_form_candidates": 0,
+      "random_candidates": 14,
+      "random_genuine_model_form_candidates": 4,
+      "random_rbe2_soften_operations": 3,
+      "random_refine_operations": 2,
+      "geometry_edits": 0,
+      "element_formulation_edits": 0
+    },
+    "study_number": {
+      "agent_genuine_model_form_candidates": 0,
+      "random_genuine_model_form_candidates": "about 4"
+    },
+    "note": "The D16 count is correct. The current agent tested property scaling, thickness, and splits only. Random tested limited connectivity/refinement; neither track tested geometry or element formulation. Prior-loop evidence broadens the case slightly but still does not justify the packet's claim that remaining error is unreachable by any owned lever.",
+    "corrected_statement": "The amplitude-compass agent tied random within a property/reparameterization-heavy action space. Genuine geometry, element-formulation, and agent-proposed topology/mesh edits remain untested."
+  },
+  "C8": {
+    "status": "WRONG",
+    "gate_status": "RED",
+    "file_checked": [
+      "check.py:217-260",
+      "code/collect_results.py:18-101",
+      "out/verdicts.json",
+      "out/arms_bands_table.json",
+      "../shocksat_full_spectrum_frf_repair_20260716/checker_report.json",
+      "out/checker_mutation_tests.json"
+    ],
+    "recomputed_number": {
+      "original_checker_replay": "YELLOW",
+      "original_G12": "GREEN",
+      "planted_G03_lstsq": "RED",
+      "planted_G08_nonconvergence": "YELLOW",
+      "repaired_S1_D_minus_A1": 0.04967060570497424,
+      "repaired_S2_D_minus_R": -0.0017163324443401767,
+      "repair_checker": "YELLOW"
+    },
+    "study_number": {
+      "checker": "YELLOW 11/1/0",
+      "G09": "GREEN",
+      "original_F_equals": "R",
+      "original_exact_SE_values": null
+    },
+    "note": "The locked checker and G03/G08 behave as claimed, but G09 accepts null SE values, non-finite S1/S2 statistics, and a fabricated F=R row. The isolated repair restores F=C and finite statistics without changing the reviewed study. The original package remains an integrity failure even though the corrected S1/S2 outcomes stay YELLOW.",
+    "corrected_statement": "The original checker is immutable but incomplete. Use the isolated repair artifacts for S1/S2 and add finite-number, fold-SE, and method-identity gates before treating the study as replayable."
+  }
+}

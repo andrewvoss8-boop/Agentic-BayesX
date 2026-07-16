@@ -1,0 +1,45 @@
+{
+  "S1": {
+    "status": "YELLOW",
+    "claim": "eligible B/C/D/F arm beats A1 by >=+0.05 and >=2x paired-fold SE",
+    "numbers": {
+      "best_arm": "D",
+      "delta_mean": 0.04967060570497424,
+      "delta_se": 0.017385612635812963,
+      "per_fold": [
+        0.018576139951275605,
+        0.02322820461304209,
+        0.09080436204007133,
+        0.06607371621550792
+      ],
+      "two_se": 0.034771225271625926
+    },
+    "note": "F is C under the pre-registered rule; random control R is not eligible as F."
+  },
+  "S2": {
+    "status": "YELLOW",
+    "claim": "agent D beats random R by >=1x paired-fold SE",
+    "numbers": {
+      "delta_mean": -0.0017163324443401767,
+      "delta_se": 0.009378537657913405,
+      "per_fold": [
+        -0.008551825989525863,
+        0.026134161038247727,
+        -0.01470320257462912,
+        -0.00974446225145345
+      ]
+    }
+  },
+  "original_checker_overall": "YELLOW",
+  "original_defects_repaired": [
+    "nested exact-fold path",
+    "null exact fold standard errors",
+    "non-finite S1/S2 statistics",
+    "post-hoc F=R identity"
+  ],
+  "remaining_limitations": [
+    "arm-C exact row uses fold-1 shape MAP for all folds",
+    "only the screening-winning D and R candidates were exact-rescored",
+    "original checker G09 remains immutable and incomplete"
+  ]
+}

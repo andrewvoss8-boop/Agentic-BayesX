@@ -1,0 +1,141 @@
+{
+  "S1": {
+    "status": "YELLOW",
+    "claim": "eligible B/C/D/F arm beats A1 by >=+0.05 and >=2x paired-fold SE",
+    "numbers": {
+      "best_arm": "D",
+      "delta_mean": 0.04967060570497424,
+      "delta_se": 0.017385612635812963,
+      "per_fold": [
+        0.018576139951275605,
+        0.02322820461304209,
+        0.09080436204007133,
+        0.06607371621550792
+      ],
+      "two_se": 0.034771225271625926
+    },
+    "note": "F is C under the pre-registered rule; random control R is not eligible as F."
+  },
+  "S2": {
+    "status": "YELLOW",
+    "claim": "agent D beats random R by >=1x paired-fold SE",
+    "numbers": {
+      "delta_mean": -0.0017163324443401767,
+      "delta_se": 0.009378537657913405,
+      "per_fold": [
+        -0.008551825989525863,
+        0.026134161038247727,
+        -0.01470320257462912,
+        -0.00974446225145345
+      ]
+    }
+  },
+  "S3": {
+    "status": "YELLOW",
+    "claim": "narrows net-CG shear while keeping >=0.95 coverage",
+    "numbers": {
+      "shear_x": {
+        "width_ratio": 8.225,
+        "coverage": 0.785,
+        "widen_audit": 1.0,
+        "detail": {
+          "tiers_netcg": {
+            "width_ratio": 6.846,
+            "coverage": 0.746,
+            "widen_audit": 1.0
+          },
+          "tiers_updated": {
+            "width_ratio": 8.225,
+            "coverage": 0.785,
+            "widen_audit": 1.0
+          },
+          "delivered_reference": 1.51
+        }
+      },
+      "shear_y": {
+        "width_ratio": 3.66,
+        "coverage": 0.98,
+        "widen_audit": 1.225,
+        "detail": {
+          "tiers_netcg": {
+            "width_ratio": 3.631,
+            "coverage": 0.979,
+            "widen_audit": 1.226
+          },
+          "tiers_updated": {
+            "width_ratio": 3.66,
+            "coverage": 0.98,
+            "widen_audit": 1.225
+          },
+          "delivered_reference": 2.3
+        }
+      },
+      "delivered": {
+        "x": 1.51,
+        "y": 2.3
+      }
+    }
+  },
+  "S4": {
+    "status": "YELLOW",
+    "claim": "normal band narrows >=25% (2.53->1.90) while covering",
+    "numbers": {
+      "normal_z": {
+        "width_ratio": 5.117,
+        "coverage": 0.765,
+        "widen_audit": 1.003,
+        "detail": {
+          "tiers_netcg": {
+            "width_ratio": 5.111,
+            "coverage": 0.765,
+            "widen_audit": 1.003
+          },
+          "tiers_updated": {
+            "width_ratio": 5.117,
+            "coverage": 0.765,
+            "widen_audit": 1.003
+          },
+          "delivered_reference": 2.53
+        }
+      },
+      "delivered": 2.53
+    }
+  },
+  "S5": {
+    "status": "YELLOW",
+    "claim": "amplitude-inclusive selection Spearman >= 0.5 vs held-out",
+    "numbers": {
+      "spearman": -0.3,
+      "by_prior": {
+        "spearman_sig0.15": null,
+        "spearman_sig0.25": -0.3,
+        "spearman_sig0.4": null
+      }
+    }
+  },
+  "H1": {
+    "status": "YELLOW",
+    "anchor": "S1",
+    "summary": "shape wall: amplitude-trained shape (C) dented sub-200 on screening (+0.044) but collapsed on exact basis; no lever cleanly clears the noise floor -> wall stands, dented"
+  },
+  "H2": {
+    "status": "YELLOW",
+    "anchor": "S2",
+    "summary": "Agent D does not beat equal-budget random R on the two exact-rescored screening winners; breadth remains limited by exact reranking and the agent's zero genuine model-form proposals."
+  },
+  "H3": {
+    "status": "YELLOW",
+    "summary": "window-matched + measured zeta is the standard convention for all arms; on exact bases the window's sub-200 benefit over A0 shrank to ~noise (0.114 vs 0.112)",
+    "anchor": "S1"
+  },
+  "H4": {
+    "status": "YELLOW",
+    "summary": "extended-band cluster (254-367 Hz) measured; normal-band tier update -> see S4/netcg",
+    "anchor": "S4"
+  },
+  "H5": {
+    "status": "YELLOW",
+    "summary": "amplitude-inclusive selection vs held-out ranking -> see S5",
+    "anchor": "S5"
+  }
+}

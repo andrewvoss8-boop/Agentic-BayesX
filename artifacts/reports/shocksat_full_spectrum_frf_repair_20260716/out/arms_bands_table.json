@@ -1,0 +1,216 @@
+{
+  "basis": "EXACT enriched-at-theta_MAP scores from the reviewed study",
+  "source": "../shocksat_full_spectrum_frf_20260714/out/exact_freeze_scores.json",
+  "arms": {
+    "A0": {
+      "sub200": {
+        "mean": 0.11157480586507082,
+        "se": 0.17518433483609516,
+        "folds": {
+          "m_xpos_990x": 0.29657098432112894,
+          "m_zpos_990z": 0.48517575383342776,
+          "m_ypos_990y": -0.029055114762423957,
+          "m_zpos_900z": -0.3063923999318494
+        },
+        "screening": 0.1308132274174828
+      },
+      "b200_500": {
+        "mean": 0.05008684661427574,
+        "se": 0.026605721398984965,
+        "folds": {
+          "m_xpos_990x": 0.0560670881438077,
+          "m_zpos_990z": -0.026324452250874302,
+          "m_ypos_990y": 0.09365869421470997,
+          "m_zpos_900z": 0.07694605634945959
+        },
+        "screening": 0.07422469972410808
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      }
+    },
+    "A1": {
+      "sub200": {
+        "mean": 0.11368464966420273,
+        "se": 0.1758038000609491,
+        "folds": {
+          "m_xpos_990x": 0.27383077524106014,
+          "m_zpos_990z": 0.4981758785260245,
+          "m_ypos_990y": -0.0019679768987999383,
+          "m_zpos_900z": -0.3153000782114738
+        },
+        "screening": 0.14536268399461483
+      },
+      "b200_500": {
+        "mean": 0.033476029911270806,
+        "se": 0.028660241232295627,
+        "folds": {
+          "m_xpos_990x": 0.05627857845439767,
+          "m_zpos_990z": -0.047006571666087425,
+          "m_ypos_990y": 0.037861879952953634,
+          "m_zpos_900z": 0.08677023290381934
+        },
+        "screening": 0.05815259893628143
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      }
+    },
+    "B": {
+      "sub200": {
+        "mean": 0.15410650055733566,
+        "se": 0.1579902503112192,
+        "folds": {
+          "m_xpos_990x": 0.30447013253557575,
+          "m_zpos_990z": 0.4800881352821993,
+          "m_ypos_990y": 0.08505715916465736,
+          "m_zpos_900z": -0.25318942475308975
+        },
+        "screening": 0.14199298776685407
+      },
+      "b200_500": {
+        "mean": 0.1974333573951441,
+        "se": 0.030016918853107595,
+        "folds": {
+          "m_xpos_990x": 0.14421847931605206,
+          "m_zpos_990z": 0.24973664628183972,
+          "m_ypos_990y": 0.1466821591366406,
+          "m_zpos_900z": 0.24909614484604395
+        },
+        "screening": 0.1678859759951733
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      }
+    },
+    "C": {
+      "sub200": {
+        "mean": 0.15696699007007647,
+        "se": 0.16302868277899413,
+        "folds": {
+          "m_xpos_990x": 0.2839085721316943,
+          "m_zpos_990z": 0.5168022693098543,
+          "m_ypos_990y": 0.07921183975994361,
+          "m_zpos_900z": -0.25205472092118625
+        },
+        "screening": 0.1893399394253291
+      },
+      "b200_500": {
+        "mean": 0.021981020382393433,
+        "se": 0.033117617306815485,
+        "folds": {
+          "m_xpos_990x": 0.048393385562041584,
+          "m_zpos_990z": -0.07697972507597609,
+          "m_ypos_990y": 0.05384822763229703,
+          "m_zpos_900z": 0.0626621934112112
+        },
+        "screening": 0.057896106604326064
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      },
+      "caveat": "C exact uses fold-1 shape MAP on the enriched basis as a representative check (per-fold shape re-fit on the exact basis not re-run for compute)"
+    },
+    "D": {
+      "sub200": {
+        "mean": 0.16335525536917697,
+        "se": 0.1634599713941676,
+        "folds": {
+          "m_xpos_990x": 0.29240691519233575,
+          "m_zpos_990z": 0.5214040831390666,
+          "m_ypos_990y": 0.0888363851412714,
+          "m_zpos_900z": -0.2492263619959659
+        },
+        "screening": 0.17940546316783876
+      },
+      "b200_500": {
+        "mean": 0.18817907632011832,
+        "se": 0.024624715545250062,
+        "folds": {
+          "m_xpos_990x": 0.13372117950607987,
+          "m_zpos_990z": 0.18037781413045662,
+          "m_ypos_990y": 0.18530942251348442,
+          "m_zpos_900z": 0.2533078891304523
+        },
+        "screening": 0.18819583941709886
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      }
+    },
+    "R": {
+      "sub200": {
+        "mean": 0.16507158781351716,
+        "se": 0.1567763719835886,
+        "folds": {
+          "m_xpos_990x": 0.3009587411818616,
+          "m_zpos_990z": 0.4952699221008189,
+          "m_ypos_990y": 0.10353958771590052,
+          "m_zpos_900z": -0.23948189974451245
+        },
+        "screening": 0.1656518292277053
+      },
+      "b200_500": {
+        "mean": 0.18879270837839002,
+        "se": 0.02797192025543247,
+        "folds": {
+          "m_xpos_990x": 0.1703677114623563,
+          "m_zpos_990z": 0.14698774075771126,
+          "m_ypos_990y": 0.1665236294728233,
+          "m_zpos_900z": 0.2712917518206692
+        },
+        "screening": 0.18444249318132355
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      }
+    },
+    "F": {
+      "sub200": {
+        "mean": 0.15696699007007647,
+        "se": 0.16302868277899413,
+        "folds": {
+          "m_xpos_990x": 0.2839085721316943,
+          "m_zpos_990z": 0.5168022693098543,
+          "m_ypos_990y": 0.07921183975994361,
+          "m_zpos_900z": -0.25205472092118625
+        },
+        "screening": 0.1893399394253291
+      },
+      "b200_500": {
+        "mean": 0.021981020382393433,
+        "se": 0.033117617306815485,
+        "folds": {
+          "m_xpos_990x": 0.048393385562041584,
+          "m_zpos_990z": -0.07697972507597609,
+          "m_ypos_990y": 0.05384822763229703,
+          "m_zpos_900z": 0.0626621934112112
+        },
+        "screening": 0.057896106604326064
+      },
+      "b500_ceiling": {
+        "status": "not_certified",
+        "reason": "reviewed FEM basis credible to 639 Hz; 1.25x margin caps scoring at 500 Hz"
+      },
+      "caveat": "C exact uses fold-1 shape MAP on the enriched basis as a representative check (per-fold shape re-fit on the exact basis not re-run for compute)",
+      "equals": "C",
+      "method_note": "Corrected identity from the pre-registered sequential arm-F rule; no separate F exact solve exists."
+    }
+  },
+  "arm_F_rule": {
+    "source": "pre_registered_sequential_B_then_C_then_D",
+    "screening_sequence": {
+      "A1": 0.14536268399461483,
+      "B": 0.14199298776685407,
+      "C": 0.1893399394253291,
+      "D": 0.17940546316783876
+    },
+    "decision": "B does not beat A1; C beats A1; D does not beat C; therefore F=C"
+  }
+}

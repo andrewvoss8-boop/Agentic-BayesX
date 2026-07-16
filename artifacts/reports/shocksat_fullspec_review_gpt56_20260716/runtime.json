@@ -1,0 +1,7 @@
+{
+  "active_runtime_s": 17.0,
+  "elapsed_wallclock_s": 1285.1,
+  "machine": "local macOS CPU",
+  "scope": "cheap checker replay, NPZ recomputation, isolated collection repair, and FIM sensitivity; no NUTS or eigensolve reruns",
+  "note": "Active time is the sum of executed analysis/check commands including the final one-command replay."
+}

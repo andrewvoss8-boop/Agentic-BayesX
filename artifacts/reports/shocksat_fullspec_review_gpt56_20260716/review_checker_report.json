@@ -1,0 +1,31 @@
+{
+  "V01_files": {
+    "status": "GREEN",
+    "detail": "all required review files exist"
+  },
+  "V02_claims": {
+    "status": "GREEN",
+    "detail": "all eight claims have complete structured verdicts"
+  },
+  "V03_report": {
+    "status": "GREEN",
+    "detail": "report states overall status and corrected S1-S5 conclusion"
+  },
+  "V04_next_steps": {
+    "status": "GREEN",
+    "detail": "next steps are costed and include genuine model-form actions"
+  },
+  "V05_repair_status": {
+    "status": "YELLOW",
+    "detail": "repair is YELLOW because the original checker remains incomplete"
+  },
+  "V06_runtime": {
+    "status": "GREEN",
+    "detail": "active 17.0s <= elapsed 1285.1s"
+  },
+  "V07_checker_immutable": {
+    "status": "GREEN",
+    "detail": "review checker matches lock (174f79cd80f4...)"
+  },
+  "OVERALL": "YELLOW"
+}

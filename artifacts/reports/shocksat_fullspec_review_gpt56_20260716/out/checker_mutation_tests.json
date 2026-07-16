@@ -1,0 +1,12 @@
+{
+  "G03_planted_lstsq": {
+    "status": "RED",
+    "detail": "forbidden amplitude-LSQ token in selection score path: code/planted_selection.py:2: x = np.linalg.lstsq(A, b)"
+  },
+  "G08_planted_nonconvergence": {
+    "status": "YELLOW",
+    "detail": "non-converged posterior(s), intervals not-trustworthy: planted_bad: rhat 2.0, ess 2, div 0.0"
+  },
+  "reviewed_check_sha256": "c238113b53e290f714bf5f9a82bc2c9ba53107db298eb80d0ba6e14c9c684c55",
+  "locked_sha256": "c238113b53e290f714bf5f9a82bc2c9ba53107db298eb80d0ba6e14c9c684c55"
+}

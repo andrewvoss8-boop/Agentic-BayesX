@@ -1,0 +1,35 @@
+{
+  "R01_reviewed_checker_immutable": {
+    "status": "GREEN",
+    "detail": "reviewed check.py remains immutable (c238113b53e2...)"
+  },
+  "R02_reviewed_inputs_frozen": {
+    "status": "GREEN",
+    "detail": "all reviewed repair inputs match their pre-repair hashes"
+  },
+  "R03_finite_table_statistics": {
+    "status": "GREEN",
+    "detail": "all exact arm means and fold standard errors are finite"
+  },
+  "R04_fold_recomputation": {
+    "status": "GREEN",
+    "detail": "corrected means reproduce the four exact fold values"
+  },
+  "R05_arm_F_method_identity": {
+    "status": "GREEN",
+    "detail": "F=C follows the pre-registered B\u2192C\u2192D sequential adoption rule"
+  },
+  "R06_finite_S1_S2_verdicts": {
+    "status": "GREEN",
+    "detail": "S1 finite: D \u0394=0.049671, 2SE=0.034771; S2 finite: \u0394=-0.001716, SE=0.009379"
+  },
+  "R07_original_checker_replay": {
+    "status": "YELLOW",
+    "detail": "original checker still says YELLOW, but its G09 missed the collector defects repaired here"
+  },
+  "R08_repair_checker_immutable": {
+    "status": "GREEN",
+    "detail": "repair check.py matches lock (2719794601eb...)"
+  },
+  "OVERALL": "YELLOW"
+}
