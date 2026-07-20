@@ -1,0 +1,51 @@
+{
+ "bc": "bcA",
+ "n_modes_used": 1966,
+ "fmax_mode": 819.1693557496186,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 492.58223009109497
+}
+headline RMS (N / m/s^2):
+           strut_1_F     28.293
+           strut_2_F     33.565
+           strut_3_F     25.260
+           strut_4_F     27.036
+           strut_5_F     36.247
+           strut_6_F     28.264
+         tray_net_Fx     39.943
+         tray_net_Fy     42.207
+         tray_net_Fz     39.385
+      tray_net_punch     44.513
+         tray_net_Mx      8.346
+         tray_net_My      7.800
+         tray_net_Mz      6.574
+      copv_mount1_Fx     11.647
+      copv_mount1_Fy      2.484
+      copv_mount1_Fz     20.858
+      copv_mount2_Fx     11.548
+      copv_mount2_Fy      2.493
+      copv_mount2_Fz     20.596
+         copv_net_Fx     22.593
+         copv_net_Fy      4.396
+         copv_net_Fz     40.009
+      copv_net_punch     44.070
+            av_acc_x      2.831
+            av_acc_y      2.841
+            av_acc_z      3.452

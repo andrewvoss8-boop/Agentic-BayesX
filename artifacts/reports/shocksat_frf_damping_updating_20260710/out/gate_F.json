@@ -1,0 +1,27 @@
+{
+  "identical": {
+    "pass": true,
+    "frac": 1.0,
+    "frsf_abs_err": 0.0,
+    "ridge_on_diag_frac": 1.0
+  },
+  "freq_shift": {
+    "pass": true,
+    "raw_frac": 0.6878,
+    "aligned_frac": 0.9974,
+    "alignment_gain": 0.3095,
+    "rho_true_inv": 0.9524,
+    "rho_est": 0.9524
+  },
+  "amp_scale": {
+    "pass": true,
+    "frac": 1.0,
+    "frsf": 2.5,
+    "c_true": 2.5
+  },
+  "phase_flip": {
+    "pass": true,
+    "cosine_fdac_diag": -1.0
+  },
+  "pass": true
+}

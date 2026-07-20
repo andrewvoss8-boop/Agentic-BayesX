@@ -1,0 +1,850 @@
+{
+ "note": "Card D Phase-1 region diagnosis, READ-ONLY, as-received FEM vs .ash survey",
+ "n_fem_modes": 80,
+ "n_test_modes": 33,
+ "n_pairs": 33,
+ "global_mac_matched_mean": 0.6330625379808003,
+ "hard_channels": {
+  "ch4": {
+   "xyz": [
+    9.0,
+    -1.5,
+    2.3
+   ],
+   "region": "source_face",
+   "desc": "Source +X Face Center",
+   "ash_node": 11101,
+   "ash_idx": 64,
+   "map_dist_in": 1.10884207637968,
+   "node_measured_axes": [
+    true,
+    false,
+    false
+   ]
+  },
+  "ch27": {
+   "xyz": [
+    9.0,
+    7.1,
+    1.9
+   ],
+   "region": "source_face",
+   "desc": "Source +X Face +Y Edge",
+   "ash_node": 11102,
+   "ash_idx": 65,
+   "map_dist_in": 2.7440026877490475,
+   "node_measured_axes": [
+    true,
+    false,
+    false
+   ]
+  },
+  "ch38": {
+   "xyz": [
+    7.0,
+    -9.0,
+    1.75
+   ],
+   "region": "source_face",
+   "desc": "Source -Y Face +X Edge (corner)",
+   "ash_node": 11111,
+   "ash_idx": 74,
+   "map_dist_in": 1.817843090182703,
+   "node_measured_axes": [
+    false,
+    true,
+    false
+   ]
+  },
+  "ch40": {
+   "xyz": [
+    9.0,
+    -0.4,
+    10.4
+   ],
+   "region": "box_column",
+   "desc": "Steel Box Below Bulkhead",
+   "ash_node": 10101,
+   "ash_idx": 60,
+   "map_dist_in": 4.02673736422243,
+   "node_measured_axes": [
+    true,
+    false,
+    false
+   ]
+  },
+  "ch52": {
+   "xyz": [
+    9.0,
+    -0.4,
+    19.1
+   ],
+   "region": "box_column",
+   "desc": "Al Box Above Bolted Joint",
+   "ash_node": 7101,
+   "ash_idx": 35,
+   "map_dist_in": 0.41571835228192666,
+   "node_measured_axes": [
+    false,
+    false,
+    true
+   ]
+  },
+  "ch69": {
+   "xyz": [
+    9.0,
+    -0.4,
+    28.7
+   ],
+   "region": "box_column",
+   "desc": "Al Box Below Bulkhead",
+   "ash_node": 6101,
+   "ash_idx": 31,
+   "map_dist_in": 6.0053723635111895,
+   "node_measured_axes": [
+    true,
+    false,
+    false
+   ]
+  },
+  "ch92": {
+   "xyz": [
+    8.7,
+    0.0,
+    49.6
+   ],
+   "region": "strut_base",
+   "desc": "Strut Base (+X)",
+   "ash_node": 2101,
+   "ash_idx": 5,
+   "map_dist_in": 2.9289265966391187,
+   "node_measured_axes": [
+    true,
+    true,
+    true
+   ]
+  },
+  "ch98": {
+   "xyz": [
+    1.9,
+    0.0,
+    57.0
+   ],
+   "region": "dish",
+   "desc": "Dish Center",
+   "ash_node": 1101,
+   "ash_idx": 0,
+   "map_dist_in": 2.124257525300099,
+   "node_measured_axes": [
+    false,
+    false,
+    true
+   ]
+  }
+ },
+ "regions": {
+  "source_face": [
+   64,
+   65,
+   74
+  ],
+  "box_column": [
+   31,
+   35,
+   60
+  ],
+  "strut_base": [
+   5
+  ],
+  "dish": [
+   0
+  ]
+ },
+ "region_summary": {
+  "source_face": {
+   "n_modes": 26,
+   "mean_region_mac": 0.5080635298179889,
+   "median_region_mac": 0.5317587948841972,
+   "mean_global_mac": 0.6330625379808003,
+   "channels": [
+    "ch4",
+    "ch27",
+    "ch38"
+   ],
+   "worst_modes": [
+    [
+     12,
+     0.0,
+     158.2
+    ],
+    [
+     21,
+     0.002,
+     197.8
+    ],
+    [
+     16,
+     0.003,
+     174.8
+    ],
+    [
+     27,
+     0.008,
+     232.7
+    ],
+    [
+     26,
+     0.009,
+     230.7
+    ]
+   ]
+  },
+  "box_column": {
+   "n_modes": 26,
+   "mean_region_mac": 0.7111522761512975,
+   "median_region_mac": 0.7562273319981143,
+   "mean_global_mac": 0.6330625379808003,
+   "channels": [
+    "ch40",
+    "ch52",
+    "ch69"
+   ],
+   "worst_modes": [
+    [
+     26,
+     0.014,
+     230.7
+    ],
+    [
+     22,
+     0.075,
+     198.9
+    ],
+    [
+     21,
+     0.103,
+     197.8
+    ],
+    [
+     19,
+     0.351,
+     190.2
+    ],
+    [
+     27,
+     0.438,
+     232.7
+    ]
+   ]
+  },
+  "strut_base": {
+   "n_modes": 26,
+   "mean_region_mac": 0.4776147306317711,
+   "median_region_mac": 0.39175967583159493,
+   "mean_global_mac": 0.6330625379808003,
+   "channels": [
+    "ch92"
+   ],
+   "worst_modes": [
+    [
+     18,
+     0.0,
+     188.6
+    ],
+    [
+     25,
+     0.003,
+     222.2
+    ],
+    [
+     13,
+     0.013,
+     165.9
+    ],
+    [
+     26,
+     0.04,
+     230.7
+    ],
+    [
+     29,
+     0.046,
+     235.3
+    ]
+   ]
+  },
+  "dish": {
+   "n_modes": 0,
+   "mean_region_mac": null,
+   "median_region_mac": null,
+   "mean_global_mac": 0.6330625379808003,
+   "channels": [
+    "ch98"
+   ],
+   "worst_modes": []
+  }
+ },
+ "mode_table": [
+  {
+   "test_mode": 1,
+   "fem_mode": 1,
+   "f_test_hz": 54.19093322753906,
+   "f_fem_hz": 54.59582286708967,
+   "mac_global": 0.969632762888019,
+   "mac_pairing": 0.969632762888019,
+   "df_pct": 0.7471538418623247,
+   "mac_source_face": 0.9904737392252925,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9998230912576866,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.4754106212552748,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 2,
+   "fem_mode": 3,
+   "f_test_hz": 69.98299407958984,
+   "f_fem_hz": 73.74112109428322,
+   "mac_global": 0.4972585553190056,
+   "mac_pairing": 0.49725855531900576,
+   "df_pct": 5.370057489137081,
+   "mac_source_face": 0.8273730014022863,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9982898898544803,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.841672581313156,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 3,
+   "fem_mode": 2,
+   "f_test_hz": 74.98583984375,
+   "f_fem_hz": 73.14159807864695,
+   "mac_global": 0.5121832591823893,
+   "mac_pairing": 0.5121832591823893,
+   "df_pct": -2.4594533700575294,
+   "mac_source_face": 0.223437975010716,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.6074042464375667,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.2047622504211419,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 4,
+   "fem_mode": 4,
+   "f_test_hz": 85.77835845947266,
+   "f_fem_hz": 88.04974633958228,
+   "mac_global": 0.8825527023121791,
+   "mac_pairing": 0.8825527023121793,
+   "df_pct": 2.6479731262085027,
+   "mac_source_face": 0.9576973613986014,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9286465984721453,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.2057230719531349,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 5,
+   "fem_mode": 5,
+   "f_test_hz": 107.02578735351562,
+   "f_fem_hz": 104.73522049307986,
+   "mac_global": 0.9750399996013231,
+   "mac_pairing": 0.9750399996013228,
+   "df_pct": -2.1402008965090036,
+   "mac_source_face": 0.9047495068193667,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.925981320463523,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.0642583221884713,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 6,
+   "fem_mode": 8,
+   "f_test_hz": 117.62918853759766,
+   "f_fem_hz": 122.23171202764327,
+   "mac_global": 0.8994173243682286,
+   "mac_pairing": 0.8994173243682284,
+   "df_pct": 3.912739301584578,
+   "mac_source_face": 0.9373834037246968,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.5907335132423245,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.9988226152794348,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 7,
+   "fem_mode": 6,
+   "f_test_hz": 118.53285217285156,
+   "f_fem_hz": 113.80240078523099,
+   "mac_global": 0.9581277209335901,
+   "mac_pairing": 0.9581277209335908,
+   "df_pct": -3.9908357058027755,
+   "mac_source_face": 0.9375197232546741,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9918219073748417,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.1895015876123534,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 8,
+   "fem_mode": 7,
+   "f_test_hz": 125.03355407714844,
+   "f_fem_hz": 117.3488096332901,
+   "mac_global": 0.7037711993723748,
+   "mac_pairing": 0.7037711993723752,
+   "df_pct": -6.146145729102992,
+   "mac_source_face": 0.936407298601896,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.7677065726871645,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.967970411390456,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 9,
+   "fem_mode": 9,
+   "f_test_hz": 137.24539184570312,
+   "f_fem_hz": 124.38298035946832,
+   "mac_global": 0.4251137019115141,
+   "mac_pairing": 0.4251137019115141,
+   "df_pct": -9.371834866918704,
+   "mac_source_face": 0.9705152982321501,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.5023507953039181,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.8905516734572262,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 10,
+   "fem_mode": 14,
+   "f_test_hz": 142.44189453125,
+   "f_fem_hz": 151.90081784616976,
+   "mac_global": 0.5593794348866914,
+   "mac_pairing": 0.5593794348866915,
+   "df_pct": 6.640548657434908,
+   "mac_source_face": 0.9957313907601008,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.486085654172303,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.9887578846744908,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 11,
+   "fem_mode": 15,
+   "f_test_hz": 151.18670654296875,
+   "f_fem_hz": 152.19788069073175,
+   "mac_global": 0.6101679228278837,
+   "mac_pairing": 0.6101679228278843,
+   "df_pct": 0.6688247736090558,
+   "mac_source_face": 0.9549798750812696,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.7077448864861238,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.8153399786932435,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 12,
+   "fem_mode": 13,
+   "f_test_hz": 158.1749267578125,
+   "f_fem_hz": 146.60314976288592,
+   "mac_global": 0.5806611733901278,
+   "mac_pairing": 0.5806611733901282,
+   "df_pct": -7.315809927729289,
+   "mac_source_face": 0.00024958423670337935,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9950214959627242,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.08888422409739774,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 13,
+   "fem_mode": 16,
+   "f_test_hz": 165.8802490234375,
+   "f_fem_hz": 160.6055286751589,
+   "mac_global": 0.75517214686585,
+   "mac_pairing": 0.7551721468658498,
+   "df_pct": -3.1798362851103046,
+   "mac_source_face": 0.015671955312577018,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9934154819201758,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.013016799606913222,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 14,
+   "fem_mode": 20,
+   "f_test_hz": 167.98768615722656,
+   "f_fem_hz": 183.88153477203318,
+   "mac_global": 0.7033370267449498,
+   "mac_pairing": 0.7033370267449498,
+   "df_pct": 9.461317658682965,
+   "mac_source_face": 0.9215042757507641,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.6935123292841913,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.44950875576984733,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 15,
+   "fem_mode": 21,
+   "f_test_hz": 172.25955200195312,
+   "f_fem_hz": 185.17947646770327,
+   "mac_global": 0.7368848420657955,
+   "mac_pairing": 0.7368848420657955,
+   "df_pct": 7.500265915938087,
+   "mac_source_face": 0.6880718247832562,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.7447480913090642,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.33401059589334253,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 16,
+   "fem_mode": 18,
+   "f_test_hz": 174.77488708496094,
+   "f_fem_hz": 168.87410312655769,
+   "mac_global": 0.6387982590922168,
+   "mac_pairing": 0.638798259092216,
+   "df_pct": -3.376219579838602,
+   "mac_source_face": 0.002579851692494814,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9955452250052307,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.7945325923753604,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 17,
+   "fem_mode": 19,
+   "f_test_hz": 184.36175537109375,
+   "f_fem_hz": 183.5526064820397,
+   "mac_global": 0.8889886824242005,
+   "mac_pairing": 0.8889886824241999,
+   "df_pct": -0.4388919423257587,
+   "mac_source_face": 0.06504475402649094,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9937560911454496,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.28137264632940057,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 18,
+   "fem_mode": 22,
+   "f_test_hz": 188.63681030273438,
+   "f_fem_hz": 190.35526225328056,
+   "mac_global": 0.6901770453760422,
+   "mac_pairing": 0.6901770453760421,
+   "df_pct": 0.9109844191005578,
+   "mac_source_face": 0.21872581672880645,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.6078505867428412,
+   "ndof_box_column": 3,
+   "mac_strut_base": 7.266549764340624e-05,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 19,
+   "fem_mode": 26,
+   "f_test_hz": 190.21951293945312,
+   "f_fem_hz": 193.6642197929586,
+   "mac_global": 0.34029499468539237,
+   "mac_pairing": 0.34029499468539237,
+   "df_pct": 1.810911404552873,
+   "mac_source_face": 0.2711808580837653,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.35064220555655806,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.8741146943457735,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 20,
+   "fem_mode": 24,
+   "f_test_hz": 195.72291564941406,
+   "f_fem_hz": 192.5915717639397,
+   "mac_global": 0.39079147275402,
+   "mac_pairing": 0.3907914727540199,
+   "df_pct": -1.5998861835286315,
+   "mac_source_face": 0.3754457649851381,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9937675355295356,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.614937747263236,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 21,
+   "fem_mode": 27,
+   "f_test_hz": 197.81544494628906,
+   "f_fem_hz": 196.8996125592786,
+   "mac_global": 0.6605223513925931,
+   "mac_pairing": 0.6605223513925931,
+   "df_pct": -0.4629731451248009,
+   "mac_source_face": 0.0019887242467429155,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.1027839616726908,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.9907284780266061,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 22,
+   "fem_mode": 25,
+   "f_test_hz": 198.8568115234375,
+   "f_fem_hz": 192.90221684057698,
+   "mac_global": 0.3874887530103638,
+   "mac_pairing": 0.3874887530103639,
+   "df_pct": -2.994413234951576,
+   "mac_source_face": 0.8473837130437737,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.0747875179106066,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.993972705472052,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 23,
+   "fem_mode": 23,
+   "f_test_hz": 203.01429748535156,
+   "f_fem_hz": 191.55556575430316,
+   "mac_global": 0.2823487174561584,
+   "mac_pairing": 0.28234871745615836,
+   "df_pct": -5.644297900681206,
+   "mac_source_face": 0.02074971788727061,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9981453913113415,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.1692784719366681,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 24,
+   "fem_mode": 34,
+   "f_test_hz": 213.9134979248047,
+   "f_fem_hz": 247.50308067014424,
+   "mac_global": 0.03506834245976705,
+   "mac_pairing": 0.03506834245976705,
+   "df_pct": 15.702413859431651,
+   "mac_source_face": 0.91207732627115,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.09676574347377871,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.783940087341842,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 25,
+   "fem_mode": 28,
+   "f_test_hz": 222.17300415039062,
+   "f_fem_hz": 211.69812847588233,
+   "mac_global": 0.6204383411307818,
+   "mac_pairing": 0.6204383411307818,
+   "df_pct": -4.714738280001729,
+   "mac_source_face": 0.13213253885121098,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9928747401624956,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.002919489151426005,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 26,
+   "fem_mode": 41,
+   "f_test_hz": 230.70750427246094,
+   "f_fem_hz": 265.0866521399032,
+   "mac_global": 0.4274400895934409,
+   "mac_pairing": 0.427440089593441,
+   "df_pct": 14.901616649123461,
+   "mac_source_face": 0.009171956637115423,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.014082039299358994,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.03970827001087036,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 27,
+   "fem_mode": 33,
+   "f_test_hz": 232.66650390625,
+   "f_fem_hz": 246.11661424068075,
+   "mac_global": 0.30414349216159925,
+   "mac_pairing": 0.3041434921615993,
+   "df_pct": 5.780853757896454,
+   "mac_source_face": 0.008173547299397755,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.43777371836964285,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.2512579848500268,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 28,
+   "fem_mode": 32,
+   "f_test_hz": 234.22007751464844,
+   "f_fem_hz": 234.40729036219707,
+   "mac_global": 0.08756470496222422,
+   "mac_pairing": 0.08756470496222415,
+   "df_pct": 0.07993031576762899,
+   "mac_source_face": 0.786347605484105,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.48196284316378357,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.0023919120144327627,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 29,
+   "fem_mode": 35,
+   "f_test_hz": 235.30722045898438,
+   "f_fem_hz": 249.36420404847942,
+   "mac_global": 0.34184273321023634,
+   "mac_pairing": 0.3418427332102363,
+   "df_pct": 5.973885358076081,
+   "mac_source_face": 0.016058036078423557,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9928096843110898,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.04617434949777047,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 30,
+   "fem_mode": 39,
+   "f_test_hz": 236.1028289794922,
+   "f_fem_hz": 258.3073075382102,
+   "mac_global": 0.2037214691798652,
+   "mac_pairing": 0.2037214691798652,
+   "df_pct": 9.404579629431996,
+   "mac_source_face": 0.5817782006990448,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.3039713475458425,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.9032069587454616,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 31,
+   "fem_mode": 38,
+   "f_test_hz": 243.9352569580078,
+   "f_fem_hz": 254.73025591126404,
+   "mac_global": 0.19653336652683479,
+   "mac_pairing": 0.19653336652683484,
+   "df_pct": 4.4253541238257865,
+   "mac_source_face": 0.4112096408171593,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9672726202954335,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.23762912668631425,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 32,
+   "fem_mode": 31,
+   "f_test_hz": 254.23150634765625,
+   "f_fem_hz": 233.6770377470299,
+   "mac_global": 0.24504457946399757,
+   "mac_pairing": 0.2450445794639976,
+   "df_pct": -8.084941514887822,
+   "mac_source_face": 0.9849235927205622,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.45212175354148976,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.2355606697943463,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  },
+  {
+   "test_mode": 33,
+   "fem_mode": 50,
+   "f_test_hz": 256.7855224609375,
+   "f_fem_hz": 286.5379354498585,
+   "mac_global": 0.1667314804484527,
+   "mac_pairing": 0.16673148044845262,
+   "df_pct": 11.586483810997162,
+   "mac_source_face": 0.8485924740693666,
+   "ndof_source_face": 3,
+   "mac_box_column": 0.9628351702900634,
+   "ndof_box_column": 3,
+   "mac_strut_base": 0.02795502870894176,
+   "ndof_strut_base": 3,
+   "mac_dish": NaN,
+   "ndof_dish": 1
+  }
+ ]
+}

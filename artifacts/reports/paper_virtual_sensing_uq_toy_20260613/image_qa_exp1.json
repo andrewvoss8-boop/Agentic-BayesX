@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "failures": [],
+  "n_figures": 2,
+  "figures": [
+    {
+      "file": "exp1_masked_prediction.png",
+      "w": 1615,
+      "h": 1292,
+      "bytes": 273418,
+      "pass": true
+    },
+    {
+      "file": "exp1_qoi_coverage.png",
+      "w": 1462,
+      "h": 884,
+      "bytes": 43636,
+      "pass": true
+    }
+  ]
+}

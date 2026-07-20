@@ -1,0 +1,45 @@
+{
+ "cid": "rnd031",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 601,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": -5.9513124171175535,
+    "side": "lo"
+   },
+   "name": "rsplit32"
+  },
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    2032417,
+    5000901,
+    2032432,
+    8000058,
+    9000082,
+    6001321,
+    1024309,
+    7004353,
+    7004397,
+    4000139,
+    6001322,
+    8000057,
+    2032423,
+    9000096,
+    1024304
+   ],
+   "k_trans": 6224850.188541796,
+   "k_rot": 26923.90452430436,
+   "name": "rconn32"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)",
+ "split_info": {
+  "rsplit32": 327
+ }
+}

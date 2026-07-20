@@ -1,0 +1,6 @@
+B modal+amplitude: 24 modes, observe 48 ch, hold out 32; CONVERGED=False R-hat 55.793 ESS 2 div 174
+  per-mode eta median range [0.015712352606366508, 0.027610700888090495] (nominal 0.02); sigma_a 3.17
+  held-out PEAK: cover 0.34 IS 1.97e+03 z-std 15.77 width 28.6 dB
+  held-out BAND: cover 0.31 IS 5.24e+03 width 28.9 dB
+  runtime 3620s
+B DONE

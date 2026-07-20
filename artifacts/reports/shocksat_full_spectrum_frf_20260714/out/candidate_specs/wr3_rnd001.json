@@ -1,0 +1,39 @@
+{
+ "cid": "wr3_rnd001",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 102,
+   "rule": {
+    "type": "near_points",
+    "points": [
+     [
+      0.7499985,
+      -8.93748,
+      17.18747
+     ],
+     [
+      -8.93748,
+      -1.75,
+      41.49992
+     ],
+     [
+      0.1736479,
+      0.9848063,
+      57.74989
+     ],
+     [
+      -1.667e-07,
+      8.90623,
+      45.87574
+     ]
+    ],
+    "radius": 1.779741278500376
+   },
+   "name": "rsplit2"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

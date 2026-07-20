@@ -1,0 +1,51 @@
+{
+ "cid": "ma1_conn_rbe3tbox2",
+ "track": "agent",
+ "round": 1,
+ "cls": "connectivity",
+ "ops": [
+  "rbe3_convert"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.12563223266142898,
+ "exact_b200_500": 0.16346688991180966,
+ "exact_folds": {
+  "m_xpos_990x": 0.2758695293006379,
+  "m_zpos_990z": 0.429754919587793,
+  "m_ypos_990y": 0.06767427460244378,
+  "m_zpos_900z": -0.27076979284515873
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.11702977019123939,
+  "m_zpos_990z": 0.13328287576068404,
+  "m_ypos_990y": 0.17595714266121942,
+  "m_zpos_900z": 0.2275977710340958
+ },
+ "theta_map": [
+  1.0341331454372915,
+  1.0947784692756475,
+  0.9683908882798506,
+  0.9845949027913338,
+  1.8742550863905247,
+  0.7931208564348268,
+  1.3998283773994675,
+  1.1288073201165323,
+  0.8863298902305661
+ ],
+ "enriched_pkg": "ma1_conn_rbe3tbox2__xenr",
+ "spot_max_pct": 1.2172415297939665e-07,
+ "n_dof": 400140,
+ "delta_dof_pct": 0.158,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 9.7272,
+  "pass": true
+ },
+ "solve_s_theta1": 462.5,
+ "solve_s_enrich": 468.7,
+ "wall_s": 961.9,
+ "ts": "2026-07-16T20:29:51",
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Box carries 0.392 of survey-shape residual energy and its 168/172 Hz pairs are +7.4/+5.7% too stiff; REPLACEMENT for ma1_conn_rbe3tbox (dud: single-leg spiders are singular for RBE3) - convert the multi-leg (>=3) Top_Box wall spiders to interpolation constraints"
+}

@@ -1,0 +1,367 @@
+{
+  "base9": {
+    "n_params": 9,
+    "params": [
+      {
+        "name": "al_welds",
+        "pids": [
+          "shell_204",
+          "shell_205",
+          "shell_206"
+        ]
+      },
+      {
+        "name": "angle_brackets",
+        "pids": [
+          "shell_301",
+          "shell_302"
+        ]
+      },
+      {
+        "name": "bottom_box",
+        "pids": [
+          "shell_101",
+          "shell_102",
+          "shell_103"
+        ]
+      },
+      {
+        "name": "contact",
+        "pids": [
+          "bush_902"
+        ]
+      },
+      {
+        "name": "cross_beam",
+        "pids": [
+          "shell_401"
+        ]
+      },
+      {
+        "name": "joints",
+        "pids": [
+          "bush_801",
+          "bush_802",
+          "bush_803",
+          "bush_804",
+          "bush_805",
+          "bush_806",
+          "bush_807"
+        ]
+      },
+      {
+        "name": "plates",
+        "pids": [
+          "shell_501",
+          "shell_601",
+          "shell_701"
+        ]
+      },
+      {
+        "name": "steel_welds",
+        "pids": [
+          "shell_104",
+          "shell_105",
+          "shell_106"
+        ]
+      },
+      {
+        "name": "top_box",
+        "pids": [
+          "shell_201",
+          "shell_202",
+          "shell_203"
+        ]
+      }
+    ]
+  },
+  "box_split": {
+    "n_params": 13,
+    "params": [
+      {
+        "name": "al_welds",
+        "pids": [
+          "shell_204",
+          "shell_205",
+          "shell_206"
+        ]
+      },
+      {
+        "name": "angle_brackets",
+        "pids": [
+          "shell_301",
+          "shell_302"
+        ]
+      },
+      {
+        "name": "bottom_box:shell_101",
+        "pids": [
+          "shell_101"
+        ]
+      },
+      {
+        "name": "bottom_box:shell_102",
+        "pids": [
+          "shell_102"
+        ]
+      },
+      {
+        "name": "bottom_box:shell_103",
+        "pids": [
+          "shell_103"
+        ]
+      },
+      {
+        "name": "contact",
+        "pids": [
+          "bush_902"
+        ]
+      },
+      {
+        "name": "cross_beam",
+        "pids": [
+          "shell_401"
+        ]
+      },
+      {
+        "name": "joints",
+        "pids": [
+          "bush_801",
+          "bush_802",
+          "bush_803",
+          "bush_804",
+          "bush_805",
+          "bush_806",
+          "bush_807"
+        ]
+      },
+      {
+        "name": "plates",
+        "pids": [
+          "shell_501",
+          "shell_601",
+          "shell_701"
+        ]
+      },
+      {
+        "name": "steel_welds",
+        "pids": [
+          "shell_104",
+          "shell_105",
+          "shell_106"
+        ]
+      },
+      {
+        "name": "top_box:shell_201",
+        "pids": [
+          "shell_201"
+        ]
+      },
+      {
+        "name": "top_box:shell_202",
+        "pids": [
+          "shell_202"
+        ]
+      },
+      {
+        "name": "top_box:shell_203",
+        "pids": [
+          "shell_203"
+        ]
+      }
+    ]
+  },
+  "joint_split": {
+    "n_params": 10,
+    "params": [
+      {
+        "name": "al_welds",
+        "pids": [
+          "shell_204",
+          "shell_205",
+          "shell_206"
+        ]
+      },
+      {
+        "name": "angle_brackets",
+        "pids": [
+          "shell_301",
+          "shell_302"
+        ]
+      },
+      {
+        "name": "bottom_box",
+        "pids": [
+          "shell_101",
+          "shell_102",
+          "shell_103"
+        ]
+      },
+      {
+        "name": "contact",
+        "pids": [
+          "bush_902"
+        ]
+      },
+      {
+        "name": "cross_beam",
+        "pids": [
+          "shell_401"
+        ]
+      },
+      {
+        "name": "joint_bolted_801",
+        "pids": [
+          "bush_801"
+        ]
+      },
+      {
+        "name": "joints_rest",
+        "pids": [
+          "bush_802",
+          "bush_803",
+          "bush_804",
+          "bush_805",
+          "bush_806",
+          "bush_807"
+        ]
+      },
+      {
+        "name": "plates",
+        "pids": [
+          "shell_501",
+          "shell_601",
+          "shell_701"
+        ]
+      },
+      {
+        "name": "steel_welds",
+        "pids": [
+          "shell_104",
+          "shell_105",
+          "shell_106"
+        ]
+      },
+      {
+        "name": "top_box",
+        "pids": [
+          "shell_201",
+          "shell_202",
+          "shell_203"
+        ]
+      }
+    ]
+  },
+  "full_rich": {
+    "n_params": 16,
+    "params": [
+      {
+        "name": "al_welds",
+        "pids": [
+          "shell_204",
+          "shell_205",
+          "shell_206"
+        ]
+      },
+      {
+        "name": "angle_brackets",
+        "pids": [
+          "shell_301",
+          "shell_302"
+        ]
+      },
+      {
+        "name": "bottom_box:shell_101",
+        "pids": [
+          "shell_101"
+        ]
+      },
+      {
+        "name": "bottom_box:shell_102",
+        "pids": [
+          "shell_102"
+        ]
+      },
+      {
+        "name": "bottom_box:shell_103",
+        "pids": [
+          "shell_103"
+        ]
+      },
+      {
+        "name": "contact",
+        "pids": [
+          "bush_902"
+        ]
+      },
+      {
+        "name": "cross_beam",
+        "pids": [
+          "shell_401"
+        ]
+      },
+      {
+        "name": "joint_bolted_801",
+        "pids": [
+          "bush_801"
+        ]
+      },
+      {
+        "name": "joints_rest",
+        "pids": [
+          "bush_802",
+          "bush_803",
+          "bush_804",
+          "bush_805",
+          "bush_806",
+          "bush_807"
+        ]
+      },
+      {
+        "name": "plates:shell_501",
+        "pids": [
+          "shell_501"
+        ]
+      },
+      {
+        "name": "plates:shell_601",
+        "pids": [
+          "shell_601"
+        ]
+      },
+      {
+        "name": "plates:shell_701",
+        "pids": [
+          "shell_701"
+        ]
+      },
+      {
+        "name": "steel_welds",
+        "pids": [
+          "shell_104",
+          "shell_105",
+          "shell_106"
+        ]
+      },
+      {
+        "name": "top_box:shell_201",
+        "pids": [
+          "shell_201"
+        ]
+      },
+      {
+        "name": "top_box:shell_202",
+        "pids": [
+          "shell_202"
+        ]
+      },
+      {
+        "name": "top_box:shell_203",
+        "pids": [
+          "shell_203"
+        ]
+      }
+    ]
+  },
+  "rationale": "box_split/full_rich split the two highest-SE substructures (steel+Al boxes) and the dish plates per-shell so the update can change LOCAL interface kinematics (not just whole-group level); joint_split pulls the steel<->Al bolted joint (CBUSH 801) out of the 7-bush joints group. Hard channels: box column ch40/52/69, source face ch4/27/38, bolted joint ch52, dish ch98."
+}

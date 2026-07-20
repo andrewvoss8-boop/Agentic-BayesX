@@ -1,0 +1,37 @@
+{
+  "prior_widths": [
+    0.15,
+    0.25,
+    0.4
+  ],
+  "ranking_per_width": {
+    "0.15": [
+      "M0_fixed_thetaMAP",
+      "M4_corr_discrepancy",
+      "M1_joint_split",
+      "M0_base9",
+      "M1_box_split",
+      "M1_full_rich"
+    ],
+    "0.25": [
+      "M0_fixed_thetaMAP",
+      "M4_corr_discrepancy",
+      "M1_joint_split",
+      "M0_base9",
+      "M1_box_split",
+      "M1_full_rich"
+    ],
+    "0.40": [
+      "M0_fixed_thetaMAP",
+      "M4_corr_discrepancy",
+      "M1_joint_split",
+      "M0_base9",
+      "M1_box_split",
+      "M1_full_rich"
+    ]
+  },
+  "ranking_flips": false,
+  "top_model_flips": false,
+  "headline_winner": "M0_fixed_thetaMAP",
+  "note": "ranking_flips = full order changes with prior width (Kiran \u00a75 prior-sensitivity); top_model_flips = the BEST class changes (the decision-relevant flip)."
+}

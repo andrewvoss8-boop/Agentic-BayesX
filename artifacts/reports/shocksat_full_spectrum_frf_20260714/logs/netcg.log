@@ -1,0 +1,3 @@
+shear_x {"tiers_netcg": {"width_ratio": 6.846, "coverage": 0.746, "widen_audit": 1.0}, "tiers_updated": {"width_ratio": 8.225, "coverage": 0.785, "widen_audit": 1.0}, "delivered_reference": 1.51}
+shear_y {"tiers_netcg": {"width_ratio": 3.631, "coverage": 0.979, "widen_audit": 1.226}, "tiers_updated": {"width_ratio": 3.66, "coverage": 0.98, "widen_audit": 1.225}, "delivered_reference": 2.3}
+normal_z {"tiers_netcg": {"width_ratio": 5.111, "coverage": 0.765, "widen_audit": 1.003}, "tiers_updated": {"width_ratio": 5.117, "coverage": 0.765, "widen_audit": 1.003}, "delivered_reference": 2.53}

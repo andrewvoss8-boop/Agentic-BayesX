@@ -1,0 +1,838 @@
+[kmlo] build...
+variant TAG=kmlo overrides={'k_mount': 1000000.0}
+{
+ "sanity": {
+  "mass_parts": {
+   "barrel": 296.8720275580919,
+   "dome_q": 360.2721359320383,
+   "dome_t": 0.9525915711484889,
+   "tray": 12.3444,
+   "ring": 75.99923905487138,
+   "struts": 0.6313208795937884,
+   "avionics": 8.0,
+   "copv": 30.0
+  },
+  "mass_total_kg": 785.0717149957437,
+  "mass_Mx_kg": 100785.07171499572,
+  "rigid_resid_trans": 1.9193553351112558e-16,
+  "rigid_resid_rot": 8.285556822561013e-17,
+  "ndof": 58662,
+  "n_nodes": 9777,
+  "n_quads": 9504,
+  "n_tris": 240,
+  "strut_info": [
+   {
+    "n_tray": 9678,
+    "n_dome": 8151,
+    "L": 0.33908286256731784,
+    "k_eff": 4113094.7653453667,
+    "ex": [
+     -0.486520902972948,
+     -0.5376651833981734,
+     -0.6886316588218957
+    ]
+   },
+   {
+    "n_tray": 9704,
+    "n_dome": 7929,
+    "L": 0.33908286256731796,
+    "k_eff": 4113094.7653453667,
+    "ex": [
+     -0.48652090297294814,
+     0.5376651833981737,
+     -0.6886316588218955
+    ]
+   },
+   {
+    "n_tray": 9617,
+    "n_dome": 6955,
+    "L": 0.340939265183663,
+    "k_eff": 4109104.3260129187,
+    "ex": [
+     0.12165982540491112,
+     0.12416903575000586,
+     -0.9847745617365227
+    ]
+   },
+   {
+    "n_tray": 9618,
+    "n_dome": 7428,
+    "L": 0.33799042204106133,
+    "k_eff": 4115446.6507230974,
+    "ex": [
+     -0.5574636320620077,
+     -0.5126318665835292,
+     -0.6530259323268266
+    ]
+   },
+   {
+    "n_tray": 9748,
+    "n_dome": 7212,
+    "L": 0.3379904220410611,
+    "k_eff": 4115446.650723098,
+    "ex": [
+     -0.557463632062008,
+     0.5126318665835286,
+     -0.653025932326827
+    ]
+   },
+   {
+    "n_tray": 9747,
+    "n_dome": 6725,
+    "L": 0.340939265183663,
+    "k_eff": 4109104.3260129187,
+    "ex": [
+     0.12165982540491112,
+     -0.12416903575000628,
+     -0.9847745617365227
+    ]
+   }
+  ],
+  "strut_inclination_deg": [
+   56.408766021201735,
+   56.408766021201714,
+   55.94931464062057,
+   56.36420247801573,
+   56.364202478015784,
+   55.94931464062057
+  ],
+  "strut_inclination_min_deg": 55.94931464062057
+ },
+ "runtime_s": 3.0585122108459473
+}
+[kmlo] solve modes...
+window 0: sigma_f=5.0 Hz k=250
+  window done in 92s: +250 new (total 250), span 7.2-279.1 Hz
+window 1: sigma_f=279.1 Hz k=250
+  window done in 79s: +143 new (total 393), span 225.3-327.0 Hz
+window 2: sigma_f=327.0 Hz k=250
+  window done in 68s: +132 new (total 525), span 292.3-358.4 Hz
+window 3: sigma_f=358.4 Hz k=250
+  window done in 80s: +109 new (total 634), span 325.7-388.5 Hz
+window 4: sigma_f=388.5 Hz k=250
+  window done in 84s: +112 new (total 746), span 351.6-422.5 Hz
+window 5: sigma_f=422.5 Hz k=250
+  window done in 83s: +108 new (total 854), span 384.4-457.6 Hz
+window 6: sigma_f=457.6 Hz k=250
+  window done in 70s: +132 new (total 986), span 419.2-492.8 Hz
+window 7: sigma_f=492.8 Hz k=250
+  window done in 83s: +97 new (total 1083), span 453.7-528.3 Hz
+window 8: sigma_f=528.3 Hz k=250
+  window done in 84s: +135 new (total 1218), span 488.4-565.4 Hz
+window 9: sigma_f=565.4 Hz k=250
+  window done in 74s: +113 new (total 1331), span 529.6-599.2 Hz
+window 10: sigma_f=599.2 Hz k=250
+  window done in 87s: +111 new (total 1442), span 560.3-635.7 Hz
+window 11: sigma_f=635.7 Hz k=250
+  window done in 89s: +111 new (total 1553), span 592.1-675.4 Hz
+window 12: sigma_f=675.4 Hz k=250
+  window done in 77s: +135 new (total 1688), span 635.6-712.9 Hz
+window 13: sigma_f=712.9 Hz k=250
+  window done in 78s: +103 new (total 1791), span 672.3-751.4 Hz
+window 14: sigma_f=751.4 Hz k=250
+  window done in 92s: +112 new (total 1903), span 706.5-793.8 Hz
+window 15: sigma_f=793.8 Hz k=250
+  window done in 77s: +109 new (total 2012), span 743.3-841.2 Hz
+{"bc": "bcA_kmlo", "n_modes": 2012, "n_below_400": 672, "n_below_820": 1961, "fmax": 841.1931640361857, "runtime_s": 1295.6881189346313}
+[kmlo] qoi sweep...
+{
+ "bc": "bcA_kmlo",
+ "n_modes_used": 1961,
+ "fmax_mode": 819.1693557493344,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 423.90311193466187
+}
+headline RMS (N / m/s^2):
+           strut_1_F     28.316
+           strut_2_F     33.532
+           strut_3_F     25.394
+           strut_4_F     27.146
+           strut_5_F     36.333
+           strut_6_F     28.365
+         tray_net_Fx     40.009
+         tray_net_Fy     42.147
+         tray_net_Fz     39.259
+      tray_net_punch     44.304
+         tray_net_Mx      8.335
+         tray_net_My      7.786
+         tray_net_Mz      6.581
+      copv_mount1_Fx     14.854
+      copv_mount1_Fy     10.582
+      copv_mount1_Fz     12.710
+      copv_mount2_Fx     14.864
+      copv_mount2_Fy     10.584
+      copv_mount2_Fz     12.687
+         copv_net_Fx     28.542
+         copv_net_Fy     21.154
+         copv_net_Fz     19.029
+      copv_net_punch     17.039
+            av_acc_x      2.840
+            av_acc_y      2.834
+            av_acc_z      3.450
+[kmlo] done in 1724s
+[kmhi] solve modes...
+window 0: sigma_f=5.0 Hz k=250
+  window done in 91s: +250 new (total 250), span 0.0-279.1 Hz
+window 1: sigma_f=279.1 Hz k=250
+  window done in 79s: +143 new (total 393), span 225.3-327.0 Hz
+window 2: sigma_f=327.0 Hz k=250
+  window done in 66s: +132 new (total 525), span 292.4-358.6 Hz
+window 3: sigma_f=358.6 Hz k=250
+  window done in 79s: +110 new (total 635), span 325.9-388.7 Hz
+window 4: sigma_f=388.7 Hz k=250
+  window done in 79s: +110 new (total 745), span 351.3-422.4 Hz
+window 5: sigma_f=422.4 Hz k=250
+  window done in 80s: +108 new (total 853), span 384.1-457.4 Hz
+window 6: sigma_f=457.4 Hz k=250
+  window done in 68s: +134 new (total 987), span 419.0-492.5 Hz
+window 7: sigma_f=492.5 Hz k=250
+  window done in 82s: +98 new (total 1085), span 453.9-528.3 Hz
+window 8: sigma_f=528.3 Hz k=250
+  window done in 82s: +134 new (total 1219), span 488.1-565.3 Hz
+window 9: sigma_f=565.3 Hz k=250
+  window done in 71s: +115 new (total 1334), span 529.8-599.2 Hz
+window 10: sigma_f=599.2 Hz k=250
+  window done in 84s: +111 new (total 1445), span 560.2-635.9 Hz
+window 11: sigma_f=635.9 Hz k=250
+  window done in 84s: +110 new (total 1555), span 592.1-675.4 Hz
+window 12: sigma_f=675.4 Hz k=250
+  window done in 74s: +135 new (total 1690), span 635.6-712.9 Hz
+window 13: sigma_f=712.9 Hz k=250
+  window done in 74s: +103 new (total 1793), span 672.3-751.4 Hz
+window 14: sigma_f=751.4 Hz k=250
+  window done in 87s: +112 new (total 1905), span 706.5-794.2 Hz
+window 15: sigma_f=794.2 Hz k=250
+  window done in 86s: +109 new (total 2014), span 743.2-841.2 Hz
+{"bc": "bcA_kmhi", "n_modes": 2014, "n_below_400": 672, "n_below_820": 1964, "fmax": 841.1930140640111, "runtime_s": 1266.7978761196136}
+[kmhi] qoi sweep...
+{
+ "bc": "bcA_kmhi",
+ "n_modes_used": 1964,
+ "fmax_mode": 819.3373149165012,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 419.9900059700012
+}
+headline RMS (N / m/s^2):
+           strut_1_F     28.297
+           strut_2_F     33.528
+           strut_3_F     25.257
+           strut_4_F     27.032
+           strut_5_F     36.170
+           strut_6_F     28.242
+         tray_net_Fx     39.859
+         tray_net_Fy     42.150
+         tray_net_Fz     39.353
+      tray_net_punch     44.440
+         tray_net_Mx      8.337
+         tray_net_My      7.795
+         tray_net_Mz      6.570
+      copv_mount1_Fx     12.468
+      copv_mount1_Fy      2.571
+      copv_mount1_Fz     22.678
+      copv_mount2_Fx     12.385
+      copv_mount2_Fy      2.575
+      copv_mount2_Fz     22.465
+         copv_net_Fx     24.282
+         copv_net_Fy      4.521
+         copv_net_Fz     43.837
+      copv_net_punch     48.321
+            av_acc_x      2.833
+            av_acc_y      2.839
+            av_acc_z      3.479
+[kmhi] done in 1688s
+[kjlo] solve modes...
+window 0: sigma_f=5.0 Hz k=250
+  window done in 92s: +250 new (total 250), span 0.0-279.1 Hz
+window 1: sigma_f=279.1 Hz k=250
+  window done in 79s: +143 new (total 393), span 225.3-326.6 Hz
+window 2: sigma_f=326.6 Hz k=250
+  window done in 66s: +134 new (total 527), span 292.4-357.7 Hz
+window 3: sigma_f=357.7 Hz k=250
+  window done in 80s: +108 new (total 635), span 324.3-388.0 Hz
+window 4: sigma_f=388.0 Hz k=250
+  window done in 81s: +111 new (total 746), span 351.1-420.9 Hz
+window 5: sigma_f=420.9 Hz k=250
+  window done in 82s: +105 new (total 851), span 382.7-455.7 Hz
+window 6: sigma_f=455.7 Hz k=250
+  window done in 69s: +135 new (total 986), span 417.6-491.1 Hz
+window 7: sigma_f=491.1 Hz k=250
+  window done in 82s: +103 new (total 1089), span 453.5-526.2 Hz
+window 8: sigma_f=526.2 Hz k=250
+  window done in 83s: +130 new (total 1219), span 486.4-563.0 Hz
+window 9: sigma_f=563.0 Hz k=250
+  window done in 87s: +116 new (total 1335), span 526.1-597.5 Hz
+window 10: sigma_f=597.5 Hz k=250
+  window done in 84s: +108 new (total 1443), span 558.8-633.8 Hz
+window 11: sigma_f=633.8 Hz k=250
+  window done in 85s: +112 new (total 1555), span 591.1-673.6 Hz
+window 12: sigma_f=673.6 Hz k=250
+  window done in 72s: +134 new (total 1689), span 634.3-710.4 Hz
+window 13: sigma_f=710.4 Hz k=250
+  window done in 75s: +104 new (total 1793), span 669.4-748.5 Hz
+window 14: sigma_f=748.5 Hz k=250
+  window done in 86s: +113 new (total 1906), span 703.3-791.3 Hz
+window 15: sigma_f=791.3 Hz k=250
+  window done in 75s: +116 new (total 2022), span 740.3-838.9 Hz
+{"bc": "bcA_kjlo", "n_modes": 2022, "n_below_400": 674, "n_below_820": 1975, "fmax": 838.8870819123596, "runtime_s": 1276.907175064087}
+[kjlo] qoi sweep...
+{
+ "bc": "bcA_kjlo",
+ "n_modes_used": 1975,
+ "fmax_mode": 819.1693557496882,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 419.4387288093567
+}
+headline RMS (N / m/s^2):
+           strut_1_F      8.927
+           strut_2_F      7.789
+           strut_3_F      6.142
+           strut_4_F      7.344
+           strut_5_F      7.061
+           strut_6_F      6.681
+         tray_net_Fx      7.510
+         tray_net_Fy     10.202
+         tray_net_Fz     12.204
+      tray_net_punch     13.803
+         tray_net_Mx      3.356
+         tray_net_My      2.949
+         tray_net_Mz      2.585
+      copv_mount1_Fx     11.665
+      copv_mount1_Fy      2.499
+      copv_mount1_Fz     20.887
+      copv_mount2_Fx     11.575
+      copv_mount2_Fy      2.499
+      copv_mount2_Fz     20.638
+         copv_net_Fx     22.652
+         copv_net_Fy      4.429
+         copv_net_Fz     40.098
+      copv_net_punch     44.190
+            av_acc_x      0.820
+            av_acc_y      1.600
+            av_acc_z      1.078
+[kjlo] done in 1697s
+[tdlo] solve modes...
+window 0: sigma_f=5.0 Hz k=250
+  window done in 90s: +250 new (total 250), span 0.0-272.2 Hz
+window 1: sigma_f=272.2 Hz k=250
+  window done in 77s: +148 new (total 398), span 225.1-312.1 Hz
+window 2: sigma_f=312.1 Hz k=250
+  window done in 77s: +138 new (total 536), span 282.1-339.5 Hz
+window 3: sigma_f=339.5 Hz k=250
+  window done in 66s: +112 new (total 648), span 313.3-363.8 Hz
+window 4: sigma_f=363.8 Hz k=250
+  window done in 65s: +116 new (total 764), span 337.2-388.6 Hz
+window 5: sigma_f=388.6 Hz k=250
+  window done in 68s: +112 new (total 876), span 360.6-414.7 Hz
+window 6: sigma_f=414.7 Hz k=250
+  window done in 81s: +102 new (total 978), span 385.1-442.2 Hz
+window 7: sigma_f=442.2 Hz k=250
+  window done in 80s: +135 new (total 1113), span 411.5-470.6 Hz
+window 8: sigma_f=470.6 Hz k=250
+  window done in 69s: +106 new (total 1219), span 440.6-498.8 Hz
+window 9: sigma_f=498.8 Hz k=250
+  window done in 82s: +117 new (total 1336), span 466.9-528.5 Hz
+window 10: sigma_f=528.5 Hz k=250
+  window done in 84s: +124 new (total 1460), span 496.5-558.5 Hz
+window 11: sigma_f=558.5 Hz k=250
+  window done in 71s: +121 new (total 1581), span 529.5-586.7 Hz
+window 12: sigma_f=586.7 Hz k=250
+  window done in 87s: +119 new (total 1700), span 558.4-613.9 Hz
+window 13: sigma_f=613.9 Hz k=250
+  window done in 79s: +114 new (total 1814), span 583.7-642.8 Hz
+window 14: sigma_f=642.8 Hz k=250
+  window done in 89s: +110 new (total 1924), span 610.6-672.9 Hz
+window 15: sigma_f=672.9 Hz k=250
+  window done in 77s: +123 new (total 2047), span 642.1-702.1 Hz
+window 16: sigma_f=702.1 Hz k=250
+  window done in 76s: +111 new (total 2158), span 670.8-732.0 Hz
+window 17: sigma_f=732.0 Hz k=250
+  window done in 91s: +111 new (total 2269), span 697.5-764.7 Hz
+window 18: sigma_f=764.7 Hz k=250
+  window done in 90s: +113 new (total 2382), span 726.4-800.4 Hz
+window 19: sigma_f=800.4 Hz k=250
+  window done in 91s: +110 new (total 2492), span 757.4-840.5 Hz
+{"bc": "bcA_tdlo", "n_modes": 2492, "n_below_400": 807, "n_below_820": 2436, "fmax": 840.4985017955313, "runtime_s": 1589.43834400177}
+[tdlo] qoi sweep...
+{
+ "bc": "bcA_tdlo",
+ "n_modes_used": 2436,
+ "fmax_mode": 819.7419781137631,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 485.3819878101349
+}
+headline RMS (N / m/s^2):
+           strut_1_F     18.978
+           strut_2_F     19.166
+           strut_3_F     15.001
+           strut_4_F     16.693
+           strut_5_F     20.546
+           strut_6_F     19.077
+         tray_net_Fx     22.082
+         tray_net_Fy     25.154
+         tray_net_Fz     26.271
+      tray_net_punch     28.885
+         tray_net_Mx      6.396
+         tray_net_My      4.727
+         tray_net_Mz      4.557
+      copv_mount1_Fx      4.201
+      copv_mount1_Fy      0.525
+      copv_mount1_Fz      8.547
+      copv_mount2_Fx      4.156
+      copv_mount2_Fy      0.524
+      copv_mount2_Fz      8.449
+         copv_net_Fx      8.205
+         copv_net_Fy      0.977
+         copv_net_Fz     16.690
+      copv_net_punch     18.513
+            av_acc_x      1.575
+            av_acc_y      1.913
+            av_acc_z      2.543
+[tdlo] done in 2076s
+[krlo] build...
+variant TAG=krlo overrides={'k_mount_rot': 1000.0}
+{
+ "sanity": {
+  "mass_parts": {
+   "barrel": 296.8720275580919,
+   "dome_q": 360.2721359320383,
+   "dome_t": 0.9525915711484889,
+   "tray": 12.3444,
+   "ring": 75.99923905487138,
+   "struts": 0.6313208795937884,
+   "avionics": 8.0,
+   "copv": 30.0
+  },
+  "mass_total_kg": 785.0717149957437,
+  "mass_Mx_kg": 100785.07171499572,
+  "rigid_resid_trans": 1.918866713540267e-16,
+  "rigid_resid_rot": 8.283447519652325e-17,
+  "ndof": 58662,
+  "n_nodes": 9777,
+  "n_quads": 9504,
+  "n_tris": 240,
+  "strut_info": [
+   {
+    "n_tray": 9678,
+    "n_dome": 8151,
+    "L": 0.33908286256731784,
+    "k_eff": 4113094.7653453667,
+    "ex": [
+     -0.486520902972948,
+     -0.5376651833981734,
+     -0.6886316588218957
+    ]
+   },
+   {
+    "n_tray": 9704,
+    "n_dome": 7929,
+    "L": 0.33908286256731796,
+    "k_eff": 4113094.7653453667,
+    "ex": [
+     -0.48652090297294814,
+     0.5376651833981737,
+     -0.6886316588218955
+    ]
+   },
+   {
+    "n_tray": 9617,
+    "n_dome": 6955,
+    "L": 0.340939265183663,
+    "k_eff": 4109104.3260129187,
+    "ex": [
+     0.12165982540491112,
+     0.12416903575000586,
+     -0.9847745617365227
+    ]
+   },
+   {
+    "n_tray": 9618,
+    "n_dome": 7428,
+    "L": 0.33799042204106133,
+    "k_eff": 4115446.6507230974,
+    "ex": [
+     -0.5574636320620077,
+     -0.5126318665835292,
+     -0.6530259323268266
+    ]
+   },
+   {
+    "n_tray": 9748,
+    "n_dome": 7212,
+    "L": 0.3379904220410611,
+    "k_eff": 4115446.650723098,
+    "ex": [
+     -0.557463632062008,
+     0.5126318665835286,
+     -0.653025932326827
+    ]
+   },
+   {
+    "n_tray": 9747,
+    "n_dome": 6725,
+    "L": 0.340939265183663,
+    "k_eff": 4109104.3260129187,
+    "ex": [
+     0.12165982540491112,
+     -0.12416903575000628,
+     -0.9847745617365227
+    ]
+   }
+  ],
+  "strut_inclination_deg": [
+   56.408766021201735,
+   56.408766021201714,
+   55.94931464062057,
+   56.36420247801573,
+   56.364202478015784,
+   55.94931464062057
+  ],
+  "strut_inclination_min_deg": 55.94931464062057
+ },
+ "runtime_s": 2.9123051166534424
+}
+[krlo] solve modes...
+window 0: sigma_f=5.0 Hz k=250
+  window done in 91s: +250 new (total 250), span 4.6-279.1 Hz
+window 1: sigma_f=279.1 Hz k=250
+  window done in 78s: +143 new (total 393), span 225.3-327.0 Hz
+window 2: sigma_f=327.0 Hz k=250
+  window done in 68s: +132 new (total 525), span 292.4-358.6 Hz
+window 3: sigma_f=358.6 Hz k=250
+  window done in 80s: +111 new (total 636), span 326.3-388.7 Hz
+window 4: sigma_f=388.7 Hz k=250
+  window done in 80s: +109 new (total 745), span 351.3-422.3 Hz
+window 5: sigma_f=422.3 Hz k=250
+  window done in 80s: +108 new (total 853), span 384.1-457.4 Hz
+window 6: sigma_f=457.4 Hz k=250
+  window done in 68s: +135 new (total 988), span 419.2-493.0 Hz
+window 7: sigma_f=493.0 Hz k=250
+  window done in 82s: +97 new (total 1085), span 454.3-528.9 Hz
+window 8: sigma_f=528.9 Hz k=250
+  window done in 82s: +134 new (total 1219), span 488.9-566.3 Hz
+window 9: sigma_f=566.3 Hz k=250
+  window done in 71s: +109 new (total 1328), span 530.3-599.8 Hz
+window 10: sigma_f=599.8 Hz k=250
+  window done in 83s: +114 new (total 1442), span 560.8-636.4 Hz
+window 11: sigma_f=636.4 Hz k=250
+  window done in 73s: +113 new (total 1555), span 593.4-676.9 Hz
+window 12: sigma_f=676.9 Hz k=250
+  window done in 74s: +135 new (total 1690), span 637.4-714.5 Hz
+window 13: sigma_f=714.5 Hz k=250
+  window done in 74s: +101 new (total 1791), span 674.6-752.4 Hz
+window 14: sigma_f=752.4 Hz k=250
+  window done in 87s: +117 new (total 1908), span 707.5-794.7 Hz
+window 15: sigma_f=794.7 Hz k=250
+  window done in 74s: +108 new (total 2016), span 743.9-842.2 Hz
+{"bc": "bcA_krlo", "n_modes": 2016, "n_below_400": 672, "n_below_820": 1963, "fmax": 842.2255310397933, "runtime_s": 1244.1648261547089}
+[krlo] qoi sweep...
+{
+ "bc": "bcA_krlo",
+ "n_modes_used": 1963,
+ "fmax_mode": 819.1693557497093,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 416.85686588287354
+}
+headline RMS (N / m/s^2):
+           strut_1_F     28.269
+           strut_2_F     33.523
+           strut_3_F     25.188
+           strut_4_F     26.952
+           strut_5_F     36.156
+           strut_6_F     28.201
+         tray_net_Fx     39.829
+         tray_net_Fy     42.160
+         tray_net_Fz     39.349
+      tray_net_punch     44.476
+         tray_net_Mx      8.344
+         tray_net_My      7.797
+         tray_net_Mz      6.569
+      copv_mount1_Fx     13.221
+      copv_mount1_Fy      4.030
+      copv_mount1_Fz     22.051
+      copv_mount2_Fx     13.093
+      copv_mount2_Fy      4.035
+      copv_mount2_Fz     21.707
+         copv_net_Fx     25.037
+         copv_net_Fy      7.863
+         copv_net_Fz     40.420
+      copv_net_punch     44.281
+            av_acc_x      2.830
+            av_acc_y      2.838
+            av_acc_z      3.453
+[krlo] done in 1665s
+[krhi] build...
+variant TAG=krhi overrides={'k_mount_rot': 100000.0}
+{
+ "sanity": {
+  "mass_parts": {
+   "barrel": 296.8720275580919,
+   "dome_q": 360.2721359320383,
+   "dome_t": 0.9525915711484889,
+   "tray": 12.3444,
+   "ring": 75.99923905487138,
+   "struts": 0.6313208795937884,
+   "avionics": 8.0,
+   "copv": 30.0
+  },
+  "mass_total_kg": 785.0717149957437,
+  "mass_Mx_kg": 100785.07171499572,
+  "rigid_resid_trans": 1.918866713540267e-16,
+  "rigid_resid_rot": 8.283447519652325e-17,
+  "ndof": 58662,
+  "n_nodes": 9777,
+  "n_quads": 9504,
+  "n_tris": 240,
+  "strut_info": [
+   {
+    "n_tray": 9678,
+    "n_dome": 8151,
+    "L": 0.33908286256731784,
+    "k_eff": 4113094.7653453667,
+    "ex": [
+     -0.486520902972948,
+     -0.5376651833981734,
+     -0.6886316588218957
+    ]
+   },
+   {
+    "n_tray": 9704,
+    "n_dome": 7929,
+    "L": 0.33908286256731796,
+    "k_eff": 4113094.7653453667,
+    "ex": [
+     -0.48652090297294814,
+     0.5376651833981737,
+     -0.6886316588218955
+    ]
+   },
+   {
+    "n_tray": 9617,
+    "n_dome": 6955,
+    "L": 0.340939265183663,
+    "k_eff": 4109104.3260129187,
+    "ex": [
+     0.12165982540491112,
+     0.12416903575000586,
+     -0.9847745617365227
+    ]
+   },
+   {
+    "n_tray": 9618,
+    "n_dome": 7428,
+    "L": 0.33799042204106133,
+    "k_eff": 4115446.6507230974,
+    "ex": [
+     -0.5574636320620077,
+     -0.5126318665835292,
+     -0.6530259323268266
+    ]
+   },
+   {
+    "n_tray": 9748,
+    "n_dome": 7212,
+    "L": 0.3379904220410611,
+    "k_eff": 4115446.650723098,
+    "ex": [
+     -0.557463632062008,
+     0.5126318665835286,
+     -0.653025932326827
+    ]
+   },
+   {
+    "n_tray": 9747,
+    "n_dome": 6725,
+    "L": 0.340939265183663,
+    "k_eff": 4109104.3260129187,
+    "ex": [
+     0.12165982540491112,
+     -0.12416903575000628,
+     -0.9847745617365227
+    ]
+   }
+  ],
+  "strut_inclination_deg": [
+   56.408766021201735,
+   56.408766021201714,
+   55.94931464062057,
+   56.36420247801573,
+   56.364202478015784,
+   55.94931464062057
+  ],
+  "strut_inclination_min_deg": 55.94931464062057
+ },
+ "runtime_s": 2.8769750595092773
+}
+[krhi] solve modes...
+window 0: sigma_f=5.0 Hz k=250
+  window done in 91s: +250 new (total 250), span 7.4-279.1 Hz
+window 1: sigma_f=279.1 Hz k=250
+  window done in 78s: +143 new (total 393), span 225.3-327.0 Hz
+window 2: sigma_f=327.0 Hz k=250
+  window done in 66s: +132 new (total 525), span 292.4-358.6 Hz
+window 3: sigma_f=358.6 Hz k=250
+  window done in 80s: +111 new (total 636), span 326.3-388.7 Hz
+window 4: sigma_f=388.7 Hz k=250
+  window done in 67s: +109 new (total 745), span 351.3-422.4 Hz
+window 5: sigma_f=422.4 Hz k=250
+  window done in 81s: +108 new (total 853), span 384.1-457.4 Hz
+window 6: sigma_f=457.4 Hz k=250
+  window done in 68s: +135 new (total 988), span 419.2-493.0 Hz
+window 7: sigma_f=493.0 Hz k=250
+  window done in 82s: +97 new (total 1085), span 454.3-528.9 Hz
+window 8: sigma_f=528.9 Hz k=250
+  window done in 82s: +134 new (total 1219), span 488.9-566.3 Hz
+window 9: sigma_f=566.3 Hz k=250
+  window done in 70s: +109 new (total 1328), span 530.3-599.8 Hz
+window 10: sigma_f=599.8 Hz k=250
+  window done in 83s: +114 new (total 1442), span 560.8-636.4 Hz
+window 11: sigma_f=636.4 Hz k=250
+  window done in 85s: +113 new (total 1555), span 593.5-676.9 Hz
+window 12: sigma_f=676.9 Hz k=250
+  window done in 73s: +135 new (total 1690), span 637.4-714.5 Hz
+window 13: sigma_f=714.5 Hz k=250
+  window done in 74s: +101 new (total 1791), span 674.6-752.4 Hz
+window 14: sigma_f=752.4 Hz k=250
+  window done in 86s: +117 new (total 1908), span 707.5-794.7 Hz
+window 15: sigma_f=794.7 Hz k=250
+  window done in 75s: +108 new (total 2016), span 743.9-842.2 Hz
+{"bc": "bcA_krhi", "n_modes": 2016, "n_below_400": 672, "n_below_820": 1963, "fmax": 842.225531064629, "runtime_s": 1241.1300988197327}
+[krhi] qoi sweep...
+{
+ "bc": "bcA_krhi",
+ "n_modes_used": 1963,
+ "fmax_mode": 819.1693557529369,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "clip_frac_max": 0.0,
+ "runtime_s": 417.9027850627899
+}
+headline RMS (N / m/s^2):
+           strut_1_F     28.617
+           strut_2_F     32.829
+           strut_3_F     23.498
+           strut_4_F     27.251
+           strut_5_F     36.631
+           strut_6_F     28.102
+         tray_net_Fx     39.769
+         tray_net_Fy     42.131
+         tray_net_Fz     38.843
+      tray_net_punch     44.226
+         tray_net_Mx      8.460
+         tray_net_My      8.145
+         tray_net_Mz      6.789
+      copv_mount1_Fx     92.376
+      copv_mount1_Fy     93.956
+      copv_mount1_Fz     50.187
+      copv_mount2_Fx     92.421
+      copv_mount2_Fy     94.038
+      copv_mount2_Fz     50.221
+         copv_net_Fx    182.588
+         copv_net_Fy    187.951
+         copv_net_Fz     85.253
+      copv_net_punch     41.936
+            av_acc_x      2.788
+            av_acc_y      2.915
+            av_acc_z      3.302
+[krhi] done in 1663s
+[meshf] already complete, skip
+all variants complete

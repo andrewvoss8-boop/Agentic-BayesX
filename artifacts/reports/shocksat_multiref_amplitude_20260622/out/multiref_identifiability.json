@@ -1,0 +1,74 @@
+{
+  "deliverable": "identifiability single-reference vs multi-reference (FIM/strain-energy)",
+  "sigma_w_realized_floor": 0.069,
+  "prior_sigma_logtheta": 0.25,
+  "prior_precision": 16.0,
+  "n_matched_modes": 27,
+  "modes_excited": {
+    "single_ref_+X": 17,
+    "multi_ref_union": 23,
+    "by_drive": {
+      "xpos_990x": 17,
+      "zpos_990z": 13,
+      "ypos_990y": 17,
+      "z_900z": 6
+    }
+  },
+  "modes_observed_measured_coh>=0.4": {
+    "xpos_990x": 27,
+    "zpos_990z": 8,
+    "ypos_990y": 27,
+    "z_900z": 12
+  },
+  "single_ref": {
+    "n_dirs_above_floor": 3,
+    "n_modes": 17,
+    "fim_eigenvalues": [
+      1779.5622,
+      472.6906,
+      172.6501,
+      7.1381,
+      2.4901,
+      0.0892,
+      0.0549,
+      0.0196,
+      0.0028
+    ]
+  },
+  "multi_ref": {
+    "n_dirs_above_floor": 3,
+    "n_modes": 23,
+    "fim_eigenvalues": [
+      1811.4607,
+      991.0749,
+      352.9132,
+      13.756,
+      7.6924,
+      0.3218,
+      0.0625,
+      0.053,
+      0.036
+    ]
+  },
+  "all_matched_modes_ref": {
+    "n_dirs_above_floor": 4,
+    "n_modes": 27
+  },
+  "amplitude_confound": {
+    "single_reference": {
+      "params_per_mode": 2,
+      "identifiable_combos_per_mode": 1,
+      "separable_drive_ratios": 0,
+      "note": "single drive: only the lump phi_d/zeta is identifiable (confounded)"
+    },
+    "multi_reference": {
+      "n_drives": 4,
+      "params_per_mode": 5,
+      "identifiable_combos_per_mode": 4,
+      "separable_drive_ratios": 3,
+      "note": "D drives: the D-1 drive-participation RATIOS phi_di/phi_dj become identifiable (gauge-invariant, zeta-free); zeta separated up to ONE residual per-mode gauge (overall phi_d<->zeta scale), resolved only by anchoring phi_d (FEM) or the half-power bandwidth."
+    }
+  },
+  "interpretation": "STIFFNESS: multi-reference excites a larger union of modes than +X alone \u2192 the \u03b8 Fisher information gains rows; n_dirs_above_floor single\u2192multi quantifies the gain (the textbook multi-reference benefit for modal identification). AMPLITUDE: multi-reference makes the D-1 drive-participation ratios identifiable (breaking the \u03c6_d-vs-\u03c6_s-vs-\u03b6 lump into a separable drive ratio), but a single per-mode gauge (overall \u03c6_d\u2194\u03b6 scale) remains \u2014 so it constrains the DRIVE side, not a held-out SENSOR's \u03c6_s.",
+  "runtime_s": 0.8194661140441895
+}

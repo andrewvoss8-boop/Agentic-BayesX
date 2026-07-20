@@ -1,0 +1,10 @@
+{
+ "dud": true,
+ "cid": "mr2_conn1",
+ "track": "random",
+ "round": 2,
+ "cls": "connectivity",
+ "reason": "ValueError: rbe3_convert eid 9000033: singular master geometry (cond 4.23e+17)",
+ "traceback": "pipeline.py\", line 74, in build_theta1_pkg\n    m, blocks, info = MO.build_model_blocks(spec)\n  File \"/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/code/mfops.py\", line 329, in build_model_blocks\n    m[\"rbe3\"] = rbe3_maps(m, eids)\n  File \"/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/code/mfops.py\", line 88, in rbe3_maps\n    raise ValueError(f\"rbe3_convert eid {int(eid)}: singular master geometry (cond {cond:.2e})\")\nValueError: rbe3_convert eid 9000033: singular master geometry (cond 4.23e+17)\n",
+ "ts": "2026-07-17T04:10:59"
+}

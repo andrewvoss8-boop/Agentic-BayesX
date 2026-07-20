@@ -18,3 +18,27 @@ artifacts/reports/*/sources/
 artifacts/reports/*/extracted/
 !artifacts/reports/conical_shell_statfem_ladder_20260608/sources/
 artifacts/reports/*/logs/*.bin
+
+# Tool/editor state
+.vscode/
+.codex/
+.agents/
+
+# Large regenerable eigenbases / packages / raw caches (provenance: SHA manifests + run_all.sh replay;
+# the files stay on disk, git carries the recipe not the bulk)
+artifacts/reports/*/out/full_eig_V.npy
+artifacts/reports/*/out/raw_full_eig_V.npy
+artifacts/reports/*/out/dryrun_V.npy
+artifacts/reports/*/out/dryrun_eig.npz
+artifacts/reports/*/out/eig_slices/
+artifacts/reports/*/data/packages_wide/
+artifacts/reports/*/data/packages_mf/
+artifacts/reports/buffet_dome_secondary_20260612/out/modes_bc*.npz
+artifacts/reports/*/matrices/V_keep.npy
+artifacts/reports/shocksat_fem_remesh_20260618/out/dish_refined/matrices/V_keep.npy
+artifacts/reports/statfem_real_validation_20260617/data/measured_frf_cache.npz
+scratch_test07/*.mat
+Test07_ImpactHammer_990x.zip
+data/zips/
+artifacts/reports/*/data/measured_frf_cache.npz
+artifacts/reports/statfem_shocksat_eval_20260616/data/V_keep.npy

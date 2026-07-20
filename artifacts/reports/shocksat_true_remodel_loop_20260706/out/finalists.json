@@ -1,0 +1,24 @@
+{
+ "cids": [
+  "a04_welds_t074",
+  "a16_bb_splits_combo_enr",
+  "c06_tb_xface_enr",
+  "A0"
+ ],
+ "freeze": [
+  "a04_welds_t074_enr",
+  "a16_bb_splits_combo_enr",
+  "c06_tb_xface_enr",
+  "b04_ctrl_bb_scale_enr",
+  "rnd003_enr",
+  "A0",
+  "A0_enr"
+ ],
+ "agent_finalists": [
+  "a04_welds_t074_enr",
+  "a16_bb_splits_combo_enr",
+  "c06_tb_xface_enr"
+ ],
+ "random_best": "rnd003_enr",
+ "note": "freeze = EXACT-BASIS versions throughout (D22) + original A0 for the bias-pair report; b04_enr = parametric control (D20); NUTS cids are the finalists posteriors (a04 own-space NUTS labeled ~0.7pct-class basis bias)"
+}

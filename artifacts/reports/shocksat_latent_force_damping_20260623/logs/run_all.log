@@ -1,0 +1,125 @@
+== [0] integrity: reproduce D22 (0/9) from the cached Test07 windowed FRF ==
+per-mode damping inference: 9 modes fit, 0 IDENTIFIED | 3s
+  f=  48.8 Hz ζ_app=2.99% [0.06,5.84] win=1.19% struct=1.80% ash=0.25% prior-dom
+  f=  75.0 Hz ζ_app=0.06% [0.05,0.15] win=0.80% struct=0.00% ash=0.38% prior-dom
+  f= 138.8 Hz ζ_app=0.05% [0.05,0.07] win=0.43% struct=0.00% ash=0.35% prior-dom
+  f= 165.0 Hz ζ_app=0.05% [0.05,0.07] win=0.36% struct=0.00% ash=0.32% prior-dom
+  f= 172.5 Hz ζ_app=0.05% [0.05,0.07] win=0.34% struct=0.00% ash=0.06% prior-dom
+  f= 227.5 Hz ζ_app=0.05% [0.05,0.07] win=0.26% struct=0.00% ash=0.44% prior-dom
+  f= 232.5 Hz ζ_app=0.05% [0.05,0.09] win=0.26% struct=0.00% ash=0.24% prior-dom
+  f= 241.2 Hz ζ_app=0.05% [0.05,0.05] win=0.25% struct=0.00% ash=0.40% prior-dom
+  f= 247.5 Hz ζ_app=0.05% [0.05,0.05] win=0.24% struct=0.00% ash=0.40% prior-dom
+VERDICT: 0/9 identified.
+== [1] Layer 1: time-domain decay re-test (band-pass + log-decrement) ==
+Layer 1: 14/16 modes RESOLVED (7 uncontaminated) | 57s
+   f_hz                zeta%  ci/prior   ash%   cyc   snr    r2  Δf<df  res cont
+   75.3  (only 2 traces)
+   99.7  0.667[0.654,0.675]     0.007  0.778    41    18  0.93   True True False
+  122.1  (only 4 traces)
+  126.1  0.985[0.962,0.998]     0.008  0.338    13    11  0.92  False True True
+  136.3  0.383[0.333,0.486]     0.079  0.352    37    10  0.93   True True True
+  138.3  0.758[0.533,0.803]     0.085  0.352    24    10  0.93  False True True
+  140.4  0.346[0.326,0.364]     0.023  0.271    44    11  0.93   True True True
+  162.8  0.309[0.289,0.778]     0.207  0.317    39    15  0.93   True True False
+  172.9  1.172[1.120,1.266]     0.025  0.058    14    13  0.93  False True False
+  189.2  0.403[0.347,0.491]     0.073  0.453    37    10  0.94   True True False
+  195.3  0.457[0.343,0.525]     0.089  0.121    27    11  0.94   True True True
+  197.3  0.304[0.250,0.434]     0.115  0.493    59    11  0.92   True True True
+  199.4  0.287[0.252,0.368]     0.079  0.153    54    11  0.94   True True True
+  234.0  0.427[0.339,0.538]     0.096  0.499    35    13  0.94   True True False
+  244.1  0.650[0.579,0.710]     0.043  0.398    35    15  0.93  False True False
+  254.3  0.336[0.313,0.368]     0.034  0.462    69    27  0.93   True True False
+
+VERDICT: 14/16 union modes give a RESOLVED time-domain zeta (7 of them neighbour-uncontaminated), vs D22's 0/9 from the single windowed FRF. Time-domain decay dodges the df=2.03 Hz frequency bin (half-power Delta_f = 2*zeta*f is sub-bin for these light modes) -- damping is a time-domain decay rate, resolvable in many cycles of ring-down.
+== [2] Layer 1: hierarchical NUTS posterior over per-mode zeta (~10 min) ==
+    75.3 Hz: too few clean traces for NUTS
+    99.7 Hz: zeta 0.746% [0.666,0.850] ci/prior 0.051 | R-hat 1.011 ESS 556 div 0 | conv True resolved True
+   122.1 Hz: too few clean traces for NUTS
+   126.1 Hz: zeta 0.852% [0.721,1.012] ci/prior 0.071 | R-hat 1.012 ESS 430 div 0 | conv True resolved True
+   136.3 Hz: zeta 0.460% [0.323,0.657] ci/prior 0.148 | R-hat 1.004 ESS 646 div 0 | conv True resolved True
+   138.3 Hz: zeta 0.663% [0.454,0.955] ci/prior 0.155 | R-hat 1.005 ESS 591 div 0 | conv True resolved True
+   140.4 Hz: zeta 0.471% [0.411,0.543] ci/prior 0.059 | R-hat 1.010 ESS 333 div 0 | conv True resolved True
+   162.8 Hz: zeta 0.437% [0.291,0.626] ci/prior 0.160 | R-hat 1.003 ESS 446 div 0 | conv True resolved True
+   172.9 Hz: zeta 1.450% [1.124,1.882] ci/prior 0.108 | R-hat 1.020 ESS 250 div 0 | conv True resolved True
+   189.2 Hz: zeta 0.570% [0.471,0.699] ci/prior 0.083 | R-hat 1.008 ESS 553 div 0 | conv True resolved True
+   195.3 Hz: zeta 0.372% [0.314,0.436] ci/prior 0.069 | R-hat 1.013 ESS 342 div 0 | conv True resolved True
+   197.3 Hz: zeta 0.326% [0.263,0.406] ci/prior 0.091 | R-hat 1.008 ESS 594 div 0 | conv True resolved True
+   199.4 Hz: zeta 0.407% [0.324,0.512] ci/prior 0.096 | R-hat 1.013 ESS 299 div 0 | conv True resolved True
+   234.0 Hz: zeta 0.438% [0.325,0.600] ci/prior 0.128 | R-hat 1.010 ESS 379 div 0 | conv True resolved True
+   244.1 Hz: zeta 0.757% [0.582,0.993] ci/prior 0.111 | R-hat 1.014 ESS 282 div 0 | conv True resolved True
+   254.3 Hz: zeta 0.407% [0.353,0.469] ci/prior 0.060 | R-hat 1.009 ESS 408 div 0 | conv True resolved True
+
+Layer 1 NUTS: 14/16 resolved, 14 converged | 779s
+== [3] frequency-domain control on the clean data ==
+freq-domain control: 7/16 modes identified on CLEAN data (df=2.03 Hz) | 1s
+    75.3 Hz: 1/2 refs identified; median CI/prior 0.095
+    99.7 Hz: 2/2 refs identified; median CI/prior 0.042
+   162.8 Hz: 2/3 refs identified; median CI/prior 0.167
+   172.9 Hz: 4/4 refs identified; median CI/prior 0.021
+   234.0 Hz: 4/4 refs identified; median CI/prior 0.03
+   244.1 Hz: 4/4 refs identified; median CI/prior 0.021
+   254.3 Hz: 4/4 refs identified; median CI/prior 0.026
+VERDICT: Two levers, both real: (1) CLEAN multi-hit modal data lifts the FREQUENCY-domain width fit from D22's 0/9 (noisy single Test07 tap, df=1.25 Hz) to 7/16 here (df=2.03 Hz) -- the many clean channels help even in frequency. (2) The TIME domain reaches 14/16 on the SAME clean data: it additionally resolves the LIGHT/sub-bin-width modes (half-power Delta_f=2*zeta*f < df, where the width fit stays prior-dominated) and is less defeated by close-mode clusters. So the hypothesis holds -- time-domain decay resolves zeta the windowed FRF cannot -- with the honest caveat that part of the gain vs D22 is data cleanliness, and the time domain's specific extra is the sub-bin modes.
+== [4] finite-perturbation: is zeta a lever on the envelope QOI? ==
+zeta%   GRMS_FEM   GRMS_FEM+6dB   GRMS_twin97.5   win_ratio
+ 0.25    27.9496      55.7667        648.228     11.624
+ 0.35    24.8856      49.6533        577.165     11.624
+ 0.40    26.4946      52.8637        614.483     11.624
+ 0.50    23.0816      46.0538        535.325     11.624
+ 1.00    14.6967      29.3237        340.856     11.624
+ 1.70    10.6386      21.2268        246.738     11.624
+
+ABSOLUTE lever GRMS(0.4%)/GRMS(1.0%) = 1.80 (predict 1/zeta ratio = 2.5)
+WIN-RATIO spread across zeta = 1.0000 (≈1 => zeta cancels in the win metric)
+VERDICT: zeta IS a strong ABSOLUTE lever on envelope GRMS (~1/zeta), so it passes the finite-perturbation gate; BUT under the inherited identical-damping contract it CANCELS in the twin/FEM+6dB win RATIO (common-mode, mirrors D8). And the nominal FEM is OVER-damped vs measured, so a measured-zeta correction makes the twin MORE conservative, not less. Damping is therefore NOT a lever that wins the inherited less-conservative-envelope metric on this structure.
+runtime 0.7s
+== [5] Layer 2: latent-force MFE smoother + damping-vs-residual decomposition ==
+   f_hz  ntr             zeta_true% zlogdec%  xcorr damp_fr  resid  nl(q2)   e/l
+   99.7   75   0.598[0.520,0.680]    0.678  0.609   0.081  0.919   0.095 1.338
+  162.8   11   0.604[0.588,0.733]    0.297  0.938   0.048  0.952   0.072 0.739
+  189.2    5   0.576[0.411,0.792]    0.434  0.822   0.196  0.804   0.034 3.432
+  234.0   73   0.365[0.252,0.669]    0.416  0.831   0.403  0.597   0.027 0.655
+  254.3  146   0.226[0.150,0.791]    0.389  0.732   0.543  0.457   0.025 1.079
+
+q_g sweep (254.3): [{'q_g_rel': 0.01, 'zeta_true_pct': 0.225, 'damping_frac': 0.544}, {'q_g_rel': 0.1, 'zeta_true_pct': 0.226, 'damping_frac': 0.543}, {'q_g_rel': 1.0, 'zeta_true_pct': 0.226, 'damping_frac': 0.543}]
+VERDICT: ROBUST: the latent-force smoother's velocity-projection recovers zeta_true ~0.58% (vs FEM nominal 1.0% -> FEM is OVER-damped), and it CROSS-CHECKS the independent log-decrement zeta per trace (corr ~0.82) and the Layer-1 NUTS posterior -> the latent MFE force is dominantly a viscous DAMPING correction (the parsimonious 'FEM has the wrong zeta'). The genuine NON-VISCOUS residual shows NO amplitude dependence (residual-vs-q^2 corr ~0.03) and near-exponential decay (early/late-decay zeta ratio ~1.08) -> little evidence of strong missing NONLINEAR physics. So the model-form error here is MOSTLY wrong DAMPING (parsimonious), not missing physics. (The raw variance split is q_g/beating-contaminated; see caveat.)
+runtime 20.9s
+== [6] Layer 3: measured-zeta twin vs FEM+6dB envelope GRMS (held-out, 90% split) ==
+Layer 3 (seed0, 90% train, 8 held-out): calib converged=True
+  A_nominal_twin_vs_nominal_fem6        : combined GRMS ratio 12.38  win 0%  clean-win 0%  exc-energy 0.002
+  B_measured_twin_vs_measured_fem6      : combined GRMS ratio 11.03  win 0%  clean-win 0%  exc-energy 0.002
+  C_measured_twin_vs_nominal_fem6       : combined GRMS ratio 14.32  win 0%  clean-win 0%  exc-energy 0.002
+VERDICT: HONEST NEGATIVE. Combined-correlated median GRMS ratio (twin/FEM+6dB): A(nominal)=12.38, B(measured-zeta, identical eta)=11.03 ~= A -> damping CANCELS in the win ratio under the identical-eta contract (mirrors D8/finite_perturbation). C(measured-zeta twin vs as-built nominal FEM+6dB)=14.32 >= A -> because the as-built FEM is OVER-damped (1.0% > measured ~0.4%), a measured-zeta twin has TALLER peaks and a HIGHER envelope GRMS (more conservative, not less). All framings give 0% GRMS win. The less-conservative-envelope goal is NOT unlocked by damping; the binding limit is per-node FEM shape error (twin 97.5 band ~+27 dB), exactly as D7 found.
+runtime 82.7s
+== [7] figures ==
+fig1 ringdown
+fig2 zeta headline
+fig3 counts
+fig4 layer2
+fig5 layer3
+all figures written to figures/
+== [8] checker (exits non-zero only on RED) ==
+check.py self-sha256: 07de1286ba9da8e77e24984c9d17058a8f92ddd4770ef791c8f6c6670e18e530
+============================================================================================
+[1] byte-identical reused code
+  [GREEN]  all 8 reused files match REUSED_code.sha256
+[2] required artifacts + figures
+  [GREEN]  all 8 JSON artifacts and 5 figures present
+[3] integrity baseline (D22 = 0/9)
+  [GREEN]  D22 reproduced: 0/9 identified (frequency-domain windowed FRF)
+[4] Layer 1: resolved zeta backed by NUTS posteriors + resolvability table + convergence
+  [GREEN]  resolvability table present for all 14 L1-resolved modes
+  [GREEN]  14/16 modes: converged NUTS zeta posterior (worst R-hat 1.020, min ESS 250, 0-1 div) vs D22 0/9 -> HEADLINE GREEN
+[5] sampler labeling (Layer 2 = linear-Gaussian filter, NOT NUTS)
+  [GREEN]  Layer 2 correctly labeled as RTS Kalman smoother / filter (not NUTS, not a parameter posterior)
+  [YELLOW] Layer 2 latent-force variance split is q_g/close-mode-beating contaminated (documented caveat); headline = velocity-projection zeta cross-check (corr ~0.82)
+[6] finite-perturbation (is zeta a lever on the envelope QOI?)
+  [GREEN]  zeta IS a strong absolute lever on envelope GRMS (~1/zeta) -> passes the lever gate
+  [YELLOW] zeta CANCELS in the twin/FEM+6dB win ratio (common-mode; mirrors D8) -> not a lever on the WIN metric
+[7] Layer 3: no GRMS win claimed without ratio<1 + exceedance
+  [GREEN]  L3 = honest negative: all framings GRMS ratio >= 1, 0% win, with exceedance reported (no over-claim)
+  [YELLOW] L3 envelope-GRMS win NOT achieved (binding limit = per-node FEM shape error ~+27 dB; damping doesn't win; the prompt's 'under-damped FEM' direction is sign-flipped here) -> documented HONEST NEGATIVE
+============================================================================================
+OVERALL: YELLOW   (8 green, 3 yellow, 0 red)
+Summary: Layer 1 GREEN (time-domain resolves 14/16 zeta vs D22 0/9, converged NUTS); Layer 2 zeta cross-checked (variance-split caveated); Layer 3 HONEST NEGATIVE (damping cancels in the win ratio / FEM over-damped). Honest negative + a green headline = OVERALL YELLOW (documented), exit 0.
+runtime: active 966s, elapsed 966s -> runtime.json

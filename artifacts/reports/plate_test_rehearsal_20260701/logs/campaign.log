@@ -1,0 +1,99 @@
+targets: [246.1, 249.4, 253.9, 258.3] Hz | basis 12 | extra 6 | cand 41
+[done] A0_1sensor s0: band 6.529x cov 1.0 rhat 1.0011 ess 832.0 div 22 (91.4s)
+[done] A0_1sensor s1: band 6.453x cov 1.0 rhat 1.0113 ess 626.5 div 66 (96.9s)
+[done] A0_1sensor s2: band 5.873x cov 1.0 rhat 1.0043 ess 775.7 div 31 (96.8s)
+[done] A0_1sensor s3: band 6.17x cov 1.0 rhat 1.0046 ess 689.6 div 23 (107.0s)
+[done] A0_1sensor s4: band 6.141x cov 1.0 rhat 1.0183 ess 431.5 div 16 (100.8s)
+[done] A0_1sensor s5: band 6.427x cov 1.0 rhat 1.0056 ess 552.0 div 71 (84.1s)
+[done] A0_1sensor s6: band 6.6x cov 1.0 rhat 1.0081 ess 339.0 div 72 (89.6s)
+[done] A0_1sensor s7: band 6.436x cov 1.0 rhat 1.0021 ess 988.7 div 16 (99.5s)
+[done] A1_12sensor s0: band 7.156x cov 1.0 rhat 1.0028 ess 1600.5 div 0 (110.4s)
+[done] A1_12sensor s1: band 6.933x cov 1.0 rhat 1.0009 ess 2271.1 div 0 (86.3s)
+[done] A1_12sensor s2: band 6.232x cov 1.0 rhat 1.0023 ess 2009.6 div 0 (122.7s)
+[done] A1_12sensor s3: band 5.752x cov 1.0 rhat 1.001 ess 1882.5 div 0 (91.1s)
+[done] A1_12sensor s4: band 6.368x cov 1.0 rhat 1.0011 ess 1991.0 div 0 (82.2s)
+[done] A1_12sensor s5: band 6.096x cov 1.0 rhat 1.0027 ess 1493.3 div 0 (93.9s)
+[done] A1_12sensor s6: band 6.151x cov 1.0 rhat 1.0016 ess 2236.7 div 0 (83.8s)
+[done] A1_12sensor s7: band 6.165x cov 0.982 rhat 1.0021 ess 2246.9 div 0 (143.1s)
+[done] A2_20sensor s0: band 6.803x cov 1.0 rhat 1.0019 ess 2041.6 div 0 (105.4s)
+[done] A2_20sensor s1: band 6.205x cov 1.0 rhat 1.0019 ess 1595.7 div 0 (90.8s)
+[done] A2_20sensor s2: band 6.152x cov 1.0 rhat 1.0013 ess 2229.8 div 0 (126.2s)
+[done] A2_20sensor s3: band 5.994x cov 1.0 rhat 1.0026 ess 2078.2 div 0 (127.4s)
+[done] A2_20sensor s4: band 6.19x cov 1.0 rhat 1.0016 ess 1491.1 div 0 (94.0s)
+[done] A2_20sensor s5: band 6.209x cov 1.0 rhat 1.0023 ess 1311.0 div 0 (94.8s)
+[done] A2_20sensor s6: band 6.54x cov 1.0 rhat 1.0021 ess 2055.3 div 0 (129.5s)
+[done] A2_20sensor s7: band 5.854x cov 0.964 rhat 1.0016 ess 2179.9 div 0 (632.1s)
+[done] A3_12jitter s0: band 6.636x cov 1.0 rhat 1.0031 ess 1756.8 div 0 (133.4s)
+[done] A3_12jitter s1: band 6.394x cov 1.0 rhat 1.0011 ess 1838.3 div 0 (170.1s)
+[done] A3_12jitter s2: band 6.621x cov 1.0 rhat 1.0012 ess 2492.2 div 0 (78.1s)
+[done] A3_12jitter s3: band 5.731x cov 1.0 rhat 1.0024 ess 2088.7 div 0 (90.1s)
+[done] A3_12jitter s4: band 5.972x cov 1.0 rhat 1.0005 ess 2366.4 div 0 (98.1s)
+[done] A3_12jitter s5: band 6.777x cov 1.0 rhat 1.0004 ess 2160.2 div 0 (98.7s)
+[done] A3_12jitter s6: band 6.463x cov 1.0 rhat 1.0012 ess 2495.0 div 0 (94.0s)
+[done] A3_12jitter s7: band 6.847x cov 1.0 rhat 1.0052 ess 1613.0 div 0 (95.5s)
+[done] S_sd04 s0: band 5.698x cov 1.0 rhat 1.0028 ess 1995.9 div 0 (84.9s)
+[done] S_sd04 s1: band 5.74x cov 1.0 rhat 1.0033 ess 1713.3 div 0 (72.9s)
+[done] S_sd16 s0: band 111.468x cov 1.0 rhat 1.0006 ess 2502.8 div 0 (310.7s)
+[done] S_sd16 s1: band 96.994x cov 1.0 rhat 1.0015 ess 2552.8 div 0 (307.4s)
+{
+ "A0_1sensor": {
+  "n_runs": 8,
+  "n_converged": 5,
+  "median_band_factor": 6.17,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 5,
+  "worst_rhat": 1.0183,
+  "min_ess": 339.0,
+  "median_eta_post_sd": 0.686
+ },
+ "A1_12sensor": {
+  "n_runs": 8,
+  "n_converged": 8,
+  "median_band_factor": 6.2,
+  "mean_weighted_coverage": 0.998,
+  "seeds_cov_ge_085": 8,
+  "worst_rhat": 1.0028,
+  "min_ess": 1493.3,
+  "median_eta_post_sd": 0.579
+ },
+ "A2_20sensor": {
+  "n_runs": 8,
+  "n_converged": 8,
+  "median_band_factor": 6.2,
+  "mean_weighted_coverage": 0.996,
+  "seeds_cov_ge_085": 8,
+  "worst_rhat": 1.0026,
+  "min_ess": 1311.0,
+  "median_eta_post_sd": 0.559
+ },
+ "A3_12jitter": {
+  "n_runs": 8,
+  "n_converged": 8,
+  "median_band_factor": 6.54,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 8,
+  "worst_rhat": 1.0052,
+  "min_ess": 1613.0,
+  "median_eta_post_sd": 0.62
+ },
+ "S_sd04": {
+  "n_runs": 2,
+  "n_converged": 2,
+  "median_band_factor": 5.72,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 2,
+  "worst_rhat": 1.0033,
+  "min_ess": 1713.3,
+  "median_eta_post_sd": 0.159
+ },
+ "S_sd16": {
+  "n_runs": 2,
+  "n_converged": 2,
+  "median_band_factor": 104.23,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 2,
+  "worst_rhat": 1.0015,
+  "min_ess": 2502.8,
+  "median_eta_post_sd": 1.063
+ }
+}

@@ -1,0 +1,74 @@
+== [1/6] verification gates (V1-V9) ==
+building tray chain ...
+[   0.8s] V1_tray_vs_fim_freqs: 2.603e-11 (green) first 8 modes vs arrays_fim
+[   0.8s] V2a_chain_rigid_mass_zz: 8.852e-10 (green) M_rb zz=3.1561 kg vs tray mass 3.1561 kg
+[   0.8s] V2b_participation_completeness: 1.086e-10 (green) 
+  chain modes (nominal mount) [Hz]: [ 75.9  76.   84.5  84.7  88.9 116.2 457.3 527.5]
+loading ShockSat interface ...
+[   2.6s] V3_rbm_mass_line: 8.979e-05 (green) node gid 7000072, ShockSat mass 57.96 kg (suspension-contaminated RBMs make a few % expected)
+[   2.6s] V4_srs_filter_sine: 4.901e-04 (green) SRS=25.01 vs analytic 25.02 (finite dwell under-shoots slightly)
+[   2.6s] V9a_input_grms: 4.322e-03 (green) grms 1.510 g vs spec 1.517 g
+[   2.6s] V9b_psd_flatness_normalized: 1.143e-02 (green) segment-mean deviation normalized by MC error
+[   4.6s] V5_fbs_vs_direct_coupled: 8.767e-10 (green) identical physics both sides -> pure algebra check
+[   4.9s] V6a_apparent_mass_offres: 1.786e-05 (green) 11 off-resonance freqs; exact Woodbury form (threshold = numerical exactness: float cancellation w/ zeta_struct=0 + 1e-9 zeta floor gives ~1e-5, not a physics approximation)
+[   9.0s] V6b_apparent_mass_peak_height: 3.834e-06 (green) peak heights exact; residual = mode truncation above fmax_keep
+[  33.5s] V7_newmark_vs_fbs_peak: 5.554e-03 (green) peaks N=[341.1, 297.1, 373.7] vs FBS=[343.0, 296.9, 374.1] N (last 2 s; zero-IC transient discarded)
+[  33.5s] V8a_7004c_load_M_062: 1.397e-04 (green) 
+[  33.5s] V8b_7004c_load_M_1: 1.999e-08 (green) 
+[  33.5s] V8c_7004c_source_M_1: 0.000e+00 (green) 
+[  33.5s] V8d_tdof_coupled_direct: 1.962e-15 (green) 
+OVERALL: green  (33s)
+== [2/6] QOI production (nominal + srscache + MC + sweeps) ==
+[    0.0s] build tray ...
+[    0.4s] load ShockSat interface ...
+[    1.4s] srscache: exists, skip
+[    1.4s] nominal: exists, skip
+[    1.4s] mc: exists, skip
+[    1.4s] sweeps: exists, skip
+[    1.4s] run_qoi done
+== [3/6] mount identifiability gate ==
+[   0.0s] mount_identifiability.json exists, skip (delete to rerun)
+== [4/6] response-limit proxy QOI (D7) ==
+[   0.0s] response_limit_proxy.json exists, skip (delete to rerun)
+== [5/6] figures (tufte-linted) ==
+figures written to /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_tray_coupled_qoi_20260610/figures
+
+=== code/make_figures.py ===
+  [INFO] Legend present: prefer direct end-of-line labels to avoid eye ping-pong (Beautiful Evidence).
+  [INFO] Bar chart: ensure baseline starts at zero (set_ylim(bottom=0)) — no truncated baselines.
+  [INFO] dB detected: state linear/dB explicitly and justify dB (project rule: avoid dB unless standard).
+
+3 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.
+== [6/6] checker (green/yellow/red) ==
+== docs / contract-first ==
+  docs_present: GREEN  []
+  quantity_contract_conventions: GREEN  []
+== verification gates (verify.py) ==
+  verification_overall: GREEN  15 gates all green (V1-V9: tray rebuild exact, rigid-mass/units, SRS filter, FBS algebra, exact damped apparent mass, Newmark cross-check, 7004C TDOF anchors)
+== production outputs ==
+  outputs_present: GREEN  []
+  hypothetical_label_in_results: GREEN  
+  force_limiting_unc_ge_cpl: GREEN  median peak_unc/peak_cpl per axis = [1.27, 1.31, 1.12] (>1 = over-test; <1 possible near shifted coupled resonances)
+  method_ratios_finite: GREEN  
+  variance_decomposition_present: GREEN  mount-dominated axes (coupled th): [True, True, True]; OAT note present: True
+== identifiability gate (AGENTS.md Modal/Eigenproblem) ==
+  se_closure: GREEN  max |closure-1| = 1.1e-10 over 59 coupled modes <= 300 Hz
+  finite_perturbation_present: GREEN  x0.5/x2 mount perturbation with QOI shifts
+  identifiability_cause_stated: GREEN  peak dlnf/dlnk = 0.4487 vs sigma_f floor 0.046
+== sampler rule ==
+  no_sampler_decision_documented: GREEN  propagation-only decision D1; no NUTS claim made
+== figures ==
+  figures_present: GREEN  []
+  figure_provenance_labels: GREEN  every data figure stamped with run + hypothetical flag
+  image_qa: GREEN  artifact-backed legibility report (sizes + manual review notes)
+== integrity: read-only inputs unchanged ==
+  inputs_unchanged: GREEN  []
+== bookkeeping ==
+  runtime_json: GREEN  
+  runtime_accounting: GREEN  active 1587 <= wall 10919
+  manifest: GREEN  
+  files_changed: GREEN  
+  packet: GREEN  
+  packet_honesty: GREEN  hypothetical banner + method summary + graphical model at top
+
+OVERALL: GREEN  (22 green / 0 yellow / 0 red)

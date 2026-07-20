@@ -1,0 +1,72 @@
+{
+ "leg": "synth",
+ "arm": "M0",
+ "N_freq": 160,
+ "N_sensor": 6,
+ "N": 960,
+ "axis_band_hz": [
+  45.0,
+  260.0
+ ],
+ "nuts": {
+  "max_rhat": 62.53649052061754,
+  "min_ess": 2.001459586958659,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": false,
+ "sigma_d": {
+  "lo": 0.0,
+  "med": 0.0,
+  "hi": 0.0,
+  "width": 0.0,
+  "fixed": true
+ },
+ "theta_width_identified": 0.08192449099931515,
+ "theta_width_all": 0.21363202822438365,
+ "theta_width_groups": {
+  "bottom_box": 0.0007667894955929455,
+  "top_box": 0.014246945293480806,
+  "plates": 0.10847473009140318,
+  "cross_beam": 0.20420949911678365
+ },
+ "score": {
+  "interval_score_db": 19.438168425787733,
+  "crps_db": 0.5462695471231032,
+  "coverage": 0.14285714285714285,
+  "width_db": 0.2577140587520014,
+  "pit_ks": 0.6428571428571429,
+  "n_heldout": 14,
+  "band": {
+   "interval_score_db": 21.63780333982025,
+   "crps_db": 0.581892699223461,
+   "coverage": 0.0,
+   "width_db": 0.15989450406809066,
+   "pit_ks": 0.6428571428571429,
+   "n_heldout": 14
+  }
+ },
+ "heldout_coverage": {
+  "peak": {
+   "covered": 2,
+   "n": 14,
+   "frac": 0.14285714285714285
+  },
+  "band": {
+   "covered": 0,
+   "n": 14,
+   "frac": 0.0
+  },
+  "combined": {
+   "covered": 2,
+   "n": 28,
+   "frac": 0.07142857142857142
+  },
+  "peak_noisy_frac": 0.7142857142857143,
+  "band_noisy_frac": 0.07142857142857142,
+  "nominal": 0.95
+ },
+ "runtime_s": 332.19
+}

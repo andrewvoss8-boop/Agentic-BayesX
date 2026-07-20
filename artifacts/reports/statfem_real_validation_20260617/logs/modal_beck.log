@@ -1,0 +1,4 @@
+L8 Beck (split 0, 12 modes, obs 48/ho 32): conv True R-hat 1.004 ESS 2260 div 0 | 19s
+  HELD-OUT mode-shape MAC: inferred 0.042 vs FEM 0.041  (9/12 modes improved)
+  sigma_phi 0.800 | -> inferring shapes HELPS held-out shape
+L8 DONE

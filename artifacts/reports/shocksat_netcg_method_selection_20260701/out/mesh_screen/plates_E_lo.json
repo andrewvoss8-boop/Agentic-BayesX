@@ -1,0 +1,24 @@
+{
+ "edit_id": "plates_E_lo",
+ "n_matched": 29,
+ "global_MAC": 0.639,
+ "mac_shear_band": 0.681,
+ "freq_rms_shear_pct": 8.29,
+ "freq_rms_all_pct": 10.82,
+ "screen_score": 0.4327,
+ "drum_freqs_hz": [
+  228.9,
+  229.0,
+  230.5,
+  232.7,
+  242.4,
+  246.0,
+  246.8,
+  247.9,
+  249.1,
+  251.8,
+  257.1,
+  257.7
+ ],
+ "runtime_s": 378.3
+}

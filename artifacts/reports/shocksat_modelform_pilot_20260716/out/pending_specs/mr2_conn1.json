@@ -1,0 +1,32 @@
+{
+ "cid": "mr2_conn1",
+ "track": "random",
+ "round": 2,
+ "cls": "connectivity",
+ "seed": 20262717,
+ "ops": [
+  {
+   "op": "rbe3_convert",
+   "eids": [
+    9000099,
+    9000043,
+    4000136,
+    2032429,
+    7004396,
+    2032428,
+    9000093,
+    9000083,
+    9000033,
+    7004395,
+    1024301,
+    1024319,
+    4000135,
+    2033598,
+    8000040
+   ],
+   "name": "rrbe321a0"
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

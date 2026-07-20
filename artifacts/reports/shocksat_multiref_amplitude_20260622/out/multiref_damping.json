@@ -1,0 +1,102 @@
+{
+  "deliverable": "held-out amplitude skill: flat 1% vs NASA measured PER-MODE modal damping (+window)",
+  "zeta_measured_range_pct": [
+    0.05770081281661987,
+    1.0517010688781738
+  ],
+  "n_modes_with_measured_zeta": 27,
+  "mean_skill": {
+    "flat1pct": -1.701845869770482,
+    "flat1pct_w": -1.0023744296201167,
+    "permode_w": -2.9896609379678973
+  },
+  "mean_coverage": {
+    "flat1pct": 0.9888888888888889,
+    "flat1pct_w": 1.0,
+    "permode_w": 0.9555555555555556
+  },
+  "mean_peak_bias_db": {
+    "flat1pct": 6.743718460957268,
+    "flat1pct_w": 5.261856688538272,
+    "permode_w": 8.006197995990306
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "calib_converged": true,
+      "n_modes_with_measured_zeta": 27,
+      "arms": {
+        "flat1pct": {
+          "crps_skill_vs_clim": -1.4368767714924475,
+          "coverage": 1.0,
+          "sigma_qoi_log": 1.106939128757554,
+          "median_abs_peak_bias_db": 5.859213280264031
+        },
+        "flat1pct_w": {
+          "crps_skill_vs_clim": -0.7955057028373858,
+          "coverage": 1.0,
+          "sigma_qoi_log": 1.0989803153210997,
+          "median_abs_peak_bias_db": 4.191664929620147
+        },
+        "permode_w": {
+          "crps_skill_vs_clim": -2.428239121353103,
+          "coverage": 1.0,
+          "sigma_qoi_log": 1.1633681182859985,
+          "median_abs_peak_bias_db": 7.602982095236826
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "calib_converged": true,
+      "n_modes_with_measured_zeta": 27,
+      "arms": {
+        "flat1pct": {
+          "crps_skill_vs_clim": -1.4314958816714856,
+          "coverage": 1.0,
+          "sigma_qoi_log": 1.1117716591913145,
+          "median_abs_peak_bias_db": 4.998834620639073
+        },
+        "flat1pct_w": {
+          "crps_skill_vs_clim": -0.8103442426453,
+          "coverage": 1.0,
+          "sigma_qoi_log": 1.095756640142561,
+          "median_abs_peak_bias_db": 3.8206409917596185
+        },
+        "permode_w": {
+          "crps_skill_vs_clim": -2.738154869647783,
+          "coverage": 0.9,
+          "sigma_qoi_log": 1.134790691940983,
+          "median_abs_peak_bias_db": 5.2489043902547845
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "calib_converged": true,
+      "n_modes_with_measured_zeta": 27,
+      "arms": {
+        "flat1pct": {
+          "crps_skill_vs_clim": -2.237164956147512,
+          "coverage": 0.9666666666666667,
+          "sigma_qoi_log": 1.0575134217184716,
+          "median_abs_peak_bias_db": 9.3731074819687
+        },
+        "flat1pct_w": {
+          "crps_skill_vs_clim": -1.4012733433776638,
+          "coverage": 1.0,
+          "sigma_qoi_log": 1.061109725987885,
+          "median_abs_peak_bias_db": 7.773264144235048
+        },
+        "permode_w": {
+          "crps_skill_vs_clim": -3.8025888229028055,
+          "coverage": 0.9666666666666667,
+          "sigma_qoi_log": 1.0979777732967062,
+          "median_abs_peak_bias_db": 11.166707502479303
+        }
+      }
+    }
+  ],
+  "runtime_s": 191.20569825172424,
+  "note": "FEM-FORWARD arm (a blind prediction model). The measured-RESIDUE headline method already carries per-mode damping implicitly via R_{d,k}, so this isolates the value of measured \u03b6 for the forward."
+}

@@ -1,0 +1,17 @@
+{
+ "cid": "mr1_mesh2_a1",
+ "track": "random",
+ "round": 1,
+ "cls": "mesh_density",
+ "seed": 20361718,
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    301
+   ]
+  }
+ ],
+ "rationale": "dud replacement draw",
+ "evidence": "none (random)"
+}

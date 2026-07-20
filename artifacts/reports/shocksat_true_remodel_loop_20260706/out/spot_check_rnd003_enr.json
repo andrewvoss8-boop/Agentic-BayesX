@@ -1,0 +1,8 @@
+{
+ "cid": "rnd003_enr",
+ "basis_r": 128,
+ "n_modes": 74,
+ "max_rel_err": 3.6751707188642513e-07,
+ "median_rel_err": 1.3724166247897074e-10,
+ "pass_0p3pct": true
+}

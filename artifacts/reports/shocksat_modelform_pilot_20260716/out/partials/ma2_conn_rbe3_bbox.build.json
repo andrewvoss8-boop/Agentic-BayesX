@@ -1,0 +1,12 @@
+{
+ "n_dof": 400650,
+ "n_rbm": 6,
+ "solve_s_theta1": 471.9,
+ "mass_x": 0.33096862135603466,
+ "build_info": {
+  "quality": null,
+  "moved_nodes": 0,
+  "n_rbe3": 20
+ },
+ "n_params": 9
+}

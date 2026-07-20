@@ -1,0 +1,23 @@
+{
+ "mass_closure_rel_err": 3.3342612970535675e-15,
+ "mass_model_lbm": 591.3653286780856,
+ "mass_hand_lbm": 591.3653286780876,
+ "free_free_n_rbm": 6,
+ "free_free_first_elastic_hz": 13.87193359424645,
+ "free_free_rbm_max_hz": 0.00170883428270585,
+ "n_negative_eigs_nominal": 0,
+ "n_modes_below_500_nominal": 184,
+ "n_modes_below_500_no_shield": 72,
+ "at_least_30_modes": true,
+ "shield_t_limiting": {
+  "first_shield_mode_nominal": 1,
+  "f_nominal": 13.511065128070658,
+  "f_t_x0_5": 6.116,
+  "ratio_x0_5": 0.4527,
+  "f_t_x2": 25.09,
+  "ratio_x2": 1.857,
+  "note": "ideal thin-plate law: ratios 0.5 and 2.0; screw-spring boundaries soften the x2 ratio (boundary becomes relatively more compliant as the panel stiffens)"
+ },
+ "se_fraction_sum_check": 1.0000000002857274,
+ "elapsed_s": 221.9
+}

@@ -1,0 +1,64 @@
+{
+  "deliverable": "best Bayesian updating (modal-feature NUTS) on the updated FEM, clean multi-reference",
+  "n_pooled_modes": 22,
+  "n_observed": 18,
+  "n_heldout_modes": 4,
+  "convergence": {
+    "max_rhat": 1.0022,
+    "min_ESS": 2243.0,
+    "divergences": 0,
+    "converged": true,
+    "chains": 4
+  },
+  "sigma_w2_rel_median": 0.0379,
+  "heldout_mode_freq_coverage": 0.75,
+  "heldout_freq_err_pct_calibrated": 2.68,
+  "heldout_freq_err_pct_nominal": 3.33,
+  "theta_posterior_2.5_50_97.5": {
+    "al_welds": [
+      0.616,
+      1.011,
+      1.64
+    ],
+    "angle_brackets": [
+      0.6,
+      0.968,
+      1.647
+    ],
+    "bottom_box": [
+      0.918,
+      0.96,
+      0.999
+    ],
+    "contact": [
+      0.599,
+      0.991,
+      1.635
+    ],
+    "cross_beam": [
+      0.658,
+      0.941,
+      1.387
+    ],
+    "joints": [
+      0.533,
+      0.823,
+      1.364
+    ],
+    "plates": [
+      0.932,
+      0.998,
+      1.052
+    ],
+    "steel_welds": [
+      0.627,
+      1.02,
+      1.686
+    ],
+    "top_box": [
+      0.95,
+      1.028,
+      1.102
+    ]
+  }
+}

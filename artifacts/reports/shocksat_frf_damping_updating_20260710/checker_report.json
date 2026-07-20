@@ -1,0 +1,115 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 19,
+    "YELLOW": 2,
+    "RED": 0
+  },
+  "gates": [
+    {
+      "gate": "gate_files",
+      "status": "GREEN",
+      "reason": "all present"
+    },
+    {
+      "gate": "reused_integrity",
+      "status": "GREEN",
+      "reason": "all reused sources unchanged"
+    },
+    {
+      "gate": "mechanics_V1_V5",
+      "status": "GREEN",
+      "reason": "V1-V5 pass: V1=eig 1.15e-09, blocks 0.00e+00, V2=|lam_rbm|/lam_el 4.62e-12, f7 474.6 Hz, V3=median|df| 0.0083%, frac>0.5% 0.020, dMAC +0.0100, matched 50, V4=t x2: membrane x2.000 (want 2), bending x7.992 (want 8), V5=re-pairing churns 16 (hung) / 10 (greedy) pairs on +10% shift; frozen pairing untouched=True"
+    },
+    {
+      "gate": "gate_D1_damping_physics",
+      "status": "GREEN",
+      "reason": "damping physics: viscous 0.00045, structural 0.0018, rayleigh 0.0 (<=2%)"
+    },
+    {
+      "gate": "gate_D2_identifiability",
+      "status": "GREEN",
+      "reason": "identifiability@2Hz honored: recovered True, flagged-not-identifiable 3 (survey in-band zeta 0.06-1.05% (median 0.32%) => half-power bands 0.10-1.25 lines (median 0.53); ALL 33 in-band modes < 1.5 lines. At 2 Hz + noise sigma_log=0.06, per-mode zeta recovery error in that regime is 27% (median), vs 14% best-resolved => per-mode/narrow-band zeta NOT identifiable; only band-average zeta weakly constrained by the off-resonance envelope (D7). Damping enters the loop as band/Rayleigh/joint-eta LOW-DIM params, never per mode.)"
+    },
+    {
+      "gate": "gate_F_metrics",
+      "status": "GREEN",
+      "reason": "FDAC/FRAC/FRSF correct on all 4 synthetic sub-tests (identical, freq-shift, amp-scale, phase-flip)"
+    },
+    {
+      "gate": "gate_O_observability",
+      "status": "GREEN",
+      "reason": "observability computed: 0.07 residual unobservable, self-MAC off-diag 0.9972, Fisher rank 36/40"
+    },
+    {
+      "gate": "query_budget",
+      "status": "GREEN",
+      "reason": "within budget: agent 21<=60, random 40<=60"
+    },
+    {
+      "gate": "no_dev_residual_leak",
+      "status": "GREEN",
+      "reason": "loop.py contains no direct drive-cache reads (dev returns scalars only)"
+    },
+    {
+      "gate": "no_amplitude_or_damping_lsq",
+      "status": "GREEN",
+      "reason": "score.py: one global gain + low-dim physical damping only, no per-mode amp/damping LSQ"
+    },
+    {
+      "gate": "damping_dim_le_10",
+      "status": "GREEN",
+      "reason": "all audited candidates have damping_dim <= 10"
+    },
+    {
+      "gate": "exact_basis_decision_scores",
+      "status": "GREEN",
+      "reason": "all 6 freeze-set spot checks within exact-basis tol 0.003"
+    },
+    {
+      "gate": "physical_damping_bounds",
+      "status": "GREEN",
+      "reason": "all audited arms within physical damping bounds zeta[0.002,0.05] eta<=0.2"
+    },
+    {
+      "gate": "a0d_baseline_present",
+      "status": "GREEN",
+      "reason": "A0d damping-updated baseline present"
+    },
+    {
+      "gate": "s4_ablation",
+      "status": "GREEN",
+      "reason": "S4 ablation: damping_share -0.105 -> improvement is shape/theta; DAMPING lever unproven"
+    },
+    {
+      "gate": "vault_freeze_ordering",
+      "status": "GREEN",
+      "reason": "finalists frozen before vault read; vault graded once"
+    },
+    {
+      "gate": "nuts_finalists",
+      "status": "YELLOW",
+      "reason": "non-converged finalist(s) [('nuts_A0_enr.json', 24.798, 2.0, 0.0, False)] -> intervals not-trustworthy"
+    },
+    {
+      "gate": "leave_modes_out",
+      "status": "GREEN",
+      "reason": "leave-modes-out present, all widen>1.0 across 6 arm(s)"
+    },
+    {
+      "gate": "figures_legibility",
+      "status": "GREEN",
+      "reason": "5 figures present + legibility QA passed"
+    },
+    {
+      "gate": "runtime_accounting",
+      "status": "GREEN",
+      "reason": "active 8722.7s <= elapsed 8722.7s"
+    },
+    {
+      "gate": "s1_s2_s3_s4_verdicts",
+      "status": "YELLOW",
+      "reason": "pre-registered claim FALSIFIED (honest outcome): pre-registered claim FALSIFIED: S1 FAIL; S2 FAIL; S3 FAIL; S4 FAIL"
+    }
+  ]
+}

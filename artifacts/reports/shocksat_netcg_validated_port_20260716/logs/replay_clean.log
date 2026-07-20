@@ -1,0 +1,92 @@
+[1/6] GATE N0 — reproduce the delivered twin (1.508/2.301/2.526, tol 0.05) through the ORIGINAL
+      netcg machinery + its reduced model + the reused L5 theta posterior.  HARD GATE.
+reduced model: nM=40 in-band modes 54.6-258.9 Hz, 20 measured
+L5 posterior (REUSED): (4000, 9) draws, converged=True max_rhat=1.0012933731423992 min_ess=2646.2731676508342 div=0
+[shear_X] statfem_Fk width 1.508x vs target 1.508 (|err| 0.0000)  cov 0.995
+[shear_Y] statfem_Fk width 2.301x vs target 2.301 (|err| 0.0000)  cov 0.982
+[normal_Z] statfem_Fk width 2.526x vs target 2.526 (|err| 0.0000)  cov 0.987
+
+GATE N0: PASS  (max |err| 0.0000 vs tol 0.05)
+DIAGNOSTIC same-band: netcg convention 1.508 vs study convention 21.660
+wrote out/n0_reference.json
+[2/6] MC noise floor of the width-ratio statistic (24 seeds) — what counts as a real difference
+[shear_X] delivered 1.508 | over 24 seeds: mean 1.517 sd 0.0106 (0.7%) -> a width difference must exceed ~0.021 to be MC-meaningful
+[shear_Y] delivered 2.301 | over 24 seeds: mean 2.324 sd 0.0355 (1.53%) -> a width difference must exceed ~0.071 to be MC-meaningful
+[normal_Z] delivered 2.526 | over 24 seeds: mean 2.477 sd 0.0453 (1.83%) -> a width difference must exceed ~0.091 to be MC-meaningful
+wrote out/mc_noise.json
+[3/6] GATE N1 — bridge: theta POINT vs MODEL decomposition of the study's width gap (diagnostic)
+group-order bridge OK: ['al_welds', 'angle_brackets', 'bottom_box', 'contact', 'cross_beam', 'joints', 'plates', 'steel_welds', 'top_box']
+[shear_X] A(delivered)=1.508  B(L5 median pt)=0.74  C(study theta pt)=1.72  | study published=8.225  residual=6.505
+[shear_Y] A(delivered)=2.301  B(L5 median pt)=1.189  C(study theta pt)=0.744  | study published=3.66  residual=2.916
+[normal_Z] A(delivered)=2.526  B(L5 median pt)=2.18  C(study theta pt)=1.727  | study published=5.117  residual=3.39
+
+wrote out/n1_bridge.json
+[4/6] S3 (finalists B/D/R x 3 mapping variants, held-out DEV drives) + S4 (A5b tier update / H4)
+      +XY vault guard active: any read of the +XY drive RAISES.
+Gate N0 PASS confirmed (max |err| 0.0) -> proceeding to 3.
+
+hook-1 reduction to netcg (max |d ufrac|): {'shear_X': '5.55e-16', 'shear_Y': '4.44e-16', 'normal_Z': '4.44e-16'}
+delivered (N0) reconfirmed: {'shear_X': 1.508, 'shear_Y': 2.301, 'normal_Z': 2.526}
+
+=== S4: A5b tier update inside the netcg machinery ===
+  extended clusters matched to netcg in-band modes (<=2%): [{'cluster_hz': 254.3, 'netcg_mode_hz': 254.9, 'mode_idx': 36, 'already_measured': False}]
+  data-driven SD_A applied: [{'mode_hz': 254.9, 'sd_obs': 1.393, 'sda_applied': 1.393, 'sda_before_netcg_tier': 0.8}]
+  [shear_X] delivered 1.508x -> tier-updated 1.519x (cov 0.995) | widen-audit 1.407
+  [shear_Y] delivered 2.301x -> tier-updated 2.319x (cov 0.982) | widen-audit 1.317
+  [normal_Z] delivered 2.526x -> tier-updated 2.958x (cov 0.989) | widen-audit 1.04
+
+=== S3: repair-corrected finalists through the mapping ===
+  baseline-through-mapping: {'shear_X': 1.508, 'shear_Y': 2.301, 'normal_Z': 2.526}  (targets {'shear_X': 1.508, 'shear_Y': 2.301, 'normal_Z': 2.526})
+  [B/full] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 1.0 over 4 drives
+  [B/full] shear_X 2.04x (deliv 1.508) | shear_Y 7.954x (deliv 2.301) | normal_Z 8.117x (deliv 2.526)
+  [B/freq_only] held-out DEV coverage: shear_X: min 0.963 over 4 drives | shear_Y: min 0.59 over 4 drives
+  [B/freq_only] shear_X 1.511x (deliv 1.508) | shear_Y 2.276x (deliv 2.301) | normal_Z 2.498x (deliv 2.526)
+  [B/cluster_amp] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 1.0 over 4 drives
+  [B/cluster_amp] shear_X 1.25x (deliv 1.508) | shear_Y 2.411x (deliv 2.301) | normal_Z 5.355x (deliv 2.526)
+  [D/full] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 1.0 over 4 drives
+  [D/full] shear_X 2.176x (deliv 1.508) | shear_Y 37.685x (deliv 2.301) | normal_Z 6.122x (deliv 2.526)
+  [D/freq_only] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.594 over 4 drives
+  [D/freq_only] shear_X 1.495x (deliv 1.508) | shear_Y 2.285x (deliv 2.301) | normal_Z 2.544x (deliv 2.526)
+  [D/cluster_amp] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.712 over 4 drives
+  [D/cluster_amp] shear_X 1.213x (deliv 1.508) | shear_Y 2.475x (deliv 2.301) | normal_Z 6.08x (deliv 2.526)
+  [R/full] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.612 over 4 drives
+  [R/full] shear_X 9.241x (deliv 1.508) | shear_Y 2.671x (deliv 2.301) | normal_Z 7.792x (deliv 2.526)
+  [R/freq_only] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.592 over 4 drives
+  [R/freq_only] shear_X 1.489x (deliv 1.508) | shear_Y 2.303x (deliv 2.301) | normal_Z 2.52x (deliv 2.526)
+  [R/cluster_amp] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.586 over 4 drives
+  [R/cluster_amp] shear_X 1.339x (deliv 1.508) | shear_Y 2.238x (deliv 2.301) | normal_Z 53.567x (deliv 2.526)
+
+  baseline held-out DEV coverage (the delivered twin, for reference):
+  [DELIVERED] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.596 over 4 drives
+
+S3: YELLOW (met=None)   S4: YELLOW (met=False)
+vault: 0 +XY reads (must be 0)
+wrote out/verdicts_S3S4.json, out/s3_mapping.json, out/vault_guard.json, out/band_curves.npz
+[5/6] Figures (Tufte-linted) + image-legibility QA
+wrote 4 figures to figures/
+[PASS] fig_n0_bands.png: 1811x1235, ink 0.077, caption ink 0.09542
+[PASS] fig_n1_theta_bridge.png: 2190x809, ink 0.086, caption ink 0.05546
+[PASS] fig_s4_tier_update.png: 1967x985, ink 0.135, caption ink 0.06797
+[PASS] fig_s3_finalists.png: 2163x1172, ink 0.061, caption ink 0.06045
+
+tufte_lint: 0 WARN / 3 INFO (each adjudicated in out/tufte_lint.json)
+wrote out/fig_qa.json, out/tufte_lint.json
+[6/6] Checker (immutable, SHA-locked). Exits non-zero ONLY on RED.
+====================================================================================================
+CHECKER — validated net-CG QOI port (card B, 2026-07-16)   [immutable, SHA-locked]
+====================================================================================================
+[GREEN ] G01: N0 PASS: delivered bands reproduced within +-0.05 — shear_X 1.508 vs 1.508 (|err| 0.0000), shear_Y 2.301 vs 2.301 (|err| 0.0000), normal_Z 2.526 vs 2.526 (|err| 0.0000)
+[GREEN ] G02: all statistics finite across 9 out/*.json; no null headline numbers (guards the C8 defect).
+[GREEN ] G03: baseline-through-mapping reproduces N0 (max |err| 0.0000; identity BY CONSTRUCTION per D2 — plumbing check only) AND mapping is non-inert (B/full: max|dfreq-1|=0.0408, max|ln a|=9.6308; B/freq_only: max|dfreq-1|=0.0408, max|ln a|=0.0000; B/cluster_amp: max|dfreq-1|=0.0408, max|ln a|=9.0950; D/full: max|dfreq-1|=0.0461, max|ln a|=8.2214; D/freq_only: max|dfreq-1|=0.0461, max|ln a|=0.0000; D/cluster_amp: max|dfreq-1|=0.0461, max|ln a|=4.6162; R/full: max|dfreq-1|=0.0652, max|ln a|=6.1498; R/freq_only: max|dfreq-1|=0.0652, max|ln a|=0.0000; R/cluster_amp: max|dfreq-1|=0.0652, max|ln a|=11.1659).
+[GREEN ] G04: no unannotated per-mode amplitude LSQ; every fit is annotated CHECKER-OK(non-selection) = answer-key construction only.
+[GREEN ] G05: no +XY reads (grep clean; runtime guard xy_files_opened=0, dev drives only: ['m_xpos_990x', 'm_zpos_990z', 'm_zpos_900z', 'm_ypos_990y']). The +XY QOI answer key stays unbuilt.
+[GREEN ] G06: 4 figures, all scripted (2 fig_*.py), Tufte-linted (0 WARN reviewed), image-QA passed.
+[GREEN ] G07: active_runtime_s=96.79s <= elapsed_wallclock_s=97.46s (Mac CPU, float64, OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1. Per docs/compute_protocol.md the CPU is the default and the source of truth; no GPU is used or needed — this card runs NO sampler (the L5 NUTS posterior is reused cached draws) and every forward solve is a 74x74 or 194x194 dense eigh.).
+[GREEN ] G08: checker matches its SHA lock (e235e9fcd714a1c0…) — not edited during the trial.
+[GREEN ] G09: all deliverables present; 22 reused read-only sources verified unchanged.
+[GREEN ] G10: no new sampler; theta provenance = 'REUSED L5 NUTS draws from netcg out/theta_post_L5.npz (4000 draws, inherited convergence: max R-hat 1.0013, min ESS 2646, 0 divergences). No sampler is run in this card.' (reused draws, labeled).
+----------------------------------------------------------------------------------------------------
+OVERALL: GREEN   (10 GREEN / 0 YELLOW / 0 RED)
+Exit is non-zero ONLY on RED; documented YELLOW does not abort replay (AGENTS Result Status Standard).
+wrote /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_validated_port_20260716/checker_report.json
+done.

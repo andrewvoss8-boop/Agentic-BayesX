@@ -1,0 +1,33 @@
+{
+ "tag": "p3b",
+ "per_variable": {
+  "sigma_f": {
+   "r_hat_max": 1.1939754712913362,
+   "ess_min": 8.911000202182095
+  },
+  "theta_T": {
+   "r_hat_max": 1.288154524612016,
+   "ess_min": 6.134503267744454
+  },
+  "theta_pool": {
+   "r_hat_max": 1.5155509565386818,
+   "ess_min": 4.4031407928911275
+  }
+ },
+ "worst_rhat": 1.5155509565386818,
+ "min_ess": 4.4031407928911275,
+ "divergences": 0,
+ "divergence_fraction": 0.0,
+ "gate_pass": false,
+ "settings": {
+  "nwarm": 1000,
+  "ndraw": 1000,
+  "max_tree_depth": 8,
+  "chains": 4
+ },
+ "pooling": [
+  "k_tx + k_ty + k_tz",
+  "k_rx + k_ry",
+  "k_rz"
+ ]
+}

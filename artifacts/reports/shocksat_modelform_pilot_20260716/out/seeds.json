@@ -1,0 +1,244 @@
+{
+ "seed_base": 20260716,
+ "scheme": "seed = base + 1000*round + slot + 100000*attempt",
+ "draws": [
+  {
+   "cid": "mr1_conn0",
+   "seed": 20261716,
+   "round": 1,
+   "cls": "connectivity",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_conn1",
+   "seed": 20261717,
+   "round": 1,
+   "cls": "connectivity",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_mesh2",
+   "seed": 20261718,
+   "round": 1,
+   "cls": "mesh_density",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_mesh3",
+   "seed": 20261719,
+   "round": 1,
+   "cls": "mesh_density",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_elem4",
+   "seed": 20261720,
+   "round": 1,
+   "cls": "element_formulation",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_elem5",
+   "seed": 20261721,
+   "round": 1,
+   "cls": "element_formulation",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_geom6",
+   "seed": 20261722,
+   "round": 1,
+   "cls": "geometry",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_geom7",
+   "seed": 20261723,
+   "round": 1,
+   "cls": "geometry",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_prop8",
+   "seed": 20261724,
+   "round": 1,
+   "cls": "property_control",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_prop9",
+   "seed": 20261725,
+   "round": 1,
+   "cls": "property_control",
+   "attempt": 0
+  },
+  {
+   "cid": "mr1_mesh2_a1",
+   "seed": 20361718,
+   "round": 1,
+   "cls": "mesh_density",
+   "attempt": 1
+  },
+  {
+   "cid": "mr1_mesh3_a1",
+   "seed": 20361719,
+   "round": 1,
+   "cls": "mesh_density",
+   "attempt": 1
+  },
+  {
+   "cid": "mr2_conn0",
+   "seed": 20262716,
+   "round": 2,
+   "cls": "connectivity",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_conn1",
+   "seed": 20262717,
+   "round": 2,
+   "cls": "connectivity",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_mesh2",
+   "seed": 20262718,
+   "round": 2,
+   "cls": "mesh_density",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_mesh3",
+   "seed": 20262719,
+   "round": 2,
+   "cls": "mesh_density",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_elem4",
+   "seed": 20262720,
+   "round": 2,
+   "cls": "element_formulation",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_elem5",
+   "seed": 20262721,
+   "round": 2,
+   "cls": "element_formulation",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_geom6",
+   "seed": 20262722,
+   "round": 2,
+   "cls": "geometry",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_geom7",
+   "seed": 20262723,
+   "round": 2,
+   "cls": "geometry",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_prop8",
+   "seed": 20262724,
+   "round": 2,
+   "cls": "property_control",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_prop9",
+   "seed": 20262725,
+   "round": 2,
+   "cls": "property_control",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_conn0_a1",
+   "seed": 20362716,
+   "round": 2,
+   "cls": "connectivity",
+   "attempt": 1
+  },
+  {
+   "cid": "mr3_conn0",
+   "seed": 20263716,
+   "round": 3,
+   "cls": "connectivity",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_conn1",
+   "seed": 20263717,
+   "round": 3,
+   "cls": "connectivity",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_mesh2",
+   "seed": 20263718,
+   "round": 3,
+   "cls": "mesh_density",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_mesh3",
+   "seed": 20263719,
+   "round": 3,
+   "cls": "mesh_density",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_elem4",
+   "seed": 20263720,
+   "round": 3,
+   "cls": "element_formulation",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_elem5",
+   "seed": 20263721,
+   "round": 3,
+   "cls": "element_formulation",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_geom6",
+   "seed": 20263722,
+   "round": 3,
+   "cls": "geometry",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_geom7",
+   "seed": 20263723,
+   "round": 3,
+   "cls": "geometry",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_prop8",
+   "seed": 20263724,
+   "round": 3,
+   "cls": "property_control",
+   "attempt": 0
+  },
+  {
+   "cid": "mr3_prop9",
+   "seed": 20263725,
+   "round": 3,
+   "cls": "property_control",
+   "attempt": 0
+  },
+  {
+   "cid": "mr2_conn1_a1",
+   "seed": 20362717,
+   "round": 2,
+   "cls": "connectivity",
+   "attempt": 1
+  }
+ ]
+}

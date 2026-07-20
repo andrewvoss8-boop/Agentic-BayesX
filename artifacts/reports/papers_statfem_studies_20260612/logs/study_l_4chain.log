@@ -1,0 +1,8 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+freqonly {'max_rhat': 1.0066, 'min_ess': 257.5976, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 118.1779}
+  L_freqonly: QOI 5/5  median band-ratio 4.83x  cover [True, True, True, True, True]
+freqamp {'max_rhat': 14.7559, 'min_ess': 2.0107, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 1148.6475}
+  L_freqamp: QOI 0/5  median band-ratio 4.67x  cover [False, False, False, False, False]
+VERDICT: freqamp does NOT converge (amplitude ridge) -> width is fundamental w/o multi-ref data
+saved studyl_summary.json

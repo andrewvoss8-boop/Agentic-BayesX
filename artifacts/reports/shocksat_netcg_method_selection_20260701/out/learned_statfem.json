@@ -1,0 +1,36 @@
+{
+  "observable": "SHEAR held-out-drive log-residuals (5 drives x {X,Y}), per-drive mean removed",
+  "n_series": 10,
+  "n_freq_points": 36,
+  "sampler": "NUTS 4 chains",
+  "converged": true,
+  "diag": {
+    "max_rhat": 1.001,
+    "min_ess": 2083.0,
+    "divergences": 0
+  },
+  "posterior": {
+    "sigma_d_logamp": [
+      0.82,
+      0.939,
+      1.07
+    ],
+    "ell_octaves": [
+      0.082,
+      0.102,
+      0.129
+    ],
+    "sigma_n_logamp": [
+      0.479,
+      0.554,
+      0.636
+    ]
+  },
+  "compare": {
+    "assumed_statFEM_Fk_marginal": 0.25,
+    "DD3_data_anchored_SD_A_M": 0.86,
+    "learned_sigma_d_median": 0.939
+  },
+  "verdict": "LEARNED discrepancy marginal sigma_d = 0.94 (log-amp), correlation length 0.10 octaves. This is >> the assumed statFEM F(k) marginal 0.25 and consistent with DD3's cross-drive 0.86 -> the shear model-form discrepancy is LARGER than the bake-off assumed; the honest (learned) shear band is WIDER. Both independent routes (DD2 likelihood-inferred, DD3 cross-drive) agree.",
+  "note": "GP discrepancy in LOG-frequency; per-drive mean removed (gain nuisance). float64."
+}

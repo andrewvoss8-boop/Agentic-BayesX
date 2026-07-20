@@ -1,0 +1,18 @@
+{
+ "edit_id": "steel_rho_lo",
+ "n_matched_modes": 28,
+ "global_MAC": 0.611,
+ "fundamental_MAC": 0.97,
+ "low3_MAC": [
+  0.97,
+  0.61,
+  0.63
+ ],
+ "FRF_logmag_corr_median": 0.237,
+ "FRF_logmag_corr_mean": 0.18,
+ "FRF_corr_frac_above_0.5": 0.14,
+ "FRF_peak_ampl_err_dB_median": 17.0,
+ "n_channels": 84,
+ "n_refs": 4,
+ "runtime_s": 467.7
+}

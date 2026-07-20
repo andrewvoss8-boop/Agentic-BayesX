@@ -1,0 +1,81 @@
+{
+  "overall": "YELLOW",
+  "green": 18,
+  "red": 0,
+  "yellow": 1,
+  "yellow_caveat": "This is a triage screen; hysteresis is not proven by a force-displacement loop.",
+  "checks": [
+    {
+      "name": "exists:results.json",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:analysis_report.md",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:runtime.json",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:mpl_ruler_amplitude_screen.png",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:dataset_status_summary.png",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:priority_deliverables.md",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:decisions_log.md",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:assumptions_ledger.md",
+      "status": "GREEN"
+    },
+    {
+      "name": "exists:quantity_contracts.md",
+      "status": "GREEN"
+    },
+    {
+      "name": "overall_status_yellow",
+      "status": "GREEN"
+    },
+    {
+      "name": "mpl_signs_present",
+      "status": "GREEN"
+    },
+    {
+      "name": "shocksat_low_coherence_caveat",
+      "status": "GREEN"
+    },
+    {
+      "name": "panel_amplitude_sweep_caveat",
+      "status": "GREEN"
+    },
+    {
+      "name": "report_mentions:MPL test stand: YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "name": "report_mentions:ShockSat: YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "name": "report_mentions:Suspended panel: YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "name": "report_mentions:not a calibrated hysteresis loop",
+      "status": "GREEN"
+    },
+    {
+      "name": "report_mentions:Overall status: YELLOW",
+      "status": "GREEN"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "deliverable": "Frequency-domain control: D22-style width fit on the CLEAN modal caches (df=2.03 Hz)",
+  "df_hz": 2.035,
+  "n_modes": 16,
+  "n_modes_identified_freq_domain_cleandata": 7,
+  "d22_noisy_test07": "0/9 identified (frequency domain, df=1.25 Hz)",
+  "layer1_time_domain": "14/16 resolved (time domain, same clean data)",
+  "rows": [
+    {
+      "f_hz": 75.3,
+      "n_refs": 2,
+      "n_identified_refs": 1,
+      "median_ci_logwidth_frac_of_prior": 0.095,
+      "identified_any": true
+    },
+    {
+      "f_hz": 99.7,
+      "n_refs": 2,
+      "n_identified_refs": 2,
+      "median_ci_logwidth_frac_of_prior": 0.042,
+      "identified_any": true
+    },
+    {
+      "f_hz": 122.1,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 126.1,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 136.3,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 138.3,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 140.4,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 162.8,
+      "n_refs": 3,
+      "n_identified_refs": 2,
+      "median_ci_logwidth_frac_of_prior": 0.167,
+      "identified_any": true
+    },
+    {
+      "f_hz": 172.9,
+      "n_refs": 4,
+      "n_identified_refs": 4,
+      "median_ci_logwidth_frac_of_prior": 0.021,
+      "identified_any": true
+    },
+    {
+      "f_hz": 189.2,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 195.3,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 197.3,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 199.4,
+      "n_refs": 0,
+      "identified_any": false
+    },
+    {
+      "f_hz": 234.0,
+      "n_refs": 4,
+      "n_identified_refs": 4,
+      "median_ci_logwidth_frac_of_prior": 0.03,
+      "identified_any": true
+    },
+    {
+      "f_hz": 244.1,
+      "n_refs": 4,
+      "n_identified_refs": 4,
+      "median_ci_logwidth_frac_of_prior": 0.021,
+      "identified_any": true
+    },
+    {
+      "f_hz": 254.3,
+      "n_refs": 4,
+      "n_identified_refs": 4,
+      "median_ci_logwidth_frac_of_prior": 0.026,
+      "identified_any": true
+    }
+  ],
+  "runtime_s": 1.2,
+  "verdict": "Two levers, both real: (1) CLEAN multi-hit modal data lifts the FREQUENCY-domain width fit from D22's 0/9 (noisy single Test07 tap, df=1.25 Hz) to 7/16 here (df=2.03 Hz) -- the many clean channels help even in frequency. (2) The TIME domain reaches 14/16 on the SAME clean data: it additionally resolves the LIGHT/sub-bin-width modes (half-power Delta_f=2*zeta*f < df, where the width fit stays prior-dominated) and is less defeated by close-mode clusters. So the hypothesis holds -- time-domain decay resolves zeta the windowed FRF cannot -- with the honest caveat that part of the gain vs D22 is data cleanliness, and the time domain's specific extra is the sub-bin modes."
+}

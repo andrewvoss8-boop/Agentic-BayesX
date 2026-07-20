@@ -1,0 +1,5 @@
+seed 0: held out 31 (2 hard); QOI-disc sigma 1.11
+  NON-HARD (n29): twin coverage 1.00  CRPS-skill vs climatology -0.76  (twin CRPS 69 vs clim 39); FEM point miss median 4.6 dB (41% >6dB)
+  HARD     (n2): twin coverage 0.50  CRPS-skill -2.79; FEM point miss median 20.2 dB
+  by snap (non-hard): 0-1in skill -0.76 (n29)
+  runtime 186s

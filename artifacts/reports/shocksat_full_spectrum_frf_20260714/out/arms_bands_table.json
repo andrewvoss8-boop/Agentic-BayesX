@@ -1,0 +1,119 @@
+{
+ "arms": {
+  "A0": {
+   "sub200": {
+    "mean": 0.1116,
+    "se": null,
+    "screening": 0.1308
+   },
+   "b200_500": {
+    "mean": 0.0501,
+    "se": null,
+    "screening": 0.0742
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   }
+  },
+  "A1": {
+   "sub200": {
+    "mean": 0.1137,
+    "se": null,
+    "screening": 0.1454
+   },
+   "b200_500": {
+    "mean": 0.0335,
+    "se": null,
+    "screening": 0.0582
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   }
+  },
+  "B": {
+   "sub200": {
+    "mean": 0.1541,
+    "se": null,
+    "screening": 0.142
+   },
+   "b200_500": {
+    "mean": 0.1974,
+    "se": null,
+    "screening": 0.1679
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   }
+  },
+  "C": {
+   "sub200": {
+    "mean": 0.157,
+    "se": null,
+    "screening": 0.1893
+   },
+   "b200_500": {
+    "mean": 0.022,
+    "se": null,
+    "screening": 0.0579
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   }
+  },
+  "D": {
+   "sub200": {
+    "mean": 0.1634,
+    "se": null,
+    "screening": 0.1794
+   },
+   "b200_500": {
+    "mean": 0.1882,
+    "se": null,
+    "screening": 0.1882
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   }
+  },
+  "R": {
+   "sub200": {
+    "mean": 0.1651,
+    "se": null,
+    "screening": 0.1657
+   },
+   "b200_500": {
+    "mean": 0.1888,
+    "se": null,
+    "screening": 0.1844
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   }
+  },
+  "F": {
+   "sub200": {
+    "mean": 0.1651,
+    "se": null,
+    "screening": 0.1657
+   },
+   "b200_500": {
+    "mean": 0.1888,
+    "se": null,
+    "screening": 0.1844
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible ~640 Hz; scored freq cap 500 Hz (D11)"
+   },
+   "equals": "R"
+  }
+ },
+ "basis": "EXACT (enriched at theta_MAP, D22); theta=1 dev scores are SCREENING",
+ "note": "fold-averaged held-out per-channel log|H| corr (P1'). b500_ceiling not certified (FEM basis credible ~640 Hz; scored <=500)."
+}

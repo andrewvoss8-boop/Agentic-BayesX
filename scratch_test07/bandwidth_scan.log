@@ -1,0 +1,30 @@
+hit 001: fs=250000 Hz, record 1.000 s, impact at 500.6 ms, post-impact 0.499 s, 127 accel ch
+    non-g channel: Ch D20 [lb] std=0.27 max|x|=1.28
+hit 002: fs=250000 Hz, record 1.000 s, impact at 500.0 ms, post-impact 0.500 s, 127 accel ch
+    non-g channel: Ch D20 [lb] std=0.165 max|x|=1.16
+hit 003: fs=250000 Hz, record 1.000 s, impact at 500.6 ms, post-impact 0.499 s, 127 accel ch
+    non-g channel: Ch D20 [lb] std=0.164 max|x|=0.983
+hit 004: fs=250000 Hz, record 1.000 s, impact at 500.6 ms, post-impact 0.499 s, 127 accel ch
+    non-g channel: Ch D20 [lb] std=0.165 max|x|=0.853
+
+--- SNR vs frequency ---
+median-channel SNR>=10 dB ceiling: 2390 Hz (25th-pct channel: 1059 Hz)
+
+--- cross-hit coherence ---
+median cross-hit coherence >= 0.9 up to ~2042 Hz (n=4 hits; per-octave medians ['0.36', '0.58', '0.72', '0.76', '0.90', '0.78', '0.55'])
+
+--- ring-down duration per octave band ---
+     45-   90 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+     90-  180 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+    180-  355 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+    355-  710 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+    710- 1400 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+   1400- 2800 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+   2800- 5600 Hz: signal above noise for 0.500 s of 0.500 s available  << TRUNCATED by record length
+usable frame for sub-200 work: 0.500 s -> achievable df = 2.00 Hz (current caches: 2.03 Hz)
+
+sub-200 survey modes: 22; half-power bands 0.20-2.49 Hz (median 0.81)
+resolvable (>=3 lines across half-power): 0/22 at 2.03 Hz -> 0/22 at 2.00 Hz; median mode needs df<=0.27 Hz
+saved bandwidth_scan.json
+saved bandwidth_scan_curves.npz (for cheap replots)
+saved /Users/avoss/Downloads/bayesX/Agentic BayesX/scratch_test07/fig_bandwidth_scan.png

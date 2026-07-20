@@ -1,0 +1,4 @@
+M2 seed 0: converged False R-hat 84.8 div 0 | peak_interval 764 band_interval 2.16e+03 | 1827s
+M2 seed 1: converged False R-hat 68.8 div 0 | peak_interval 3.15e+03 band_interval 9.56e+03 | 6745s
+M2 seed 2: converged False R-hat 163.1 div 0 | peak_interval 1.76e+03 band_interval 5.78e+03 | 7398s
+M2 0-2 DONE

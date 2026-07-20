@@ -1,0 +1,180 @@
+{
+  "task": "Review three new papers for ShockSat applicability and create runner prompts where applicable.",
+  "overall": "YELLOW",
+  "counts": {
+    "green": 41,
+    "yellow": 1,
+    "red": 0
+  },
+  "checks": [
+    {
+      "gate": "required_file:priority_deliverables.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:decisions_log.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:bibliography.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:paper_applicability_review.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:runner_prompts/01_sequential_statfem_shocksat_runner_prompt.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:runner_prompts/02_latent_force_bnn_shocksat_runner_prompt.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:runner_prompts/03_multilevel_rom_submodel_shocksat_runner_prompt.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:runtime.json",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Multi-level digital twin",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Statistical finite elements",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Probabilistic Digital Twin",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Applicability: HIGH",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Applicability: MODERATE-HIGH",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Applicability: MODERATE-LOW",
+      "status": "GREEN"
+    },
+    {
+      "gate": "review_phrase:Overall: YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:AGENTS.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:held-out",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:check.py",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:runtime.json",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:GREEN",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:01_sequential_statfem_shocksat_runner_prompt.md:RED",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:AGENTS.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:held-out",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:check.py",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:runtime.json",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:GREEN",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:02_latent_force_bnn_shocksat_runner_prompt.md:RED",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:AGENTS.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:held-out",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:check.py",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:runtime.json",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:GREEN",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:YELLOW",
+      "status": "GREEN"
+    },
+    {
+      "gate": "prompt:03_multilevel_rom_submodel_shocksat_runner_prompt.md:RED",
+      "status": "GREEN"
+    },
+    {
+      "gate": "honesty_caution:No ShockSat metric has improved",
+      "status": "GREEN"
+    },
+    {
+      "gate": "honesty_caution:empirical Bayes",
+      "status": "GREEN"
+    },
+    {
+      "gate": "honesty_caution:not a Bayesian/statFEM contribution",
+      "status": "GREEN"
+    },
+    {
+      "gate": "honesty_caution:offline",
+      "status": "GREEN"
+    },
+    {
+      "gate": "honesty_caution:no measured local stress",
+      "status": "GREEN"
+    },
+    {
+      "gate": "exploratory_status",
+      "status": "YELLOW",
+      "note": "Runner prompts are hypotheses only; no ShockSat improvement is claimed until a future checker-backed run."
+    }
+  ]
+}

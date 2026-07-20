@@ -1,0 +1,70 @@
+{
+  "deliverable": "IFT_TMCMC_heldout_sensor_QOI",
+  "arm": "IFT_physics_prior_learned_beta_TMCMC",
+  "sampler": "TMCMC (multimodal escalation; copied tmcmc.py)",
+  "split_seed": 0,
+  "observable": "log|H| (SAME as M2; log-magnitude moment approximation, D0/D1)",
+  "n_population": 1500,
+  "n_runs": 4,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "convergence": {
+    "max_rhat_crossrun": 1.0007920852039258,
+    "min_ess": 1370.7403155936472,
+    "rhat_per_dim": [
+      0.9999720082374006,
+      0.9998936680697613,
+      1.0005156159177513,
+      1.0007920852039258,
+      0.999901551464855,
+      0.9998629694124204
+    ],
+    "converged": true,
+    "log_evidence_mean": -18208.16235789889,
+    "log_evidence_std": 0.22444342770407366,
+    "mean_accept_rate": 0.32796712662337657,
+    "mean_stages": 21.25
+  },
+  "beta_posterior": {
+    "beta_med": 0.16770744241506266,
+    "logbeta_med": -1.7855342317992302,
+    "logbeta_lo": -1.8172842413078931,
+    "logbeta_hi": -1.7539029758242557,
+    "logbeta_ci_width": 0.06338126548363743,
+    "beta_star": 42.75519577556985,
+    "log_beta_star": 3.755490726607372,
+    "prior_logsd": 2.0,
+    "bounded_no_runaway": true,
+    "collapsed": true,
+    "weakly_identified": false
+  },
+  "gain_c0": 6.437223628988916,
+  "scores": {
+    "peak": {
+      "interval_score_mean": 7330.799968065689,
+      "crps_mean": 77.79252457063245,
+      "logpd_mean": -5.924878783299227,
+      "coverage_frac": 1.0,
+      "mean_width_db": 39.80975592109677,
+      "pit_ks_dev": 0.1485483870967742,
+      "pit_mean": 0.5612096774193548,
+      "z_mean": 0.29216013631804477,
+      "z_std": 0.664288022839461,
+      "n_channels": 31
+    },
+    "band": {
+      "interval_score_mean": 112262.72994384897,
+      "crps_mean": 1697.081593754725,
+      "logpd_mean": -7.999302773542742,
+      "coverage_frac": 1.0,
+      "mean_width_db": 58.65467326773817,
+      "pit_ks_dev": 0.25233870967741934,
+      "pit_mean": 0.5685483870967742,
+      "z_mean": 0.12682173518986312,
+      "z_std": 0.2828175115624271,
+      "n_channels": 31
+    }
+  },
+  "n_draws_used": 400,
+  "runtime_s": 1836.5742478370667
+}

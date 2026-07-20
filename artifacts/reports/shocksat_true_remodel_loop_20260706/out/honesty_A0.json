@@ -1,0 +1,28 @@
+{
+ "cid": "A0",
+ "shear_X": {
+  "hidden_modes_inb_idx": [
+   12,
+   30,
+   13
+  ],
+  "widen_ratio": 1.0837
+ },
+ "shear_Y": {
+  "hidden_modes_inb_idx": [
+   7,
+   22,
+   34
+  ],
+  "widen_ratio": 1.0885
+ },
+ "normal_Z": {
+  "hidden_modes_inb_idx": [
+   33,
+   6,
+   19
+  ],
+  "widen_ratio": 1.0742
+ },
+ "lmo_widen_ratio": 1.0742
+}

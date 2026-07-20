@@ -1,0 +1,74 @@
+== sweep ==
+== e_limit ==
+== aggregate ==
+== fig_testbed ==
+== fig_coverage ==
+== fig_sigmad ==
+== fig_alpha ==
+== fig_limit ==
+== fig_identifiability ==
+== gif ==
+== image_qa ==
+runtime.json written
+== check ==
+[GREEN ] artifact:priority_deliverables.md: priority_deliverables.md
+[GREEN ] artifact:decisions_log.md: decisions_log.md
+[GREEN ] artifact:question_framing.md: question_framing.md
+[GREEN ] artifact:assumptions_ledger.md: assumptions_ledger.md
+[GREEN ] artifact:quantity_contracts.md: quantity_contracts.md
+[GREEN ] artifact:packet.md: packet.md
+[GREEN ] artifact:run_all.sh: run_all.sh
+[GREEN ] artifact:runtime.json: runtime.json
+[GREEN ] artifact:code/core.py: code/core.py
+[GREEN ] artifact:code/nuts_update.py: code/nuts_update.py
+[GREEN ] artifact:code/run_sweep.py: code/run_sweep.py
+[GREEN ] artifact:code/exp_limit.py: code/exp_limit.py
+[GREEN ] artifact:code/fig_testbed.py: code/fig_testbed.py
+[GREEN ] artifact:code/fig_coverage.py: code/fig_coverage.py
+[GREEN ] artifact:code/fig_sigmad.py: code/fig_sigmad.py
+[GREEN ] artifact:code/fig_alpha.py: code/fig_alpha.py
+[GREEN ] artifact:code/fig_limit.py: code/fig_limit.py
+[GREEN ] artifact:code/fig_identifiability.py: code/fig_identifiability.py
+[GREEN ] artifact:code/gif_frf.py: code/gif_frf.py
+[GREEN ] artifact:figures/fig_testbed.png: figures/fig_testbed.png
+[GREEN ] artifact:figures/figA_coverage_vs_delta.png: figures/figA_coverage_vs_delta.png
+[GREEN ] artifact:figures/figB_sigmad_thermometer.png: figures/figB_sigmad_thermometer.png
+[GREEN ] artifact:figures/figC_alpha_intervals.png: figures/figC_alpha_intervals.png
+[GREEN ] artifact:figures/figD_honest_limit.png: figures/figD_honest_limit.png
+[GREEN ] artifact:figures/figE_identifiability.png: figures/figE_identifiability.png
+[GREEN ] artifact:figures/gif1_frf_bands.gif: figures/gif1_frf_bands.gif
+[GREEN ] artifact:out/limit_summary.json: out/limit_summary.json
+[GREEN ] artifact:out/image_qa.json: out/image_qa.json
+[GREEN ] artifact:out/text_overlap.json: out/text_overlap.json
+[GREEN ] integrity:core_unchanged: copy of core.py is byte-identical to the original scaffold (core.py never edited)
+[GREEN ] integrity:original_nuts_not_edited: the ORIGINAL nuts_update.py has NO learn_discrepancy path (only the copy was extended)
+[GREEN ] integrity:naive_path_added: the COPY adds the learn_discrepancy=False (A1 naive) path
+[GREEN ] convergence:all_nuts_arms: 29 NUTS cells all cleared the gate; worst R-hat 1.003, min ESS 1546, max div-frac 0.000
+[GREEN ] malady:naive_coverage_collapses: A1 held-out (noisy predictive) coverage 0.94 at delta=0 -> 0.24 at delta=0.5 (need <= 0.8 and a drop >= 0.1); the naive arm is confidently wrong with no warning
+[GREEN ] malady:naive_stays_confident: at delta=0.5 naive mean alpha 95% width 0.002 < disc-aware 0.016: the naive posterior stays tight (confident) while being wrong
+[GREEN ] cure:disc_aware_coverage_holds: A2/A3 held-out (noisy predictive) coverage stays >= 0.8 across the sweep (A2 worst 0.85@0.5, A3 worst 0.85@0.5)
+[GREEN ] cure:uq_beats_naive_at_dmax: at delta=0.5 disc-aware coverage 0.85 beats naive 0.24 by 0.60 (need >= 0.15)
+[GREEN ] thermometer:A2_sigmad_tracks_delta: A2 sigma_d median ['0.009', '0.035', '0.064', '0.178', '0.153', '0.338'] over delta [0.0, 0.05, 0.1, 0.2, 0.35, 0.5]: sigma_d(0)=0.009 (<= 0.12? True), rise 0.329 (>= 0.15? True), Spearman(delta,sigma_d)=0.943 (>= 0.9? True)
+[GREEN ] thermometer:A3_sigmad_tracks_delta: A3 sigma_d median ['0.005', '0.035', '0.072', '0.174', '0.182', '0.358'] over delta [0.0, 0.05, 0.1, 0.2, 0.35, 0.5]: sigma_d(0)=0.005 (<= 0.12? True), rise 0.353 (>= 0.15? True), Spearman(delta,sigma_d)=1.000 (>= 0.9? True)
+[GREEN ] sensitivity:missing_mode_class_robust: missing-mode class @severity 1.0: disc-aware coverage 0.79 >= naive 0.02 (verdict robust to error class)
+[GREEN ] limit:reported: E-LIMIT coherent-bias sub-study reported
+[GREEN ] limit:qoi_holds: under coherent +15% peak shift the disc-aware QOI is covered (QOI coverage can survive the bias)
+[YELLOW] limit:parameter_misses: HONEST LIMIT: disc-aware alpha at the failed sensor MISSES truth (covered=False, apparent sign=biased high toward hardening (under-recovers softening)); coherent bias is confounded with the local-mode stiffness; cure = break the degeneracy, not more sigma_d
+[GREEN ] limit:unbiased_control_recovers: unbiased control (no peak shift) recovers the failed-sensor alpha => the method itself is sound
+[GREEN ] tufte_lint:fig_testbed: clean
+[GREEN ] tufte_lint:fig_coverage: clean
+[GREEN ] tufte_lint:fig_sigmad: clean
+[GREEN ] tufte_lint:fig_alpha: clean
+[GREEN ] tufte_lint:fig_limit: clean
+[GREEN ] tufte_lint:fig_identifiability: clean
+[GREEN ] tufte_lint:gif_frf: clean
+[GREEN ] image_qa:legibility: pixel legibility: all pass
+[GREEN ] text_overlap:auditor: save-time bbox text-overlap auditor: 0 overlapping text pair(s)
+[GREEN ] doc:method_summary_present: packet has a method-summary section
+[GREEN ] doc:data_count_present: packet states the synthetic-realization / replicate count
+[YELLOW] scope:single_realization: one synthetic realization per (class, level, arm); no test/flight variability modeled
+[YELLOW] scope:surrogate_error_model: injected model-form error is a surrogate (correlated log-field / missing mode / coherent shift), not a measured real-structure discrepancy
+[YELLOW] scope:no_universal_parameter_recovery: claim is held-out predictive/QOI coverage + error detection (sigma_d), NOT universal parameter recovery; the coherent-bias limit (E-LIMIT) misses the parameter by design
+
+OVERALL YELLOW  GREEN 54 / YELLOW 4 / RED 0
+run_all complete; see packet.md, checker_report.json, runtime.json

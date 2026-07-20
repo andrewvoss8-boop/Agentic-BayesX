@@ -1,0 +1,262 @@
+{
+  "deliverable": "STEP 0b: top-plate CENTER vs EDGE/distributed mount effective-mass decomposition",
+  "bolt_circle_radius_in": 9.0,
+  "n_feet": 8,
+  "feet": [
+    {
+      "xyz": [
+        9.0,
+        0.0,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        6.4,
+        6.4,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        0.0,
+        9.0,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        -6.4,
+        6.4,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        -9.0,
+        0.0,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        -6.4,
+        -6.4,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        -0.0,
+        -9.0,
+        57.7
+      ],
+      "snap_in": 0.0
+    },
+    {
+      "xyz": [
+        6.4,
+        -6.4,
+        57.7
+      ],
+      "snap_in": 0.0
+    }
+  ],
+  "center_snap_in": 0.0,
+  "band_hz": [
+    45.0,
+    260.0
+  ],
+  "center": {
+    "n_modes_for_90pct": 4,
+    "dominant_modes": [
+      {
+        "fem_mode": 35,
+        "freq_hz": 251.6,
+        "mount_weight_pct": 58.0,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 30,
+        "freq_hz": 233.7,
+        "mount_weight_pct": 12.7,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 6,
+        "freq_hz": 117.3,
+        "mount_weight_pct": 9.7,
+        "meas_freq_hz": 125.0,
+        "freq_err_pct": 6.1,
+        "mac": 0.7
+      },
+      {
+        "fem_mode": 36,
+        "freq_hz": 253.9,
+        "mount_weight_pct": 9.6,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      }
+    ],
+    "dominant_residue_matched_to_data_frac": 0.108,
+    "validity_gate_resonant": {
+      "unweighted_median_freq_err_pct": 2.91,
+      "weighted_median_freq_err_pct": 6.15,
+      "unweighted_median_mac": 0.7,
+      "weighted_median_mac": 0.7
+    },
+    "static_compliance_n_modes_for_90pct": 5,
+    "static_compliance_dominant_modes": [
+      {
+        "fem_mode": 35,
+        "freq_hz": 251.6,
+        "mount_weight_pct": 39.6,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 6,
+        "freq_hz": 117.3,
+        "mount_weight_pct": 30.6,
+        "meas_freq_hz": 125.0,
+        "freq_err_pct": 6.1,
+        "mac": 0.7
+      },
+      {
+        "fem_mode": 30,
+        "freq_hz": 233.7,
+        "mount_weight_pct": 10.1,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 21,
+        "freq_hz": 190.4,
+        "mount_weight_pct": 7.1,
+        "meas_freq_hz": 188.6,
+        "freq_err_pct": 0.9,
+        "mac": 0.69
+      },
+      {
+        "fem_mode": 36,
+        "freq_hz": 253.9,
+        "mount_weight_pct": 6.4,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      }
+    ],
+    "static_compliance_matched_frac": 0.402
+  },
+  "edge_distributed": {
+    "n_modes_for_90pct": 5,
+    "dominant_modes": [
+      {
+        "fem_mode": 35,
+        "freq_hz": 251.6,
+        "mount_weight_pct": 38.8,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 6,
+        "freq_hz": 117.3,
+        "mount_weight_pct": 29.4,
+        "meas_freq_hz": 125.0,
+        "freq_err_pct": 6.1,
+        "mac": 0.7
+      },
+      {
+        "fem_mode": 30,
+        "freq_hz": 233.7,
+        "mount_weight_pct": 11.4,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 21,
+        "freq_hz": 190.4,
+        "mount_weight_pct": 8.4,
+        "meas_freq_hz": 188.6,
+        "freq_err_pct": 0.9,
+        "mac": 0.69
+      },
+      {
+        "fem_mode": 18,
+        "freq_hz": 183.6,
+        "mount_weight_pct": 4.4,
+        "meas_freq_hz": 184.4,
+        "freq_err_pct": 0.4,
+        "mac": 0.89
+      }
+    ],
+    "dominant_residue_matched_to_data_frac": 0.457,
+    "validity_gate_resonant": {
+      "unweighted_median_freq_err_pct": 2.91,
+      "weighted_median_freq_err_pct": 6.15,
+      "unweighted_median_mac": 0.7,
+      "weighted_median_mac": 0.7
+    },
+    "static_compliance_n_modes_for_90pct": 5,
+    "static_compliance_dominant_modes": [
+      {
+        "fem_mode": 6,
+        "freq_hz": 117.3,
+        "mount_weight_pct": 59.4,
+        "meas_freq_hz": 125.0,
+        "freq_err_pct": 6.1,
+        "mac": 0.7
+      },
+      {
+        "fem_mode": 35,
+        "freq_hz": 251.6,
+        "mount_weight_pct": 17.0,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 21,
+        "freq_hz": 190.4,
+        "mount_weight_pct": 6.4,
+        "meas_freq_hz": 188.6,
+        "freq_err_pct": 0.9,
+        "mac": 0.69
+      },
+      {
+        "fem_mode": 30,
+        "freq_hz": 233.7,
+        "mount_weight_pct": 5.8,
+        "meas_freq_hz": null,
+        "freq_err_pct": null,
+        "mac": null
+      },
+      {
+        "fem_mode": 18,
+        "freq_hz": 183.6,
+        "mount_weight_pct": 3.6,
+        "meas_freq_hz": 184.4,
+        "freq_err_pct": 0.4,
+        "mac": 0.89
+      }
+    ],
+    "static_compliance_matched_frac": 0.753
+  },
+  "headline": "edge mount shifts load path onto global modes if its validity gate (weighted freq-err/MAC) is BETTER than center and its dominant residue is more data-matched.",
+  "note": "EXPLORATORY; YELLOW; z-translation/net-CG only (rocking would re-add some drumhead); no claim."
+}

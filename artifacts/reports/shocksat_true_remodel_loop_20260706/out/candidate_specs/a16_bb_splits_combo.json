@@ -1,0 +1,33 @@
+{
+ "cid": "a16_bb_splits_combo",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  }
+ ],
+ "rationale": "Both bottom-box splits jointly (face + bulkhead band): the +Z@900 fold anti-correlates on Bottom_Box (-0.51) \u2014 the strongest single-region failure in the diagnosis.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: drives.m_zpos_900z Bottom_Box=-0.508",
+ "split_info": {
+  "bb_xface": 4671,
+  "bb_bulkband": 3864
+ }
+}

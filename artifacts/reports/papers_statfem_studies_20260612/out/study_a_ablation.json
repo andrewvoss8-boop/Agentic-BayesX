@@ -1,0 +1,30 @@
+{
+  "v1": {
+    "name": "V1 linear-iid",
+    "max_rhat": 23.874821438667816,
+    "min_ess": 2.0048133654710045,
+    "divergences": 0,
+    "coverage": 0.8571428571428571,
+    "band_width": 6.246682651536051,
+    "runtime_s": 35.55922317504883
+  },
+  "v2iid": {
+    "name": "V2-iid log-iid (ABLATION)",
+    "max_rhat": 1.0013185941333769,
+    "min_ess": 2298.497833566906,
+    "divergences": 0,
+    "coverage": 0.9642857142857143,
+    "band_width": 2.162813098498,
+    "runtime_s": 6.704099893569946
+  },
+  "v2": {
+    "name": "V2 log-correlated",
+    "max_rhat": 1.0020703565433098,
+    "min_ess": 1327.8664774983267,
+    "divergences": 0,
+    "coverage": 1.0,
+    "band_width": 0.8845664616948887,
+    "runtime_s": 40.714585065841675
+  },
+  "verdict": "V2-iid CONVERGES (R-hat 1.001) -> the LOG TRANSFORM fixes mixing; correlation's job is the tight interleaved BANDS via conditioning (V2 band 0.88 vs V2-iid 2.16)."
+}

@@ -1,0 +1,41 @@
+{
+ "cid": "rnd005",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    9000048,
+    6001323,
+    4000138,
+    2032417,
+    9000092,
+    2032422,
+    3000147,
+    9000096,
+    9000046,
+    2033595,
+    9000033,
+    3000153
+   ],
+   "k_trans": 8386292.059478294,
+   "k_rot": 2089.380981986203,
+   "name": "rconn6"
+  },
+  {
+   "op": "split",
+   "pid": 103,
+   "rule": {
+    "type": "z_band",
+    "zlo": 3.684315507907284,
+    "zhi": 16.174133972613795
+   },
+   "name": "rsplit6"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)",
+ "split_info": {
+  "rsplit6": 328
+ }
+}

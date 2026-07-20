@@ -1,0 +1,12 @@
+refine info: {'pids': [701], 'n_quads_refined': 4056, 'n_trias_refined': 336, 'n_new_grids': None, 'n_hanging': 0, 'note': 'forensic', 'n_grids': 80427}
+assembled in 5s; solving near 62.7 Hz
+freqs found: [54.596 62.677 62.684 62.701 62.703 73.14  73.74  88.05 ]
+f=  54.596 Hz | new-node KE frac 0.000 | regions {'Bottom_Box': 0.984, 'Modal_Test_Instrumentation': 0.016}
+f=  62.677 Hz | new-node KE frac 0.000 | regions {'Modal_Test_Instrumentation': 0.994}
+f=  62.684 Hz | new-node KE frac 0.000 | regions {'Modal_Test_Instrumentation': 0.995}
+f=  62.701 Hz | new-node KE frac 0.000 | regions {'Modal_Test_Instrumentation': 0.994}
+f=  62.703 Hz | new-node KE frac 0.000 | regions {'Modal_Test_Instrumentation': 0.994}
+f=  73.140 Hz | new-node KE frac 0.010 | regions {'Bottom_Box': 0.943, 'Modal_Test_Instrumentation': 0.016, 'Top_Box': 0.024, 'Top_Circular_Plate': 0.013}
+f=  73.740 Hz | new-node KE frac 0.010 | regions {'Bottom_Box': 0.944, 'Modal_Test_Instrumentation': 0.016, 'Top_Box': 0.024, 'Top_Circular_Plate': 0.013}
+f=  88.050 Hz | new-node KE frac 0.000 | regions {'Bottom_Box': 0.982, 'Modal_Test_Instrumentation': 0.017}
+done 200s

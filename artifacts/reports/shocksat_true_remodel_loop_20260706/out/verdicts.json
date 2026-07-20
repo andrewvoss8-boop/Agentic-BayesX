@@ -1,0 +1,108 @@
+{
+ "A0_dev_P1": 0.2152377291964802,
+ "A0_P1_folds": [
+  0.3414,
+  0.5228,
+  0.1362,
+  -0.1395
+ ],
+ "A0_P1_se": 0.14218488786659514,
+ "n_agent_queries": 34,
+ "n_random_queries": 53,
+ "winners_curse_N": {
+  "agent": 34,
+  "random": 53
+ },
+ "S1": {
+  "winner": "a04_welds_t074_enr",
+  "dev_margin": 0.0224,
+  "dev_margin_se_paired": 0.0249,
+  "needs": ">=0.05 and >=2x SE and vault>A0",
+  "vault_winner": 0.476381837083508,
+  "vault_A0": 0.4377247281870582,
+  "vault_positive": true,
+  "pass": false
+ },
+ "S2": {
+  "agent_best_dev_P1_raw": 0.23757280464108407,
+  "agent_cid_raw": "a04_welds_t074_enr",
+  "random_best_dev_P1": 0.2388607613269671,
+  "random_cid": "rnd003_enr",
+  "pass": false,
+  "shape_only_comparison": {
+   "agent_shape_best": 0.23757280464108407,
+   "agent_shape_cid": "a04_welds_t074_enr",
+   "agent_shape_beats_random": false
+  }
+ },
+ "S3": {
+  "finalists": {
+   "a16_bb_splits_combo_enr": {
+    "lmo_widen_ratio": 1.0685,
+    "lmo_ok": true,
+    "q_coverage_ok": false
+   },
+   "a04_welds_t074": {
+    "lmo_widen_ratio": 1.0702,
+    "lmo_ok": true,
+    "q_coverage_ok": false
+   },
+   "c06_tb_xface_enr": {
+    "lmo_widen_ratio": 1.0516,
+    "lmo_ok": true,
+    "q_coverage_ok": false
+   },
+   "A0": {
+    "lmo_widen_ratio": 1.0742,
+    "lmo_ok": true,
+    "q_coverage_ok": false
+   }
+  },
+  "pass": false
+ },
+ "overall_claim": "pre-registered claim FALSIFIED (see S1/S2/S3 details; honest reportable outcome)",
+ "dev_vs_vault_gap": {
+  "A0_enr": {
+   "dev_P1": 0.2152,
+   "vault_P1": 0.4377,
+   "gap": -0.2225
+  },
+  "A0": {
+   "dev_P1": 0.2341,
+   "vault_P1": 0.4761,
+   "gap": -0.2419
+  },
+  "a04_welds_t074_enr": {
+   "dev_P1": 0.2376,
+   "vault_P1": 0.4764,
+   "gap": -0.2388
+  },
+  "a16_bb_splits_combo_enr": {
+   "dev_P1": 0.2274,
+   "vault_P1": 0.4893,
+   "gap": -0.262
+  },
+  "b04_ctrl_bb_scale_enr": {
+   "dev_P1": 0.2014,
+   "vault_P1": 0.4745,
+   "gap": -0.2731
+  },
+  "c06_tb_xface_enr": {
+   "dev_P1": 0.2202,
+   "vault_P1": 0.4956,
+   "gap": -0.2754
+  },
+  "rnd003_enr": {
+   "dev_P1": 0.2389,
+   "vault_P1": 0.497,
+   "gap": -0.2581
+  }
+ },
+ "raw_track_bests_caveated": {
+  "agent_raw_best": "b05_ctrl_multiscale",
+  "agent_raw_best_P1": 0.2481562884187405,
+  "random_raw_best": "rnd021",
+  "random_raw_best_P1": 0.2489893491311496,
+  "caveat": "raw records mix biased inherited-basis + single-start evaluations (D18/D19); gates use the exact-basis freeze set (D23)"
+ }
+}

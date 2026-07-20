@@ -1,0 +1,18 @@
+soft_Q25   full-recon err 2.12e-13 | modes ['93', '104', '120']
+   rock(lower)_93Hz   scalar:net   4% My 100% foot  76% rigid3:net   2% My   0% foot   5% diag:net  18% My  70% foot  42%
+   rock(upper)_104Hz  scalar:net   1% My 100% foot  84% rigid3:net   2% My   1% foot   3% diag:net  53% My  65% foot  63%
+   bounce_120Hz       scalar:net  41% My 100% foot  84% rigid3:net  38% My   1% foot   3% diag:net  31% My  65% foot  63%
+stiff_Q25  full-recon err 1.81e-12 | modes ['279', '311', '360']
+   rock(lower)_279Hz  scalar:net  57% My 100% foot  86% rigid3:net   6% My  17% foot  12% diag:net  51% My  61% foot  37%
+   rock(upper)_311Hz  scalar:net  29% My 100% foot  48% rigid3:net  33% My  15% foot  31% diag:net 115% My   7% foot  17%
+   bounce_360Hz       scalar:net  68% My 100% foot  91% rigid3:net   9% My   8% foot   9% diag:net  62% My   8% foot  39%
+soft_Q6    full-recon err 1.36e-13 | modes ['93', '104', '120']
+   rock(lower)_93Hz   scalar:net  27% My 100% foot  81% rigid3:net   0% My   2% foot   7% diag:net  79% My  34% foot   8%
+   rock(upper)_104Hz  scalar:net  37% My 100% foot  84% rigid3:net   2% My   0% foot   9% diag:net  53% My  49% foot  27%
+   bounce_120Hz       scalar:net  63% My 100% foot  68% rigid3:net  20% My   4% foot   3% diag:net 175% My  38% foot  33%
+stiff_Q6   full-recon err 1.33e-12 | modes ['279', '311', '360']
+   rock(lower)_279Hz  scalar:net  40% My 100% foot  84% rigid3:net  10% My   9% foot  20% diag:net  22% My  20% foot  38%
+   rock(upper)_311Hz  scalar:net  21% My 100% foot  75% rigid3:net  18% My  11% foot  29% diag:net   5% My  11% foot  29%
+   bounce_360Hz       scalar:net  47% My 100% foot  91% rigid3:net   2% My   3% foot  22% diag:net  60% My  24% foot  26%
+wrote results/ex_e_results.json
+EX-E done. remote proxy broadband config-mismatch err: {'1_spacings': '110%', '2_spacings': '102%', '3_spacings': '96%'}

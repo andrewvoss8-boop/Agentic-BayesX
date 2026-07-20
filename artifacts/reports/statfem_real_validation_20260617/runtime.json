@@ -1,0 +1,5 @@
+{
+  "active_runtime_s": 17154,
+  "elapsed_wallclock_s": 17154,
+  "note": "active_runtime_s = sum of per-job runtime_s across out/*.json (compute performed; some jobs A+B ran in parallel so this is the summed-command time, not parallel wall-clock). elapsed set equal as a floor; true session wall-clock (incl. many human check-in waits) is larger but was not precisely timestamped."
+}

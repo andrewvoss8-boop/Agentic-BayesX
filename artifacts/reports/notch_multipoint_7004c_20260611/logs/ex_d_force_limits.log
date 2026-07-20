@@ -1,0 +1,7 @@
+wrote results/ex_d_results.json
+EX-D done.
+  test modes: ['93.1', '94.1', '132.3'] Hz | C2 semi-emp 3.72 | C2 implied by flight 0.87
+  newton netF 4.18e-15 | newton My 1.50e-14 | lowf netF/ab 6.1917 (M0=6.0)
+  limit respected ii 1.000 iii 1.000 (<=1+tol)
+  pitch(z-thy lower)@94.1Hz: i_unlimited: foot 2107.09x My 110.83x | ii_netF: foot 220.78x My 16.90x | iii_netF_plus_My: foot 32.29x My 1.00x
+  bounce(z-thy upper)@132.3Hz: i_unlimited: foot 204.37x My 169.49x | ii_netF: foot 5.22x My 9.34x | iii_netF_plus_My: foot 4.19x My 5.92x

@@ -1,0 +1,8 @@
+  delta=   0%  R-hat   1.000  ESS   3802  sigma_w  0.03  logZ     597.7  converged=True
+  delta=   1%  R-hat   1.000  ESS   3562  sigma_w  0.44  logZ    -645.8  converged=True
+  delta=   2%  R-hat   1.057  ESS     34  sigma_w  3.76  logZ   -1223.7  converged=False
+  delta=   5%  R-hat   2.043  ESS      1  sigma_w  3.19  logZ   -1225.4  converged=False
+  delta=  10%  R-hat   4.312  ESS      0  sigma_w  3.26  logZ   -1193.5  converged=False
+  delta=  20%  R-hat   1.143  ESS     13  sigma_w  4.39  logZ   -1416.2  converged=False
+A FEM-error sweep DONE: convergence boundary delta* = 1.0% (largest delta still converged) | 3470s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/fem_error_sweep.json
+A DONE

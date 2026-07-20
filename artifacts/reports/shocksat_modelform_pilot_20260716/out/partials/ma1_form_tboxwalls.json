@@ -1,0 +1,52 @@
+{
+ "cid": "ma1_form_tboxwalls",
+ "track": "agent",
+ "round": 1,
+ "cls": "element_formulation",
+ "ops": [
+  "formulation"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.15566754443768438,
+ "exact_b200_500": 0.17849172523066797,
+ "exact_folds": {
+  "m_xpos_990x": 0.2665651910650463,
+  "m_zpos_990z": 0.5554706590656767,
+  "m_ypos_990y": 0.07392295844139252,
+  "m_zpos_900z": -0.273288630821378
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.09198611427406905,
+  "m_zpos_990z": 0.17123251677715334,
+  "m_ypos_990y": 0.1800234412543024,
+  "m_zpos_900z": 0.27072482861714703
+ },
+ "theta_map": [
+  1.0344088647171068,
+  1.0110520987770877,
+  0.98626219277793,
+  0.9888298801640696,
+  1.01704679859836,
+  0.9215083834180552,
+  1.1893159719281605,
+  1.1835817732963996,
+  1.0802600013562988,
+  1.499372861674726
+ ],
+ "enriched_pkg": "ma1_form_tboxwalls__xenr",
+ "spot_max_pct": 6.54905463193245e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 8.4249,
+  "pass": true
+ },
+ "solve_s_theta1": 500.1,
+ "solve_s_enrich": 423.0,
+ "wall_s": 982.3,
+ "ts": "2026-07-16T21:01:47",
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Box pairs at 168.0/172.3 Hz are +7.44/+5.72% too stiff while thickness is survey-constrained -> bending-formulation softening (br 0.8) on the top-box walls redistributes wall-bending stiffness without touching mass"
+}

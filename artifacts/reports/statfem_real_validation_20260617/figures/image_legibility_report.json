@@ -1,0 +1,69 @@
+{
+ "fig_arms_comparison.png": {
+  "w": 2298,
+  "h": 991,
+  "ink_frac": 0.1766,
+  "ok": true
+ },
+ "fig_error_participation.png": {
+  "w": 1580,
+  "h": 1147,
+  "ink_frac": 0.0597,
+  "ok": true
+ },
+ "fig_fem_error_sweep.png": {
+  "w": 2089,
+  "h": 1036,
+  "ink_frac": 0.0806,
+  "ok": true
+ },
+ "fig_hard_locations.png": {
+  "w": 944,
+  "h": 845,
+  "ink_frac": 0.0713,
+  "ok": true
+ },
+ "fig_heldout_frf.png": {
+  "w": 1833,
+  "h": 1201,
+  "ink_frac": 0.4511,
+  "ok": true
+ },
+ "fig_mc_distributions.png": {
+  "w": 2302,
+  "h": 1012,
+  "ink_frac": 0.1588,
+  "ok": true
+ },
+ "fig_method_comparison.png": {
+  "w": 2110,
+  "h": 1058,
+  "ink_frac": 0.202,
+  "ok": true
+ },
+ "fig_schematic.png": {
+  "w": 3162,
+  "h": 902,
+  "ink_frac": 0.2122,
+  "ok": true
+ },
+ "fig_scoring_suite.png": {
+  "w": 1498,
+  "h": 646,
+  "ink_frac": 0.2015,
+  "ok": true
+ },
+ "report_frf_page1.png": {
+  "w": 1699,
+  "h": 976,
+  "ink_frac": 0.1448,
+  "ok": true
+ },
+ "report_setup.png": {
+  "w": 1229,
+  "h": 917,
+  "ink_frac": 0.0877,
+  "ok": true
+ },
+ "pass": true
+}

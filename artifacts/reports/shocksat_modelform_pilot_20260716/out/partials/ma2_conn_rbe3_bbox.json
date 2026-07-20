@@ -1,0 +1,51 @@
+{
+ "cid": "ma2_conn_rbe3_bbox",
+ "track": "agent",
+ "round": 2,
+ "cls": "connectivity",
+ "ops": [
+  "rbe3_convert"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.14449642036802643,
+ "exact_b200_500": 0.26515288146918786,
+ "exact_folds": {
+  "m_xpos_990x": 0.2908409868373925,
+  "m_zpos_990z": 0.4821374477016822,
+  "m_ypos_990y": 0.09993567557122716,
+  "m_zpos_900z": -0.2949284286381961
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.18317476937510063,
+  "m_zpos_990z": 0.26493946776198907,
+  "m_ypos_990y": 0.2769064979225707,
+  "m_zpos_900z": 0.335590790817091
+ },
+ "theta_map": [
+  1.1490652917712227,
+  0.9333620642524726,
+  0.9634060510200017,
+  0.8457347154590108,
+  1.0109721303461843,
+  1.6216006433465713,
+  0.9120215629628405,
+  1.2830461935671817,
+  0.9301238787661091
+ ],
+ "enriched_pkg": "ma2_conn_rbe3_bbox__xenr",
+ "spot_max_pct": 6.280125308677498e-08,
+ "n_dof": 400650,
+ "delta_dof_pct": 0.285,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 1.1063,
+  "pass": true
+ },
+ "solve_s_theta1": 471.9,
+ "solve_s_enrich": 463.4,
+ "wall_s": 968.0,
+ "ts": "2026-07-17T01:05:40",
+ "diagnosis_link": "diagnosis_mf_r2.json: same Bottom_Box pointer via the interpolation constraint (r1 applied rbe3 only to Top_Box; Bottom_Box holds 0.49 of shape-residual energy)"
+}

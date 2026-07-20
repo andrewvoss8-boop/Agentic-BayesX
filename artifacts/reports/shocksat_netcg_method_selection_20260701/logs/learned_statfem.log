@@ -1,0 +1,2 @@
+NUTS converged=True R-hat 1.001 ESS 2083 div 0 (7s)
+learned sigma_d = [0.82, 0.939, 1.07] (assumed 0.25, DD3 0.86); ell = [0.082, 0.102, 0.129] octaves

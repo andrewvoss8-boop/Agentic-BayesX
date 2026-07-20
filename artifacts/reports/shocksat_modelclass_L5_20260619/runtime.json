@@ -1,0 +1,24 @@
+{
+  "active_runtime_s_sum_of_recorded": 2193.3,
+  "note": "sum of runtime_s recorded by each experiment JSON (NUTS calibrations dominate); excludes tiny analysis/plotting scripts (<5s each) and re-runs",
+  "per_experiment_s": {
+    "dampcorr_qoi_seed00.json": 183.2,
+    "dampcorr_qoi_seed01.json": 188.3,
+    "dampcorr_qoi_seed02.json": 158.2,
+    "dampcorr_qoi_seed03.json": 154.3,
+    "fem_baseline_qoi_seed00.json": 2.3,
+    "freq_value_seed00.json": 148.5,
+    "gap_closure_seed00.json": 205.0,
+    "heteroscedastic_qoi_seed00.json": 163.9,
+    "heteroscedastic_qoi_seed01.json": 163.6,
+    "heteroscedastic_qoi_seed02.json": 173.3,
+    "heteroscedastic_qoi_seed03.json": 142.5,
+    "hybrid_shape_qoi_seed00.json": 1.4,
+    "measured_shape_qoi_seed00.json": 1.6,
+    "stage1_evidence.json": 2.1,
+    "value_eval_seed00.json": 186.2,
+    "value_eval_seed01.json": 154.3,
+    "value_eval_seed02.json": 164.5
+  },
+  "elapsed_wallclock_s_note": "multi-session interactive; active_runtime <= wallclock"
+}

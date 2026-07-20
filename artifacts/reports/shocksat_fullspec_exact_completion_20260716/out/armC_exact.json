@@ -1,0 +1,204 @@
+{
+ "card": "T1 \u2014 honest arm-C exact score (per-fold refits)",
+ "basis": "A0_wide__enr",
+ "theta_convention": "ones(9): the enriched basis has theta_MAP folded in (study D14/D22)",
+ "method": "deterministic multi-start (n=4) L-BFGS-B MAP of the shape field per fold, refit on that fold's 3 TRAIN drives only; scored with wscore_wide warp+global-gain+grade. NO SAMPLER: this is an optimizer point estimate, not a posterior.",
+ "sampler_status": {
+  "sampler_run": false,
+  "study_armC_nuts": "non-converged/multimodal (fold-1 R-hat 13.95, ESS 2; D13)",
+  "note": "posterior uncertainty for arm C remains UNRESOLVED; these are deterministic MAP scores only"
+ },
+ "leakage_audit": {
+  "per_fold_map_distinct": true,
+  "no_fold_trained_on_itself": true,
+  "train_keys_are_the_other_three": true
+ },
+ "folds": {
+  "m_xpos_990x": {
+   "train_keys": [
+    "m_zpos_990z",
+    "m_ypos_990y",
+    "m_zpos_900z"
+   ],
+   "n_starts": 4,
+   "map_file": "out/armC_exact_maps/shapes_map_m_xpos_990x.npz",
+   "map_nlp": -2630.851368628483,
+   "rho": 0.9896,
+   "gain_dB": 3.589,
+   "bands": {
+    "sub200": 0.28708070502565114,
+    "b200_500": 0.07142287312953792
+   },
+   "bands_detail": {
+    "sub200": {
+     "P1p": 0.28708070502565114,
+     "P3": 0.2811487575762094,
+     "n_ch": 100,
+     "n_bins": 76,
+     "mask_fallback": false
+    },
+    "b200_500": {
+     "P1p": 0.07142287312953792,
+     "P3": 0.05376292419179575,
+     "n_ch": 104,
+     "n_bins": 147,
+     "mask_fallback": false
+    }
+   }
+  },
+  "m_zpos_990z": {
+   "train_keys": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_900z"
+   ],
+   "n_starts": 4,
+   "map_file": "out/armC_exact_maps/shapes_map_m_zpos_990z.npz",
+   "map_nlp": -2668.552317968316,
+   "rho": 1.0032,
+   "gain_dB": 3.668,
+   "bands": {
+    "sub200": 0.4639105781230042,
+    "b200_500": -0.017417991448202833
+   },
+   "bands_detail": {
+    "sub200": {
+     "P1p": 0.4639105781230042,
+     "P3": 0.4624017104759956,
+     "n_ch": 57,
+     "n_bins": 76,
+     "mask_fallback": false
+    },
+    "b200_500": {
+     "P1p": -0.017417991448202833,
+     "P3": -0.02428062446687038,
+     "n_ch": 101,
+     "n_bins": 147,
+     "mask_fallback": false
+    }
+   }
+  },
+  "m_ypos_990y": {
+   "train_keys": [
+    "m_xpos_990x",
+    "m_zpos_990z",
+    "m_zpos_900z"
+   ],
+   "n_starts": 4,
+   "map_file": "out/armC_exact_maps/shapes_map_m_ypos_990y.npz",
+   "map_nlp": -2702.240338986234,
+   "rho": 1.0,
+   "gain_dB": 2.138,
+   "bands": {
+    "sub200": 0.07008773592470194,
+    "b200_500": 0.05939587799877869
+   },
+   "bands_detail": {
+    "sub200": {
+     "P1p": 0.07008773592470194,
+     "P3": 0.07008773592470194,
+     "n_ch": 94,
+     "n_bins": 76,
+     "mask_fallback": false
+    },
+    "b200_500": {
+     "P1p": 0.05939587799877869,
+     "P3": 0.05939587799877869,
+     "n_ch": 103,
+     "n_bins": 147,
+     "mask_fallback": false
+    }
+   }
+  },
+  "m_zpos_900z": {
+   "train_keys": [
+    "m_xpos_990x",
+    "m_zpos_990z",
+    "m_ypos_990y"
+   ],
+   "n_starts": 4,
+   "map_file": "out/armC_exact_maps/shapes_map_m_zpos_900z.npz",
+   "map_nlp": -2811.8338294009704,
+   "rho": 1.0028,
+   "gain_dB": 1.352,
+   "bands": {
+    "sub200": -0.1830675289216362,
+    "b200_500": 0.012167311168389936
+   },
+   "bands_detail": {
+    "sub200": {
+     "P1p": -0.1830675289216362,
+     "P3": -0.17560558088686118,
+     "n_ch": 87,
+     "n_bins": 76,
+     "mask_fallback": false
+    },
+    "b200_500": {
+     "P1p": 0.012167311168389936,
+     "P3": 0.0026520884450337975,
+     "n_ch": 97,
+     "n_bins": 147,
+     "mask_fallback": false
+    }
+   }
+  }
+ },
+ "fold_mean": {
+  "sub200": 0.15950287253793027,
+  "b200_500": 0.03139201771212593
+ },
+ "paired_delta_vs_A1_exact": {
+  "sub200": {
+   "delta_mean": 0.04581822287372754,
+   "delta_se": 0.03609005646062344,
+   "per_fold": [
+    0.013249929784590997,
+    -0.03426530040302034,
+    0.07205571282350187,
+    0.13223254928983763
+   ],
+   "two_se": 0.07218011292124688,
+   "A1_exact_per_fold": [
+    0.27383077524106014,
+    0.4981758785260245,
+    -0.0019679768987999383,
+    -0.3153000782114738
+   ],
+   "A1_exact_mean": 0.11368464966420273,
+   "S1_rule_met": false
+  },
+  "b200_500": {
+   "delta_mean": -0.0020840121991448773,
+   "delta_se": 0.024352909334124633,
+   "per_fold": [
+    0.015144294675140252,
+    0.029588580217884592,
+    0.021533998045825058,
+    -0.0746029217354294
+   ],
+   "two_se": 0.048705818668249266,
+   "A1_exact_per_fold": [
+    0.05627857845439767,
+    -0.047006571666087425,
+    0.037861879952953634,
+    0.08677023290381934
+   ],
+   "A1_exact_mean": 0.033476029911270806,
+   "S1_rule_met": false
+  }
+ },
+ "map_nlp_per_fold": {
+  "m_xpos_990x": -2630.851368628483,
+  "m_zpos_990z": -2668.552317968316,
+  "m_ypos_990y": -2702.240338986234,
+  "m_zpos_900z": -2811.8338294009704
+ },
+ "withdrawn_study_number": {
+  "study_exact_sub200": 0.15696699007007647,
+  "study_exact_b200_500": 0.021981020382393433,
+  "study_caveat": "C exact uses fold-1 shape MAP on the enriched basis as a representative check (per-fold shape re-fit on the exact basis not re-run for compute)",
+  "why_invalid": "rescore_freeze.py:78 applied fold m_xpos_990x's shape MAP to all 4 folds; 3/4 exact fold scores therefore saw their held-out drive (review C6, accepted D17). Shown for the audit trail only; not a valid comparator.",
+  "screening_sub200_leakage_safe": 0.189
+ },
+ "generated": "2026-07-16T10:40:53"
+}

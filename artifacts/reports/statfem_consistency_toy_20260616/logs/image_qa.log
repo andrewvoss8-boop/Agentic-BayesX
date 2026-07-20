@@ -1,0 +1,46 @@
+{
+ "figA_money_theta_vs_knob.png": {
+  "w": 3050,
+  "h": 1565,
+  "ink_frac": 0.0725,
+  "color_frac": 0.03,
+  "ok": true
+ },
+ "figC1_concentration.png": {
+  "w": 2296,
+  "h": 932,
+  "ink_frac": 0.1719,
+  "color_frac": 0.0728,
+  "ok": true
+ },
+ "figC3_coverage.png": {
+  "w": 2395,
+  "h": 932,
+  "ink_frac": 0.2481,
+  "color_frac": 0.2052,
+  "ok": true
+ },
+ "figI_identifiability.png": {
+  "w": 2200,
+  "h": 892,
+  "ink_frac": 0.2601,
+  "color_frac": 0.2233,
+  "ok": true
+ },
+ "figS_schematic.png": {
+  "w": 2456,
+  "h": 1165,
+  "ink_frac": 0.2293,
+  "color_frac": 0.0063,
+  "ok": true
+ },
+ "figV_solver_convergence.png": {
+  "w": 2160,
+  "h": 872,
+  "ink_frac": 0.0414,
+  "color_frac": 0.0058,
+  "ok": true
+ },
+ "ALL_OK": true
+}
+ALL_OK: True

@@ -1,0 +1,76 @@
+{
+  "S1": {
+    "winner": "a04_enr",
+    "dev_margin": 0.0367,
+    "needs": ">=+0.05 AND >=2x fold SE AND vault_winner>vault_A0",
+    "fold_se": 0.1311,
+    "two_se": 0.2622,
+    "vault_winner": 0.4697,
+    "vault_A0": 0.4197,
+    "pass": false
+  },
+  "S2": {
+    "agent_best": 0.2337,
+    "agent_best_label": "a04_enr",
+    "random_best": 0.2389,
+    "random_label": "rnd003_enr",
+    "pass": false
+  },
+  "S3": {
+    "lmo_all_widen_gt1": true,
+    "physical_damping_ok": true,
+    "q_coverage_ok": false,
+    "q_min_coverage": 0.699,
+    "pass": false
+  },
+  "S4": {
+    "damping_share": -0.105,
+    "damping_only_margin": -0.0039,
+    "shape_only_margin": 0.0367,
+    "attribution": "improvement is shape/theta; DAMPING lever unproven",
+    "needs": "damping_only_margin >= 2/3 of winner_margin",
+    "pass": false
+  },
+  "overall_claim": "pre-registered claim FALSIFIED: S1 FAIL; S2 FAIL; S3 FAIL; S4 FAIL",
+  "A0_enr_dev_P1p": 0.1969,
+  "A0_enr_raw_P3": 0.2152,
+  "exact_basis_leaderboard": {
+    "A0_enr": 0.1969,
+    "A0d_enr": 0.1931,
+    "c06_enr": 0.2282,
+    "a04_enr": 0.2337,
+    "b_c06_enr": 0.2263,
+    "rnd003_enr": 0.2389
+  },
+  "dev_vs_vault_gap": {
+    "A0_enr": {
+      "dev_P1p": 0.19694915586956468,
+      "vault_P1p": 0.4197
+    },
+    "A0d_enr": {
+      "dev_P1p": 0.19309307085599817,
+      "vault_P1p": 0.4563
+    },
+    "c06_enr": {
+      "dev_P1p": 0.228206576817622,
+      "vault_P1p": 0.5019
+    },
+    "a04_enr": {
+      "dev_P1p": 0.23365276581395217,
+      "vault_P1p": 0.4697
+    },
+    "b_c06_enr": {
+      "dev_P1p": 0.22626741531256866,
+      "vault_P1p": 0.5259
+    },
+    "rnd003_enr": {
+      "dev_P1p": 0.2388607613269671,
+      "vault_P1p": 0.497
+    }
+  },
+  "winners_curse_N": {
+    "agent": 21,
+    "random": 40
+  },
+  "note": "exact-basis dev P1' (FDAC-aligned FRAC). A0_enr raw P3 0.2152 reproduces the completed true-remodel run's exact-basis A0 (pipeline cross-validation)."
+}

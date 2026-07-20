@@ -1,0 +1,230 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 42,
+    "YELLOW": 2,
+    "RED": 0
+  },
+  "gates": [
+    {
+      "gate": "artifact:priority_deliverables.md",
+      "status": "GREEN",
+      "detail": "priority_deliverables.md"
+    },
+    {
+      "gate": "artifact:decisions_log.md",
+      "status": "GREEN",
+      "detail": "decisions_log.md"
+    },
+    {
+      "gate": "artifact:question_framing.md",
+      "status": "GREEN",
+      "detail": "question_framing.md"
+    },
+    {
+      "gate": "artifact:assumptions_ledger.md",
+      "status": "GREEN",
+      "detail": "assumptions_ledger.md"
+    },
+    {
+      "gate": "artifact:quantity_contracts.md",
+      "status": "GREEN",
+      "detail": "quantity_contracts.md"
+    },
+    {
+      "gate": "artifact:packet.md",
+      "status": "GREEN",
+      "detail": "packet.md"
+    },
+    {
+      "gate": "artifact:run_all.sh",
+      "status": "GREEN",
+      "detail": "run_all.sh"
+    },
+    {
+      "gate": "artifact:code/core.py",
+      "status": "GREEN",
+      "detail": "code/core.py"
+    },
+    {
+      "gate": "artifact:code/nuts_update.py",
+      "status": "GREEN",
+      "detail": "code/nuts_update.py"
+    },
+    {
+      "gate": "artifact:code/viz.py",
+      "status": "GREEN",
+      "detail": "code/viz.py"
+    },
+    {
+      "gate": "artifact:code/exp1_discriminating.py",
+      "status": "GREEN",
+      "detail": "code/exp1_discriminating.py"
+    },
+    {
+      "gate": "artifact:code/exp2_baselines_sweep.py",
+      "status": "GREEN",
+      "detail": "code/exp2_baselines_sweep.py"
+    },
+    {
+      "gate": "artifact:code/exp3_config_trend_identifiability.py",
+      "status": "GREEN",
+      "detail": "code/exp3_config_trend_identifiability.py"
+    },
+    {
+      "gate": "artifact:code/exp4_biased_reconstruction.py",
+      "status": "GREEN",
+      "detail": "code/exp4_biased_reconstruction.py"
+    },
+    {
+      "gate": "artifact:out/exp1_summary.json",
+      "status": "GREEN",
+      "detail": "out/exp1_summary.json"
+    },
+    {
+      "gate": "artifact:out/exp2_summary.json",
+      "status": "GREEN",
+      "detail": "out/exp2_summary.json"
+    },
+    {
+      "gate": "artifact:out/exp3_summary.json",
+      "status": "GREEN",
+      "detail": "out/exp3_summary.json"
+    },
+    {
+      "gate": "artifact:out/exp4_summary.json",
+      "status": "GREEN",
+      "detail": "out/exp4_summary.json"
+    },
+    {
+      "gate": "artifact:figures/exp1_masked_prediction.png",
+      "status": "GREEN",
+      "detail": "figures/exp1_masked_prediction.png"
+    },
+    {
+      "gate": "artifact:figures/exp1_qoi_coverage.png",
+      "status": "GREEN",
+      "detail": "figures/exp1_qoi_coverage.png"
+    },
+    {
+      "gate": "artifact:figures/exp2_baselines_sweep.png",
+      "status": "GREEN",
+      "detail": "figures/exp2_baselines_sweep.png"
+    },
+    {
+      "gate": "artifact:figures/exp3_softening_trend.png",
+      "status": "GREEN",
+      "detail": "figures/exp3_softening_trend.png"
+    },
+    {
+      "gate": "artifact:figures/exp3_identifiability.png",
+      "status": "GREEN",
+      "detail": "figures/exp3_identifiability.png"
+    },
+    {
+      "gate": "artifact:figures/exp4_biased_reconstruction.png",
+      "status": "GREEN",
+      "detail": "figures/exp4_biased_reconstruction.png"
+    },
+    {
+      "gate": "E1_nuts_convergence",
+      "status": "GREEN",
+      "detail": "R-hat 1.000, ESS 3258, div 0.000"
+    },
+    {
+      "gate": "E1_bayes_covers_masked_qoi",
+      "status": "GREEN",
+      "detail": "Bayes 2/2 vs deterministic 0/2 masked-channel QOIs covered"
+    },
+    {
+      "gate": "E1_uq_beats_point_estimate",
+      "status": "GREEN",
+      "detail": "discrepancy-aware UQ covers more masked QOIs than the deterministic point estimate"
+    },
+    {
+      "gate": "E1_heldout_hf_coverage",
+      "status": "GREEN",
+      "detail": "40/40 = 1.00 high-freq held-out lines covered"
+    },
+    {
+      "gate": "E2_all_nuts_converged",
+      "status": "GREEN",
+      "detail": "all swept-level NUTS runs cleared the convergence gate"
+    },
+    {
+      "gate": "E2_fau_tracks_recon_error",
+      "status": "GREEN",
+      "detail": "good-level FAU-Up err 0.7 dB below Meas-Up floor 6.3 dB"
+    },
+    {
+      "gate": "E2_bayes_coverage_maintained",
+      "status": "GREEN",
+      "detail": "Bayesian masked-channel coverage maintained across converged reconstruction-error levels"
+    },
+    {
+      "gate": "E3_all_nuts_converged",
+      "status": "GREEN",
+      "detail": "per-config NUTS convergence"
+    },
+    {
+      "gate": "E3_softening_trend_recovered",
+      "status": "GREEN",
+      "detail": "aggregate mean-alpha A1>A2>A3 with separated 95% intervals: medians ['0.952', '0.899', '0.854']"
+    },
+    {
+      "gate": "E3_failed_sensor_mode_least_identified",
+      "status": "GREEN",
+      "detail": "failed-sensor local-mode alpha posterior is 5.7x wider than observed modes (effective indicator)"
+    },
+    {
+      "gate": "E4_all_nuts_converged",
+      "status": "GREEN",
+      "detail": "all four E4 NUTS runs converge"
+    },
+    {
+      "gate": "E4_correlated_unbiased_control_recovers_alpha4",
+      "status": "GREEN",
+      "detail": "unbiased reconstruction + correlated discrepancy recovers true alpha_4 (method validated)"
+    },
+    {
+      "gate": "E4_coherent_bias_confounds_parameter",
+      "status": "GREEN",
+      "detail": "a coherent reconstruction bias is confounded with the failed-sensor mode stiffness; neither iid nor correlated UQ recovers alpha_4 under the bias"
+    },
+    {
+      "gate": "E4_qoi_vs_parameter_distinction",
+      "status": "GREEN",
+      "detail": "amplitude QOI stays covered while the parameter (physical sign) is wrong: QOI coverage != parameter recovery"
+    },
+    {
+      "gate": "scope:surrogate_not_FAU_network",
+      "status": "YELLOW",
+      "detail": "Virtual ground truth is a LABELED surrogate calibrated to the paper's masked-channel residual, NOT the FAU deep network; we test the updating stage + its deferred UQ, not the network."
+    },
+    {
+      "gate": "scope:single_realization_effective_indicators",
+      "status": "YELLOW",
+      "detail": "One synthetic realization per config; no test/flight variability; alpha/beta/gamma are effective ROM-level indicators, not microscopic joint measurements (the paper's own caveat)."
+    },
+    {
+      "gate": "image_legibility:exp1",
+      "status": "GREEN",
+      "detail": "2 figures; failures=[]"
+    },
+    {
+      "gate": "image_legibility:exp2",
+      "status": "GREEN",
+      "detail": "1 figures; failures=[]"
+    },
+    {
+      "gate": "image_legibility:exp3",
+      "status": "GREEN",
+      "detail": "2 figures; failures=[]"
+    },
+    {
+      "gate": "image_legibility:exp4",
+      "status": "GREEN",
+      "detail": "1 figures; failures=[]"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 11,
+    "YELLOW": 1,
+    "RED": 0
+  },
+  "gates": [
+    {
+      "gate": "gate_files",
+      "status": "GREEN",
+      "reason": "all present"
+    },
+    {
+      "gate": "reused_integrity",
+      "status": "GREEN",
+      "reason": "all reused sources unchanged"
+    },
+    {
+      "gate": "mechanics_V1_V5",
+      "status": "GREEN",
+      "reason": "V1-V5 pass: V1=eig 1.15e-09, blocks 0.00e+00, V2=|lam_rbm|/lam_el 2.85e-12, f7 474.6 Hz, V3=median|df| 0.0083%, frac>0.5% 0.020, dMAC +0.0100, matched 50, V4=t x2: membrane x2.000 (want 2), bending x7.992 (want 8), V5=re-pairing churns 16 (hung) / 10 (greedy) pairs on +10% shift; frozen pairing untouched=True"
+    },
+    {
+      "gate": "query_budget",
+      "status": "GREEN",
+      "reason": "within budget: agent 41<= 60, random 57<= 60"
+    },
+    {
+      "gate": "no_dev_residual_leak",
+      "status": "GREEN",
+      "reason": "loop.py contains no direct drive-cache reads (dev returns scalars only)"
+    },
+    {
+      "gate": "no_amplitude_lsq",
+      "status": "GREEN",
+      "reason": "score.py: one global gain only, no per-mode/per-channel amplitude LSQ"
+    },
+    {
+      "gate": "vault_freeze_ordering",
+      "status": "GREEN",
+      "reason": "finalists frozen before vault download; vault graded once"
+    },
+    {
+      "gate": "nuts_finalists",
+      "status": "GREEN",
+      "reason": "all finalists converged: nuts_c06_tb_xface.json rhat1.0038 ess701.4 div0.0; nuts_A0.json rhat1.001 ess1800.0 div0.0; nuts_c06_tb_xface_enr.json rhat1.0042 ess673.2 div0.0; nuts_a04_welds_t074.json rhat1.0013 ess1656.9 div0.0; nuts_a16_bb_splits_combo_enr.json rhat1.0009 ess1864.2 div0.0; nuts_a16_bb_splits_combo.json rhat1.0013 ess2663.9 div0.0"
+    },
+    {
+      "gate": "leave_modes_out",
+      "status": "GREEN",
+      "reason": "leave-modes-out present, all widen>1.0 across 4 arm(s)"
+    },
+    {
+      "gate": "figures_legibility",
+      "status": "GREEN",
+      "reason": "4 figures present + legibility QA passed"
+    },
+    {
+      "gate": "runtime_accounting",
+      "status": "GREEN",
+      "reason": "active 181909.0s <= elapsed 181909.0s"
+    },
+    {
+      "gate": "s1_s2_s3_verdicts",
+      "status": "YELLOW",
+      "reason": "pre-registered claim FALSIFIED (honest outcome): pre-registered claim FALSIFIED (see S1/S2/S3 details; honest reportable outcome)"
+    }
+  ]
+}

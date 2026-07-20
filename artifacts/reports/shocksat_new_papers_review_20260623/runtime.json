@@ -1,0 +1,7 @@
+{
+  "active_runtime_s": 230.0,
+  "elapsed_wallclock_s": 2400.0,
+  "runtime_note": "Approximate active command runtime for local PDF metadata/text extraction, targeted source reads, file inspection, and checker execution. This is a literature-review artifact, not a benchmarked modeling run.",
+  "active_runtime_s_lte_elapsed_wallclock_s": true
+}
+

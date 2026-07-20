@@ -1,0 +1,11 @@
+{
+ "node_gid": 7000072,
+ "node_xyz_in": [
+  0.0,
+  0.0,
+  57.74989
+ ],
+ "alt_edge_gid": 7002301,
+ "shocksat_mass_kg": 57.96148714239569,
+ "zeta_elastic_median": 0.3166514039039612
+}

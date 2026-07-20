@@ -1,0 +1,34 @@
+{
+  "deliverable": "measured-shape-fused held-out QOI (Andrew 'plenty of data' / method-vs-data test)",
+  "split_seed": 0,
+  "n_modes_measured_shape": 20,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "n_ho_hard": 2,
+  "observed_in_sample": {
+    "median_abs_db": 25.290910123761737,
+    "p90_abs_db": 36.92739964095324,
+    "sigma_log": 1.0884212076380235
+  },
+  "heldout": {
+    "median_abs_db": 22.141109848684373,
+    "p90_abs_db": 39.24064476364623,
+    "sigma_log": 1.3708808804625485
+  },
+  "heldout_rest": {
+    "median_abs_db": 23.191521170938888,
+    "p90_abs_db": 39.28234180357064,
+    "sigma_log": 1.404905960857127
+  },
+  "heldout_hard": {
+    "median_abs_db": 17.91350111812741,
+    "p90_abs_db": 20.149146265292366,
+    "sigma_log": 0.3217351993179063
+  },
+  "baseline_FEMshape_L5": {
+    "heldout_sigma_QOI_log": 1.1,
+    "heldout_median_abs_db_approx": 6.6,
+    "note": "from dampcorr/discrepancy_diagnostic FEM-shape predictions"
+  },
+  "runtime_s": 1.6285467147827148
+}

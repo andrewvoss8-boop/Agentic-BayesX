@@ -1,0 +1,31 @@
+  split  0: R-hat 1.002 | median IS 1016 | pass 97%  (31/32)
+  split  1: R-hat 1.003 | median IS 1129 | pass 97%  (31/32)
+  split  2: R-hat 1.001 | median IS 1018 | pass 88%  (28/32)
+  split  3: R-hat 1.000 | median IS 1444 | pass 84%  (27/32)
+  split  4: R-hat 1.002 | median IS 770 | pass 88%  (28/32)
+  split  5: R-hat 1.003 | median IS 1511 | pass 81%  (26/32)
+  split  6: R-hat 1.004 | median IS 1618 | pass 91%  (29/32)
+  split  7: R-hat 1.001 | median IS 1543 | pass 88%  (28/32)
+  split  8: R-hat 1.002 | median IS 1072 | pass 97%  (31/32)
+  split  9: R-hat 1.002 | median IS 1099 | pass 84%  (27/32)
+  split 10: R-hat 1.003 | median IS 2142 | pass 88%  (28/32)
+  split 11: R-hat 1.002 | median IS 1522 | pass 72%  (23/32)
+  split 12: R-hat 1.001 | median IS 1298 | pass 88%  (28/32)
+  split 13: R-hat 1.004 | median IS 828 | pass 97%  (31/32)
+  split 14: R-hat 1.002 | median IS 907 | pass 88%  (28/32)
+  split 15: R-hat 1.005 | median IS 1067 | pass 78%  (25/32)
+  split 16: R-hat 1.004 | median IS 1058 | pass 81%  (26/32)
+  split 17: R-hat 1.002 | median IS 1096 | pass 81%  (26/32)
+  split 18: R-hat 1.001 | median IS 1836 | pass 91%  (29/32)
+  split 19: R-hat 1.001 | median IS 1308 | pass 94%  (30/32)
+  split 20: R-hat 1.002 | median IS 1283 | pass 94%  (30/32)
+  split 21: R-hat 1.002 | median IS 1224 | pass 75%  (24/32)
+  split 22: R-hat 1.002 | median IS 1871 | pass 100%  (32/32)
+  split 23: R-hat 1.002 | median IS 1333 | pass 88%  (28/32)
+  split 24: R-hat 1.002 | median IS 2316 | pass 84%  (27/32)
+
+wrote out/mc_report.pdf + out/mc_pattern_summary.json
+  consistently FAIL (pass<=0.34): [4, 27, 40, 52, 69, 92, 98]
+  consistently PASS (pass>=0.95): 59 channels
+  pass-rate corr: log10 DR +0.06, z-height -0.10
+MC_REPORT DONE

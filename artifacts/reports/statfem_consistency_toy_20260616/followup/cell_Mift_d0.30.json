@@ -1,0 +1,29 @@
+{
+ "construction": "M-ift",
+ "depth": 0.3,
+ "beta": {
+  "logbeta_med": 1.1755937898323974,
+  "logbeta_lo": 0.5319300229225784,
+  "logbeta_hi": 1.8544150789445497,
+  "logbeta_ci_width": 1.3224850560219714,
+  "beta_med": 3.2400662911693936,
+  "weakly_identified": false
+ },
+ "nuts": {
+  "max_rhat": 1.0001455295044486,
+  "min_ess": 2276.543514849498,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": true,
+ "runtime_s": 16.21,
+ "theta": {
+  "mean": 1.0463362574092543,
+  "sd": 0.009875013487996005,
+  "lo": 1.0268375296488759,
+  "hi": 1.0663478339975037
+ },
+ "coverage_heldout": 1.0
+}

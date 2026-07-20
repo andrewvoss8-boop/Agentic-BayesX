@@ -1,0 +1,185 @@
+{
+  "design": "per-drive net-CG SHEAR force reconstructed from that drive's MEASURED FRFs (LSQ per-mode participation, measured modes) vs the SELECTED shear method (statFEM F(k)) per-drive 95% band, 1-octave, one global gain per drive. SHEAR only (normal has no data answer key).",
+  "n_measured_modes_fit": 20,
+  "zeta": 0.01,
+  "drives": {
+    "+X": {
+      "n_common_sensors": 84,
+      "drive_axis": "X",
+      "shear_X": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0001,
+        "answerkey_grms_raw": 13.729932115183345
+      },
+      "shear_Y": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0002,
+        "answerkey_grms_raw": 10.417836567463397
+      }
+    },
+    "+Z(990)": {
+      "n_common_sensors": 84,
+      "drive_axis": "Z",
+      "shear_X": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0,
+        "answerkey_grms_raw": 5.657397731826267
+      },
+      "shear_Y": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0001,
+        "answerkey_grms_raw": 3.142102363715085
+      }
+    },
+    "+XY": {
+      "n_common_sensors": 84,
+      "drive_axis": "XY",
+      "shear_X": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0001,
+        "answerkey_grms_raw": 6.476582771263983
+      },
+      "shear_Y": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0001,
+        "answerkey_grms_raw": 5.30931908545314
+      }
+    },
+    "+Z(900)": {
+      "n_common_sensors": 84,
+      "drive_axis": "Z",
+      "shear_X": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0003,
+        "answerkey_grms_raw": 36.617019956103775
+      },
+      "shear_Y": {
+        "covered_frac": 0.596,
+        "peak_coverage": 0.0,
+        "energy_wtd_pos_dB_exceed": 3.35,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0016,
+        "answerkey_grms_raw": 6.236038192856508
+      }
+    },
+    "+Y": {
+      "n_common_sensors": 84,
+      "drive_axis": "Y",
+      "shear_X": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0013,
+        "answerkey_grms_raw": 25.763093436026455
+      },
+      "shear_Y": {
+        "covered_frac": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "point_grms_ratio_twin_over_answerkey": 1.0,
+        "global_gain": 0.0001,
+        "answerkey_grms_raw": 4.684235966179768
+      }
+    }
+  },
+  "summary": {
+    "shear_X": {
+      "per_drive": [
+        {
+          "drive": "+X",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 1.0,
+          "low_observability": false
+        },
+        {
+          "drive": "+Z(990)",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 0.412,
+          "low_observability": false
+        },
+        {
+          "drive": "+XY",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 0.472,
+          "low_observability": false
+        },
+        {
+          "drive": "+Z(900)",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 2.667,
+          "low_observability": false
+        },
+        {
+          "drive": "+Y",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 1.876,
+          "low_observability": false
+        }
+      ],
+      "mean_covered_frac_strong_drives": 1.0,
+      "min_covered_frac_strong_drives": 1.0,
+      "n_strong_drives": 5,
+      "n_drives": 5
+    },
+    "shear_Y": {
+      "per_drive": [
+        {
+          "drive": "+X",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 1.962,
+          "low_observability": false
+        },
+        {
+          "drive": "+Z(990)",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 0.592,
+          "low_observability": false
+        },
+        {
+          "drive": "+XY",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 1.0,
+          "low_observability": false
+        },
+        {
+          "drive": "+Z(900)",
+          "covered_frac": 0.596,
+          "answerkey_grms_over_median": 1.175,
+          "low_observability": false
+        },
+        {
+          "drive": "+Y",
+          "covered_frac": 1.0,
+          "answerkey_grms_over_median": 0.882,
+          "low_observability": false
+        }
+      ],
+      "mean_covered_frac_strong_drives": 0.919,
+      "min_covered_frac_strong_drives": 0.596,
+      "n_strong_drives": 5,
+      "n_drives": 5
+    }
+  }
+}

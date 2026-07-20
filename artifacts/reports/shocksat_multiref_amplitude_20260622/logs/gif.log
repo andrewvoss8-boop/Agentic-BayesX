@@ -1,0 +1,17 @@
+selected held-out example channel 108 (DR 74, full-calib band coverage 0.78)
+  frame k=0: skill +0.77 cover 0.97 Rhat nan
+  frame k=1: skill +0.71 cover 0.98 Rhat 1.006
+  frame k=2: skill +0.72 cover 0.98 Rhat 1.001
+  frame k=3: skill +0.71 cover 0.98 Rhat 1.005
+  frame k=4: skill +0.76 cover 0.97 Rhat 1.005
+  frame k=6: skill +0.80 cover 0.95 Rhat 1.007
+  frame k=8: skill +0.75 cover 0.97 Rhat 1.003
+  frame k=11: skill +0.77 cover 0.97 Rhat 1.003
+  frame k=14: skill +0.73 cover 0.97 Rhat 1.006
+  frame k=18: skill +0.74 cover 0.96 Rhat 1.003
+  frame k=22: skill +0.77 cover 0.97 Rhat 1.004
+  frame k=23: skill +0.77 cover 0.95 Rhat 1.001
+  frame k=23: skill +0.77 cover 0.95 Rhat 1.001
+  frame k=23: skill +0.77 cover 0.95 Rhat 1.001
+
+wrote evolving_posterior_frf.gif (14 frames, ch 108); final skill +0.77 cover 95% | 577s

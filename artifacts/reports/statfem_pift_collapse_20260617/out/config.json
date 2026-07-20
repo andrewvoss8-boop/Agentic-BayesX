@@ -1,0 +1,75 @@
+{
+ "testbed": "plain_shocksat_9group",
+ "uses_tray": false,
+ "source": "reduced_blocks.npz COPIED from companion/modal-twin (D1/D4)",
+ "leg": "synthetic",
+ "truth_combo": "mixed",
+ "theta_truth": {
+  "al_welds": 1.0,
+  "angle_brackets": 1.0,
+  "bottom_box": 1.0,
+  "contact": 1.0,
+  "cross_beam": 1.0,
+  "joints": 1.2,
+  "plates": 0.88,
+  "steel_welds": 1.0,
+  "top_box": 1.15
+ },
+ "known_model_form_error": "injected Schneider correlated-complex field (freq\u00d7space) + \u03b8 bias; NOT representable by any \u03b8 scaling",
+ "band_hz": [
+  45.0,
+  260.0
+ ],
+ "nmax_master": 640,
+ "drive_dof": 225,
+ "observed_pool": [
+  192,
+  205,
+  217,
+  184,
+  164,
+  179,
+  131,
+  137,
+  125,
+  110,
+  93,
+  74,
+  71,
+  54,
+  38,
+  41,
+  20,
+  2
+ ],
+ "heldout": [
+  195,
+  210,
+  190,
+  161,
+  158,
+  152,
+  128,
+  103,
+  77,
+  92,
+  35,
+  44,
+  17,
+  5
+ ],
+ "informed_groups": [
+  "bottom_box",
+  "top_box",
+  "plates",
+  "cross_beam"
+ ],
+ "sigma_meas": 0.05,
+ "schneider": {
+  "len_logf": 0.3,
+  "len_z": 12.0,
+  "std_lo": 0.03,
+  "std_hi": 0.12
+ },
+ "inference_uses_true_corr_lengths": true
+}

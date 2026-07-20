@@ -1,0 +1,51 @@
+{
+ "cid": "ma3_mesh_welds",
+ "track": "agent",
+ "round": 3,
+ "cls": "mesh_density",
+ "ops": [
+  "refine"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.16950238834934628,
+ "exact_b200_500": 0.19364281725957877,
+ "exact_folds": {
+  "m_xpos_990x": 0.31261708765486534,
+  "m_zpos_990z": 0.5224966967257678,
+  "m_ypos_990y": 0.0962245062783895,
+  "m_zpos_900z": -0.25332873726163746
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.13897044686599774,
+  "m_zpos_990z": 0.1845126605466901,
+  "m_ypos_990y": 0.18312877957396537,
+  "m_zpos_900z": 0.26795938205166187
+ },
+ "theta_map": [
+  1.102659007469912,
+  1.1294932612710205,
+  1.0045488803086875,
+  0.9057245408875949,
+  1.571113866614946,
+  0.993351993645141,
+  1.1769716912506527,
+  1.0606659887244159,
+  0.8122074144731614
+ ],
+ "enriched_pkg": "ma3_mesh_welds__xenr",
+ "spot_max_pct": 2.424139777801315e-07,
+ "n_dof": 423438,
+ "delta_dof_pct": 5.989,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 0.1323,
+  "pass": true
+ },
+ "solve_s_theta1": 2303.6,
+ "solve_s_enrich": 2462.0,
+ "wall_s": 1.1,
+ "ts": "2026-07-17T10:06:46",
+ "diagnosis_link": "diagnosis_mf_r3.json: the weld strips have never been refined by ANY track (1966 quads); weld representation was the prior loop's only directionally-consistent shape signal -> resolve weld-strip bending"
+}

@@ -1,0 +1,12 @@
+$ Femap with NX Nastran Material 1001 : 6061-T651 Al Plate
+MAT1        10019702000.3724000.     .33 2.536-4 1.265-5      0.        +       
++         35000.  35000.  27000.
+$ Femap with NX Nastran Material 1002 : 303 CRES
+MAT1        10022.6989+71.0796+7     .27 7.402-4   6.2-6      0.        +       
++        137000. 142000.  95000.
+$ Femap with NX Nastran Material 1003 : AL Weld
+MAT1        10039999000.3838000.     .33 2.536-4 1.265-5      0.        +       
++         35000.  35000.  27000.
+$ Femap with NX Nastran Material 1004 : Steel Weld
+MAT1        1004 2.842+71.0976+7     .27 7.402-4   6.2-6      0.        +       
++        137000. 142000.  95000.

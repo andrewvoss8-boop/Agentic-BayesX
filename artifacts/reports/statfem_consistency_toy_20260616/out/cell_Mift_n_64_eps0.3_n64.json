@@ -1,0 +1,44 @@
+{
+ "construction": "M-ift",
+ "knob": "n",
+ "level": 64.0,
+ "eps": 0.3,
+ "n": 64,
+ "N_c": 64,
+ "n_el": 64,
+ "beta": {
+  "logbeta_med": 4.142472219914628,
+  "logbeta_lo": 3.853345647768255,
+  "logbeta_hi": 4.47256505376661,
+  "logbeta_ci_width": 0.6192194059983551,
+  "beta_med": 62.958275914719515,
+  "weakly_identified": false
+ },
+ "nuts": {
+  "max_rhat": 1.0005267143036385,
+  "min_ess": 912.2880092119644,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": true,
+ "runtime_s": 18.91,
+ "theta": {
+  "mean": 1.2671690871114654,
+  "sd": 0.0012778364062179656,
+  "lo": 1.2646210951846117,
+  "med": 1.2671842493931287,
+  "hi": 1.2695941024670934
+ },
+ "coverage_heldout": 0.8095238095238095,
+ "coverage_detail": {
+  "covered": 17,
+  "n": 21,
+  "held_freqs": [
+   0.6,
+   2.8,
+   6.3
+  ]
+ }
+}

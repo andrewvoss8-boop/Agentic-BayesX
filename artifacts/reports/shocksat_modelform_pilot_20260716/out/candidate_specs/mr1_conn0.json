@@ -1,0 +1,31 @@
+{
+ "cid": "mr1_conn0",
+ "track": "random",
+ "round": 1,
+ "cls": "connectivity",
+ "seed": 20261716,
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    9000047,
+    4000138,
+    7004395,
+    1024295,
+    1024322,
+    5000321,
+    9000045,
+    2032426,
+    2033598,
+    2032433,
+    1024316,
+    1024321
+   ],
+   "k_trans": 1645654.042212756,
+   "k_rot": 1922.8789713637652,
+   "name": "rconn10a0"
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

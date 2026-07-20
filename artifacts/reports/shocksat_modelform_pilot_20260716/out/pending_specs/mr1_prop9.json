@@ -1,0 +1,16 @@
+{
+ "cid": "mr1_prop9",
+ "track": "random",
+ "round": 1,
+ "cls": "property_control",
+ "seed": 20261725,
+ "ops": [
+  {
+   "op": "scale",
+   "group": "bottom_box",
+   "factor": 0.5155590740718463
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

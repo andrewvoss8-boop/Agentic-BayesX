@@ -1,0 +1,40 @@
+{
+  "deliverable": "nominal FEM |T| vs measured |T| correlation (Phase-0 key finding D6)",
+  "band_hz": [
+    20.1416015625,
+    259.3994140625
+  ],
+  "per_location": [
+    {
+      "location": "interface",
+      "log_corr": 0.054,
+      "grms_meas": 174.874,
+      "grms_pred": 13.57
+    },
+    {
+      "location": "beam",
+      "log_corr": -0.025,
+      "grms_meas": 30.219,
+      "grms_pred": 6.569
+    },
+    {
+      "location": "valve",
+      "log_corr": -0.011,
+      "grms_meas": 18.274,
+      "grms_pred": 3.229
+    },
+    {
+      "location": "avi-L",
+      "log_corr": -0.158,
+      "grms_meas": 57.658,
+      "grms_pred": 14.565
+    },
+    {
+      "location": "avi-R",
+      "log_corr": -0.124,
+      "grms_meas": 52.525,
+      "grms_pred": 23.664
+    }
+  ],
+  "mean_abs_log_corr": 0.074
+}

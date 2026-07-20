@@ -1,0 +1,27 @@
+{
+ "cid": "wa2_bothbox_soft",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    101,
+    102,
+    103
+   ],
+   "t_scale": 0.9,
+   "name": "bbox090"
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.9,
+   "name": "tbox090"
+  }
+ ],
+ "rationale": "soften BOTH boxes: Bottom_Box|Y remains the worst cell after tbox-only; move both together."
+}

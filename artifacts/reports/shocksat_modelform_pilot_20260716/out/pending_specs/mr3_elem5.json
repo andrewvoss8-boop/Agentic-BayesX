@@ -1,0 +1,19 @@
+{
+ "cid": "mr3_elem5",
+ "track": "random",
+ "round": 3,
+ "cls": "element_formulation",
+ "seed": 20263721,
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    206
+   ],
+   "name": "rform35a0",
+   "br_scale": 0.7063777219080183
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

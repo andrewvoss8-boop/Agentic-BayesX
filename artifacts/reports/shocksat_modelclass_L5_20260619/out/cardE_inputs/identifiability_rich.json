@@ -1,0 +1,1689 @@
+{
+  "headline_variant": "full_rich",
+  "params": [
+    {
+      "name": "al_welds",
+      "group_origin": "al_welds",
+      "se_frac_typical": 0.0024838060902862735,
+      "se_frac_peak": 0.021358678200606263,
+      "se_over_floor_peak": 0.4788941300584364,
+      "finite_perturb_max_df_pct": 0.1066,
+      "in_load_path": true,
+      "raw_above_floor": false
+    },
+    {
+      "name": "angle_brackets",
+      "group_origin": "angle_brackets",
+      "se_frac_typical": 0.001895904185857494,
+      "se_frac_peak": 0.1433861999390195,
+      "se_over_floor_peak": 3.2149372183636657,
+      "finite_perturb_max_df_pct": 0.7013,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "bottom_box:shell_101",
+      "group_origin": "bottom_box",
+      "se_frac_typical": 0.08283209532382231,
+      "se_frac_peak": 0.9413104776096699,
+      "se_over_floor_peak": 21.105616089902913,
+      "finite_perturb_max_df_pct": 4.5976,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "bottom_box:shell_102",
+      "group_origin": "bottom_box",
+      "se_frac_typical": 0.007463918577170236,
+      "se_frac_peak": 0.48640971619927015,
+      "se_over_floor_peak": 10.906047448414128,
+      "finite_perturb_max_df_pct": 1.6372,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "bottom_box:shell_103",
+      "group_origin": "bottom_box",
+      "se_frac_typical": 0.009073937129368327,
+      "se_frac_peak": 0.055915572351632324,
+      "se_over_floor_peak": 1.2537123845657472,
+      "finite_perturb_max_df_pct": 0.2793,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "contact",
+      "group_origin": "contact",
+      "se_frac_typical": 0.0003851023486393946,
+      "se_frac_peak": 0.020440124841171727,
+      "se_over_floor_peak": 0.45829876325497143,
+      "finite_perturb_max_df_pct": 0.101,
+      "in_load_path": true,
+      "raw_above_floor": false
+    },
+    {
+      "name": "cross_beam",
+      "group_origin": "cross_beam",
+      "se_frac_typical": 0.011563956763181267,
+      "se_frac_peak": 0.49791154716632935,
+      "se_over_floor_peak": 11.163936035119493,
+      "finite_perturb_max_df_pct": 2.3051,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "joint_bolted_801",
+      "group_origin": "joint_bolted_801",
+      "se_frac_typical": 0.005041660309904588,
+      "se_frac_peak": 0.14556154473956667,
+      "se_over_floor_peak": 3.263711765461136,
+      "finite_perturb_max_df_pct": 0.7016,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "joints_rest",
+      "group_origin": "joints_rest",
+      "se_frac_typical": 0.008250365785152897,
+      "se_frac_peak": 0.10202830101105369,
+      "se_over_floor_peak": 2.2876300675124144,
+      "finite_perturb_max_df_pct": 0.4523,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "plates:shell_501",
+      "group_origin": "plates",
+      "se_frac_typical": 0.0011562128551773814,
+      "se_frac_peak": 0.02767750667605765,
+      "se_over_floor_peak": 0.620571898566315,
+      "finite_perturb_max_df_pct": 0.1383,
+      "in_load_path": true,
+      "raw_above_floor": false
+    },
+    {
+      "name": "plates:shell_601",
+      "group_origin": "plates",
+      "se_frac_typical": 0.00509119138854527,
+      "se_frac_peak": 0.5750909978473524,
+      "se_over_floor_peak": 12.894416992093102,
+      "finite_perturb_max_df_pct": 2.8254,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "plates:shell_701",
+      "group_origin": "plates",
+      "se_frac_typical": 0.0017889802631819841,
+      "se_frac_peak": 0.9928019373118866,
+      "se_over_floor_peak": 22.2601331235849,
+      "finite_perturb_max_df_pct": 4.8387,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "steel_welds",
+      "group_origin": "steel_welds",
+      "se_frac_typical": 0.002044037603136031,
+      "se_frac_peak": 0.022325048499179455,
+      "se_over_floor_peak": 0.5005616255421402,
+      "finite_perturb_max_df_pct": 0.1115,
+      "in_load_path": true,
+      "raw_above_floor": false
+    },
+    {
+      "name": "top_box:shell_201",
+      "group_origin": "top_box",
+      "se_frac_typical": 0.20275996525476184,
+      "se_frac_peak": 0.8395774333539635,
+      "se_over_floor_peak": 18.824606129012633,
+      "finite_perturb_max_df_pct": 3.292,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "top_box:shell_202",
+      "group_origin": "top_box",
+      "se_frac_typical": 0.003949372919585263,
+      "se_frac_peak": 0.408037442038937,
+      "se_over_floor_peak": 9.148821570379752,
+      "finite_perturb_max_df_pct": 1.3113,
+      "in_load_path": true,
+      "raw_above_floor": true
+    },
+    {
+      "name": "top_box:shell_203",
+      "group_origin": "top_box",
+      "se_frac_typical": 0.005299965412250402,
+      "se_frac_peak": 0.05082418398466523,
+      "se_over_floor_peak": 1.1395556947234358,
+      "finite_perturb_max_df_pct": 0.2519,
+      "in_load_path": true,
+      "raw_above_floor": true
+    }
+  ],
+  "fim": {
+    "discrepancy_floor_rel": 0.0446,
+    "n_combos_above_prior": 8,
+    "singular_values": [
+      58.92996510317701,
+      44.558882354402414,
+      30.20480981755117,
+      15.236144400825983,
+      14.24315481171531,
+      11.74331957182096,
+      8.491699998376347,
+      4.043645119713407,
+      1.3409043373433256,
+      1.1460081632694958,
+      0.8037751355851604,
+      0.609811990724477,
+      0.29230427755457866,
+      0.2776374662833032,
+      0.21930825374526133,
+      0.16959428011130906
+    ],
+    "fim_eigenvalues": [
+      3472.7407870616603,
+      1985.493996673475,
+      912.3305361144355,
+      232.14009620282098,
+      202.86745899048898,
+      137.9055545659132,
+      72.10896886242486,
+      16.351065854182053,
+      1.7980244419061433,
+      1.3133347102803237,
+      0.646054468584943,
+      0.37187066403134966,
+      0.08544179067670415,
+      0.07708256268421233,
+      0.04809611016079594,
+      0.028762219846473158
+    ],
+    "prior_precision": 16.0,
+    "combos": [
+      {
+        "singular_value": 58.92996510317701,
+        "fim_eigenvalue": 3472.7407870616603,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "bottom_box:shell_101",
+            "weight": -0.971
+          },
+          {
+            "param": "top_box:shell_201",
+            "weight": -0.209
+          },
+          {
+            "param": "bottom_box:shell_102",
+            "weight": -0.077
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": -0.038
+          }
+        ]
+      },
+      {
+        "singular_value": 44.558882354402414,
+        "fim_eigenvalue": 1985.493996673475,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "top_box:shell_201",
+            "weight": -0.935
+          },
+          {
+            "param": "bottom_box:shell_101",
+            "weight": 0.223
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": -0.154
+          },
+          {
+            "param": "cross_beam",
+            "weight": -0.145
+          }
+        ]
+      },
+      {
+        "singular_value": 30.20480981755117,
+        "fim_eigenvalue": 912.3305361144355,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "plates:shell_701",
+            "weight": 0.98
+          },
+          {
+            "param": "plates:shell_601",
+            "weight": 0.147
+          },
+          {
+            "param": "top_box:shell_201",
+            "weight": -0.124
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": -0.038
+          }
+        ]
+      },
+      {
+        "singular_value": 15.236144400825983,
+        "fim_eigenvalue": 232.14009620282098,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "plates:shell_601",
+            "weight": -0.663
+          },
+          {
+            "param": "bottom_box:shell_102",
+            "weight": 0.484
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": 0.422
+          },
+          {
+            "param": "cross_beam",
+            "weight": 0.332
+          }
+        ]
+      },
+      {
+        "singular_value": 14.24315481171531,
+        "fim_eigenvalue": 202.86745899048898,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "plates:shell_601",
+            "weight": 0.701
+          },
+          {
+            "param": "bottom_box:shell_102",
+            "weight": 0.475
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": 0.347
+          },
+          {
+            "param": "cross_beam",
+            "weight": 0.273
+          }
+        ]
+      },
+      {
+        "singular_value": 11.74331957182096,
+        "fim_eigenvalue": 137.9055545659132,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "cross_beam",
+            "weight": 0.837
+          },
+          {
+            "param": "bottom_box:shell_102",
+            "weight": -0.428
+          },
+          {
+            "param": "angle_brackets",
+            "weight": 0.228
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": -0.211
+          }
+        ]
+      },
+      {
+        "singular_value": 8.491699998376347,
+        "fim_eigenvalue": 72.10896886242486,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "top_box:shell_202",
+            "weight": 0.787
+          },
+          {
+            "param": "bottom_box:shell_102",
+            "weight": -0.59
+          },
+          {
+            "param": "cross_beam",
+            "weight": -0.105
+          },
+          {
+            "param": "top_box:shell_201",
+            "weight": -0.097
+          }
+        ]
+      },
+      {
+        "singular_value": 4.043645119713407,
+        "fim_eigenvalue": 16.351065854182053,
+        "above_prior": true,
+        "mix": [
+          {
+            "param": "joint_bolted_801",
+            "weight": 0.977
+          },
+          {
+            "param": "top_box:shell_203",
+            "weight": 0.116
+          },
+          {
+            "param": "bottom_box:shell_103",
+            "weight": 0.098
+          },
+          {
+            "param": "top_box:shell_202",
+            "weight": -0.096
+          }
+        ]
+      },
+      {
+        "singular_value": 1.3409043373433256,
+        "fim_eigenvalue": 1.7980244419061433,
+        "above_prior": false,
+        "mix": [
+          {
+            "param": "bottom_box:shell_103",
+            "weight": -0.763
+          },
+          {
+            "param": "top_box:shell_203",
+            "weight": -0.482
+          },
+          {
+            "param": "angle_brackets",
+            "weight": 0.342
+          },
+          {
+            "param": "contact",
+            "weight": 0.162
+          }
+        ]
+      },
+      {
+        "singular_value": 1.1460081632694958,
+        "fim_eigenvalue": 1.3133347102803237,
+        "above_prior": false,
+        "mix": [
+          {
+            "param": "bottom_box:shell_103",
+            "weight": 0.628
+          },
+          {
+            "param": "angle_brackets",
+            "weight": 0.506
+          },
+          {
+            "param": "top_box:shell_203",
+            "weight": -0.501
+          },
+          {
+            "param": "contact",
+            "weight": 0.267
+          }
+        ]
+      }
+    ]
+  },
+  "n_matched_modes": 27,
+  "verdict_identifiable_params": [
+    "angle_brackets",
+    "bottom_box:shell_101",
+    "bottom_box:shell_102",
+    "bottom_box:shell_103",
+    "cross_beam",
+    "joint_bolted_801",
+    "joints_rest",
+    "plates:shell_601",
+    "plates:shell_701",
+    "top_box:shell_201",
+    "top_box:shell_202",
+    "top_box:shell_203"
+  ],
+  "verdict_nonidentifiable_params": [
+    "al_welds",
+    "contact",
+    "plates:shell_501",
+    "steel_welds"
+  ],
+  "pretest_lever": "Params below the floor carry their signal in modes/bands not excited or not frequency-sensitive at this single impact; the decisive lever is multi-reference / roving-hammer data (a 2nd drive varies phi_d, breaks the participation/damping confound) and/or mode-shape (eigenvector) observations, not more eigenfrequencies.",
+  "all_variants": {
+    "sigma_w2_discrepancy_floor_rel": 0.0446,
+    "n_matched_modes": 27,
+    "matched_fem_mode_idx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      25,
+      26,
+      27,
+      28,
+      29,
+      32,
+      33,
+      36,
+      38
+    ],
+    "matched_measured_hz": [
+      48.8,
+      66.2,
+      75.0,
+      83.8,
+      97.5,
+      111.2,
+      120.0,
+      123.8,
+      127.5,
+      138.8,
+      151.2,
+      155.6,
+      158.8,
+      165.0,
+      172.5,
+      177.5,
+      187.5,
+      188.8,
+      193.8,
+      196.2,
+      206.2,
+      227.5,
+      232.5,
+      241.2,
+      247.5,
+      253.8,
+      258.1
+    ],
+    "variants": {
+      "box_split": {
+        "n_params": 13,
+        "params": [
+          {
+            "name": "al_welds",
+            "group_origin": "al_welds",
+            "se_frac_typical": 0.002483806090286287,
+            "se_frac_peak": 0.021358678200606267,
+            "se_over_floor_peak": 0.47889413005843645,
+            "finite_perturb_max_df_pct": 0.1066,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "angle_brackets",
+            "group_origin": "angle_brackets",
+            "se_frac_typical": 0.0018959041858575003,
+            "se_frac_peak": 0.14338619993901944,
+            "se_over_floor_peak": 3.2149372183636644,
+            "finite_perturb_max_df_pct": 0.7013,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box:shell_101",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.08283209532381741,
+            "se_frac_peak": 0.94131047760967,
+            "se_over_floor_peak": 21.105616089902913,
+            "finite_perturb_max_df_pct": 4.5976,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box:shell_102",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.0074639185771701805,
+            "se_frac_peak": 0.48640971619926743,
+            "se_over_floor_peak": 10.906047448414068,
+            "finite_perturb_max_df_pct": 1.6372,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box:shell_103",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.009073937129368258,
+            "se_frac_peak": 0.05591557235163225,
+            "se_over_floor_peak": 1.2537123845657454,
+            "finite_perturb_max_df_pct": 0.2793,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "contact",
+            "group_origin": "contact",
+            "se_frac_typical": 0.0003851023486393901,
+            "se_frac_peak": 0.02044012484117175,
+            "se_over_floor_peak": 0.458298763254972,
+            "finite_perturb_max_df_pct": 0.101,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "cross_beam",
+            "group_origin": "cross_beam",
+            "se_frac_typical": 0.011563956763181123,
+            "se_frac_peak": 0.49791154716632907,
+            "se_over_floor_peak": 11.163936035119486,
+            "finite_perturb_max_df_pct": 2.3051,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "joints",
+            "group_origin": "joints",
+            "se_frac_typical": 0.02090980511712777,
+            "se_frac_peak": 0.1896081118271625,
+            "se_over_floor_peak": 4.251302955765976,
+            "finite_perturb_max_df_pct": 0.921,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "plates",
+            "group_origin": "plates",
+            "se_frac_typical": 0.011182009965231051,
+            "se_frac_peak": 0.9979433102256869,
+            "se_over_floor_peak": 22.375410543176837,
+            "finite_perturb_max_df_pct": 4.8701,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "steel_welds",
+            "group_origin": "steel_welds",
+            "se_frac_typical": 0.0020440376031360626,
+            "se_frac_peak": 0.02232504849917941,
+            "se_over_floor_peak": 0.5005616255421392,
+            "finite_perturb_max_df_pct": 0.1115,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "top_box:shell_201",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.2027599652547617,
+            "se_frac_peak": 0.839577433353964,
+            "se_over_floor_peak": 18.824606129012643,
+            "finite_perturb_max_df_pct": 3.292,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "top_box:shell_202",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.003949372919585239,
+            "se_frac_peak": 0.40803744203894204,
+            "se_over_floor_peak": 9.148821570379866,
+            "finite_perturb_max_df_pct": 1.3113,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "top_box:shell_203",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.005299965412250504,
+            "se_frac_peak": 0.05082418398466517,
+            "se_over_floor_peak": 1.1395556947234342,
+            "finite_perturb_max_df_pct": 0.2519,
+            "in_load_path": true,
+            "raw_above_floor": true
+          }
+        ],
+        "fim": {
+          "discrepancy_floor_rel": 0.0446,
+          "n_combos_above_prior": 7,
+          "singular_values": [
+            59.036108632333764,
+            45.72624340885857,
+            35.86500218986963,
+            14.784731179157887,
+            11.732941686803883,
+            8.482023988457447,
+            5.065610426154205,
+            1.3827859206196647,
+            1.1456183263748005,
+            0.7283406132303977,
+            0.34781204938890325,
+            0.2771441078720762,
+            0.25667991156509395
+          ],
+          "fim_eigenvalues": [
+            3485.262122448713,
+            2090.889336286182,
+            1286.2983820793534,
+            218.5882760399634,
+            137.66192062594035,
+            71.94473094076758,
+            25.660408989562182,
+            1.9120969022639736,
+            1.312441349725799,
+            0.5304800488808318,
+            0.12097322170010887,
+            0.07680885652820903,
+            0.06588457700106445
+          ],
+          "prior_precision": 16.0,
+          "combos": [
+            {
+              "singular_value": 59.036108632333764,
+              "fim_eigenvalue": 3485.262122448713,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_101",
+                  "weight": -0.965
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.221
+                },
+                {
+                  "param": "plates",
+                  "weight": -0.091
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": -0.077
+                }
+              ]
+            },
+            {
+              "singular_value": 45.72624340885857,
+              "fim_eigenvalue": 2090.889336286182,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.856
+                },
+                {
+                  "param": "plates",
+                  "weight": -0.394
+                },
+                {
+                  "param": "bottom_box:shell_101",
+                  "weight": 0.249
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.137
+                }
+              ]
+            },
+            {
+              "singular_value": 35.86500218986963,
+              "fim_eigenvalue": 1286.2983820793534,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "plates",
+                  "weight": 0.912
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.392
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.086
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.075
+                }
+              ]
+            },
+            {
+              "singular_value": 14.784731179157887,
+              "fim_eigenvalue": 218.5882760399634,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": 0.672
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": 0.544
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": 0.432
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.203
+                }
+              ]
+            },
+            {
+              "singular_value": 11.732941686803883,
+              "fim_eigenvalue": 137.66192062594035,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "cross_beam",
+                  "weight": -0.831
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": 0.439
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": -0.226
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": 0.211
+                }
+              ]
+            },
+            {
+              "singular_value": 8.482023988457447,
+              "fim_eigenvalue": 71.94473094076758,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.789
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": 0.588
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": 0.121
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": 0.094
+                }
+              ]
+            },
+            {
+              "singular_value": 5.065610426154205,
+              "fim_eigenvalue": 25.660408989562182,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "joints",
+                  "weight": -0.979
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": 0.121
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": 0.084
+                },
+                {
+                  "param": "top_box:shell_203",
+                  "weight": -0.074
+                }
+              ]
+            },
+            {
+              "singular_value": 1.3827859206196647,
+              "fim_eigenvalue": 1.9120969022639736,
+              "above_prior": false,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_103",
+                  "weight": -0.77
+                },
+                {
+                  "param": "top_box:shell_203",
+                  "weight": -0.507
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.318
+                },
+                {
+                  "param": "contact",
+                  "weight": 0.148
+                }
+              ]
+            },
+            {
+              "singular_value": 1.1456183263748005,
+              "fim_eigenvalue": 1.312441349725799,
+              "above_prior": false,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_103",
+                  "weight": 0.623
+                },
+                {
+                  "param": "top_box:shell_203",
+                  "weight": -0.509
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.507
+                },
+                {
+                  "param": "contact",
+                  "weight": 0.264
+                }
+              ]
+            }
+          ]
+        },
+        "verdict_identifiable_params": [
+          "angle_brackets",
+          "bottom_box:shell_101",
+          "bottom_box:shell_102",
+          "bottom_box:shell_103",
+          "cross_beam",
+          "joints",
+          "plates",
+          "top_box:shell_201",
+          "top_box:shell_202",
+          "top_box:shell_203"
+        ],
+        "verdict_nonidentifiable_params": [
+          "al_welds",
+          "contact",
+          "steel_welds"
+        ]
+      },
+      "joint_split": {
+        "n_params": 10,
+        "params": [
+          {
+            "name": "al_welds",
+            "group_origin": "al_welds",
+            "se_frac_typical": 0.0024838060902863065,
+            "se_frac_peak": 0.02135867820060629,
+            "se_over_floor_peak": 0.478894130058437,
+            "finite_perturb_max_df_pct": 0.1066,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "angle_brackets",
+            "group_origin": "angle_brackets",
+            "se_frac_typical": 0.001895904185857493,
+            "se_frac_peak": 0.14338619993901916,
+            "se_over_floor_peak": 3.214937218363658,
+            "finite_perturb_max_df_pct": 0.7013,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.13962295979668393,
+            "se_frac_peak": 0.9937595449881144,
+            "se_over_floor_peak": 22.28160414771557,
+            "finite_perturb_max_df_pct": 4.8247,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "contact",
+            "group_origin": "contact",
+            "se_frac_typical": 0.00038510234863940035,
+            "se_frac_peak": 0.02044012484117181,
+            "se_over_floor_peak": 0.4582987632549733,
+            "finite_perturb_max_df_pct": 0.101,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "cross_beam",
+            "group_origin": "cross_beam",
+            "se_frac_typical": 0.011563956763181303,
+            "se_frac_peak": 0.49791154716632813,
+            "se_over_floor_peak": 11.163936035119464,
+            "finite_perturb_max_df_pct": 2.3051,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "joint_bolted_801",
+            "group_origin": "joint_bolted_801",
+            "se_frac_typical": 0.005041660309904564,
+            "se_frac_peak": 0.1455615447395668,
+            "se_over_floor_peak": 3.263711765461139,
+            "finite_perturb_max_df_pct": 0.7016,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "joints_rest",
+            "group_origin": "joints_rest",
+            "se_frac_typical": 0.008250365785153386,
+            "se_frac_peak": 0.10202830101105359,
+            "se_over_floor_peak": 2.287630067512412,
+            "finite_perturb_max_df_pct": 0.4523,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "plates",
+            "group_origin": "plates",
+            "se_frac_typical": 0.011182009965231072,
+            "se_frac_peak": 0.9979433102256879,
+            "se_over_floor_peak": 22.37541054317686,
+            "finite_perturb_max_df_pct": 4.8701,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "steel_welds",
+            "group_origin": "steel_welds",
+            "se_frac_typical": 0.002044037603136068,
+            "se_frac_peak": 0.022325048499179403,
+            "se_over_floor_peak": 0.5005616255421391,
+            "finite_perturb_max_df_pct": 0.1115,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "top_box",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.2727985199660557,
+            "se_frac_peak": 0.8688140703387083,
+            "se_over_floor_peak": 19.480136106249063,
+            "finite_perturb_max_df_pct": 4.0505,
+            "in_load_path": true,
+            "raw_above_floor": true
+          }
+        ],
+        "fim": {
+          "discrepancy_floor_rel": 0.0446,
+          "n_combos_above_prior": 5,
+          "singular_values": [
+            67.24792623004228,
+            52.943711281642074,
+            36.659206166616485,
+            12.294320985732643,
+            4.118449909760151,
+            2.08832726054959,
+            0.9917344437269133,
+            0.4912257596862394,
+            0.38642799649150755,
+            0.3520062150093231
+          ],
+          "fim_eigenvalues": [
+            4522.283582241208,
+            2803.0365642738743,
+            1343.897396766492,
+            151.15032850022607,
+            16.961629659203393,
+            4.361110747154554,
+            0.9835372068743303,
+            0.24130274697932302,
+            0.1493265964724406,
+            0.12390837540518981
+          ],
+          "prior_precision": 16.0,
+          "combos": [
+            {
+              "singular_value": 67.24792623004228,
+              "fim_eigenvalue": 4522.283582241208,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "bottom_box",
+                  "weight": -0.927
+                },
+                {
+                  "param": "top_box",
+                  "weight": -0.362
+                },
+                {
+                  "param": "plates",
+                  "weight": -0.083
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.048
+                }
+              ]
+            },
+            {
+              "singular_value": 52.943711281642074,
+              "fim_eigenvalue": 2803.0365642738743,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "top_box",
+                  "weight": -0.895
+                },
+                {
+                  "param": "bottom_box",
+                  "weight": 0.375
+                },
+                {
+                  "param": "plates",
+                  "weight": -0.205
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.112
+                }
+              ]
+            },
+            {
+              "singular_value": 36.659206166616485,
+              "fim_eigenvalue": 1343.897396766492,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "plates",
+                  "weight": 0.974
+                },
+                {
+                  "param": "top_box",
+                  "weight": -0.22
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.039
+                },
+                {
+                  "param": "joints_rest",
+                  "weight": 0.037
+                }
+              ]
+            },
+            {
+              "singular_value": 12.294320985732643,
+              "fim_eigenvalue": 151.15032850022607,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "cross_beam",
+                  "weight": 0.951
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.257
+                },
+                {
+                  "param": "top_box",
+                  "weight": -0.133
+                },
+                {
+                  "param": "joints_rest",
+                  "weight": 0.112
+                }
+              ]
+            },
+            {
+              "singular_value": 4.118449909760151,
+              "fim_eigenvalue": 16.961629659203393,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "joint_bolted_801",
+                  "weight": 0.982
+                },
+                {
+                  "param": "joints_rest",
+                  "weight": 0.178
+                },
+                {
+                  "param": "top_box",
+                  "weight": -0.044
+                },
+                {
+                  "param": "plates",
+                  "weight": -0.03
+                }
+              ]
+            },
+            {
+              "singular_value": 2.08832726054959,
+              "fim_eigenvalue": 4.361110747154554,
+              "above_prior": false,
+              "mix": [
+                {
+                  "param": "joints_rest",
+                  "weight": 0.975
+                },
+                {
+                  "param": "joint_bolted_801",
+                  "weight": -0.182
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.102
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": -0.051
+                }
+              ]
+            },
+            {
+              "singular_value": 0.9917344437269133,
+              "fim_eigenvalue": 0.9835372068743303,
+              "above_prior": false,
+              "mix": [
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.897
+                },
+                {
+                  "param": "contact",
+                  "weight": 0.365
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.244
+                },
+                {
+                  "param": "al_welds",
+                  "weight": -0.031
+                }
+              ]
+            }
+          ]
+        },
+        "verdict_identifiable_params": [
+          "angle_brackets",
+          "bottom_box",
+          "cross_beam",
+          "joint_bolted_801",
+          "joints_rest",
+          "plates",
+          "top_box"
+        ],
+        "verdict_nonidentifiable_params": [
+          "al_welds",
+          "contact",
+          "steel_welds"
+        ]
+      },
+      "full_rich": {
+        "n_params": 16,
+        "params": [
+          {
+            "name": "al_welds",
+            "group_origin": "al_welds",
+            "se_frac_typical": 0.0024838060902862735,
+            "se_frac_peak": 0.021358678200606263,
+            "se_over_floor_peak": 0.4788941300584364,
+            "finite_perturb_max_df_pct": 0.1066,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "angle_brackets",
+            "group_origin": "angle_brackets",
+            "se_frac_typical": 0.001895904185857494,
+            "se_frac_peak": 0.1433861999390195,
+            "se_over_floor_peak": 3.2149372183636657,
+            "finite_perturb_max_df_pct": 0.7013,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box:shell_101",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.08283209532382231,
+            "se_frac_peak": 0.9413104776096699,
+            "se_over_floor_peak": 21.105616089902913,
+            "finite_perturb_max_df_pct": 4.5976,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box:shell_102",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.007463918577170236,
+            "se_frac_peak": 0.48640971619927015,
+            "se_over_floor_peak": 10.906047448414128,
+            "finite_perturb_max_df_pct": 1.6372,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "bottom_box:shell_103",
+            "group_origin": "bottom_box",
+            "se_frac_typical": 0.009073937129368327,
+            "se_frac_peak": 0.055915572351632324,
+            "se_over_floor_peak": 1.2537123845657472,
+            "finite_perturb_max_df_pct": 0.2793,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "contact",
+            "group_origin": "contact",
+            "se_frac_typical": 0.0003851023486393946,
+            "se_frac_peak": 0.020440124841171727,
+            "se_over_floor_peak": 0.45829876325497143,
+            "finite_perturb_max_df_pct": 0.101,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "cross_beam",
+            "group_origin": "cross_beam",
+            "se_frac_typical": 0.011563956763181267,
+            "se_frac_peak": 0.49791154716632935,
+            "se_over_floor_peak": 11.163936035119493,
+            "finite_perturb_max_df_pct": 2.3051,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "joint_bolted_801",
+            "group_origin": "joint_bolted_801",
+            "se_frac_typical": 0.005041660309904588,
+            "se_frac_peak": 0.14556154473956667,
+            "se_over_floor_peak": 3.263711765461136,
+            "finite_perturb_max_df_pct": 0.7016,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "joints_rest",
+            "group_origin": "joints_rest",
+            "se_frac_typical": 0.008250365785152897,
+            "se_frac_peak": 0.10202830101105369,
+            "se_over_floor_peak": 2.2876300675124144,
+            "finite_perturb_max_df_pct": 0.4523,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "plates:shell_501",
+            "group_origin": "plates",
+            "se_frac_typical": 0.0011562128551773814,
+            "se_frac_peak": 0.02767750667605765,
+            "se_over_floor_peak": 0.620571898566315,
+            "finite_perturb_max_df_pct": 0.1383,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "plates:shell_601",
+            "group_origin": "plates",
+            "se_frac_typical": 0.00509119138854527,
+            "se_frac_peak": 0.5750909978473524,
+            "se_over_floor_peak": 12.894416992093102,
+            "finite_perturb_max_df_pct": 2.8254,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "plates:shell_701",
+            "group_origin": "plates",
+            "se_frac_typical": 0.0017889802631819841,
+            "se_frac_peak": 0.9928019373118866,
+            "se_over_floor_peak": 22.2601331235849,
+            "finite_perturb_max_df_pct": 4.8387,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "steel_welds",
+            "group_origin": "steel_welds",
+            "se_frac_typical": 0.002044037603136031,
+            "se_frac_peak": 0.022325048499179455,
+            "se_over_floor_peak": 0.5005616255421402,
+            "finite_perturb_max_df_pct": 0.1115,
+            "in_load_path": true,
+            "raw_above_floor": false
+          },
+          {
+            "name": "top_box:shell_201",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.20275996525476184,
+            "se_frac_peak": 0.8395774333539635,
+            "se_over_floor_peak": 18.824606129012633,
+            "finite_perturb_max_df_pct": 3.292,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "top_box:shell_202",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.003949372919585263,
+            "se_frac_peak": 0.408037442038937,
+            "se_over_floor_peak": 9.148821570379752,
+            "finite_perturb_max_df_pct": 1.3113,
+            "in_load_path": true,
+            "raw_above_floor": true
+          },
+          {
+            "name": "top_box:shell_203",
+            "group_origin": "top_box",
+            "se_frac_typical": 0.005299965412250402,
+            "se_frac_peak": 0.05082418398466523,
+            "se_over_floor_peak": 1.1395556947234358,
+            "finite_perturb_max_df_pct": 0.2519,
+            "in_load_path": true,
+            "raw_above_floor": true
+          }
+        ],
+        "fim": {
+          "discrepancy_floor_rel": 0.0446,
+          "n_combos_above_prior": 8,
+          "singular_values": [
+            58.92996510317701,
+            44.558882354402414,
+            30.20480981755117,
+            15.236144400825983,
+            14.24315481171531,
+            11.74331957182096,
+            8.491699998376347,
+            4.043645119713407,
+            1.3409043373433256,
+            1.1460081632694958,
+            0.8037751355851604,
+            0.609811990724477,
+            0.29230427755457866,
+            0.2776374662833032,
+            0.21930825374526133,
+            0.16959428011130906
+          ],
+          "fim_eigenvalues": [
+            3472.7407870616603,
+            1985.493996673475,
+            912.3305361144355,
+            232.14009620282098,
+            202.86745899048898,
+            137.9055545659132,
+            72.10896886242486,
+            16.351065854182053,
+            1.7980244419061433,
+            1.3133347102803237,
+            0.646054468584943,
+            0.37187066403134966,
+            0.08544179067670415,
+            0.07708256268421233,
+            0.04809611016079594,
+            0.028762219846473158
+          ],
+          "prior_precision": 16.0,
+          "combos": [
+            {
+              "singular_value": 58.92996510317701,
+              "fim_eigenvalue": 3472.7407870616603,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_101",
+                  "weight": -0.971
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.209
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": -0.077
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.038
+                }
+              ]
+            },
+            {
+              "singular_value": 44.558882354402414,
+              "fim_eigenvalue": 1985.493996673475,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.935
+                },
+                {
+                  "param": "bottom_box:shell_101",
+                  "weight": 0.223
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.154
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.145
+                }
+              ]
+            },
+            {
+              "singular_value": 30.20480981755117,
+              "fim_eigenvalue": 912.3305361144355,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "plates:shell_701",
+                  "weight": 0.98
+                },
+                {
+                  "param": "plates:shell_601",
+                  "weight": 0.147
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.124
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.038
+                }
+              ]
+            },
+            {
+              "singular_value": 15.236144400825983,
+              "fim_eigenvalue": 232.14009620282098,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "plates:shell_601",
+                  "weight": -0.663
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": 0.484
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": 0.422
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": 0.332
+                }
+              ]
+            },
+            {
+              "singular_value": 14.24315481171531,
+              "fim_eigenvalue": 202.86745899048898,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "plates:shell_601",
+                  "weight": 0.701
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": 0.475
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": 0.347
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": 0.273
+                }
+              ]
+            },
+            {
+              "singular_value": 11.74331957182096,
+              "fim_eigenvalue": 137.9055545659132,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "cross_beam",
+                  "weight": 0.837
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": -0.428
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.228
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.211
+                }
+              ]
+            },
+            {
+              "singular_value": 8.491699998376347,
+              "fim_eigenvalue": 72.10896886242486,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "top_box:shell_202",
+                  "weight": 0.787
+                },
+                {
+                  "param": "bottom_box:shell_102",
+                  "weight": -0.59
+                },
+                {
+                  "param": "cross_beam",
+                  "weight": -0.105
+                },
+                {
+                  "param": "top_box:shell_201",
+                  "weight": -0.097
+                }
+              ]
+            },
+            {
+              "singular_value": 4.043645119713407,
+              "fim_eigenvalue": 16.351065854182053,
+              "above_prior": true,
+              "mix": [
+                {
+                  "param": "joint_bolted_801",
+                  "weight": 0.977
+                },
+                {
+                  "param": "top_box:shell_203",
+                  "weight": 0.116
+                },
+                {
+                  "param": "bottom_box:shell_103",
+                  "weight": 0.098
+                },
+                {
+                  "param": "top_box:shell_202",
+                  "weight": -0.096
+                }
+              ]
+            },
+            {
+              "singular_value": 1.3409043373433256,
+              "fim_eigenvalue": 1.7980244419061433,
+              "above_prior": false,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_103",
+                  "weight": -0.763
+                },
+                {
+                  "param": "top_box:shell_203",
+                  "weight": -0.482
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.342
+                },
+                {
+                  "param": "contact",
+                  "weight": 0.162
+                }
+              ]
+            },
+            {
+              "singular_value": 1.1460081632694958,
+              "fim_eigenvalue": 1.3133347102803237,
+              "above_prior": false,
+              "mix": [
+                {
+                  "param": "bottom_box:shell_103",
+                  "weight": 0.628
+                },
+                {
+                  "param": "angle_brackets",
+                  "weight": 0.506
+                },
+                {
+                  "param": "top_box:shell_203",
+                  "weight": -0.501
+                },
+                {
+                  "param": "contact",
+                  "weight": 0.267
+                }
+              ]
+            }
+          ]
+        },
+        "verdict_identifiable_params": [
+          "angle_brackets",
+          "bottom_box:shell_101",
+          "bottom_box:shell_102",
+          "bottom_box:shell_103",
+          "cross_beam",
+          "joint_bolted_801",
+          "joints_rest",
+          "plates:shell_601",
+          "plates:shell_701",
+          "top_box:shell_201",
+          "top_box:shell_202",
+          "top_box:shell_203"
+        ],
+        "verdict_nonidentifiable_params": [
+          "al_welds",
+          "contact",
+          "plates:shell_501",
+          "steel_welds"
+        ]
+      }
+    }
+  }
+}

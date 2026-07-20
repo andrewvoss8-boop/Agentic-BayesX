@@ -1,0 +1,15 @@
+{
+ "cid": "rnd006",
+ "family": "refine",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    201,
+    103
+   ]
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

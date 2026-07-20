@@ -1,0 +1,13 @@
+{
+ "cid": "rnd017",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "angle_brackets",
+   "factor": 1.6516334785740374
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

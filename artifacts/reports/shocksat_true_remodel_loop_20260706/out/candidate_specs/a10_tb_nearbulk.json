@@ -1,0 +1,21 @@
+{
+ "cid": "a10_tb_nearbulk",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 201,
+   "rule": {
+    "type": "z_band",
+    "zlo": 27.4,
+    "zhi": 30.4
+   },
+   "name": "tb_nearbulk"
+  }
+ ],
+ "rationale": "Al-box band at the z=30.4 bulkhead (ch69 below it, confirmed-fail); t26 (230.7 Hz) is top_box-dominated (SE 0.53) with df +11.2%.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t26; strain_energy m17 top_box 0.85",
+ "split_info": {
+  "tb_nearbulk": 2502
+ }
+}

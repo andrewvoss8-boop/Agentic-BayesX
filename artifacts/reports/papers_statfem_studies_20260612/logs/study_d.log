@@ -1,0 +1,46 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+truth freqs Hz: [3.111 3.134 8.145 8.145]  zeta: [0.0063 0.007  0.0209 0.0154]  pair gap 0.75%
+D-latent (Das/Debnath) ...
+D-eig (naive eigh) ...
+{
+  "truth": {
+    "freqs_hz": [
+      3.110588719381756,
+      3.133916452164082,
+      8.145156225811654
+    ],
+    "zeta": [
+      0.006266124987686306,
+      0.006951693745363283,
+      0.020948163504460517
+    ],
+    "near_degenerate_pair_gap_pct": 0.7499459069266644
+  },
+  "D_latent": {
+    "max_rhat": 1.0095664199227825,
+    "min_ess": 279.9250687387994,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "runtime_s": 12.763259887695312,
+    "recovered_freqs_hz": [
+      3.0999529471041716,
+      3.123330177097793,
+      7.908613695163545
+    ],
+    "recovered_zeta": [
+      0.005828397749488902,
+      0.006543634850881234,
+      0.015293382601413039
+    ]
+  },
+  "D_eig": {
+    "max_rhat": 1.0164533140201986,
+    "min_ess": 485.4931193771133,
+    "divergences": 429,
+    "div_frac": 0.1340625,
+    "runtime_s": 8.846025228500366
+  },
+  "note": "D-eig differentiates through eigh -> divergences at the near-degenerate pair; D-latent (Das/Debnath) avoids it"
+}
+saved study_d_summary.json

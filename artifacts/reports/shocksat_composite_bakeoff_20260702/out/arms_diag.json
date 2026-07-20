@@ -1,0 +1,174 @@
+{
+ "m1_candidate": "rand10",
+ "m1_evidence_flag": "beats_M0_on_evidence",
+ "M0S0": {
+  "cid": "baseline",
+  "kind": "S0",
+  "attempts": [
+   {
+    "max_rhat": 1.0009,
+    "min_ess": 1431.7,
+    "divergences": 0,
+    "n_chains": 4,
+    "draws": 4000,
+    "div_frac": 0.0,
+    "converged": true,
+    "attempt": 1
+   }
+  ],
+  "final": {
+   "max_rhat": 1.0009,
+   "min_ess": 1431.7,
+   "divergences": 0,
+   "n_chains": 4,
+   "draws": 4000,
+   "div_frac": 0.0,
+   "converged": true
+  },
+  "n_modes_used": 25,
+  "runtime_s": 97.5
+ },
+ "M0S1": {
+  "cid": "baseline",
+  "kind": "S1",
+  "attempts": [
+   {
+    "max_rhat": 1.0011,
+    "min_ess": 2964.0,
+    "divergences": 0,
+    "n_chains": 4,
+    "draws": 4000,
+    "div_frac": 0.0,
+    "converged": true,
+    "s1_shape_deriv": "regularized first-order (Tikhonov modal denominators)",
+    "s1_delta_lambda_floor": 16181.34862773883,
+    "attempt": 1
+   }
+  ],
+  "final": {
+   "max_rhat": 1.0011,
+   "min_ess": 2964.0,
+   "divergences": 0,
+   "n_chains": 4,
+   "draws": 4000,
+   "div_frac": 0.0,
+   "converged": true,
+   "s1_shape_deriv": "regularized first-order (Tikhonov modal denominators)",
+   "s1_delta_lambda_floor": 16181.34862773883
+  },
+  "n_modes_used": 25,
+  "runtime_s": 92.8
+ },
+ "M0S2": {
+  "cid": "baseline",
+  "kind": "S2",
+  "attempts": [
+   {
+    "max_rhat": 1.0004,
+    "min_ess": 5201.3,
+    "divergences": 0,
+    "n_chains": 4,
+    "draws": 4000,
+    "div_frac": 0.0,
+    "converged": true,
+    "attempt": 1
+   }
+  ],
+  "final": {
+   "max_rhat": 1.0004,
+   "min_ess": 5201.3,
+   "divergences": 0,
+   "n_chains": 4,
+   "draws": 4000,
+   "div_frac": 0.0,
+   "converged": true
+  },
+  "n_modes_used": 25,
+  "runtime_s": 133.9
+ },
+ "M1S0": {
+  "cid": "rand10",
+  "kind": "S0",
+  "attempts": [
+   {
+    "max_rhat": 1.0008,
+    "min_ess": 2660.0,
+    "divergences": 0,
+    "n_chains": 4,
+    "draws": 4000,
+    "div_frac": 0.0,
+    "converged": true,
+    "attempt": 1
+   }
+  ],
+  "final": {
+   "max_rhat": 1.0008,
+   "min_ess": 2660.0,
+   "divergences": 0,
+   "n_chains": 4,
+   "draws": 4000,
+   "div_frac": 0.0,
+   "converged": true
+  },
+  "n_modes_used": 22,
+  "runtime_s": 210.6
+ },
+ "M1S1": {
+  "cid": "rand10",
+  "kind": "S1",
+  "attempts": [
+   {
+    "max_rhat": 1.0008,
+    "min_ess": 3213.9,
+    "divergences": 0,
+    "n_chains": 4,
+    "draws": 4000,
+    "div_frac": 0.0,
+    "converged": true,
+    "s1_shape_deriv": "regularized first-order (Tikhonov modal denominators)",
+    "s1_delta_lambda_floor": 18074.892229960766,
+    "attempt": 1
+   }
+  ],
+  "final": {
+   "max_rhat": 1.0008,
+   "min_ess": 3213.9,
+   "divergences": 0,
+   "n_chains": 4,
+   "draws": 4000,
+   "div_frac": 0.0,
+   "converged": true,
+   "s1_shape_deriv": "regularized first-order (Tikhonov modal denominators)",
+   "s1_delta_lambda_floor": 18074.892229960766
+  },
+  "n_modes_used": 22,
+  "runtime_s": 293.7
+ },
+ "M1S2": {
+  "cid": "rand10",
+  "kind": "S2",
+  "attempts": [
+   {
+    "max_rhat": 1.0005,
+    "min_ess": 5708.7,
+    "divergences": 0,
+    "n_chains": 4,
+    "draws": 4000,
+    "div_frac": 0.0,
+    "converged": true,
+    "attempt": 1
+   }
+  ],
+  "final": {
+   "max_rhat": 1.0005,
+   "min_ess": 5708.7,
+   "divergences": 0,
+   "n_chains": 4,
+   "draws": 4000,
+   "div_frac": 0.0,
+   "converged": true
+  },
+  "n_modes_used": 22,
+  "runtime_s": 329.8
+ }
+}

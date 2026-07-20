@@ -1,0 +1,25 @@
+{
+ "op": "rbe3_convert",
+ "status": "PASS",
+ "checks": [
+  {
+   "name": "rigid-field interpolation exactness (rel err, 3 spiders)",
+   "value": 3.500407018612969e-16,
+   "expect": "<=1e-9",
+   "pass": true
+  },
+  {
+   "name": "6 rigid-body modes preserved (full model, 10 spiders converted)",
+   "value": 6,
+   "expect": 6,
+   "pass": true
+  },
+  {
+   "name": "liveness: max elastic mode shift vs baseline (%)",
+   "value": 4.7973,
+   "expect": ">=0.05",
+   "pass": true
+  }
+ ],
+ "ts": "2026-07-16T19:27:33"
+}

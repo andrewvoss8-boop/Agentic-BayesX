@@ -1,0 +1,52 @@
+{
+ "cid": "ma3_conn_soft_traypath",
+ "track": "agent",
+ "round": 3,
+ "cls": "connectivity",
+ "ops": [
+  "rbe2_soften"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.10500287144360244,
+ "exact_b200_500": 0.15791671496662113,
+ "exact_folds": {
+  "m_xpos_990x": 0.2371880116722211,
+  "m_zpos_990z": 0.4938267234818076,
+  "m_ypos_990y": 0.02026481221737037,
+  "m_zpos_900z": -0.33126806159698935
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.10953797407199503,
+  "m_zpos_990z": 0.15429260694142127,
+  "m_ypos_990y": 0.14085799015615047,
+  "m_zpos_900z": 0.22697828869691777
+ },
+ "theta_map": [
+  1.0797947126762155,
+  0.9817005793789002,
+  0.9762666285669872,
+  0.9568153880722948,
+  1.112607487258415,
+  1.0151044007764733,
+  1.4559727169310566,
+  1.013440183575462,
+  1.0679473564836048,
+  0.9490039427335266
+ ],
+ "enriched_pkg": "ma3_conn_soft_traypath__xenr",
+ "spot_max_pct": 1.3980464563800865e-07,
+ "n_dof": 400134,
+ "delta_dof_pct": 0.156,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 17.4086,
+  "pass": true
+ },
+ "solve_s_theta1": 385.9,
+ "solve_s_enrich": 386.5,
+ "wall_s": 804.6,
+ "ts": "2026-07-17T06:51:52",
+ "diagnosis_link": "diagnosis_mf_r3.json: Top_Brackets|Y sub-200 stays high (0.702 dex) and the r2 bbox JOINT offset was the agent's best model-form gain (+0.1734) -> soften the TRAY-PATH spiders (top brackets + angle brackets) the same way r1 softened the bottom box"
+}

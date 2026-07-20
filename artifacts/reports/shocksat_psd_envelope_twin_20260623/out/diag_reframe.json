@@ -1,0 +1,20 @@
+{
+  "reference": "+X (Test01)",
+  "n_channels": 84,
+  "n_modes": 29,
+  "median_zeta": 0.0099,
+  "per_point_logmag_corr": 0.384,
+  "band_avg_logenergy_corr": 0.481,
+  "net_response_corr": 0.409,
+  "drivepoint_apparent_mass_corr": 0.258,
+  "drivepoint_channel": 26,
+  "per_point_corr_with_freq_shift_FDAC": 0.433,
+  "MOF_per_band": {
+    "45-95": 0.11,
+    "95-145": 0.19,
+    "145-195": 0.94,
+    "195-245": 0.17,
+    "245-295": 0.32
+  },
+  "note": "integrated/band quantities vs per-point; reused saved baseline modes (no eigensolve)"
+}

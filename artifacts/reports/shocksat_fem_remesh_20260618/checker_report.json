@@ -1,0 +1,26 @@
+{
+ "green": [
+  "exists: nominal_modes.json",
+  "baseline reproduces inherited FEM (max rel \u0394f 3.6e-10 < 1e-9)",
+  "exists: region_diagnosis.md",
+  "exists: out/region_diagnosis.json",
+  "exists: correlation_contribution.md",
+  "exists: figures/fig_before_after.png",
+  "exists: out/before_after.json",
+  "campaign has 10 correlated-update edits (>=10)",
+  "every edit has a re-solved result.json (no fabricated rows)",
+  "FINDING (documented): 0 edits improved a hard-region metric without degrading global MAC/frequency -> shape-vs-frequency tradeoff; matches correlation_contribution.md \u00a74",
+  "campaign is non-inert (>=1 edit moves box_column MAC >0.02)",
+  "exists: out/dish_refined/nominal_modes.json",
+  "dish 2x refinement leaves mode 1 unchanged (4.1e-11) -> mesh converged",
+  "ch92 'suspected (not in confirmed fail-7)' labeling present (honest)"
+ ],
+ "yellow": [],
+ "red": [],
+ "overall": "GREEN",
+ "counts": {
+  "green": 14,
+  "yellow": 0,
+  "red": 0
+ }
+}

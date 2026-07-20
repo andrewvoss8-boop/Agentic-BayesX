@@ -1,0 +1,5 @@
+[    0.0s] p2: NUTS 4x(1000+1000) depth 8, 2 pooled mount params
+[ 1510.5s] p2: worst_rhat 1.2441 min_ess 8 div 0 gate_pass False
+[ 1510.5s] p3b: NUTS 4x(1000+1000) depth 8, 3 pooled mount params
+[ 3603.1s] p3b: worst_rhat 1.5156 min_ess 4 div 0 gate_pass False
+[ 3603.1s] pooled_posterior.json written

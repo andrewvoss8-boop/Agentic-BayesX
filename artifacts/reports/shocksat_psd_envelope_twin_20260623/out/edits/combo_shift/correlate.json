@@ -1,0 +1,18 @@
+{
+ "edit_id": "combo_shift",
+ "n_matched_modes": 28,
+ "global_MAC": 0.622,
+ "fundamental_MAC": 0.97,
+ "low3_MAC": [
+  0.97,
+  0.52,
+  0.51
+ ],
+ "FRF_logmag_corr_median": 0.341,
+ "FRF_logmag_corr_mean": 0.273,
+ "FRF_corr_frac_above_0.5": 0.33,
+ "FRF_peak_ampl_err_dB_median": 16.6,
+ "n_channels": 84,
+ "n_refs": 4,
+ "runtime_s": 14385.5
+}

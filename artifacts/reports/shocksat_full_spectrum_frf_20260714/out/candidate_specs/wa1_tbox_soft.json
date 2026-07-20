@@ -1,0 +1,17 @@
+{
+ "cid": "wa1_tbox_soft",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.9,
+   "name": "topbox_t090"
+  }
+ ],
+ "rationale": "Top_Box|Y resid 0.69 (n42) and Top_Box|Z 0.68; soften top-box panels to move the top-box Y/Z modes toward the measured amplitudes."
+}

@@ -1,0 +1,27 @@
+# manifest_sha256.txt — apples-to-apples provenance for the IFT real-validation study
+# Generated 2026-06-19. Each COPIED file's sha256 == the StatFEM run's source (verified byte-identical).
+# StatFEM source run: artifacts/reports/statfem_real_validation_20260617/
+# check.py re-verifies these at run time; any drift => RED (apples-to-apples broken).
+
+## COPIED byte-identical (code/) — reused forward + scorer + StatFEM baselines
+e73579698707fd2c02514042a3f29cd8c069234c907a8226353830a62d657218  code/core.py
+c62c564d024eb59cc48d6daeb70128b73b5bcb0e4e925f8d4234416baeb0934d  code/score.py
+9654fdf1b2cc6ff21cfa54fe3caae4da12ccffd9a7f72046c6001956bcfc723e  code/realfrf.py
+307f3f0752f654764dd0d800922b8c80195db52e9ea6e67558a5b70a6c3a0d1d  code/heldout_qoi.py
+b7ec8658d7b0fbad59c78e77e8e9ca787bd93f8d724cda32031a6ac643c1e936  code/mc_heldout.py
+6b57d90d023c15cf179c3f8c1e88e76ed257fdad2bf59ca33973277daf845ac2  code/modal_feature.py
+41f64744e4230ed2cf44ec9048802795dee1a412fb7587aa96505c302c1dad4b  code/real_arms.py
+d1720033258bbaf34b5d92083b438bb3fb7fba7a4ec126ba8bad0e4398141f72  code/tmcmc.py
+
+## COPIED byte-identical (data/) — same real data
+be9af90efd555ab7f326b07f410f0fe46540e37038caef830bb84ca4a9b46c78  data/reduced_blocks.npz
+3a8d1d6920f8b1ade99b9b69ec38932e71334c246ef52fa093eb02530ebf1527  data/obs_dofs.npy
+e6a4aa832ce1b0a6675ac48db1814cc5cc766562023965035be22e0a6bb11d83  data/keep_dofs.npy
+44f66d98ac3a182355547a3395b7b90138e8cc7f65a576ca707d70c800b0e3bc  data/channel_map.csv
+279e96319f7aaf71ec2781a68be81e03111815916c69bfe5b1b4fd95e1bf1a3f  data/groups.json
+788d0464962a888dea79e02be283616335a1e237c7a238b38ac8093c6b168812  data/sensor_coords.npz
+c1b0f8e45cd7ed6f8c749c81578a7cb5607de2b349a5ee34f4166fde71f1dcb8  data/measured_frf_cache.npz
+
+## REFERENCED read-only from sibling workspaces (NOT copied; realfrf.py reads via WS.parent)
+f0a4587b610fa0f1fede6b7b6cde4cd8af73524ff2fc2785236db4b3eb0d2baa  ../statfem_shocksat_eval_20260616/data/V_keep.npy
+3a72b83d2834655b5d4d0415998bc929fd500f2ebac50ace505c663ba14c0520  ../shocksat_fem_modal_twin_20260609/fem_model.npz

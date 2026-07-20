@@ -1,0 +1,9 @@
+{"cid": "rnd004", "err": "rnd004: split rule selects no elements of pid 401"}
+{"cid": "rnd004", "err": "rnd004: split rule selects no elements of pid 401"}
+{"cid": "rnd004", "err": "rnd004: split rule selects no elements of pid 401"}
+{"cid": "rnd006", "err": "rnd006: refine selects 27986 quads > cap 8000 (pathological/oversized remodel; dud)"}
+{"cid": "rnd007", "err": "rnd007: split rule selects no elements of pid 202"}
+{"cid": "rnd016", "err": "rnd016: split rule selects no elements of pid 701"}
+{"cid": "rnd033", "err": "rnd033: split rule selects no elements of pid 201"}
+{"cid": "rnd045", "err": "rnd045: split rule selects no elements of pid 401"}
+{"cid": "rnd057", "err": "rnd057: split rule selects no elements of pid 103"}

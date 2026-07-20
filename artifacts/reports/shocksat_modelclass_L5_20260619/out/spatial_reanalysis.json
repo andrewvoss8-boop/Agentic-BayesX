@@ -1,0 +1,22 @@
+{
+  "n": 77,
+  "spearman_absres_vs_feature_distance": {
+    "impact": 0.087,
+    "bolted_joint": -0.093,
+    "strut": -0.208,
+    "dish": -0.193,
+    "bulkhead": -0.072,
+    "nearest_feature": -0.094
+  },
+  "region_categorical_R2_(nearest_feature)": 0.036,
+  "linear_R2_nearest_feature_distance": 0.006,
+  "linear_R2_axial_z": 0.023,
+  "region_mean_abs_res_db": {
+    "bolted_joint": 12.3,
+    "bulkhead": 7.3,
+    "dish": 9.0,
+    "impact": 8.0,
+    "strut": 7.5
+  },
+  "verdict": "MIXED / mostly confirms the weak-spatial finding. There is a MILD regional concentration \u2014 the bolted-joint region is worst (mean 12.3 dB) and the dish/strut appendages are mildly elevated, which is physically sensible (interface + free-boundary model-form error). BUT spatial location explains only R\u00b2=0.04 of the residual: co-located channels vary hugely and proximity to a feature does NOT predict hardness (many near-feature channels are easy). So a region/physical discrepancy prior is JUSTIFIED but captures only a small fraction; the dominant variation is a channel-specific near-field nugget. Andrew's intuition is partly right (joint/appendage concentration) but the spatial signal is weak, not strong."
+}

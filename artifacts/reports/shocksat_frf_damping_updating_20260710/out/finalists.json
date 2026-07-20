@@ -1,0 +1,156 @@
+{
+  "freeze": [
+    "A0_enr",
+    "A0_enr",
+    "c06_tb_xface_enr",
+    "a04_welds_t074_enr",
+    "c06_tb_xface_enr",
+    "rnd003_enr"
+  ],
+  "labels": [
+    "A0_enr",
+    "A0d_enr",
+    "c06_enr",
+    "a04_enr",
+    "b_c06_enr",
+    "rnd003_enr"
+  ],
+  "cids": [
+    "A0_enr",
+    "A0d_enr",
+    "c06_enr"
+  ],
+  "scores": {
+    "A0_enr": {
+      "P1p_mean": 0.19694915586956468,
+      "P1p_se": 0.1311153649485249,
+      "P3_mean": 0.2152377291964802,
+      "P2p_mean": 0.8547511992463027,
+      "alignment_gain": -0.018288573326915525,
+      "P1p_folds": [
+        0.3413,
+        0.4422,
+        0.1593,
+        -0.155
+      ],
+      "damping_dim": 0,
+      "ablation": "baseline",
+      "cid": "A0_enr",
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    },
+    "A0d_enr": {
+      "P1p_mean": 0.19309307085599817,
+      "P1p_se": 0.1428819543185858,
+      "P3_mean": 0.2096197085284931,
+      "P2p_mean": 0.7917134887816528,
+      "alignment_gain": -0.01652663767249493,
+      "P1p_folds": [
+        0.3343,
+        0.4832,
+        0.1322,
+        -0.1773
+      ],
+      "damping_dim": 4,
+      "ablation": "damping_only",
+      "cid": "A0_enr",
+      "damping": {
+        "kind": "band",
+        "zeta": [
+          0.022840753655781844,
+          0.014664269500534741,
+          0.024648487987449567,
+          0.023296072808204272
+        ]
+      }
+    },
+    "c06_enr": {
+      "P1p_mean": 0.228206576817622,
+      "P1p_se": 0.13377389945684362,
+      "P3_mean": 0.22016052586229581,
+      "P2p_mean": 0.9846028666373599,
+      "alignment_gain": 0.008046050955326178,
+      "P1p_folds": [
+        0.3164,
+        0.5161,
+        0.2036,
+        -0.1232
+      ],
+      "damping_dim": 0,
+      "ablation": "shape_only",
+      "cid": "c06_tb_xface_enr",
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    },
+    "a04_enr": {
+      "P1p_mean": 0.23365276581395217,
+      "P1p_se": 0.13569116364208303,
+      "P3_mean": 0.23757280464108402,
+      "P2p_mean": 0.9818398426298801,
+      "alignment_gain": -0.00392003882713185,
+      "P1p_folds": [
+        0.3126,
+        0.5272,
+        0.2194,
+        -0.1246
+      ],
+      "damping_dim": 0,
+      "ablation": "shape_only",
+      "cid": "a04_welds_t074_enr",
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    },
+    "b_c06_enr": {
+      "P1p_mean": 0.22626741531256866,
+      "P1p_se": 0.14129820339863078,
+      "P3_mean": 0.21890726885292977,
+      "P2p_mean": 0.9145069913925948,
+      "alignment_gain": 0.007360146459638894,
+      "P1p_folds": [
+        0.3298,
+        0.5331,
+        0.18,
+        -0.1378
+      ],
+      "damping_dim": 4,
+      "ablation": "both",
+      "cid": "c06_tb_xface_enr",
+      "damping": {
+        "kind": "band",
+        "zeta": [
+          0.022840753655781844,
+          0.014664269500534741,
+          0.024648487987449567,
+          0.023296072808204272
+        ]
+      }
+    },
+    "rnd003_enr": {
+      "P1p_mean": 0.2388607613269671,
+      "P1p_se": 0.1294886830625385,
+      "P3_mean": 0.2388607613269671,
+      "P2p_mean": 0.7209807667641147,
+      "alignment_gain": 0.0,
+      "P1p_folds": [
+        0.3455,
+        0.5369,
+        0.1341,
+        -0.0612
+      ],
+      "damping_dim": 0,
+      "ablation": "random",
+      "cid": "rnd003_enr",
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    }
+  },
+  "runtime_s": 63.8
+}

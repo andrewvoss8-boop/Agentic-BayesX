@@ -1,0 +1,25 @@
+{
+ "cid": "ma2_prop_tboxxbeam2",
+ "cls": "property_control",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.85,
+   "name": "tbox085"
+  },
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.5
+  }
+ ],
+ "diagnosis_link": "CONTROL: perturb the r1 winner (0.9/1.4 -> 0.85/1.5) - give the control class its best shot at improving on +0.1765",
+ "track": "agent",
+ "round": 2,
+ "rationale": "CONTROL: perturb the r1 winner (0.9/1.4 -> 0.85/1.5) - give the control class its best shot at improving on +0.1765"
+}

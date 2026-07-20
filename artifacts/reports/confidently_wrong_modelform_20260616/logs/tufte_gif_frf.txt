@@ -1,0 +1,5 @@
+
+=== code/gif_frf.py ===
+  [INFO] dB detected: state linear/dB explicitly and justify dB (project rule: avoid dB unless standard).
+
+1 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.

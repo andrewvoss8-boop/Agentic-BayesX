@@ -1,0 +1,974 @@
+{
+ "workspace": "artifacts/reports/mpl_stand_fem_rebuild_20260611",
+ "runner": "FABLE",
+ "date": "2026-06-11",
+ "task": "MPL stand parametric FEM rebuild (coarse prior model; no sampler)",
+ "inputs": {
+  "deck": "MPL test stand/FEM/Test Stand FEA.dat",
+  "photos": "MPL test stand/FEM/test stand photos jun 11 26/IMG_9842-9846",
+  "human_confirmations": "clamp 415.3 g; shield vertical perpendicular to thrust; shield t=1.7 mm; runner=FABLE override"
+ },
+ "n_artifacts": 192,
+ "artifacts": [
+  {
+   "path": ".DS_Store",
+   "bytes": 6148,
+   "sha256_16": "cdac9189c7408a98"
+  },
+  {
+   "path": "assumptions_ledger.md",
+   "bytes": 9089,
+   "sha256_16": "c201c6db5fe6361a"
+  },
+  {
+   "path": "check.py",
+   "bytes": 11409,
+   "sha256_16": "662e478478583200"
+  },
+  {
+   "path": "decisions_log.md",
+   "bytes": 20265,
+   "sha256_16": "c3e801aa350289ed"
+  },
+  {
+   "path": "packet.md",
+   "bytes": 40710,
+   "sha256_16": "2effdadab831faf7"
+  },
+  {
+   "path": "priority_deliverables.md",
+   "bytes": 4252,
+   "sha256_16": "98be26609b9f77f6"
+  },
+  {
+   "path": "run_all.sh",
+   "bytes": 2467,
+   "sha256_16": "1f571f684612a926"
+  },
+  {
+   "path": "runtime.json",
+   "bytes": 972,
+   "sha256_16": "0a4644de21df8674"
+  },
+  {
+   "path": "tuning_changelog.md",
+   "bytes": 4013,
+   "sha256_16": "cf15c79561e829b3"
+  },
+  {
+   "path": "out/check_report.json",
+   "bytes": 5671,
+   "sha256_16": "c66b30167480a3c2"
+  },
+  {
+   "path": "out/discretization_check.json",
+   "bytes": 1648,
+   "sha256_16": "29562cd9717b7188"
+  },
+  {
+   "path": "out/element_validation.json",
+   "bytes": 2241,
+   "sha256_16": "dddae51868e7967e"
+  },
+  {
+   "path": "out/groups.json",
+   "bytes": 1102,
+   "sha256_16": "03c36fc96692cf0c"
+  },
+  {
+   "path": "out/image_qa.json",
+   "bytes": 4082,
+   "sha256_16": "bb0f1cae58eb5fd5"
+  },
+  {
+   "path": "out/interface_points.json",
+   "bytes": 55475,
+   "sha256_16": "7263f6c98d4e92fc"
+  },
+  {
+   "path": "out/modal_gates.json",
+   "bytes": 789,
+   "sha256_16": "29f0819342315c6b"
+  },
+  {
+   "path": "out/modes_feet_springs.json",
+   "bytes": 2045,
+   "sha256_16": "1f4ab166d6a2cdc7"
+  },
+  {
+   "path": "out/modes_free_free.json",
+   "bytes": 2149,
+   "sha256_16": "accbbc179704ae35"
+  },
+  {
+   "path": "out/modes_no_shield.json",
+   "bytes": 1017,
+   "sha256_16": "5fbe605b8654b4ec"
+  },
+  {
+   "path": "out/modes_nominal.json",
+   "bytes": 48244,
+   "sha256_16": "f00068340025f1e3"
+  },
+  {
+   "path": "out/modes_nominal_drillx100.json",
+   "bytes": 48223,
+   "sha256_16": "e60f5f6953b5e321"
+  },
+  {
+   "path": "out/modes_nominal_refined.json",
+   "bytes": 65668,
+   "sha256_16": "65d18e4a4a7cc9ab"
+  },
+  {
+   "path": "out/modes_nominal_shapes.npz",
+   "bytes": 12378289,
+   "sha256_16": "5970b1526943f8e1"
+  },
+  {
+   "path": "out/modes_nominal_shapes_drillx100.npz",
+   "bytes": 12378865,
+   "sha256_16": "e7389b30cfc07865"
+  },
+  {
+   "path": "out/modes_nominal_shapes_refined.npz",
+   "bytes": 20268597,
+   "sha256_16": "e416c4082c245caa"
+  },
+  {
+   "path": "out/modes_screw_k_x0.01.json",
+   "bytes": 2141,
+   "sha256_16": "e54179a7f2299e2b"
+  },
+  {
+   "path": "out/modes_screw_k_x100.json",
+   "bytes": 2041,
+   "sha256_16": "ed83a1f06a4aefb7"
+  },
+  {
+   "path": "out/modes_shield_aluminum.json",
+   "bytes": 2168,
+   "sha256_16": "b5409f0ba7c5e442"
+  },
+  {
+   "path": "out/modes_shield_t_x0.5.json",
+   "bytes": 2166,
+   "sha256_16": "5569a0ce3f6a3e7c"
+  },
+  {
+   "path": "out/modes_shield_t_x2.json",
+   "bytes": 2224,
+   "sha256_16": "b4f856c8153df55f"
+  },
+  {
+   "path": "out/parse_summary.json",
+   "bytes": 1781,
+   "sha256_16": "f4a981a5eaaf7f32"
+  },
+  {
+   "path": "out/parsed_deck.json",
+   "bytes": 208713,
+   "sha256_16": "854b11e2ef3903cc"
+  },
+  {
+   "path": "out/prior_predictive.json",
+   "bytes": 224809,
+   "sha256_16": "6d4b42f8bc9eb49c"
+  },
+  {
+   "path": "out/priors.json",
+   "bytes": 2506,
+   "sha256_16": "1aa80d9a6c227b00"
+  },
+  {
+   "path": "out/pseudo_frf.json",
+   "bytes": 1152765,
+   "sha256_16": "d3a50ecc6a64eb02"
+  },
+  {
+   "path": "out/strain_energy_nominal.json",
+   "bytes": 62230,
+   "sha256_16": "518af0ad23a35e74"
+  },
+  {
+   "path": "out/strain_energy_nominal_drillx100.json",
+   "bytes": 62189,
+   "sha256_16": "8fe91f997c8c8701"
+  },
+  {
+   "path": "out/strain_energy_nominal_refined.json",
+   "bytes": 84648,
+   "sha256_16": "bb156ac01e6da1c1"
+  },
+  {
+   "path": "out/tableA_compact.txt",
+   "bytes": 3398,
+   "sha256_16": "317efa4ae3f51719"
+  },
+  {
+   "path": "out/tableB_compact.txt",
+   "bytes": 684,
+   "sha256_16": "583f73d7376d128e"
+  },
+  {
+   "path": "out/tuning_result.json",
+   "bytes": 1148,
+   "sha256_16": "716c4411192f222c"
+  },
+  {
+   "path": "out/model_drillx100/T_rbe2.npz",
+   "bytes": 27986,
+   "sha256_16": "831c451aa9575017"
+  },
+  {
+   "path": "out/model_drillx100/arrays.npz",
+   "bytes": 25789,
+   "sha256_16": "4805c79e0229eab8"
+  },
+  {
+   "path": "out/model_drillx100/meta.json",
+   "bytes": 4886,
+   "sha256_16": "0805796c5c2e3ab6"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_att_ebox.npz",
+   "bytes": 1866,
+   "sha256_16": "31b4a0efb559de26"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_att_valve.npz",
+   "bytes": 1960,
+   "sha256_16": "689f33be777571a3"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_att_wbox.npz",
+   "bytes": 1630,
+   "sha256_16": "b86f737805712527"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_beam_rest.npz",
+   "bytes": 75019,
+   "sha256_16": "77a04d5500e636b9"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_beam_wall.npz",
+   "bytes": 26221,
+   "sha256_16": "65eed41fd8756511"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_bush_joints.npz",
+   "bytes": 9867,
+   "sha256_16": "567bb3b8ded726cf"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_feet_springs.npz",
+   "bytes": 1137,
+   "sha256_16": "7d2e188c5e5fd9f7"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_plate_bend.npz",
+   "bytes": 9732,
+   "sha256_16": "ec612b2f5d4651c3"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_plate_mem.npz",
+   "bytes": 19142,
+   "sha256_16": "18e45afe1812fc47"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_shield_att.npz",
+   "bytes": 4231,
+   "sha256_16": "bb5eb190dddf63e1"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_shield_bend.npz",
+   "bytes": 22462,
+   "sha256_16": "0853c178bd72e1ee"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_shield_mem.npz",
+   "bytes": 11478,
+   "sha256_16": "18055326e8834784"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_valve_mount.npz",
+   "bytes": 2186,
+   "sha256_16": "37322b18f6ce122b"
+  },
+  {
+   "path": "out/model_drillx100/groups/K_valveframe.npz",
+   "bytes": 2912,
+   "sha256_16": "402340253e74a511"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_beam_rest.npz",
+   "bytes": 12327,
+   "sha256_16": "fe0c33f207cec91b"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_beam_wall.npz",
+   "bytes": 5677,
+   "sha256_16": "d0a56a985488d56a"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_ebox.npz",
+   "bytes": 1078,
+   "sha256_16": "a24e8d0350545133"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_plate.npz",
+   "bytes": 4724,
+   "sha256_16": "4b6645baf00d7d1c"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_psu.npz",
+   "bytes": 1009,
+   "sha256_16": "866bd91e50edbecc"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_shield.npz",
+   "bytes": 2474,
+   "sha256_16": "f7ce733061b7b98b"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_valve.npz",
+   "bytes": 1077,
+   "sha256_16": "6c1f44416b41a0a2"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_valveframe.npz",
+   "bytes": 1241,
+   "sha256_16": "65579bddbc6a83f3"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_valvemass.npz",
+   "bytes": 1193,
+   "sha256_16": "7300e56b7d6cf69e"
+  },
+  {
+   "path": "out/model_drillx100/groups/M_m_wbox.npz",
+   "bytes": 1079,
+   "sha256_16": "4e57fa7450eb1fb8"
+  },
+  {
+   "path": "out/model/T_rbe2.npz",
+   "bytes": 27986,
+   "sha256_16": "831c451aa9575017"
+  },
+  {
+   "path": "out/model/arrays.npz",
+   "bytes": 25789,
+   "sha256_16": "4805c79e0229eab8"
+  },
+  {
+   "path": "out/model/meta.json",
+   "bytes": 4928,
+   "sha256_16": "bc3609762f2db253"
+  },
+  {
+   "path": "out/model/groups/K_att_ebox.npz",
+   "bytes": 1824,
+   "sha256_16": "8bb35eacdb754b74"
+  },
+  {
+   "path": "out/model/groups/K_att_ebox_rot.npz",
+   "bytes": 1125,
+   "sha256_16": "efa5f62aa92c3a13"
+  },
+  {
+   "path": "out/model/groups/K_att_valve.npz",
+   "bytes": 1960,
+   "sha256_16": "689f33be777571a3"
+  },
+  {
+   "path": "out/model/groups/K_att_wbox.npz",
+   "bytes": 1630,
+   "sha256_16": "b86f737805712527"
+  },
+  {
+   "path": "out/model/groups/K_beam_rest.npz",
+   "bytes": 75019,
+   "sha256_16": "77a04d5500e636b9"
+  },
+  {
+   "path": "out/model/groups/K_beam_wall.npz",
+   "bytes": 26221,
+   "sha256_16": "65eed41fd8756511"
+  },
+  {
+   "path": "out/model/groups/K_bush_joints.npz",
+   "bytes": 9867,
+   "sha256_16": "567bb3b8ded726cf"
+  },
+  {
+   "path": "out/model/groups/K_feet_springs.npz",
+   "bytes": 1137,
+   "sha256_16": "7d2e188c5e5fd9f7"
+  },
+  {
+   "path": "out/model/groups/K_plate_bend.npz",
+   "bytes": 9732,
+   "sha256_16": "ec612b2f5d4651c3"
+  },
+  {
+   "path": "out/model/groups/K_plate_mem.npz",
+   "bytes": 19248,
+   "sha256_16": "55c4655fdf0fd7e2"
+  },
+  {
+   "path": "out/model/groups/K_shield_att.npz",
+   "bytes": 4231,
+   "sha256_16": "bb5eb190dddf63e1"
+  },
+  {
+   "path": "out/model/groups/K_shield_bend.npz",
+   "bytes": 22462,
+   "sha256_16": "0853c178bd72e1ee"
+  },
+  {
+   "path": "out/model/groups/K_shield_mem.npz",
+   "bytes": 11397,
+   "sha256_16": "79e1e6de910728fb"
+  },
+  {
+   "path": "out/model/groups/K_valve_mount.npz",
+   "bytes": 2186,
+   "sha256_16": "37322b18f6ce122b"
+  },
+  {
+   "path": "out/model/groups/K_valveframe.npz",
+   "bytes": 2912,
+   "sha256_16": "402340253e74a511"
+  },
+  {
+   "path": "out/model/groups/M_m_beam_rest.npz",
+   "bytes": 12327,
+   "sha256_16": "fe0c33f207cec91b"
+  },
+  {
+   "path": "out/model/groups/M_m_beam_wall.npz",
+   "bytes": 5677,
+   "sha256_16": "d0a56a985488d56a"
+  },
+  {
+   "path": "out/model/groups/M_m_ebox.npz",
+   "bytes": 1078,
+   "sha256_16": "a24e8d0350545133"
+  },
+  {
+   "path": "out/model/groups/M_m_plate.npz",
+   "bytes": 4724,
+   "sha256_16": "4b6645baf00d7d1c"
+  },
+  {
+   "path": "out/model/groups/M_m_psu.npz",
+   "bytes": 1009,
+   "sha256_16": "866bd91e50edbecc"
+  },
+  {
+   "path": "out/model/groups/M_m_shield.npz",
+   "bytes": 2474,
+   "sha256_16": "f7ce733061b7b98b"
+  },
+  {
+   "path": "out/model/groups/M_m_valve.npz",
+   "bytes": 1077,
+   "sha256_16": "6c1f44416b41a0a2"
+  },
+  {
+   "path": "out/model/groups/M_m_valveframe.npz",
+   "bytes": 1241,
+   "sha256_16": "65579bddbc6a83f3"
+  },
+  {
+   "path": "out/model/groups/M_m_valvemass.npz",
+   "bytes": 1193,
+   "sha256_16": "7300e56b7d6cf69e"
+  },
+  {
+   "path": "out/model/groups/M_m_wbox.npz",
+   "bytes": 1079,
+   "sha256_16": "4e57fa7450eb1fb8"
+  },
+  {
+   "path": "out/model_refined/T_rbe2.npz",
+   "bytes": 32953,
+   "sha256_16": "dc993378a0b7008c"
+  },
+  {
+   "path": "out/model_refined/arrays.npz",
+   "bytes": 30015,
+   "sha256_16": "42117ef1cd343fd1"
+  },
+  {
+   "path": "out/model_refined/meta.json",
+   "bytes": 4888,
+   "sha256_16": "94396a01ea92d321"
+  },
+  {
+   "path": "out/model_refined/groups/K_att_ebox.npz",
+   "bytes": 1906,
+   "sha256_16": "a94c086b8e76ad3f"
+  },
+  {
+   "path": "out/model_refined/groups/K_att_valve.npz",
+   "bytes": 1967,
+   "sha256_16": "37e57fac24a82f51"
+  },
+  {
+   "path": "out/model_refined/groups/K_att_wbox.npz",
+   "bytes": 1638,
+   "sha256_16": "070f3b3c52aa7ec0"
+  },
+  {
+   "path": "out/model_refined/groups/K_beam_rest.npz",
+   "bytes": 75050,
+   "sha256_16": "b1d67b22119f4736"
+  },
+  {
+   "path": "out/model_refined/groups/K_beam_wall.npz",
+   "bytes": 26246,
+   "sha256_16": "eecfa4ac46537e48"
+  },
+  {
+   "path": "out/model_refined/groups/K_bush_joints.npz",
+   "bytes": 9886,
+   "sha256_16": "7fbd1fdd3aa4584c"
+  },
+  {
+   "path": "out/model_refined/groups/K_feet_springs.npz",
+   "bytes": 1146,
+   "sha256_16": "a2aa8dcf43ce50c4"
+  },
+  {
+   "path": "out/model_refined/groups/K_plate_bend.npz",
+   "bytes": 9744,
+   "sha256_16": "94fbaa3719343734"
+  },
+  {
+   "path": "out/model_refined/groups/K_plate_mem.npz",
+   "bytes": 19261,
+   "sha256_16": "1c64271e956990c4"
+  },
+  {
+   "path": "out/model_refined/groups/K_shield_att.npz",
+   "bytes": 4245,
+   "sha256_16": "a94e639b8fa4e742"
+  },
+  {
+   "path": "out/model_refined/groups/K_shield_bend.npz",
+   "bytes": 78887,
+   "sha256_16": "68ed078368ba11ae"
+  },
+  {
+   "path": "out/model_refined/groups/K_shield_mem.npz",
+   "bytes": 31090,
+   "sha256_16": "127b7ada869c9448"
+  },
+  {
+   "path": "out/model_refined/groups/K_valve_mount.npz",
+   "bytes": 2197,
+   "sha256_16": "4af198961e78d6bf"
+  },
+  {
+   "path": "out/model_refined/groups/K_valveframe.npz",
+   "bytes": 2930,
+   "sha256_16": "637d3bb7a42fdff7"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_beam_rest.npz",
+   "bytes": 12355,
+   "sha256_16": "a88d93b24907e0c5"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_beam_wall.npz",
+   "bytes": 5693,
+   "sha256_16": "55b2ca53ff798ad3"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_ebox.npz",
+   "bytes": 1091,
+   "sha256_16": "92bd8edcfbe5b13d"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_plate.npz",
+   "bytes": 4736,
+   "sha256_16": "fd4f7f6abaf1eb6d"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_psu.npz",
+   "bytes": 1018,
+   "sha256_16": "55bf0f28b504e69c"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_shield.npz",
+   "bytes": 5402,
+   "sha256_16": "65d55b4623fa17b8"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_valve.npz",
+   "bytes": 1085,
+   "sha256_16": "ae29ae16b993e41c"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_valveframe.npz",
+   "bytes": 1252,
+   "sha256_16": "0a326f8f1949307e"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_valvemass.npz",
+   "bytes": 1201,
+   "sha256_16": "13e3a02961c596da"
+  },
+  {
+   "path": "out/model_refined/groups/M_m_wbox.npz",
+   "bytes": 1092,
+   "sha256_16": "762cab6b6986d10f"
+  },
+  {
+   "path": "gifs/mode_01_13.5Hz.gif",
+   "bytes": 234904,
+   "sha256_16": "7363cdbff6df198a"
+  },
+  {
+   "path": "gifs/mode_02_17.6Hz.gif",
+   "bytes": 226594,
+   "sha256_16": "c53dc49e512e2d8d"
+  },
+  {
+   "path": "gifs/mode_03_17.8Hz.gif",
+   "bytes": 203884,
+   "sha256_16": "c2d14b19676b1715"
+  },
+  {
+   "path": "gifs/mode_04_18.4Hz.gif",
+   "bytes": 218906,
+   "sha256_16": "c11a2aa2a8546aa7"
+  },
+  {
+   "path": "gifs/mode_05_24.2Hz.gif",
+   "bytes": 365838,
+   "sha256_16": "0fba4cf8a8c3abf8"
+  },
+  {
+   "path": "gifs/mode_06_25.3Hz.gif",
+   "bytes": 184355,
+   "sha256_16": "7585fb94dabc5193"
+  },
+  {
+   "path": "gifs/mode_07_26.8Hz.gif",
+   "bytes": 269158,
+   "sha256_16": "db7066d469d494aa"
+  },
+  {
+   "path": "gifs/mode_08_27.9Hz.gif",
+   "bytes": 222874,
+   "sha256_16": "9b2d643f0dba5eb4"
+  },
+  {
+   "path": "gifs/mode_09_32.0Hz.gif",
+   "bytes": 261686,
+   "sha256_16": "e0d5bbdac6a3104c"
+  },
+  {
+   "path": "gifs/mode_10_34.2Hz.gif",
+   "bytes": 346344,
+   "sha256_16": "a365b3f9e99e858b"
+  },
+  {
+   "path": "gifs/mode_11_36.0Hz.gif",
+   "bytes": 324952,
+   "sha256_16": "2a9023402110e892"
+  },
+  {
+   "path": "gifs/mode_12_37.2Hz.gif",
+   "bytes": 310242,
+   "sha256_16": "f52720abc3dc38e7"
+  },
+  {
+   "path": "gifs/mode_13_38.4Hz.gif",
+   "bytes": 183173,
+   "sha256_16": "d047b5262388df50"
+  },
+  {
+   "path": "gifs/mode_14_38.6Hz.gif",
+   "bytes": 217500,
+   "sha256_16": "238b11b19acec364"
+  },
+  {
+   "path": "gifs/mode_15_42.6Hz.gif",
+   "bytes": 256136,
+   "sha256_16": "c68e9c2b5d0a4640"
+  },
+  {
+   "path": "figures/.DS_Store",
+   "bytes": 6148,
+   "sha256_16": "2b0eb012a0cb41cc"
+  },
+  {
+   "path": "figures/fig_freq_ladders.png",
+   "bytes": 104571,
+   "sha256_16": "b8de5c8497395662"
+  },
+  {
+   "path": "figures/fig_geometry.png",
+   "bytes": 164440,
+   "sha256_16": "5650874d17383f23"
+  },
+  {
+   "path": "figures/fig_identifiability.png",
+   "bytes": 127310,
+   "sha256_16": "e727318a1907e25f"
+  },
+  {
+   "path": "figures/fig_interface_motion.png",
+   "bytes": 144099,
+   "sha256_16": "319f8c46414b1b18"
+  },
+  {
+   "path": "figures/fig_mode_small_multiples.png",
+   "bytes": 907536,
+   "sha256_16": "4c6f057af6cd6d70"
+  },
+  {
+   "path": "figures/fig_prior_predictive.png",
+   "bytes": 178886,
+   "sha256_16": "53ee292c828dc6f0"
+  },
+  {
+   "path": "figures/fig_pseudo_frf.png",
+   "bytes": 747048,
+   "sha256_16": "205c0fa9abf8b858"
+  },
+  {
+   "path": "figures/fig_pseudo_frf_acoustic.png",
+   "bytes": 225974,
+   "sha256_16": "460cc0997ea64511"
+  },
+  {
+   "path": "figures/fig_pseudo_frf_qoi.png",
+   "bytes": 538935,
+   "sha256_16": "f1cddcd71e623a28"
+  },
+  {
+   "path": "figures/fig_pseudo_frf_transfer.png",
+   "bytes": 747048,
+   "sha256_16": "205c0fa9abf8b858"
+  },
+  {
+   "path": "figures/fig_tuning_box_foot.png",
+   "bytes": 212652,
+   "sha256_16": "48ac0b7bd3b8ead9"
+  },
+  {
+   "path": "figures/pseudo_frf/acoustic_interface.png",
+   "bytes": 99428,
+   "sha256_16": "e4d341f4478bb75f"
+  },
+  {
+   "path": "figures/pseudo_frf/acoustic_shield_mid.png",
+   "bytes": 88863,
+   "sha256_16": "627a196b345552b0"
+  },
+  {
+   "path": "figures/pseudo_frf/acoustic_top_left.png",
+   "bytes": 100934,
+   "sha256_16": "6d1c094f97528625"
+  },
+  {
+   "path": "figures/pseudo_frf/frf_shield_middle_acoustic.png",
+   "bytes": 93770,
+   "sha256_16": "1352aa1bffe2354f"
+  },
+  {
+   "path": "figures/pseudo_frf/frf_shield_middle_tap.png",
+   "bytes": 87815,
+   "sha256_16": "43ccb5c3de3e0e0e"
+  },
+  {
+   "path": "figures/pseudo_frf/frf_top_center_interface_acoustic.png",
+   "bytes": 91050,
+   "sha256_16": "4fbce324212c1e90"
+  },
+  {
+   "path": "figures/pseudo_frf/frf_top_center_interface_tap.png",
+   "bytes": 67081,
+   "sha256_16": "d2d3225c8739937f"
+  },
+  {
+   "path": "figures/pseudo_frf/frf_top_left_beam_acoustic.png",
+   "bytes": 94788,
+   "sha256_16": "c1d713734f7a9616"
+  },
+  {
+   "path": "figures/pseudo_frf/frf_top_left_beam_tap.png",
+   "bytes": 100253,
+   "sha256_16": "71f5a41a55b0385e"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_interface__tap_engine_beam.png",
+   "bytes": 99535,
+   "sha256_16": "cf9ae9e7c3e5a518"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_interface__tap_foot.png",
+   "bytes": 87197,
+   "sha256_16": "b945cac62f292c15"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_interface__tap_interface.png",
+   "bytes": 64797,
+   "sha256_16": "9af0cbafef601067"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_interface__tap_shield_mid.png",
+   "bytes": 87591,
+   "sha256_16": "42eed6181f0ffa04"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_interface__tap_top_left.png",
+   "bytes": 80920,
+   "sha256_16": "04367e9a62f0ff6b"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_shield_mid__tap_engine_beam.png",
+   "bytes": 95747,
+   "sha256_16": "3506d9033280e77f"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_shield_mid__tap_interface.png",
+   "bytes": 102451,
+   "sha256_16": "cafbd5edb6c57a7e"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_shield_mid__tap_shield_mid.png",
+   "bytes": 100077,
+   "sha256_16": "a89135e6835233c3"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_shield_mid__tap_top_left.png",
+   "bytes": 108161,
+   "sha256_16": "2e709c2befffda6e"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_top_left__tap_engine_beam.png",
+   "bytes": 104023,
+   "sha256_16": "93bf925aef2fbe3f"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_top_left__tap_interface.png",
+   "bytes": 88906,
+   "sha256_16": "4023a5ef8665c4be"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_top_left__tap_shield_mid.png",
+   "bytes": 108717,
+   "sha256_16": "901afd6ee5e2f3ca"
+  },
+  {
+   "path": "figures/pseudo_frf/transfer_resp_top_left__tap_top_left.png",
+   "bytes": 100753,
+   "sha256_16": "b7db99253430623b"
+  },
+  {
+   "path": "src/assemble.py",
+   "bytes": 16967,
+   "sha256_16": "8b15acafd3432362"
+  },
+  {
+   "path": "src/discretization_check.py",
+   "bytes": 2738,
+   "sha256_16": "7caee5ce02e5ee61"
+  },
+  {
+   "path": "src/elements.py",
+   "bytes": 12146,
+   "sha256_16": "7e63db0710414460"
+  },
+  {
+   "path": "src/estimates.py",
+   "bytes": 9963,
+   "sha256_16": "16813e385270c813"
+  },
+  {
+   "path": "src/finalize_tuning.py",
+   "bytes": 5689,
+   "sha256_16": "8c4aad5dbc9d26a4"
+  },
+  {
+   "path": "src/image_qa.py",
+   "bytes": 2536,
+   "sha256_16": "bf24e65b029f8506"
+  },
+  {
+   "path": "src/interface_points.py",
+   "bytes": 5968,
+   "sha256_16": "97a9522c8a976e0c"
+  },
+  {
+   "path": "src/make_figures.py",
+   "bytes": 14725,
+   "sha256_16": "5f72bdd6e634e4ad"
+  },
+  {
+   "path": "src/make_gifs.py",
+   "bytes": 5674,
+   "sha256_16": "7912be872d2dc773"
+  },
+  {
+   "path": "src/make_ledger.py",
+   "bytes": 4750,
+   "sha256_16": "92746776eba14c1c"
+  },
+  {
+   "path": "src/make_manifest.py",
+   "bytes": 1338,
+   "sha256_16": "2eee8ab52c14a86c"
+  },
+  {
+   "path": "src/make_pseudo_frf_fig.py",
+   "bytes": 8393,
+   "sha256_16": "4fa613d136e2c3ef"
+  },
+  {
+   "path": "src/modal.py",
+   "bytes": 14099,
+   "sha256_16": "96357c95a2219112"
+  },
+  {
+   "path": "src/parse_deck.py",
+   "bytes": 9266,
+   "sha256_16": "af347103f8a11f7e"
+  },
+  {
+   "path": "src/prior_predictive.py",
+   "bytes": 7436,
+   "sha256_16": "bf97306ca5b70e35"
+  },
+  {
+   "path": "src/priors.py",
+   "bytes": 5146,
+   "sha256_16": "ce60d6c8a39818bb"
+  },
+  {
+   "path": "src/pseudo_frf.py",
+   "bytes": 13597,
+   "sha256_16": "c784d3ef243cce4c"
+  },
+  {
+   "path": "src/tune_correlation.py",
+   "bytes": 9122,
+   "sha256_16": "1ea10c012960f953"
+  },
+  {
+   "path": "src/validate_elements.py",
+   "bytes": 12070,
+   "sha256_16": "e8949a5789cf55dc"
+  },
+  {
+   "path": "src/valve_frame.py",
+   "bytes": 3407,
+   "sha256_16": "3656481a8ed4acea"
+  }
+ ]
+}

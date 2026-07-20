@@ -1,0 +1,31 @@
+{
+  "seed": 2,
+  "scores": {
+    "peak": {
+      "interval_score_mean": 2025.818066166687,
+      "crps_mean": 147.56102815312818,
+      "logpd_mean": -6.497434425666553,
+      "coverage_frac": 0.967741935483871,
+      "mean_width_db": 35.29658200620006,
+      "pit_ks_dev": 0.329247311827957,
+      "pit_mean": 0.2950537634408602,
+      "z_mean": -0.07760538923397012,
+      "z_std": 0.5075498237476375,
+      "n_channels": 31
+    },
+    "band": {
+      "interval_score_mean": 5290.701792007697,
+      "crps_mean": 454.7880462540129,
+      "logpd_mean": -7.499411799967845,
+      "coverage_frac": 1.0,
+      "mean_width_db": 32.5233135690441,
+      "pit_ks_dev": 0.34010752688172047,
+      "pit_mean": 0.30430107526881717,
+      "z_mean": -0.14268833068843334,
+      "z_std": 0.46618815080767595,
+      "n_channels": 31
+    }
+  },
+  "converged": true,
+  "calib_rhat": 1.008709864909105
+}

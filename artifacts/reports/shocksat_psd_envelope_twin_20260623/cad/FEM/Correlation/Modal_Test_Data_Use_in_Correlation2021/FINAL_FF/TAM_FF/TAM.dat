@@ -1,0 +1,36 @@
+ASSIGN MASTER ='TAM.MASTER',TEMP
+ASSIGN DBALL  ='TAM.DBALL',TEMP
+$
+SOL SEMODES
+CEND
+EXTSEOUT(DMIGPCH,EXTID=100)
+$
+$ The display set with all the nodes that are located in the display set
+INCLUDE 'IRKE_DISP.blk'
+$*
+$ This punch number should match the set number assigned in the display set file
+DISPLACEMENT(PUNCH) = 100
+Method=1
+$*
+$*
+BEGIN BULK
+$*
+$ The ASET file should have all the display set nodes with DOF assigned to them
+Include 'IRKE_ASET.blk'
+$*
+PARAM   AUTOSPC NO 
+PARAM   GRDPNT  0
+PARAM   K6ROT   1.0
+PARAM   POST    -2
+PARAM   POSTEXT YES 
+PARAM   PRGPST  yes
+PARAM   OGEOM   yes
+PARAM,BAILOUT,-1
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+EIGRL          1    -1.0 300.0                                    mass
+$
+$
+INCLUDE 'ShockSat_04292021.blk'                         
+$
+ENDDATA

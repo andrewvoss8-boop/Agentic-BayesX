@@ -1,0 +1,61 @@
+{
+  "overall": "GREEN",
+  "counts": {
+    "green": 10,
+    "yellow": 0,
+    "red": 0
+  },
+  "gates": [
+    {
+      "gate": "G01",
+      "status": "GREEN",
+      "message": "N0 PASS: delivered bands reproduced within +-0.05 \u2014 shear_X 1.508 vs 1.508 (|err| 0.0000), shear_Y 2.301 vs 2.301 (|err| 0.0000), normal_Z 2.526 vs 2.526 (|err| 0.0000)"
+    },
+    {
+      "gate": "G02",
+      "status": "GREEN",
+      "message": "all statistics finite across 9 out/*.json; no null headline numbers (guards the C8 defect)."
+    },
+    {
+      "gate": "G03",
+      "status": "GREEN",
+      "message": "baseline-through-mapping reproduces N0 (max |err| 0.0000; identity BY CONSTRUCTION per D2 \u2014 plumbing check only) AND mapping is non-inert (B/full: max|dfreq-1|=0.0408, max|ln a|=9.6308; B/freq_only: max|dfreq-1|=0.0408, max|ln a|=0.0000; B/cluster_amp: max|dfreq-1|=0.0408, max|ln a|=9.0950; D/full: max|dfreq-1|=0.0461, max|ln a|=8.2214; D/freq_only: max|dfreq-1|=0.0461, max|ln a|=0.0000; D/cluster_amp: max|dfreq-1|=0.0461, max|ln a|=4.6162; R/full: max|dfreq-1|=0.0652, max|ln a|=6.1498; R/freq_only: max|dfreq-1|=0.0652, max|ln a|=0.0000; R/cluster_amp: max|dfreq-1|=0.0652, max|ln a|=11.1659)."
+    },
+    {
+      "gate": "G04",
+      "status": "GREEN",
+      "message": "no unannotated per-mode amplitude LSQ; every fit is annotated CHECKER-OK(non-selection) = answer-key construction only."
+    },
+    {
+      "gate": "G05",
+      "status": "GREEN",
+      "message": "no +XY reads (grep clean; runtime guard xy_files_opened=0, dev drives only: ['m_xpos_990x', 'm_zpos_990z', 'm_zpos_900z', 'm_ypos_990y']). The +XY QOI answer key stays unbuilt."
+    },
+    {
+      "gate": "G06",
+      "status": "GREEN",
+      "message": "4 figures, all scripted (2 fig_*.py), Tufte-linted (0 WARN reviewed), image-QA passed."
+    },
+    {
+      "gate": "G07",
+      "status": "GREEN",
+      "message": "active_runtime_s=96.79s <= elapsed_wallclock_s=97.46s (Mac CPU, float64, OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1. Per docs/compute_protocol.md the CPU is the default and the source of truth; no GPU is used or needed \u2014 this card runs NO sampler (the L5 NUTS posterior is reused cached draws) and every forward solve is a 74x74 or 194x194 dense eigh.)."
+    },
+    {
+      "gate": "G08",
+      "status": "GREEN",
+      "message": "checker matches its SHA lock (e235e9fcd714a1c0\u2026) \u2014 not edited during the trial."
+    },
+    {
+      "gate": "G09",
+      "status": "GREEN",
+      "message": "all deliverables present; 22 reused read-only sources verified unchanged."
+    },
+    {
+      "gate": "G10",
+      "status": "GREEN",
+      "message": "no new sampler; theta provenance = 'REUSED L5 NUTS draws from netcg out/theta_post_L5.npz (4000 draws, inherited convergence: max R-hat 1.0013, min ESS 2646, 0 divergences). No sampler is run in this card.' (reused draws, labeled)."
+    }
+  ],
+  "checker_sha256": "e235e9fcd714a1c026b78c00fcd4c3e79b0f42315518b84dfd0494994d3dd9a1"
+}

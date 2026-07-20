@@ -1,0 +1,13 @@
+{
+ "cid": "a16_bb_splits_combo",
+ "rhat_max": 1.0013,
+ "ess_min": 2663.9,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 2522.7,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}

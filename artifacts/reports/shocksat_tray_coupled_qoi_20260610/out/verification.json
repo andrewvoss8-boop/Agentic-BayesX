@@ -1,0 +1,136 @@
+{
+ "overall": "green",
+ "gates": {
+  "V1_tray_vs_fim_freqs": {
+   "value": 2.6032026354426484e-11,
+   "thr_green": 0.001,
+   "thr_yellow": 0.005,
+   "status": "green",
+   "note": "first 8 modes vs arrays_fim"
+  },
+  "V2a_chain_rigid_mass_zz": {
+   "value": 8.852221770514024e-10,
+   "thr_green": 0.005,
+   "thr_yellow": null,
+   "status": "green",
+   "note": "M_rb zz=3.1561 kg vs tray mass 3.1561 kg"
+  },
+  "V2b_participation_completeness": {
+   "value": 1.0857070042135534e-10,
+   "thr_green": 0.005,
+   "thr_yellow": null,
+   "status": "green",
+   "note": ""
+  },
+  "V3_rbm_mass_line": {
+   "value": 8.979001822868667e-05,
+   "thr_green": 0.05,
+   "thr_yellow": 0.15,
+   "status": "green",
+   "note": "node gid 7000072, ShockSat mass 57.96 kg (suspension-contaminated RBMs make a few % expected)"
+  },
+  "V4_srs_filter_sine": {
+   "value": 0.0004901372691369422,
+   "thr_green": 0.03,
+   "thr_yellow": null,
+   "status": "green",
+   "note": "SRS=25.01 vs analytic 25.02 (finite dwell under-shoots slightly)"
+  },
+  "V9a_input_grms": {
+   "value": 0.004322344729236115,
+   "thr_green": 0.02,
+   "thr_yellow": null,
+   "status": "green",
+   "note": "grms 1.510 g vs spec 1.517 g"
+  },
+  "V9b_psd_flatness_normalized": {
+   "value": 0.011432079251588227,
+   "thr_green": 0.03,
+   "thr_yellow": 0.06,
+   "status": "green",
+   "note": "segment-mean deviation normalized by MC error"
+  },
+  "V5_fbs_vs_direct_coupled": {
+   "value": 8.767211699372751e-10,
+   "thr_green": 1e-06,
+   "thr_yellow": 0.001,
+   "status": "green",
+   "note": "identical physics both sides -> pure algebra check"
+  },
+  "V6a_apparent_mass_offres": {
+   "value": 1.785616831201784e-05,
+   "thr_green": 0.0001,
+   "thr_yellow": 0.02,
+   "status": "green",
+   "note": "11 off-resonance freqs; exact Woodbury form (threshold = numerical exactness: float cancellation w/ zeta_struct=0 + 1e-9 zeta floor gives ~1e-5, not a physics approximation)"
+  },
+  "V6b_apparent_mass_peak_height": {
+   "value": 3.8339058922994546e-06,
+   "thr_green": 0.0001,
+   "thr_yellow": 0.02,
+   "status": "green",
+   "note": "peak heights exact; residual = mode truncation above fmax_keep"
+  },
+  "V7_newmark_vs_fbs_peak": {
+   "value": 0.005554323948575451,
+   "thr_green": 0.02,
+   "thr_yellow": 0.05,
+   "status": "green",
+   "note": "peaks N=[341.1, 297.1, 373.7] vs FBS=[343.0, 296.9, 374.1] N (last 2 s; zero-IC transient discarded)"
+  },
+  "V8a_7004c_load_M_062": {
+   "value": 0.000139691051977942,
+   "thr_green": 0.01,
+   "thr_yellow": null,
+   "status": "green",
+   "note": ""
+  },
+  "V8b_7004c_load_M_1": {
+   "value": 1.9992002614465105e-08,
+   "thr_green": 0.01,
+   "thr_yellow": null,
+   "status": "green",
+   "note": ""
+  },
+  "V8c_7004c_source_M_1": {
+   "value": 0.0,
+   "thr_green": 0.01,
+   "thr_yellow": null,
+   "status": "green",
+   "note": ""
+  },
+  "V8d_tdof_coupled_direct": {
+   "value": 1.9619351884912776e-15,
+   "thr_green": 0.005,
+   "thr_yellow": null,
+   "status": "green",
+   "note": ""
+  }
+ },
+ "chain_modes_nominal_hz": [
+  75.92,
+  76.04,
+  84.46,
+  84.7,
+  88.93,
+  116.24,
+  457.29,
+  527.48,
+  531.44,
+  534.58,
+  569.11,
+  569.71
+ ],
+ "tray_mass_kg": 3.15608481787741,
+ "clamped_tray_modes_hz": [
+  84.84,
+  85.28,
+  181.26,
+  291.06,
+  371.35,
+  394.78,
+  541.9,
+  569.56
+ ],
+ "elapsed_s": 33.5
+}

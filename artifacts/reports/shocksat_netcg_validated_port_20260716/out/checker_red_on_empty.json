@@ -1,0 +1,61 @@
+{
+  "overall": "RED",
+  "counts": {
+    "green": 0,
+    "yellow": 0,
+    "red": 10
+  },
+  "gates": [
+    {
+      "gate": "G01",
+      "status": "RED",
+      "message": "neither out/n0_reference.json nor BLOCKED.md exists \u2014 Gate N0 was not run."
+    },
+    {
+      "gate": "G02",
+      "status": "RED",
+      "message": "no out/*.json to validate."
+    },
+    {
+      "gate": "G03",
+      "status": "RED",
+      "message": "out/s3_mapping.json missing \u2014 mapping never validated."
+    },
+    {
+      "gate": "G04",
+      "status": "RED",
+      "message": "no code/*.py to scan."
+    },
+    {
+      "gate": "G05",
+      "status": "RED",
+      "message": "out/vault_guard.json missing \u2014 runtime vault guard not evidenced."
+    },
+    {
+      "gate": "G06",
+      "status": "RED",
+      "message": "need >=3 figures, found 0."
+    },
+    {
+      "gate": "G07",
+      "status": "RED",
+      "message": "runtime.json missing."
+    },
+    {
+      "gate": "G08",
+      "status": "RED",
+      "message": "CHECKER.sha256 missing \u2014 checker not locked."
+    },
+    {
+      "gate": "G09",
+      "status": "RED",
+      "message": "missing deliverables: ['packet.md', 'findings.md', 'run_all.sh', 'REUSED_code.sha256', 'runtime.json', 'out/verdicts_S3S4.json']"
+    },
+    {
+      "gate": "G10",
+      "status": "RED",
+      "message": "verdicts_S3S4.json lacks theta_source provenance."
+    }
+  ],
+  "checker_sha256": "e235e9fcd714a1c026b78c00fcd4c3e79b0f42315518b84dfd0494994d3dd9a1"
+}

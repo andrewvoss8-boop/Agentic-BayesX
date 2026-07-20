@@ -1,0 +1,4 @@
+[shear_X] delivered 1.508 | over 24 seeds: mean 1.517 sd 0.0106 (0.7%) -> a width difference must exceed ~0.021 to be MC-meaningful
+[shear_Y] delivered 2.301 | over 24 seeds: mean 2.324 sd 0.0355 (1.53%) -> a width difference must exceed ~0.071 to be MC-meaningful
+[normal_Z] delivered 2.526 | over 24 seeds: mean 2.477 sd 0.0453 (1.83%) -> a width difference must exceed ~0.091 to be MC-meaningful
+wrote out/mc_noise.json

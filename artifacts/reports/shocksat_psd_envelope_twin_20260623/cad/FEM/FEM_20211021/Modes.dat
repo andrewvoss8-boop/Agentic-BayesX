@@ -1,0 +1,38 @@
+NASTRAN SYSTEM(151)=1
+NASTRAN SYSTEM(319)=1
+NASTRAN SYSTEM(274)=2
+$
+SOL 103
+DIAG 8,47,56
+CEND
+$
+ECHO = NONE
+METHOD = 101
+GROUNDCHECK=YES
+WEIGHTCHECK=YES
+DISP(PLOT) = ALL
+$
+BEGIN BULK
+$
+PARAM,POST,-1
+PARAM,OGEOM,YES
+PARAM,K6ROT,100.
+PARAM,MAXRATIO,1.E+7
+PARAM,GRDPNT,0
+$
+EIGRL    101             225.0                                   mass
+$
+include 'Material_Properties_101521.blk'
+include 'Bottom_Box_101521.blk'
+include 'Top_Box_101521.blk'
+include 'Angle_Brackets_101521.blk'
+include 'Cross_Beam_101521.blk'
+include 'Rectangular_Plates_101521.blk'
+include 'Top_Brackets_101521.blk'
+include 'Top_Circular_Plate_101521.blk'
+include 'Joint_Connections_101521.blk'
+include 'Rectangular_Plate_Contact_101521.blk'
+include 'Modal_Test_Instrumentation_092721.blk'
+include 'Shock_Test_Instrumentation.blk'
+$
+ENDDATA

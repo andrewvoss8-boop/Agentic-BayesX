@@ -1,0 +1,3 @@
+mtd=6: 56.7s (1 chain 600+400) mean_steps=49 max=63 rhat=1.019 ess=184
+mtd=8: 110.2s (1 chain 600+400) mean_steps=59 max=255 rhat=1.020 ess=205
+PROBE DONE

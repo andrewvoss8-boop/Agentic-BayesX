@@ -1,0 +1,6 @@
+seed 0: conv True | flat1% -1.44 | flat1%+win -0.80 | PER-MODE+win -2.43 (bias dB 5.9->7.6)
+seed 1: conv True | flat1% -1.43 | flat1%+win -0.81 | PER-MODE+win -2.74 (bias dB 5.0->5.2)
+seed 2: conv True | flat1% -2.24 | flat1%+win -1.40 | PER-MODE+win -3.80 (bias dB 9.4->11.2)
+
+MEAN held-out skill: flat1% -1.70 | flat1%+win -1.00 | PER-MODE+win -2.99
+MEAN |peak bias| dB: flat1% 6.7 -> PER-MODE 8.0 | runtime 191s

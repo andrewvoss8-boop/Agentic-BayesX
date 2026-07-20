@@ -1,0 +1,38 @@
+{
+ "cid": "ma3_conn_soft_traypath",
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    6001445,
+    6001446,
+    6001447,
+    6001448,
+    6001449,
+    6001450,
+    6001451,
+    6001452,
+    7004353,
+    7004354,
+    7004395,
+    7004396,
+    7004397,
+    7004398,
+    7004399,
+    7004400,
+    3000019,
+    3000071,
+    3000089,
+    3000126
+   ],
+   "k_trans": 100000.0,
+   "k_rot": 10000.0,
+   "name": "softtray"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: Top_Brackets|Y sub-200 stays high (0.702 dex) and the r2 bbox JOINT offset was the agent's best model-form gain (+0.1734) -> soften the TRAY-PATH spiders (top brackets + angle brackets) the same way r1 softened the bottom box",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: Top_Brackets|Y sub-200 stays high (0.702 dex) and the r2 bbox JOINT offset was the agent's best mo"
+}

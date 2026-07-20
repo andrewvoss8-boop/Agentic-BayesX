@@ -1,0 +1,40 @@
+[V1] reassemble all PID blocks + full eigsh vs stored
+  shell 101: 17416 elems, rel dev 0.00e+00
+  shell 102: 4632 elems, rel dev 0.00e+00
+  shell 103: 1568 elems, rel dev 0.00e+00
+  shell 104: 568 elems, rel dev 0.00e+00
+  shell 105: 118 elems, rel dev 0.00e+00
+  shell 106: 286 elems, rel dev 0.00e+00
+  shell 201: 26430 elems, rel dev 0.00e+00
+  shell 202: 4830 elems, rel dev 0.00e+00
+  shell 203: 1832 elems, rel dev 0.00e+00
+  shell 204: 572 elems, rel dev 0.00e+00
+  shell 205: 182 elems, rel dev 0.00e+00
+  shell 206: 292 elems, rel dev 0.00e+00
+  shell 301: 576 elems, rel dev 0.00e+00
+  shell 302: 192 elems, rel dev 0.00e+00
+  shell 401: 1572 elems, rel dev 0.00e+00
+  shell 501: 896 elems, rel dev 0.00e+00
+  shell 601: 1440 elems, rel dev 0.00e+00
+  shell 701: 4392 elems, rel dev 0.00e+00
+  bush 99: rel dev 0.00e+00
+  bush 801: rel dev 0.00e+00
+  bush 802: rel dev 0.00e+00
+  bush 803: rel dev 0.00e+00
+  bush 804: rel dev 0.00e+00
+  bush 805: rel dev 0.00e+00
+  bush 806: rel dev 0.00e+00
+  bush 807: rel dev 0.00e+00
+  bush 902: rel dev 0.00e+00
+  eigsh (full 399510-DOF, my reassembly)...
+[V1] pass=True eig 1.15e-09, blocks 0.00e+00
+[V2] free-free RBM on REFINED dish submodel
+[V2] pass=True |lam_rbm|/lam_el 4.62e-12, f7 474.6 Hz
+[V3] refinement null test (dish 2x; cross-model matched comparison, D13)
+[V3] pass=True median|df| 0.0083%, frac>0.5% 0.020, dMAC +0.0100, matched 50
+[V4] thickness physics strip test (nu=0)
+[V4] pass=True t x2: membrane x2.000 (want 2), bending x7.992 (want 8)
+[V5] frozen-pairing churn test
+[V5] pass=True re-pairing churns 16 (hung) / 10 (greedy) pairs on +10% shift; frozen pairing untouched=True
+
+ALL GATES: PASS  total 656s

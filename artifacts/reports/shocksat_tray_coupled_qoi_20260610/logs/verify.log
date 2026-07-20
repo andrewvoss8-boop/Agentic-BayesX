@@ -1,0 +1,19 @@
+building tray chain ...
+[   0.7s] V1_tray_vs_fim_freqs: 2.603e-11 (green) first 8 modes vs arrays_fim
+[   0.8s] V2a_chain_rigid_mass_zz: 8.852e-10 (green) M_rb zz=3.1561 kg vs tray mass 3.1561 kg
+[   0.8s] V2b_participation_completeness: 1.086e-10 (green) 
+  chain modes (nominal mount) [Hz]: [ 75.9  76.   84.5  84.7  88.9 116.2 457.3 527.5]
+loading ShockSat interface ...
+[   2.6s] V3_rbm_mass_line: 8.979e-05 (green) node gid 7000072, ShockSat mass 57.96 kg (suspension-contaminated RBMs make a few % expected)
+[   2.6s] V4_srs_filter_sine: 4.901e-04 (green) SRS=25.01 vs analytic 25.02 (finite dwell under-shoots slightly)
+[   2.6s] V9a_input_grms: 4.322e-03 (green) grms 1.510 g vs spec 1.517 g
+[   2.6s] V9b_psd_flatness_normalized: 1.143e-02 (green) segment-mean deviation normalized by MC error
+[   4.6s] V5_fbs_vs_direct_coupled: 8.767e-10 (green) identical physics both sides -> pure algebra check
+[   4.9s] V6a_apparent_mass_offres: 1.786e-05 (green) 11 off-resonance freqs; exact Woodbury form (threshold = numerical exactness: float cancellation w/ zeta_struct=0 + 1e-9 zeta floor gives ~1e-5, not a physics approximation)
+[   9.0s] V6b_apparent_mass_peak_height: 3.834e-06 (green) peak heights exact; residual = mode truncation above fmax_keep
+[  33.5s] V7_newmark_vs_fbs_peak: 5.554e-03 (green) peaks N=[341.1, 297.1, 373.7] vs FBS=[343.0, 296.9, 374.1] N (last 2 s; zero-IC transient discarded)
+[  33.5s] V8a_7004c_load_M_062: 1.397e-04 (green) 
+[  33.5s] V8b_7004c_load_M_1: 1.999e-08 (green) 
+[  33.5s] V8c_7004c_source_M_1: 0.000e+00 (green) 
+[  33.5s] V8d_tdof_coupled_direct: 1.962e-15 (green) 
+OVERALL: green  (34s)

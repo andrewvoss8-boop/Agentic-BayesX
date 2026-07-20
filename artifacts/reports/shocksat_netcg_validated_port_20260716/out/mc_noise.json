@@ -1,0 +1,46 @@
+{
+  "design": "delivered statFEM F(k) band re-scored over 24 independent MC seeds; the width-ratio statistic's own dispersion = the noise floor for reading S3/S4 effects.",
+  "n_seeds": 24,
+  "axes": {
+    "shear_X": {
+      "seed0_delivered": 1.508,
+      "mean": 1.5167,
+      "sd": 0.0106,
+      "min": 1.501,
+      "max": 1.542,
+      "rel_sd_pct": 0.7,
+      "two_sd_band": [
+        1.496,
+        1.538
+      ],
+      "meaningful_diff_gt_2sd": 0.021
+    },
+    "shear_Y": {
+      "seed0_delivered": 2.301,
+      "mean": 2.3237,
+      "sd": 0.0355,
+      "min": 2.247,
+      "max": 2.385,
+      "rel_sd_pct": 1.53,
+      "two_sd_band": [
+        2.253,
+        2.395
+      ],
+      "meaningful_diff_gt_2sd": 0.071
+    },
+    "normal_Z": {
+      "seed0_delivered": 2.526,
+      "mean": 2.4766,
+      "sd": 0.0453,
+      "min": 2.355,
+      "max": 2.558,
+      "rel_sd_pct": 1.83,
+      "two_sd_band": [
+        2.386,
+        2.567
+      ],
+      "meaningful_diff_gt_2sd": 0.091
+    }
+  },
+  "active_s": 19.0
+}

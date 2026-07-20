@@ -1,0 +1,217 @@
+{
+ "pass_mode": "fail",
+ "direct_comparison": "IMPOSSIBLE: Test07 force channel dead in all hits (evidence below); Test01 raw (the stored cache's source) deleted upstream",
+ "median_dex_direct": null,
+ "frac_ok_direct": 0.0,
+ "force_channel_dead": true,
+ "per_hit_evidence": [
+  {
+   "hit": "Test07_impacthammer_990x_001_5_20_2021_2_32_37 PM.mat",
+   "accel_impact_idx": 125150,
+   "accel_impact_s": 0.5006,
+   "accel_peak_g": 1928.5186294482571,
+   "force_argmax_idx": 2958,
+   "force_argmax_s": 0.011832,
+   "force_peak_lb": -1.2849512446766482,
+   "force_rms_lb": 0.2735542192296914
+  },
+  {
+   "hit": "Test07_impacthammer_990x_002_5_21_2021_9_51_25 AM.mat",
+   "accel_impact_idx": 125003,
+   "accel_impact_s": 0.500012,
+   "accel_peak_g": 1093.576971647298,
+   "force_argmax_idx": 17954,
+   "force_argmax_s": 0.071816,
+   "force_peak_lb": 1.155834580264222,
+   "force_rms_lb": 0.42600258118022416
+  },
+  {
+   "hit": "Test07_impacthammer_990x_003_5_21_2021_9_57_47 AM.mat",
+   "accel_impact_idx": 125152,
+   "accel_impact_s": 0.500608,
+   "accel_peak_g": 1432.9304923973525,
+   "force_argmax_idx": 87684,
+   "force_argmax_s": 0.350736,
+   "force_peak_lb": 0.9825446735713381,
+   "force_rms_lb": 0.2978901948672727
+  },
+  {
+   "hit": "Test07_impacthammer_990x_004_5_21_2021_9_59_06 AM.mat",
+   "accel_impact_idx": 125152,
+   "accel_impact_s": 0.500608,
+   "accel_peak_g": 1031.3784461992775,
+   "force_argmax_idx": 130075,
+   "force_argmax_s": 0.5203,
+   "force_peak_lb": 0.8534237321981104,
+   "force_rms_lb": 0.24882261340689818
+  }
+ ],
+ "n_hits_used": 4,
+ "usable_channels": 102,
+ "labeled_basis": "FORCE-FREE (D8): offset-removed hit-consistency + ERA-peak window-physics on windowed response spectra (thresholds unchanged: 0.05dex/80%; zeta ratio 0.75-1.25)",
+ "internal_consistency": {
+  "median_dex": 0.08979859320751293,
+  "frac_ok": 0.0784313725490196,
+  "basis": "offset-removed windowed response spectra, hit-001 vs RMS(others) (D8)"
+ },
+ "window_physics": {
+  "n_clean_peaks": 9,
+  "median_ratio": 1.8807812518744649,
+  "pass": false,
+  "per_peak": [
+   {
+    "f_hz": 68.10629559840191,
+    "zeta_era": 0.0009869169263164621,
+    "zeta_pred_apparent": 0.015229809908244471,
+    "zeta_meas_windowed": 0.014766481898476326,
+    "zeta_meas_rect_REPORTED": 0.014285273122396056,
+    "ratio": 0.9695775579236003
+   },
+   {
+    "f_hz": 74.9125601285705,
+    "zeta_era": 0.003005142368039821,
+    "zeta_pred_apparent": 0.015953981360309667,
+    "zeta_meas_windowed": 0.08,
+    "zeta_meas_rect_REPORTED": 0.016858968305152242,
+    "ratio": 5.01442230583421
+   },
+   {
+    "f_hz": 120.13137670960218,
+    "zeta_era": 0.02805395962363678,
+    "zeta_pred_apparent": 0.03612870833769241,
+    "zeta_meas_windowed": 0.06137366710040483,
+    "zeta_meas_rect_REPORTED": 0.005649510892282532,
+    "ratio": 1.698750659081128
+   },
+   {
+    "f_hz": 149.90079187578857,
+    "zeta_era": 0.00576006113008047,
+    "zeta_pred_apparent": 0.012231212265875563,
+    "zeta_meas_windowed": 0.08,
+    "zeta_meas_rect_REPORTED": 0.08,
+    "ratio": 6.540643581437613
+   },
+   {
+    "f_hz": 162.99463153393194,
+    "zeta_era": 0.0008194562560494723,
+    "zeta_pred_apparent": 0.006770760728317651,
+    "zeta_meas_windowed": 0.005839818364784775,
+    "zeta_meas_rect_REPORTED": 0.0013149744820067145,
+    "ratio": 0.8625054996199535
+   },
+   {
+    "f_hz": 171.70131644831125,
+    "zeta_era": 0.0007863543468839254,
+    "zeta_pred_apparent": 0.006435878180882076,
+    "zeta_meas_windowed": 0.012104479021950944,
+    "zeta_meas_rect_REPORTED": 0.0037961990817932246,
+    "ratio": 1.8807812518744649
+   },
+   {
+    "f_hz": 188.46334551355733,
+    "zeta_era": 0.002363192289658492,
+    "zeta_pred_apparent": 0.007510244502704412,
+    "zeta_meas_windowed": 0.007124104392894828,
+    "zeta_meas_rect_REPORTED": 0.0014050581666060354,
+    "ratio": 0.9485848816678956
+   },
+   {
+    "f_hz": 233.09859814715594,
+    "zeta_era": 0.003345320950194729,
+    "zeta_pred_apparent": 0.007506781753966742,
+    "zeta_meas_windowed": 0.04406534566471756,
+    "zeta_meas_rect_REPORTED": 0.038596082353942025,
+    "ratio": 5.8700715045342164
+   },
+   {
+    "f_hz": 244.19973828050198,
+    "zeta_era": 0.0024586730912864057,
+    "zeta_pred_apparent": 0.006430956953807829,
+    "zeta_meas_windowed": 0.038596082353942025,
+    "zeta_meas_rect_REPORTED": 0.010959244963153697,
+    "ratio": 6.0016079459354685
+   }
+  ]
+ },
+ "window_physics_stored_cache_REPORTED": {
+  "n_peaks": 7,
+  "median_ratio": 1.8762690117345142,
+  "per_peak": [
+   {
+    "f_hz": 74.9125601285705,
+    "zeta_era": 0.003005142368039821,
+    "zeta_pred_apparent": 0.015953981360309667,
+    "zeta_meas_stored_cache": 0.038596082353942025,
+    "ratio": 2.4192132034177627,
+    "n_valid_fits": 5
+   },
+   {
+    "f_hz": 120.13137670960218,
+    "zeta_era": 0.02805395962363678,
+    "zeta_pred_apparent": 0.03612870833769241,
+    "zeta_meas_stored_cache": 0.06778717588800665,
+    "ratio": 1.8762690117345142,
+    "n_valid_fits": 4
+   },
+   {
+    "f_hz": 162.99463153393194,
+    "zeta_era": 0.0008194562560494723,
+    "zeta_pred_apparent": 0.006770760728317651,
+    "zeta_meas_stored_cache": 0.006036536469071032,
+    "ratio": 0.8915595619594354,
+    "n_valid_fits": 5
+   },
+   {
+    "f_hz": 171.70131644831125,
+    "zeta_era": 0.0007863543468839254,
+    "zeta_pred_apparent": 0.006435878180882076,
+    "zeta_meas_stored_cache": 0.016309569771373145,
+    "ratio": 2.5341638410467584,
+    "n_valid_fits": 5
+   },
+   {
+    "f_hz": 188.46334551355733,
+    "zeta_era": 0.002363192289658492,
+    "zeta_pred_apparent": 0.007510244502704412,
+    "zeta_meas_stored_cache": 0.006450075632600836,
+    "ratio": 0.8588369699918806,
+    "n_valid_fits": 5
+   },
+   {
+    "f_hz": 233.09859814715594,
+    "zeta_era": 0.003345320950194729,
+    "zeta_pred_apparent": 0.007506781753966742,
+    "zeta_meas_stored_cache": 0.010029813542920804,
+    "ratio": 1.3361003252320263,
+    "n_valid_fits": 4
+   },
+   {
+    "f_hz": 244.19973828050198,
+    "zeta_era": 0.0024586730912864057,
+    "zeta_pred_apparent": 0.006430956953807829,
+    "zeta_meas_stored_cache": 0.025982735829087236,
+    "ratio": 4.040259640317234,
+    "n_valid_fits": 4
+   }
+  ],
+  "note": "D9: same +/-25% physics fit applied to the STORED cache |H1| (the data the arms score against); truly isolated peaks agree (163.0/188.5 Hz ratios ~0.85-0.90), non-isolated peaks absorb neighbors at 2 Hz bin spacing -> median exceeds 1.25; no peak is systematically NARROWER than predicted (nothing refutes window-broadening)"
+ },
+ "qualitative_evidence_REPORTED": {
+  "distiller_provenance": "EXACT: modal_multiref.py -> multiref_frf.py -> realfrf.py found+hashed; cache metadata (N=122880, df=2.0345, 6 hits, impact at ~0.5 s) matches; realfrf.measured_zeta_w documents the exp-window added damping upstream",
+  "gate_K": "operator matches analytic apparent-zeta physics to <=2% (synthetic)",
+  "differential_window_vs_rect": "tested and found PHYSICALLY UNINFORMATIVE: rect-frame truncation broadening ~= zeta_w at these frequencies (D9)"
+ },
+ "t01_t07_shape_bonus": {
+  "median_logmag_corr": 0.8340858994387149,
+  "median_offset_removed_dex": 0.12036775283005152,
+  "note": "shape-only; Test07 has no force normalization"
+ },
+ "t01_t07_median_dex": 0.12036775283005152,
+ "zeta_w_curve_60_100_150_250": [
+  0.01616717799339322,
+  0.00970030679603593,
+  0.006466871197357287,
+  0.0038801227184143724
+ ],
+ "runtime_s": 7.8
+}

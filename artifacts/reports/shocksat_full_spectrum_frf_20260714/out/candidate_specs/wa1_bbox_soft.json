@@ -1,0 +1,17 @@
+{
+ "cid": "wa1_bbox_soft",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    101,
+    102,
+    103
+   ],
+   "t_scale": 0.87,
+   "name": "bottombox_t087"
+  }
+ ],
+ "rationale": "Same Bottom_Box|Y cell; the peak errors have BOTH signs (158->142 low, 168->180 high) so the direction is ambiguous \u2014 soften to bracket the stiffen candidate."
+}

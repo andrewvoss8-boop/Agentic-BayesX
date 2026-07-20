@@ -1,0 +1,6 @@
+shapes_m_xpos_990x: nm=18 r0=106 train=['m_zpos_990z', 'm_ypos_990y', 'm_zpos_900z'] counts={'m_zpos_990z': {'n_ch': 29, 'n_bins': 63}, 'm_ypos_990y': {'n_ch': 34, 'n_bins': 63}, 'm_zpos_900z': {'n_ch': 30, 'n_bins': 63}}
+/Users/avoss/Library/Python/3.9/lib/python/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+/Users/avoss/Library/Python/3.9/lib/python/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+shapes_m_xpos_990x: rhat_max=13.9466 ess_min=2 div=2/1600 (8927s)

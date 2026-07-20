@@ -1,0 +1,7 @@
+code/n0_reference.py 3.7
+code/mc_noise.py 17.69
+code/n1_bridge.py 3.75
+code/s3s4_assess.py 68.84
+code/fig_port.py 2.32
+code/fig_qa.py 0.49
+WALLCLOCK 97.46

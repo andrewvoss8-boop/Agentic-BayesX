@@ -1,0 +1,79 @@
+[    0.1s] [baseline] correlate already done — skip
+[    1.2s] [joints_rot_soft] eigsh...
+[  251.6s] [joints_rot_soft] FRF log|H| corr median=0.21 (mean 0.18, frac>0.5 0.17); peak ampl err 17.4 dB; MAC 0.627
+[  253.3s] [joints_rot_stiff] eigsh...
+[  525.8s] [joints_rot_stiff] FRF log|H| corr median=0.202 (mean 0.166, frac>0.5 0.14); peak ampl err 18.6 dB; MAC 0.615
+[  529.4s] [joints_trans_soft] eigsh...
+[  843.2s] [joints_trans_soft] FRF log|H| corr median=0.295 (mean 0.243, frac>0.5 0.3); peak ampl err 14.3 dB; MAC 0.64
+[  844.8s] [joints_trans_stiff] eigsh...
+[ 1101.6s] [joints_trans_stiff] FRF log|H| corr median=0.296 (mean 0.238, frac>0.5 0.27); peak ampl err 15.6 dB; MAC 0.641
+[ 1103.6s] [joints_all_soft] eigsh...
+[ 1598.6s] [joints_all_soft] FRF log|H| corr median=0.308 (mean 0.234, frac>0.5 0.26); peak ampl err 16.6 dB; MAC 0.596
+[ 1603.9s] [bottombox_E_lo] eigsh...
+[ 1928.9s] [bottombox_E_lo] FRF log|H| corr median=0.359 (mean 0.276, frac>0.5 0.31); peak ampl err 14.9 dB; MAC 0.609
+[ 1931.7s] [bottombox_E_hi] eigsh...
+[ 2251.3s] [bottombox_E_hi] FRF log|H| corr median=0.309 (mean 0.239, frac>0.5 0.24); peak ampl err 16.0 dB; MAC 0.616
+[ 2253.5s] [topbox_E_lo] eigsh...
+[ 2658.9s] [topbox_E_lo] FRF log|H| corr median=0.215 (mean 0.164, frac>0.5 0.13); peak ampl err 17.3 dB; MAC 0.612
+[ 2662.1s] [topbox_E_hi] eigsh...
+[ 2963.3s] [topbox_E_hi] FRF log|H| corr median=0.231 (mean 0.197, frac>0.5 0.21); peak ampl err 15.4 dB; MAC 0.624
+[ 2965.3s] [plates_E_lo] eigsh...
+[ 3346.4s] [plates_E_lo] FRF log|H| corr median=0.313 (mean 0.254, frac>0.5 0.29); peak ampl err 15.1 dB; MAC 0.639
+[ 3348.7s] [plates_E_hi] eigsh...
+[ 3645.1s] [plates_E_hi] FRF log|H| corr median=0.33 (mean 0.26, frac>0.5 0.27); peak ampl err 16.3 dB; MAC 0.609
+[ 3646.9s] [bbLo_jrotSoft] eigsh...
+[ 3976.4s] [bbLo_jrotSoft] FRF log|H| corr median=0.199 (mean 0.176, frac>0.5 0.13); peak ampl err 17.5 dB; MAC 0.607
+[ 3978.0s] [platesHi_jrotSoft] eigsh...
+[ 4762.1s] [platesHi_jrotSoft] FRF log|H| corr median=0.275 (mean 0.225, frac>0.5 0.21); peak ampl err 18.2 dB; MAC 0.6
+[ 4762.2s] === all-data FRF correlation (full per-mode damping) ===
+[ 4762.2s]   bottombox_E_lo         FRFcorr=0.359 ampErr=14.9dB MAC=0.609
+[ 4762.2s]   plates_E_hi            FRFcorr=0.330 ampErr=16.3dB MAC=0.609
+[ 4762.2s]   plates_E_lo            FRFcorr=0.313 ampErr=15.1dB MAC=0.639
+[ 4762.2s]   bottombox_E_hi         FRFcorr=0.309 ampErr=16.0dB MAC=0.616
+[ 4762.2s]   joints_all_soft        FRFcorr=0.308 ampErr=16.6dB MAC=0.596
+[ 4762.2s]   baseline               FRFcorr=0.296 ampErr=15.7dB MAC=0.631
+[ 4762.2s]   joints_trans_stiff     FRFcorr=0.296 ampErr=15.6dB MAC=0.641
+[ 4762.2s]   joints_trans_soft      FRFcorr=0.295 ampErr=14.3dB MAC=0.640
+[ 4762.2s]   platesHi_jrotSoft      FRFcorr=0.275 ampErr=18.2dB MAC=0.600
+[ 4762.2s]   topbox_E_hi            FRFcorr=0.231 ampErr=15.4dB MAC=0.624
+[ 4762.2s]   topbox_E_lo            FRFcorr=0.215 ampErr=17.3dB MAC=0.612
+[ 4762.2s]   joints_rot_soft        FRFcorr=0.210 ampErr=17.4dB MAC=0.627
+[ 4762.2s]   joints_rot_stiff       FRFcorr=0.202 ampErr=18.6dB MAC=0.615
+[ 4762.2s]   bbLo_jrotSoft          FRFcorr=0.199 ampErr=17.5dB MAC=0.607
+[  746.3s] [cross_bolt] FRF log|H| corr median=0.305 (mean 0.244, frac>0.5 0.28); peak ampl err 14.9 dB; MAC 0.574
+[  748.8s] [cross_weld] eigsh...
+[ 1046.7s] [cross_weld] FRF log|H| corr median=0.307 (mean 0.248, frac>0.5 0.29); peak ampl err 14.6 dB; MAC 0.574
+[ 1048.5s] [cross_bolt_trans] eigsh...
+[ 1402.7s] [cross_bolt_trans] FRF log|H| corr median=0.315 (mean 0.247, frac>0.5 0.29); peak ampl err 17.3 dB; MAC 0.585
+[ 1402.7s] [baseline] correlate already done — skip
+[ 1402.7s] [joints_rot_soft] correlate already done — skip
+[ 1402.7s] [joints_rot_stiff] correlate already done — skip
+[ 1402.7s] [joints_trans_soft] correlate already done — skip
+[ 1402.7s] [joints_trans_stiff] correlate already done — skip
+[ 1402.7s] [joints_all_soft] correlate already done — skip
+[ 1402.7s] [bottombox_E_lo] correlate already done — skip
+[ 1402.7s] [bottombox_E_hi] correlate already done — skip
+[ 1402.7s] [topbox_E_lo] correlate already done — skip
+[ 1402.7s] [topbox_E_hi] correlate already done — skip
+[ 1402.7s] [plates_E_lo] correlate already done — skip
+[ 1402.7s] [plates_E_hi] correlate already done — skip
+[ 1402.7s] [bbLo_jrotSoft] correlate already done — skip
+[ 1402.8s] [platesHi_jrotSoft] correlate already done — skip
+[ 1402.8s] === all-data FRF correlation (full per-mode damping) ===
+[ 1402.8s]   bottombox_E_lo         FRFcorr=0.359 ampErr=14.9dB MAC=0.609
+[ 1402.8s]   plates_E_hi            FRFcorr=0.330 ampErr=16.3dB MAC=0.609
+[ 1402.8s]   cross_bolt_trans       FRFcorr=0.315 ampErr=17.3dB MAC=0.585
+[ 1402.8s]   plates_E_lo            FRFcorr=0.313 ampErr=15.1dB MAC=0.639
+[ 1402.8s]   bottombox_E_hi         FRFcorr=0.309 ampErr=16.0dB MAC=0.616
+[ 1402.8s]   joints_all_soft        FRFcorr=0.308 ampErr=16.6dB MAC=0.596
+[ 1402.8s]   cross_weld             FRFcorr=0.307 ampErr=14.6dB MAC=0.574
+[ 1402.8s]   cross_bolt             FRFcorr=0.305 ampErr=14.9dB MAC=0.574
+[ 1402.8s]   baseline               FRFcorr=0.296 ampErr=15.7dB MAC=0.631
+[ 1402.8s]   joints_trans_stiff     FRFcorr=0.296 ampErr=15.6dB MAC=0.641
+[ 1402.8s]   joints_trans_soft      FRFcorr=0.295 ampErr=14.3dB MAC=0.640
+[ 1402.8s]   platesHi_jrotSoft      FRFcorr=0.275 ampErr=18.2dB MAC=0.600
+[ 1402.8s]   topbox_E_hi            FRFcorr=0.231 ampErr=15.4dB MAC=0.624
+[ 1402.8s]   topbox_E_lo            FRFcorr=0.215 ampErr=17.3dB MAC=0.612
+[ 1402.8s]   joints_rot_soft        FRFcorr=0.210 ampErr=17.4dB MAC=0.627
+[ 1402.8s]   joints_rot_stiff       FRFcorr=0.202 ampErr=18.6dB MAC=0.615
+[ 1402.8s]   bbLo_jrotSoft          FRFcorr=0.199 ampErr=17.5dB MAC=0.607

@@ -1,0 +1,17 @@
+{
+ "cid": "ma1_mesh_plates",
+ "cls": "mesh_density",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    501,
+    601
+   ]
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: Rectangular_Plates|Y|sub200 is the single worst cell (0.901 dex); refine the rectangular plates + center box (2336 quads) to resolve their local modes",
+ "track": "agent",
+ "round": 1,
+ "rationale": "diagnosis_mf_r1.json: Rectangular_Plates|Y|sub200 is the single worst cell (0.901 dex); refine the rectangular plates + "
+}

@@ -1,0 +1,35 @@
+{
+ "fig_error_participation": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_arms_comparison": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_scoring_suite": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_method_comparison": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_fem_error_sweep": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_schematic": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_heldout_frf": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "fig_mc_distributions": {
+  "overlap_pairs": 0,
+  "hits": []
+ },
+ "pass": true
+}

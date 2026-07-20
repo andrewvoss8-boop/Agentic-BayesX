@@ -1,0 +1,3 @@
+reduced-vs-full: max rel err at peaks 0.0810, peak-QOI 0.0689, band-QOI 0.0810 (90 full modes, eigsh 297.4s)
+grid refine max QOI shift 0.0324
+modal truncation vs 74 modes: {'40': 0.12969542207456608, '50': 0.10317783212856413, '60': 0.010674615590022807, '74': 0.0}

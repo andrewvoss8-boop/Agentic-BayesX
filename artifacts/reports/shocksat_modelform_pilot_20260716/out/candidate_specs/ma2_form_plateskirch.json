@@ -1,0 +1,20 @@
+{
+ "cid": "ma2_form_plateskirch",
+ "cls": "element_formulation",
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    501,
+    601,
+    701
+   ],
+   "ts_t": 5.0,
+   "name": "platekirch"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r2.json: bracket the r1 shear-soften (ts 0.35 scored +0.1630) with the OPPOSITE (Kirchhoff-limit ts 5.0) on the same thick plates - curvature ratio < 1 now points stiffer, not softer",
+ "track": "agent",
+ "round": 2,
+ "rationale": "diagnosis_mf_r2.json: bracket the r1 shear-soften (ts 0.35 scored +0.1630) with the OPPOSITE (Kirchhoff-limit ts 5.0) on"
+}

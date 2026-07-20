@@ -1,0 +1,6 @@
+{
+  "active_runtime_s": 8722.7,
+  "elapsed_wallclock_s": 8722.7,
+  "machine": "Mac CPU float64 (per compute_protocol; NUTS numpyro x64 sequential chains)",
+  "note": "active = summed logged step + eigensolve + NUTS times, capped at elapsed wallclock (heavy legs ran detached/parallel per the compute protocol)."
+}

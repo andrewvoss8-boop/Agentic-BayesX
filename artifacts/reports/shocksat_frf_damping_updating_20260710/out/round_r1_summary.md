@@ -1,0 +1,16 @@
+# Round 1 summary
+
+- s_c06_tb_xface             P1'=0.2501 P3=0.2476 P2'=0.8895 [shape_only/shape]
+- s_a04_welds_t074           P1'=0.2442 P3=0.2426 P2'=0.9796 [shape_only/shape]
+- s_a03_welds_t130           P1'=0.2426 P3=0.2406 P2'=0.9633 [shape_only/shape]
+- p_ctrl0                    P1'=0.2423 P3=0.2306 P2'=0.8715 [shape_only/parametric]
+- s_a16_bb_splits_combo      P1'=0.2325 P3=0.2260 P2'=0.9915 [shape_only/shape]
+- s_a11_ref_202              P1'=0.2218 P3=0.2242 P2'=0.8233 [shape_only/shape]
+- d_eta_hi                   P1'=0.2180 P3=0.2292 P2'=0.7266 [damping_only/damping_joint_eta]
+- d_ray2                     P1'=0.2178 P3=0.2231 P2'=0.7591 [damping_only/damping_rayleigh]
+- p_ctrl1                    P1'=0.2161 P3=0.2135 P2'=0.7969 [shape_only/parametric]
+- d_band_w3_lo               P1'=0.2151 P3=0.2270 P2'=0.8031 [damping_only/damping_band]
+- d_eta_lo                   P1'=0.2150 P3=0.2311 P2'=0.7281 [damping_only/damping_joint_eta]
+- d_ray1                     P1'=0.2092 P3=0.2259 P2'=0.7734 [damping_only/damping_rayleigh]
+- d_a0d                      P1'=0.2076 P3=0.2263 P2'=0.7837 [damping_only/damping_band]
+- d_band_w3_hi               P1'=0.1984 P3=0.2087 P2'=0.7689 [damping_only/damping_band]

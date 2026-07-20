@@ -1,0 +1,155 @@
+{
+  "deliverable": "(a) near-resonance load-free mode-shape-ratio test (D7)",
+  "n_pairs": 21,
+  "log_corr_meas_vs_phi_ratio": 0.258,
+  "interpretation": "weak positive (+0.26) => FEM mode shapes carry only a faint part of the peak-height ratio; the transmissibility-shape residual is LOAD-INDEPENDENT mode-shape error, so inferring the acoustic load (a richer-form lever) cannot recover held-out shape skill.",
+  "pairs": [
+    {
+      "loc": "interface",
+      "f_meas_hz": 78.7,
+      "fem_mode_hz": 79.8,
+      "pred_ratio": 2.137,
+      "meas_peak_T": 27.784
+    },
+    {
+      "loc": "interface",
+      "f_meas_hz": 102.5,
+      "fem_mode_hz": 106.5,
+      "pred_ratio": 2.564,
+      "meas_peak_T": 70.469
+    },
+    {
+      "loc": "interface",
+      "f_meas_hz": 116.9,
+      "fem_mode_hz": 115.9,
+      "pred_ratio": 0.566,
+      "meas_peak_T": 10.928
+    },
+    {
+      "loc": "interface",
+      "f_meas_hz": 147.6,
+      "fem_mode_hz": 156.4,
+      "pred_ratio": 0.295,
+      "meas_peak_T": 5.857
+    },
+    {
+      "loc": "interface",
+      "f_meas_hz": 208.9,
+      "fem_mode_hz": 210.1,
+      "pred_ratio": 0.107,
+      "meas_peak_T": 22.301
+    },
+    {
+      "loc": "interface",
+      "f_meas_hz": 230.2,
+      "fem_mode_hz": 213.5,
+      "pred_ratio": 0.095,
+      "meas_peak_T": 0.696
+    },
+    {
+      "loc": "beam",
+      "f_meas_hz": 65.8,
+      "fem_mode_hz": 65.2,
+      "pred_ratio": 1.911,
+      "meas_peak_T": 1.832
+    },
+    {
+      "loc": "beam",
+      "f_meas_hz": 118.1,
+      "fem_mode_hz": 120.6,
+      "pred_ratio": 0.584,
+      "meas_peak_T": 1.886
+    },
+    {
+      "loc": "beam",
+      "f_meas_hz": 147.2,
+      "fem_mode_hz": 141.5,
+      "pred_ratio": 1.202,
+      "meas_peak_T": 4.003
+    },
+    {
+      "loc": "beam",
+      "f_meas_hz": 165.3,
+      "fem_mode_hz": 164.4,
+      "pred_ratio": 0.545,
+      "meas_peak_T": 0.867
+    },
+    {
+      "loc": "beam",
+      "f_meas_hz": 193.6,
+      "fem_mode_hz": 195.7,
+      "pred_ratio": 0.166,
+      "meas_peak_T": 1.224
+    },
+    {
+      "loc": "beam",
+      "f_meas_hz": 241.2,
+      "fem_mode_hz": 219.1,
+      "pred_ratio": 0.105,
+      "meas_peak_T": 1.173
+    },
+    {
+      "loc": "valve",
+      "f_meas_hz": 52.8,
+      "fem_mode_hz": 79.8,
+      "pred_ratio": 2.69,
+      "meas_peak_T": 1.262
+    },
+    {
+      "loc": "valve",
+      "f_meas_hz": 124.1,
+      "fem_mode_hz": 115.9,
+      "pred_ratio": 0.412,
+      "meas_peak_T": 3.565
+    },
+    {
+      "loc": "valve",
+      "f_meas_hz": 214.4,
+      "fem_mode_hz": 202.3,
+      "pred_ratio": 0.197,
+      "meas_peak_T": 1.231
+    },
+    {
+      "loc": "avi-L",
+      "f_meas_hz": 128.1,
+      "fem_mode_hz": 132.2,
+      "pred_ratio": 0.818,
+      "meas_peak_T": 1.335
+    },
+    {
+      "loc": "avi-L",
+      "f_meas_hz": 230.9,
+      "fem_mode_hz": 230.6,
+      "pred_ratio": 0.384,
+      "meas_peak_T": 2.278
+    },
+    {
+      "loc": "avi-L",
+      "f_meas_hz": 256.9,
+      "fem_mode_hz": 253.1,
+      "pred_ratio": 0.199,
+      "meas_peak_T": 5.015
+    },
+    {
+      "loc": "avi-R",
+      "f_meas_hz": 72.5,
+      "fem_mode_hz": 69.3,
+      "pred_ratio": 1.273,
+      "meas_peak_T": 3.115
+    },
+    {
+      "loc": "avi-R",
+      "f_meas_hz": 128.1,
+      "fem_mode_hz": 128.2,
+      "pred_ratio": 0.487,
+      "meas_peak_T": 1.841
+    },
+    {
+      "loc": "avi-R",
+      "f_meas_hz": 208.1,
+      "fem_mode_hz": 206.9,
+      "pred_ratio": 34.538,
+      "meas_peak_T": 3.963
+    }
+  ]
+}

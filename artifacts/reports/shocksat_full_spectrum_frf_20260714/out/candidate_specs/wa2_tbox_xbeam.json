@@ -1,0 +1,22 @@
+{
+ "cid": "wa2_tbox_xbeam",
+ "family": "scale+thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.9,
+   "name": "tbox090"
+  },
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.4
+  }
+ ],
+ "rationale": "stack the two best round-1 edits (top_box soften + cross_beam scale) to test additivity."
+}

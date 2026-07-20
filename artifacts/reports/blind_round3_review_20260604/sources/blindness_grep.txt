@@ -1,7 +1,0 @@
-=== forbidden-path grep over inference code (empty = PASS, no forbidden refs) ===
-(no matches)
-
-=== all codex_truth references in inference code (dataset-only is correct) ===
-runs/round3/opus48/code/blind_infer.py:4:Consumes ONLY runs/round3/codex_truth/dataset/observations.npz (read-only). Does NOT read the sealed
-runs/round3/opus48/code/blind_model.py:4:I (the inference runner) consume ONLY runs/round3/codex_truth/dataset/observations.npz +
-runs/round3/opus48/code/blind_model.py:38:DATASET = HERE.parent / "codex_truth" / "dataset" / "observations.npz"

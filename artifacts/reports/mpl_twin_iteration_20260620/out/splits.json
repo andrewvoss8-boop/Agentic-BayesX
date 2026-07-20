@@ -1,0 +1,66 @@
+{
+  "deliverable": "5 leave-one-accel-location-out splits",
+  "axis": "leave_one_location_out",
+  "reference": "shield (fixed transmissibility denominator, always in training)",
+  "leakage_controlled": true,
+  "leakage_note": "each location's taps + acoustic record stay together; shield never held out.",
+  "coupled_ruler": "separate robustness validation (D-E), not one of the 5 LOLO splits",
+  "n_splits": 5,
+  "splits": [
+    {
+      "split_id": "LOLO_interface",
+      "held_out": "interface",
+      "train": [
+        "beam",
+        "valve",
+        "avi-L",
+        "avi-R"
+      ],
+      "reference_in_training": "shield"
+    },
+    {
+      "split_id": "LOLO_beam",
+      "held_out": "beam",
+      "train": [
+        "interface",
+        "valve",
+        "avi-L",
+        "avi-R"
+      ],
+      "reference_in_training": "shield"
+    },
+    {
+      "split_id": "LOLO_valve",
+      "held_out": "valve",
+      "train": [
+        "interface",
+        "beam",
+        "avi-L",
+        "avi-R"
+      ],
+      "reference_in_training": "shield"
+    },
+    {
+      "split_id": "LOLO_avi-L",
+      "held_out": "avi-L",
+      "train": [
+        "interface",
+        "beam",
+        "valve",
+        "avi-R"
+      ],
+      "reference_in_training": "shield"
+    },
+    {
+      "split_id": "LOLO_avi-R",
+      "held_out": "avi-R",
+      "train": [
+        "interface",
+        "beam",
+        "valve",
+        "avi-L"
+      ],
+      "reference_in_training": "shield"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+ "cid": "wa2_bbox_zsplit_tbox",
+ "family": "split+thickness",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 0.0,
+    "zhi": 22.0
+   },
+   "name": "bbox_lower"
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.9,
+   "name": "tbox090"
+  }
+ ],
+ "rationale": "give the stubborn bottom-box lower half its own theta (shape d.o.f. for Y) ON TOP of the tbox winner."
+}

@@ -1,0 +1,48 @@
+{
+  "deliverable": "model-class search registry",
+  "rounds": [
+    {
+      "round": 0,
+      "classes": [
+        "M0_baseline_calibrated9grp"
+      ]
+    },
+    {
+      "round": "0b",
+      "classes": [
+        "F0_freq_calibrated6grp"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "class_id": "M0_baseline_calibrated9grp",
+      "hypothesis": "as-received fable rev-3 FEM, 6 major K-groups calibrated, uniform zeta, iid log|T| discrepancy",
+      "changed": "baseline (carry-forward reference)",
+      "n_params": 9,
+      "nuts_converged": false,
+      "worst_rhat": 96.18819293200782,
+      "min_ess": 1.0026245706867436,
+      "heldout_crps_skill_grms_mean": -24.655586617175224,
+      "heldout_interval_skill_curve_mean": 0.3727206850387761,
+      "grms_rel_err_mean": 2.2517614199308857,
+      "verdict": "baseline/carry-forward"
+    },
+    {
+      "class_id": "F0_freq_calibrated6grp",
+      "hypothesis": "FREQUENCY headline: 6 K-groups calibrated on matched alive-mode eigenfrequencies (D7 pivot)",
+      "changed": "headline QOI -> per-location modal frequency (identifiable); transmissibility = diagnostic",
+      "n_params": 7,
+      "nuts_converged": true,
+      "worst_rhat": 1.0015597424086073,
+      "min_ess": 2849.688537072133,
+      "heldout_freq_crps_skill_pooled_mean": 0.9087480647634013,
+      "twin_median_df_pct_mean": 2.7624831071335714,
+      "nominal_median_df_pct_mean": 2.468198937563142,
+      "nearest_pooled_df_pct_mean": 2.5149479821972385,
+      "coverage_mean": 0.9333333333333332,
+      "verdict": "carry-forward (frequency)"
+    }
+  ],
+  "program_verdict": "YELLOW (frequency twin established as carry-forward; transmissibility-shape uncorrelated [D6]; richer-form search pending)"
+}

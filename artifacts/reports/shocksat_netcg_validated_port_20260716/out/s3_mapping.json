@@ -1,0 +1,881 @@
+{
+  "contract": "quantity_contracts.md Part C (relative per-mode perturbation, D2)",
+  "baseline_package": "A0_wide__enr",
+  "finalists": {
+    "B": {
+      "package": "B__enr",
+      "n_free_params": 9,
+      "pairing": {
+        "n_pairs": 40,
+        "max_pair_cost_abs_ln_f_ratio": 0.1648,
+        "n_degenerate_clusters_1pct": 9,
+        "largest_degenerate_cluster": 5
+      },
+      "dfreq": {
+        "median_abs_minus_1": 0.01511,
+        "max_abs_minus_1": 0.15194
+      },
+      "amp_full_diag": {
+        "median_abs_ln": 2.307,
+        "max_abs_ln": 10.404,
+        "verdict": "INVALID amplitude channel (D4): near-degenerate subspace rotation + 7e4 |g| dynamic range make per-mode participation ratios non-physical."
+      },
+      "variants": {
+        "full": {
+          "n_netcg_modes_receiving_perturbation": 27,
+          "max_abs_dfreq_minus_1": 0.04079,
+          "max_abs_ln_amp": 9.63082,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 2.04,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.0,
+              "synthetic_truth_peak_coverage": 0.0,
+              "widen_audit_hide_top3": 1.349
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 7.954,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.028,
+              "synthetic_truth_peak_coverage": 0.0,
+              "widen_audit_hide_top3": 1.029
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 8.117,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.046,
+              "synthetic_truth_peak_coverage": 0.12,
+              "widen_audit_hide_top3": 1.019
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 30791.40890347032
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10859.301295130388
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 82347.81622582799
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 57761.356569342555
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 480.72973694778455
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 171.3564218285952
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 1283.9671507394733
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 898.8833326422697
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            }
+          }
+        },
+        "freq_only": {
+          "n_netcg_modes_receiving_perturbation": 27,
+          "max_abs_dfreq_minus_1": 0.04079,
+          "max_abs_ln_amp": 0.0,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 1.511,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.995,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.396
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.276,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.982,
+              "synthetic_truth_peak_coverage": 0.983,
+              "widen_audit_hide_top3": 1.327
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 2.498,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.987,
+              "synthetic_truth_peak_coverage": 0.985,
+              "widen_audit_hide_top3": 1.051
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 0.963,
+                  "answerkey_grms": 13.729932115183345
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 5.657397731826267
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 36.617019956103775
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 25.763093436026455
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.963,
+              "mean_covered_frac_strong": 0.991
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.417836567463397
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 3.142102363715085
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 0.59,
+                  "answerkey_grms": 6.236038192856508
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 4.684235966179768
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.59,
+              "mean_covered_frac_strong": 0.897
+            }
+          }
+        },
+        "cluster_amp": {
+          "n_netcg_modes_receiving_perturbation": 27,
+          "max_abs_dfreq_minus_1": 0.04079,
+          "max_abs_ln_amp": 9.09503,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 1.25,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.0,
+              "synthetic_truth_peak_coverage": 0.0,
+              "widen_audit_hide_top3": 1.795
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.411,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.033,
+              "synthetic_truth_peak_coverage": 0.02,
+              "widen_audit_hide_top3": 1.236
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 5.355,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.177,
+              "synthetic_truth_peak_coverage": 0.195,
+              "widen_audit_hide_top3": 1.035
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 30791.407322718867
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10859.301566528187
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 82347.81857256916
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 57761.36049558342
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 480.70013376648717
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 171.36498665068757
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 1284.3835902844062
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 899.1623309013647
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            }
+          }
+        }
+      }
+    },
+    "D": {
+      "package": "D__enr",
+      "n_free_params": 10,
+      "pairing": {
+        "n_pairs": 43,
+        "max_pair_cost_abs_ln_f_ratio": 0.0811,
+        "n_degenerate_clusters_1pct": 10,
+        "largest_degenerate_cluster": 5
+      },
+      "dfreq": {
+        "median_abs_minus_1": 0.00466,
+        "max_abs_minus_1": 0.07793
+      },
+      "amp_full_diag": {
+        "median_abs_ln": 1.015,
+        "max_abs_ln": 9.526,
+        "verdict": "INVALID amplitude channel (D4): near-degenerate subspace rotation + 7e4 |g| dynamic range make per-mode participation ratios non-physical."
+      },
+      "variants": {
+        "full": {
+          "n_netcg_modes_receiving_perturbation": 26,
+          "max_abs_dfreq_minus_1": 0.0461,
+          "max_abs_ln_amp": 8.22143,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 2.176,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.993,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.29
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 37.685,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.941,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.003
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 6.122,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.409,
+              "synthetic_truth_peak_coverage": 0.317,
+              "widen_audit_hide_top3": 1.002
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 51.38215744783901
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 17.983504062330788
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 137.44275965516417
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 96.36728363152189
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.444211754117653
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 2.837751636994972
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 6.004025714287976
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 4.089188714109037
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            }
+          }
+        },
+        "freq_only": {
+          "n_netcg_modes_receiving_perturbation": 26,
+          "max_abs_dfreq_minus_1": 0.0461,
+          "max_abs_ln_amp": 0.0,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 1.495,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.995,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.417
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.285,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.983,
+              "synthetic_truth_peak_coverage": 0.987,
+              "widen_audit_hide_top3": 1.32
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 2.544,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.987,
+              "synthetic_truth_peak_coverage": 0.985,
+              "widen_audit_hide_top3": 1.046
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 13.729932115183345
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 5.657397731826267
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 36.617019956103775
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 25.763093436026455
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.417836567463397
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 3.142102363715085
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 0.594,
+                  "answerkey_grms": 6.236038192856508
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 4.684235966179768
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.594,
+              "mean_covered_frac_strong": 0.898
+            }
+          }
+        },
+        "cluster_amp": {
+          "n_netcg_modes_receiving_perturbation": 26,
+          "max_abs_dfreq_minus_1": 0.0461,
+          "max_abs_ln_amp": 4.61618,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 1.213,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.98,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.781
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.475,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.989,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.263
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 6.08,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.448,
+              "synthetic_truth_peak_coverage": 0.409,
+              "widen_audit_hide_top3": 1.002
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 51.38233733784046
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 17.98350452301859
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 137.44249177879877
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 96.3668096273169
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.441255384291246
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 3.1794843108131365
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 0.712,
+                  "answerkey_grms": 6.420468794398431
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 4.686422778777749
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.712,
+              "mean_covered_frac_strong": 0.928
+            }
+          }
+        }
+      }
+    },
+    "R": {
+      "package": "R__enr",
+      "n_free_params": 10,
+      "pairing": {
+        "n_pairs": 45,
+        "max_pair_cost_abs_ln_f_ratio": 0.1168,
+        "n_degenerate_clusters_1pct": 10,
+        "largest_degenerate_cluster": 5
+      },
+      "dfreq": {
+        "median_abs_minus_1": 0.00476,
+        "max_abs_minus_1": 0.11027
+      },
+      "amp_full_diag": {
+        "median_abs_ln": 0.859,
+        "max_abs_ln": 15.424,
+        "verdict": "INVALID amplitude channel (D4): near-degenerate subspace rotation + 7e4 |g| dynamic range make per-mode participation ratios non-physical."
+      },
+      "variants": {
+        "full": {
+          "n_netcg_modes_receiving_perturbation": 27,
+          "max_abs_dfreq_minus_1": 0.0652,
+          "max_abs_ln_amp": 6.14981,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 9.241,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.974,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.023
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.671,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.986,
+              "synthetic_truth_peak_coverage": 0.994,
+              "widen_audit_hide_top3": 1.277
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 7.792,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.999,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.013
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 56.79158616100691
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 22.54225323734626
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 151.42968466831266
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 106.54291952640327
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.410135319055119
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 2.7461906930512905
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 0.612,
+                  "answerkey_grms": 5.721059656182375
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 3.850194127953293
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.612,
+              "mean_covered_frac_strong": 0.903
+            }
+          }
+        },
+        "freq_only": {
+          "n_netcg_modes_receiving_perturbation": 27,
+          "max_abs_dfreq_minus_1": 0.0652,
+          "max_abs_ln_amp": 0.0,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 1.489,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.995,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.435
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.303,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.983,
+              "synthetic_truth_peak_coverage": 0.99,
+              "widen_audit_hide_top3": 1.32
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 2.52,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.987,
+              "synthetic_truth_peak_coverage": 0.985,
+              "widen_audit_hide_top3": 1.045
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 13.729932115183345
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 5.657397731826267
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 36.617019956103775
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 25.763093436026455
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.417836567463397
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 3.142102363715085
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 0.592,
+                  "answerkey_grms": 6.236038192856508
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 4.684235966179768
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.592,
+              "mean_covered_frac_strong": 0.898
+            }
+          }
+        },
+        "cluster_amp": {
+          "n_netcg_modes_receiving_perturbation": 27,
+          "max_abs_dfreq_minus_1": 0.0652,
+          "max_abs_ln_amp": 11.16595,
+          "is_identity": false,
+          "axes": {
+            "shear_X": {
+              "width_ratio_vs_fem6db": 1.339,
+              "delivered_width": 1.508,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.986,
+              "synthetic_truth_peak_coverage": 0.993,
+              "widen_audit_hide_top3": 1.619
+            },
+            "shear_Y": {
+              "width_ratio_vs_fem6db": 2.238,
+              "delivered_width": 2.301,
+              "narrower_than_delivered": true,
+              "synthetic_truth_coverage": 0.986,
+              "synthetic_truth_peak_coverage": 0.995,
+              "widen_audit_hide_top3": 1.306
+            },
+            "normal_Z": {
+              "width_ratio_vs_fem6db": 53.567,
+              "delivered_width": 2.526,
+              "narrower_than_delivered": false,
+              "synthetic_truth_coverage": 0.999,
+              "synthetic_truth_peak_coverage": 1.0,
+              "widen_audit_hide_top3": 1.001
+            }
+          },
+          "heldout_dev": {
+            "shear_X": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 56.79183366235815
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 22.542063026394057
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 151.4293868631566
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 106.54240675097054
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 1.0,
+              "mean_covered_frac_strong": 1.0
+            },
+            "shear_Y": {
+              "per_drive": [
+                {
+                  "drive": "+X",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 10.416629674900136
+                },
+                {
+                  "drive": "+Z(990)",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 2.9438745569921485
+                },
+                {
+                  "drive": "+Z(900)",
+                  "covered_frac": 0.586,
+                  "answerkey_grms": 5.987077791711847
+                },
+                {
+                  "drive": "+Y",
+                  "covered_frac": 1.0,
+                  "answerkey_grms": 4.246943267452129
+                }
+              ],
+              "n_dev_drives": 4,
+              "min_covered_frac_strong": 0.586,
+              "mean_covered_frac_strong": 0.896
+            }
+          }
+        }
+      }
+    }
+  },
+  "excluded": {
+    "C": "review C6 (accepted, RED): C's exact aggregate is leakage-invalid; and per study D14 arm C shares A0_wide's basis (shape-MAP arm, not a model edit) -> it maps to the baseline identically and carries no model-form signal."
+  },
+  "baseline_through_mapping": {
+    "shear_X": 1.508,
+    "shear_Y": 2.301,
+    "normal_Z": 2.526
+  },
+  "baseline_through_mapping_note": "IDENTITY BY CONSTRUCTION (D2/C2.1): the mapping is RELATIVE, so A0-vs-A0 gives delta_f==1, a==1. This is a plumbing check that the perturbation hooks are wired correctly and nothing drifted \u2014 it is NOT independent evidence that the mapping faithfully transports a finalist.",
+  "non_identity_check": {
+    "passes": true,
+    "detail": "B/full: max|dfreq-1|=0.0408, max|ln a|=9.6308; B/freq_only: max|dfreq-1|=0.0408, max|ln a|=0.0000; B/cluster_amp: max|dfreq-1|=0.0408, max|ln a|=9.0950; D/full: max|dfreq-1|=0.0461, max|ln a|=8.2214; D/freq_only: max|dfreq-1|=0.0461, max|ln a|=0.0000; D/cluster_amp: max|dfreq-1|=0.0461, max|ln a|=4.6162; R/full: max|dfreq-1|=0.0652, max|ln a|=6.1498; R/freq_only: max|dfreq-1|=0.0652, max|ln a|=0.0000; R/cluster_amp: max|dfreq-1|=0.0652, max|ln a|=11.1659",
+    "rationale": "added by me (D2/C2.2) because the baseline check above is an identity; without this, an 'S3 not met' could be an artifact of dead plumbing."
+  },
+  "limitations": [
+    "Transports per-mode FREQUENCY and tray-PARTICIPATION magnitude only. Mode reordering/splitting, and any finalist mode with no baseline partner within 2%, are invisible to it.",
+    "The drive-point participation phi_drive is NOT perturbed (netcg's drive_part is not a mapping hook), so held-out-drive numbers reflect the finalist's tray/frequency change, not its drive-row change.",
+    "a_i uses |g_X|/|g_A0| (magnitude ratio): mode-shape sign is arbitrary, so signs are inherited from the netcg baseline.",
+    "D4: the pre-registered 'full' amplitude channel is INVALID (near-degenerate subspace rotation). S3 is judged on the AGREEMENT of the full / freq_only / cluster_amp variants."
+  ]
+}

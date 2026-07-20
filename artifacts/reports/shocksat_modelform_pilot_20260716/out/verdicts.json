@@ -1,0 +1,197 @@
+{
+ "card": "shocksat_modelform_pilot_20260716",
+ "HQ1": {
+  "statement": "agent beats seeded random on held-out sub-200 P1', exact bases, >= 1x paired-fold SE",
+  "primary": {
+   "convention": "best-exact vs best-exact (winner's-curse-honest; both sides max over 30 noisy candidates \u2014 a sub-SE gap is a win for neither)",
+   "agent_cid": "ma3_mesh_covers",
+   "random_cid": "mr2_elem5",
+   "agent_exact_sub200": 0.17714406957215678,
+   "random_exact_sub200": 0.1848001029443459,
+   "delta_mean": -0.007656033372189102,
+   "delta_se": 0.017729278569034886,
+   "per_fold": [
+    0.012228482757730086,
+    -0.060135902347707604,
+    0.015393260633386988,
+    0.0018900254678341222
+   ],
+   "met": false
+  },
+  "secondary": {
+   "convention": "track mean over all candidates (distribution-level)",
+   "delta_mean": 0.002799626851847495,
+   "delta_se": 0.005558059112433576,
+   "per_fold": [
+    -0.003730680602457348,
+    0.002056398780187485,
+    0.018705355251935285,
+    -0.005832566022275443
+   ],
+   "met_1se": false
+  }
+ },
+ "HQ2": {
+  "statement": "at least one GENUINE model-form class beats A1 on exact-basis held-out sub-200 by >= 1x paired-fold SE",
+  "per_class": {
+   "connectivity": {
+    "n_pooled": 12,
+    "genuine": true,
+    "best": {
+     "cid": "mr1_conn0",
+     "track": "random",
+     "exact_sub200": 0.17780534813647558,
+     "delta_mean": 0.06412069847227284,
+     "delta_se": 0.02726969541965144,
+     "per_fold": [
+      0.06259076700557648,
+      -0.0014794172755829282,
+      0.13207102390625855,
+      0.06330042025283927
+     ],
+     "met": true
+    },
+    "class_mean_vs_A1": {
+     "delta_mean": 0.027978057975768165,
+     "delta_se": 0.0175793757472411,
+     "per_fold": [
+      0.014908569767289548,
+      -0.00633279451414942,
+      0.07654712457246655,
+      0.026789332077465977
+     ]
+    },
+    "note": "best-of-12 carries selection noise; class mean is the control"
+   },
+   "mesh_density": {
+    "n_pooled": 12,
+    "genuine": true,
+    "best": {
+     "cid": "ma3_mesh_covers",
+     "track": "agent",
+     "exact_sub200": 0.17714406957215678,
+     "delta_mean": 0.06345941990795408,
+     "delta_se": 0.021395268927642503,
+     "per_fold": [
+      0.04999355040353376,
+      0.009571134940638992,
+      0.10548881506473173,
+      0.08878417922291182
+     ],
+     "met": true
+    },
+    "class_mean_vs_A1": {
+     "delta_mean": 0.05360165674775595,
+     "delta_se": 0.018634276803388257,
+     "per_fold": [
+      0.03970148845588717,
+      0.012243033070626685,
+      0.10041851983813362,
+      0.06204358562637635
+     ]
+    },
+    "note": "best-of-12 carries selection noise; class mean is the control"
+   },
+   "element_formulation": {
+    "n_pooled": 12,
+    "genuine": true,
+    "best": {
+     "cid": "mr2_elem5",
+     "track": "random",
+     "exact_sub200": 0.1848001029443459,
+     "delta_mean": 0.07111545328014318,
+     "delta_se": 0.011984168327258012,
+     "per_fold": [
+      0.037765067645803674,
+      0.0697070372883466,
+      0.09009555443134475,
+      0.0868941537550777
+     ],
+     "met": true
+    },
+    "class_mean_vs_A1": {
+     "delta_mean": 0.028037815209825807,
+     "delta_se": 0.009603144114257188,
+     "per_fold": [
+      0.017121633755458443,
+      0.02521929290918079,
+      0.05594342264034098,
+      0.013866911534323012
+     ]
+    },
+    "note": "best-of-12 carries selection noise; class mean is the control"
+   },
+   "geometry": {
+    "n_pooled": 12,
+    "genuine": true,
+    "best": {
+     "cid": "ma2_geo_jointbbox",
+     "track": "agent",
+     "exact_sub200": 0.1733633701518949,
+     "delta_mean": 0.05967872048769218,
+     "delta_se": 0.011603634273693186,
+     "per_fold": [
+      0.04259193198383837,
+      0.03702821507992471,
+      0.08280328052430709,
+      0.07629145436269857
+     ],
+     "met": true
+    },
+    "class_mean_vs_A1": {
+     "delta_mean": 0.024360047087976792,
+     "delta_se": 0.011830652719632469,
+     "per_fold": [
+      0.01088599647913252,
+      0.006068971343056173,
+      0.05839401527134731,
+      0.02209120525837116
+     ]
+    },
+    "note": "best-of-12 carries selection noise; class mean is the control"
+   },
+   "property_control": {
+    "n_pooled": 12,
+    "genuine": false,
+    "best": {
+     "cid": "ma1_prop_tboxxbeam",
+     "track": "agent",
+     "exact_sub200": 0.17654954342556356,
+     "delta_mean": 0.06286489376136084,
+     "delta_se": 0.020291745866613028,
+     "per_fold": [
+      0.020003207494048048,
+      0.052942719513561,
+      0.11765064154018222,
+      0.060863006497652083
+     ],
+     "met": false
+    },
+    "class_mean_vs_A1": {
+     "delta_mean": 0.03874583108410503,
+     "delta_se": 0.020332629837150208,
+     "per_fold": [
+      0.01926810984912647,
+      -0.003891807269035874,
+      0.09022997968598115,
+      0.049377042070348376
+     ]
+    },
+    "note": "CONTROL class \u2014 cannot satisfy HQ2 by definition"
+   }
+  },
+  "met": true
+ },
+ "fold_stability": {
+  "hq1_primary_per_fold_signs": [
+   1,
+   -1,
+   1,
+   1
+  ],
+  "consistent": false
+ },
+ "sampler": "NONE (deterministic multi-start MAPs + exact eigensolves; pre-registered)",
+ "vault": "not read",
+ "generated": "2026-07-17T13:40:13"
+}

@@ -1,0 +1,53 @@
+{
+ "cid": "ma1_geo_warp202",
+ "track": "agent",
+ "round": 1,
+ "cls": "geometry",
+ "ops": [
+  "warp_panel"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.16102176099301152,
+ "exact_b200_500": 0.15396838182281217,
+ "exact_folds": {
+  "m_xpos_990x": 0.293324676919406,
+  "m_zpos_990z": 0.5432690941887823,
+  "m_ypos_990y": 0.11622922332100968,
+  "m_zpos_900z": -0.30873595045715196
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.1450243362925271,
+  "m_zpos_990z": 0.07699642676085987,
+  "m_ypos_990y": 0.1382188869541745,
+  "m_zpos_900z": 0.2556338772836872
+ },
+ "theta_map": [
+  1.0764691017446855,
+  1.1151719043781947,
+  1.023222367145219,
+  1.4423055613691738,
+  1.1022001638472503,
+  1.0816734586608825,
+  1.3687496876668035,
+  1.0395088601986864,
+  0.6902123827355469
+ ],
+ "enriched_pkg": "ma1_geo_warp202__xenr",
+ "spot_max_pct": 1.4532051118010259e-07,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0009,
+  "max_mode_shift_pct": 17.3109,
+  "min_jac_ratio": 0.999918951925678,
+  "max_edge_slope": 0.000931638997294047,
+  "pass": true
+ },
+ "solve_s_theta1": 421.3,
+ "solve_s_enrich": 446.7,
+ "wall_s": 899.3,
+ "ts": "2026-07-16T21:31:36",
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Box shape defect 0.392 and Top_Box|Z cells 0.68 dex; the flat top cover (202) modeled perfectly flat is a build idealization - a 0.20 in bubble (V-gate: stiffens drumhead cluster via membrane-bending coupling) tests cover flatness as the missing physics"
+}

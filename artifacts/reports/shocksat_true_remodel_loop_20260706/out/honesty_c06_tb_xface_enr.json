@@ -1,0 +1,28 @@
+{
+ "cid": "c06_tb_xface_enr",
+ "shear_X": {
+  "hidden_modes_inb_idx": [
+   13,
+   12,
+   30
+  ],
+  "widen_ratio": 1.055
+ },
+ "shear_Y": {
+  "hidden_modes_inb_idx": [
+   7,
+   22,
+   34
+  ],
+  "widen_ratio": 1.0775
+ },
+ "normal_Z": {
+  "hidden_modes_inb_idx": [
+   33,
+   6,
+   19
+  ],
+  "widen_ratio": 1.0516
+ },
+ "lmo_widen_ratio": 1.0516
+}

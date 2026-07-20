@@ -1,5 +1,58 @@
 # Lessons Learned
 
+## 2026-06-22 Audit the raw delivery before declaring a data/model ceiling (ShockSat)
+The 4-card ShockSat amplitude twin (statfem_real_validation / fem_remesh / richmodel_L5 / modelclass_L5) was
+reported as hitting an *intrinsic* limit ("single impact / NOT a data-quantity gap"). A raw-delivery audit
+overturned that. The PUBLIC NASA ShockSat1 release (`shocksat_statfem_runner_20260609/source_manifest.md`)
+contains multiple modal-hammer DRIVE DIRECTIONS (+X/+Y/+Z/+XY: Test01–Test10), a force-level parametric sweep,
+and pyro/frangible sources — multi-direction excitation is exactly the lever that separates participation from
+damping. The runner had downloaded only ONE zip (Test07 +X); the rest were marked `too_large_deferred` and never
+fetched (pyro only partial → truncated). The "ceiling" was a data-USAGE / download choice, not data availability.
+- LESSON 1: "single impact / not a data gap" was a USAGE statement masquerading as an AVAILABILITY one. Before
+  claiming any data or model ceiling, enumerate the FULL delivery manifest, mark downloaded-vs-deferred, and
+  distinguish RAW multi-drive FRFs from modal-DISTILLED modes (we held the multi-reference data only as 33 `.ash`
+  modes, which by construction give shape+frequency, not per-channel amplitude — so of course they didn't fix it).
+- LESSON 2: this is lesson #6 below biting us — that entry ALREADY said "the cure is multi-reference / roving
+  excitation, not a fancier model." The cure was sitting in the manifest, deferred. When the method names the data
+  lever, CHECK whether that data is already in the delivery before concluding "intrinsic."
+- LESSON 3: verify the raw inventory from files, not memory — a packet mis-stated it ("only hit-001 exists; others
+  3-channel"); in fact 4 full 128-channel runs exist (distinct CRCs, same +X drive = repeats).
+- LESSON 4 (carry to the parallel MPL twin thread): it reached the same "per-location amplitude ceiling" under a
+  no-force / single-excitation assumption — re-audit its delivery/observable before accepting that ceiling.
+
+## 2026-06-13 Schneider × Das/Debnath × Yan(2026) × StatFEM program (workspace papers_statfem_studies_20260612)
+1. **Cheap probes mislead in BOTH directions — only the full multi-chain gate decides.** Study G's 2-chain probe
+   "converged and was wrong" (false positive: a single basin hid the bimodality). Study K's 2-chain probe "failed and
+   was wrong" (false negative: under-warmed R-hat 3.7, 0/5 — the 4-chain run reversed it to R-hat 1.007, 5/5). I wrote
+   a (wrong) decision off the K probe and had to correct it (D33→D34). NEVER promote or kill a result on a probe; the
+   4-chain all-variable gate (R-hat≤1.05, ESS≥200, div<2%) is the only arbiter. This cost real rework — budget for it.
+2. **Kennedy–O'Hagan physics-vs-discrepancy confounding appears in dynamics as literal posterior BIMODALITY.** When a
+   flexible output-space discrepancy can mimic the physics, the posterior splits ("damped structure" vs "undamped
+   structure + large model error"). A single chain lands in one basin and looks healthy; only multi-chain all-variable
+   diagnostics reveal it (R-hat 50). Constraining the discrepancy (orthogonal projection / local damping) cures the
+   bimodality — but does NOT restore held-out coverage: identifiability and local-model-error under-coverage are
+   SEPARATE failures with separate cures. Don't assume one fix buys the other.
+3. **Convergence ≠ trust; the held-out gate is the only instrument that catches a confidently-wrong twin.** A cleanly
+   converged single basin over-predicted never-measured-point peaks ~2×; the deterministic FEM failed the same test.
+   Hold back sensors you have, predict them, check the bands — on data you already have. This is the anti-pencil-whipping
+   procedure to put in front of skeptical loads/dynamics groups.
+4. **Exact log-magnitude/wrapped-phase FRF likelihoods freeze HMC.** Phase-wrap cliffs and 1/|H| spikes give NaN
+   gradients. The smooth small-error-equivalent residual r=(data−H)/(|H|+κ) restores NUTS and handles real noise floors
+   without data selection — plausibly why Schneider needed gradient-free Subset Simulation. (Documented as a 12-rung
+   "how to make NUTS work on dense FRFs" pathology ladder, D14–D25.)
+5. **Latent (data-space) mode shapes do not generalize spatially.** Free latent shapes (Das/Debnath-style) have no data
+   at held-out points → ~1e7× error, R-hat 364. For held-out PREDICTION, shapes must come from the parametric physics
+   (a differentiable B×B eigh); loosen only eigenvalues/damping.
+6. **Real-data identifiability boundary, stated as a budget decision (Study K→L).** Per-mode FREQUENCY is identifiable
+   (each sharp peak pins one number) → 5/5 held-out coverage by correcting a ~15% FEA error. Per-mode AMPLITUDE is NOT
+   identifiable from a single excitation reference (confounded with damping + global level; R-hat 14.8). So when bands
+   are calibrated-but-wide, the cure is MORE DATA (multi-reference / roving excitation), not a fancier model. The method
+   tells you which lever actually moves — the concrete "where to spend the next test dollar" answer.
+7. **A deterministic reconstruction fed back as "ground truth" double-counts (the sensor-fault / Yan-2026 trap).**
+   Reconstructing masked channels and then using them as if measured in closed-loop updating treats reconstruction error
+   as exact → overconfidence (Brynjarsdottir–O'Hagan). A calibrated predictive BAND on the reconstruction is the honest
+   alternative; it also wins where it matters (high-freq local modes, where spatial interpolation aliases).
+
 ## 2026-06-09 (BLOG) Global lessons for autonomous SciML (distilled from the modeling-freedom experiment)
 The two plain-English write-ups below (same date) tell the story; this is the distilled list. Strategic
 versions for our own priorities are in project_vision.md S13b.
@@ -380,3 +433,198 @@ Proposed harness guardrails (for discussion, not yet adopted):
 - Keep the human in the loop on COMPREHENSION, not just approvals: if the human can't currently explain what
   the experiment is doing and why, that is itself a blocking condition, surfaced by the agent.
 - Bias toward the SIMPLEST experiment that answers the real question over the most sophisticated one.
+
+## 2026-06-11 (coupled-QOI overnight, BLOG): group-level identifiability gates do not certify parameter-level recovery — and more compute finds more modes
+Workspace `artifacts/reports/shocksat_tray_coupled_qoi_20260610/` (packet §10, D10/D11). A
+strain-energy identifiability gate said the payload-mount stiffness is identifiable from
+mounted-config modal data (dlnf/dlnk = 0.449 ≈ 10× the discrepancy floor). An overnight
+synthetic-truth NUTS calibration then FAILED its convergence gate (R-hat 5–10, ESS 2, 0
+divergences) — and the diagnosis upgraded the lesson rather than the claim:
+- **"Identifiable overall" ≠ "identifiable per-axis."** The SE gate certifies signal-above-floor
+  for a parameter GROUP; only a FIM eigen-decomposition of the sensitivity Jacobian predicts how
+  the posterior splits across the individual parameters (here: 2 of 6 mount-stiffness
+  combinations identifiable; the k_tx/k_ty/k_rx splits prior-dominated). Run BOTH before
+  sampling; the gate text in AGENTS.md asks for the SE table — consider whether the combination
+  (eigen) view should be required too.
+- **Model-form discrepancy is the binding constraint, proven in a controlled synthetic.** The
+  sampler honestly inflated σ_f to ~3.7 % (injected noise was 0.3 %) to absorb a deliberately
+  unrepresentable truth feature (off-diagonal mount coupling). At 3.7 %: 2/6 combos; at 0.3 %:
+  5/6. Same wall as the real-data predecessor (σ_f = 4.6 %, joints) — the program has now hit it
+  with real data AND with synthetic truth.
+- **Auto-remedy by escalation backfired diagnostically as expected**: 4× the draws at depth 9
+  made worst R-hat WORSE (5.03 → 9.74) because longer chains FOUND MORE MODES. On a multimodal
+  posterior, compute escalation is exploration, not convergence; treat rising R-hat under more
+  compute as multimodality evidence, not as "needs more warmup".
+- **Data-space vs parameter-space convergence is the cheap one-shot diagnostic**: chains agreed
+  on predicted frequencies to 0.06 % while disagreeing wildly in parameters — computing that
+  spread took one forward eval per chain and settled "bug vs physics" immediately.
+- **Design experiments so the negative is informative.** The truth deliberately contained a
+  feature the model family cannot represent; when recovery failed, the failure LOCALIZED the
+  needed fix (symmetry-breaking observables: mode shapes / FRF amplitudes / interface force
+  gauges — not more frequencies). The honest negative is the deliverable.
+
+## 2026-06-11 — MPL stand rebuild (FABLE)
+- **The free-free 6-RBM gate catches real element-formulation bugs.** An absolute diagonal drilling spring (the lazy K6ROT stand-in) silently stiffened rotation-about-panel-normal at frame-coupled shell nodes: 5 rigid modes, one corrupted to 2.66 Hz. The fix is the textbook relative penalty (drilling DOF tied to membrane in-plane rotation). Without the gate this would have polluted every mode table at the few-Hz level.
+- **Validate the TEST, not just the element.** Two initial validation FAILs were test bugs (off-by-one tip-node index; narrow-strip E vs E/(1−ν²) reference ambiguity) while the element was exact. Lesson: when a nodally-exact element misses by 15-30%, suspect the harness first; use ν=0 to make plate references unambiguous.
+- **Parse before trusting card context.** The card's "shield = PSHELL39 t=0.5 suspect" premise was a misidentification (thrust plate); the real shield wasn't in the deck at all. A 20-line geometry exploration (which grids take the FORCEs, what plane they live in) overturned the task's #1-knob framing — and the human (live) resolved the fork in minutes. Escalate premise breaks immediately; don't build on them.
+
+## 2026-06-11 — MPL rebuild rev 4: priors + prior-predictive (the honest-observable trap)
+- When a human gives a RANGE ("2-4 lb"), encode it as a prior immediately and FORWARD-propagate it (prior-predictive) even in a no-sampler task — it costs little and exposes identifiability before testing. Bridge artifact to the posterior-update card.
+- Don't manufacture a tidy f(mass) law through a crowded/veering band. The first attempt (max-participation mode) jumped branches (peak mode 29→74→45 Hz) and gave a fit with 1.8-2.2 Hz residuals and even non-physical slope. The honest fix: propagate through the FUNDAMENTAL f1 (monotone in added mass by eigenvalue interlacing) AND state plainly that the box energy is smeared across a veering cluster, so the parameter is only weakly/confoundedly observable. The "ugly" answer (weak, confounded observability) was the real finding — exactly the pre-test insight the robust-twin demo exists to produce.
+
+## 2026-07-08 (true remodel loop): two generic evaluation traps + the survey-fit disconnect
+- **Reduced-basis score inflation is real and family-wide:** ANY model evaluated at θ_MAP in a θ=1 eigenbasis
+  carries ~0.7-2.2% frequency bias that INFLATES held-out FRF correlation by +0.01-0.07 — enough to fake a
+  pre-registered win. Even the baseline fails its own 0.3% spot check. Rule: every decision-relevant score
+  (freeze set, bars) must be exact-basis (one full solve at θ_MAP, union-POD enrichment, validate <=0.3%).
+- **θ_MAP multimodality is a silent ranking lottery:** identical model classes land in different posterior
+  basins (single-start L-BFGS) with ±0.035 held-out P1 differences. Rule: deterministic multi-start MAP for
+  anything that feeds a selection decision; the near-duplicate-candidate cross-check (same edit, two tracks)
+  is what exposed it.
+- **Better modal-frequency fit predicted WORSE held-out FRF at every accuracy step, dev through vault** —
+  the strongest evidence yet that the .ash-frequency objective does not transfer to per-channel FRF
+  amplitude; treat any freq-likelihood "improvement" claim with this disconnect in mind.
+
+## From the full-spectrum study review (2026-07-16, D17)
+- **Checkers must validate finiteness and identity, not presence.** G09 accepted NaN S1/S2 statistics,
+  null SEs, and an F row that silently equaled the random control. Every numeric gate should assert
+  isfinite() and every pre-registered rule (like arm-F's combination rule) should be checked as an
+  identity, not assumed.
+- **Never reuse one fold's fitted object across folds, even as a labeled "representative" shortcut** —
+  fold-1's shape MAP applied to folds 2-4 leaked their held-out drives. A caveat label does not remove
+  leakage; if the honest computation is too expensive, report NO number.
+- **A local FIM cannot prove global identifiability.** Separated posterior modes agreeing in data space IS
+  under-identification per AGENTS; say "locally stiff, globally unresolved" and stop there.
+- **Validation-by-reproduction must be independent.** Same hits + same distiller ⇒ bit-identical caches by
+  construction; that closes provenance, not processing correctness.
+- **Size ARPACK ncv to RAM before launching** (k=650/ncv=1301 thrashed 16 GB for 2 h); and check the
+  spectrum edge for clamped/unconverged modes — 345 of 560 "modes" were numerical pile-up at one frequency.
+- **An adversarial cross-model review caught all of this in one pass** — cheap relative to the study;
+  make it standard for any study whose headline flips on a methodological subtlety.
+
+## 2026-07-16 — Validated net-CG QOI port (card B): four transferable lessons
+
+**1. "We can't reproduce the reference" is a CONTRACT bug until proven otherwise — not a calibration bug.**
+The full-spectrum study could not reproduce the delivered net-CG twin (got 8.2×/3.7×/5.1× vs 1.51×/2.30×/
+2.53×) and attributed it in writing to "a marginal-calibration difference in the reimplemented statFEM F(k)",
+then closed S3/S4 as unassessable. The actual cause was a **redefined headline statistic**: netcg's width
+ratio is `grms(hi−lo)/grms(FEM+6dB width)`; the study's was `grms(smooth hi)/grms(smooth lo)` — an
+upper/lower ENVELOPE ratio that never references the denominator. On identical arrays: **1.508 vs 21.660**.
+Findable in a ~3-line diff. The study reused netcg's grid and helpers (so it *felt* like reuse) while
+silently redefining the number those helpers fed. **Rule of thumb: when a port misses a reference by >2×,
+diff the STATISTIC's definition before touching any constant.** The Quantity Contract Gate exists for this;
+it must be applied to the *scored statistic*, not only to the physical quantity.
+
+**2. Reuse means IMPORT + a proven reduction, not "same conventions".** The fix that made N0 pass exactly
+(|err| 0.0000) was importing the delivered machinery read-only and injecting new behaviour through subclass
+hooks that **provably reduce to the parent** (asserted numerically at runtime: max |Δufrac| = 5.6e-16 before
+any number was produced). Generalise by algebraic identity — e.g. netcg's `marg = 0.25 + (SD_A_U−0.25)·ufrac`
+IS the contribution-weighted form for a specific tier vector, so a general per-mode vector enters through an
+*effective ufrac* with `ensemble()` untouched. A reimplementation that "follows the same conventions" has no
+such proof and drifts silently.
+
+**3. Per-mode modal quantities are NOT comparable across re-solved bases when modes are near-degenerate.**
+My own pre-registered mapping defined `a_i = |g_X,i|/|g_A0,i|` (per-mode tray participation ratio). It is
+invalid here: **18 of 44 adjacent in-band mode pairs sit within 1%** (a five-mode cluster at ~141 Hz), and
+inside a near-degenerate subspace the eigenvectors are arbitrary up to rotation — only the **subspace** (and
+the summed spectral response) is basis-invariant. Symptom: **median |ln a| = 2.31** (a 10× "change") from a
+modest stiffness edit, with a 7e4 |g| dynamic range detonating near-zero denominators. **Cluster-aggregate
+(`sqrt(Σ|g_X|²/Σ|g_A0|²)`) or MAC-on-a-common-DOF-space, never raw per-mode ratios.** Generalises to any
+mode-matching/MAC/participation comparison across two FEM variants with dense modal regions.
+
+**4. A "baseline reproduces" check can be an identity BY CONSTRUCTION — say so.** The card required
+"baseline-through-your-mapping must reproduce N0 ±0.05". My relative mapping gives δf≡1, a≡1 at the
+baseline, so it reproduces N0 *exactly and vacuously*. It proves the plumbing, not transport fidelity. I
+added a **non-inertness gate** (does any finalist actually move the band?) to stop an "S3 not met" from being
+an artifact of dead plumbing. **Pattern: whenever a validation passes at |err| = 0.0000, ask whether it CAN
+fail.** If it can't, it isn't a test — name it and add one that can.
+
+**5. (Checker design, for the next card — durable-rule candidate, NOT yet applied; needs Andrew's approval.)**
+My checker returned **OVERALL GREEN 10/10 while S3 and S4 were both YELLOW**, because its gates cover
+*process integrity* and nothing propagates the pre-registered success criteria into OVERALL. That is the same
+CLASS of defect the review caught in the study (C8: G09 validated key-presence, not finiteness). It
+under-specifies rather than certifies a falsehood, and both YELLOWs are legitimate pre-registered outcomes a
+checker arguably should not call RED — but "OVERALL GREEN" next to two unmet criteria is a real misreading
+hazard. I disclosed it in every report rather than edit a SHA-locked checker mid-trial. **Proposed rule: any
+checker that pre-registers success criteria must carry a gate that reads its own verdicts file and reflects
+each criterion's status into OVERALL, so the headline light can never read greener than the science.**
+
+**6. An honest falsification is a RESULT, and pre-registering its path is what makes it credible.** S4 failed
+because the ONE measured extended-band cluster mode's OBSERVED cross-drive amplitude scatter (1.393) is
+LARGER than the 0.80 the twin already assumed for an *unmeasured* mode — measuring it made it MORE uncertain
+and the band WIDENED. That is only reportable as a clean finding because the study's A5b ledger entry wrote
+the falsification path down on 07-14 *before any QOI computation*: "if the observed cross-drive amplitude
+scatter is large, SD_A stays large and the normal band will NOT narrow". Pre-registration turned what would
+otherwise look like a broken update into evidence. Also: measuring a mode's FREQUENCY does not reduce its
+AMPLITUDE/SHAPE uncertainty — with 1 Z sensor the drumhead participation stays unknown, so the lever is
+SENSORS, not modelling.
+
+---
+
+## 2026-07-16 — EXACT-EVIDENCE COMPLETION (runner card A). Lessons; #1 and #2 are durable-rule candidates needing Andrew's approval.
+
+**1. Near-agreement between a defective number and a correct one is NOT evidence the defect is harmless.**
+The study's exact arm-C score (0.1570) sat 0.0025 from the honest recomputation (0.1595) — and was
+nonetheless produced by TWO large defects that nearly cancelled: a **leak worth +0.0822** (review C6: one
+fold's shape MAP applied to all 4 folds) and a **basis mismatch worth −0.0847** that the review never caught.
+Had anyone "sanity-checked" the leaky number against an honest one and seen agreement, they would have
+declared the leak benign and shipped the mismatch. **Pattern: when you find a defect, quantify IT
+(counterfactually, one defect at a time) — do not infer its size from the final number's plausibility.**
+Corollary: I made exactly this error myself (my D1 concluded "the leak barely mattered"); the decomposition
+probe, not intuition, corrected it (D2).
+
+**2. Reduced-basis coefficients carry their basis as part of the datum.** The mismatch above was:
+shape-field raw coefficients fit in the `A0_wide` θ=1 eigenbasis (r=209, 18 matched modes, r0=106) loaded and
+applied to the `A0_wide__enr` θ_MAP eigenbasis (r=194, 19 modes, r0=108). Different eigenvectors = different
+coordinate systems; the transfer is meaningless. **It did not crash** — the arrays merely broadcast — so it
+produced a wrong-but-plausible number silently, and all three dimensions (r, n_modes, r0) disagreed with
+nothing complaining. **Proposed rule: any code path that loads modal/reduced coefficients fit elsewhere must
+assert basis identity (r, matched-mode count, truncation index, and ideally a basis hash) before use.**
+
+**3. "Run it serially" is not the same mitigation as "bound the memory."** T2 ran 28 heavyweight independent
+eigensolves in ONE long-lived process. Candidates 1-17 took ~530 s each; by candidate 18 the 16 GB box was at
+10.8/12.3 GB swap and a single solve took **11,187 s (22× the 506 s median)**. I had logged the study's own
+D11 swap-thrash lesson in my D0 and still walked into it, because I read "serial" as the whole fix when the
+real risk was **cumulative** memory in a long-lived process. **For a batch of heavyweight INDEPENDENT jobs on
+fixed RAM, make each job its own process** — it is the only way the working set returns to the OS, and it is
+free when the jobs are already resumable. Restarting that way took the next solve back to 428 s.
+
+**4. A job that is ALIVE is not a job that is PROGRESSING.** My watchers polled `pgrep` — liveness — so a 22×
+slowdown looked identical to "still running" for three hours. **Monitor throughput (records/hour), not
+liveness**, and alarm when per-unit time exceeds a few times its median. (The saving grace was the card's
+resumability requirement: 18/28 records and 18/18 packages survived the kill with zero corruption, because
+`enrich()` only writes on completion.)
+
+**5. (Checker design — extends the 07-16 Card B lesson #5, same family, different failure.)** Card B's lesson
+was "a checker whose gates cover only process integrity can read GREEN while the science is YELLOW." Mine is
+the mirror image: **do not SHA-lock a gate on the EXPECTED VALUE of an external result.** I locked G05 to
+require `S3/S4 == "CANNOT-VERIFY"` because my card said so — then Card B landed in parallel and **falsified
+S4**. The locked gate then forced my verdicts file to carry a stale status. I complied (never edit a locked
+checker mid-trial) and attached `superseded_by_card_B` everywhere, but the right gate was the INVARIANT my
+card actually cared about — *"this card must not manufacture S3/S4 evidence"* — not a prediction of someone
+else's finding. **Proposed rule: checker gates constrain the CONDUCT of the workspace that owns them; they
+must never encode a predicted external outcome.**
+
+**6. Runtime accounting breaks silently when you change the process model.** After the D4 restart, each
+candidate ran in its own `--one` process that exits before the step timer fires — so `active_runtime_s` came
+out **15 s for a 7.5 h compute**, and the gate (`active <= elapsed`) happily passed, because a falsely SMALL
+active time cannot trip that inequality. **The runtime gate is one-sided and cannot catch under-counting**;
+the fix was to sum per-candidate wall time from the records. Worth knowing before comparing runners.
+
+## From cards A/B/C (2026-07-20, D19)
+- **Diff the quantity contract BEFORE declaring "cannot reproduce."** The study's net-CG failure was a
+  3-line contract divergence (envelope ratio vs width-normalized-by-incumbent), mis-attributed to
+  "calibration." The Quantity Contract Gate exists for exactly this.
+- **Near-agreement between a defective number and a correct one is not evidence the defect is harmless** —
+  the arm-C leak (+0.082) and a silent basis mismatch (−0.085) nearly cancelled; the "right" 0.157 hid two
+  bugs. Decompose, don't compare endpoints.
+- **Shape-field coefficients are coordinates in a specific eigenbasis** — never transplant them across
+  bases; broadcasting will not crash, it will silently deflate.
+- **Per-mode quantities are not basis-invariant inside near-degenerate clusters** (18/44 in-band pairs
+  within 1%); only subspaces are. Any A↔B per-mode mapping must be MAC/subspace-based.
+- **A single-θ band omits the θ-spread term** — the delivered twin's width carries +0.35..+1.11 of θ
+  posterior spread; a point-θ reimplementation structurally cannot reproduce it.
+- **Checker gates should encode conduct invariants, not assumptions about other runs' results** (Card A's
+  S3/S4 gate went stale when Card B landed in parallel).
+- **Measuring an amplitude can honestly WIDEN a band** (254.3 Hz cluster: observed cross-drive scatter 1.39
+  > assumed 0.80). Pre-registering the falsification path (A5b) made this a clean result, not a fight.

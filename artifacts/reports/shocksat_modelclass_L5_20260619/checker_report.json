@@ -1,0 +1,92 @@
+{
+  "task": "Card F \u2014 Bayesian model-class selection (parameterization + damping), hard ShockSat accels",
+  "overall": "RED",
+  "counts": {
+    "green": 6,
+    "yellow": 0,
+    "red": 9
+  },
+  "gates": [
+    {
+      "gate": "integrity.reused_code",
+      "status": "GREEN",
+      "msg": "reused code byte-identical to lock"
+    },
+    {
+      "gate": "integrity.self",
+      "status": "GREEN",
+      "msg": "check.py unchanged since lock"
+    },
+    {
+      "gate": "integrity.copy_vs_cardA",
+      "status": "GREEN",
+      "msg": "reused code byte-identical to Card A originals"
+    },
+    {
+      "gate": "classes.defined",
+      "status": "RED",
+      "msg": "missing model_classes.json (not produced yet)"
+    },
+    {
+      "gate": "stage1.evidence",
+      "status": "GREEN",
+      "msg": "Stage-1 analytic evidence on observable=modal_peak_frequency_omega2 (matched, n=27) for 6 classes"
+    },
+    {
+      "gate": "ident.M1",
+      "status": "RED",
+      "msg": "missing identifiability_M1.json (not produced yet)"
+    },
+    {
+      "gate": "ident.M3_damping",
+      "status": "GREEN",
+      "msg": "Card D damping-dissipation gate present (input)"
+    },
+    {
+      "gate": "evidence.sensitivity",
+      "status": "GREEN",
+      "msg": "ranking robust across >=2 prior widths"
+    },
+    {
+      "gate": "stage2.tmcmc",
+      "status": "RED",
+      "msg": "no Stage-2 TMCMC results (not produced yet)"
+    },
+    {
+      "gate": "heldout.qoi_winner",
+      "status": "RED",
+      "msg": "missing scores_winner.json (not produced yet)"
+    },
+    {
+      "gate": "verdict.ranking",
+      "status": "RED",
+      "msg": "missing evidence_ranking.json (not produced yet)"
+    },
+    {
+      "gate": "figures.ranking",
+      "status": "RED",
+      "msg": "missing figures/fig_evidence_ranking.*"
+    },
+    {
+      "gate": "figures.image_qa",
+      "status": "RED",
+      "msg": "missing out/image_qa.json"
+    },
+    {
+      "gate": "packet",
+      "status": "RED",
+      "msg": "missing packet.md"
+    },
+    {
+      "gate": "runtime",
+      "status": "RED",
+      "msg": "missing runtime.json"
+    }
+  ],
+  "convergence_gate": {
+    "rhat_max": 1.05,
+    "ess_min": 200.0,
+    "div_max": 0.02
+  },
+  "check_py_sha256": "493e005afd5fb51b501cdc67dd317b5d2fb24321a359844453378ef07b3a8afe"
+}

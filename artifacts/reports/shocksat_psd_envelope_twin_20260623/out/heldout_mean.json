@@ -1,0 +1,78 @@
+{
+  "mean_GRMS_correlated": 55.65,
+  "mean_GRMS_un_updated": 20.21,
+  "GRMS_ratio_corr_over_unupd": 2.753,
+  "cover_rate_correlated": 0.75,
+  "cover_rate_un_updated": 0.25,
+  "verdict": "no twin advantage on held-out mean spec",
+  "splits": [
+    {
+      "correlated": {
+        "validated_margin_dB": 9.09,
+        "GRMS_heldout_spec": 57.84,
+        "heldout_exceed_energy": 0.0074,
+        "covers_heldout": true
+      },
+      "un_updated": {
+        "validated_margin_dB": 1.63,
+        "GRMS_heldout_spec": 13.363,
+        "heldout_exceed_energy": 0.0668,
+        "covers_heldout": false
+      },
+      "seed": 0,
+      "obs_frac": 0.7,
+      "calib_conv": true
+    },
+    {
+      "correlated": {
+        "validated_margin_dB": 9.64,
+        "GRMS_heldout_spec": 12.048,
+        "heldout_exceed_energy": 0.0007,
+        "covers_heldout": true
+      },
+      "un_updated": {
+        "validated_margin_dB": 2.09,
+        "GRMS_heldout_spec": 3.983,
+        "heldout_exceed_energy": 0.6969,
+        "covers_heldout": false
+      },
+      "seed": 0,
+      "obs_frac": 0.9,
+      "calib_conv": true
+    },
+    {
+      "correlated": {
+        "validated_margin_dB": 8.86,
+        "GRMS_heldout_spec": 100.333,
+        "heldout_exceed_energy": 0.1975,
+        "covers_heldout": false
+      },
+      "un_updated": {
+        "validated_margin_dB": 1.92,
+        "GRMS_heldout_spec": 43.938,
+        "heldout_exceed_energy": 0.0123,
+        "covers_heldout": true
+      },
+      "seed": 1,
+      "obs_frac": 0.7,
+      "calib_conv": true
+    },
+    {
+      "correlated": {
+        "validated_margin_dB": 9.04,
+        "GRMS_heldout_spec": 52.375,
+        "heldout_exceed_energy": 0.0,
+        "covers_heldout": true
+      },
+      "un_updated": {
+        "validated_margin_dB": 1.78,
+        "GRMS_heldout_spec": 19.565,
+        "heldout_exceed_energy": 0.1435,
+        "covers_heldout": false
+      },
+      "seed": 1,
+      "obs_frac": 0.9,
+      "calib_conv": true
+    }
+  ]
+}

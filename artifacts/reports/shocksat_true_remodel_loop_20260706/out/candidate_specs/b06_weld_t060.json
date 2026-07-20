@@ -1,0 +1,21 @@
+{
+ "cid": "b06_weld_t060",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    104,
+    105,
+    106,
+    204,
+    205,
+    206
+   ],
+   "t_scale": 0.6,
+   "name": "welds_t060"
+  }
+ ],
+ "rationale": "Weld effective-thickness \u00d70.60: push the proven-helpful thin-weld direction (a04 helped, a03 hurt) to map whether the t/t\u00b3 benefit grows or saturates.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)"
+}

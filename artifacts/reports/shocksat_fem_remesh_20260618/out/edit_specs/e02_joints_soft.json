@@ -1,0 +1,13 @@
+{
+ "scale": {
+  "bush_801": 0.5,
+  "bush_802": 0.5,
+  "bush_803": 0.5,
+  "bush_804": 0.5,
+  "bush_805": 0.5,
+  "bush_806": 0.5,
+  "bush_807": 0.5,
+  "bush_902": 0.5
+ },
+ "note": "soften all bolted/contact joints x0.5"
+}

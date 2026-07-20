@@ -1,0 +1,82 @@
+{
+  "study": "statfem_real_validation_20260617",
+  "overall": "yellow",
+  "counts": {
+    "green": 12,
+    "yellow": 1,
+    "red": 0
+  },
+  "gates": [
+    {
+      "gate": "provenance_plain_shocksat",
+      "status": "green",
+      "detail": "no tray refs; plain 9-group FEM"
+    },
+    {
+      "gate": "observable_validated",
+      "status": "green",
+      "detail": "single-impact peak->mode err max 2.4 Hz; FEM first mode ~54 Hz matches measured"
+    },
+    {
+      "gate": "arms_present",
+      "status": "green",
+      "detail": "arms=['M0', 'M3'] (need M0 naive + M3 orthogonal)"
+    },
+    {
+      "gate": "nuts_convergence",
+      "status": "yellow",
+      "detail": "0 converged; 2 labeled not-yet-converged (YELLOW)"
+    },
+    {
+      "gate": "orthogonal_schneider_sharpness",
+      "status": "green",
+      "detail": "M3 reports ('interval_score', 'crps', 'logpd')+PIT+z (interval_score=3.953819856484843e+17)"
+    },
+    {
+      "gate": "sharpness_headline_not_coverage",
+      "status": "green",
+      "detail": "headline=interval_score (proper score), peak+coherence weighted; coverage secondary"
+    },
+    {
+      "gate": "wideband_doesnt_win",
+      "status": "green",
+      "detail": "wide-band: coverage 1.0 > 0.9563333333333334 but interval score 7.89877503682564 WORSE than 0.9186861588114841"
+    },
+    {
+      "gate": "parameter_count_study",
+      "status": "green",
+      "detail": "methods=['all9', 'fim_downselect', 'evidence']; winner=fim_downselect (scored on held-out QOI)"
+    },
+    {
+      "gate": "mc_distributions",
+      "status": "green",
+      "detail": "25 configs (split axis), per-arm score distributions present"
+    },
+    {
+      "gate": "identifiability_gate",
+      "status": "green",
+      "detail": "strain_energy+FIM+finite_perturbation present=True; n_identifiable=4"
+    },
+    {
+      "gate": "required_figures",
+      "status": "green",
+      "detail": "all 5 required figures present"
+    },
+    {
+      "gate": "figure_qa",
+      "status": "green",
+      "detail": "image legibility + text-overlap pass"
+    },
+    {
+      "gate": "runtime_accounting",
+      "status": "green",
+      "detail": "active 17154s <= elapsed 17154s"
+    }
+  ],
+  "thresholds": {
+    "rhat_max": 1.05,
+    "ess_min": 200.0,
+    "div_frac_max": 0.02,
+    "mc_min_configs": 25
+  }
+}

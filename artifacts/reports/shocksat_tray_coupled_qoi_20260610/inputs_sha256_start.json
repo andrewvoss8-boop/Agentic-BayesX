@@ -1,0 +1,54 @@
+{
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/matrices/reduced_blocks.npz": {
+  "sha256": "be9af90efd555ab7f326b07f410f0fe46540e37038caef830bb84ca4a9b46c78",
+  "bytes": 489978
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/matrices/V_keep.npy": {
+  "sha256": "f0a4587b610fa0f1fede6b7b6cde4cd8af73524ff2fc2785236db4b3eb0d2baa",
+  "bytes": 255686528
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/matrices/T.npz": {
+  "sha256": "f6bf6fbfb3d78463bafa845eefa764946132b55d101d19f9c1db9c46dcb1831c",
+  "bytes": 1163999
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/matrices/M.npz": {
+  "sha256": "18218feabbb0b0ae989e3faf25ce651898f5770255bf1cf5ce04e10b4e3355bf",
+  "bytes": 1517487
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/matrices/eigvals.npy": {
+  "sha256": "394f1c179e554f716dfd612c51f09068dfff343c6eeb2b4cfb809968f729c55f",
+  "bytes": 768
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/nuts_full_samples.npz": {
+  "sha256": "faf35c882c2662c1ff39715f359f9aaf1e7d587d3f16d83bef4cf1b06a5a725e",
+  "bytes": 300083
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/fem_model.npz": {
+  "sha256": "3a72b83d2834655b5d4d0415998bc929fd500f2ebac50ace505c663ba14c0520",
+  "bytes": 1084916
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/measured_modes.npz": {
+  "sha256": "16ab8fc256484d99afedd0a4e81ff8b5e58b4f4db86a1d9be163722caad74fbf",
+  "bytes": 62794
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/pairing.json": {
+  "sha256": "4ef49c253cd4959159770766983c8ba72bc9aff0b319e298e7222bdfdb8e74ca",
+  "bytes": 6785
+ },
+ "artifacts/reports/shocksat_fem_modal_twin_20260609/theta_full.json": {
+  "sha256": "5042a998a14915ed51b7919102a67ad705d07fdf9b1029a30205ef2c8a6008ba",
+  "bytes": 8683
+ },
+ "artifacts/reports/fim_identifiability_opus_20260609/arrays_fim.npz": {
+  "sha256": "2e78c10a44e2332c9fff35b40b5d291269ec704f2606290209d563ce68b20abf",
+  "bytes": 8930
+ },
+ "artifacts/reports/fim_identifiability_opus_20260609/inputs/spec.py": {
+  "sha256": "fa9063e21ad1daff06333a09fe646b4bede35e0b10c18d57246774eec4710c19",
+  "bytes": 4682
+ },
+ "artifacts/reports/fim_identifiability_opus_20260609/inputs/fe_elements.py": {
+  "sha256": "b3d0e7f3660a9346d32daff4d41820ca13dfcbe1410b5c8c1405ac75d4447659",
+  "bytes": 10325
+ }
+}

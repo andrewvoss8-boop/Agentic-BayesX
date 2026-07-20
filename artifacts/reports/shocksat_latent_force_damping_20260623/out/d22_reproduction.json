@@ -1,0 +1,145 @@
+{
+  "deliverable": "per-mode damping inference (multi-channel SDOF resonance fit, exact 2-D grid posterior)",
+  "method": "profile posterior over (f_r, zeta_r); per-channel residues marginalized by complex LSQ",
+  "DR_min": 80.0,
+  "grid": [
+    41,
+    46
+  ],
+  "n_modes_fit": 9,
+  "n_identified": 0,
+  "prior_zeta_pct_range": [
+    0.05,
+    6.0
+  ],
+  "modes": [
+    {
+      "f_hz": 48.8,
+      "n_channels": 6,
+      "zeta_apparent_pct": {
+        "med": 2.986,
+        "lo": 0.063,
+        "hi": 5.836
+      },
+      "zeta_window_pct": 1.186,
+      "zeta_structural_pct_med": 1.8,
+      "ash_zeta_pct": 0.252,
+      "ci_logwidth_frac_of_prior": 0.94,
+      "identified": false
+    },
+    {
+      "f_hz": 75.0,
+      "n_channels": 4,
+      "zeta_apparent_pct": {
+        "med": 0.061,
+        "lo": 0.05,
+        "hi": 0.151
+      },
+      "zeta_window_pct": 0.799,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.384,
+      "ci_logwidth_frac_of_prior": 0.23,
+      "identified": false
+    },
+    {
+      "f_hz": 138.8,
+      "n_channels": 13,
+      "zeta_apparent_pct": {
+        "med": 0.05,
+        "lo": 0.05,
+        "hi": 0.075
+      },
+      "zeta_window_pct": 0.431,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.352,
+      "ci_logwidth_frac_of_prior": 0.08,
+      "identified": false
+    },
+    {
+      "f_hz": 165.0,
+      "n_channels": 17,
+      "zeta_apparent_pct": {
+        "med": 0.05,
+        "lo": 0.05,
+        "hi": 0.067
+      },
+      "zeta_window_pct": 0.365,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.317,
+      "ci_logwidth_frac_of_prior": 0.06,
+      "identified": false
+    },
+    {
+      "f_hz": 172.5,
+      "n_channels": 13,
+      "zeta_apparent_pct": {
+        "med": 0.05,
+        "lo": 0.05,
+        "hi": 0.069
+      },
+      "zeta_window_pct": 0.345,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.058,
+      "ci_logwidth_frac_of_prior": 0.07,
+      "identified": false
+    },
+    {
+      "f_hz": 227.5,
+      "n_channels": 8,
+      "zeta_apparent_pct": {
+        "med": 0.05,
+        "lo": 0.05,
+        "hi": 0.075
+      },
+      "zeta_window_pct": 0.263,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.443,
+      "ci_logwidth_frac_of_prior": 0.09,
+      "identified": false
+    },
+    {
+      "f_hz": 232.5,
+      "n_channels": 7,
+      "zeta_apparent_pct": {
+        "med": 0.052,
+        "lo": 0.05,
+        "hi": 0.086
+      },
+      "zeta_window_pct": 0.258,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.237,
+      "ci_logwidth_frac_of_prior": 0.11,
+      "identified": false
+    },
+    {
+      "f_hz": 241.2,
+      "n_channels": 45,
+      "zeta_apparent_pct": {
+        "med": 0.05,
+        "lo": 0.05,
+        "hi": 0.052
+      },
+      "zeta_window_pct": 0.246,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.398,
+      "ci_logwidth_frac_of_prior": 0.01,
+      "identified": false
+    },
+    {
+      "f_hz": 247.5,
+      "n_channels": 50,
+      "zeta_apparent_pct": {
+        "med": 0.05,
+        "lo": 0.05,
+        "hi": 0.05
+      },
+      "zeta_window_pct": 0.24,
+      "zeta_structural_pct_med": 0.0,
+      "ash_zeta_pct": 0.398,
+      "ci_logwidth_frac_of_prior": 0.0,
+      "identified": false
+    }
+  ],
+  "verdict": "0/9 matched modes give an IDENTIFIED apparent \u03b6 (posterior CI < half the prior width and interior). The rest are prior-dominated (df=1.25 Hz can't resolve the half-power width for light, sub-bin modes). Apparent \u03b6 \u2248 structural + window; structural \u03b6 = apparent \u2212 \u03b6_window is near/below the resolution floor for most modes \u2014 confirms damping is largely UNidentifiable from this single windowed FRF, by RUNNING the inference (not arguing).",
+  "runtime_s": 3.3
+}

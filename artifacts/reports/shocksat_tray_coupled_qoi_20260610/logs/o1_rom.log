@@ -1,0 +1,15 @@
+[   0.0s] build tray + shocksat ...
+[   2.7s] anchor x0.05: 80 modes <= 350.0 Hz, f1=19.7 Hz
+[   2.8s] anchor x0.25: 80 modes <= 350.0 Hz, f1=43.8 Hz
+[   2.9s] anchor x1.0: 80 modes <= 350.0 Hz, f1=53.6 Hz
+[   3.1s] anchor x4.0: 80 modes <= 350.0 Hz, f1=53.6 Hz
+[   3.2s] anchor x20.0: 80 modes <= 350.0 Hz, f1=53.6 Hz
+[   3.2s] basis: 400 union cols -> nb = 98 (cap 160); sv ratio at cut 2.3e-10
+[   3.2s] validate x0.05: 59 modes <= 300.0 Hz, max |df|/f = 4.80e-01
+[   3.2s] validate x0.25: 59 modes <= 300.0 Hz, max |df|/f = 7.60e-01
+[   3.2s] validate x1.0: 59 modes <= 300.0 Hz, max |df|/f = 8.04e-01
+[   3.2s] validate x4.0: 59 modes <= 300.0 Hz, max |df|/f = 8.04e-01
+[   3.2s] validate x20.0: 58 modes <= 300.0 Hz, max |df|/f = 8.04e-01
+[   3.3s] off-anchor probe: max |df|/f = 7.89e-01
+[   3.3s] reduction gate: worst 8.04e-01 vs 0.005 -> red
+[   3.6s] coupled_rom.npz written

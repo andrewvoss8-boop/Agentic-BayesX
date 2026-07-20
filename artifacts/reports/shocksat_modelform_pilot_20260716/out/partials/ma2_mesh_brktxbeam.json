@@ -1,0 +1,51 @@
+{
+ "cid": "ma2_mesh_brktxbeam",
+ "track": "agent",
+ "round": 2,
+ "cls": "mesh_density",
+ "ops": [
+  "refine"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.16049701880584966,
+ "exact_b200_500": 0.19534610923751788,
+ "exact_folds": {
+  "m_xpos_990x": 0.3236003546409705,
+  "m_zpos_990z": 0.47540153701020393,
+  "m_ypos_990y": 0.10935097602162688,
+  "m_zpos_900z": -0.26636479244940275
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.16356143401796827,
+  "m_zpos_990z": 0.1651857701437068,
+  "m_ypos_990y": 0.19610186007751343,
+  "m_zpos_900z": 0.25653537271088295
+ },
+ "theta_map": [
+  1.0815198352271942,
+  1.1213539909267891,
+  1.0037936152123632,
+  0.9045217995104694,
+  1.0512954480038352,
+  1.0935820268897722,
+  0.9048715407227321,
+  1.0665227291206947,
+  0.9076391367021345
+ ],
+ "enriched_pkg": "ma2_mesh_brktxbeam__xenr",
+ "spot_max_pct": 2.881859972880818e-07,
+ "n_dof": 443166,
+ "delta_dof_pct": 10.927,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 17.4671,
+  "pass": true
+ },
+ "solve_s_theta1": 382.8,
+ "solve_s_enrich": 380.0,
+ "wall_s": 797.3,
+ "ts": "2026-07-17T02:44:27",
+ "diagnosis_link": "diagnosis_mf_r2.json: brackets refine scored +0.1666 in r1; add the cross-beam 401 (Cross_Beam shape defect rose to 0.098; Top_Brackets|Y 0.696 dex)"
+}

@@ -1,0 +1,19 @@
+{
+ "cid": "wr2_rnd002",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 601,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": -4.56097114596706,
+    "side": "hi"
+   },
+   "name": "rsplit3"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

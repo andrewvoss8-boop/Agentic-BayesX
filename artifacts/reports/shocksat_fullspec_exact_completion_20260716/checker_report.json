@@ -1,0 +1,79 @@
+{
+ "overall": "GREEN",
+ "gates": [
+  {
+   "gate": "G01",
+   "name": "pre-registration (priorities, Q1/Q2, D0, sampler decision)",
+   "status": "GREEN",
+   "detail": "pre-registration present (priorities, Q1/Q2 framing, D0 + sampler decision, checker lock)"
+  },
+  {
+   "gate": "G02",
+   "name": "isolation: no writes outside workspace; read-only inputs unchanged",
+   "status": "GREEN",
+   "detail": "no writes into read-only workspaces; all reused read-only inputs hash-verified unchanged"
+  },
+  {
+   "gate": "G03",
+   "name": "no per-channel/per-mode amplitude LSQ",
+   "status": "GREEN",
+   "detail": "no lstsq/polyfit/curve_fit in scoring path (one global gain per fold only)"
+  },
+  {
+   "gate": "G04",
+   "name": "T1 arm-C exact: per-fold refits, leakage-free provenance",
+   "status": "GREEN",
+   "detail": "arm-C exact: 4 per-fold refits, 4 distinct MAPs, no fold saw its own drive; sub-200 fold-mean 0.1595, delta vs A1-exact +0.0458"
+  },
+  {
+   "gate": "G05",
+   "name": "T3 verdicts: every asserted statistic FINITE",
+   "status": "GREEN",
+   "detail": "verdicts_final.json: all 320 leaves finite; S1/S2/S5 reported, S3/S4 CANNOT-VERIFY, S2 under both selection conventions"
+  },
+  {
+   "gate": "G06",
+   "name": "T2 exact re-rank: all 28 candidates",
+   "status": "GREEN",
+   "detail": "exact re-rank complete: 28 candidates exact-scored on 4 folds (0 excluded-with-reason), every eigensolve logged"
+  },
+  {
+   "gate": "G07",
+   "name": "T2 S2 under BOTH selection conventions + pipeline reproduction",
+   "status": "GREEN",
+   "detail": "S2 reported both ways: screening-selected -0.0017 +/- 0.0094, exact-selected +0.0115 +/- 0.0158; pipeline reproduces the study's exact D/R within 0.01"
+  },
+  {
+   "gate": "G08",
+   "name": "figures scripted/linted/QA'd; no F=R row",
+   "status": "GREEN",
+   "detail": "2 figures scripted (.py), labeled, linted, legibility-QA'd; no F=R row"
+  },
+  {
+   "gate": "G09",
+   "name": "sampler decision + honest MAP/non-convergence labeling",
+   "status": "GREEN",
+   "detail": "no sampler run (deterministic MAP refits + exact scoring only); MAP labeled as optimizer result; study's worst R-hat 360.63 / ESS 2.0 carried alongside every MAP-derived number"
+  },
+  {
+   "gate": "G10",
+   "name": "runtime accounting",
+   "status": "GREEN",
+   "detail": "active 26942s <= elapsed 27785s on CPU (Mac, 16 GB, float64); no GPU \u2014 the eigensolves are sequential sparse shift-invert solves, not parallel-shaped, so the compute protocol's CPU default applies (no A100 case)"
+  },
+  {
+   "gate": "G11",
+   "name": "continuity: findings answer Q1/Q2, replay present",
+   "status": "GREEN",
+   "detail": "findings.md answers Q1/Q2; run_all.sh replay present"
+  },
+  {
+   "gate": "G12",
+   "name": "checker self-SHA (immutability)",
+   "status": "GREEN",
+   "detail": "checker self-SHA matches lock (4a01067c921e)"
+  }
+ ],
+ "card": "EXACT-EVIDENCE COMPLETION for the full-spectrum FRF study (post-review items 1-3)",
+ "note": "Exits non-zero only on RED. YELLOW = documented, non-fatal, never reported as success."
+}

@@ -1,0 +1,19 @@
+{
+ "cid": "mr1_prop8",
+ "track": "random",
+ "round": 1,
+ "cls": "property_control",
+ "seed": 20261724,
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    204
+   ],
+   "t_scale": 0.8323351329547097,
+   "name": "rthick18a0"
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

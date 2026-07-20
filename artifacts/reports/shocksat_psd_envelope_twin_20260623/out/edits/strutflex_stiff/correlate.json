@@ -1,0 +1,21 @@
+{
+ "edit_id": "strutflex_stiff",
+ "k_axial": 10000000.0,
+ "n_released_rbe2": 94,
+ "reduced_n": 402570,
+ "global_MAC": 0.631,
+ "fundamental_MAC": 0.97,
+ "low3_MAC": [
+  0.97,
+  0.52,
+  0.53
+ ],
+ "f_modes_6_12": [
+  54.6,
+  73.1,
+  73.7,
+  88.1,
+  108.1,
+  114.2
+ ]
+}

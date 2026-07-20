@@ -1,0 +1,472 @@
+=== parse ===
+{
+ "counts": {
+  "GRID": 1415,
+  "CBEAM": 1288,
+  "PBEAM": 37,
+  "CQUAD4": 72,
+  "PSHELL": 1,
+  "CBUSH": 70,
+  "PBUSH": 1,
+  "RBE2": 39,
+  "MAT1": 1,
+  "SPC1": 4,
+  "FORCE_dropped": 91
+ },
+ "n_distinct_beam_sections": 2,
+ "grid_cp_values": [
+  0
+ ],
+ "grid_cd_values": [
+  0
+ ],
+ "cords_referenced_by_grids": false,
+ "rbe2_duplicate_dependents": [],
+ "bbox": {
+  "x": [
+   -4.99999,
+   83.99983
+  ],
+  "y": [
+   -47.9999,
+   0.0
+  ],
+  "z": [
+   -1.25,
+   50.2499
+  ]
+ },
+ "spc_grids": [
+  1,
+  164,
+  692,
+  1212
+ ]
+}
+COUNTS MATCH EXPECTED: True
+=== validate_elems ===
+  PASS  beam_static
+  PASS  beam_static_stocky
+  PASS  beam_freq
+  PASS  plate_strip
+  PASS  plate_ss_f11
+  PASS  cbush_conm2
+  PASS  cbush_equilibrium
+  PASS  rbe2
+  PASS  free_free_6_rbm
+ALL PASS: True
+=== assemble ===
+{
+ "n_grids": 1539,
+ "ndof_master": 8688,
+ "n_rbe2_dep_grids": 91,
+ "n_zero_diag_after_assembly": 0,
+ "n_beam_wall": 406,
+ "n_beam_rest": 882,
+ "oop_max_plate": 0.0,
+ "oop_max_shield": 0.0
+}
+mount_log: {
+ "valve_panel": {
+  "cg_grid": 900001,
+  "mass_lbm": 28.0,
+  "attach_grids": [
+   244,
+   245,
+   243,
+   246
+  ],
+  "attach_dist_in": [
+   7.08,
+   7.1,
+   7.21,
+   7.26
+  ],
+  "attached_to": "frame",
+  "inertia_diag": [
+   2.7316672235330888,
+   4.665590921609612,
+   5.0282016149989595
+  ]
+ },
+ "electronics_box": {
+  "cg_grid": 900002,
+  "mass_lbm": 3.0,
+  "attach_grids": [
+   800034,
+   800036,
+   800024
+  ],
+  "attach_dist_in": [
+   6.91,
+   5.52,
+   3.63
+  ],
+  "attached_to": "shield",
+  "inertia_diag": [
+   0.06475190953381216,
+   0.08806259696598452,
+   0.10619313163545192
+  ]
+ },
+ "white_box_upper": {
+  "cg_grid": 900003,
+  "mass_lbm": 8.0,
+  "attach_grids": [
+   577,
+   578
+  ],
+  "attach_dist_in": [
+   10.92,
+   10.96
+  ],
+  "attached_to": "frame",
+  "inertia_diag": [
+   0.15367786529358085,
+   0.21583969844604053,
+   0.28318168436120517
+  ]
+ }
+}
+screw gaps (in): [0.75, 1.296, 1.301]
+OK, elapsed 0.4s
+=== modal ===
+[nominal] modes <= 500.0 Hz: 183 (solved to 620.0 Hz: 199); f1=13.51 Hz; elapsed 19s
+[no_shield] n<=500Hz: 71, f1=13.782 Hz, elapsed 34s
+[free_free] n<=500Hz: 191, f1=-0.002 Hz, elapsed 52s
+[feet_springs] n<=500Hz: 183, f1=13.510 Hz, elapsed 69s
+[shield_t_x0.5] n<=500Hz: 181, f1=6.116 Hz, elapsed 87s
+[shield_t_x2] n<=500Hz: 180, f1=13.775 Hz, elapsed 105s
+[screw_k_x0.01] n<=500Hz: 187, f1=11.721 Hz, elapsed 122s
+[screw_k_x100] n<=500Hz: 177, f1=13.730 Hz, elapsed 140s
+[shield_aluminum] n<=500Hz: 181, f1=11.027 Hz, elapsed 157s
+{
+ "mass_closure_rel_err": 3.371739100370779e-15,
+ "mass_model_lbm": 584.792141127964,
+ "mass_hand_lbm": 584.7921411279659,
+ "free_free_n_rbm": 6,
+ "free_free_first_elastic_hz": 13.869424403702526,
+ "free_free_rbm_max_hz": 0.002752290799825222,
+ "n_negative_eigs_nominal": 0,
+ "n_modes_below_500_nominal": 183,
+ "n_modes_below_500_no_shield": 71,
+ "at_least_30_modes": true,
+ "shield_t_limiting": {
+  "first_shield_mode_nominal": 1,
+  "f_nominal": 13.510407552095376,
+  "f_t_x0_5": 6.116,
+  "ratio_x0_5": 0.4527,
+  "f_t_x2": 25.096,
+  "ratio_x2": 1.8575,
+  "note": "ideal thin-plate law: ratios 0.5 and 2.0; screw-spring boundaries soften the x2 ratio (boundary becomes relatively more compliant as the panel stiffens)"
+ },
+ "se_fraction_sum_check": 0.9999999998920951,
+ "elapsed_s": 157.2
+}
+=== drill_arm_asm ===
+{
+ "n_grids": 1539,
+ "ndof_master": 8688,
+ "n_rbe2_dep_grids": 91,
+ "n_zero_diag_after_assembly": 0,
+ "n_beam_wall": 406,
+ "n_beam_rest": 882,
+ "oop_max_plate": 0.0,
+ "oop_max_shield": 0.0
+}
+mount_log: {
+ "valve_panel": {
+  "cg_grid": 900001,
+  "mass_lbm": 28.0,
+  "attach_grids": [
+   244,
+   245,
+   243,
+   246
+  ],
+  "attach_dist_in": [
+   7.08,
+   7.1,
+   7.21,
+   7.26
+  ],
+  "attached_to": "frame",
+  "inertia_diag": [
+   2.7316672235330888,
+   4.665590921609612,
+   5.0282016149989595
+  ]
+ },
+ "electronics_box": {
+  "cg_grid": 900002,
+  "mass_lbm": 3.0,
+  "attach_grids": [
+   800034,
+   800036,
+   800024
+  ],
+  "attach_dist_in": [
+   6.91,
+   5.52,
+   3.63
+  ],
+  "attached_to": "shield",
+  "inertia_diag": [
+   0.06475190953381216,
+   0.08806259696598452,
+   0.10619313163545192
+  ]
+ },
+ "white_box_upper": {
+  "cg_grid": 900003,
+  "mass_lbm": 8.0,
+  "attach_grids": [
+   577,
+   578
+  ],
+  "attach_dist_in": [
+   10.92,
+   10.96
+  ],
+  "attached_to": "frame",
+  "inertia_diag": [
+   0.15367786529358085,
+   0.21583969844604053,
+   0.28318168436120517
+  ]
+ }
+}
+screw gaps (in): [0.75, 1.296, 1.301]
+OK, elapsed 0.4s
+=== drill_arm_modal ===
+[nominal] modes <= 500.0 Hz: 183 (solved to 620.0 Hz: 199); f1=13.52 Hz; elapsed 28s
+NOMINAL_ONLY set: skipping variants and gates
+=== refine_arm_asm ===
+{
+ "n_grids": 1838,
+ "ndof_master": 10482,
+ "n_rbe2_dep_grids": 91,
+ "n_zero_diag_after_assembly": 0,
+ "n_beam_wall": 406,
+ "n_beam_rest": 882,
+ "oop_max_plate": 0.0,
+ "oop_max_shield": 0.0
+}
+mount_log: {
+ "valve_panel": {
+  "cg_grid": 900001,
+  "mass_lbm": 28.0,
+  "attach_grids": [
+   244,
+   245,
+   243,
+   246
+  ],
+  "attach_dist_in": [
+   7.08,
+   7.1,
+   7.21,
+   7.26
+  ],
+  "attached_to": "frame",
+  "inertia_diag": [
+   2.7316672235330888,
+   4.665590921609612,
+   5.0282016149989595
+  ]
+ },
+ "electronics_box": {
+  "cg_grid": 900002,
+  "mass_lbm": 3.0,
+  "attach_grids": [
+   800150,
+   800153,
+   800067
+  ],
+  "attach_dist_in": [
+   6.46,
+   6.78,
+   5.08
+  ],
+  "attached_to": "shield",
+  "inertia_diag": [
+   0.06475190953381216,
+   0.08806259696598452,
+   0.10619313163545192
+  ]
+ },
+ "white_box_upper": {
+  "cg_grid": 900003,
+  "mass_lbm": 8.0,
+  "attach_grids": [
+   577,
+   578
+  ],
+  "attach_dist_in": [
+   10.92,
+   10.96
+  ],
+  "attached_to": "frame",
+  "inertia_diag": [
+   0.15367786529358085,
+   0.21583969844604053,
+   0.28318168436120517
+  ]
+ }
+}
+screw gaps (in): [0.75, 1.296, 1.301]
+OK, elapsed 0.5s
+=== refine_arm_modal ===
+[nominal] modes <= 500.0 Hz: 249 (solved to 620.0 Hz: 313); f1=13.24 Hz; elapsed 29s
+NOMINAL_ONLY set: skipping variants and gates
+=== discretization ===
+max |shift| first30: 7.73%; counts@500: {'coarse': 183, 'refined_x2': 249}
+=== interface ===
+{
+ "shield_mount": {
+  "shield_grid": 800071,
+  "shield_xyz": [
+   61.5,
+   -23.99995,
+   48.5
+  ],
+  "nearest_frame_grid": 652,
+  "frame_xyz": [
+   60.74988,
+   -24.0,
+   48.4999
+  ],
+  "interpretation": "top-center of shield mesh top edge (= z=48.5 top rail line; physical shield overhangs ~1.5 in above, ignored in coarse mesh)",
+  "flag": "ANDREW-CONFIRM-REQUIRED (clamp station on shield top edge)"
+ },
+ "beam_mount": {
+  "grid": 1510,
+  "grid_xyz": [
+   60.24988,
+   -47.9999,
+   46.55254
+  ],
+  "back_wall_surface_point": [
+   58.99988,
+   -47.9999,
+   46.55254
+  ],
+  "back_wall_offset_in": 1.25,
+  "rail": "leftmost VERTICAL post (y=-48, x=60.25), top region (Andrew round 3, D33: 'all the way on the leftmost, vertical beam, not the top crossbeam')",
+  "interpretation": "viewed from logo (+X) side: left = -y; clamp near the post top (z~47), back (-X) wall",
+  "flag": "ANDREW-CONFIRM-REQUIRED (exact height on the post)"
+ }
+}
+per-mode motion table: 183 modes
+=== priors ===
+{
+ "M_m_ebox": {
+  "quantity": "electronics-box mass scalar (mass = 3.0 lbm * scalar)",
+  "dist": "lognormal",
+  "median_scalar": 0.9428090415820635,
+  "sigma_ln": 0.17682650957553356,
+  "median_mass_lbm": 2.8284271247461903,
+  "mass_95": [
+   2.0,
+   4.0
+  ],
+  "source": "Andrew 2026-06-11 round 4: 'between 2 and 4 pounds'",
+  "status": "ELICITED PRIOR (to be updated to a posterior in the next card from the tap-test frequencies)"
+ }
+}
+box-mass prior: electronics box: LogNormal, median 2.828 lbm, sigma_ln 0.1768; 95% interval exactly [2.00, 4.00] lbm per Andrew. Mode 1 of the stand (box-on-panel) is the observable that updates it.
+=== prior_predictive ===
+{
+ "prior": {
+  "dist": "lognormal",
+  "median_lbm": 2.8284271247461903,
+  "sigma_ln": 0.17682650957553356,
+  "mass_95_lbm": [
+   2.0,
+   4.0
+  ],
+  "source": "Andrew 2026-06-11: 'between 2 and 4 pounds'"
+ },
+ "f1_grid": {
+  "mass_lbm": [
+   2.0,
+   2.5,
+   3.0,
+   3.5,
+   4.0
+  ],
+  "f1_hz": [
+   13.779,
+   13.775,
+   13.51,
+   13.238,
+   12.971
+  ],
+  "box_ke_fraction_in_mode1": [
+   0.0,
+   0.07,
+   0.243,
+   0.245,
+   0.244
+  ]
+ },
+ "fit": {
+  "model": "1/f1^2 = a + b*m",
+  "a": 0.0044593740946011875,
+  "b": 0.0003578694947598979,
+  "max_abs_resid_hz": 0.1216
+ },
+ "prior_predictive_f1_hz": {
+  "median": 13.52,
+  "p2_5": 13.03,
+  "p97_5": 13.9,
+  "at_mass_2lb": 13.9,
+  "at_mass_3lb": 13.44,
+  "at_mass_4lb": 13.03
+ }
+}
+At 2-4 lb the box does NOT own mode 1 -- the fundamental (14-15 Hz) is the VALVE assembly; box KE in mode 1 is only ~0.13-0.16. So f1 shifts just ~1 Hz (14.75->14.06) across the whole 2-4 lb prior and is partly confounded with valve mass. The box's OWN energy is smeared across a veering 17-45 Hz cluster (no single clean peak). => the tap test will resolve box mass only WEAKLY from f1; the next card should use the 17-45 Hz cluster (and ideally a sensor ON the box) to update it, and expect box-mass vs valve-mass confounding.
+=== ledger ===
+wrote assumptions_ledger.md, 16 estimate rows, 8 modeling rows
+=== figures ===
+figures written to /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/mpl_stand_fem_rebuild_20260611/figures
+=== gifs ===
+wrote mode_01_13.5Hz.gif
+wrote mode_02_13.8Hz.gif
+wrote mode_03_17.6Hz.gif
+wrote mode_04_17.8Hz.gif
+wrote mode_05_18.4Hz.gif
+wrote mode_06_23.7Hz.gif
+wrote mode_07_24.5Hz.gif
+wrote mode_08_25.3Hz.gif
+wrote mode_09_25.8Hz.gif
+wrote mode_10_26.8Hz.gif
+wrote mode_11_27.9Hz.gif
+wrote mode_12_32.0Hz.gif
+wrote mode_13_34.4Hz.gif
+wrote mode_14_36.0Hz.gif
+wrote mode_15_37.3Hz.gif
+done: 15 GIFs
+=== image_qa ===
+n_gifs: 15 | figures ok: True | PASS: True
+=== checker ===
+  [GREEN ] parse_counts
+  [GREEN ] cord_frames_unreferenced
+  [GREEN ] element_library_validation
+  [GREEN ] mass_closure
+  [GREEN ] free_free_6_rbm
+  [GREEN ] no_negative_eigenvalues
+  [GREEN ] modes_reported
+  [GREEN ] shield_t_limiting_behavior
+  [GREEN ] strain_energy_decomposition
+  [GREEN ] dual_mode_tables
+  [GREEN ] discretization_resolution
+  [GREEN ] interface_points
+  [YELLOW] beam_mount_station_interpretation
+  [GREEN ] figures_and_gifs_qa
+  [RED   ] box_mass_prior_and_prior_predictive
+  [YELLOW] mounted_mass_values
+  [YELLOW] shield_material
+  [GREEN ] sampler_decision
+  [GREEN ] required_artifacts
+OVERALL: RED  (15 green / 3 yellow / 1 red)

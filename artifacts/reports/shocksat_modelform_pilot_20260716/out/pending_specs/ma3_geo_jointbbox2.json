@@ -1,0 +1,27 @@
+{
+ "cid": "ma3_geo_jointbbox2",
+ "cls": "geometry",
+ "ops": [
+  {
+   "op": "joint_offset",
+   "eids": [
+    1024298,
+    1024299,
+    1024300,
+    1024301,
+    1024302,
+    1024303
+   ],
+   "vec": [
+    0.0,
+    0.3,
+    0.0
+   ],
+   "name": "jbbox2"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: r2's bbox joint offset [0,0.25,0.05] was the agent's best model-form candidate (+0.1734) and Bottom_Box|Y is still the biggest many-channel cell (0.772 dex, 72 ch) -> extend the same lever: 6 different bbox spiders, pure +Y 0.30 in",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: r2's bbox joint offset [0,0.25,0.05] was the agent's best model-form candidate (+0.1734) and Botto"
+}

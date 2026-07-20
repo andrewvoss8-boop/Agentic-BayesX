@@ -1,0 +1,1228 @@
+[
+ {
+  "cid": "rnd000",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "cross_beam",
+    "factor": 1.0318879372656602
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd001",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     204,
+     401
+    ],
+    "t_scale": 0.950251973816215,
+    "name": "rthick2"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd002",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "contact",
+    "factor": 0.7081871242741166
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd003",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "bottom_box",
+    "factor": 0.9084615633354226
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd004",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 401,
+    "rule": {
+     "type": "z_band",
+     "zlo": 19.918294637745394,
+     "zhi": 28.81215883160668
+    },
+    "name": "rsplit5"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd005",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000048,
+     6001323,
+     4000138,
+     2032417,
+     9000092,
+     2032422,
+     3000147,
+     9000096,
+     9000046,
+     2033595,
+     9000033,
+     3000153
+    ],
+    "k_trans": 8386292.059478294,
+    "k_rot": 2089.380981986203,
+    "name": "rconn6"
+   },
+   {
+    "op": "split",
+    "pid": 103,
+    "rule": {
+     "type": "z_band",
+     "zlo": 3.684315507907284,
+     "zhi": 16.174133972613795
+    },
+    "name": "rsplit6"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd006",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     201,
+     103
+    ]
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd007",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 202,
+    "rule": {
+     "type": "near_points",
+     "points": [
+      [
+       -5.5,
+       -8.93748,
+       2.774995
+      ],
+      [
+       8.93748,
+       -8.28706,
+       42.37542
+      ],
+      [
+       1.999996,
+       3.249995,
+       12.37498
+      ],
+      [
+       2.499998,
+       -10.0146,
+       18.37496
+      ]
+     ],
+     "radius": 3.192278102053706
+    },
+    "name": "rsplit8"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd008",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 701,
+    "rule": {
+     "type": "near_points",
+     "points": [
+      [
+       8.937482,
+       1.749999,
+       42.75036
+      ],
+      [
+       -4.99999,
+       -10.0146,
+       18.37496
+      ],
+      [
+       -8.93748,
+       1.749996,
+       44.62504
+      ],
+      [
+       -6.62499,
+       0.0,
+       57.37489
+      ]
+     ],
+     "radius": 1.1145017800655599
+    },
+    "name": "rsplit9"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd009",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000041
+    ],
+    "k_trans": 2318544.005868926,
+    "k_rot": 42655.825239581136,
+    "name": "rconn10"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd010",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     103,
+     201
+    ],
+    "t_scale": 0.9551602107901841,
+    "name": "rthick11"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd011",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     101,
+     105
+    ],
+    "t_scale": 1.2251954181961089,
+    "name": "rthick12"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd012",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     203,
+     501
+    ]
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd013",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     102,
+     501
+    ]
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd014",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000082,
+     6001446,
+     6001321,
+     3000716
+    ],
+    "k_trans": 2550778.987361741,
+    "k_rot": 1050.5045466765928,
+    "name": "rconn15"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd015",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     103
+    ]
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd016",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 701,
+    "rule": {
+     "type": "z_band",
+     "zlo": 8.379318561617852,
+     "zhi": 21.555243755998628
+    },
+    "name": "rsplit17"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd017",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "angle_brackets",
+    "factor": 1.6516334785740374
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd018",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     2032431,
+     9000044,
+     4000138,
+     1024295,
+     2033598,
+     5000321,
+     2032430,
+     2032426,
+     9000033,
+     1024303,
+     9000043,
+     2032415,
+     2032433,
+     1024296
+    ],
+    "k_trans": 175447.30813545705,
+    "k_rot": 2328.295369988357,
+    "name": "rconn19"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd019",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     104,
+     204
+    ]
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd020",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "angle_brackets",
+    "factor": 0.8500139245752328
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd021",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     3000019,
+     5000322,
+     9000079,
+     1024322,
+     2033598,
+     7004396,
+     1024311,
+     2032419,
+     2032432,
+     6001447,
+     1024313,
+     1024312,
+     8000039,
+     9000046,
+     6001321,
+     7004353,
+     9000095
+    ],
+    "k_trans": 63701.89791567777,
+    "k_rot": 18725.641066451935,
+    "name": "rconn22"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd022",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "al_welds",
+    "factor": 0.7491932815881451
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd023",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "bottom_box",
+    "factor": 0.5340607049778716
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd024",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     301
+    ],
+    "t_scale": 1.3459007970059171,
+    "name": "rthick25"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd025",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     5000904,
+     9000081,
+     3000148
+    ],
+    "k_trans": 1265852.1769193867,
+    "k_rot": 2438.4665380158985,
+    "name": "rconn26"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd026",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     501,
+     102,
+     106
+    ],
+    "t_scale": 1.1947370263225607,
+    "name": "rthick27"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd027",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     104
+    ]
+   },
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000041,
+     2032416,
+     3000488,
+     2032438,
+     3000147,
+     9000095,
+     9000047,
+     2032440,
+     7004399,
+     1024296,
+     6001321
+    ],
+    "k_trans": 186525.08215226282,
+    "k_rot": 175679.32328726305,
+    "name": "rconn28"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd028",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 37.34047442797527,
+     "zhi": 41.425460547856105
+    },
+    "name": "rsplit29"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd029",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     203,
+     201
+    ],
+    "t_scale": 0.6177327481550103,
+    "name": "rthick30"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd030",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000097,
+     4000135,
+     3000019,
+     9000041,
+     2032430,
+     2033599,
+     6001323,
+     2032438,
+     2032434,
+     2033598,
+     9000098,
+     9000048,
+     2033595,
+     1024318,
+     5000322,
+     2033594,
+     2033600,
+     1024319,
+     6001451
+    ],
+    "k_trans": 979123.5331018862,
+    "k_rot": 246923.05521156616,
+    "name": "rconn31"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd031",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 601,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": -5.9513124171175535,
+     "side": "lo"
+    },
+    "name": "rsplit32"
+   },
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     2032417,
+     5000901,
+     2032432,
+     8000058,
+     9000082,
+     6001321,
+     1024309,
+     7004353,
+     7004397,
+     4000139,
+     6001322,
+     8000057,
+     2032423,
+     9000096,
+     1024304
+    ],
+    "k_trans": 6224850.188541796,
+    "k_rot": 26923.90452430436,
+    "name": "rconn32"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd032",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 103,
+    "rule": {
+     "type": "z_band",
+     "zlo": 6.977776340261376,
+     "zhi": 12.346276366582543
+    },
+    "name": "rsplit33"
+   },
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     2032416,
+     4000140,
+     1024301,
+     7004395,
+     9000045,
+     1024314
+    ],
+    "k_trans": 8823914.1029084,
+    "k_rot": 20674.90816166868,
+    "name": "rconn33"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd033",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 52.17396641733937,
+     "zhi": 61.91448815645705
+    },
+    "name": "rsplit34"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd034",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000084,
+     2032438,
+     1024302,
+     2032431,
+     1024305,
+     6001452,
+     1024313,
+     9000033,
+     2032427,
+     2032437,
+     1024301,
+     3000126,
+     9000043,
+     1024303,
+     2033595,
+     8000057,
+     2033597,
+     3000148,
+     6001450,
+     9000079
+    ],
+    "k_trans": 259869.69864319998,
+    "k_rot": 5229.5403976230145,
+    "name": "rconn35"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd035",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     501
+    ],
+    "t_scale": 0.7311361595936952,
+    "name": "rthick36"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd036",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     102,
+     401
+    ]
+   },
+   {
+    "op": "thickness",
+    "pids": [
+     102
+    ],
+    "t_scale": 1.5585473661927811,
+    "name": "rthick37"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd037",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 103,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 1.3052878609208651,
+     "side": "lo"
+    },
+    "name": "rsplit38"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd038",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     204,
+     302
+    ],
+    "t_scale": 0.662262191191383,
+    "name": "rthick39"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd039",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     2032420,
+     3000147,
+     1024317,
+     3000716,
+     9000094,
+     8000042,
+     2032435,
+     1024297,
+     1024296,
+     2033597,
+     7004400,
+     4000139,
+     6001451,
+     1024312,
+     9000081,
+     6001447,
+     2032416
+    ],
+    "k_trans": 2007571.63085102,
+    "k_rot": 4101.76799231669,
+    "name": "rconn40"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd040",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "plates",
+    "factor": 0.5760184517608511
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd041",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     8000041,
+     2032413,
+     8000058,
+     1024301,
+     9000028,
+     9000048,
+     7004400,
+     5000904,
+     6001450,
+     8000040,
+     2032434
+    ],
+    "k_trans": 818206.4142112316,
+    "k_rot": 1266.3942988425356,
+    "name": "rconn42"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd042",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     6001447
+    ],
+    "k_trans": 1582834.457567293,
+    "k_rot": 179691.3374288955,
+    "name": "rconn43"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd043",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     206,
+     103
+    ],
+    "t_scale": 1.0845707431157,
+    "name": "rthick44"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd044",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     3000488,
+     7004353,
+     1024305,
+     1024318,
+     5000324,
+     1024304,
+     6001447
+    ],
+    "k_trans": 4823030.765179373,
+    "k_rot": 444933.053806818,
+    "name": "rconn45"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd045",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 401,
+    "rule": {
+     "type": "near_points",
+     "points": [
+      [
+       4.999997,
+       -10.0146,
+       18.37496
+      ],
+      [
+       -8.93748,
+       8.031243,
+       12.81248
+      ],
+      [
+       3.249995,
+       3.249995,
+       30.37494
+      ],
+      [
+       2.3333e-06,
+       -10.0146,
+       18.37496
+      ]
+     ],
+     "radius": 2.383727294925934
+    },
+    "name": "rsplit46"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd046",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     401
+    ],
+    "t_scale": 1.2292624162500516,
+    "name": "rthick47"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd047",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "joints",
+    "factor": 1.4495457805136616
+   },
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     9000029
+    ],
+    "k_trans": 5182166.416421545,
+    "k_rot": 1250.889146488473,
+    "name": "rconn48"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd048",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "bottom_box",
+    "factor": 1.7324969487650714
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd049",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "angle_brackets",
+    "factor": 1.9636065003397756
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd050",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "cross_beam",
+    "factor": 1.3518356037312547
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd051",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 601,
+    "rule": {
+     "type": "near_points",
+     "points": [
+      [
+       -2.5,
+       10.01456,
+       18.37496
+      ],
+      [
+       0.0,
+       -3.36999,
+       42.37542
+      ],
+      [
+       -8.93748,
+       -0.499999,
+       2.774995
+      ],
+      [
+       6.624987,
+       0.0,
+       57.37489
+      ]
+     ],
+     "radius": 2.9596395085912937
+    },
+    "name": "rsplit58"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd052",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "angle_brackets",
+    "factor": 0.9315347352199035
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd053",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "joints",
+    "factor": 1.910091201033411
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd054",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "joints",
+    "factor": 1.3728500501444383
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd055",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 30.637222119711797,
+     "zhi": 36.49405567572938
+    },
+    "name": "rsplit65"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd056",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "cross_beam",
+    "factor": 1.918377831998418
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd057",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 103,
+    "rule": {
+     "type": "z_band",
+     "zlo": 35.26391215998606,
+     "zhi": 42.452548901000114
+    },
+    "name": "rsplit68"
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd058",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "joints",
+    "factor": 0.6875059141865828
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ },
+ {
+  "cid": "rnd059",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "bottom_box",
+    "factor": 1.3721781310751828
+   }
+  ],
+  "rationale": "uniform random draw (A2 comparator)",
+  "evidence": "none (random)"
+ }
+]

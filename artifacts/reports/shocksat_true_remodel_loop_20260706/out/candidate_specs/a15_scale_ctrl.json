@@ -1,0 +1,13 @@
+{
+ "cid": "a15_scale_ctrl",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "top_box",
+   "factor": 0.9
+  }
+ ],
+ "rationale": "PARAMETRIC-ONLY CONTROL (proven-dead family, Card D e07 knee): expected \u2248 A0 after \u03b8_MAP re-absorbs the scale; guards the pipeline against family mislabeling.",
+ "evidence": "Card D e07; tagged parametric_only"
+}

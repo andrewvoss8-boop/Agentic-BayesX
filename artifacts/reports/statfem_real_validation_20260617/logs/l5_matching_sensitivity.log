@@ -1,0 +1,14 @@
+  orig12_keepall  : n_modes 26 MAC nan conv 1.00 | peak IS 1108 cov 0.94 | band IS 2969
+  freq12_keepall  : n_modes 35 MAC nan conv 1.00 | peak IS 1256 cov 0.94 | band IS 3342
+  freq5_keepall   : n_modes 30 MAC nan conv 0.90 | peak IS 1284 cov 0.92 | band IS 3395
+  mac15_keepall   : n_modes 36 MAC 0.10 conv 1.00 | peak IS 1166 cov 0.94 | band IS 3133
+  mac15_keep6     : n_modes 6 MAC 0.25 conv 1.00 | peak IS 1068 cov 0.94 | band IS 3045
+  mac15_keep8     : n_modes 8 MAC 0.23 conv 1.00 | peak IS 1100 cov 0.94 | band IS 3050
+  mac15_keep12    : n_modes 12 MAC 0.19 conv 1.00 | peak IS 1127 cov 0.92 | band IS 3138
+  mac15_keep20    : n_modes 20 MAC 0.15 conv 0.90 | peak IS 1088 cov 0.94 | band IS 2976
+  freq12_keep6    : n_modes 6 MAC nan conv 0.70 | peak IS 1129 cov 0.94 | band IS 3184
+  freq12_keep8    : n_modes 8 MAC nan conv 0.70 | peak IS 1162 cov 0.92 | band IS 3216
+  freq12_keep12   : n_modes 12 MAC nan conv 1.00 | peak IS 1196 cov 0.94 | band IS 3201
+  freq12_keep20   : n_modes 20 MAC nan conv 1.00 | peak IS 1203 cov 0.94 | band IS 3236
+
+L5 MATCHING SENSITIVITY DONE.

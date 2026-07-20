@@ -1,0 +1,52 @@
+{
+ "cid": "ma2_conn_rotfree_bbox",
+ "track": "agent",
+ "round": 2,
+ "cls": "connectivity",
+ "ops": [
+  "rbe2_soften"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.13974525193867715,
+ "exact_b200_500": 0.23785503171734135,
+ "exact_folds": {
+  "m_xpos_990x": 0.27831136265035844,
+  "m_zpos_990z": 0.5064124949324383,
+  "m_ypos_990y": 0.07999924150448293,
+  "m_zpos_900z": -0.30574209133257113
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.18911651716534517,
+  "m_zpos_990z": 0.22194774242205992,
+  "m_ypos_990y": 0.262248384575998,
+  "m_zpos_900z": 0.27810748270596225
+ },
+ "theta_map": [
+  1.069184219399078,
+  1.1640810829919006,
+  0.9736901684969153,
+  0.9611722799472956,
+  0.7850642352837857,
+  1.463298126325176,
+  0.92882977294433,
+  1.0332527201047639,
+  1.1838746337421,
+  0.9685369518425447
+ ],
+ "enriched_pkg": "ma2_conn_rotfree_bbox__xenr",
+ "spot_max_pct": 1.0274836537149667e-07,
+ "n_dof": 400770,
+ "delta_dof_pct": 0.315,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 1.2483,
+  "pass": true
+ },
+ "solve_s_theta1": 419.2,
+ "solve_s_enrich": 422.2,
+ "wall_s": 877.0,
+ "ts": "2026-07-17T01:35:53",
+ "diagnosis_link": "diagnosis_mf_r2.json: Bottom_Box shape defect persists (0.487) after r1; r1's k_t=1e5 soften scored +0.1418 - keep the shear path stiff (k_t=1e6) but release joint ROTATIONS (k_r=3e3): wall-bending clamp is the hypothesized defect, not the shear tie"
+}

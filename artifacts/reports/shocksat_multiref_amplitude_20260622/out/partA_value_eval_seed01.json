@@ -1,0 +1,51 @@
+{
+  "deliverable": "value of L5 updating on NON-HARD sensors (skill vs climatology + vs FEM)",
+  "split_seed": 1,
+  "qoi_discrepancy_sigma_log_pooled": 1.096329342272464,
+  "calib_converged": true,
+  "n_heldout": 31,
+  "n_heldout_hard": 1,
+  "NON_HARD": {
+    "n": 30,
+    "twin_crps": 91.39699897798707,
+    "clim_crps": 49.63803460080352,
+    "crps_skill_vs_clim": -0.8412694965265117,
+    "twin_interval": 1735.2782902043064,
+    "twin_coverage": 1.0,
+    "fem_point_median_abs_db": 3.6903837324017936,
+    "fem_point_frac_gt6db": 0.3333333333333333
+  },
+  "HARD": {
+    "n": 1,
+    "twin_crps": 92.78658362485845,
+    "clim_crps": 29.86737051354615,
+    "crps_skill_vs_clim": -2.106620436599054,
+    "twin_interval": 1262.2432329072124,
+    "twin_coverage": 1.0,
+    "fem_point_median_abs_db": 15.711546904179885,
+    "fem_point_frac_gt6db": 1.0
+  },
+  "ALL": {
+    "n": 31,
+    "twin_crps": 91.44182428917647,
+    "clim_crps": 49.00027124315006,
+    "crps_skill_vs_clim": -0.8661493491622148,
+    "twin_interval": 1720.0190948076258,
+    "twin_coverage": 1.0,
+    "fem_point_median_abs_db": 3.7870032539805196,
+    "fem_point_frac_gt6db": 0.3548387096774194
+  },
+  "by_snap_distance_in": {
+    "0-1": {
+      "n": 30,
+      "twin_crps": 91.39699897798707,
+      "clim_crps": 49.63803460080352,
+      "crps_skill_vs_clim": -0.8412694965265117,
+      "twin_interval": 1735.2782902043064,
+      "twin_coverage": 1.0,
+      "fem_point_median_abs_db": 3.6903837324017936,
+      "fem_point_frac_gt6db": 0.3333333333333333
+    }
+  },
+  "runtime_s": 61.501208782196045
+}

@@ -1,0 +1,61 @@
+{
+  "method": "artifact-backed legibility QA: min pixel size, non-blank dynamic range, ink present in the bottom caption band, plus a recorded by-eye review of overlap/clipping during authoring.",
+  "min_width_px": 1200,
+  "min_height_px": 600,
+  "figures": {
+    "fig_n0_bands.png": {
+      "width_px": 1811,
+      "height_px": 1235,
+      "size_ok": true,
+      "dynamic_range": 255.0,
+      "not_blank": true,
+      "caption_ink_frac": 0.09542,
+      "caption_present": true,
+      "ink_frac": 0.0768,
+      "pass": true
+    },
+    "fig_n1_theta_bridge.png": {
+      "width_px": 2190,
+      "height_px": 809,
+      "size_ok": true,
+      "dynamic_range": 255.0,
+      "not_blank": true,
+      "caption_ink_frac": 0.05546,
+      "caption_present": true,
+      "ink_frac": 0.0862,
+      "pass": true
+    },
+    "fig_s4_tier_update.png": {
+      "width_px": 1967,
+      "height_px": 985,
+      "size_ok": true,
+      "dynamic_range": 255.0,
+      "not_blank": true,
+      "caption_ink_frac": 0.06797,
+      "caption_present": true,
+      "ink_frac": 0.1345,
+      "pass": true
+    },
+    "fig_s3_finalists.png": {
+      "width_px": 2163,
+      "height_px": 1172,
+      "size_ok": true,
+      "dynamic_range": 255.0,
+      "not_blank": true,
+      "caption_ink_frac": 0.06045,
+      "caption_present": true,
+      "ink_frac": 0.0613,
+      "pass": true
+    }
+  },
+  "by_eye_review": {
+    "reviewed": true,
+    "issues_found_and_fixed": [
+      "fig_n0_bands: log-axis MINOR tick labels (6x10^1, 2x10^2) collided with the chosen 45/90/150/260 majors -> minor locator/formatter nulled.",
+      "fig_n0_bands: the |err| annotations and the barh y-labels overlapped the bars -> headroom raised, long y-labels split into short ticks + in-panel sub-labels, wspace 0.26 -> 0.42.",
+      "fig_s4_tier_update: the delivered and tier-updated bands overprinted into one indistinct mass -> delivered kept as a fill, tier-updated redrawn as edge LINES; threshold labels moved off the bars.",
+      "fig_s3_finalists: NO KEY for the three variant markers (unreadable) -> marker legend added; 'S3 rule' / 'delivered twin' labels were clipped at the panel edge -> repositioned, xlim widened.",
+      "fig_n1_theta_bridge: x tick labels overlapped -> shortened."
+    ]
+  }
+}

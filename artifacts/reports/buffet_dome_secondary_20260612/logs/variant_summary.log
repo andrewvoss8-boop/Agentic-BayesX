@@ -1,0 +1,11 @@
+| variant | strut | tray punch | COPV punch | avionics az |
+|---|---|---|---|---|
+| COPV mount trans soft (k_mount 1e7->1e6) | x0.99 | x0.98 | x0.45 | x0.98 |
+| COPV mount trans stiff (k_mount 1e7->1e8) | x0.98 | x0.98 | x1.29 | x0.99 |
+| COPV mount ROT soft (k_rot 1e4->1e3) | x0.98 | x0.98 | x1.18 | x0.98 |
+| COPV mount ROT stiff (k_rot 1e4->1e5) | x1.00 | x0.97 | x1.12 | x0.94 |
+| tray joints soft (k_joint 1e7->1e6) | x0.19 | x0.30 | x1.18 | x0.31 |
+| dome thin (t 5->3 mm, model-form) | x0.56 | x0.64 | x0.49 | x0.72 |
+| refined mesh (Nth 240->300) — convergence | x1.06 | x1.00 | x0.97 | x1.06 |
+
+baseline v1 RMS: {'strut_5_F': 36.75, 'tray_net_punch': 45.403, 'copv_net_punch': 37.584, 'av_acc_z': 3.528}

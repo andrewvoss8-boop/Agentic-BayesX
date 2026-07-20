@@ -1,0 +1,4 @@
+stage: start
+stage: reduced
+stage: channels
+stage: forward done

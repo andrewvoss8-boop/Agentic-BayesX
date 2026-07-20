@@ -1,0 +1,76 @@
+{
+ "posteriors": [
+  {
+   "name": "armB_with_error_term_m_xpos_990x",
+   "rhat_max": 48.779646846796034,
+   "ess_min": 2.0027743107061564,
+   "div_frac": 0.0,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_with_error_term_m_zpos_990z",
+   "rhat_max": 360.63406923662427,
+   "ess_min": 2.0020643780987712,
+   "div_frac": 0.0,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_with_error_term_m_ypos_990y",
+   "rhat_max": 29.622771033868915,
+   "ess_min": 2.0051211121381614,
+   "div_frac": 0.0,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_with_error_term_m_zpos_900z",
+   "rhat_max": 102.20475675723522,
+   "ess_min": 2.002210847122915,
+   "div_frac": 0.0,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_theta_only_m_xpos_990x",
+   "rhat_max": 44.67004482843434,
+   "ess_min": 2.002950651312096,
+   "div_frac": 0.0015,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_theta_only_m_zpos_990z",
+   "rhat_max": 55.22626659952904,
+   "ess_min": 2.0025861161034624,
+   "div_frac": 0.0,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_theta_only_m_ypos_990y",
+   "rhat_max": 53.73285463406492,
+   "ess_min": 2.0026577720893646,
+   "div_frac": 0.0015,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armB_theta_only_m_zpos_900z",
+   "rhat_max": 74.99448052661445,
+   "ess_min": 2.002323335421941,
+   "div_frac": 0.0005,
+   "status": "non_converged_multimodal",
+   "sampler": "NUTS"
+  },
+  {
+   "name": "armC_shapes_m_xpos_990x",
+   "rhat_max": 13.946615059473359,
+   "ess_min": 2.0159577210663437,
+   "div_frac": 0.00125,
+   "status": "non_converged_multimodal_representative",
+   "note": "folds 2-4 NUTS skipped (2.5h/fold, would not converge); scored at deterministic shape-field MAP (D13)"
+  }
+ ]
+}

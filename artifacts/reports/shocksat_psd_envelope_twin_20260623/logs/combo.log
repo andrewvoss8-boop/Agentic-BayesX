@@ -1,0 +1,10 @@
+[    0.2s] cross-attach surgery: 68 coincident cross<->wall pairs to couple
+[    1.5s] [lighten_top] eigsh...
+[  389.6s] [lighten_top] FRF log|H| corr median=0.245 (mean 0.202, frac>0.5 0.19); peak ampl err 17.4 dB; MAC 0.617
+lighten_top            FRFcorr 0.245 (baseline 0.296, sweep-best al_rho_lo 0.379) | MAC 0.617 | low3 [0.97, 0.53, 0.51]
+[  390.7s] [lighten_top_strong] eigsh...
+[  678.3s] [lighten_top_strong] FRF log|H| corr median=0.235 (mean 0.18, frac>0.5 0.13); peak ampl err 17.8 dB; MAC 0.615
+lighten_top_strong     FRFcorr 0.235 (baseline 0.296, sweep-best al_rho_lo 0.379) | MAC 0.615 | low3 [0.97, 0.54, 0.53]
+[  695.5s] [lighten_top_alstiff] eigsh...
+[ 1020.1s] [lighten_top_alstiff] FRF log|H| corr median=0.215 (mean 0.186, frac>0.5 0.16); peak ampl err 17.5 dB; MAC 0.63
+lighten_top_alstiff    FRFcorr 0.215 (baseline 0.296, sweep-best al_rho_lo 0.379) | MAC 0.630 | low3 [0.97, 0.53, 0.52]

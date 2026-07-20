@@ -1,0 +1,7 @@
+{
+ "active_runtime_s": 211938.6,
+ "elapsed_wallclock_s": 211938.6,
+ "machine": "16 GB Mac CPU (float64, OMP/VECLIB threads=1); serial eigensolves, 1 candidate per process",
+ "note": "active = sum of per-command execution time (candidate/finalist wall_s incl. eigensolves + logged steps + standalone solves); wallclock = first-to-last artifact timestamp (detached run survives sleep/relaunch)",
+ "generated": "2026-07-18T16:49:57"
+}

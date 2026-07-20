@@ -1,0 +1,205 @@
+{
+  "impact_point_xyz": [
+    9.0,
+    8.0,
+    1.0
+  ],
+  "impact_axis": "X",
+  "drive_node_idx": 22951,
+  "band_hz": [
+    45.0,
+    260.0
+  ],
+  "g_in_s2": 386.0886,
+  "zeta_sweep": [
+    0.003,
+    0.01,
+    0.02
+  ],
+  "channels": {
+    "ch1": {
+      "daq": "1",
+      "coord": [
+        9.0,
+        -5.375,
+        2.375
+      ],
+      "axis": "X",
+      "resp_node_idx": 7854,
+      "meas_peaks_hz": [
+        70.6,
+        80.1,
+        116.3,
+        133.5,
+        148.8,
+        167.8,
+        219.3,
+        251.8
+      ],
+      "by_zeta": {
+        "0.003": {
+          "fem_peaks_hz": [
+            54.6,
+            73.3,
+            152.1,
+            183.7,
+            192.8,
+            248.8,
+            254.3
+          ],
+          "smoothed_log10_ratio_mean": 2.0922833270485266,
+          "smoothed_log10_ratio_std": 0.5493192327183003,
+          "implied_units_gain_meas_over_fem": 123.67540096342853
+        },
+        "0.01": {
+          "fem_peaks_hz": [
+            54.6,
+            73.3,
+            152.1,
+            183.7,
+            193.7,
+            248.8
+          ],
+          "smoothed_log10_ratio_mean": 2.1017526993666586,
+          "smoothed_log10_ratio_std": 0.5431548685215261,
+          "implied_units_gain_meas_over_fem": 126.40163727092967
+        },
+        "0.02": {
+          "fem_peaks_hz": [
+            54.6,
+            151.4,
+            184.5,
+            194.5,
+            248.8
+          ],
+          "smoothed_log10_ratio_mean": 2.1209949570082127,
+          "smoothed_log10_ratio_std": 0.5332829698215343,
+          "implied_units_gain_meas_over_fem": 132.1280291499476
+        }
+      }
+    },
+    "ch50": {
+      "daq": "50",
+      "coord": [
+        9.0,
+        -0.3125,
+        16.625
+      ],
+      "axis": "X",
+      "resp_node_idx": 8422,
+      "meas_peaks_hz": [
+        49.6,
+        57.2,
+        68.7,
+        74.4,
+        120.2,
+        209.8,
+        213.6,
+        223.2
+      ],
+      "by_zeta": {
+        "0.003": {
+          "fem_peaks_hz": [
+            73.3,
+            146.8,
+            183.7,
+            192.8,
+            212.4,
+            229.9,
+            232.9,
+            248.8
+          ],
+          "smoothed_log10_ratio_mean": 1.902667476156464,
+          "smoothed_log10_ratio_std": 0.8301424388003226,
+          "implied_units_gain_meas_over_fem": 79.92220847443328
+        },
+        "0.01": {
+          "fem_peaks_hz": [
+            54.6,
+            73.3,
+            146.8,
+            183.7,
+            192.8,
+            231.9,
+            248.8
+          ],
+          "smoothed_log10_ratio_mean": 1.9172752322960966,
+          "smoothed_log10_ratio_std": 0.801916304091205,
+          "implied_units_gain_meas_over_fem": 82.65616135609741
+        },
+        "0.02": {
+          "fem_peaks_hz": [
+            54.4,
+            73.0,
+            147.5,
+            192.8,
+            229.9,
+            247.7
+          ],
+          "smoothed_log10_ratio_mean": 1.9407283209699218,
+          "smoothed_log10_ratio_std": 0.7753903888383405,
+          "implied_units_gain_meas_over_fem": 87.24254396275605
+        }
+      }
+    },
+    "ch87": {
+      "daq": "87",
+      "coord": [
+        -0.625,
+        -0.375,
+        42.0
+      ],
+      "axis": "X",
+      "resp_node_idx": 60651,
+      "meas_peaks_hz": [
+        61.0,
+        120.2,
+        139.2,
+        146.9,
+        194.5,
+        213.6,
+        225.1,
+        240.3
+      ],
+      "by_zeta": {
+        "0.003": {
+          "fem_peaks_hz": [
+            73.3,
+            146.8,
+            169.0,
+            184.5,
+            234.0,
+            248.8
+          ],
+          "smoothed_log10_ratio_mean": 1.9558685946937215,
+          "smoothed_log10_ratio_std": 0.734238489917939,
+          "implied_units_gain_meas_over_fem": 90.33760961449387
+        },
+        "0.01": {
+          "fem_peaks_hz": [
+            73.0,
+            146.8,
+            169.7,
+            185.3,
+            232.9,
+            248.8
+          ],
+          "smoothed_log10_ratio_mean": 1.9593713259406984,
+          "smoothed_log10_ratio_std": 0.7284368949756299,
+          "implied_units_gain_meas_over_fem": 91.06915898803386
+        },
+        "0.02": {
+          "fem_peaks_hz": [
+            146.8,
+            170.5,
+            187.8,
+            230.9
+          ],
+          "smoothed_log10_ratio_mean": 1.967943472483587,
+          "smoothed_log10_ratio_std": 0.7220563243746397,
+          "implied_units_gain_meas_over_fem": 92.88454809256466
+        }
+      }
+    }
+  }
+}

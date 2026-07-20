@@ -1,0 +1,9 @@
+seed 0: conv True | +X -0.09 | +Z -0.27 | +Y -0.49 | 900z -0.16 | oracle(+X) 0.61
+seed 1: conv True | +X -0.08 | +Z -0.52 | +Y -0.47 | 900z -0.06 | oracle(+X) 0.70
+seed 2: conv True | +X -0.15 | +Z -0.41 | +Y -0.41 | 900z -0.04 | oracle(+X) 0.42
+
+BEFORE(+X FEM, N=200000 documented) -1.00 | BEFORE(+X FEM, same N=65536) -1.69 -> AFTER(+X measured residue) -0.11
+after by drive (measured residue): {'xpos_990x': -0.11, 'zpos_990z': -0.4, 'ypos_990y': -0.46, 'z_900z': -0.09}
+FEM-forward by drive (same N): {'xpos_990x': -1.69, 'zpos_990z': -1.3, 'ypos_990y': -1.91, 'z_900z': -1.35}
+shape-ORACLE(+X, known held-out sensor shape, upper bound) +0.58
+runtime 188s

@@ -1,0 +1,53 @@
+{
+ "note": "NO-sampler train-side proxy (D9); not a posterior, not the metric",
+ "rank": [
+  {
+   "cid": "c05_ctrl_allscale",
+   "family": "parametric_only",
+   "proxy": 1.0161,
+   "mean_mac": 0.452,
+   "mean_abs_df": 0.04797,
+   "n_matched": 33
+  },
+  {
+   "cid": "c02_boxes_maxsplit",
+   "family": "split",
+   "proxy": 0.9219,
+   "mean_mac": 0.3537,
+   "mean_abs_df": 0.0459,
+   "n_matched": 33
+  },
+  {
+   "cid": "c03_a16_drive",
+   "family": "split",
+   "proxy": 0.8926,
+   "mean_mac": 0.3331,
+   "mean_abs_df": 0.05021,
+   "n_matched": 33
+  },
+  {
+   "cid": "c01_bb_maxsplit",
+   "family": "split",
+   "proxy": 0.8892,
+   "mean_mac": 0.3218,
+   "mean_abs_df": 0.04628,
+   "n_matched": 33
+  },
+  {
+   "cid": "c04_boltstiff_a16",
+   "family": "connect+split",
+   "proxy": 0.867,
+   "mean_mac": 0.3042,
+   "mean_abs_df": 0.04861,
+   "n_matched": 33
+  },
+  {
+   "cid": "c06_tb_xface",
+   "family": "split",
+   "proxy": 0.7503,
+   "mean_mac": 0.187,
+   "mean_abs_df": 0.04837,
+   "n_matched": 33
+  }
+ ]
+}

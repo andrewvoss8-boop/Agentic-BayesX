@@ -1,0 +1,145 @@
+{
+  "deliverable": "mapping_sensitivity_snap_vs_interp",
+  "split_seed": 0,
+  "gain_c": 6.211842379141226,
+  "channels": [
+    {
+      "daq": 99,
+      "snap_in": 0.7524897089768078,
+      "axis": "Z",
+      "interp_node_dists_in": [
+        0.752,
+        0.772,
+        0.772,
+        0.773
+      ],
+      "peak_snap": 44.58289160080987,
+      "peak_interp": 44.635301235224986,
+      "peak_measured": 43.572250404968614,
+      "interp_vs_snap_pct": 0.11755548492542456,
+      "snap_err_x": 0.9773311878267021,
+      "interp_err_x": 0.9761836304261918
+    },
+    {
+      "daq": 98,
+      "snap_in": 0.7524897089768078,
+      "axis": "X",
+      "interp_node_dists_in": [
+        0.752,
+        0.772,
+        0.772,
+        0.773
+      ],
+      "peak_snap": 214.45774361778726,
+      "peak_interp": 214.4590840849562,
+      "peak_measured": 23.61203941554384,
+      "interp_vs_snap_pct": 0.0006250495535153888,
+      "snap_err_x": 0.11010112769640015,
+      "interp_err_x": 0.11010043951409457
+    },
+    {
+      "daq": 102,
+      "snap_in": 0.41915013355717795,
+      "axis": "Y",
+      "interp_node_dists_in": [
+        0.419,
+        0.419,
+        0.488,
+        0.488
+      ],
+      "peak_snap": 169.5688415657551,
+      "peak_interp": 171.94110563375617,
+      "peak_measured": 19.026825394266947,
+      "interp_vs_snap_pct": 1.3989976260356585,
+      "snap_err_x": 0.11220708485461203,
+      "interp_err_x": 0.11065896851213178
+    },
+    {
+      "daq": 101,
+      "snap_in": 0.41915013355717795,
+      "axis": "X",
+      "interp_node_dists_in": [
+        0.419,
+        0.419,
+        0.488,
+        0.488
+      ],
+      "peak_snap": 98.14375988341996,
+      "peak_interp": 95.4146038690171,
+      "peak_measured": 444.41834935718623,
+      "interp_vs_snap_pct": -2.7807738542365734,
+      "snap_err_x": 4.528238472676087,
+      "interp_err_x": 4.657760251955489
+    },
+    {
+      "daq": 100,
+      "snap_in": 0.41915013355717795,
+      "axis": "Z",
+      "interp_node_dists_in": [
+        0.419,
+        0.419,
+        0.488,
+        0.488
+      ],
+      "peak_snap": 22.36259268090159,
+      "peak_interp": 21.759724432222253,
+      "peak_measured": 32.64517400680304,
+      "interp_vs_snap_pct": -2.6958781447296354,
+      "snap_err_x": 1.4598116807217583,
+      "interp_err_x": 1.5002567752402869
+    },
+    {
+      "daq": 89,
+      "snap_in": 0.4149574392657622,
+      "axis": "Z",
+      "interp_node_dists_in": [
+        0.415,
+        0.415,
+        0.415,
+        0.415
+      ],
+      "peak_snap": 478.1349482982531,
+      "peak_interp": 416.4095150492491,
+      "peak_measured": 130.58894418486526,
+      "interp_vs_snap_pct": -12.909625926465573,
+      "snap_err_x": 0.27312152071219425,
+      "interp_err_x": 0.3136070129651586
+    },
+    {
+      "daq": 88,
+      "snap_in": 0.4149574392657622,
+      "axis": "Y",
+      "interp_node_dists_in": [
+        0.415,
+        0.415,
+        0.415,
+        0.415
+      ],
+      "peak_snap": 36.30055888298056,
+      "peak_interp": 36.3002800814342,
+      "peak_measured": 84.71731522646327,
+      "interp_vs_snap_pct": -0.0007680365122109123,
+      "snap_err_x": 2.333774405500484,
+      "interp_err_x": 2.3337923298776966
+    },
+    {
+      "daq": 87,
+      "snap_in": 0.4149574392657622,
+      "axis": "X",
+      "interp_node_dists_in": [
+        0.415,
+        0.415,
+        0.415,
+        0.415
+      ],
+      "peak_snap": 124.31863251671939,
+      "peak_interp": 124.29114113632286,
+      "peak_measured": 60.180896086908476,
+      "interp_vs_snap_pct": -0.022113644463417348,
+      "snap_err_x": 0.4840858917814661,
+      "interp_err_x": 0.48419296449215077
+    }
+  ],
+  "median_abs_interp_vs_snap_pct": 0.7582765554805415,
+  "conclusion": "mapping (snap) is a MINOR contributor: interpolation shifts the predicted peak by a median 0.8% vs the measured mismatch of several-hundred-% -> the held-out miss is dominated by FEM mode-shape model-form error, not the nearest-node snap."
+}

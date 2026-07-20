@@ -1,0 +1,326 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 60,
+    "YELLOW": 3,
+    "RED": 0
+  },
+  "theta_true": 1.15,
+  "gates": [
+    {
+      "gate": "artifact:decisions_log.md",
+      "status": "GREEN",
+      "detail": "decisions_log.md"
+    },
+    {
+      "gate": "artifact:priority_deliverables.md",
+      "status": "GREEN",
+      "detail": "priority_deliverables.md"
+    },
+    {
+      "gate": "artifact:question_framing.md",
+      "status": "GREEN",
+      "detail": "question_framing.md"
+    },
+    {
+      "gate": "artifact:assumptions_ledger.md",
+      "status": "GREEN",
+      "detail": "assumptions_ledger.md"
+    },
+    {
+      "gate": "artifact:quantity_contracts.md",
+      "status": "GREEN",
+      "detail": "quantity_contracts.md"
+    },
+    {
+      "gate": "artifact:packet.md",
+      "status": "GREEN",
+      "detail": "packet.md"
+    },
+    {
+      "gate": "artifact:run_all.sh",
+      "status": "GREEN",
+      "detail": "run_all.sh"
+    },
+    {
+      "gate": "artifact:runtime.json",
+      "status": "GREEN",
+      "detail": "runtime.json"
+    },
+    {
+      "gate": "artifact:code/core.py",
+      "status": "GREEN",
+      "detail": "code/core.py"
+    },
+    {
+      "gate": "artifact:code/nuts_marg.py",
+      "status": "GREEN",
+      "detail": "code/nuts_marg.py"
+    },
+    {
+      "gate": "artifact:code/statfem.py",
+      "status": "GREEN",
+      "detail": "code/statfem.py"
+    },
+    {
+      "gate": "artifact:code/solver_validation.py",
+      "status": "GREEN",
+      "detail": "code/solver_validation.py"
+    },
+    {
+      "gate": "artifact:code/run_sweep.py",
+      "status": "GREEN",
+      "detail": "code/run_sweep.py"
+    },
+    {
+      "gate": "artifact:code/aggregate.py",
+      "status": "GREEN",
+      "detail": "code/aggregate.py"
+    },
+    {
+      "gate": "artifact:code/viz.py",
+      "status": "GREEN",
+      "detail": "code/viz.py"
+    },
+    {
+      "gate": "artifact:code/image_qa.py",
+      "status": "GREEN",
+      "detail": "code/image_qa.py"
+    },
+    {
+      "gate": "artifact:code/fig_solver.py",
+      "status": "GREEN",
+      "detail": "code/fig_solver.py"
+    },
+    {
+      "gate": "artifact:code/fig_schematic.py",
+      "status": "GREEN",
+      "detail": "code/fig_schematic.py"
+    },
+    {
+      "gate": "artifact:code/fig_money.py",
+      "status": "GREEN",
+      "detail": "code/fig_money.py"
+    },
+    {
+      "gate": "artifact:code/fig_concentration.py",
+      "status": "GREEN",
+      "detail": "code/fig_concentration.py"
+    },
+    {
+      "gate": "artifact:code/fig_coverage.py",
+      "status": "GREEN",
+      "detail": "code/fig_coverage.py"
+    },
+    {
+      "gate": "artifact:code/fig_identifiability.py",
+      "status": "GREEN",
+      "detail": "code/fig_identifiability.py"
+    },
+    {
+      "gate": "artifact:figures/figV_solver_convergence.png",
+      "status": "GREEN",
+      "detail": "figures/figV_solver_convergence.png"
+    },
+    {
+      "gate": "artifact:figures/figS_schematic.png",
+      "status": "GREEN",
+      "detail": "figures/figS_schematic.png"
+    },
+    {
+      "gate": "artifact:figures/figA_money_theta_vs_knob.png",
+      "status": "GREEN",
+      "detail": "figures/figA_money_theta_vs_knob.png"
+    },
+    {
+      "gate": "artifact:figures/figC1_concentration.png",
+      "status": "GREEN",
+      "detail": "figures/figC1_concentration.png"
+    },
+    {
+      "gate": "artifact:figures/figC3_coverage.png",
+      "status": "GREEN",
+      "detail": "figures/figC3_coverage.png"
+    },
+    {
+      "gate": "artifact:figures/figI_identifiability.png",
+      "status": "GREEN",
+      "detail": "figures/figI_identifiability.png"
+    },
+    {
+      "gate": "artifact:out/solver_validation.json",
+      "status": "GREEN",
+      "detail": "out/solver_validation.json"
+    },
+    {
+      "gate": "artifact:out/sweep_summary.json",
+      "status": "GREEN",
+      "detail": "out/sweep_summary.json"
+    },
+    {
+      "gate": "artifact:out/identifiability.json",
+      "status": "GREEN",
+      "detail": "out/identifiability.json"
+    },
+    {
+      "gate": "artifact:out/image_qa.json",
+      "status": "GREEN",
+      "detail": "out/image_qa.json"
+    },
+    {
+      "gate": "artifact:out/text_overlap.json",
+      "status": "GREEN",
+      "detail": "out/text_overlap.json"
+    },
+    {
+      "gate": "integrity:prior_unchanged:check.py",
+      "status": "GREEN",
+      "detail": "byte-identical to the recorded hash (prior immutable/scaffold NOT edited in place)"
+    },
+    {
+      "gate": "integrity:prior_unchanged:nuts_update.py",
+      "status": "GREEN",
+      "detail": "byte-identical to the recorded hash (prior immutable/scaffold NOT edited in place)"
+    },
+    {
+      "gate": "integrity:core_fresh",
+      "status": "GREEN",
+      "detail": "core.py is a fresh, self-contained rod model (does not import/copy a sibling study's scaffold)"
+    },
+    {
+      "gate": "solver:fd_converges",
+      "status": "GREEN",
+      "detail": "FD operator (M-lik/M-ift): finest max rel-err 4.15e-05 (< 0.001? True); rate~2.00 (in [1.5,2.6]? True)"
+    },
+    {
+      "gate": "solver:fe_converges",
+      "status": "GREEN",
+      "detail": "FE eigensolve (M-statfem): finest max rel-err 4.14e-05 (< 0.001? True); rate~2.00 (in [1.5,2.6]? True)"
+    },
+    {
+      "gate": "convergence:all_cells",
+      "status": "GREEN",
+      "detail": "64 NUTS cells all cleared the gate; worst R-hat 1.008, min ESS 418, max div-frac 0.000"
+    },
+    {
+      "gate": "consistency:summary_present",
+      "status": "GREEN",
+      "detail": "theta_true=1.15"
+    },
+    {
+      "gate": "consistency:M-lik_numbers",
+      "status": "GREEN",
+      "detail": "C1 conc (final_sd+bias) OK; C2 [sigma_r@eps0.0: spread(theta_mean)=0.0836; sigma_r@eps0.3: spread(theta_mean)=0.0841; N_c@eps0.0: spread(theta_mean)=0.0050; N_c@eps0.3: spread(theta_mean)=0.0019]; C3 coverage OK; verdict present"
+    },
+    {
+      "gate": "consistency:M-statfem_numbers",
+      "status": "GREEN",
+      "detail": "C1 conc (final_sd+bias) OK; C2 [h@eps0.0: spread(theta_mean)=0.0030; h@eps0.3: spread(theta_mean)=0.0024]; C3 coverage OK; verdict present"
+    },
+    {
+      "gate": "consistency:M-ift_numbers",
+      "status": "GREEN",
+      "detail": "C1 conc (final_sd+bias) OK; C2 [N_c@eps0.0: spread(theta_mean)=0.0034; N_c@eps0.3: spread(theta_mean)=0.0045]; C3 coverage OK; verdict present"
+    },
+    {
+      "gate": "control:M-lik_concentrates_eps0",
+      "status": "GREEN",
+      "detail": "eps=0 control: M-lik |theta_mean-theta_true|=0.0010 (<= 0.04? True); final SD 0.0007 (a YELLOW here is a FINDING: this construction misses even the no-error control)"
+    },
+    {
+      "gate": "control:M-statfem_concentrates_eps0",
+      "status": "GREEN",
+      "detail": "eps=0 control: M-statfem |theta_mean-theta_true|=0.0005 (<= 0.04? True); final SD 0.0006 (a YELLOW here is a FINDING: this construction misses even the no-error control)"
+    },
+    {
+      "gate": "control:M-ift_concentrates_eps0",
+      "status": "GREEN",
+      "detail": "eps=0 control: M-ift |theta_mean-theta_true|=0.0004 (<= 0.04? True); final SD 0.0006 (a YELLOW here is a FINDING: this construction misses even the no-error control)"
+    },
+    {
+      "gate": "control:testbed_valid",
+      "status": "GREEN",
+      "detail": "at least one construction concentrates on theta_true at eps=0 (testbed + solver are sound)"
+    },
+    {
+      "gate": "consistency:verdict_per_construction",
+      "status": "GREEN",
+      "detail": "per-construction verdict stated"
+    },
+    {
+      "gate": "identifiability:sensitivity_reported",
+      "status": "GREEN",
+      "detail": "d\u03c9/d\u03b8 reported per mode/eps; weak-identifiability flagged at some eps: False"
+    },
+    {
+      "gate": "tufte_lint:fig_solver",
+      "status": "GREEN",
+      "detail": "clean"
+    },
+    {
+      "gate": "tufte_lint:fig_schematic",
+      "status": "GREEN",
+      "detail": "clean"
+    },
+    {
+      "gate": "tufte_lint:fig_money",
+      "status": "GREEN",
+      "detail": "clean"
+    },
+    {
+      "gate": "tufte_lint:fig_concentration",
+      "status": "GREEN",
+      "detail": "clean"
+    },
+    {
+      "gate": "tufte_lint:fig_coverage",
+      "status": "GREEN",
+      "detail": "clean"
+    },
+    {
+      "gate": "tufte_lint:fig_identifiability",
+      "status": "GREEN",
+      "detail": "clean"
+    },
+    {
+      "gate": "image_qa:legibility",
+      "status": "GREEN",
+      "detail": "pixel legibility: all pass"
+    },
+    {
+      "gate": "text_overlap:auditor",
+      "status": "GREEN",
+      "detail": "save-time bbox text-overlap auditor: 0 overlapping text pair(s)"
+    },
+    {
+      "gate": "doc:method_summary_present",
+      "status": "GREEN",
+      "detail": "packet has a method-summary section (where physics lives + equations per construction)"
+    },
+    {
+      "gate": "doc:data_count_present",
+      "status": "GREEN",
+      "detail": "packet states the synthetic-realization / replicate count"
+    },
+    {
+      "gate": "doc:references_present",
+      "status": "GREEN",
+      "detail": "packet cites statFEM 1905.06391, PIFT 2301.07609, IFT 2306.02150"
+    },
+    {
+      "gate": "scope:single_realization",
+      "status": "YELLOW",
+      "detail": "one synthetic realization per replicate; no flight-to-flight / build-to-build variability modeled"
+    },
+    {
+      "gate": "scope:surrogate_error_model",
+      "status": "YELLOW",
+      "detail": "model-form error is a SURROGATE (Winkler elastic foundation), not a measured real-structure discrepancy"
+    },
+    {
+      "gate": "scope:toy_not_universal",
+      "status": "YELLOW",
+      "detail": "verdicts are for THIS minimal rod toy; they evaluate the constructions' behaviour, not a universal proof"
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "deliverable": "POOLING-SIGMA PROBE: does regional aggregation shrink the discrepancy band enough to beat FEM+6 dB? (ENVELOPE vs MEAN, ANOVA conservation check). NO NUTS; theta=1 FEM mean.",
+  "fem6_PSD_multiplier": 3.981,
+  "references": {
+    "plus_X": {
+      "tag": "plus_X_modal",
+      "n_sensors": 84,
+      "units_gain_log": -0.302,
+      "sigma_sensor_log": 1.017,
+      "sigma_implies_band_PSD_dB": 17.3,
+      "anova_by_K": [
+        {
+          "K": 1,
+          "n_zones": 1,
+          "sigma_between": 0.0,
+          "sigma_within": 1.017,
+          "rms_check": 1.017
+        },
+        {
+          "K": 2,
+          "n_zones": 2,
+          "sigma_between": 0.173,
+          "sigma_within": 1.02,
+          "rms_check": 1.034
+        },
+        {
+          "K": 3,
+          "n_zones": 3,
+          "sigma_between": 0.176,
+          "sigma_within": 1.032,
+          "rms_check": 1.047
+        },
+        {
+          "K": 4,
+          "n_zones": 4,
+          "sigma_between": 0.178,
+          "sigma_within": 1.006,
+          "rms_check": 1.021
+        },
+        {
+          "K": 6,
+          "n_zones": 6,
+          "sigma_between": 0.194,
+          "sigma_within": 1.01,
+          "rms_check": 1.029
+        },
+        {
+          "K": 8,
+          "n_zones": 8,
+          "sigma_between": 0.207,
+          "sigma_within": 0.94,
+          "rms_check": 0.963
+        },
+        {
+          "K": 12,
+          "n_zones": 12,
+          "sigma_between": 0.215,
+          "sigma_within": 1.01,
+          "rms_check": 1.033
+        },
+        {
+          "K": 16,
+          "n_zones": 16,
+          "sigma_between": 0.245,
+          "sigma_within": 1.016,
+          "rms_check": 1.045
+        },
+        {
+          "K": 24,
+          "n_zones": 24,
+          "sigma_between": 0.281,
+          "sigma_within": 0.973,
+          "rms_check": 1.013
+        },
+        {
+          "K": 84,
+          "n_zones": 84,
+          "sigma_between": 1.017,
+          "sigma_within": 0.0,
+          "rms_check": 1.017
+        }
+      ],
+      "envelope_deliverable_by_K": [
+        {
+          "K": 1,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.0
+        },
+        {
+          "K": 2,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.004
+        },
+        {
+          "K": 3,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.008
+        },
+        {
+          "K": 4,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.085
+        },
+        {
+          "K": 6,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.094
+        },
+        {
+          "K": 8,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.094
+        },
+        {
+          "K": 12,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.143
+        },
+        {
+          "K": 16,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.143
+        },
+        {
+          "K": 24,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.0,
+          "median_fem6_exceed_energy": 0.212
+        },
+        {
+          "K": 84,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.001,
+          "median_fem6_exceed_energy": 0.368
+        }
+      ],
+      "mean_deliverable_by_K": [
+        {
+          "K": 1,
+          "median_grms_ratio_twin_vs_fem6": 0.62,
+          "twin_wins_frac": 1.0
+        },
+        {
+          "K": 2,
+          "median_grms_ratio_twin_vs_fem6": 0.69,
+          "twin_wins_frac": 1.0
+        },
+        {
+          "K": 3,
+          "median_grms_ratio_twin_vs_fem6": 0.77,
+          "twin_wins_frac": 1.0
+        },
+        {
+          "K": 4,
+          "median_grms_ratio_twin_vs_fem6": 0.9,
+          "twin_wins_frac": 0.75
+        },
+        {
+          "K": 6,
+          "median_grms_ratio_twin_vs_fem6": 0.96,
+          "twin_wins_frac": 0.5
+        },
+        {
+          "K": 8,
+          "median_grms_ratio_twin_vs_fem6": 1.02,
+          "twin_wins_frac": 0.5
+        },
+        {
+          "K": 12,
+          "median_grms_ratio_twin_vs_fem6": 1.22,
+          "twin_wins_frac": 0.33
+        },
+        {
+          "K": 16,
+          "median_grms_ratio_twin_vs_fem6": 1.22,
+          "twin_wins_frac": 0.06
+        },
+        {
+          "K": 24,
+          "median_grms_ratio_twin_vs_fem6": 1.58,
+          "twin_wins_frac": 0.0
+        },
+        {
+          "K": 84,
+          "median_grms_ratio_twin_vs_fem6": 3.68,
+          "twin_wins_frac": 0.0
+        }
+      ]
+    },
+    "combined_correlated": {
+      "tag": "combined_correlated",
+      "n_sensors": 84,
+      "units_gain_log": -0.707,
+      "sigma_sensor_log": 0.916,
+      "sigma_implies_band_PSD_dB": 15.6,
+      "anova_by_K": [
+        {
+          "K": 1,
+          "n_zones": 1,
+          "sigma_between": 0.0,
+          "sigma_within": 0.916,
+          "rms_check": 0.916
+        },
+        {
+          "K": 2,
+          "n_zones": 2,
+          "sigma_between": 0.02,
+          "sigma_within": 0.923,
+          "rms_check": 0.924
+        },
+        {
+          "K": 3,
+          "n_zones": 3,
+          "sigma_between": 0.045,
+          "sigma_within": 0.893,
+          "rms_check": 0.894
+        },
+        {
+          "K": 4,
+          "n_zones": 4,
+          "sigma_between": 0.076,
+          "sigma_within": 0.862,
+          "rms_check": 0.865
+        },
+        {
+          "K": 6,
+          "n_zones": 6,
+          "sigma_between": 0.083,
+          "sigma_within": 0.862,
+          "rms_check": 0.866
+        },
+        {
+          "K": 8,
+          "n_zones": 8,
+          "sigma_between": 0.209,
+          "sigma_within": 0.819,
+          "rms_check": 0.846
+        },
+        {
+          "K": 12,
+          "n_zones": 12,
+          "sigma_between": 0.232,
+          "sigma_within": 0.872,
+          "rms_check": 0.902
+        },
+        {
+          "K": 16,
+          "n_zones": 16,
+          "sigma_between": 0.286,
+          "sigma_within": 0.869,
+          "rms_check": 0.915
+        },
+        {
+          "K": 24,
+          "n_zones": 24,
+          "sigma_between": 0.347,
+          "sigma_within": 0.823,
+          "rms_check": 0.893
+        },
+        {
+          "K": 84,
+          "n_zones": 84,
+          "sigma_between": 0.916,
+          "sigma_within": 0.0,
+          "rms_check": 0.916
+        }
+      ],
+      "envelope_deliverable_by_K": [
+        {
+          "K": 1,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.006,
+          "median_fem6_exceed_energy": 0.486
+        },
+        {
+          "K": 2,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.003,
+          "median_fem6_exceed_energy": 0.197
+        },
+        {
+          "K": 3,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.002,
+          "median_fem6_exceed_energy": 0.004
+        },
+        {
+          "K": 4,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.002,
+          "median_fem6_exceed_energy": 0.09
+        },
+        {
+          "K": 6,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.002,
+          "median_fem6_exceed_energy": 0.066
+        },
+        {
+          "K": 8,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.005,
+          "median_fem6_exceed_energy": 0.226
+        },
+        {
+          "K": 12,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.005,
+          "median_fem6_exceed_energy": 0.07
+        },
+        {
+          "K": 16,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.005,
+          "median_fem6_exceed_energy": 0.078
+        },
+        {
+          "K": 24,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.006,
+          "median_fem6_exceed_energy": 0.081
+        },
+        {
+          "K": 84,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0,
+          "median_twin_exceed_energy": 0.04,
+          "median_fem6_exceed_energy": 0.281
+        }
+      ],
+      "mean_deliverable_by_K": [
+        {
+          "K": 1,
+          "median_grms_ratio_twin_vs_fem6": 0.61,
+          "twin_wins_frac": 1.0
+        },
+        {
+          "K": 2,
+          "median_grms_ratio_twin_vs_fem6": 0.67,
+          "twin_wins_frac": 1.0
+        },
+        {
+          "K": 3,
+          "median_grms_ratio_twin_vs_fem6": 0.74,
+          "twin_wins_frac": 1.0
+        },
+        {
+          "K": 4,
+          "median_grms_ratio_twin_vs_fem6": 0.85,
+          "twin_wins_frac": 0.75
+        },
+        {
+          "K": 6,
+          "median_grms_ratio_twin_vs_fem6": 0.9,
+          "twin_wins_frac": 0.67
+        },
+        {
+          "K": 8,
+          "median_grms_ratio_twin_vs_fem6": 0.95,
+          "twin_wins_frac": 0.62
+        },
+        {
+          "K": 12,
+          "median_grms_ratio_twin_vs_fem6": 1.12,
+          "twin_wins_frac": 0.33
+        },
+        {
+          "K": 16,
+          "median_grms_ratio_twin_vs_fem6": 1.12,
+          "twin_wins_frac": 0.25
+        },
+        {
+          "K": 24,
+          "median_grms_ratio_twin_vs_fem6": 1.41,
+          "twin_wins_frac": 0.08
+        },
+        {
+          "K": 84,
+          "median_grms_ratio_twin_vs_fem6": 3.02,
+          "twin_wins_frac": 0.0
+        }
+      ]
+    }
+  },
+  "caveat": "theta=1 FEM mean (no NUTS): the GRMS RATIO is band-vs-+6dB dominated so theta mainly shifts peak FREQUENCIES (affects coverage, not the ratio). MEAN deliverable is a diagnostic floor, NOT a coverage-valid qualification spec (under-covers ~half the sensors).",
+  "note": "EXPLORATORY; YELLOW; no success claim."
+}

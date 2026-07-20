@@ -1,0 +1,6 @@
+M3_full9_sigmad_fixedFloor             conv=False R-hat 101.61 ESS     2 div   0 sigma_d 1.73 206s
+M3_ident4_sigmad_sampled               conv=False R-hat 152.24 ESS     2 div   0 sigma_d 9.98 117s
+M3_ident4_sigmad_fixedFloor            conv=False R-hat 232.88 ESS     2 div   0 sigma_d 1.73 134s
+M0_ident4                              conv=False R-hat 474.76 ESS     2 div   0 sigma_d 0.00 58s
+M1_ident4_sigmad_sampled               conv=False R-hat  34.79 ESS     2 div   1 sigma_d 1.49 98s
+wrote out/diagnose_convergence.json

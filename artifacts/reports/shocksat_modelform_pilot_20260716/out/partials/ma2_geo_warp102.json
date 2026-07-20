@@ -1,0 +1,53 @@
+{
+ "cid": "ma2_geo_warp102",
+ "track": "agent",
+ "round": 2,
+ "cls": "geometry",
+ "ops": [
+  "warp_panel"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.14306940887436947,
+ "exact_b200_500": 0.27356684039745555,
+ "exact_folds": {
+  "m_xpos_990x": 0.24261277098251965,
+  "m_zpos_990z": 0.49979904854909324,
+  "m_ypos_990y": 0.11659887830794939,
+  "m_zpos_900z": -0.2867330623420844
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.19559561067948217,
+  "m_zpos_990z": 0.2853744666462288,
+  "m_ypos_990y": 0.2846784182669181,
+  "m_zpos_900z": 0.32861886599719314
+ },
+ "theta_map": [
+  1.1014058908667024,
+  0.924777428634807,
+  0.936746908066163,
+  0.8612571689798236,
+  1.0272825532939835,
+  1.363235812909415,
+  0.9538152622110153,
+  0.9937096457230721,
+  0.9240660071877553
+ ],
+ "enriched_pkg": "ma2_geo_warp102__xenr",
+ "spot_max_pct": 1.2589149722685988e-07,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.04,
+  "max_mode_shift_pct": 8.9972,
+  "min_jac_ratio": 0.712415111205349,
+  "max_edge_slope": 0.07858996095961146,
+  "pass": true
+ },
+ "solve_s_theta1": 392.2,
+ "solve_s_enrich": 352.6,
+ "wall_s": 775.5,
+ "ts": "2026-07-17T02:31:09",
+ "diagnosis_link": "diagnosis_mf_r2.json: Bottom_Box carries the dominant shape defect and Bottom_Box|Y/Z 0.76/0.72 dex; the flat bottom cover 102 modeled perfectly flat is the same build idealization r1 tested on 202 (+0.1610)"
+}

@@ -1,0 +1,67 @@
+$-----------------------------------
+$ File Management
+$-----------------------------------
+NASTRAN NLINES=9999999
+NASTRAN SYSTEM(151)=1
+NASTRAN SYSTEM(319)=1
+NASTRAN SYSTEM(274)=2
+$
+INIT MASTER
+ASSIGN MASTER='ShockSat_TAM_101521.master'TEMP,DELETE
+$
+INIT DBALL
+ASSIGN DBALL='ShockSat_TAM_101521.dball'TEMP,DELETE
+$
+INIT SCRATCH
+ASSIGN SCR1='ShockSat_TAM_101521.scr',TEMP,DELETE
+$
+$-----------------------------------
+$ Executive Control
+$-----------------------------------
+SOL 103
+DIAG 8,47,56
+GEOMCHECK,NONE
+CEND
+$
+EXTSEOUT(DMIGPCH,EXTID=100)
+$
+$ The display set with all the nodes that are located in the display set
+INCLUDE 'ShockSat_DISP.blk'
+$*
+$ This punch number should match the set number assigned in the display set file
+ECHO = NONE
+DISPLACEMENT(PUNCH) = 100
+Method=101
+GROUNDCHECK=NO
+WEIGHTCHECK=NO
+AUTOSPC(NOPRINT,EPS=1.E-8)=YES
+$*
+BEGIN BULK
+$*
+$ The ASET file should have all the display set nodes with DOF assigned to them
+Include 'ShockSat_ASET.blk'
+$*
+PARAM   K6ROT   100.0
+PARAM   POST    -2
+PARAM   MAXRATIO1.E+8
+PARAM   POSTEXT YES 
+PARAM   PRGPST  yes
+PARAM   OGEOM   yes
+PARAM   OP2GM34 FALSE
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+EIGRL        101           225.0                                    mass
+$
+include 'Material_Properties_101521.blk'
+include 'Bottom_Box_101521.blk'
+include 'Top_Box_101521.blk'
+include 'Angle_Brackets_101521.blk'
+include 'Cross_Beam_101521.blk'
+include 'Rectangular_Plates_101521.blk'
+include 'Top_Brackets_101521.blk'
+include 'Top_Circular_Plate_101521.blk'
+include 'Joint_Connections_101521.blk'
+include 'Rectangular_Plate_Contact_101521.blk'
+include 'ShockSat_FF_Instrumentation_092721.blk'
+$
+ENDDATA

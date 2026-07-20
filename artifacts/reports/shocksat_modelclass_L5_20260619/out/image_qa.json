@@ -1,0 +1,105 @@
+{
+  "fig_damping_inference.png": {
+    "w": 1330,
+    "h": 728,
+    "ink_frac": 0.653,
+    "ok": true
+  },
+  "fig_frf_examples.png": {
+    "w": 1750,
+    "h": 980,
+    "ink_frac": 0.2701,
+    "ok": true
+  },
+  "fig_grms.png": {
+    "w": 896,
+    "h": 840,
+    "ink_frac": 0.086,
+    "ok": true
+  },
+  "fig_hardregion.png": {
+    "w": 1500,
+    "h": 1110,
+    "ink_frac": 0.0544,
+    "ok": true
+  },
+  "fig_likelihood_inventory.png": {
+    "w": 2065,
+    "h": 843,
+    "ink_frac": 0.0564,
+    "ok": true
+  },
+  "fig_param_locations.png": {
+    "w": 728,
+    "h": 1008,
+    "ink_frac": 0.0846,
+    "ok": true
+  },
+  "fig_roadblock_damping.png": {
+    "w": 1610,
+    "h": 602,
+    "ink_frac": 0.1902,
+    "ok": true
+  },
+  "fig_roadblock_likelihood.png": {
+    "w": 1610,
+    "h": 602,
+    "ink_frac": 0.1999,
+    "ok": true
+  },
+  "fig_roadblock_remesh.png": {
+    "w": 1610,
+    "h": 602,
+    "ink_frac": 0.0726,
+    "ok": true
+  },
+  "fig_scores_hard_easy.png": {
+    "w": 1680,
+    "h": 560,
+    "ink_frac": 0.2403,
+    "ok": true
+  },
+  "fig_scoring_schematic.png": {
+    "w": 1120,
+    "h": 644,
+    "ink_frac": 0.2071,
+    "ok": true
+  },
+  "fig_sensor_map.png": {
+    "w": 728,
+    "h": 1008,
+    "ink_frac": 0.061,
+    "ok": true
+  },
+  "fig_shapefield_lever.png": {
+    "w": 1470,
+    "h": 616,
+    "ink_frac": 0.232,
+    "ok": true
+  },
+  "fig_spatial_reanalysis.png": {
+    "w": 1820,
+    "h": 644,
+    "ink_frac": 0.112,
+    "ok": true
+  },
+  "fig_strain_energy.png": {
+    "w": 1064,
+    "h": 868,
+    "ink_frac": 0.6299,
+    "ok": true
+  },
+  "fig_train_test_split.png": {
+    "w": 728,
+    "h": 1008,
+    "ink_frac": 0.0608,
+    "ok": true
+  },
+  "fig_value_summary.png": {
+    "w": 1650,
+    "h": 690,
+    "ink_frac": 0.1409,
+    "ok": true
+  },
+  "pass": true
+}

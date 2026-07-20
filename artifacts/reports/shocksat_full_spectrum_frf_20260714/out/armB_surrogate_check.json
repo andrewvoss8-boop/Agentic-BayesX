@@ -1,0 +1,203 @@
+{
+ "delta_lambda_floor": 24720.14027121535,
+ "drive": "m_xpos_990x",
+ "r0_subbasis": 118,
+ "cases": [
+  {
+   "case": "prior_draw_00",
+   "theta_absmax_dev": 0.5542245940384167,
+   "sub200": {
+    "med_dex": 1.2345,
+    "p90_dex": 2.2739,
+    "galerkin_med_dex": 0.0263,
+    "galerkin_p90_dex": 0.1333
+   },
+   "b200_500": {
+    "med_dex": 2.0859,
+    "p90_dex": 2.9437,
+    "galerkin_med_dex": 0.1869,
+    "galerkin_p90_dex": 0.8356
+   }
+  },
+  {
+   "case": "prior_draw_01",
+   "theta_absmax_dev": 0.4750916827714331,
+   "sub200": {
+    "med_dex": 0.5119,
+    "p90_dex": 1.4822,
+    "galerkin_med_dex": 0.0073,
+    "galerkin_p90_dex": 0.0459
+   },
+   "b200_500": {
+    "med_dex": 1.1954,
+    "p90_dex": 2.0032,
+    "galerkin_med_dex": 0.0843,
+    "galerkin_p90_dex": 0.9187
+   }
+  },
+  {
+   "case": "prior_draw_02",
+   "theta_absmax_dev": 0.5605293773012088,
+   "sub200": {
+    "med_dex": 1.0099,
+    "p90_dex": 2.166,
+    "galerkin_med_dex": 0.0103,
+    "galerkin_p90_dex": 0.0535
+   },
+   "b200_500": {
+    "med_dex": 1.6487,
+    "p90_dex": 2.5992,
+    "galerkin_med_dex": 0.0977,
+    "galerkin_p90_dex": 1.0007
+   }
+  },
+  {
+   "case": "prior_draw_03",
+   "theta_absmax_dev": 0.4498691825917457,
+   "sub200": {
+    "med_dex": 0.0598,
+    "p90_dex": 0.3842,
+    "galerkin_med_dex": 0.0066,
+    "galerkin_p90_dex": 0.0401
+   },
+   "b200_500": {
+    "med_dex": 0.1896,
+    "p90_dex": 0.7533,
+    "galerkin_med_dex": 0.059,
+    "galerkin_p90_dex": 1.1561
+   }
+  },
+  {
+   "case": "prior_draw_04",
+   "theta_absmax_dev": 0.5599395555094595,
+   "sub200": {
+    "med_dex": 0.1667,
+    "p90_dex": 0.8146,
+    "galerkin_med_dex": 0.015,
+    "galerkin_p90_dex": 0.0952
+   },
+   "b200_500": {
+    "med_dex": 0.3942,
+    "p90_dex": 1.1312,
+    "galerkin_med_dex": 0.0675,
+    "galerkin_p90_dex": 0.8061
+   }
+  },
+  {
+   "case": "prior_draw_05",
+   "theta_absmax_dev": 0.3768061899178523,
+   "sub200": {
+    "med_dex": 0.9449,
+    "p90_dex": 2.0537,
+    "galerkin_med_dex": 0.0085,
+    "galerkin_p90_dex": 0.0496
+   },
+   "b200_500": {
+    "med_dex": 1.6196,
+    "p90_dex": 2.5511,
+    "galerkin_med_dex": 0.1487,
+    "galerkin_p90_dex": 1.1249
+   }
+  },
+  {
+   "case": "prior_draw_06",
+   "theta_absmax_dev": 0.4182955777268522,
+   "sub200": {
+    "med_dex": 0.2023,
+    "p90_dex": 0.7871,
+    "galerkin_med_dex": 0.0055,
+    "galerkin_p90_dex": 0.037
+   },
+   "b200_500": {
+    "med_dex": 0.3735,
+    "p90_dex": 1.1274,
+    "galerkin_med_dex": 0.033,
+    "galerkin_p90_dex": 0.4866
+   }
+  },
+  {
+   "case": "prior_draw_07",
+   "theta_absmax_dev": 0.37799375346217956,
+   "sub200": {
+    "med_dex": 0.2011,
+    "p90_dex": 0.8068,
+    "galerkin_med_dex": 0.0057,
+    "galerkin_p90_dex": 0.0352
+   },
+   "b200_500": {
+    "med_dex": 0.522,
+    "p90_dex": 1.315,
+    "galerkin_med_dex": 0.0306,
+    "galerkin_p90_dex": 0.7711
+   }
+  },
+  {
+   "case": "prior_draw_08",
+   "theta_absmax_dev": 0.6818614453005338,
+   "sub200": {
+    "med_dex": 0.7103,
+    "p90_dex": 1.74,
+    "galerkin_med_dex": 0.0091,
+    "galerkin_p90_dex": 0.0525
+   },
+   "b200_500": {
+    "med_dex": 1.3555,
+    "p90_dex": 2.241,
+    "galerkin_med_dex": 0.1255,
+    "galerkin_p90_dex": 1.1574
+   }
+  },
+  {
+   "case": "prior_draw_09",
+   "theta_absmax_dev": 0.4526834569846421,
+   "sub200": {
+    "med_dex": 0.5108,
+    "p90_dex": 1.4971,
+    "galerkin_med_dex": 0.014,
+    "galerkin_p90_dex": 0.0832
+   },
+   "b200_500": {
+    "med_dex": 0.9247,
+    "p90_dex": 1.8835,
+    "galerkin_med_dex": 0.0781,
+    "galerkin_p90_dex": 0.861
+   }
+  },
+  {
+   "case": "prior_draw_10",
+   "theta_absmax_dev": 0.726077046299459,
+   "sub200": {
+    "med_dex": 1.0594,
+    "p90_dex": 2.0879,
+    "galerkin_med_dex": 0.0126,
+    "galerkin_p90_dex": 0.0656
+   },
+   "b200_500": {
+    "med_dex": 1.8194,
+    "p90_dex": 2.7585,
+    "galerkin_med_dex": 0.1104,
+    "galerkin_p90_dex": 0.6295
+   }
+  },
+  {
+   "case": "prior_draw_11",
+   "theta_absmax_dev": 0.4242481503604304,
+   "sub200": {
+    "med_dex": 0.3103,
+    "p90_dex": 1.139,
+    "galerkin_med_dex": 0.0048,
+    "galerkin_p90_dex": 0.03
+   },
+   "b200_500": {
+    "med_dex": 0.7795,
+    "p90_dex": 1.6026,
+    "galerkin_med_dex": 0.0405,
+    "galerkin_p90_dex": 0.8226
+   }
+  }
+ ],
+ "median_over_cases_sub200_dex": 0.51135,
+ "pass_D6": false,
+ "galerkin_median_dex_45_500": 0.02845,
+ "pass_D10_galerkin": true
+}

@@ -1,0 +1,31 @@
+{
+  "deliverable": "inferred-shape-field model form (L8b Beck) vs FEM shapes \u2014 held-out amplitude, 3 seeds",
+  "source": "modal_beck_ash.py seeds 0-2 (logs/beckash*.log, out/modal_beck_ash.json)",
+  "seeds": {
+    "0": {
+      "fem_skill": -0.18,
+      "inf_skill": -0.16,
+      "fem_IS": 671,
+      "inf_IS": 545,
+      "inf_cover": 0.97,
+      "inf_sigma": 0.86
+    },
+    "1": {
+      "fem_skill": -0.689,
+      "inf_skill": -0.202,
+      "fem_IS": 1052,
+      "inf_IS": 570
+    },
+    "2": {
+      "fem_skill": -1.168,
+      "inf_skill": -0.396,
+      "fem_IS": 1558,
+      "inf_IS": 741
+    }
+  },
+  "mean_fem_skill": -0.68,
+  "mean_inf_skill": -0.25,
+  "mean_fem_IS": 1094,
+  "mean_inf_IS": 619,
+  "verdict": "Inferring the shape field (a MODEL-FORM change) is the strongest amplitude lever: halves the CRPS-skill deficit (-0.68->-0.25) and sharpens the interval ~43%, coverage->0.97. Still negative skill (single-impact amplitude not beaten), but corrects the earlier no-lever-helps claim."
+}

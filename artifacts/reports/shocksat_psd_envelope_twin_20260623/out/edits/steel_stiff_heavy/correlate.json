@@ -1,0 +1,18 @@
+{
+ "edit_id": "steel_stiff_heavy",
+ "n_matched_modes": 29,
+ "global_MAC": 0.629,
+ "fundamental_MAC": 0.97,
+ "low3_MAC": [
+  0.97,
+  0.51,
+  0.52
+ ],
+ "FRF_logmag_corr_median": 0.28,
+ "FRF_logmag_corr_mean": 0.236,
+ "FRF_corr_frac_above_0.5": 0.26,
+ "FRF_peak_ampl_err_dB_median": 15.6,
+ "n_channels": 84,
+ "n_refs": 4,
+ "runtime_s": 13535.6
+}

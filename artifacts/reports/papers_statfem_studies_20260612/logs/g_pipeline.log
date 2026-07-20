@@ -1,0 +1,39 @@
+[G-headline]
+unified_fem {'tag': 'unified_fem', 'max_rhat': 50.762, 'min_ess': 2.0022, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 973.5795, 'n_draws': 2800}
+iid_fem {'tag': 'iid_fem', 'max_rhat': 29.5746, 'min_ess': 2.0041, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 166.6688, 'n_draws': 2000}
+{
+  "unified": {
+    "rhat": 50.76196209397933,
+    "ess": 2.002168800234462,
+    "div": 0,
+    "qoi": "1/10"
+  },
+  "iid": {
+    "rhat": 29.574579745486503,
+    "qoi": "0/10"
+  }
+}
+saved ums2_summary.json / ums2_headline.npz
+[G-frames]
+scan_02 {'tag': 'scan_02', 'max_rhat': 15.742, 'min_ess': 1.005, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 41.3075, 'n_draws': 500}
+frame scan_02 rhat 15.74 div 0 41s
+scan_04 {'tag': 'scan_04', 'max_rhat': 1.0102, 'min_ess': 114.4559, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 59.1599, 'n_draws': 500}
+frame scan_04 rhat 1.01 div 0 59s
+scan_06 {'tag': 'scan_06', 'max_rhat': 16.7857, 'min_ess': 1.0046, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 42.7731, 'n_draws': 500}
+frame scan_06 rhat 16.79 div 0 43s
+scan_09 {'tag': 'scan_09', 'max_rhat': 16.9594, 'min_ess': 1.0046, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 54.3594, 'n_draws': 500}
+frame scan_09 rhat 16.96 div 0 54s
+scan_12 {'tag': 'scan_12', 'max_rhat': 19.8123, 'min_ess': 1.0039, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 68.0565, 'n_draws': 500}
+frame scan_12 rhat 19.81 div 0 68s
+scan_15 {'tag': 'scan_15', 'max_rhat': 1.0042, 'min_ess': 112.3666, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 91.3853, 'n_draws': 500}
+frame scan_15 rhat 1.00 div 0 91s
+band_025 {'tag': 'band_025', 'max_rhat': 37.4233, 'min_ess': 1.0033, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 144.9408, 'n_draws': 500}
+frame band_025 rhat 37.42 div 0 145s
+band_035 {'tag': 'band_035', 'max_rhat': 63.9233, 'min_ess': 1.0022, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 43.3127, 'n_draws': 500}
+frame band_035 rhat 63.92 div 0 43s
+band_045 {'tag': 'band_045', 'max_rhat': 161.0069, 'min_ess': 1.002, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 154.6948, 'n_draws': 500}
+frame band_045 rhat 161.01 div 0 155s
+band_060 {'tag': 'band_060', 'max_rhat': 1.0042, 'min_ess': 112.3666, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 90.3558, 'n_draws': 500}
+frame band_060 rhat 1.00 div 0 90s
+frames2 done -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/../out/frames2
+G-PIPELINE-DONE

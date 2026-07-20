@@ -1,0 +1,70 @@
+{
+  "deliverable": "IFT_TMCMC_heldout_sensor_QOI",
+  "arm": "IFT_physics_prior_learned_beta_TMCMC",
+  "sampler": "TMCMC (multimodal escalation; copied tmcmc.py)",
+  "split_seed": 3,
+  "observable": "log|H| (SAME as M2; log-magnitude moment approximation, D0/D1)",
+  "n_population": 1500,
+  "n_runs": 4,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "convergence": {
+    "max_rhat_crossrun": 1.0010824905839655,
+    "min_ess": 1143.0249104595557,
+    "rhat_per_dim": [
+      0.9998725268617393,
+      1.0006023688056982,
+      1.0001444005488433,
+      1.0010824905839655,
+      0.9998864320347067,
+      0.999861943878819
+    ],
+    "converged": true,
+    "log_evidence_mean": -17882.18451034865,
+    "log_evidence_std": 4.265972523951257,
+    "mean_accept_rate": 0.30882102564102565,
+    "mean_stages": 25.25
+  },
+  "beta_posterior": {
+    "beta_med": 0.18124855050729796,
+    "logbeta_med": -1.7078859824804453,
+    "logbeta_lo": -1.7403078305395827,
+    "logbeta_hi": -1.6760011610807557,
+    "logbeta_ci_width": 0.06430666945882701,
+    "beta_star": 52.07054104994699,
+    "log_beta_star": 3.9525993579398553,
+    "prior_logsd": 2.0,
+    "bounded_no_runaway": true,
+    "collapsed": true,
+    "weakly_identified": false
+  },
+  "gain_c0": 6.44175954670063,
+  "scores": {
+    "peak": {
+      "interval_score_mean": 866.4320113999389,
+      "crps_mean": 75.74384634106475,
+      "logpd_mean": -5.915103994386596,
+      "coverage_frac": 0.9032258064516129,
+      "mean_width_db": 31.161960758568156,
+      "pit_ks_dev": 0.12443548387096776,
+      "pit_mean": 0.4963709677419354,
+      "z_mean": 0.03666612780548248,
+      "z_std": 0.7155925728326465,
+      "n_channels": 31
+    },
+    "band": {
+      "interval_score_mean": 3480.3344451595926,
+      "crps_mean": 243.5518433698398,
+      "logpd_mean": -7.360734950258432,
+      "coverage_frac": 0.9354838709677419,
+      "mean_width_db": 40.10681201458414,
+      "pit_ks_dev": 0.13879032258064516,
+      "pit_mean": 0.5061290322580646,
+      "z_mean": 0.010684927575965725,
+      "z_std": 0.4672075619872455,
+      "n_channels": 31
+    }
+  },
+  "n_draws_used": 400,
+  "runtime_s": 3525.183254957199
+}

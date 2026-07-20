@@ -1,0 +1,20 @@
+{
+  "fig_grms_summary.png": {
+    "width": 1734,
+    "height": 940,
+    "mode": "RGBA",
+    "legible_min_size_px": true
+  },
+  "fig_example_envelope.png": {
+    "width": 1620,
+    "height": 942,
+    "mode": "RGBA",
+    "legible_min_size_px": true
+  },
+  "fig_method_graph.png": {
+    "width": 1700,
+    "height": 720,
+    "mode": "RGBA",
+    "legible_min_size_px": true
+  }
+}

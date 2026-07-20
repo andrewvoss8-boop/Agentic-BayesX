@@ -1,0 +1,26 @@
+{
+ "cid": "wa3_brackets_plates",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    301,
+    302
+   ],
+   "t_scale": 0.85,
+   "name": "brackets085"
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    501,
+    601,
+    701
+   ],
+   "t_scale": 1.2,
+   "name": "plates120"
+  }
+ ],
+ "rationale": "Rectangular_Plates|Y is now the single worst cell (0.84); stiffen plates on the bracket model."
+}

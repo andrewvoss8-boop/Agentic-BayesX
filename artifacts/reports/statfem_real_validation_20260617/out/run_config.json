@@ -1,0 +1,43 @@
+{
+  "testbed": "plain_shocksat_9group",
+  "uses_tray": false,
+  "observable": "matched_path_real_frf",
+  "impact_xyz": [
+    9.0,
+    8.0,
+    1.0
+  ],
+  "impact_axis": "X",
+  "drive_node": 22951,
+  "band_hz": [
+    45.0,
+    260.0
+  ],
+  "nfreq_band": 173,
+  "df_hz": 1.25,
+  "n_channels_mapped": 87,
+  "sigma_meas": 0.15,
+  "zeta_nom": 0.01,
+  "global_gain_c0_empirical": 5.600191444085381,
+  "proc": {
+    "N": 200000,
+    "force_ms": 2.0,
+    "exp_end": 0.05,
+    "pre_gap": 200,
+    "baseline_N": 60000
+  },
+  "groups": [
+    "al_welds",
+    "angle_brackets",
+    "bottom_box",
+    "contact",
+    "cross_beam",
+    "joints",
+    "plates",
+    "steel_welds",
+    "top_box"
+  ],
+  "single_hit_quality_weight": true,
+  "n_raw_hits": 1,
+  "n_impact_locations": 1
+}

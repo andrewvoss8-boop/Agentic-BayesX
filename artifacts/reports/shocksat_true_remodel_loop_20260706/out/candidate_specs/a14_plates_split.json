@@ -1,0 +1,21 @@
+{
+ "cid": "a14_plates_split",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 501,
+   "rule": {
+    "type": "z_band",
+    "zlo": 44.0,
+    "zhi": 48.5
+   },
+   "name": "plates_upper"
+  }
+ ],
+ "rationale": "Upper half of the support plates (tray attachment side) as its own parameter: plates region worst MAC; \u03b8_MAP already wants plates x1.18 as a LEVEL \u2014 the split tests whether the DISTRIBUTION is what's wrong.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: region_mac 0.237; theta_map plates=1.176",
+ "split_info": {
+  "plates_upper": 432
+ }
+}

@@ -1,0 +1,13 @@
+Visual QA
+
+PPTX exists and is non-empty: true
+Expected slide count: 9
+Every final slide rendered: yes
+Contact sheet or montage reviewed: generated as slides/deck_preview_montage.webp
+Layout JSON written: yes, retained in scratch workspace
+Source notes reviewed: source-notes.txt written in scratch workspace
+Claims trace to JSON/figures: yes
+Known accepted caveats: checker YELLOW; IFT non-converged; log-magnitude approximation; split-0 post-hoc discretization diagnostic.
+
+Final decision: pass for non-RED honest deck generation.
+Contact sheet generated: slides/preview/contact_sheet.png

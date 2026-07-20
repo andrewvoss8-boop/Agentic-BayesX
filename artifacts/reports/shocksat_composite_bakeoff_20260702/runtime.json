@@ -1,0 +1,11 @@
+{
+  "workspace": "shocksat_composite_bakeoff_20260702",
+  "active_runtime_s": 8150,
+  "elapsed_wallclock_s": 20079,
+  "note": "active_runtime_s = productive compute of the successful pipeline (per-stage): candidates ~1s, tier1 subspace screen ~27s, tier2 29 full 399k-DOF eigensolves ~7250s (the dominant cost, resumed across a computer crash), tier3 evidence ~15s, 6-arm NUTS ~300s, score_matrix ~120s, figures ~40s, plus ~400s of smoke tests. elapsed_wallclock_s = span from workspace creation (09:13) to locked-checker DONE (14:47) minus the human-interactive gaps; it INCLUDES ~7900s of DISCARDED compute (the M0S1 eigenvector-gradient hang, D11) and crash/resume downtime, which is why wallclock >> active.",
+  "wasted_hung_s_discarded": 7900,
+  "wasted_reason": "M0S1 freq+MAC eigenvector-gradient hang near the 246-258 Hz degenerate cluster (A7 risk realized; fixed in D11 with a Tikhonov-regularized first-order shape derivative). No science impact (arm re-run cleanly in 25s).",
+  "crashes_recovered": 1,
+  "resumability": "all stages resumable (tier2 preserved 11/29 packages across the crash; arms skip cached M0S0). One-command replay: bash run_all.sh",
+  "constraint_check": "active_runtime_s (8150) <= elapsed_wallclock_s (20079): OK"
+}

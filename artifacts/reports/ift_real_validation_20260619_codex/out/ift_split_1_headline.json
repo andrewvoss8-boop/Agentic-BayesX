@@ -1,0 +1,495 @@
+{
+  "arm": "IFT_logmag_moment",
+  "split_seed": 1,
+  "obs_frac": 0.6,
+  "n_channels_eligible": 77,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "n_band_freqs": 173,
+  "observed_daqs": [
+    1,
+    4,
+    9,
+    10,
+    12,
+    21,
+    22,
+    23,
+    24,
+    25,
+    27,
+    28,
+    36,
+    38,
+    39,
+    40,
+    42,
+    43,
+    46,
+    47,
+    50,
+    51,
+    52,
+    55,
+    56,
+    60,
+    69,
+    71,
+    72,
+    73,
+    77,
+    79,
+    82,
+    83,
+    85,
+    88,
+    89,
+    90,
+    94,
+    95,
+    98,
+    99,
+    105,
+    107,
+    108,
+    115
+  ],
+  "heldout_daqs": [
+    2,
+    3,
+    6,
+    7,
+    11,
+    17,
+    19,
+    20,
+    26,
+    35,
+    41,
+    44,
+    49,
+    53,
+    54,
+    57,
+    58,
+    59,
+    68,
+    70,
+    75,
+    76,
+    78,
+    86,
+    87,
+    91,
+    92,
+    103,
+    104,
+    106,
+    111
+  ],
+  "free_groups": [
+    "bottom_box",
+    "cross_beam",
+    "plates",
+    "top_box"
+  ],
+  "sampler": {
+    "name": "NUTS",
+    "warmup": 50,
+    "samples": 50,
+    "chains": 4,
+    "max_tree_depth": 5
+  },
+  "diagnostic_budget": true,
+  "diag": {
+    "max_rhat": 9.579772732641542,
+    "min_ess": 2.0840898138410187,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "n_chains": 4,
+    "draws": 200
+  },
+  "converged": false,
+  "beta": {
+    "prior_log_center": 6.907755278982137,
+    "prior_logsd": 2.0,
+    "log_med": -1.8672156614082798,
+    "log_lo": -2.6682919851090925,
+    "log_hi": 6.3739050601555185,
+    "log_ci_width": 9.042197045264611,
+    "med": 0.15455339225451853,
+    "lo": 0.06937061021421251,
+    "hi": 586.343068943291,
+    "weakly_identified": true
+  },
+  "gain_c": {
+    "med": 5.186747680921799,
+    "lo": 3.272099398435525,
+    "hi": 5.996015286435538
+  },
+  "theta_post": {
+    "bottom_box": {
+      "med": 0.8589543731899698,
+      "lo": 0.5207740895104482,
+      "hi": 1.0115660620959905
+    },
+    "cross_beam": {
+      "med": 4.2735497661305715,
+      "lo": 0.006979633406101534,
+      "hi": 42.3133046799211
+    },
+    "plates": {
+      "med": 0.6186290201812403,
+      "lo": 0.24925486965224147,
+      "hi": 0.7836560578262803
+    },
+    "top_box": {
+      "med": 0.6903013277721675,
+      "lo": 0.35765544776504254,
+      "hi": 1.029966791665405
+    }
+  },
+  "scores": {
+    "peak": {
+      "interval_score_mean": 24949186.436873183,
+      "crps_mean": 244486.8619396516,
+      "logpd_mean": -15.940369617049189,
+      "coverage_frac": 0.45161290322580644,
+      "mean_width_db": 98.02664805728314,
+      "n_channels": 31,
+      "pit_ks_dev": 0.7005376344086022,
+      "pit_mean": 0.08978494623655912,
+      "z_mean": -0.012804627634488005,
+      "z_std": 0.022329003265918853
+    },
+    "band": {
+      "interval_score_mean": 28008183.708061885,
+      "crps_mean": 283296.9624361865,
+      "logpd_mean": -16.06110558609904,
+      "coverage_frac": 0.45161290322580644,
+      "mean_width_db": 88.82377424829458,
+      "n_channels": 31,
+      "pit_ks_dev": 0.6838709677419355,
+      "pit_mean": 0.10698924731182795,
+      "z_mean": -0.014360555881590343,
+      "z_std": 0.024283842106710248
+    }
+  },
+  "per_channel": {
+    "2": {
+      "peak_truth": 205.02006529351638,
+      "peak_med": 41965.697766616024,
+      "peak_covered": false,
+      "peak_interval_score": 2186197.4191078497,
+      "band_truth": 1082.4700723318322,
+      "band_med": 60961.21911329514,
+      "band_covered": true,
+      "band_interval_score": 2451177.0511891856
+    },
+    "3": {
+      "peak_truth": 206.41687106995505,
+      "peak_med": 15913.746151838095,
+      "peak_covered": true,
+      "peak_interval_score": 5550111.186995776,
+      "band_truth": 1163.8762128499789,
+      "band_med": 25029.93578753388,
+      "band_covered": true,
+      "band_interval_score": 6219910.759851183
+    },
+    "6": {
+      "peak_truth": 199.69273728293948,
+      "peak_med": 15571.915049255878,
+      "peak_covered": true,
+      "peak_interval_score": 4496695.626624912,
+      "band_truth": 574.0628650519453,
+      "band_med": 19128.40506090383,
+      "band_covered": true,
+      "band_interval_score": 5027992.641982636
+    },
+    "7": {
+      "peak_truth": 343.16505475755093,
+      "peak_med": 8253.017998279212,
+      "peak_covered": false,
+      "peak_interval_score": 814152.4153230739,
+      "band_truth": 1352.301441834058,
+      "band_med": 10066.413132834688,
+      "band_covered": false,
+      "band_interval_score": 903815.3770996962
+    },
+    "11": {
+      "peak_truth": 234.66675121703832,
+      "peak_med": 22066.699989410874,
+      "peak_covered": false,
+      "peak_interval_score": 15967680.068752626,
+      "band_truth": 748.2964169755182,
+      "band_med": 28078.240239911494,
+      "band_covered": false,
+      "band_interval_score": 17881419.85566737
+    },
+    "17": {
+      "peak_truth": 239.15592033005416,
+      "peak_med": 2956.874128107886,
+      "peak_covered": true,
+      "peak_interval_score": 2753719.8797329096,
+      "band_truth": 631.1921313532107,
+      "band_med": 4614.415674397469,
+      "band_covered": true,
+      "band_interval_score": 3078794.0422453475
+    },
+    "19": {
+      "peak_truth": 226.23974601635604,
+      "peak_med": 50708.43734107604,
+      "peak_covered": true,
+      "peak_interval_score": 48352587.67043727,
+      "band_truth": 675.2758664973622,
+      "band_med": 74595.64047577546,
+      "band_covered": true,
+      "band_interval_score": 54059467.84905543
+    },
+    "20": {
+      "peak_truth": 104.60278524611229,
+      "peak_med": 23720.221668759175,
+      "peak_covered": false,
+      "peak_interval_score": 34414035.92317454,
+      "band_truth": 461.1030300259269,
+      "band_med": 33031.98403192062,
+      "band_covered": false,
+      "band_interval_score": 38479636.83149191
+    },
+    "26": {
+      "peak_truth": 209.65108155882697,
+      "peak_med": 114985.6296778229,
+      "peak_covered": true,
+      "peak_interval_score": 17952080.69796762,
+      "band_truth": 700.5900944293159,
+      "band_med": 138731.7258989857,
+      "band_covered": true,
+      "band_interval_score": 20088057.71295646
+    },
+    "35": {
+      "peak_truth": 161.156045176117,
+      "peak_med": 31731.194799747238,
+      "peak_covered": false,
+      "peak_interval_score": 2104375.730407613,
+      "band_truth": 434.0062888395093,
+      "band_med": 45638.2195190222,
+      "band_covered": false,
+      "band_interval_score": 2361841.2292493274
+    },
+    "41": {
+      "peak_truth": 40.246405659258954,
+      "peak_med": 12269.625983217215,
+      "peak_covered": true,
+      "peak_interval_score": 1488286.6971873494,
+      "band_truth": 150.59774584783338,
+      "band_med": 15858.345738440246,
+      "band_covered": true,
+      "band_interval_score": 1712829.9820256599
+    },
+    "44": {
+      "peak_truth": 48.15119117236701,
+      "peak_med": 4488.3801841193435,
+      "peak_covered": true,
+      "peak_interval_score": 3999161.668580728,
+      "band_truth": 184.3403012332476,
+      "band_med": 5891.5545197272595,
+      "band_covered": true,
+      "band_interval_score": 5056463.74879325
+    },
+    "49": {
+      "peak_truth": 75.61843587199215,
+      "peak_med": 9057.757590931851,
+      "peak_covered": false,
+      "peak_interval_score": 3202651.0641229968,
+      "band_truth": 272.9657929248345,
+      "band_med": 12128.800063267297,
+      "band_covered": false,
+      "band_interval_score": 3585433.863952438
+    },
+    "53": {
+      "peak_truth": 92.55328577458475,
+      "peak_med": 118676.00943192196,
+      "peak_covered": false,
+      "peak_interval_score": 9337912.241412763,
+      "band_truth": 287.3374474013734,
+      "band_med": 155936.1683426188,
+      "band_covered": false,
+      "band_interval_score": 11297172.05613055
+    },
+    "54": {
+      "peak_truth": 38.16585109512583,
+      "peak_med": 25293.17613031763,
+      "peak_covered": false,
+      "peak_interval_score": 7948788.214164618,
+      "band_truth": 147.29965247205126,
+      "band_med": 29766.239514458008,
+      "band_covered": false,
+      "band_interval_score": 8896352.247629061
+    },
+    "57": {
+      "peak_truth": 132.39394680020982,
+      "peak_med": 16114.264181467153,
+      "peak_covered": true,
+      "peak_interval_score": 7030695.229459381,
+      "band_truth": 386.4904519406015,
+      "band_med": 19802.329903182188,
+      "band_covered": true,
+      "band_interval_score": 7867019.525469082
+    },
+    "58": {
+      "peak_truth": 203.37697824730859,
+      "peak_med": 24138.880208916184,
+      "peak_covered": true,
+      "peak_interval_score": 6051095.915096236,
+      "band_truth": 470.4874431061954,
+      "band_med": 38014.32263940966,
+      "band_covered": true,
+      "band_interval_score": 6765802.773223634
+    },
+    "59": {
+      "peak_truth": 124.91704852286226,
+      "peak_med": 67707.95688853625,
+      "peak_covered": false,
+      "peak_interval_score": 66442611.36452279,
+      "band_truth": 328.0578345886888,
+      "band_med": 96781.06731427145,
+      "band_covered": false,
+      "band_interval_score": 74495534.42665704
+    },
+    "68": {
+      "peak_truth": 65.85530265115774,
+      "peak_med": 39583.82487627336,
+      "peak_covered": true,
+      "peak_interval_score": 12776858.911037564,
+      "band_truth": 270.18963070869245,
+      "band_med": 47460.91813019233,
+      "band_covered": true,
+      "band_interval_score": 14799665.471806966
+    },
+    "70": {
+      "peak_truth": 23.373412772744537,
+      "peak_med": 23268.05912871913,
+      "peak_covered": false,
+      "peak_interval_score": 8638095.109668933,
+      "band_truth": 97.8313839201269,
+      "band_med": 29670.061295772834,
+      "band_covered": false,
+      "band_interval_score": 9659727.460074877
+    },
+    "75": {
+      "peak_truth": 25.596139569628388,
+      "peak_med": 9915.97940336345,
+      "peak_covered": false,
+      "peak_interval_score": 12129786.865202008,
+      "band_truth": 95.84442302231786,
+      "band_med": 14429.558823052163,
+      "band_covered": false,
+      "band_interval_score": 13564438.209779736
+    },
+    "76": {
+      "peak_truth": 79.96436763379513,
+      "peak_med": 212595.68079225125,
+      "peak_covered": false,
+      "peak_interval_score": 10025591.439490126,
+      "band_truth": 284.01713758049056,
+      "band_med": 274967.5146077601,
+      "band_covered": false,
+      "band_interval_score": 11389878.808905587
+    },
+    "78": {
+      "peak_truth": 52.731291371814194,
+      "peak_med": 182688.1384928582,
+      "peak_covered": false,
+      "peak_interval_score": 347934133.794704,
+      "band_truth": 168.21833119883524,
+      "band_med": 239598.53914852417,
+      "band_covered": false,
+      "band_interval_score": 389026215.3753241
+    },
+    "86": {
+      "peak_truth": 36.10468671487868,
+      "peak_med": 123691.88788888525,
+      "peak_covered": true,
+      "peak_interval_score": 83757536.2585574,
+      "band_truth": 95.60344861929578,
+      "band_med": 178151.12484917365,
+      "band_covered": false,
+      "band_interval_score": 94540898.41577362
+    },
+    "87": {
+      "peak_truth": 60.18089608690847,
+      "peak_med": 6674.899695931475,
+      "peak_covered": false,
+      "peak_interval_score": 13482189.791264113,
+      "band_truth": 192.94695242759124,
+      "band_med": 10929.218379802143,
+      "band_covered": false,
+      "band_interval_score": 15075615.358792232
+    },
+    "91": {
+      "peak_truth": 128.89180292284064,
+      "peak_med": 75389.66756134416,
+      "peak_covered": true,
+      "peak_interval_score": 2149007.7295683087,
+      "band_truth": 366.5634673725724,
+      "band_med": 93704.0397133377,
+      "band_covered": true,
+      "band_interval_score": 2485866.065173799
+    },
+    "92": {
+      "peak_truth": 28.246877655038155,
+      "peak_med": 36156.103901707065,
+      "peak_covered": false,
+      "peak_interval_score": 9490645.39213891,
+      "band_truth": 111.07352278729815,
+      "band_med": 50258.17014627995,
+      "band_covered": false,
+      "band_interval_score": 10620317.323902855
+    },
+    "103": {
+      "peak_truth": 110.29555206188722,
+      "peak_med": 30291.50716216334,
+      "peak_covered": true,
+      "peak_interval_score": 8986970.308394594,
+      "band_truth": 439.936743576438,
+      "band_med": 40230.55517744202,
+      "band_covered": true,
+      "band_interval_score": 10047883.634287322
+    },
+    "104": {
+      "peak_truth": 174.0547809752465,
+      "peak_med": 73534.19234968237,
+      "peak_covered": false,
+      "peak_interval_score": 11494852.034507135,
+      "band_truth": 523.3758687086059,
+      "band_med": 86436.74423152686,
+      "band_covered": false,
+      "band_interval_score": 12871619.043522052
+    },
+    "106": {
+      "peak_truth": 151.8716980776744,
+      "peak_med": 18737.917261925748,
+      "peak_covered": true,
+      "peak_interval_score": 7010963.255244715,
+      "band_truth": 475.45582207308126,
+      "band_med": 23720.568179651083,
+      "band_covered": true,
+      "band_interval_score": 7838496.796878869
+    },
+    "111": {
+      "peak_truth": 81.728749980455,
+      "peak_med": 31566.966044873087,
+      "peak_covered": false,
+      "peak_interval_score": 5455309.640219726,
+      "band_truth": 192.01554479025071,
+      "band_med": 37839.440902880844,
+      "band_covered": false,
+      "band_interval_score": 6104351.011027351
+    }
+  },
+  "method_warnings": [
+    "YELLOW: log-magnitude likelihood uses a first-order moment approximation; exact Gaussian marginal applies to linear complex observations, not log(abs(.))).",
+    "YELLOW: one hit and one impact location; split axis only."
+  ],
+  "runtime_s": 14.531828165054321
+}

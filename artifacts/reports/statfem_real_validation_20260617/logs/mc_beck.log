@@ -1,0 +1,129 @@
+L8b Beck-on-.ash (split 0, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 17s
+  held-out peak  FEM-shapes : cover 0.90 IS 626 sig 0.91
+  held-out peak  INFERRED   : cover 0.97 IS 554 sig 0.85
+  -> inferring the shape field SHARPENS (IS 554 vs 626); sigma_phi 0.68
+  split  0: conv True | FEM IS 626 -> INFERRED IS 554 (cov 0.97)
+L8b Beck-on-.ash (split 1, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 1021 sig 0.88
+  held-out peak  INFERRED   : cover 0.97 IS 530 sig 0.82
+  -> inferring the shape field SHARPENS (IS 530 vs 1021); sigma_phi 0.68
+  split  1: conv True | FEM IS 1021 -> INFERRED IS 530 (cov 0.97)
+L8b Beck-on-.ash (split 2, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 1366 sig 1.11
+  held-out peak  INFERRED   : cover 0.97 IS 702 sig 0.86
+  -> inferring the shape field SHARPENS (IS 702 vs 1366); sigma_phi 0.68
+  split  2: conv True | FEM IS 1366 -> INFERRED IS 702 (cov 0.97)
+L8b Beck-on-.ash (split 3, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 1659 sig 1.02
+  held-out peak  INFERRED   : cover 0.97 IS 748 sig 0.84
+  -> inferring the shape field SHARPENS (IS 748 vs 1659); sigma_phi 0.68
+  split  3: conv True | FEM IS 1659 -> INFERRED IS 748 (cov 0.97)
+L8b Beck-on-.ash (split 4, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.87 IS 852 sig 1.02
+  held-out peak  INFERRED   : cover 0.97 IS 821 sig 1.04
+  -> inferring the shape field SHARPENS (IS 821 vs 852); sigma_phi 0.68
+  split  4: conv True | FEM IS 852 -> INFERRED IS 821 (cov 0.97)
+L8b Beck-on-.ash (split 5, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1532 sig 1.13
+  held-out peak  INFERRED   : cover 0.97 IS 1280 sig 0.95
+  -> inferring the shape field SHARPENS (IS 1280 vs 1532); sigma_phi 0.68
+  split  5: conv True | FEM IS 1532 -> INFERRED IS 1280 (cov 0.97)
+L8b Beck-on-.ash (split 6, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1870 sig 1.27
+  held-out peak  INFERRED   : cover 1.00 IS 713 sig 0.92
+  -> inferring the shape field SHARPENS (IS 713 vs 1870); sigma_phi 0.68
+  split  6: conv True | FEM IS 1870 -> INFERRED IS 713 (cov 1.00)
+L8b Beck-on-.ash (split 7, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.84 IS 1408 sig 1.11
+  held-out peak  INFERRED   : cover 0.90 IS 1093 sig 0.95
+  -> inferring the shape field SHARPENS (IS 1093 vs 1408); sigma_phi 0.68
+  split  7: conv True | FEM IS 1408 -> INFERRED IS 1093 (cov 0.90)
+L8b Beck-on-.ash (split 8, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.87 IS 1064 sig 1.10
+  held-out peak  INFERRED   : cover 0.94 IS 583 sig 0.86
+  -> inferring the shape field SHARPENS (IS 583 vs 1064); sigma_phi 0.68
+  split  8: conv True | FEM IS 1064 -> INFERRED IS 583 (cov 0.94)
+L8b Beck-on-.ash (split 9, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 29s
+  held-out peak  FEM-shapes : cover 0.87 IS 2130 sig 1.14
+  held-out peak  INFERRED   : cover 0.94 IS 816 sig 0.82
+  -> inferring the shape field SHARPENS (IS 816 vs 2130); sigma_phi 0.68
+  split  9: conv True | FEM IS 2130 -> INFERRED IS 816 (cov 0.94)
+L8b Beck-on-.ash (split 10, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.87 IS 1834 sig 1.24
+  held-out peak  INFERRED   : cover 0.97 IS 1065 sig 1.06
+  -> inferring the shape field SHARPENS (IS 1065 vs 1834); sigma_phi 0.68
+  split 10: conv True | FEM IS 1834 -> INFERRED IS 1065 (cov 0.97)
+L8b Beck-on-.ash (split 11, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 1411 sig 1.04
+  held-out peak  INFERRED   : cover 0.97 IS 773 sig 0.89
+  -> inferring the shape field SHARPENS (IS 773 vs 1411); sigma_phi 0.68
+  split 11: conv True | FEM IS 1411 -> INFERRED IS 773 (cov 0.97)
+L8b Beck-on-.ash (split 12, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1347 sig 0.92
+  held-out peak  INFERRED   : cover 0.97 IS 899 sig 0.89
+  -> inferring the shape field SHARPENS (IS 899 vs 1347); sigma_phi 0.68
+  split 12: conv True | FEM IS 1347 -> INFERRED IS 899 (cov 0.97)
+L8b Beck-on-.ash (split 13, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 1249 sig 1.06
+  held-out peak  INFERRED   : cover 1.00 IS 655 sig 0.94
+  -> inferring the shape field SHARPENS (IS 655 vs 1249); sigma_phi 0.68
+  split 13: conv True | FEM IS 1249 -> INFERRED IS 655 (cov 1.00)
+L8b Beck-on-.ash (split 14, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1426 sig 1.09
+  held-out peak  INFERRED   : cover 1.00 IS 799 sig 0.87
+  -> inferring the shape field SHARPENS (IS 799 vs 1426); sigma_phi 0.68
+  split 14: conv True | FEM IS 1426 -> INFERRED IS 799 (cov 1.00)
+L8b Beck-on-.ash (split 15, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 950 sig 1.07
+  held-out peak  INFERRED   : cover 0.97 IS 935 sig 0.94
+  -> inferring the shape field does NOT sharpen (IS 935 vs 950); sigma_phi 0.68
+  split 15: conv True | FEM IS 950 -> INFERRED IS 935 (cov 0.97)
+L8b Beck-on-.ash (split 16, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1011 sig 1.08
+  held-out peak  INFERRED   : cover 0.90 IS 691 sig 0.93
+  -> inferring the shape field SHARPENS (IS 691 vs 1011); sigma_phi 0.68
+  split 16: conv True | FEM IS 1011 -> INFERRED IS 691 (cov 0.90)
+L8b Beck-on-.ash (split 17, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.87 IS 1145 sig 1.01
+  held-out peak  INFERRED   : cover 0.90 IS 605 sig 0.79
+  -> inferring the shape field SHARPENS (IS 605 vs 1145); sigma_phi 0.68
+  split 17: conv True | FEM IS 1145 -> INFERRED IS 605 (cov 0.90)
+L8b Beck-on-.ash (split 18, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1524 sig 1.21
+  held-out peak  INFERRED   : cover 0.97 IS 982 sig 0.98
+  -> inferring the shape field SHARPENS (IS 982 vs 1524); sigma_phi 0.68
+  split 18: conv True | FEM IS 1524 -> INFERRED IS 982 (cov 0.97)
+L8b Beck-on-.ash (split 19, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1382 sig 1.17
+  held-out peak  INFERRED   : cover 0.94 IS 1145 sig 1.03
+  -> inferring the shape field SHARPENS (IS 1145 vs 1382); sigma_phi 0.68
+  split 19: conv True | FEM IS 1382 -> INFERRED IS 1145 (cov 0.94)
+L8b Beck-on-.ash (split 20, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1468 sig 1.12
+  held-out peak  INFERRED   : cover 1.00 IS 1035 sig 1.07
+  -> inferring the shape field SHARPENS (IS 1035 vs 1468); sigma_phi 0.68
+  split 20: conv True | FEM IS 1468 -> INFERRED IS 1035 (cov 1.00)
+L8b Beck-on-.ash (split 21, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 2148 sig 1.21
+  held-out peak  INFERRED   : cover 0.94 IS 1565 sig 1.10
+  -> inferring the shape field SHARPENS (IS 1565 vs 2148); sigma_phi 0.68
+  split 21: conv True | FEM IS 2148 -> INFERRED IS 1565 (cov 0.94)
+L8b Beck-on-.ash (split 22, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.90 IS 1170 sig 1.03
+  held-out peak  INFERRED   : cover 0.94 IS 740 sig 0.81
+  -> inferring the shape field SHARPENS (IS 740 vs 1170); sigma_phi 0.68
+  split 22: conv True | FEM IS 1170 -> INFERRED IS 740 (cov 0.94)
+L8b Beck-on-.ash (split 23, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 1.00 IS 802 sig 0.93
+  held-out peak  INFERRED   : cover 0.97 IS 608 sig 0.86
+  -> inferring the shape field SHARPENS (IS 608 vs 802); sigma_phi 0.68
+  split 23: conv True | FEM IS 802 -> INFERRED IS 608 (cov 0.97)
+L8b Beck-on-.ash (split 24, 12 modes, MAC 0.75): conv True R-hat 1.003 ESS 2107 div 0 | 14s
+  held-out peak  FEM-shapes : cover 0.94 IS 1203 sig 1.04
+  held-out peak  INFERRED   : cover 0.97 IS 559 sig 0.83
+  -> inferring the shape field SHARPENS (IS 559 vs 1203); sigma_phi 0.68
+  split 24: conv True | FEM IS 1203 -> INFERRED IS 559 (cov 0.97)
+
+MC-BECK DONE: 25 splits, converged 100%
+  held-out peak IS median: FEM 1366 -> INFERRED 773 (ratio median 0.63; sharper in 25/25 splits)
+  inferred-shape coverage median 0.97

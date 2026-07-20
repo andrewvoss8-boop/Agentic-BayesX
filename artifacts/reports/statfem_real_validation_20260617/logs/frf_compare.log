@@ -1,0 +1,37 @@
+  split  0: L5[pk-gain] peakIS 746 | FEM[pk-gain] peakIS 827 | Beck[pk-gain] peakIS 638
+  split  1: L5[pk-gain] peakIS 864 | FEM[pk-gain] peakIS 1096 | Beck[pk-gain] peakIS 697
+  split  2: L5[pk-gain] peakIS 1073 | FEM[pk-gain] peakIS 1180 | Beck[pk-gain] peakIS 782
+  split  3: L5[pk-gain] peakIS 1347 | FEM[pk-gain] peakIS 1557 | Beck[pk-gain] peakIS 997
+  split  4: L5[pk-gain] peakIS 764 | FEM[pk-gain] peakIS 826 | Beck[pk-gain] peakIS 628
+  split  5: L5[pk-gain] peakIS 1291 | FEM[pk-gain] peakIS 1558 | Beck[pk-gain] peakIS 1031
+  split  6: L5[pk-gain] peakIS 1157 | FEM[pk-gain] peakIS 1389 | Beck[pk-gain] peakIS 828
+  split  7: L5[pk-gain] peakIS 1263 | FEM[pk-gain] peakIS 1459 | Beck[pk-gain] peakIS 790
+  split  8: L5[pk-gain] peakIS 986 | FEM[pk-gain] peakIS 1052 | Beck[pk-gain] peakIS 645
+  split  9: L5[pk-gain] peakIS 1320 | FEM[pk-gain] peakIS 1560 | Beck[pk-gain] peakIS 975
+  split 10: L5[pk-gain] peakIS 1527 | FEM[pk-gain] peakIS 1563 | Beck[pk-gain] peakIS 891
+  split 11: L5[pk-gain] peakIS 1159 | FEM[pk-gain] peakIS 1400 | Beck[pk-gain] peakIS 957
+  split 12: L5[pk-gain] peakIS 1280 | FEM[pk-gain] peakIS 1445 | Beck[pk-gain] peakIS 969
+  split 13: L5[pk-gain] peakIS 811 | FEM[pk-gain] peakIS 972 | Beck[pk-gain] peakIS 544
+  split 14: L5[pk-gain] peakIS 1376 | FEM[pk-gain] peakIS 1426 | Beck[pk-gain] peakIS 1019
+  split 15: L5[pk-gain] peakIS 1117 | FEM[pk-gain] peakIS 1326 | Beck[pk-gain] peakIS 953
+  split 16: L5[pk-gain] peakIS 959 | FEM[pk-gain] peakIS 1047 | Beck[pk-gain] peakIS 755
+  split 17: L5[pk-gain] peakIS 1046 | FEM[pk-gain] peakIS 1149 | Beck[pk-gain] peakIS 735
+  split 18: L5[pk-gain] peakIS 1424 | FEM[pk-gain] peakIS 1517 | Beck[pk-gain] peakIS 858
+  split 19: L5[pk-gain] peakIS 966 | FEM[pk-gain] peakIS 995 | Beck[pk-gain] peakIS 775
+  split 20: L5[pk-gain] peakIS 1089 | FEM[pk-gain] peakIS 1171 | Beck[pk-gain] peakIS 689
+  split 21: L5[pk-gain] peakIS 1385 | FEM[pk-gain] peakIS 1650 | Beck[pk-gain] peakIS 1037
+  split 22: L5[pk-gain] peakIS 981 | FEM[pk-gain] peakIS 1147 | Beck[pk-gain] peakIS 715
+  split 23: L5[pk-gain] peakIS 1284 | FEM[pk-gain] peakIS 1398 | Beck[pk-gain] peakIS 819
+  split 24: L5[pk-gain] peakIS 1146 | FEM[pk-gain] peakIS 1264 | Beck[pk-gain] peakIS 717
+
+FRF-COMPARE DONE (apples-to-apples, full MC; N=25):
+  --- gain = wholeFRF ---
+    L5   : peak IS 1992 cov 0.90 | band IS 5492 | whole-FRF IS 8.69 | pk-freq err 65Hz
+    FEM  : peak IS 2468 cov 0.87 | band IS 6476 | whole-FRF IS 8.75 | pk-freq err 62Hz
+    Beck : peak IS 3641 cov 0.77 | band IS 9871 | whole-FRF IS 9.19 | pk-freq err 112Hz
+    Beck<L5 sharper: peak 0/25, band 0/25, whole-FRF 9/25
+  --- gain = peak ---
+    L5   : peak IS 1146 cov 0.90 | band IS 3015 | whole-FRF IS 10.71 | pk-freq err 65Hz
+    FEM  : peak IS 1326 cov 0.90 | band IS 3340 | whole-FRF IS 11.30 | pk-freq err 62Hz
+    Beck : peak IS 790 cov 0.97 | band IS 2148 | whole-FRF IS 12.88 | pk-freq err 112Hz
+    Beck<L5 sharper: peak 25/25, band 23/25, whole-FRF 1/25

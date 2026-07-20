@@ -1,0 +1,17 @@
+{
+ "nominal_theta": {
+  "peak_qoi_err": 0.0448,
+  "band_qoi_err": 0.0586
+ },
+ "combo3_truth_theta": {
+  "n_full_modes": 90,
+  "eigsh_secs": 297.4,
+  "max_rel_err_at_peaks": 0.08103011322249853,
+  "max_peak_qoi_rel_err": 0.06889235757084655,
+  "max_band_qoi_rel_err": 0.08103011322249853,
+  "max_pointwise_rel_err_near_resonance": 0.18901749243097665,
+  "median_pointwise_rel_err_near_resonance": 0.053619984155542644,
+  "note": "reduced 74-mode FRF vs full-order direct eigensolve (399510-DOF) modal FRF at biased theta (combo 3); 'at QOI peaks' = QOI-value error (peak |H| + band-GRMS), robust to small freq shifts"
+ },
+ "diagnosis": "Reduced-vs-full error is ~5% at NOMINAL theta -> this is MODAL TRUNCATION of the reused 74-mode basis (fmax 321 Hz = only 1.2x the 260 Hz band top; FRF AMPLITUDE needs ~1.5-2x margin for the high-mode residual flexibility), NOT a Galerkin/bug error. It grows to ~8% at joints+20% (truncation + Galerkin shape change). The STUDY is internally EXACT (truth and inference both use the 74-mode reduced model), so the StatFEM-evaluation conclusions (naive confidently wrong; Schneider restores held-out coverage) are UNAFFECTED. Per the Result Status Standard a documented, understood, non-fatal limit is YELLOW; the immutable check.py codes >3% as RED. DECISION FOR HUMAN: (a) accept as documented YELLOW (relax discretization gate to a physics-justified tol ~10%), or (b) rebuild the basis to ~450 Hz / add static residual-flexibility + re-run the sweep (~5-6 h)."
+}

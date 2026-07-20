@@ -1,0 +1,11 @@
+{
+ "max_abs_err_dex": 1.3362644324388384e-12,
+ "pass": true,
+ "n_modes": 40,
+ "n_sens": 5,
+ "band": [
+  45.0,
+  999.1829427083344
+ ],
+ "note": "jax port vs reused wforward._windowed_H"
+}

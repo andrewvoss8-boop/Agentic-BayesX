@@ -1,0 +1,102 @@
+{
+ "candidates": [
+  {
+   "cid": "A0_wide",
+   "arm": "A1",
+   "heldout_sub200": 0.14536268399461483,
+   "logZ_sig0.15": NaN,
+   "logZ_sig0.25": -7088.4,
+   "logZ_sig0.4": NaN
+  },
+  {
+   "cid": "wa2_brackets_soft",
+   "arm": "D_wa2_brackets_soft",
+   "heldout_sub200": 0.17940546316783876,
+   "logZ_sig0.15": -7111.6,
+   "logZ_sig0.25": -7152.2,
+   "logZ_sig0.4": NaN
+  },
+  {
+   "cid": "wa2_bbox_zsplit_tbox",
+   "arm": "D_wa2_bbox_zsplit_tbox",
+   "heldout_sub200": 0.17664531057119912,
+   "logZ_sig0.15": -7091.3,
+   "logZ_sig0.25": -7097.7,
+   "logZ_sig0.4": -7064.4
+  },
+  {
+   "cid": "wa1_tbox_soft",
+   "arm": "D_wa1_tbox_soft",
+   "heldout_sub200": 0.17055691148017704,
+   "logZ_sig0.15": -7121.9,
+   "logZ_sig0.25": -7128.7,
+   "logZ_sig0.4": -7131.3
+  },
+  {
+   "cid": "wa1_xbeam_scale",
+   "arm": "D_wa1_xbeam_scale",
+   "heldout_sub200": 0.17040672602367232,
+   "logZ_sig0.15": -7105.7,
+   "logZ_sig0.25": -7093.3,
+   "logZ_sig0.4": -7116.4
+  },
+  {
+   "cid": "wa3_brackets_tbox",
+   "arm": "D_wa3_brackets_tbox",
+   "heldout_sub200": 0.16979692072234662,
+   "logZ_sig0.15": -7137.9,
+   "logZ_sig0.25": -7138.3,
+   "logZ_sig0.4": -7141.6
+  },
+  {
+   "cid": "wa2_tbox_xbeam",
+   "arm": "D_wa2_tbox_xbeam",
+   "heldout_sub200": 0.1679662495502327,
+   "logZ_sig0.15": -7094.7,
+   "logZ_sig0.25": -7093.8,
+   "logZ_sig0.4": -7099.2
+  },
+  {
+   "cid": "wr2_rnd001",
+   "arm": "D_wr2_rnd001",
+   "heldout_sub200": 0.1656518292277053,
+   "logZ_sig0.15": -7307.9,
+   "logZ_sig0.25": -7308.9,
+   "logZ_sig0.4": -7309.9
+  },
+  {
+   "cid": "wr1_rnd004",
+   "arm": "D_wr1_rnd004",
+   "heldout_sub200": 0.1655621534514054,
+   "logZ_sig0.15": -7078.0,
+   "logZ_sig0.25": -7106.7,
+   "logZ_sig0.4": -7111.2
+  },
+  {
+   "cid": "wa3_brackets_plates",
+   "arm": "D_wa3_brackets_plates",
+   "heldout_sub200": 0.16465973059154382,
+   "logZ_sig0.15": -7247.8,
+   "logZ_sig0.25": -7243.9,
+   "logZ_sig0.4": -7248.3
+  },
+  {
+   "cid": "wa3_brackets_xbeam",
+   "arm": "D_wa3_brackets_xbeam",
+   "heldout_sub200": 0.1634351838715873,
+   "logZ_sig0.15": -7111.3,
+   "logZ_sig0.25": -7061.3,
+   "logZ_sig0.4": -7120.9
+  }
+ ],
+ "prior_sigs": [
+  0.15,
+  0.25,
+  0.4
+ ],
+ "spearman_sig0.15": NaN,
+ "spearman_sig0.25": -0.3,
+ "spearman_sig0.4": NaN,
+ "spearman": -0.3,
+ "n_candidates": 11
+}

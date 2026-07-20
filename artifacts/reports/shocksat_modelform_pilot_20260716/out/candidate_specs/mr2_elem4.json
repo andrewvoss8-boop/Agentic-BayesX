@@ -1,0 +1,20 @@
+{
+ "cid": "mr2_elem4",
+ "track": "random",
+ "round": 2,
+ "cls": "element_formulation",
+ "seed": 20262720,
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    204,
+    701
+   ],
+   "name": "rform24a0",
+   "ts_t": 0.35
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

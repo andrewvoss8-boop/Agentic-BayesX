@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "n_inband_modes": 40,
+    "inband_freqs_hz": [
+      54.6,
+      73.1,
+      73.7,
+      88.0,
+      104.7,
+      113.8,
+      117.3,
+      122.2,
+      124.4,
+      124.6,
+      124.6,
+      125.2,
+      146.6,
+      151.9,
+      152.2,
+      160.6,
+      168.8,
+      168.9,
+      183.6,
+      183.9,
+      185.2,
+      190.4,
+      191.6,
+      192.6,
+      192.9,
+      193.7,
+      196.9,
+      211.7,
+      230.6,
+      233.7,
+      233.7,
+      234.4,
+      246.1,
+      247.5,
+      249.4,
+      251.6,
+      253.9,
+      254.7,
+      258.3,
+      258.9
+    ],
+    "n_shape_measured_ash": 20,
+    "n_freq_observed_noY": 20,
+    "n_freq_observed_withY": 23,
+    "Y_marginal_freq_observed_modes": [
+      151.9,
+      152.2,
+      230.6
+    ],
+    "tray_region": "z>=55.0 in (27684 kept DOFs' nodes)",
+    "mass_model": "uniform-mass proxy over tray region (documented; consistent-mass = sensitivity item)",
+    "sampler": "NONE (Stage 0 is analytical MC over mode uncertainty)"
+  },
+  "qoi_participation": {
+    "tray_shear_X": {
+      "participation_shape_measured_pct": 51.0,
+      "participation_freq_observable_pct": 39.0,
+      "top_modes": [
+        {
+          "hz": 146.6,
+          "weight_pct": 22.9,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 234.4,
+          "weight_pct": 21.7,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 168.9,
+          "weight_pct": 20.9,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 258.9,
+          "weight_pct": 11.2,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 233.7,
+          "weight_pct": 8.9,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 249.4,
+          "weight_pct": 2.8,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 230.6,
+          "weight_pct": 2.0,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 152.2,
+          "weight_pct": 1.2,
+          "ash_measured": true,
+          "coherently_observed": true
+        }
+      ]
+    },
+    "tray_shear_Y": {
+      "participation_shape_measured_pct": 40.0,
+      "participation_freq_observable_pct": 63.0,
+      "top_modes": [
+        {
+          "hz": 258.3,
+          "weight_pct": 17.4,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 254.7,
+          "weight_pct": 17.3,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 122.2,
+          "weight_pct": 16.2,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 196.9,
+          "weight_pct": 14.6,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 125.2,
+          "weight_pct": 8.8,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 230.6,
+          "weight_pct": 8.2,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 193.7,
+          "weight_pct": 2.9,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 233.7,
+          "weight_pct": 2.9,
+          "ash_measured": false,
+          "coherently_observed": true
+        }
+      ]
+    },
+    "tray_normal_Z": {
+      "participation_shape_measured_pct": 18.0,
+      "participation_freq_observable_pct": 83.0,
+      "top_modes": [
+        {
+          "hz": 251.6,
+          "weight_pct": 38.1,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 233.7,
+          "weight_pct": 16.1,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 253.9,
+          "weight_pct": 13.6,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 190.4,
+          "weight_pct": 7.9,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 117.3,
+          "weight_pct": 4.5,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 211.7,
+          "weight_pct": 4.1,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 191.6,
+          "weight_pct": 3.7,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 183.6,
+          "weight_pct": 3.4,
+          "ash_measured": true,
+          "coherently_observed": false
+        }
+      ]
+    },
+    "base_shear_X": {
+      "participation_shape_measured_pct": 59.0,
+      "participation_freq_observable_pct": 31.0,
+      "top_modes": [
+        {
+          "hz": 146.6,
+          "weight_pct": 29.1,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 168.9,
+          "weight_pct": 15.0,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 258.9,
+          "weight_pct": 13.3,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 249.4,
+          "weight_pct": 7.0,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 233.7,
+          "weight_pct": 5.7,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 234.4,
+          "weight_pct": 5.5,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 193.7,
+          "weight_pct": 4.9,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 192.6,
+          "weight_pct": 4.1,
+          "ash_measured": true,
+          "coherently_observed": true
+        }
+      ]
+    },
+    "base_shear_Y": {
+      "participation_shape_measured_pct": 42.0,
+      "participation_freq_observable_pct": 70.0,
+      "top_modes": [
+        {
+          "hz": 254.7,
+          "weight_pct": 28.0,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 122.2,
+          "weight_pct": 19.7,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 125.2,
+          "weight_pct": 8.8,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 246.1,
+          "weight_pct": 8.4,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 258.3,
+          "weight_pct": 6.4,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 152.2,
+          "weight_pct": 5.0,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 196.9,
+          "weight_pct": 4.8,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 192.6,
+          "weight_pct": 4.4,
+          "ash_measured": true,
+          "coherently_observed": true
+        }
+      ]
+    },
+    "base_shear_Z": {
+      "participation_shape_measured_pct": 64.0,
+      "participation_freq_observable_pct": 41.0,
+      "top_modes": [
+        {
+          "hz": 113.8,
+          "weight_pct": 22.0,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 183.6,
+          "weight_pct": 15.1,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 117.3,
+          "weight_pct": 12.5,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 253.9,
+          "weight_pct": 11.7,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 190.4,
+          "weight_pct": 9.1,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 251.6,
+          "weight_pct": 8.2,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 191.6,
+          "weight_pct": 3.5,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 104.7,
+          "weight_pct": 3.1,
+          "ash_measured": true,
+          "coherently_observed": false
+        }
+      ]
+    },
+    "mount_response": {
+      "participation_shape_measured_pct": 7.0,
+      "participation_freq_observable_pct": 96.0,
+      "top_modes": [
+        {
+          "hz": 251.6,
+          "weight_pct": 67.0,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 233.7,
+          "weight_pct": 12.7,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 253.9,
+          "weight_pct": 11.3,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 190.4,
+          "weight_pct": 4.0,
+          "ash_measured": true,
+          "coherently_observed": true
+        },
+        {
+          "hz": 117.3,
+          "weight_pct": 2.4,
+          "ash_measured": true,
+          "coherently_observed": false
+        },
+        {
+          "hz": 191.6,
+          "weight_pct": 0.9,
+          "ash_measured": false,
+          "coherently_observed": true
+        },
+        {
+          "hz": 211.7,
+          "weight_pct": 0.7,
+          "ash_measured": false,
+          "coherently_observed": false
+        },
+        {
+          "hz": 247.5,
+          "weight_pct": 0.4,
+          "ash_measured": false,
+          "coherently_observed": false
+        }
+      ]
+    }
+  },
+  "note": "participation_shape_measured_pct = share of QOI modal participation on .ash-shape-matched modes (what we truly know for the net-CG functional); participation_freq_observable_pct additionally counts modes with a coherent FRF peak (frequency anchorable, shape NOT resolved). TRUST(dynamic) in stage0_trust.json is SHAPE-based."
+}

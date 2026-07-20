@@ -1,0 +1,32 @@
+{
+ "cid": "b11_bb_drivecorner",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "near_points",
+    "points": [
+     [
+      9.0,
+      7.6,
+      0.6
+     ],
+     [
+      9.0,
+      -7.6,
+      0.6
+     ]
+    ],
+    "radius": 6.0
+   },
+   "name": "bb_drive"
+  }
+ ],
+ "rationale": "Bottom-box wall region around the +Z@900 drive corner (9,7.6,0.6) as its own parameter: directly targets the fold where all round-1 movement concentrated.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)",
+ "split_info": {
+  "bb_drive": 1754
+ }
+}

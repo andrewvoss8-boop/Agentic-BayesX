@@ -1,0 +1,8 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+probe3_2chain {'tag': 'probe3_2chain', 'max_rhat': 72.544, 'min_ess': 1.0028, 'divergences': 8, 'div_frac': 0.02, 'runtime_s': 458.3017, 'n_draws': 400}
+2-chain agreement: R-hat 72.544  ESS 1  div 8 (2.0%)
+post f: [ 2.33  6.2  12.79 17.96 19.12 31.58 38.84 43.54 48.44 52.4  63.77 64.73
+ 76.79]
+true f: [ 2.21  5.71 12.66 17.75 19.13 31.58 38.89 43.59 48.46 52.02 63.37 63.76
+ 75.82]

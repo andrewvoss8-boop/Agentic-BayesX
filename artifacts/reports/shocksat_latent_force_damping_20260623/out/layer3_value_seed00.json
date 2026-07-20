@@ -1,0 +1,140 @@
+{
+  "deliverable": "Layer 3: measured-zeta-corrected twin vs FEM+6dB envelope GRMS (held-out, 90% split)",
+  "seed": 0,
+  "obs_frac": 0.9,
+  "n_heldout": 8,
+  "calib": {
+    "n_pooled_modes": 22,
+    "max_rhat": 1.001637395525137,
+    "min_ess": 1757.9282273166334,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "n_chains": 4,
+    "draws": 3200,
+    "converged": true
+  },
+  "eta_nominal_struct_pct": 1.0,
+  "eta_measured_struct_note": "Layer-1 NUTS zeta per nearest resolved mode",
+  "median_measured_struct_zeta_pct": 0.466,
+  "framings": {
+    "A_nominal_twin_vs_nominal_fem6": {
+      "per_reference": {
+        "m_xpos_990x": {
+          "n": 8,
+          "median_grms_ratio": 12.086582298463846,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.0
+        },
+        "m_zpos_990z": {
+          "n": 8,
+          "median_grms_ratio": 13.044130770504031,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 1.9207950147830498e-05
+        },
+        "m_xy_990xy": {
+          "n": 8,
+          "median_grms_ratio": 11.310071202654033,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.0
+        },
+        "m_zpos_900z": {
+          "n": 8,
+          "median_grms_ratio": 14.590100779136478,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.09605682145278324
+        }
+      },
+      "combined_correlated": {
+        "n": 8,
+        "median_grms_ratio": 12.377375967624321,
+        "win_rate": 0.0,
+        "clean_win_rate": 0.0,
+        "median_twin_exc_energy_frac": 0.002039832424432866
+      }
+    },
+    "B_measured_twin_vs_measured_fem6": {
+      "per_reference": {
+        "m_xpos_990x": {
+          "n": 8,
+          "median_grms_ratio": 11.28414668059768,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.0
+        },
+        "m_zpos_990z": {
+          "n": 8,
+          "median_grms_ratio": 11.940276438718868,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 1.9207950147830498e-05
+        },
+        "m_xy_990xy": {
+          "n": 8,
+          "median_grms_ratio": 10.144793328197718,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.0
+        },
+        "m_zpos_900z": {
+          "n": 8,
+          "median_grms_ratio": 14.350088141907118,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.09281676659173309
+        }
+      },
+      "combined_correlated": {
+        "n": 8,
+        "median_grms_ratio": 11.03292340245099,
+        "win_rate": 0.0,
+        "clean_win_rate": 0.0,
+        "median_twin_exc_energy_frac": 0.002039832424432866
+      }
+    },
+    "C_measured_twin_vs_nominal_fem6": {
+      "per_reference": {
+        "m_xpos_990x": {
+          "n": 8,
+          "median_grms_ratio": 14.954402570308213,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.0
+        },
+        "m_zpos_990z": {
+          "n": 8,
+          "median_grms_ratio": 16.576240389145955,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 1.9207950147830498e-05
+        },
+        "m_xy_990xy": {
+          "n": 8,
+          "median_grms_ratio": 14.218933608308483,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.0
+        },
+        "m_zpos_900z": {
+          "n": 8,
+          "median_grms_ratio": 18.586284144404217,
+          "win_rate": 0.0,
+          "clean_win_rate": 0.0,
+          "median_twin_exc_energy_frac": 0.09281676659173309
+        }
+      },
+      "combined_correlated": {
+        "n": 8,
+        "median_grms_ratio": 14.317715118560383,
+        "win_rate": 0.0,
+        "clean_win_rate": 0.0,
+        "median_twin_exc_energy_frac": 0.002039832424432866
+      }
+    }
+  },
+  "runtime_s": 82.7,
+  "verdict": "HONEST NEGATIVE. Combined-correlated median GRMS ratio (twin/FEM+6dB): A(nominal)=12.38, B(measured-zeta, identical eta)=11.03 ~= A -> damping CANCELS in the win ratio under the identical-eta contract (mirrors D8/finite_perturbation). C(measured-zeta twin vs as-built nominal FEM+6dB)=14.32 >= A -> because the as-built FEM is OVER-damped (1.0% > measured ~0.4%), a measured-zeta twin has TALLER peaks and a HIGHER envelope GRMS (more conservative, not less). All framings give 0% GRMS win. The less-conservative-envelope goal is NOT unlocked by damping; the binding limit is per-node FEM shape error (twin 97.5 band ~+27 dB), exactly as D7 found."
+}

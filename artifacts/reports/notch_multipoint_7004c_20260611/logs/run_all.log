@@ -1,0 +1,56 @@
+=== code/ex_a_tdof_baseline.py
+  F_at_1p62                ours=   5.2479 handbook=   5.250 rel_err=  0.04%
+  fig8_ordinate_mr1_Q50    ours=   2.6174 handbook=   2.640 rel_err=  0.86%
+  impedance==direct: A 1.19e-14, F 1.22e-14
+=== code/ex_b_sixdof.py
+  modes analytic: [ 61.87  70.55 103.48 119.95 147.98 151.48]
+  mode err 2.37e-16 | static-limit err 4.73e-07 | eff-mass sum err 2.96e-16
+  trap: net/(4*foot) = 0.000% at 147.8 Hz
+=== code/ex_c_notch_distance.py
+convergence stiff_t5_Q25: [{'mode': 'rock_x', 'f_notch_shift_pct': 0.0, 'r_vis_shift_m': 0.0028052241335067424, 'area_frac_shift': 0.06096866096866094}, {'mode': 'rock_y', 'f_notch_shift_pct': 0.045663581517771196, 'r_vis_shift_m': 0.0021786258392437197, 'area_frac_shift': 0.011585944919278224}, {'mode': 'bounce', 'f_notch_shift_pct': 0.22383929066552374, 'r_vis_shift_m': 0.4477209814486148, 'area_frac_shift': 0.014055080721747437}]
+wrote results/ex_c_results.json
+EX-C done.
+=== code/ex_d_force_limits.py
+  limit respected ii 1.000 iii 1.000 (<=1+tol)
+  pitch(z-thy lower)@94.1Hz: i_unlimited: foot 2107.09x My 110.83x | ii_netF: foot 220.78x My 16.90x | iii_netF_plus_My: foot 32.29x My 1.00x
+  bounce(z-thy upper)@132.3Hz: i_unlimited: foot 204.37x My 169.49x | ii_netF: foot 5.22x My 9.34x | iii_netF_plus_My: foot 4.19x My 5.92x
+=== code/ex_e_empirical_reconstruction.py
+   bounce_360Hz       scalar:net  47% My 100% foot  91% rigid3:net   2% My   3% foot  22% diag:net  60% My  24% foot  26%
+wrote results/ex_e_results.json
+EX-E done. remote proxy broadband config-mismatch err: {'1_spacings': '110%', '2_spacings': '102%', '3_spacings': '96%'}
+=== code/make_gifs.py
+wrote gif_a_tdof_notch_sweep.gif
+wrote gif_b_rocking_trap.gif
+wrote gif_c_notch_field_sweep.gif
+=== code/make_pptx.py
+wrote 7004c_multipoint_notch_summary.pptx (16 slides)
+[GREEN ] ex_a_handbook_anchors: 10 anchors vs 7004C Fig8/9+AppB, worst rel err 0.86% (threshold 2%; incl. handbook's own rounding)
+[GREEN ] ex_a_impedance_equals_direct: Eq3/4 vs direct coupled solve max rel dev 1.22e-14 (<1e-10)
+[GREEN ] ex_b_modes_match_closed_form: numeric vs analytic 6 modes, max rel err 2.37e-16
+[GREEN ] ex_b_static_limit_rigid_mass: M(w->0) vs rigid-body matrix rel err 4.73e-07 (<1e-4; quasi-static at 0.05 Hz)
+[GREEN ] ex_b_effective_mass_sums: sum over modes = rigid totals per direction, rel err 2.96e-16 (7004C p.56)
+[GREEN ] ex_b_resultant_trap: net/(4*foot) = 0.00e+00 at 147.8 Hz rocking (foot 9.8 N, My 3.5 N*m)
+[GREEN ] ex_c_lowf_ride_along: payload rides feet rigidly at 22 Hz: ratios ['1.035', '1.004', '1.035', '1.004', '1.004', '1.004', '1.035'] (within 6%; finite 22-Hz dynamic amplification expected)
+[GREEN ] ex_c_main_notches_detected: all 3 notch channels detected on both main variants (ratio-based, anchored interior minima)
+[GREEN ] ex_c_truncation_convergence_robust_metrics: 2x modal refinement: worst f_notch shift 0.41% (<1%), worst area-frac shift 0.061 (<0.07)
+[YELLOW] ex_c_rvis_threshold_sensitivity: DOCUMENTED caveat (decisions_log D8): r_vis is a 3-dB threshold metric; flips under refinement: ['stiff_t5_Q25/bounce: r_vis shift 0.45 m']. Use f_notch/area-frac as converged metrics; r_vis is descriptive.
+[GREEN ] ex_c_interface_suppression_deep: interface-channel suppression at notches ['33', '40', '36'] dB (>10)
+[GREEN ] ex_d_newton_checks: netF=m*a_cg and My_cg=Iyy*thdd to 1.50e-14
+[GREEN ] ex_d_lowf_apparent_mass: net F/a_b at 20 Hz = 6.192 vs M0=6.0 (3.2% — finite 20-Hz amplification expected)
+[GREEN ] ex_d_limits_respected: max(limited response / limit) = 1.000000 (<=1)
+[GREEN ] ex_d_overtest_structure: bounce 204x->5.2x (netF works); pitch stays 221x under netF, ->32x with moment limit
+[GREEN ] ex_d_thx_undertest: test roll accel 1.4e-13 (exact 0) vs flight peak 16.73 rad/s^2/N
+[GREEN ] ex_d_flight_labeled_hypothetical: HYPOTHETICAL coupled plate simulation (not flight data)
+[GREEN ] ex_e_full_impedance_exact: full matrix impedance reconstruction == coupled FEM truth, max rel err 1.81e-12 (<1e-9): a measurement CAN replace the coupled solve
+[GREEN ] ex_e_scalar_blind_to_rocking: single-point: moment err ['100%', '100%', '100%'] (~100% = predicts 0), per-foot err ['76%', '84%', '84%'] (>50%)
+[GREEN ] ex_e_rigid3_recovers_rocking: rigid-3 (>=3 feet) per-foot err ['5%', '3%', '3%'] (<25% in the soft/low-overlap regime) = rocking recovered without coupled FEM
+[GREEN ] ex_e_remote_proxy_config_mismatch: bare-config transmissibility proxy err ['110%', '102%', '96%'] (large = must calibrate in the integrated config; in-config is exact)
+[GREEN ] figures_exist: 16/16 figures present & >30kB
+[GREEN ] gifs_animate: 3 GIFs with >=30 frames each: [True, True, True]
+[GREEN ] pptx_built: 16 slides (>=12)
+[GREEN ] harness_docs: all harness + handoff docs present
+[YELLOW] complex_tdof_tables: 7004C Appendix C complex-TDOF tables NOT replicated (image-only PDF; documented decisions_log D3) — methods used are equation-anchored instead
+
+OVERALL: YELLOW  (24 green / 2 yellow / 0 red)
+wrote checker_report.json
+run_all.sh finished in 42 s (checker exit 0)

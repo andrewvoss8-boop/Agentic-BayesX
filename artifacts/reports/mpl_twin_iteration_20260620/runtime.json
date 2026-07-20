@@ -1,0 +1,15 @@
+{
+  "task": "MPL twin iteration — Phase 0 harness + (a)+(b) result",
+  "active_runtime_s": 905,
+  "elapsed_wallclock_s": 7200,
+  "breakdown_s": {
+    "observable_build": 18,
+    "whole_curve_baseline_smoke_5split_NUTS": 586,
+    "single_split_convergence_probe": 174,
+    "frequency_baseline_5split_NUTS": 37,
+    "numeric_diagnostics_and_figures": 90
+  },
+  "note": "active_runtime_s = approximate sum of heavy command execution. The frequency headline (F0) converges in ~37s for all 5 splits. The whole-curve transmissibility calibration is left SMOKE/non-converged by design (D6 uncorrelated forward); its full 5-split NUTS was NOT run (would not be meaningful).",
+  "blas_pin": "OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1",
+  "sampler_venv": ".venv_nuts (jax 0.4.30 + numpyro 0.15.3)"
+}

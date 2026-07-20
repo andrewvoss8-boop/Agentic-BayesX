@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "viscous_peak_err": 0.00045,
+  "structural_peak_err": 0.0018,
+  "rayleigh_zeta_err": 0.0,
+  "rayleigh_peak_err": 2e-05,
+  "tol": 0.02,
+  "note": "1/(2zeta) viscous, 1/eta structural, Rayleigh zeta_i=a/(2w)+bw/2 all reproduced"
+}

@@ -1,0 +1,13 @@
+{
+  "source": "runs/fem_phase1/opus/calculix/model/hexapod_f.dat (CalculiX free-free eigensolve)",
+  "free_free_freqs_hz": [
+    82.93,
+    84.35,
+    176.31,
+    292.03,
+    336.99,
+    337.11,
+    337.59
+  ],
+  "note": "near-degenerate clusters (82.93/84.35 close pair; 336.99/337.11/337.59 triple) = the mode-matching/degeneracy case Das/Debnath T-D1 (latent system modes, no pairing) targets in Study D; also the eigh-backward MAC divergence we logged for ShockSat."
+}

@@ -1,0 +1,13 @@
+{
+ "cid": "rnd040",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "plates",
+   "factor": 0.5760184517608511
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

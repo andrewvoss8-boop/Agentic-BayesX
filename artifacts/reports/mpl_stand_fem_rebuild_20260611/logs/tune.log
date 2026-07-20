@@ -1,0 +1,7 @@
+TARGETS (box-foot repeatable tap-transfer peaks, Hz): [11.4, 26.8, 72.2, 80.0]
+BASELINE box-foot score: median 6.13% max 8.00% matched 2/4; held-out median 8.00%
+  ACCEPT pass1 M_ebox(mass) x0.6: box 5.76% max 8.00% n2 ho 8.00%
+  ACCEPT pass1 K_att_ebox(box bolt) x0.1: box 2.45% max 8.00% n3 ho 8.00%
+  ACCEPT pass1 K_shield_att(weld) x0.3: box 2.09% max 8.00% n3 ho 8.00%
+
+FINAL box-foot median 2.09% max 8.00% n3; held-out 8.00%; goal(params)=False; elapsed 1535s

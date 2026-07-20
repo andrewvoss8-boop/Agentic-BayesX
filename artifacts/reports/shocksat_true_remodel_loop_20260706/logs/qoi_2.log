@@ -1,0 +1,94 @@
+{
+ "qoi": {
+  "shear_X": {
+   "min_coverage": 0.902,
+   "max_exceed_dB": 0.019,
+   "band_over_fem6db": 1.69
+  },
+  "shear_Y": {
+   "min_coverage": 0.781,
+   "max_exceed_dB": 0.537,
+   "band_over_fem6db": 1.366
+  },
+  "normal_Z": {
+   "min_coverage": 0.937,
+   "max_exceed_dB": 0.011,
+   "band_over_fem6db": 1.654
+  }
+ },
+ "honesty": {
+  "cid": "a16_bb_splits_combo_enr",
+  "shear_X": {
+   "hidden_modes_inb_idx": [
+    12,
+    30,
+    28
+   ],
+   "widen_ratio": 1.0685
+  },
+  "shear_Y": {
+   "hidden_modes_inb_idx": [
+    7,
+    24,
+    34
+   ],
+   "widen_ratio": 1.1199
+  },
+  "normal_Z": {
+   "hidden_modes_inb_idx": [
+    33,
+    6,
+    20
+   ],
+   "widen_ratio": 1.0847
+  },
+  "lmo_widen_ratio": 1.0685
+ }
+}
+{
+ "qoi": {
+  "shear_X": {
+   "min_coverage": 1.0,
+   "max_exceed_dB": 0.0,
+   "band_over_fem6db": 1.886
+  },
+  "shear_Y": {
+   "min_coverage": 0.85,
+   "max_exceed_dB": 0.097,
+   "band_over_fem6db": 1.467
+  },
+  "normal_Z": {
+   "min_coverage": 1.0,
+   "max_exceed_dB": 0.0,
+   "band_over_fem6db": 2.149
+  }
+ },
+ "honesty": {
+  "cid": "c06_tb_xface_enr",
+  "shear_X": {
+   "hidden_modes_inb_idx": [
+    13,
+    12,
+    30
+   ],
+   "widen_ratio": 1.055
+  },
+  "shear_Y": {
+   "hidden_modes_inb_idx": [
+    7,
+    22,
+    34
+   ],
+   "widen_ratio": 1.0775
+  },
+  "normal_Z": {
+   "hidden_modes_inb_idx": [
+    33,
+    6,
+    19
+   ],
+   "widen_ratio": 1.0516
+  },
+  "lmo_widen_ratio": 1.0516
+ }
+}

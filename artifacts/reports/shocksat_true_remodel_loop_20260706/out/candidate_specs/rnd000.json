@@ -1,0 +1,13 @@
+{
+ "cid": "rnd000",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.0318879372656602
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

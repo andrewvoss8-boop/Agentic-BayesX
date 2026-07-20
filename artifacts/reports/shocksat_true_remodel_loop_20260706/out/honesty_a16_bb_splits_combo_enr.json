@@ -1,0 +1,28 @@
+{
+ "cid": "a16_bb_splits_combo_enr",
+ "shear_X": {
+  "hidden_modes_inb_idx": [
+   12,
+   30,
+   28
+  ],
+  "widen_ratio": 1.0685
+ },
+ "shear_Y": {
+  "hidden_modes_inb_idx": [
+   7,
+   24,
+   34
+  ],
+  "widen_ratio": 1.1199
+ },
+ "normal_Z": {
+  "hidden_modes_inb_idx": [
+   33,
+   6,
+   20
+  ],
+  "widen_ratio": 1.0847
+ },
+ "lmo_widen_ratio": 1.0685
+}

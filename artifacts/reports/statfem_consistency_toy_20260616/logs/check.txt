@@ -1,0 +1,65 @@
+[GREEN ] artifact:decisions_log.md: decisions_log.md
+[GREEN ] artifact:priority_deliverables.md: priority_deliverables.md
+[GREEN ] artifact:question_framing.md: question_framing.md
+[GREEN ] artifact:assumptions_ledger.md: assumptions_ledger.md
+[GREEN ] artifact:quantity_contracts.md: quantity_contracts.md
+[GREEN ] artifact:packet.md: packet.md
+[GREEN ] artifact:run_all.sh: run_all.sh
+[GREEN ] artifact:runtime.json: runtime.json
+[GREEN ] artifact:code/core.py: code/core.py
+[GREEN ] artifact:code/nuts_marg.py: code/nuts_marg.py
+[GREEN ] artifact:code/statfem.py: code/statfem.py
+[GREEN ] artifact:code/solver_validation.py: code/solver_validation.py
+[GREEN ] artifact:code/run_sweep.py: code/run_sweep.py
+[GREEN ] artifact:code/aggregate.py: code/aggregate.py
+[GREEN ] artifact:code/viz.py: code/viz.py
+[GREEN ] artifact:code/image_qa.py: code/image_qa.py
+[GREEN ] artifact:code/fig_solver.py: code/fig_solver.py
+[GREEN ] artifact:code/fig_schematic.py: code/fig_schematic.py
+[GREEN ] artifact:code/fig_money.py: code/fig_money.py
+[GREEN ] artifact:code/fig_concentration.py: code/fig_concentration.py
+[GREEN ] artifact:code/fig_coverage.py: code/fig_coverage.py
+[GREEN ] artifact:code/fig_identifiability.py: code/fig_identifiability.py
+[GREEN ] artifact:figures/figV_solver_convergence.png: figures/figV_solver_convergence.png
+[GREEN ] artifact:figures/figS_schematic.png: figures/figS_schematic.png
+[GREEN ] artifact:figures/figA_money_theta_vs_knob.png: figures/figA_money_theta_vs_knob.png
+[GREEN ] artifact:figures/figC1_concentration.png: figures/figC1_concentration.png
+[GREEN ] artifact:figures/figC3_coverage.png: figures/figC3_coverage.png
+[GREEN ] artifact:figures/figI_identifiability.png: figures/figI_identifiability.png
+[GREEN ] artifact:out/solver_validation.json: out/solver_validation.json
+[GREEN ] artifact:out/sweep_summary.json: out/sweep_summary.json
+[GREEN ] artifact:out/identifiability.json: out/identifiability.json
+[GREEN ] artifact:out/image_qa.json: out/image_qa.json
+[GREEN ] artifact:out/text_overlap.json: out/text_overlap.json
+[GREEN ] integrity:prior_unchanged:check.py: byte-identical to the recorded hash (prior immutable/scaffold NOT edited in place)
+[GREEN ] integrity:prior_unchanged:nuts_update.py: byte-identical to the recorded hash (prior immutable/scaffold NOT edited in place)
+[GREEN ] integrity:core_fresh: core.py is a fresh, self-contained rod model (does not import/copy a sibling study's scaffold)
+[GREEN ] solver:fd_converges: FD operator (M-lik/M-ift): finest max rel-err 4.15e-05 (< 0.001? True); rate~2.00 (in [1.5,2.6]? True)
+[GREEN ] solver:fe_converges: FE eigensolve (M-statfem): finest max rel-err 4.14e-05 (< 0.001? True); rate~2.00 (in [1.5,2.6]? True)
+[GREEN ] convergence:all_cells: 64 NUTS cells all cleared the gate; worst R-hat 1.008, min ESS 418, max div-frac 0.000
+[GREEN ] consistency:summary_present: theta_true=1.15
+[GREEN ] consistency:M-lik_numbers: C1 conc (final_sd+bias) OK; C2 [sigma_r@eps0.0: spread(theta_mean)=0.0836; sigma_r@eps0.3: spread(theta_mean)=0.0841; N_c@eps0.0: spread(theta_mean)=0.0050; N_c@eps0.3: spread(theta_mean)=0.0019]; C3 coverage OK; verdict present
+[GREEN ] consistency:M-statfem_numbers: C1 conc (final_sd+bias) OK; C2 [h@eps0.0: spread(theta_mean)=0.0030; h@eps0.3: spread(theta_mean)=0.0024]; C3 coverage OK; verdict present
+[GREEN ] consistency:M-ift_numbers: C1 conc (final_sd+bias) OK; C2 [N_c@eps0.0: spread(theta_mean)=0.0034; N_c@eps0.3: spread(theta_mean)=0.0045]; C3 coverage OK; verdict present
+[GREEN ] control:M-lik_concentrates_eps0: eps=0 control: M-lik |theta_mean-theta_true|=0.0010 (<= 0.04? True); final SD 0.0007 (a YELLOW here is a FINDING: this construction misses even the no-error control)
+[GREEN ] control:M-statfem_concentrates_eps0: eps=0 control: M-statfem |theta_mean-theta_true|=0.0005 (<= 0.04? True); final SD 0.0006 (a YELLOW here is a FINDING: this construction misses even the no-error control)
+[GREEN ] control:M-ift_concentrates_eps0: eps=0 control: M-ift |theta_mean-theta_true|=0.0004 (<= 0.04? True); final SD 0.0006 (a YELLOW here is a FINDING: this construction misses even the no-error control)
+[GREEN ] control:testbed_valid: at least one construction concentrates on theta_true at eps=0 (testbed + solver are sound)
+[GREEN ] consistency:verdict_per_construction: per-construction verdict stated
+[GREEN ] identifiability:sensitivity_reported: dω/dθ reported per mode/eps; weak-identifiability flagged at some eps: False
+[GREEN ] tufte_lint:fig_solver: clean
+[GREEN ] tufte_lint:fig_schematic: clean
+[GREEN ] tufte_lint:fig_money: clean
+[GREEN ] tufte_lint:fig_concentration: clean
+[GREEN ] tufte_lint:fig_coverage: clean
+[GREEN ] tufte_lint:fig_identifiability: clean
+[GREEN ] image_qa:legibility: pixel legibility: all pass
+[RED   ] text_overlap:auditor: save-time bbox text-overlap auditor: 6 overlapping text pair(s)
+[GREEN ] doc:method_summary_present: packet has a method-summary section (where physics lives + equations per construction)
+[GREEN ] doc:data_count_present: packet states the synthetic-realization / replicate count
+[GREEN ] doc:references_present: packet cites statFEM 1905.06391, PIFT 2301.07609, IFT 2306.02150
+[YELLOW] scope:single_realization: one synthetic realization per replicate; no flight-to-flight / build-to-build variability modeled
+[YELLOW] scope:surrogate_error_model: model-form error is a SURROGATE (Winkler elastic foundation), not a measured real-structure discrepancy
+[YELLOW] scope:toy_not_universal: verdicts are for THIS minimal rod toy; they evaluate the constructions' behaviour, not a universal proof
+
+OVERALL RED  GREEN 59 / YELLOW 3 / RED 1

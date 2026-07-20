@@ -1,0 +1,16 @@
+{
+ "cid": "mr2_prop8",
+ "track": "random",
+ "round": 2,
+ "cls": "property_control",
+ "seed": 20262724,
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 0.7213860697584645
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

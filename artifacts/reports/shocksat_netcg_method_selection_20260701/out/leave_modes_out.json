@@ -1,0 +1,153 @@
+{
+  "design": "hide top-K measured QOI-driving modes; band must widen to cover plausible truths (hidden-mode amplitudes ~ LogNormal(0,SD_A_U)). PASS=covers, FAIL=falsely narrow.",
+  "K_hidden": 3,
+  "qois": {
+    "shear_X": {
+      "hidden_modes_hz": [
+        151.9,
+        168.9,
+        73.7
+      ],
+      "hidden_modes_participation_frac": 0.624,
+      "test_discriminating": true,
+      "L5_theta_only": {
+        "peak_coverage_after_hiding": 0.93,
+        "weighted_coverage_after_hiding": 0.879,
+        "band_grms_before": 124380.8294,
+        "band_grms_after": 124380.8294,
+        "widen_ratio": 1.0,
+        "verdict": "FAIL_overconfident"
+      },
+      "L5_freq_discrep": {
+        "peak_coverage_after_hiding": 1.0,
+        "weighted_coverage_after_hiding": 0.995,
+        "band_grms_before": 223145.9702,
+        "band_grms_after": 366657.9802,
+        "widen_ratio": 1.64,
+        "verdict": "PASS_humble"
+      },
+      "feature_space": {
+        "peak_coverage_after_hiding": 1.0,
+        "weighted_coverage_after_hiding": 0.995,
+        "band_grms_before": 200805.9533,
+        "band_grms_after": 364626.3736,
+        "widen_ratio": 1.82,
+        "verdict": "PASS_humble"
+      },
+      "statfem_Fk": {
+        "peak_coverage_after_hiding": 0.986,
+        "weighted_coverage_after_hiding": 0.977,
+        "band_grms_before": 175841.7591,
+        "band_grms_after": 250142.7607,
+        "widen_ratio": 1.42,
+        "verdict": "PASS_humble"
+      },
+      "hier_pooled": {
+        "peak_coverage_after_hiding": 1.0,
+        "weighted_coverage_after_hiding": 0.993,
+        "band_grms_before": 193089.4813,
+        "band_grms_after": 283559.3768,
+        "widen_ratio": 1.47,
+        "verdict": "PASS_humble"
+      }
+    },
+    "shear_Y": {
+      "hidden_modes_hz": [
+        122.2,
+        196.9,
+        73.1
+      ],
+      "hidden_modes_participation_frac": 0.467,
+      "test_discriminating": true,
+      "L5_theta_only": {
+        "peak_coverage_after_hiding": 0.869,
+        "weighted_coverage_after_hiding": 0.888,
+        "band_grms_before": 95709.1963,
+        "band_grms_after": 95709.1963,
+        "widen_ratio": 1.0,
+        "verdict": "FAIL_overconfident"
+      },
+      "L5_freq_discrep": {
+        "peak_coverage_after_hiding": 1.0,
+        "weighted_coverage_after_hiding": 0.999,
+        "band_grms_before": 250399.4657,
+        "band_grms_after": 319529.0979,
+        "widen_ratio": 1.28,
+        "verdict": "PASS_humble"
+      },
+      "feature_space": {
+        "peak_coverage_after_hiding": 1.0,
+        "weighted_coverage_after_hiding": 0.999,
+        "band_grms_before": 244201.1127,
+        "band_grms_after": 319130.8884,
+        "widen_ratio": 1.31,
+        "verdict": "PASS_humble"
+      },
+      "statfem_Fk": {
+        "peak_coverage_after_hiding": 0.973,
+        "weighted_coverage_after_hiding": 0.98,
+        "band_grms_before": 186341.89,
+        "band_grms_after": 244709.7347,
+        "widen_ratio": 1.31,
+        "verdict": "PASS_humble"
+      },
+      "hier_pooled": {
+        "peak_coverage_after_hiding": 1.0,
+        "weighted_coverage_after_hiding": 0.996,
+        "band_grms_before": 202807.6488,
+        "band_grms_after": 248001.0221,
+        "widen_ratio": 1.22,
+        "verdict": "PASS_humble"
+      }
+    },
+    "normal_Z": {
+      "hidden_modes_hz": [
+        193.7,
+        113.8,
+        117.3
+      ],
+      "hidden_modes_participation_frac": 0.3,
+      "test_discriminating": true,
+      "L5_theta_only": {
+        "peak_coverage_after_hiding": 0.936,
+        "weighted_coverage_after_hiding": 0.939,
+        "band_grms_before": 98020.2666,
+        "band_grms_after": 98020.2666,
+        "widen_ratio": 1.0,
+        "verdict": "FAIL_overconfident"
+      },
+      "L5_freq_discrep": {
+        "peak_coverage_after_hiding": 0.987,
+        "weighted_coverage_after_hiding": 0.992,
+        "band_grms_before": 256105.1817,
+        "band_grms_after": 270922.9577,
+        "widen_ratio": 1.06,
+        "verdict": "PASS_humble"
+      },
+      "feature_space": {
+        "peak_coverage_after_hiding": 0.986,
+        "weighted_coverage_after_hiding": 0.992,
+        "band_grms_before": 254497.4453,
+        "band_grms_after": 270674.5207,
+        "widen_ratio": 1.06,
+        "verdict": "PASS_humble"
+      },
+      "statfem_Fk": {
+        "peak_coverage_after_hiding": 0.99,
+        "weighted_coverage_after_hiding": 0.991,
+        "band_grms_before": 239852.0546,
+        "band_grms_after": 251875.023,
+        "widen_ratio": 1.05,
+        "verdict": "PASS_humble"
+      },
+      "hier_pooled": {
+        "peak_coverage_after_hiding": 0.99,
+        "weighted_coverage_after_hiding": 0.992,
+        "band_grms_before": 192578.1927,
+        "band_grms_after": 201410.5885,
+        "widen_ratio": 1.05,
+        "verdict": "PASS_humble"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+ "verdict": "D14 (rotational COPV mount, k_rot=1e4 N*m/rad) \u2014 tray/strut/avionics RMS change <= 2.2% (basis-rebuild noise; the removed spin mode IS unforced for these). BUT COPV channels change up to 625.9% (REFUTES the 'QOI-invisible' hypothesis for COPV): the rotational mount stiffness is a REAL COPV load path. The v1 COPV numbers used a non-physical free-spin mount and are SUPERSEDED by D14; rotational mount stiffness is promoted to a sensitivity variable.",
+ "bcA_worst_pct": 625.893,
+ "bcB_worst_pct": 0.0
+}

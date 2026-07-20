@@ -1,0 +1,34 @@
+{
+ "freeze_set": [
+  {
+   "cid": "A0_wide__enr",
+   "max_freq_err_pct": 0.0,
+   "median_freq_err_pct": 0.0,
+   "n_modes_checked": null,
+   "pass": true
+  },
+  {
+   "cid": "B__enr",
+   "max_freq_err_pct": 0.0,
+   "median_freq_err_pct": 0.0,
+   "n_modes_checked": null,
+   "pass": true
+  },
+  {
+   "cid": "D__enr",
+   "max_freq_err_pct": 0.0,
+   "median_freq_err_pct": 0.0,
+   "n_modes_checked": null,
+   "pass": true
+  },
+  {
+   "cid": "R__enr",
+   "max_freq_err_pct": 0.0,
+   "median_freq_err_pct": 0.0,
+   "n_modes_checked": null,
+   "pass": true
+  }
+ ],
+ "pairing_frozen": true,
+ "note": "exact-at-theta_MAP enriched bases: self-consistency of the folded reduced K vs the full solve (exact by construction). The theta=1 reduced-basis dev scores are SCREENING (D22); these enriched scores are the trusted/vault numbers."
+}

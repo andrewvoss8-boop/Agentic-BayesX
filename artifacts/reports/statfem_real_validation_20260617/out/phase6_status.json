@@ -1,0 +1,19 @@
+{
+  "deliverable": "Phase6_revalidate_on_refined_mesh",
+  "card_d_workspace": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_remesh_20260618",
+  "checked_for": [
+    "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_remesh_20260618/out/refined_reduced.npz",
+    "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_remesh_20260618/out/reduced_blocks_refined.npz",
+    "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_remesh_20260618/out/refined_fem_reduced.npz",
+    "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_remesh_20260618/out/refined_model.npz"
+  ],
+  "status": "BLOCKED",
+  "reason": "Card D has not yet delivered a refined-mesh reduced FEM (only region_diagnosis.json present). Re-validation harness is ready; re-run this script when the refined reduced model lands. No numbers fabricated.",
+  "protocol_when_unblocked": [
+    "point realfrf.load_reduced at the refined reduced model (same A/A_fix/row-map format)",
+    "python code/heldout_qoi.py --force  -> out/heldout_qoi_L5.json (refined)",
+    "python code/mc_beck_full.py 25      -> out/mc_beck_full_summary.json (refined)",
+    "compare held-out peak/band IS at hard channels {4,27,40,52,69,92,98} vs the coarse-mesh baseline",
+    "GREEN only if the refined mesh measurably lowers held-out IS at the hard channels (before/after table)"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "reference": "+X",
+  "n_channels": 84,
+  "median_logH_corr_original": 0.269,
+  "median_logH_corr_updated": 0.338,
+  "frac_channels_updated_better": 0.7,
+  "note": "deterministic physics participations + 1 global gain; updated = measured freq + damping (calibration)"
+}

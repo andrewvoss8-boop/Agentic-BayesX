@@ -1,0 +1,30 @@
+{
+  "likelihood": "L8_Beck_mode_matching_free (Rayleigh + orthogonal MAC, free system shapes)",
+  "split_seed": 0,
+  "n_modes": 12,
+  "n_observed": 48,
+  "n_heldout": 32,
+  "tau": 0.3,
+  "diag": {
+    "max_rhat": 1.0036631192603176,
+    "min_ess": 2260.0543981216188,
+    "divergences": 0,
+    "converged": true
+  },
+  "sigma_phi_med": 0.8002326434673633,
+  "sigma_w2_med": 0.7589390915536633,
+  "heldout_shape_MAC": {
+    "inferred_mean": 0.04192309712460839,
+    "fem_mean": 0.04130976506522631,
+    "inferred_median": 0.0026785682612748716,
+    "fem_median": 0.002705191462199937,
+    "n_modes_improved": 9
+  },
+  "theta_med": {
+    "bottom_box": 0.43180132026580953,
+    "cross_beam": 0.7635138520106007,
+    "plates": 0.7163214034242347,
+    "top_box": 0.21501601937958323
+  },
+  "runtime_s": 19.078901052474976
+}

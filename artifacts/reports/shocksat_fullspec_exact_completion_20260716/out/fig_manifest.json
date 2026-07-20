@@ -1,0 +1,15 @@
+{
+ "figures": [
+  {
+   "file": "figures/fig_arms_bands_corrected.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/verdicts_final.json (repair numbers + T1 arm C); out/armC_exact.json"
+  },
+  {
+   "file": "figures/fig_screening_vs_exact.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/exact_rerank.json"
+  }
+ ],
+ "tufte_note": "skill read and applied; deviations documented in this script's docstring and ON each figure"
+}

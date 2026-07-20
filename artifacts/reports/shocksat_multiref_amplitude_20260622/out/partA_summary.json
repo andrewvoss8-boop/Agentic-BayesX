@@ -1,0 +1,26 @@
+{
+  "deliverable": "Part A reproduction vs Card F documented headline (+X single-reference)",
+  "frequency": {
+    "reproduced_crps_skill": 0.9306578407721781,
+    "cardF_crps_skill": 0.9306578407721781,
+    "reproduced_freq_err_pct": [
+      2.1019692014386604,
+      1.0667620729129084
+    ]
+  },
+  "amplitude": {
+    "reproduced_nonhard_skill_per_seed": [
+      -0.7587735012783043,
+      -0.8412694965265117,
+      -1.399245199473869
+    ],
+    "reproduced_nonhard_skill_mean": -0.9997627324262283,
+    "cardF_mean": -1.0
+  },
+  "beck_shapefield": {
+    "reproduced_fem_skill": -0.6796203004290423,
+    "reproduced_inf_skill": -0.251943656567879,
+    "cardF_fem": -0.68,
+    "cardF_inf": -0.25
+  }
+}

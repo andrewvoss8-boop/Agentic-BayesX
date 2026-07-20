@@ -1,0 +1,84 @@
+{
+  "deliverable": "best agentic remesh (al_rho_lo) + best Bayesian updating (modal-feature NUTS), honest metric",
+  "best_remesh": "al_rho_lo",
+  "edit": {
+    "mass_scale": {
+      "aluminum": 0.8
+    }
+  },
+  "selfcheck_baseline_updated_corr": 0.338,
+  "n_matched_modes": 28,
+  "heldout_sigma_al_rho_lo": 0.804,
+  "remesh_oracle_cal_corr": 0.267,
+  "remesh_oracle_cal_frac_gt0.5": 0.13,
+  "reduced_blocks_consistency_max_rel_err": 1.6814008727584488e-09,
+  "bayes_on_remesh": {
+    "n_pooled_modes": 21,
+    "convergence": {
+      "max_rhat": 1.004,
+      "min_ESS": 774.0,
+      "divergences": 0,
+      "converged": true,
+      "chains": 4
+    },
+    "sigma_w2_rel_median": 0.0531,
+    "heldout_freq_err_pct_calibrated": 4.23,
+    "heldout_freq_err_pct_nominal": 2.92,
+    "theta_2.5_50_97.5": {
+      "al_welds": [
+        0.618,
+        1.014,
+        1.677
+      ],
+      "angle_brackets": [
+        0.616,
+        1.006,
+        1.68
+      ],
+      "bottom_box": [
+        0.899,
+        0.951,
+        1.01
+      ],
+      "contact": [
+        0.615,
+        1.01,
+        1.643
+      ],
+      "cross_beam": [
+        0.619,
+        1.149,
+        2.087
+      ],
+      "joints": [
+        0.577,
+        0.896,
+        1.324
+      ],
+      "plates": [
+        0.882,
+        0.973,
+        1.118
+      ],
+      "steel_welds": [
+        0.616,
+        1.02,
+        1.677
+      ],
+      "top_box": [
+        0.899,
+        1.087,
+        1.228
+      ]
+    }
+  },
+  "remesh_bayes_cal_corr": 0.183,
+  "remesh_bayes_cal_frac_gt0.5": 0.06,
+  "summary": {
+    "inherited_FEM_no_cal (fig)": 0.269,
+    "inherited_FEM_calibrated_honest (selfcheck)": 0.338,
+    "best_remesh_calibrated_oracle_honest": 0.267,
+    "best_remesh_calibrated_BAYES_honest": 0.183,
+    "best_remesh_generous_LSQ_metric (modelform_sweep)": 0.379
+  }
+}

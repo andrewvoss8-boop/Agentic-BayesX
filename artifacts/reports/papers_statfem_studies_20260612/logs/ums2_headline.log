@@ -1,0 +1,8 @@
+unified_fem {'tag': 'unified_fem', 'max_rhat': 50.762, 'min_ess': 2.0022, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 993.3873, 'n_draws': 2800}
+iid_fem {'tag': 'iid_fem', 'max_rhat': 29.5746, 'min_ess': 2.0041, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 165.7941, 'n_draws': 2000}
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/run_ums2.py", line 209, in <module>
+    main()
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/run_ums2.py", line 191, in main
+    len_f=flu["len_f"], len_z=flu["len_z"], sig_add=flu["sig_add"], NM=NM)
+KeyError: 'sig_add'

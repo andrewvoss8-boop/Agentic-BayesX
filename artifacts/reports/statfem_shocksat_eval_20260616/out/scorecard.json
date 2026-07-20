@@ -1,0 +1,54 @@
+{
+ "rows": [
+  {
+   "claim": "A converged naive (no-discrepancy) Bayesian calibration can be CONFIDENTLY WRONG on held-out QOIs under model-form error, with no warning.",
+   "evidence": "naive (M0) mean held-out-QOI coverage over 5 combos = 0.10 (nominal 0.95), with the tightest bands (mean 95% peak-band width 0.2 dB) and sigma_d FIXED 0 (no error mechanism).",
+   "verdict": "GREEN",
+   "improvement": "never ship a no-discrepancy twin for off-sensor QOIs; require a held-out coverage gate."
+  },
+  {
+   "claim": "A learned discrepancy detects model-form error (sigma_d rises above ~0).",
+   "evidence": "learned sigma_d means: iid 0.079, Schneider 0.082, orthogonal 0.082 (injected Schneider std 0.03-0.12).",
+   "verdict": "GREEN",
+   "improvement": "report sigma_d as a model-form-error thermometer alongside every QOI."
+  },
+  {
+   "claim": "StatFEM discrepancy RESTORES held-out-QOI coverage where naive is confidently wrong.",
+   "evidence": "best StatFEM-arm mean coverage 0.89 vs naive 0.10 (iid 0.57, Schneider 0.89, orthogonal 0.89).",
+   "verdict": "YELLOW",
+   "improvement": "if coverage is restored only by wide bands, pursue the spatial-correlation (Schneider) transfer to sharpen; if not restored, the discrepancy structure is mis-specified."
+  },
+  {
+   "claim": "A correlated (Schneider freq+space) discrepancy beats iid where the error is structured (spatial transfer to held-out sensors).",
+   "evidence": "Schneider mean coverage 0.89 vs iid 0.57; Schneider mean band width 2.5 dB vs iid 2.3 dB.",
+   "verdict": "GREEN",
+   "improvement": "use the kriged spatial discrepancy to predict un-instrumented sensors; calibrate the correlation lengths from a few repeated measurements rather than assuming them."
+  },
+  {
+   "claim": "An ORTHOGONAL discrepancy (out of the theta-sensitivity span) avoids over-absorption / Plumlee plug-in bias of theta.",
+   "evidence": "theta bias on biased identifiable groups: Schneider 0.003 vs orthogonal 0.010; orthogonal held-out coverage 0.89.",
+   "verdict": "YELLOW",
+   "improvement": "use the orthogonal projection when theta has physical meaning (de-biases it); accept possibly wider QOI bands as the honest cost."
+  },
+  {
+   "claim": "theta recovery is partial: identifiable groups recover; unidentifiable ones are missed (tied to the modal strain-energy / FIM gate, NOT a sampler bug).",
+   "evidence": "identifiable set (strain energy) = ['bottom_box', 'cross_beam', 'plates', 'top_box']; on biased groups, theta-covered fraction = 1.0 (identifiable) vs 1.0 (unidentifiable).",
+   "verdict": "YELLOW",
+   "improvement": "spend the next test on sensors/bands that excite the unidentified groups (joints ~147 Hz band) or coarsen the parameterization; do not claim recovery of out-of-floor parameters."
+  },
+  {
+   "claim": "The robust/brittle verdict is stable across the 5 bias combos (not fragile).",
+   "evidence": "per-arm coverage std over 5 combos: M0 0.083, M1 0.146, M2 0.069, M3 0.083",
+   "verdict": "GREEN",
+   "improvement": "report coverage as a distribution over realizations, never a single number."
+  }
+ ],
+ "headline": {
+  "naive_mean_coverage": 0.1,
+  "best_statfem_mean_coverage": 0.8857142857142858,
+  "iid": 0.5714285714285714,
+  "schneider": 0.8857142857142858,
+  "orthogonal": 0.8857142857142858,
+  "verdict_one_line": "StatFEM discrepancy improves but does not fully restore held-out-QOI coverage"
+ }
+}

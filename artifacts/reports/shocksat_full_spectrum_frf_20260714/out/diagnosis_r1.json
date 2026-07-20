@@ -1,0 +1,765 @@
+{
+ "round": 1,
+ "model": "A0_wide",
+ "region_axis_band": {
+  "Bottom_Box|X|b200_500": {
+   "n_ch_drive": 70,
+   "mean_abs_resid_dex": 0.605,
+   "median_corr": 0.139
+  },
+  "Bottom_Box|X|sub200": {
+   "n_ch_drive": 70,
+   "mean_abs_resid_dex": 0.633,
+   "median_corr": 0.1
+  },
+  "Bottom_Box|Y|b200_500": {
+   "n_ch_drive": 72,
+   "mean_abs_resid_dex": 0.555,
+   "median_corr": 0.122
+  },
+  "Bottom_Box|Y|sub200": {
+   "n_ch_drive": 72,
+   "mean_abs_resid_dex": 0.756,
+   "median_corr": -0.143
+  },
+  "Bottom_Box|Z|b200_500": {
+   "n_ch_drive": 74,
+   "mean_abs_resid_dex": 0.578,
+   "median_corr": -0.083
+  },
+  "Bottom_Box|Z|sub200": {
+   "n_ch_drive": 74,
+   "mean_abs_resid_dex": 0.685,
+   "median_corr": -0.003
+  },
+  "Cross_Beam|X|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.476,
+   "median_corr": 0.36
+  },
+  "Cross_Beam|X|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.493,
+   "median_corr": 0.557
+  },
+  "Cross_Beam|Y|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.535,
+   "median_corr": 0.139
+  },
+  "Cross_Beam|Y|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.539,
+   "median_corr": 0.507
+  },
+  "Cross_Beam|Z|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.562,
+   "median_corr": 0.043
+  },
+  "Cross_Beam|Z|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.607,
+   "median_corr": 0.491
+  },
+  "Rectangular_Plates|Y|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.679,
+   "median_corr": -0.002
+  },
+  "Rectangular_Plates|Y|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.901,
+   "median_corr": 0.416
+  },
+  "Rectangular_Plates|Z|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.533,
+   "median_corr": 0.106
+  },
+  "Rectangular_Plates|Z|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.416,
+   "median_corr": 0.414
+  },
+  "Top_Box|X|b200_500": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.673,
+   "median_corr": 0.24
+  },
+  "Top_Box|X|sub200": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.594,
+   "median_corr": 0.17
+  },
+  "Top_Box|Y|b200_500": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.593,
+   "median_corr": 0.123
+  },
+  "Top_Box|Y|sub200": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.686,
+   "median_corr": 0.165
+  },
+  "Top_Box|Z|b200_500": {
+   "n_ch_drive": 43,
+   "mean_abs_resid_dex": 0.625,
+   "median_corr": -0.028
+  },
+  "Top_Box|Z|sub200": {
+   "n_ch_drive": 43,
+   "mean_abs_resid_dex": 0.676,
+   "median_corr": 0.224
+  },
+  "Top_Brackets|X|b200_500": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.471,
+   "median_corr": 0.448
+  },
+  "Top_Brackets|X|sub200": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.563,
+   "median_corr": 0.562
+  },
+  "Top_Brackets|Y|b200_500": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.619,
+   "median_corr": 0.119
+  },
+  "Top_Brackets|Y|sub200": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.734,
+   "median_corr": 0.356
+  },
+  "Top_Brackets|Z|b200_500": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.566,
+   "median_corr": 0.046
+  },
+  "Top_Brackets|Z|sub200": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.624,
+   "median_corr": -0.139
+  },
+  "Top_Circular_Plate|X|b200_500": {
+   "n_ch_drive": 3,
+   "mean_abs_resid_dex": 0.491,
+   "median_corr": 0.256
+  },
+  "Top_Circular_Plate|X|sub200": {
+   "n_ch_drive": 3,
+   "mean_abs_resid_dex": 0.596,
+   "median_corr": 0.01
+  },
+  "Top_Circular_Plate|Y|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.496,
+   "median_corr": -0.044
+  },
+  "Top_Circular_Plate|Y|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.603,
+   "median_corr": 0.29
+  },
+  "Top_Circular_Plate|Z|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.49,
+   "median_corr": 0.259
+  },
+  "Top_Circular_Plate|Z|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.561,
+   "median_corr": 0.413
+  }
+ },
+ "worst_channels": [
+  {
+   "drive": "m_zpos_900z",
+   "daq": 8,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.664,
+   "corr": -0.836
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 5,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.653,
+   "corr": -0.798
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 14,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.525,
+   "corr": -0.877
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 44,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.432,
+   "corr": -0.237
+  },
+  {
+   "drive": "m_ypos_990y",
+   "daq": 23,
+   "region": "Bottom_Box",
+   "axis": "Z",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.425,
+   "corr": -0.282
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 69,
+   "region": "Top_Box",
+   "axis": "X",
+   "band": "b200_500",
+   "mean_abs_resid_dex": 1.398,
+   "corr": 0.053
+  },
+  {
+   "drive": "m_ypos_990y",
+   "daq": 103,
+   "region": "Bottom_Box",
+   "axis": "Z",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.392,
+   "corr": -0.161
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 63,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.357,
+   "corr": -0.856
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 45,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.325,
+   "corr": -0.465
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 78,
+   "region": "Top_Box",
+   "axis": "X",
+   "band": "b200_500",
+   "mean_abs_resid_dex": 1.29,
+   "corr": 0.168
+  },
+  {
+   "drive": "m_ypos_990y",
+   "daq": 66,
+   "region": "Top_Box",
+   "axis": "Z",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.278,
+   "corr": -0.557
+  },
+  {
+   "drive": "m_xpos_990x",
+   "daq": 40,
+   "region": "Bottom_Box",
+   "axis": "X",
+   "band": "b200_500",
+   "mean_abs_resid_dex": 1.264,
+   "corr": 0.082
+  },
+  {
+   "drive": "m_xpos_990x",
+   "daq": 104,
+   "region": "Bottom_Box",
+   "axis": "X",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.258,
+   "corr": 0.323
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 11,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.249,
+   "corr": -0.694
+  },
+  {
+   "drive": "m_xpos_990x",
+   "daq": 24,
+   "region": "Bottom_Box",
+   "axis": "X",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.238,
+   "corr": 0.136
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 69,
+   "region": "Top_Box",
+   "axis": "X",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.214,
+   "corr": 0.545
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 7,
+   "region": "Bottom_Box",
+   "axis": "X",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.207,
+   "corr": -0.728
+  },
+  {
+   "drive": "m_xpos_990x",
+   "daq": 38,
+   "region": "Bottom_Box",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.188,
+   "corr": 0.557
+  },
+  {
+   "drive": "m_ypos_990y",
+   "daq": 102,
+   "region": "Rectangular_Plates",
+   "axis": "Y",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.184,
+   "corr": -0.685
+  },
+  {
+   "drive": "m_xpos_990x",
+   "daq": 24,
+   "region": "Bottom_Box",
+   "axis": "X",
+   "band": "b200_500",
+   "mean_abs_resid_dex": 1.174,
+   "corr": 0.399
+  },
+  {
+   "drive": "m_ypos_990y",
+   "daq": 6,
+   "region": "Bottom_Box",
+   "axis": "Z",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.167,
+   "corr": -0.728
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 50,
+   "region": "Bottom_Box",
+   "axis": "X",
+   "band": "b200_500",
+   "mean_abs_resid_dex": 1.159,
+   "corr": 0.39
+  },
+  {
+   "drive": "m_zpos_990z",
+   "daq": 12,
+   "region": "Bottom_Box",
+   "axis": "Z",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.156,
+   "corr": -0.613
+  },
+  {
+   "drive": "m_xpos_990x",
+   "daq": 23,
+   "region": "Bottom_Box",
+   "axis": "Z",
+   "band": "b200_500",
+   "mean_abs_resid_dex": 1.146,
+   "corr": -0.298
+  },
+  {
+   "drive": "m_zpos_900z",
+   "daq": 62,
+   "region": "Bottom_Box",
+   "axis": "Z",
+   "band": "sub200",
+   "mean_abs_resid_dex": 1.141,
+   "corr": -0.734
+  }
+ ],
+ "survey_peak_df": [
+  {
+   "f_test": 54.2,
+   "f_model": 54.8,
+   "df_pct": 1.18,
+   "mac": 0.97
+  },
+  {
+   "f_test": 70.0,
+   "f_model": 73.8,
+   "df_pct": 5.46,
+   "mac": 0.497
+  },
+  {
+   "f_test": 75.0,
+   "f_model": 73.2,
+   "df_pct": -2.32,
+   "mac": 0.512
+  },
+  {
+   "f_test": 85.8,
+   "f_model": 88.4,
+   "df_pct": 3.08,
+   "mac": 0.883
+  },
+  {
+   "f_test": 107.0,
+   "f_model": 103.4,
+   "df_pct": -3.36,
+   "mac": 0.975
+  },
+  {
+   "f_test": 117.6,
+   "f_model": 122.2,
+   "df_pct": 3.85,
+   "mac": 0.899
+  },
+  {
+   "f_test": 118.5,
+   "f_model": 114.6,
+   "df_pct": -3.33,
+   "mac": 0.958
+  },
+  {
+   "f_test": 125.0,
+   "f_model": 118.8,
+   "df_pct": -4.98,
+   "mac": 0.704
+  },
+  {
+   "f_test": 137.2,
+   "f_model": 141.9,
+   "df_pct": 3.37,
+   "mac": 0.692
+  },
+  {
+   "f_test": 151.2,
+   "f_model": 149.9,
+   "df_pct": -0.86,
+   "mac": 0.61
+  },
+  {
+   "f_test": 158.2,
+   "f_model": 141.7,
+   "df_pct": -10.42,
+   "mac": 0.581
+  },
+  {
+   "f_test": 165.9,
+   "f_model": 153.1,
+   "df_pct": -7.73,
+   "mac": 0.755
+  },
+  {
+   "f_test": 168.0,
+   "f_model": 180.5,
+   "df_pct": 7.44,
+   "mac": 0.703
+  },
+  {
+   "f_test": 172.3,
+   "f_model": 182.1,
+   "df_pct": 5.72,
+   "mac": 0.737
+  },
+  {
+   "f_test": 174.8,
+   "f_model": 169.1,
+   "df_pct": -3.22,
+   "mac": 0.639
+  },
+  {
+   "f_test": 184.4,
+   "f_model": 179.9,
+   "df_pct": -2.41,
+   "mac": 0.889
+  },
+  {
+   "f_test": 188.6,
+   "f_model": 184.7,
+   "df_pct": -2.11,
+   "mac": 0.69
+  },
+  {
+   "f_test": 190.2,
+   "f_model": 193.4,
+   "df_pct": 1.66,
+   "mac": 0.34
+  },
+  {
+   "f_test": 195.7,
+   "f_model": 190.8,
+   "df_pct": -2.53,
+   "mac": 0.391
+  },
+  {
+   "f_test": 197.8,
+   "f_model": 194.3,
+   "df_pct": -1.76,
+   "mac": 0.661
+  },
+  {
+   "f_test": 198.9,
+   "f_model": 192.1,
+   "df_pct": -3.39,
+   "mac": 0.387
+  },
+  {
+   "f_test": 222.2,
+   "f_model": 212.2,
+   "df_pct": -4.48,
+   "mac": 0.62
+  },
+  {
+   "f_test": 230.7,
+   "f_model": 249.3,
+   "df_pct": 8.08,
+   "mac": 0.427
+  },
+  {
+   "f_test": 232.7,
+   "f_model": 229.7,
+   "df_pct": -1.29,
+   "mac": 0.304
+  },
+  {
+   "f_test": 235.3,
+   "f_model": 239.2,
+   "df_pct": 1.66,
+   "mac": 0.342
+  }
+ ],
+ "extended_peak_match": [
+  {
+   "f_meas": 254.3,
+   "f_model_nearest": 254.4,
+   "df_pct": 0.05
+  },
+  {
+   "f_meas": 274.7,
+   "f_model_nearest": 274.4,
+   "df_pct": -0.11
+  },
+  {
+   "f_meas": 296.5,
+   "f_model_nearest": 295.5,
+   "df_pct": -0.35
+  },
+  {
+   "f_meas": 342.3,
+   "f_model_nearest": 341.3,
+   "df_pct": -0.31
+  },
+  {
+   "f_meas": 354.0,
+   "f_model_nearest": 354.8,
+   "df_pct": 0.22
+  },
+  {
+   "f_meas": 366.9,
+   "f_model_nearest": 368.5,
+   "df_pct": 0.43
+  },
+  {
+   "f_meas": 463.9,
+   "f_model_nearest": 463.0,
+   "df_pct": -0.19
+  },
+  {
+   "f_meas": 545.9,
+   "f_model_nearest": 546.2,
+   "df_pct": 0.05
+  },
+  {
+   "f_meas": 598.1,
+   "f_model_nearest": 593.0,
+   "df_pct": -0.86
+  },
+  {
+   "f_meas": 883.6,
+   "f_model_nearest": 737.7,
+   "df_pct": -16.51
+  },
+  {
+   "f_meas": 975.9,
+   "f_model_nearest": 737.7,
+   "df_pct": -24.41
+  }
+ ],
+ "strain_energy_top4": {
+  "54.2Hz": {
+   "bottom_box": 0.988,
+   "steel_welds": 0.011,
+   "top_box": 0.001,
+   "joints": 0.0
+  },
+  "70.0Hz": {
+   "bottom_box": 0.962,
+   "top_box": 0.013,
+   "joints": 0.009,
+   "steel_welds": 0.008
+  },
+  "75.0Hz": {
+   "bottom_box": 0.964,
+   "top_box": 0.013,
+   "plates": 0.008,
+   "steel_welds": 0.007
+  },
+  "85.8Hz": {
+   "bottom_box": 0.988,
+   "steel_welds": 0.01,
+   "top_box": 0.001,
+   "joints": 0.0
+  },
+  "107.0Hz": {
+   "top_box": 0.892,
+   "al_welds": 0.044,
+   "cross_beam": 0.037,
+   "angle_brackets": 0.012
+  },
+  "117.6Hz": {
+   "plates": 0.44,
+   "top_box": 0.332,
+   "joints": 0.103,
+   "bottom_box": 0.098
+  },
+  "118.5Hz": {
+   "bottom_box": 0.584,
+   "cross_beam": 0.185,
+   "top_box": 0.122,
+   "angle_brackets": 0.065
+  },
+  "125.0Hz": {
+   "bottom_box": 0.358,
+   "cross_beam": 0.298,
+   "top_box": 0.206,
+   "angle_brackets": 0.096
+  },
+  "137.2Hz": {
+   "plates": 0.477,
+   "top_box": 0.428,
+   "cross_beam": 0.043,
+   "bottom_box": 0.022
+  },
+  "151.2Hz": {
+   "top_box": 0.812,
+   "bottom_box": 0.111,
+   "cross_beam": 0.028,
+   "al_welds": 0.024
+  },
+  "158.2Hz": {
+   "plates": 0.981,
+   "top_box": 0.014,
+   "bottom_box": 0.002,
+   "joints": 0.002
+  },
+  "165.9Hz": {
+   "bottom_box": 0.954,
+   "plates": 0.031,
+   "top_box": 0.008,
+   "steel_welds": 0.004
+  },
+  "168.0Hz": {
+   "plates": 0.433,
+   "top_box": 0.404,
+   "cross_beam": 0.062,
+   "bottom_box": 0.038
+  },
+  "172.3Hz": {
+   "bottom_box": 0.402,
+   "top_box": 0.248,
+   "plates": 0.129,
+   "joints": 0.121
+  },
+  "174.8Hz": {
+   "top_box": 0.856,
+   "bottom_box": 0.068,
+   "joints": 0.036,
+   "cross_beam": 0.019
+  },
+  "184.4Hz": {
+   "top_box": 0.424,
+   "plates": 0.362,
+   "cross_beam": 0.072,
+   "bottom_box": 0.068
+  },
+  "188.6Hz": {
+   "bottom_box": 0.992,
+   "steel_welds": 0.005,
+   "top_box": 0.002,
+   "plates": 0.0
+  },
+  "190.2Hz": {
+   "bottom_box": 0.935,
+   "top_box": 0.03,
+   "steel_welds": 0.022,
+   "plates": 0.007
+  },
+  "195.7Hz": {
+   "top_box": 0.671,
+   "cross_beam": 0.115,
+   "plates": 0.098,
+   "bottom_box": 0.087
+  },
+  "197.8Hz": {
+   "bottom_box": 0.955,
+   "steel_welds": 0.023,
+   "top_box": 0.016,
+   "plates": 0.003
+  },
+  "198.9Hz": {
+   "bottom_box": 0.977,
+   "steel_welds": 0.018,
+   "top_box": 0.005,
+   "cross_beam": 0.0
+  },
+  "222.2Hz": {
+   "bottom_box": 0.528,
+   "top_box": 0.353,
+   "joints": 0.047,
+   "plates": 0.043
+  },
+  "230.7Hz": {
+   "bottom_box": 0.543,
+   "top_box": 0.316,
+   "joints": 0.055,
+   "cross_beam": 0.039
+  },
+  "232.7Hz": {
+   "top_box": 0.884,
+   "angle_brackets": 0.038,
+   "contact": 0.023,
+   "plates": 0.017
+  },
+  "235.3Hz": {
+   "top_box": 0.857,
+   "plates": 0.065,
+   "contact": 0.028,
+   "angle_brackets": 0.016
+  }
+ },
+ "note": "TRAIN-side residual fields; no fold dev scores computed here"
+}

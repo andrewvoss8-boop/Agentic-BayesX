@@ -1,0 +1,99 @@
+{
+ "cid": "a04_welds_t074",
+ "axes": {
+  "shear_X": {
+   "per_drive": [
+    {
+     "drive": "m_xpos_990x",
+     "coverage": 0.997,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_990z",
+     "coverage": 0.946,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_ypos_990y",
+     "coverage": 0.991,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_900z",
+     "coverage": 0.982,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    }
+   ],
+   "min_coverage": 0.946,
+   "max_exceed_dB": 0.0,
+   "band_over_fem6db": 1.51
+  },
+  "shear_Y": {
+   "per_drive": [
+    {
+     "drive": "m_xpos_990x",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_990z",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_ypos_990y",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_900z",
+     "coverage": 0.687,
+     "exceed_dB": 0.725,
+     "n_ch": 104
+    }
+   ],
+   "min_coverage": 0.687,
+   "max_exceed_dB": 0.725,
+   "band_over_fem6db": 1.55
+  },
+  "normal_Z": {
+   "per_drive": [
+    {
+     "drive": "m_xpos_990x",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_990z",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_ypos_990y",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_900z",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    }
+   ],
+   "min_coverage": 1.0,
+   "max_exceed_dB": 0.0,
+   "band_over_fem6db": 2.192
+  }
+ },
+ "convention": "netcg statFEM F(k); coverage hard gate >=0.95 wtd, <=0.5 dB energy-wtd exceedance; per-drive answer keys"
+}

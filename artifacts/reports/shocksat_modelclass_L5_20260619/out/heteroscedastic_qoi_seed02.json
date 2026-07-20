@@ -1,0 +1,61 @@
+{
+  "deliverable": "Phase-C two-population (hard vs rest) discrepancy -> does it tighten the CI honestly?",
+  "split_seed": 2,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "n_obs_hard": 7,
+  "n_ho_hard": 1,
+  "sigma_pooled": 1.0590297200907188,
+  "sigma_hard": 1.5833878554294583,
+  "sigma_rest": 0.8386774603189584,
+  "calib_converged": true,
+  "POOLED_discrepancy": {
+    "overall": {
+      "interval_score_mean": 1527.5098440891743,
+      "crps_mean": 103.9934202761592,
+      "logpd_mean": -6.3216010404620215,
+      "coverage_frac": 1.0,
+      "mean_width_db": 35.489969789581586,
+      "pit_ks_dev": 0.24153225806451611,
+      "pit_mean": 0.3706451612903226,
+      "z_mean": 0.06920698165620871,
+      "z_std": 0.6928558129279778,
+      "n_channels": 31
+    },
+    "rest": {
+      "coverage": 1.0,
+      "interval_mean": 1529.1523492115468,
+      "n": 30
+    },
+    "hard": {
+      "coverage": 1.0,
+      "interval_mean": 1478.2346904180013,
+      "n": 1
+    }
+  },
+  "TWOPOP_discrepancy": {
+    "overall": {
+      "interval_score_mean": 1157.4647523842757,
+      "crps_mean": 98.40065581763757,
+      "logpd_mean": -6.15964539102001,
+      "coverage_frac": 0.9354838709677419,
+      "mean_width_db": 28.999680992401025,
+      "pit_ks_dev": 0.27548387096774196,
+      "pit_mean": 0.3524999999999999,
+      "z_mean": 0.117891869170244,
+      "z_std": 1.1154038224609508,
+      "n_channels": 31
+    },
+    "rest": {
+      "coverage": 0.9333333333333333,
+      "interval_mean": 1042.3514578396712,
+      "n": 30
+    },
+    "hard": {
+      "coverage": 1.0,
+      "interval_mean": 4610.863588722414,
+      "n": 1
+    }
+  },
+  "runtime_s": 173.28763103485107
+}

@@ -1,0 +1,555 @@
+{
+ "A0": {
+  "screen": {
+   "sub200": 0.1308132274174828,
+   "b200_500": 0.07422469972410808
+  },
+  "exact": {
+   "sub200": 0.11157480586507082,
+   "b200_500": 0.05008684661427574,
+   "folds": {
+    "m_xpos_990x": {
+     "sub200": {
+      "P1p": 0.29657098432112894,
+      "P3": 0.2854960042686369,
+      "n_ch": 100,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.0560670881438077,
+      "P3": 0.052089213742346346,
+      "n_ch": 104,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_990z": {
+     "sub200": {
+      "P1p": 0.48517575383342776,
+      "P3": 0.4724757127901109,
+      "n_ch": 57,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": -0.026324452250874302,
+      "P3": -0.04986201731987865,
+      "n_ch": 101,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_ypos_990y": {
+     "sub200": {
+      "P1p": -0.029055114762423957,
+      "P3": -0.03198965721800468,
+      "n_ch": 94,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.09365869421470997,
+      "P3": 0.0989923014106785,
+      "n_ch": 103,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_900z": {
+     "sub200": {
+      "P1p": -0.3063923999318494,
+      "P3": -0.3066242752071769,
+      "n_ch": 87,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.07694605634945959,
+      "P3": 0.11429398480565137,
+      "n_ch": 97,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    }
+   }
+  }
+ },
+ "A1": {
+  "screen": {
+   "sub200": 0.14536268399461483,
+   "b200_500": 0.05815259893628143
+  },
+  "exact": {
+   "sub200": 0.11368464966420273,
+   "b200_500": 0.033476029911270806,
+   "folds": {
+    "m_xpos_990x": {
+     "sub200": {
+      "P1p": 0.27383077524106014,
+      "P3": 0.29672001157709904,
+      "n_ch": 100,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.05627857845439767,
+      "P3": 0.06041612102301715,
+      "n_ch": 104,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_990z": {
+     "sub200": {
+      "P1p": 0.4981758785260245,
+      "P3": 0.48249248493052843,
+      "n_ch": 57,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": -0.047006571666087425,
+      "P3": -0.047052447191250533,
+      "n_ch": 101,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_ypos_990y": {
+     "sub200": {
+      "P1p": -0.0019679768987999383,
+      "P3": -0.02413484481697676,
+      "n_ch": 94,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.037861879952953634,
+      "P3": 0.08860963798005426,
+      "n_ch": 103,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_900z": {
+     "sub200": {
+      "P1p": -0.3153000782114738,
+      "P3": -0.3173805846474629,
+      "n_ch": 87,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.08677023290381934,
+      "P3": 0.10826605174128963,
+      "n_ch": 97,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    }
+   }
+  }
+ },
+ "B": {
+  "screen": {
+   "sub200": 0.14199298776685407,
+   "b200_500": 0.1678859759951733
+  },
+  "exact": {
+   "sub200": 0.15410650055733566,
+   "b200_500": 0.1974333573951441,
+   "folds": {
+    "m_xpos_990x": {
+     "sub200": {
+      "P1p": 0.30447013253557575,
+      "P3": 0.2828569323988736,
+      "n_ch": 100,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.14421847931605206,
+      "P3": 0.13106828187235375,
+      "n_ch": 104,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_990z": {
+     "sub200": {
+      "P1p": 0.4800881352821993,
+      "P3": 0.4937508684127648,
+      "n_ch": 57,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.24973664628183972,
+      "P3": 0.24565205951295363,
+      "n_ch": 101,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_ypos_990y": {
+     "sub200": {
+      "P1p": 0.08505715916465736,
+      "P3": 0.09249529701155527,
+      "n_ch": 94,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.1466821591366406,
+      "P3": 0.14905302362621395,
+      "n_ch": 103,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_900z": {
+     "sub200": {
+      "P1p": -0.25318942475308975,
+      "P3": -0.25318942475308975,
+      "n_ch": 87,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.24909614484604395,
+      "P3": 0.24909614484604395,
+      "n_ch": 97,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    }
+   }
+  }
+ },
+ "C": {
+  "screen": {
+   "sub200": 0.1893399394253291,
+   "b200_500": 0.057896106604326064
+  },
+  "exact": {
+   "sub200": 0.15696699007007647,
+   "b200_500": 0.021981020382393433,
+   "folds": {
+    "m_xpos_990x": {
+     "sub200": {
+      "P1p": 0.2839085721316943,
+      "P3": 0.2811903818836218,
+      "n_ch": 100,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.048393385562041584,
+      "P3": 0.034964726863202344,
+      "n_ch": 104,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_990z": {
+     "sub200": {
+      "P1p": 0.5168022693098543,
+      "P3": 0.5152694087971162,
+      "n_ch": 57,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": -0.07697972507597609,
+      "P3": -0.08450583149654288,
+      "n_ch": 101,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_ypos_990y": {
+     "sub200": {
+      "P1p": 0.07921183975994361,
+      "P3": 0.06016054422503048,
+      "n_ch": 94,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.05384822763229703,
+      "P3": 0.08414162598730852,
+      "n_ch": 103,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_900z": {
+     "sub200": {
+      "P1p": -0.25205472092118625,
+      "P3": -0.2610154456983239,
+      "n_ch": 87,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.0626621934112112,
+      "P3": 0.056948112921294515,
+      "n_ch": 97,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    }
+   }
+  },
+  "caveat": "C exact uses fold-1 shape MAP on the enriched basis as a representative check (per-fold shape re-fit on the exact basis not re-run for compute)"
+ },
+ "D": {
+  "screen": {
+   "sub200": 0.17940546316783876,
+   "b200_500": 0.18819583941709886
+  },
+  "exact": {
+   "sub200": 0.16335525536917697,
+   "b200_500": 0.18817907632011832,
+   "folds": {
+    "m_xpos_990x": {
+     "sub200": {
+      "P1p": 0.29240691519233575,
+      "P3": 0.28259387177731193,
+      "n_ch": 100,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.13372117950607987,
+      "P3": 0.13456701385971348,
+      "n_ch": 104,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_990z": {
+     "sub200": {
+      "P1p": 0.5214040831390666,
+      "P3": 0.5272389010640587,
+      "n_ch": 57,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.18037781413045662,
+      "P3": 0.18912816036179603,
+      "n_ch": 101,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_ypos_990y": {
+     "sub200": {
+      "P1p": 0.0888363851412714,
+      "P3": 0.0888363851412714,
+      "n_ch": 94,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.18530942251348442,
+      "P3": 0.18530942251348442,
+      "n_ch": 103,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_900z": {
+     "sub200": {
+      "P1p": -0.2492263619959659,
+      "P3": -0.2792978993909186,
+      "n_ch": 87,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.2533078891304523,
+      "P3": 0.23922830317004162,
+      "n_ch": 97,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    }
+   }
+  }
+ },
+ "R": {
+  "screen": {
+   "sub200": 0.1656518292277053,
+   "b200_500": 0.18444249318132355
+  },
+  "exact": {
+   "sub200": 0.16507158781351716,
+   "b200_500": 0.18879270837839002,
+   "folds": {
+    "m_xpos_990x": {
+     "sub200": {
+      "P1p": 0.3009587411818616,
+      "P3": 0.28317167699791035,
+      "n_ch": 100,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.1703677114623563,
+      "P3": 0.12389629749398068,
+      "n_ch": 104,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_990z": {
+     "sub200": {
+      "P1p": 0.4952699221008189,
+      "P3": 0.49375774147632784,
+      "n_ch": 57,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.14698774075771126,
+      "P3": 0.14436053050951098,
+      "n_ch": 101,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_ypos_990y": {
+     "sub200": {
+      "P1p": 0.10353958771590052,
+      "P3": 0.09091332499835406,
+      "n_ch": 94,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.1665236294728233,
+      "P3": 0.18022962547413002,
+      "n_ch": 103,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    },
+    "m_zpos_900z": {
+     "sub200": {
+      "P1p": -0.23948189974451245,
+      "P3": -0.2352020331046561,
+      "n_ch": 87,
+      "n_bins": 76,
+      "mask_fallback": false
+     },
+     "b200_500": {
+      "P1p": 0.2712917518206692,
+      "P3": 0.2682298944439294,
+      "n_ch": 97,
+      "n_bins": 147,
+      "mask_fallback": false
+     },
+     "b500_ceiling": {
+      "status": "not_certified",
+      "reason": "FEM basis credible to 639 Hz (cross-validated); 1.25x modal-truncation rule caps scorable freq at 511 Hz -> 500-1000 Hz is FEM/compute-limited, not data-limited (data certified >1 kHz). D11."
+     }
+    }
+   }
+  }
+ }
+}

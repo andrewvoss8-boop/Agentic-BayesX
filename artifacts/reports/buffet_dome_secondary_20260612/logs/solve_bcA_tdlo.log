@@ -1,0 +1,82 @@
+[00:22:03] window 0: sigma_f=5.0 Hz k=250
+[00:23:38]   window done in 95s: +250 new (total 250), span 0.0-272.2 Hz
+[00:23:38] window 1: sigma_f=272.2 Hz k=250
+[00:25:00]   window done in 82s: +148 new (total 398), span 225.1-312.1 Hz
+[00:25:00] window 2: sigma_f=312.1 Hz k=250
+[00:26:23]   window done in 83s: +138 new (total 536), span 282.1-339.5 Hz
+[00:26:23] window 3: sigma_f=339.5 Hz k=250
+[00:27:34]   window done in 71s: +112 new (total 648), span 313.3-363.8 Hz
+[00:27:34] window 4: sigma_f=363.8 Hz k=250
+[00:28:44]   window done in 71s: +116 new (total 764), span 337.2-388.6 Hz
+[00:28:44] window 5: sigma_f=388.6 Hz k=250
+[00:30:00]   window done in 76s: +112 new (total 876), span 360.6-414.7 Hz
+[00:30:00] window 6: sigma_f=414.7 Hz k=250
+[00:31:30]   window done in 90s: +102 new (total 978), span 385.1-442.2 Hz
+[00:31:30] window 7: sigma_f=442.2 Hz k=250
+[00:32:59]   window done in 89s: +135 new (total 1113), span 411.5-470.6 Hz
+[00:32:59] window 8: sigma_f=470.6 Hz k=250
+[00:34:15]   window done in 76s: +106 new (total 1219), span 440.6-498.8 Hz
+[00:34:15] window 9: sigma_f=498.8 Hz k=250
+[00:35:44]   window done in 89s: +117 new (total 1336), span 466.9-528.5 Hz
+[00:35:44] window 10: sigma_f=528.5 Hz k=250
+[00:37:14]   window done in 90s: +124 new (total 1460), span 496.5-558.5 Hz
+[00:37:14] window 11: sigma_f=558.5 Hz k=250
+[00:38:31]   window done in 77s: +121 new (total 1581), span 529.5-586.7 Hz
+[00:38:31] window 12: sigma_f=586.7 Hz k=250
+[00:40:03]   window done in 91s: +119 new (total 1700), span 558.4-613.9 Hz
+[00:40:03] window 13: sigma_f=613.9 Hz k=250
+[00:41:21]   window done in 79s: +114 new (total 1814), span 583.7-642.8 Hz
+[00:41:21] window 14: sigma_f=642.8 Hz k=250
+[00:42:54]   window done in 93s: +110 new (total 1924), span 610.6-672.9 Hz
+[00:42:54] window 15: sigma_f=672.9 Hz k=250
+[00:44:16]   window done in 81s: +123 new (total 2047), span 642.1-702.1 Hz
+[00:44:16] window 16: sigma_f=702.1 Hz k=250
+[00:45:36]   window done in 81s: +111 new (total 2158), span 670.8-732.0 Hz
+[00:45:36] window 17: sigma_f=732.0 Hz k=250
+[00:47:11]   window done in 94s: +111 new (total 2269), span 697.5-764.7 Hz
+[00:47:11] window 18: sigma_f=764.7 Hz k=250
+[00:48:46]   window done in 95s: +113 new (total 2382), span 726.4-800.4 Hz
+[00:48:46] window 19: sigma_f=800.4 Hz k=250
+[00:50:23]   window done in 97s: +110 new (total 2492), span 757.4-840.5 Hz
+[00:50:23] {"bc": "bcA_tdlo", "n_modes": 2492, "n_below_400": 807, "n_below_820": 2436, "fmax": 840.4985017955313, "runtime_s": 1699.9923050403595}
+[11:39:55] window 0: sigma_f=5.0 Hz k=250
+[11:41:25]   window done in 90s: +250 new (total 250), span 0.0-272.2 Hz
+[11:41:25] window 1: sigma_f=272.2 Hz k=250
+[11:42:41]   window done in 77s: +148 new (total 398), span 225.1-312.1 Hz
+[11:42:41] window 2: sigma_f=312.1 Hz k=250
+[11:43:58]   window done in 77s: +138 new (total 536), span 282.1-339.5 Hz
+[11:43:58] window 3: sigma_f=339.5 Hz k=250
+[11:45:05]   window done in 66s: +112 new (total 648), span 313.3-363.8 Hz
+[11:45:05] window 4: sigma_f=363.8 Hz k=250
+[11:46:10]   window done in 65s: +116 new (total 764), span 337.2-388.6 Hz
+[11:46:10] window 5: sigma_f=388.6 Hz k=250
+[11:47:17]   window done in 68s: +112 new (total 876), span 360.6-414.7 Hz
+[11:47:17] window 6: sigma_f=414.7 Hz k=250
+[11:48:38]   window done in 81s: +102 new (total 978), span 385.1-442.2 Hz
+[11:48:38] window 7: sigma_f=442.2 Hz k=250
+[11:49:59]   window done in 80s: +135 new (total 1113), span 411.5-470.6 Hz
+[11:49:59] window 8: sigma_f=470.6 Hz k=250
+[11:51:07]   window done in 69s: +106 new (total 1219), span 440.6-498.8 Hz
+[11:51:07] window 9: sigma_f=498.8 Hz k=250
+[11:52:29]   window done in 82s: +117 new (total 1336), span 466.9-528.5 Hz
+[11:52:29] window 10: sigma_f=528.5 Hz k=250
+[11:53:53]   window done in 84s: +124 new (total 1460), span 496.5-558.5 Hz
+[11:53:53] window 11: sigma_f=558.5 Hz k=250
+[11:55:04]   window done in 71s: +121 new (total 1581), span 529.5-586.7 Hz
+[11:55:04] window 12: sigma_f=586.7 Hz k=250
+[11:56:31]   window done in 87s: +119 new (total 1700), span 558.4-613.9 Hz
+[11:56:31] window 13: sigma_f=613.9 Hz k=250
+[11:57:50]   window done in 79s: +114 new (total 1814), span 583.7-642.8 Hz
+[11:57:50] window 14: sigma_f=642.8 Hz k=250
+[11:59:20]   window done in 89s: +110 new (total 1924), span 610.6-672.9 Hz
+[11:59:20] window 15: sigma_f=672.9 Hz k=250
+[12:00:36]   window done in 77s: +123 new (total 2047), span 642.1-702.1 Hz
+[12:00:36] window 16: sigma_f=702.1 Hz k=250
+[12:01:52]   window done in 76s: +111 new (total 2158), span 670.8-732.0 Hz
+[12:01:52] window 17: sigma_f=732.0 Hz k=250
+[12:03:23]   window done in 91s: +111 new (total 2269), span 697.5-764.7 Hz
+[12:03:23] window 18: sigma_f=764.7 Hz k=250
+[12:04:53]   window done in 90s: +113 new (total 2382), span 726.4-800.4 Hz
+[12:04:53] window 19: sigma_f=800.4 Hz k=250
+[12:06:24]   window done in 91s: +110 new (total 2492), span 757.4-840.5 Hz
+[12:06:24] {"bc": "bcA_tdlo", "n_modes": 2492, "n_below_400": 807, "n_below_820": 2436, "fmax": 840.4985017955313, "runtime_s": 1589.43834400177}

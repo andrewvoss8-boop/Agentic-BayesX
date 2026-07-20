@@ -1,0 +1,9 @@
+{
+ "active_runtime_s": 181909.0,
+ "elapsed_wallclock_s": 181909.0,
+ "machine": "Mac 8-core CPU (compute protocol: CPU tier)",
+ "n_eigensolves": 62,
+ "n_dev_queries": 102,
+ "note": "active = summed step durations (eigensolves, gates, NUTS, ~35s/query scoring); elapsed = first-to-last artifact timestamp; detached queues overlap so active<elapsed is not guaranteed by summation alone \u2014 verified at write time; active capped at elapsed (parallel queues overlapped)",
+ "written": "2026-07-08T17:16:03"
+}

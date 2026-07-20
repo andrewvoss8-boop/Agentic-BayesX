@@ -1,0 +1,33 @@
+[12:42:18] window 0: sigma_f=5.0 Hz k=250
+[12:43:49]   window done in 91s: +250 new (total 250), span 7.4-279.1 Hz
+[12:43:49] window 1: sigma_f=279.1 Hz k=250
+[12:45:07]   window done in 78s: +143 new (total 393), span 225.3-327.0 Hz
+[12:45:07] window 2: sigma_f=327.0 Hz k=250
+[12:46:13]   window done in 66s: +132 new (total 525), span 292.4-358.6 Hz
+[12:46:13] window 3: sigma_f=358.6 Hz k=250
+[12:47:33]   window done in 80s: +111 new (total 636), span 326.3-388.7 Hz
+[12:47:33] window 4: sigma_f=388.7 Hz k=250
+[12:48:40]   window done in 67s: +109 new (total 745), span 351.3-422.4 Hz
+[12:48:40] window 5: sigma_f=422.4 Hz k=250
+[12:50:01]   window done in 81s: +108 new (total 853), span 384.1-457.4 Hz
+[12:50:01] window 6: sigma_f=457.4 Hz k=250
+[12:51:09]   window done in 68s: +135 new (total 988), span 419.2-493.0 Hz
+[12:51:09] window 7: sigma_f=493.0 Hz k=250
+[12:52:31]   window done in 82s: +97 new (total 1085), span 454.3-528.9 Hz
+[12:52:31] window 8: sigma_f=528.9 Hz k=250
+[12:53:53]   window done in 82s: +134 new (total 1219), span 488.9-566.3 Hz
+[12:53:53] window 9: sigma_f=566.3 Hz k=250
+[12:55:03]   window done in 70s: +109 new (total 1328), span 530.3-599.8 Hz
+[12:55:03] window 10: sigma_f=599.8 Hz k=250
+[12:56:27]   window done in 83s: +114 new (total 1442), span 560.8-636.4 Hz
+[12:56:27] window 11: sigma_f=636.4 Hz k=250
+[12:57:52]   window done in 85s: +113 new (total 1555), span 593.5-676.9 Hz
+[12:57:52] window 12: sigma_f=676.9 Hz k=250
+[12:59:05]   window done in 73s: +135 new (total 1690), span 637.4-714.5 Hz
+[12:59:05] window 13: sigma_f=714.5 Hz k=250
+[13:00:18]   window done in 74s: +101 new (total 1791), span 674.6-752.4 Hz
+[13:00:18] window 14: sigma_f=752.4 Hz k=250
+[13:01:44]   window done in 86s: +117 new (total 1908), span 707.5-794.7 Hz
+[13:01:45] window 15: sigma_f=794.7 Hz k=250
+[13:02:59]   window done in 75s: +108 new (total 2016), span 743.9-842.2 Hz
+[13:02:59] {"bc": "bcA_krhi", "n_modes": 2016, "n_below_400": 672, "n_below_820": 1963, "fmax": 842.225531064629, "runtime_s": 1241.1300988197327}

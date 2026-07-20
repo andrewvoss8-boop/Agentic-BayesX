@@ -1,0 +1,230 @@
+[1/9] Study A NUTS (V1/V2/V3, two holdout schemes)
+{
+  "primary": {
+    "v1": {
+      "max_rhat": 24.9260399414507,
+      "min_ess": 2.004653067439974,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.8214285714285714,
+      "band_width": 5.5323623500582215,
+      "runtime_s": 17.41010093688965
+    },
+    "v2": {
+      "max_rhat": 1.001194576574069,
+      "min_ess": 1268.95166854886,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 1.0,
+      "band_width": 0.857495803875011,
+      "runtime_s": 40.89751482009888
+    },
+    "v3": {
+      "max_rhat": 25.74042412764593,
+      "min_ess": 2.00495923731512,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.9642857142857143,
+      "band_width": 7.298341340027407,
+      "runtime_s": 18.584453105926514
+    }
+  },
+  "secondary": {
+    "v1": {
+      "max_rhat": 32.61201320042548,
+      "min_ess": 2.002897333083824,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.7857142857142857,
+      "band_width": 2.347704335810309,
+      "runtime_s": 23.042199850082397
+    },
+    "v2": {
+      "max_rhat": 1.001277559970656,
+      "min_ess": 1585.168194975903,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.6428571428571429,
+      "band_width": 3.2600464039933286,
+      "runtime_s": 48.427841901779175
+    }
+  }
+}
+saved out/study_a_summary.json + arrays
+[2/9] Phase 1 NUTS (control truth=2DOF + len_f sweep)
+{
+  "control": {
+    "V1": {
+      "max_rhat": 1.0030168021138968,
+      "min_ess": 1021.6251686238706,
+      "div_frac": 0.0
+    },
+    "V2": {
+      "max_rhat": 1.0024998534525913,
+      "min_ess": 1984.722335259582,
+      "div_frac": 0.0,
+      "coverage": 0.9285714285714286,
+      "band_width": 0.9204723161456315,
+      "sig_w": [
+        0.11011613137585327,
+        0.12763310527055036,
+        0.15035303488536572
+      ],
+      "sig_th": [
+        1.779312136546177,
+        2.089707969174221,
+        2.5155171406703154
+      ],
+      "len_f": [
+        10.030597162228014,
+        22.09780341233255,
+        49.57100097567316
+      ],
+      "r": [
+        0.18609749809333367,
+        0.33884054680156306,
+        0.5128266362281688
+      ]
+    },
+    "injected": {
+      "sig_w": 0.12,
+      "sig_th": 0.1,
+      "len_f": 18.0,
+      "r": 0.8
+    }
+  },
+  "sweep": [
+    {
+      "lf_inj": 6.0,
+      "lf_post": [
+        5.7117576728981065,
+        13.007264825961503,
+        29.5977020454553
+      ],
+      "sw_post": 0.12020302408021769,
+      "coverage": 0.8928571428571429,
+      "band_width": 0.9352177052108852,
+      "max_rhat": 1.0007964607523476
+    },
+    {
+      "lf_inj": 12.0,
+      "lf_post": [
+        4.773258405391927,
+        11.55192131057875,
+        26.97805142960633
+      ],
+      "sw_post": 0.1336328877117543,
+      "coverage": 1.0,
+      "band_width": 1.003009936502743,
+      "max_rhat": 1.0010109059262522
+    },
+    {
+      "lf_inj": 18.0,
+      "lf_post": [
+        4.716140894770263,
+        16.253737896314526,
+        46.06353136322248
+      ],
+      "sw_post": 0.11278399375857752,
+      "coverage": 0.9642857142857143,
+      "band_width": 0.7571975369159906,
+      "max_rhat": 1.0010301172745502
+    },
+    {
+      "lf_inj": 30.0,
+      "lf_post": [
+        15.98053117762807,
+        31.970081107323754,
+        64.18440146377077
+      ],
+      "sw_post": 0.14628102512353003,
+      "coverage": 1.0,
+      "band_width": 0.960116035171837,
+      "max_rhat": 1.0009669167498105
+    },
+    {
+      "lf_inj": 48.0,
+      "lf_post": [
+        14.546221065584602,
+        28.257236133785394,
+        57.197521327482406
+      ],
+      "sw_post": 0.1469301456411881,
+      "coverage": 1.0,
+      "band_width": 0.8496973334963956,
+      "max_rhat": 1.0011471020427218
+    }
+  ],
+  "note": "truth=2-DOF isolates METHOD behaviour from model-form error (the hidden-DOF case is Study A)"
+}
+saved phase1_summary.json
+[3/9] Study D NUTS (Das/Debnath latent vs eigh)
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+truth freqs Hz: [3.111 3.134 8.145 8.145]  zeta: [0.0063 0.007  0.0209 0.0154]  pair gap 0.75%
+D-latent (Das/Debnath) ...
+D-eig (naive eigh) ...
+{
+  "truth": {
+    "freqs_hz": [
+      3.110588719381756,
+      3.133916452164082,
+      8.145156225811654
+    ],
+    "zeta": [
+      0.006266124987686306,
+      0.006951693745363283,
+      0.020948163504460517
+    ],
+    "near_degenerate_pair_gap_pct": 0.7499459069266644
+  },
+  "D_latent": {
+    "max_rhat": 1.0095664199227825,
+    "min_ess": 279.9250687387994,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "runtime_s": 12.701081991195679,
+    "recovered_freqs_hz": [
+      3.0999529471041716,
+      3.123330177097793,
+      7.908613695163545
+    ],
+    "recovered_zeta": [
+      0.005828397749488902,
+      0.006543634850881234,
+      0.015293382601413039
+    ]
+  },
+  "D_eig": {
+    "max_rhat": 1.0164533140201986,
+    "min_ess": 485.4931193771133,
+    "divergences": 429,
+    "div_frac": 0.1340625,
+    "runtime_s": 7.888333797454834
+  },
+  "note": "D-eig differentiates through eigh -> divergences at the near-degenerate pair; D-latent (Das/Debnath) avoids it"
+}
+saved study_d_summary.json
+[4/9] Study A figures + GIF
+figures written to /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/../figures
+REAL_OK True
+[5/9] Phase 1 figures
+phase1 figures written
+[6/9] Study C REAL-data figures
+Study C done. matched modes: 22 | discrepancy floor mean|err| 2.24% (signed +1.12%) | real ℓ_co,f ≈ 2.9 Hz
+[7/9] Study D figure
+figD written; D-latent div 0 D-eig div 429
+[8/9] slide deck
+saved /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/../slides/papers_statfem_studies.pptx slides: 16
+[9/9] checker
+OVERALL YELLOW  green=43 yellow=8 red=0
+  YELLOW DOCUMENTED: V1 iid did NOT converge (R-hat 24.9) -> its coverage not trustworthy
+  YELLOW DOCUMENTED: V3 decimated did NOT converge (R-hat 25.7)
+  YELLOW DOCUMENTED honest-negative: V2 extrapolation coverage 0.64 < 0.95 (OOD high band)
+  YELLOW DOCUMENTED: discrepancy hyperparams not recovered (sig_theta 2.8 vs injected 0.1) -> model-error sponge
+  YELLOW SCOPE: Studies A/D are synthetic plumbing (not validated science); Study C is REAL-data characterization (not a calibration); only B/E/F remain designed/unrun
+  YELLOW SCOPE: no durable project files (AGENTS.md/checkers/notes/project_log) edited; pending Andrew review
+  YELLOW Study C: real-data CHARACTERIZATION only (no NUTS calibration this task); .mat ingest + Abaqus FRF synthesis = next step
+  YELLOW Study D: higher-mode damping under-estimated ~27% (limited modes/DOF/1 dataset) -> honest
+(green items: 43 — see checker_report.json)
+done -> packet.md, slides/papers_statfem_studies.pptx, checker_report.json

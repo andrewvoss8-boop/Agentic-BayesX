@@ -1,0 +1,120 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 20,
+    "YELLOW": 2,
+    "RED": 0
+  },
+  "gates": [
+    {
+      "gate": "artifact_priority_deliverables.md",
+      "status": "GREEN",
+      "detail": "priority_deliverables.md"
+    },
+    {
+      "gate": "artifact_decisions_log.md",
+      "status": "GREEN",
+      "detail": "decisions_log.md"
+    },
+    {
+      "gate": "artifact_assumptions_ledger.md",
+      "status": "GREEN",
+      "detail": "assumptions_ledger.md"
+    },
+    {
+      "gate": "artifact_quantity_contracts.md",
+      "status": "GREEN",
+      "detail": "quantity_contracts.md"
+    },
+    {
+      "gate": "artifact_packet.md",
+      "status": "GREEN",
+      "detail": "packet.md"
+    },
+    {
+      "gate": "artifact_run_all.sh",
+      "status": "GREEN",
+      "detail": "run_all.sh"
+    },
+    {
+      "gate": "artifact_code/run_toy.py",
+      "status": "GREEN",
+      "detail": "code/run_toy.py"
+    },
+    {
+      "gate": "artifact_out/summary.json",
+      "status": "GREEN",
+      "detail": "out/summary.json"
+    },
+    {
+      "gate": "artifact_out/posterior_samples.npz",
+      "status": "GREEN",
+      "detail": "out/posterior_samples.npz"
+    },
+    {
+      "gate": "artifact_figures/fig1_forcing_cancellation.png",
+      "status": "GREEN",
+      "detail": "figures/fig1_forcing_cancellation.png"
+    },
+    {
+      "gate": "artifact_figures/fig2_ratio_fit.png",
+      "status": "GREEN",
+      "detail": "figures/fig2_ratio_fit.png"
+    },
+    {
+      "gate": "artifact_figures/fig3_damping_posterior.png",
+      "status": "GREEN",
+      "detail": "figures/fig3_damping_posterior.png"
+    },
+    {
+      "gate": "artifact_figures/fig4_qoi_posterior.png",
+      "status": "GREEN",
+      "detail": "figures/fig4_qoi_posterior.png"
+    },
+    {
+      "gate": "artifact_image_qa.json",
+      "status": "GREEN",
+      "detail": "image_qa.json"
+    },
+    {
+      "gate": "forcing_integrated_out",
+      "status": "GREEN",
+      "detail": "hidden-force response ratio equals direct transfer ratio; max relative error 4.28e-16"
+    },
+    {
+      "gate": "nuts_convergence",
+      "status": "GREEN",
+      "detail": "R-hat 1.000; ESS 3087; div frac 0.000"
+    },
+    {
+      "gate": "high_amplitude_damping_detected",
+      "status": "GREEN",
+      "detail": "P(zeta_high > zeta_low) = 0.996"
+    },
+    {
+      "gate": "effective_damping_truth_covered",
+      "status": "YELLOW",
+      "detail": "truth covered: low=False high=False"
+    },
+    {
+      "gate": "heldout_ratio_coverage",
+      "status": "GREEN",
+      "detail": "42/46 clean held-out log-ratio values covered by 95% posterior bands"
+    },
+    {
+      "gate": "qoi_coverage",
+      "status": "GREEN",
+      "detail": "6/6 damping-dependent QOIs cover the synthetic truth"
+    },
+    {
+      "gate": "nonlinear_law_not_identified",
+      "status": "YELLOW",
+      "detail": "Designed limitation: the true slip/friction law is hidden; only equivalent damping at tested amplitudes is inferred."
+    },
+    {
+      "gate": "image_legibility_proxy",
+      "status": "GREEN",
+      "detail": "4 figures checked; failures=[]"
+    }
+  ]
+}

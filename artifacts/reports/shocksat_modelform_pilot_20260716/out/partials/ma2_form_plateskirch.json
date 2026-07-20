@@ -1,0 +1,52 @@
+{
+ "cid": "ma2_form_plateskirch",
+ "track": "agent",
+ "round": 2,
+ "cls": "element_formulation",
+ "ops": [
+  "formulation"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.14802679281569983,
+ "exact_b200_500": 0.23191629283533916,
+ "exact_folds": {
+  "m_xpos_990x": 0.293584757948971,
+  "m_zpos_990z": 0.5273657503877264,
+  "m_ypos_990y": 0.10373247522673665,
+  "m_zpos_900z": -0.3325758123006347
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.16137215525177023,
+  "m_zpos_990z": 0.24486743298372732,
+  "m_ypos_990y": 0.23929650118327173,
+  "m_zpos_900z": 0.28212908192258734
+ },
+ "theta_map": [
+  1.0866425306806662,
+  1.3676544846979712,
+  0.9600986502902644,
+  0.9344096038755377,
+  0.7882177334250258,
+  1.1474272234892955,
+  0.9139177766343822,
+  0.995489806553476,
+  1.142153952536994,
+  0.9651118748695089
+ ],
+ "enriched_pkg": "ma2_form_plateskirch__xenr",
+ "spot_max_pct": 5.197681174351487e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 8.283,
+  "pass": true
+ },
+ "solve_s_theta1": 391.5,
+ "solve_s_enrich": 429.6,
+ "wall_s": 855.7,
+ "ts": "2026-07-17T02:03:37",
+ "diagnosis_link": "diagnosis_mf_r2.json: bracket the r1 shear-soften (ts 0.35 scored +0.1630) with the OPPOSITE (Kirchhoff-limit ts 5.0) on the same thick plates - curvature ratio < 1 now points stiffer, not softer"
+}

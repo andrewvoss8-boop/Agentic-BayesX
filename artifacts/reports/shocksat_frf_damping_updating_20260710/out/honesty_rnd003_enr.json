@@ -1,0 +1,12 @@
+{
+ "cid_label": "rnd003_enr",
+ "package": "rnd003_enr",
+ "lmo_widen_ratio": null,
+ "zeta_min": 0.01,
+ "zeta_max": 0.01,
+ "eta_max": 0.0,
+ "damping_dim": 0,
+ "disqualified": false,
+ "is_winner_or_baseline": true,
+ "note": "physical-damping gate zeta in [0.2%,5%], eta<=0.2; a 'win' breaching these is DISQUALIFIED as an amplitude-fit in disguise."
+}

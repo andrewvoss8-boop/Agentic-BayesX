@@ -1,0 +1,65 @@
+{
+  "pass": true,
+  "df_hz": 2.0,
+  "sig_log": 0.06,
+  "rel_tol": 0.3,
+  "n_lines_threshold": 1.5,
+  "recovered_ok": true,
+  "survey_regime_rel_err_median": 0.267,
+  "best_resolved_rel_err": 0.145,
+  "resolution_wall_real": true,
+  "flagged_not_identifiable": 3,
+  "n_resolved": 2,
+  "n_under": 4,
+  "cases": [
+    {
+      "fn": 120.0,
+      "zeta_true": 0.002,
+      "n_lines_halfpower": 0.24,
+      "rel_err_median": 0.537,
+      "rel_err_p90": 1.008,
+      "identifiable_by_resolution": false
+    },
+    {
+      "fn": 120.0,
+      "zeta_true": 0.003,
+      "n_lines_halfpower": 0.36,
+      "rel_err_median": 0.267,
+      "rel_err_p90": 0.967,
+      "identifiable_by_resolution": false
+    },
+    {
+      "fn": 120.0,
+      "zeta_true": 0.005,
+      "n_lines_halfpower": 0.6,
+      "rel_err_median": 0.221,
+      "rel_err_p90": 0.678,
+      "identifiable_by_resolution": false
+    },
+    {
+      "fn": 120.0,
+      "zeta_true": 0.01,
+      "n_lines_halfpower": 1.2,
+      "rel_err_median": 0.145,
+      "rel_err_p90": 0.327,
+      "identifiable_by_resolution": false
+    },
+    {
+      "fn": 120.0,
+      "zeta_true": 0.02,
+      "n_lines_halfpower": 2.4,
+      "rel_err_median": 0.188,
+      "rel_err_p90": 0.439,
+      "identifiable_by_resolution": true
+    },
+    {
+      "fn": 120.0,
+      "zeta_true": 0.04,
+      "n_lines_halfpower": 4.8,
+      "rel_err_median": 0.219,
+      "rel_err_p90": 0.857,
+      "identifiable_by_resolution": true
+    }
+  ],
+  "note": "survey in-band zeta 0.06-1.05% (median 0.32%) => half-power bands 0.10-1.25 lines (median 0.53); ALL 33 in-band modes < 1.5 lines. At 2 Hz + noise sigma_log=0.06, per-mode zeta recovery error in that regime is 27% (median), vs 14% best-resolved => per-mode/narrow-band zeta NOT identifiable; only band-average zeta weakly constrained by the off-resonance envelope (D7). Damping enters the loop as band/Rayleigh/joint-eta LOW-DIM params, never per mode."
+}

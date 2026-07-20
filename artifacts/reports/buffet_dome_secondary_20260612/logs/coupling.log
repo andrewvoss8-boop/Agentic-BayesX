@@ -1,0 +1,17 @@
+{
+ "eta": 0.02,
+ "n_modes": 1963,
+ "fmax_mode": 819.1693557494002,
+ "loads": [
+  "LtrayZ",
+  "LcopvN"
+ ],
+ "md_worst_max_rel": 0.006920034179534367,
+ "ma_worst_max_rel": 0.025282547758732905,
+ "verdict": "modal superposition (MD, 820 Hz truncation) vs direct full solve; MA adds the static residual. Errors masked to non-negligible response (>5% of peak).",
+ "runtime_s": 1199.0551068782806
+}
+    tray_net_punch: MD max   0.29% med  0.18% | MA max   2.28% med  1.37%  (n_freq 5)
+          av_acc_z: MD max   0.54% med  0.06% | MA max   0.54% med  0.06%  (n_freq 8)
+    copv_net_punch: MD max   0.68% med  0.37% | MA max   2.53% med  1.40%  (n_freq 5)
+    copv_mount1_Fx: MD max   0.69% med  0.19% | MA max   2.33% med  0.65%  (n_freq 5)

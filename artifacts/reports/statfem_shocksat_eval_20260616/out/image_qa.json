@@ -1,0 +1,59 @@
+{
+ "figA_heldout_qoi_coverage.png": {
+  "w": 2098,
+  "h": 856,
+  "ink_frac": 0.0522,
+  "color_frac": 0.0161,
+  "ok": true
+ },
+ "figB_arm_comparison.png": {
+  "w": 2367,
+  "h": 816,
+  "ink_frac": 0.269,
+  "color_frac": 0.2288,
+  "ok": true
+ },
+ "figC_theta_recovery.png": {
+  "w": 2725,
+  "h": 1006,
+  "ink_frac": 0.0466,
+  "color_frac": 0.0011,
+  "ok": true
+ },
+ "figD_heldout_frf_bands.png": {
+  "w": 1919,
+  "h": 886,
+  "ink_frac": 0.0619,
+  "color_frac": 0.0243,
+  "ok": true
+ },
+ "figE_identifiability.png": {
+  "w": 2457,
+  "h": 955,
+  "ink_frac": 0.0936,
+  "color_frac": 0.0024,
+  "ok": true
+ },
+ "figF_spatial_error.png": {
+  "w": 2556,
+  "h": 1119,
+  "ink_frac": 0.1728,
+  "color_frac": 0.0944,
+  "ok": true
+ },
+ "figG_spatial_ident.png": {
+  "w": 1587,
+  "h": 1239,
+  "ink_frac": 0.1228,
+  "color_frac": 0.0571,
+  "ok": true
+ },
+ "fig_schematic.png": {
+  "w": 2277,
+  "h": 1133,
+  "ink_frac": 0.3347,
+  "color_frac": 0.0851,
+  "ok": true
+ },
+ "ALL_OK": true
+}

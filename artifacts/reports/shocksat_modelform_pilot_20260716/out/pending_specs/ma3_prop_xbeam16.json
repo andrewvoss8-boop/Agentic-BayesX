@@ -1,0 +1,15 @@
+{
+ "cid": "ma3_prop_xbeam16",
+ "cls": "property_control",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.6
+  }
+ ],
+ "diagnosis_link": "CONTROL: cross_beam x1.4 alone scored +0.1628; probe the response curve at x1.6",
+ "track": "agent",
+ "round": 3,
+ "rationale": "CONTROL: cross_beam x1.4 alone scored +0.1628; probe the response curve at x1.6"
+}

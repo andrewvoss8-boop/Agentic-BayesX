@@ -1,0 +1,73 @@
+{
+  "deliverable": "Layer 1 finite-perturbation check: does a realistic zeta change move the envelope QOI, and how",
+  "panel_n_sensors": 12,
+  "sigma_log": 1.604,
+  "drive_set": [
+    "m_xpos_990x",
+    "m_zpos_990z",
+    "m_zpos_900z"
+  ],
+  "band": [
+    45.0,
+    260.0
+  ],
+  "fem_nominal_zeta_pct": 1.0,
+  "measured_zeta_pct_range": [
+    0.3,
+    0.5
+  ],
+  "sweep": [
+    {
+      "zeta_struct_pct": 0.25,
+      "env_grms_fem_median": 27.949579394852883,
+      "env_grms_fem6_median": 55.76674248578067,
+      "env_grms_twin975_median": 648.2277826390809,
+      "win_ratio_twin_over_fem6_median": 11.623913353095084
+    },
+    {
+      "zeta_struct_pct": 0.35,
+      "env_grms_fem_median": 24.885576120532754,
+      "env_grms_fem6_median": 49.65325221958845,
+      "env_grms_twin975_median": 577.1651014998722,
+      "win_ratio_twin_over_fem6_median": 11.623913353095084
+    },
+    {
+      "zeta_struct_pct": 0.4,
+      "env_grms_fem_median": 26.494619836055264,
+      "env_grms_fem6_median": 52.86371650830801,
+      "env_grms_twin975_median": 614.4832602151546,
+      "win_ratio_twin_over_fem6_median": 11.623913353095084
+    },
+    {
+      "zeta_struct_pct": 0.5,
+      "env_grms_fem_median": 23.081557200695613,
+      "env_grms_fem6_median": 46.05376125334654,
+      "env_grms_twin975_median": 535.3249303930279,
+      "win_ratio_twin_over_fem6_median": 11.623913353095086
+    },
+    {
+      "zeta_struct_pct": 1.0,
+      "env_grms_fem_median": 14.696659064229717,
+      "env_grms_fem6_median": 29.323689986803352,
+      "env_grms_twin975_median": 340.85603159962415,
+      "win_ratio_twin_over_fem6_median": 11.623913353095084
+    },
+    {
+      "zeta_struct_pct": 1.7,
+      "env_grms_fem_median": 10.638576751845767,
+      "env_grms_fem6_median": 21.226751277861887,
+      "env_grms_twin975_median": 246.7379176215669,
+      "win_ratio_twin_over_fem6_median": 11.623913353095086
+    }
+  ],
+  "absolute_lever_grms_ratio_0p4_over_1p0": 1.803,
+  "predicted_1_over_zeta": 2.5,
+  "winratio_spread_across_zeta": 1.0,
+  "conclusions": {
+    "is_a_lever_absolute": true,
+    "cancels_in_win_ratio": true,
+    "direction": "FEM nominal 1.0% > measured ~0.4% => FEM is OVER-damped; correcting toward measured RAISES GRMS (more conservative), opposite of the prompt's assumed under-damped direction"
+  },
+  "verdict": "zeta IS a strong ABSOLUTE lever on envelope GRMS (~1/zeta), so it passes the finite-perturbation gate; BUT under the inherited identical-damping contract it CANCELS in the twin/FEM+6dB win RATIO (common-mode, mirrors D8). And the nominal FEM is OVER-damped vs measured, so a measured-zeta correction makes the twin MORE conservative, not less. Damping is therefore NOT a lever that wins the inherited less-conservative-envelope metric on this structure.",
+  "runtime_s": 0.7
+}

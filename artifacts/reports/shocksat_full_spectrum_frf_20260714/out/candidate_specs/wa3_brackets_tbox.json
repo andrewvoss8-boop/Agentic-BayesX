@@ -1,0 +1,26 @@
+{
+ "cid": "wa3_brackets_tbox",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    301,
+    302
+   ],
+   "t_scale": 0.85,
+   "name": "brackets085"
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.9,
+   "name": "tbox090"
+  }
+ ],
+ "rationale": "brackets + top_box soften: Top_Box|Z (0.38) is now among the worst on the brackets model."
+}

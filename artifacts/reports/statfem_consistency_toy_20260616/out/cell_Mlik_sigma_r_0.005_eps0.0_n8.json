@@ -1,0 +1,37 @@
+{
+ "construction": "M-lik",
+ "knob": "sigma_r",
+ "level": 0.005,
+ "eps": 0.0,
+ "n": 8,
+ "N_c": 64,
+ "n_el": 64,
+ "sigma_r": 0.005,
+ "nuts": {
+  "max_rhat": 1.0012382529676767,
+  "min_ess": 1517.465286023815,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": true,
+ "runtime_s": 16.36,
+ "theta": {
+  "mean": 1.1474554547483313,
+  "sd": 0.0016831839018964258,
+  "lo": 1.144219707493228,
+  "med": 1.1474401664453406,
+  "hi": 1.1507962768046753
+ },
+ "coverage_heldout": 1.0,
+ "coverage_detail": {
+  "covered": 21,
+  "n": 21,
+  "held_freqs": [
+   0.6,
+   2.8,
+   6.3
+  ]
+ }
+}

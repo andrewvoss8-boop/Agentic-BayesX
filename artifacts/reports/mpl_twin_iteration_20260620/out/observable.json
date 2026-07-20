@@ -1,0 +1,133 @@
+{
+  "deliverable": "gain-free output/output transmissibility observable + FEM forward + matching protocol",
+  "gain_convention": "gain-free: |T|=sqrt(PSD_a/PSD_ref) is a DIMENSIONLESS ratio (same sensor, fixed acoustic field); common input level + sensor calibration cancel. No per-channel gain.",
+  "ref_location": "shield",
+  "band_hz": [
+    20.0,
+    260.0
+  ],
+  "n_freq_in_band": 393,
+  "welch": {
+    "fs": 10000.0,
+    "nperseg": 16384,
+    "noverlap": 8192,
+    "window": "hann",
+    "detrend": "constant",
+    "df_hz": 0.6103515625
+  },
+  "locations": {
+    "interface": {
+      "grid": 800071,
+      "xyz_in": [
+        61.5,
+        -24.0,
+        48.5
+      ],
+      "acoustic_file": "acoustic unloaded top.csv",
+      "segment_s": [
+        14.0,
+        76.0
+      ],
+      "n_welch_avg": 74,
+      "snr_band_over_floor": 0.68,
+      "T_band_median": 2.1665,
+      "T_band_max": 83.4257
+    },
+    "shield": {
+      "grid": 800016,
+      "xyz_in": [
+        61.5,
+        -24.0,
+        26.833
+      ],
+      "acoustic_file": "shield acoustic.csv",
+      "segment_s": [
+        11.0,
+        71.0
+      ],
+      "n_welch_avg": 72,
+      "snr_band_over_floor": 0.14,
+      "T_band_median": 1.0,
+      "T_band_max": 1.0
+    },
+    "beam": {
+      "grid": 1510,
+      "xyz_in": [
+        60.25,
+        -48.0,
+        46.553
+      ],
+      "acoustic_file": "top left beam acoustic.csv",
+      "segment_s": [
+        12.0,
+        47.0
+      ],
+      "n_welch_avg": 41,
+      "snr_band_over_floor": 1.01,
+      "T_band_median": 1.1946,
+      "T_band_max": 7.3567
+    },
+    "valve": {
+      "grid": 910008,
+      "xyz_in": [
+        41.0,
+        -17.0,
+        16.0
+      ],
+      "acoustic_file": "valve tap (engine mount) and acoustic.csv",
+      "segment_s": [
+        29.0,
+        80.0
+      ],
+      "n_welch_avg": 61,
+      "snr_band_over_floor": 0.48,
+      "T_band_median": 0.6047,
+      "T_band_max": 6.9825
+    },
+    "avi-L": {
+      "grid": 800036,
+      "xyz_in": [
+        61.5,
+        -14.4,
+        35.5
+      ],
+      "acoustic_file": "top left avi foot tap and acoustic.csv",
+      "segment_s": [
+        19.0,
+        72.0
+      ],
+      "n_welch_avg": 63,
+      "snr_band_over_floor": 0.1,
+      "T_band_median": 1.6584,
+      "T_band_max": 17.0971
+    },
+    "avi-R": {
+      "grid": 800034,
+      "xyz_in": [
+        61.5,
+        -4.8,
+        35.5
+      ],
+      "acoustic_file": "top right avi foot tap and acoustic.csv",
+      "segment_s": [
+        19.0,
+        64.0
+      ],
+      "n_welch_avg": 53,
+      "snr_band_over_floor": 0.15,
+      "T_band_median": 1.8303,
+      "T_band_max": 12.7545
+    }
+  },
+  "unit_tests": {
+    "fem_freq_match_fable": true,
+    "fem_ref_unity": true,
+    "fem_load_scale_invariant": true,
+    "meas_ref_unity": true,
+    "meas_positive_finite": true,
+    "band_points_ge_100": true,
+    "nodemap_xdof_weight1": true,
+    "dimensionless_ratio": true
+  },
+  "runtime_s": 18.1
+}

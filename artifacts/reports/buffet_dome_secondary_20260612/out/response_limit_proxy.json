@@ -1,0 +1,40 @@
+{
+ "controlling_freq_hz": 112.94876865649842,
+ "coherence_at_ctrl_avF": 0.8493919560858055,
+ "coherence_at_ctrl_cgF": 0.9954054059535731,
+ "alpha_at_ctrl_avF": 18.516620693252822,
+ "alpha_at_ctrl_cgF": 17.820313791968882,
+ "m_assy_kg": 20.3444,
+ "cg_alpha_vs_mass_ratio": 0.8759321381790017,
+ "valid_band_gamma_gt_0p8": [
+  60.019483722924484,
+  296.0078359122823
+ ],
+ "fraction_punch_energy_in_valid_band": 0.49818104356167964,
+ "alpha_eta_robustness": {
+  "eta_0.005": {
+   "alpha_avF": 21.981618099038798,
+   "gamma_avF": 0.9081510902841446,
+   "alpha_cgF": 17.994125170387424
+  },
+  "eta_0.01": {
+   "alpha_avF": 20.92053628714936,
+   "gamma_avF": 0.8916275944577814,
+   "alpha_cgF": 17.941918878451506
+  },
+  "eta_0.02": {
+   "alpha_avF": 18.516620693252822,
+   "gamma_avF": 0.8493919560858055,
+   "alpha_cgF": 17.820313791968882
+  },
+  "eta_0.05": {
+   "alpha_avF": 13.20010021121814,
+   "gamma_avF": 0.7054275366776619,
+   "alpha_cgF": 17.371172547753236
+  }
+ },
+ "alpha_forcing_invariance_rel": 0.0,
+ "response_limit_note": "a_limit = F_allow / alpha(controlling). With alpha forcing-invariant and ~eta-invariant at the controlling mode, the response limit is a STRUCTURAL constant -> robust to the (highly uncertain) buffet level and damping that dominate the CI.",
+ "interpretation": "avionics-accel is a VALID response-limit proxy for the tray interface load where coherence>0.8 (the suspension/controlling band); it DECOUPLES at the avionics-on-tray local mode (coherence drops) -> do not limit there. The tray-CG accel is the cleaner proxy (alpha ~ m_assy = 7004C effective mass); the single avionics sensor approximates it in-band.",
+ "runtime_s": 31.088762998580933
+}

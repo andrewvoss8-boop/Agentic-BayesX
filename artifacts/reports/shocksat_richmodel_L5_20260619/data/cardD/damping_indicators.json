@@ -1,0 +1,50 @@
+{
+ "source": "../shocksat_statfem_runner_20260609/extracted/FEM/Correlation/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/FF_Final_Data/ShkSat Free Free Mode Shapes Summary VJS.xlsx",
+ "n_modes": 18,
+ "zeta_min_pct": 0.124,
+ "zeta_median_pct": 0.311,
+ "zeta_max_pct": 1.756,
+ "zeta_spread_x": 14.161290322580646,
+ "joint_bulkhead_mean_zeta_pct": 0.562375,
+ "panel_other_mean_zeta_pct": 0.2682,
+ "contrast_x": 2.096849366144668,
+ "top_damped": [
+  {
+   "freq_hz": 122.31,
+   "zeta_pct": 1.756,
+   "joint_bulkhead": true,
+   "desc": "Aluminum, Steel Bulkheads, and Cross in phase drum modes.  ShockSat translation in the Z-axis out of phase of the bulkheads and cross."
+  },
+  {
+   "freq_hz": 118.49,
+   "zeta_pct": 0.834,
+   "joint_bulkhead": true,
+   "desc": "Aluminum and Steel Bulkhead out of phase drum modes.  Cross 2nd bending.  ShockSat 1st bending"
+  },
+  {
+   "freq_hz": 107.49,
+   "zeta_pct": 0.505,
+   "joint_bulkhead": true,
+   "desc": "Cross drum Mode"
+  },
+  {
+   "freq_hz": 188.62,
+   "zeta_pct": 0.44,
+   "joint_bulkhead": true,
+   "desc": "X+ and X- Panels below the Aluminum bulkhead 1st bending out of phase / Y+ and Y- Panels below the Aluminum bulkhead 1st bending out of phase / Y- Panel above the aluminum blukhead 1st bending"
+  },
+  {
+   "freq_hz": 69.97,
+   "zeta_pct": 0.386,
+   "joint_bulkhead": false,
+   "desc": "Bottom Panels X+ and X- moving in phase in the X-axis"
+  },
+  {
+   "freq_hz": 74.97,
+   "zeta_pct": 0.358,
+   "joint_bulkhead": false,
+   "desc": "Bottom Panels Y+ and Y- moving in phase in the Y-axis"
+  }
+ ],
+ "note": "Measured mode SHAPES were curve-fit as REAL normal modes (.ash stores real float32 shapes) -> the survey assumed proportional damping; complex (phase) content was not retained. These zeta are real measured per-mode damping; the interface-localization is the indirect complex-damping indicator. The modal-twin parsed .ash 'damp' array (0.25-1.05) is mislabeled vs this authoritative column (~65x) -> data-hygiene flag; Card A used uniform zeta=1% (over-damps panels, under-damps bulkhead modes)."
+}

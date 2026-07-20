@@ -1,0 +1,33 @@
+{
+ "cid": "rnd027",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    104
+   ]
+  },
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    9000041,
+    2032416,
+    3000488,
+    2032438,
+    3000147,
+    9000095,
+    9000047,
+    2032440,
+    7004399,
+    1024296,
+    6001321
+   ],
+   "k_trans": 186525.08215226282,
+   "k_rot": 175679.32328726305,
+   "name": "rconn28"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

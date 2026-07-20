@@ -1,0 +1,77 @@
+{
+ "beam_static_tip_deflection": {
+  "fem": 0.3198032734576906,
+  "euler": 0.3186979728427616,
+  "timoshenko": 0.31980327345779186,
+  "rel_err_vs_timoshenko": 3.1660820338406487e-13,
+  "note": "L=50in deck tube, 20 elements, tip load plane 1; 2-node Timoshenko element is nodally exact for end loads -> expect ~machine precision"
+ },
+ "beam_static_stocky": {
+  "fem": 0.0004292280343457949,
+  "euler": 0.0003186979728427616,
+  "timoshenko": 0.00042922803434579084,
+  "rel_err_vs_timoshenko": 9.472256752794534e-15,
+  "shear_fraction_of_total": 0.2575089524883759
+ },
+ "beam_first_frequency": {
+  "fem_hz": 25.606646570623717,
+  "euler_hz": 25.704664035065605,
+  "rel_err": 0.0038132170997518316,
+  "note": "lumped mass; slender L=50in cantilever; lowest mode bends about I1"
+ },
+ "plate_strip_bending": {
+  "fem": 0.23003238870522932,
+  "reference": 0.23003238870522663,
+  "rel_err": 1.1703964167263514e-14,
+  "max_out_of_plane": 0.0,
+  "note": "10x2 mesh 1x1in ACM elements, nu=0 strip; beam reference PL^3/3EI"
+ },
+ "plate_ss_f11": {
+  "fem_hz": 78.48025744736005,
+  "reference_hz": 78.87773020597828,
+  "rel_err": 0.0050390998521419195,
+  "note": "20x10in SS plate, 12x8 mesh, t=1.7mm, Blevins/Leissa f11"
+ },
+ "cbush_conm2_frequency": {
+  "trans_fem_hz": 225.07907903927654,
+  "trans_ref_hz": 225.07907903927654,
+  "rot_fem_hz": 22.507907903927652,
+  "rot_ref_hz": 22.507907903927652,
+  "rel_err": 0.0
+ },
+ "cbush_offset_equilibrium": {
+  "net_force": 0.0,
+  "net_moment": 0.0,
+  "note": "unit uy at B, 2in offset bush: self-equilibrated element required"
+ },
+ "rbe2_kinematics": {
+  "ux_dep": -0.03,
+  "expected_ux": -0.03,
+  "err": 0.0,
+  "note": "dep grid 3in along +y, rz=0.01 -> ux = -0.03 (rigid arm)"
+ },
+ "beam_free_free_rbm": {
+  "n_rigid_modes": 6,
+  "first_six_hz": [
+   0.00011805504589333193,
+   2.564238661621698e-05,
+   8.119438098676221e-05,
+   0.00014312966101597552,
+   0.0003368922183466295,
+   0.00035725149201807857
+  ],
+  "first_elastic_hz": 1226.5295858787683
+ },
+ "gates": {
+  "beam_static": true,
+  "beam_static_stocky": true,
+  "beam_freq": true,
+  "plate_strip": true,
+  "plate_ss_f11": true,
+  "cbush_conm2": true,
+  "cbush_equilibrium": true,
+  "rbe2": true,
+  "free_free_6_rbm": true
+ },
+ "all_pass": true
+}

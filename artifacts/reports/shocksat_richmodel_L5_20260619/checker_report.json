@@ -1,0 +1,39 @@
+{
+  "overall": "RED",
+  "n_green": 0,
+  "n_yellow": 0,
+  "n_red": 6,
+  "gates": [
+    {
+      "gate": "integrity",
+      "status": "RED",
+      "msg": "out/integrity.json missing \u2014 per-PID reduced blocks not built/verified"
+    },
+    {
+      "gate": "identifiability",
+      "status": "RED",
+      "msg": "out/identifiability_rich.json missing \u2014 modal-identifiability gate not run"
+    },
+    {
+      "gate": "l5_convergence",
+      "status": "RED",
+      "msg": "out/l5_rich_calib.json missing \u2014 richer model not run through L5"
+    },
+    {
+      "gate": "heldout",
+      "status": "RED",
+      "msg": "out/heldout_before_after.json missing \u2014 before/after held-out QOI not scored"
+    },
+    {
+      "gate": "figures",
+      "status": "RED",
+      "msg": "missing figures: ['fig_identifiability.png', 'fig_before_after.png']"
+    },
+    {
+      "gate": "verdict",
+      "status": "RED",
+      "msg": "out/verdict.json missing \u2014 scoped verdict not generated"
+    }
+  ],
+  "derived_sharpen": null
+}

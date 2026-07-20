@@ -1,0 +1,75 @@
+{
+  "arm": "M0",
+  "likelihood": "faithful_schneider_additive_M0",
+  "tag": "smoke",
+  "free_groups": [
+    "bottom_box",
+    "cross_beam",
+    "plates",
+    "top_box"
+  ],
+  "n_obs_channels": 8,
+  "n_band_freqs": 173,
+  "dim": 5,
+  "tmcmc": {
+    "n": 300,
+    "n_runs": 2
+  },
+  "fixed_hyper": {
+    "l_f_hz": 10.0,
+    "l_z_in": 2000.0,
+    "r_split": 0.82,
+    "sigma_meas": 0.15,
+    "zeta": 0.01,
+    "sigma_w_prior_logN_center": 1.726,
+    "sigma_w_prior_logsd": 0.6
+  },
+  "diag": {
+    "max_rhat": 1.0006325029400194,
+    "min_ess": 252.14090934027647,
+    "div_frac": 0.0,
+    "n_runs": 2,
+    "draws": 600,
+    "rhat_per_dim": [
+      0.9993520451688334,
+      1.0006325029400194,
+      0.99967026585631,
+      1.0005495554126667,
+      1.0005365881747603
+    ],
+    "log_evidence_mean": -105548.98102479026,
+    "log_evidence_std": 1.104923287006386,
+    "mean_accept_rate": 0.335843253968254,
+    "mean_stages": 21.0
+  },
+  "converged": true,
+  "gain_c": {
+    "med": 5.905797777905338,
+    "lo": 5.898226791069424,
+    "hi": 5.914756006506589
+  },
+  "sigma_w": null,
+  "theta_post": {
+    "bottom_box": {
+      "med": 0.7751237222941887,
+      "lo": 0.7744500139023172,
+      "hi": 0.7758118398731996
+    },
+    "cross_beam": {
+      "med": 3.0823558055616918,
+      "lo": 3.041712071349024,
+      "hi": 3.1230930754989683
+    },
+    "plates": {
+      "med": 0.40987678130924377,
+      "lo": 0.408045885599541,
+      "hi": 0.41154055400677325
+    },
+    "top_box": {
+      "med": 0.8591841078384647,
+      "lo": 0.8579715673776193,
+      "hi": 0.8603574471122666
+    }
+  },
+  "runtime_s": 59.152740716934204
+}

@@ -1,0 +1,22 @@
+{
+ "cid": "a01_bb_xface",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  }
+ ],
+ "rationale": "+X source-face wall gets its own stiffness parameter: impact-face channels ch4/27/38 are confirmed-fail; +X fold Bottom_Box median corr only 0.237; a face-level split changes the achievable stiffness DISTRIBUTION of the wall field (9-group family provably cannot).",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: drives.m_xpos region corr; region_mac Bottom_Box 0.432",
+ "split_info": {
+  "bb_xface": 4671
+ }
+}

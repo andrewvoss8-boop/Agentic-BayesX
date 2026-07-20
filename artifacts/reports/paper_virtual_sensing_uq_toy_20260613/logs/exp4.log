@@ -1,0 +1,123 @@
+{
+  "experiment": "E4_biased_reconstruction",
+  "runtime_s": 24.31,
+  "design": {
+    "peak_shift_pct": 15.0,
+    "local_mode_at_failed_sensors": 4,
+    "alpha4_truth": 0.85,
+    "note": "Coherent peak-frequency shift on the masked virtual target; mode 4 is local to the failed sensors so alpha_4 can absorb the shift (apparent hardening)."
+  },
+  "truth": {
+    "alpha": [
+      0.97,
+      0.92,
+      0.88,
+      0.85
+    ],
+    "alpha4_softening": true
+  },
+  "deterministic": {
+    "alpha4": 0.500439895373053,
+    "alpha4_says_softening": true,
+    "masked_mode4_qoi": 2.4176046785744934e-09,
+    "masked_mode4_qoi_err_db": 6.570551717670616
+  },
+  "qoi_truth": 1.1346389854643412e-09,
+  "bayes_iid": {
+    "alpha4_ci": [
+      0.9840995550617919,
+      1.021759967475728,
+      1.0678193958922033
+    ],
+    "alpha4_covers_truth": false,
+    "alpha4_says_softening": false,
+    "masked_mode4_qoi_ci": [
+      2.769479651557023e-10,
+      6.595254965485838e-10,
+      1.6817376782354486e-09
+    ],
+    "masked_mode4_qoi_covers_truth": true,
+    "sigma_d": [
+      0.3449997538364922,
+      0.3705379985892112,
+      0.3985649790937614
+    ],
+    "nuts": {
+      "max_rhat": 0.9999952149567916,
+      "min_ess": 4739.184219588951,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "n_chains": 4,
+      "draws": 4000
+    },
+    "nuts_converged": true
+  },
+  "bayes_correlated": {
+    "alpha4_ci": [
+      0.9505691042788869,
+      0.983785608961348,
+      1.0189116164771521
+    ],
+    "alpha4_covers_truth": false,
+    "alpha4_says_softening": false,
+    "masked_mode4_qoi_ci": [
+      2.180078637952507e-10,
+      5.726656821964179e-10,
+      1.62351325043413e-09
+    ],
+    "masked_mode4_qoi_covers_truth": true,
+    "sigma_d": [
+      0.3784743460118023,
+      0.4161645715420235,
+      0.4573369091624186
+    ],
+    "nuts": {
+      "max_rhat": 1.0005872118835475,
+      "min_ess": 4431.895020939554,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "n_chains": 4,
+      "draws": 4000
+    },
+    "nuts_converged": true
+  },
+  "bayes_correlated_unbiased_control": {
+    "alpha4_ci": [
+      0.8330267971023513,
+      0.8553772903562172,
+      0.879296588537905
+    ],
+    "alpha4_covers_truth": true,
+    "alpha4_says_softening": true,
+    "masked_mode4_qoi_ci": [
+      6.070624623208693e-10,
+      1.3450887542440685e-09,
+      3.0788037608177052e-09
+    ],
+    "masked_mode4_qoi_covers_truth": true,
+    "sigma_d": [
+      0.24105690693359944,
+      0.26026328197049187,
+      0.2812805683620231
+    ],
+    "nuts": {
+      "max_rhat": 1.0002195065342603,
+      "min_ess": 3497.3197905023135,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "n_chains": 4,
+      "draws": 4000
+    },
+    "nuts_converged": true
+  },
+  "headline": {
+    "det_alpha4_err": -0.349560104626947,
+    "iid_covers_alpha4": false,
+    "correlated_biased_covers_alpha4": false,
+    "correlated_unbiased_control_covers_alpha4": true,
+    "iid_covers_qoi": true,
+    "correlated_covers_qoi": true,
+    "lesson": "Unbiased reconstruction + correlated discrepancy recovers alpha_4 (method OK). A coherent reconstruction bias is confounded with the failed-sensor local mode's stiffness (peak shift = stiffness scaling); neither iid nor correlated UQ recovers alpha_4, though the amplitude QOI stays covered. Fix = break the degeneracy (keep a sensor on the local mode / bias-aware credibility), not more flexible discrepancy."
+  },
+  "all_nuts_converged": true
+}

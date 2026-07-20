@@ -1,0 +1,4 @@
+L5 modal-feature: 44 measured modes, 27 matched to FEM; observe 21, hold out 6
+  CONVERGED=True R-hat 1.002 ESS 2388 div 0 | sigma_w2 0.069 | 60s
+  held-out-mode coverage: {'covered': 6, 'n': 6, 'frac': 1.0}
+  theta medians: {'al_welds': 1.0, 'angle_brackets': 0.93, 'bottom_box': 0.9, 'contact': 1.0, 'cross_beam': 0.81, 'joints': 1.0, 'plates': 0.98, 'steel_welds': 1.02, 'top_box': 1.05}

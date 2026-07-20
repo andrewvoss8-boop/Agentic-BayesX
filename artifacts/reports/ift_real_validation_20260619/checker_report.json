@@ -1,0 +1,48 @@
+{
+  "study": "ift_real_validation_20260619",
+  "overall": "RED",
+  "counts": {
+    "green": 1,
+    "yellow": 3,
+    "red": 3
+  },
+  "verdict": null,
+  "gates": [
+    {
+      "gate": "provenance_sha256",
+      "status": "GREEN",
+      "detail": "15 copied files byte-identical to the StatFEM run (apples-to-apples)"
+    },
+    {
+      "gate": "scorecard_exists",
+      "status": "RED",
+      "detail": "out/scorecard.json missing \u2014 head-to-head not yet computed (study in progress)"
+    },
+    {
+      "gate": "verdict_generated",
+      "status": "RED",
+      "detail": "no scorecard -> no verdict"
+    },
+    {
+      "gate": "figures_tufte_imageqa_overlap",
+      "status": "RED",
+      "detail": "missing=['figA_scorecard.png', 'figB_beta.png', 'figC_heldout_frf_overlay.png', 'figD_discretization.png', 'fig_convergence_table.png'] failed=[]"
+    },
+    {
+      "gate": "single_hit_split_only_yellow",
+      "status": "YELLOW",
+      "detail": "1 hit / 1 impact, channel-split-only validation (A9/A10) \u2014 labeled reduction, never 'success'"
+    },
+    {
+      "gate": "coarse_fem_ceiling_yellow",
+      "status": "YELLOW",
+      "detail": "coarse-FEM model-form ceiling binds (StatFEM finding) \u2014 carried in deck"
+    },
+    {
+      "gate": "moment_approx_yellow",
+      "status": "YELLOW",
+      "detail": "log-magnitude moment approximation (D0/B5): exact at high SNR, weak/downweighted in deep antiresonances"
+    }
+  ],
+  "note": "Exits non-zero ONLY on RED. YELLOW = documented honest caveat, never 'success'."
+}

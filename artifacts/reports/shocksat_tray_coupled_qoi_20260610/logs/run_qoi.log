@@ -1,0 +1,37 @@
+[    0.0s] build tray ...
+[    0.6s] load ShockSat interface ...
+[    2.4s] srscache: exists, skip
+[    5.0s] nominal: done. th_cpl seed-medians [N]: [376.5, 354.4, 492.4]
+[   42.7s] mc: 16/320 checkpointed
+[   81.0s] mc: 32/320 checkpointed
+[  119.4s] mc: 48/320 checkpointed
+[  158.4s] mc: 64/320 checkpointed
+[  197.5s] mc: 80/320 checkpointed
+[  237.0s] mc: 96/320 checkpointed
+[  276.5s] mc: 112/320 checkpointed
+[  315.8s] mc: 128/320 checkpointed
+[  355.4s] mc: 144/320 checkpointed
+[  394.8s] mc: 160/320 checkpointed
+[  435.1s] mc: 176/320 checkpointed
+[  475.1s] mc: 192/320 checkpointed
+[  515.3s] mc: 208/320 checkpointed
+[  555.6s] mc: 224/320 checkpointed
+[  597.6s] mc: 240/320 checkpointed
+[  639.2s] mc: 256/320 checkpointed
+[  682.4s] mc: 272/320 checkpointed
+[  728.1s] mc: 288/320 checkpointed
+[  770.6s] mc: 304/320 checkpointed
+[  812.3s] mc: 320/320 checkpointed
+[  812.4s] mc: summaries written
+[  815.0s] sweeps: mount x0.05 f1=18.3 Hz
+[  817.6s] sweeps: mount x0.158 f1=32.4 Hz
+[  820.2s] sweeps: mount x0.5 f1=56.9 Hz
+[  822.8s] sweeps: mount x1.0 f1=75.9 Hz
+[  825.4s] sweeps: mount x1.58 f1=80.4 Hz
+[  827.9s] sweeps: mount x5.0 f1=83.5 Hz
+[  830.6s] sweeps: mount x15.8 f1=84.4 Hz
+[  833.2s] sweeps: mount x50.0 f1=84.7 Hz
+[  835.9s] sweeps: mount x158.0 f1=84.8 Hz
+[  838.5s] sweeps: mount x500.0 f1=84.8 Hz
+[  881.1s] sweeps: done
+[  881.1s] run_qoi done

@@ -1,0 +1,133 @@
+{
+ "note": "NO-sampler train-side proxy (D9); not a posterior, not the metric",
+ "rank": [
+  {
+   "cid": "a08_dishmount_soft",
+   "family": "connect",
+   "proxy": 0.9979,
+   "mean_mac": 0.438,
+   "mean_abs_df": 0.05003,
+   "n_matched": 33
+  },
+  {
+   "cid": "a06_bolt_stiff",
+   "family": "connect",
+   "proxy": 0.9813,
+   "mean_mac": 0.4173,
+   "mean_abs_df": 0.04801,
+   "n_matched": 33
+  },
+  {
+   "cid": "a14_plates_split",
+   "family": "split",
+   "proxy": 0.9809,
+   "mean_mac": 0.421,
+   "mean_abs_df": 0.05006,
+   "n_matched": 33
+  },
+  {
+   "cid": "a10_tb_nearbulk",
+   "family": "split",
+   "proxy": 0.9787,
+   "mean_mac": 0.413,
+   "mean_abs_df": 0.04716,
+   "n_matched": 33
+  },
+  {
+   "cid": "a12_ref_501",
+   "family": "refine",
+   "proxy": 0.9784,
+   "mean_mac": 0.419,
+   "mean_abs_df": 0.0503,
+   "n_matched": 33
+  },
+  {
+   "cid": "a09_tb_nearjoint",
+   "family": "split",
+   "proxy": 0.9583,
+   "mean_mac": 0.3977,
+   "mean_abs_df": 0.0497,
+   "n_matched": 33
+  },
+  {
+   "cid": "a04_welds_t074",
+   "family": "thickness",
+   "proxy": 0.9463,
+   "mean_mac": 0.3881,
+   "mean_abs_df": 0.0509,
+   "n_matched": 33
+  },
+  {
+   "cid": "a01_bb_xface",
+   "family": "split",
+   "proxy": 0.9244,
+   "mean_mac": 0.3651,
+   "mean_abs_df": 0.05039,
+   "n_matched": 33
+  },
+  {
+   "cid": "a05_bolt_soft",
+   "family": "connect",
+   "proxy": 0.8842,
+   "mean_mac": 0.3234,
+   "mean_abs_df": 0.04961,
+   "n_matched": 33
+  },
+  {
+   "cid": "a13_bolt_plus_tbsplit",
+   "family": "connect+split",
+   "proxy": 0.8786,
+   "mean_mac": 0.3161,
+   "mean_abs_df": 0.04873,
+   "n_matched": 33
+  },
+  {
+   "cid": "a03_welds_t130",
+   "family": "thickness",
+   "proxy": 0.8758,
+   "mean_mac": 0.3163,
+   "mean_abs_df": 0.05027,
+   "n_matched": 33
+  },
+  {
+   "cid": "a02_bb_bulkband",
+   "family": "split",
+   "proxy": 0.8375,
+   "mean_mac": 0.2806,
+   "mean_abs_df": 0.05152,
+   "n_matched": 33
+  },
+  {
+   "cid": "a15_scale_ctrl",
+   "family": "parametric_only",
+   "proxy": 0.8301,
+   "mean_mac": 0.2853,
+   "mean_abs_df": 0.05761,
+   "n_matched": 33
+  },
+  {
+   "cid": "a16_bb_splits_combo",
+   "family": "split",
+   "proxy": 0.8127,
+   "mean_mac": 0.2543,
+   "mean_abs_df": 0.05078,
+   "n_matched": 33
+  },
+  {
+   "cid": "a11_ref_202",
+   "family": "refine",
+   "proxy": 0.7999,
+   "mean_mac": 0.2411,
+   "mean_abs_df": 0.05063,
+   "n_matched": 33
+  },
+  {
+   "cid": "a07_mount_soft",
+   "family": "connect",
+   "proxy": 0.7685,
+   "mean_mac": 0.1986,
+   "mean_abs_df": 0.04509,
+   "n_matched": 33
+  }
+ ]
+}

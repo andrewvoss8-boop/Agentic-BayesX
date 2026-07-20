@@ -1,0 +1,36 @@
+{
+ "cid": "ma2_conn_rbe3_bbox",
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe3_convert",
+   "eids": [
+    1024295,
+    1024296,
+    1024297,
+    1024298,
+    1024299,
+    1024300,
+    1024301,
+    1024302,
+    1024303,
+    1024304,
+    1024305,
+    1024306,
+    1024307,
+    1024308,
+    1024309,
+    1024310,
+    1024311,
+    1024312,
+    1024313,
+    1024314
+   ],
+   "name": "rbe3bbox"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r2.json: same Bottom_Box pointer via the interpolation constraint (r1 applied rbe3 only to Top_Box; Bottom_Box holds 0.49 of shape-residual energy)",
+ "track": "agent",
+ "round": 2,
+ "rationale": "diagnosis_mf_r2.json: same Bottom_Box pointer via the interpolation constraint (r1 applied rbe3 only to Top_Box; Bottom_"
+}

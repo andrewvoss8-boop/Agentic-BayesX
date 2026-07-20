@@ -1,0 +1,66 @@
+[23:52:04] window 0: sigma_f=5.0 Hz k=250
+[23:53:40]   window done in 96s: +250 new (total 250), span 0.0-279.1 Hz
+[23:53:40] window 1: sigma_f=279.1 Hz k=250
+[23:55:03]   window done in 83s: +143 new (total 393), span 225.3-326.6 Hz
+[23:55:03] window 2: sigma_f=326.6 Hz k=250
+[23:56:13]   window done in 70s: +134 new (total 527), span 292.4-357.7 Hz
+[23:56:13] window 3: sigma_f=357.7 Hz k=250
+[23:57:38]   window done in 85s: +108 new (total 635), span 324.3-388.0 Hz
+[23:57:38] window 4: sigma_f=388.0 Hz k=250
+[23:59:03]   window done in 85s: +111 new (total 746), span 351.1-420.9 Hz
+[23:59:03] window 5: sigma_f=420.9 Hz k=250
+[00:00:30]   window done in 87s: +105 new (total 851), span 382.7-455.7 Hz
+[00:00:30] window 6: sigma_f=455.7 Hz k=250
+[00:01:49]   window done in 79s: +135 new (total 986), span 417.6-491.1 Hz
+[00:01:49] window 7: sigma_f=491.1 Hz k=250
+[00:03:20]   window done in 91s: +103 new (total 1089), span 453.5-526.2 Hz
+[00:03:20] window 8: sigma_f=526.2 Hz k=250
+[00:04:51]   window done in 90s: +130 new (total 1219), span 486.4-563.0 Hz
+[00:04:51] window 9: sigma_f=563.0 Hz k=250
+[00:06:21]   window done in 90s: +116 new (total 1335), span 526.1-597.5 Hz
+[00:06:21] window 10: sigma_f=597.5 Hz k=250
+[00:07:51]   window done in 90s: +108 new (total 1443), span 558.8-633.8 Hz
+[00:07:51] window 11: sigma_f=633.8 Hz k=250
+[00:09:22]   window done in 91s: +112 new (total 1555), span 591.1-673.6 Hz
+[00:09:22] window 12: sigma_f=673.6 Hz k=250
+[00:10:39]   window done in 77s: +134 new (total 1689), span 634.3-710.4 Hz
+[00:10:39] window 13: sigma_f=710.4 Hz k=250
+[00:11:58]   window done in 79s: +104 new (total 1793), span 669.4-748.5 Hz
+[00:11:58] window 14: sigma_f=748.5 Hz k=250
+[00:13:31]   window done in 92s: +113 new (total 1906), span 703.3-791.3 Hz
+[00:13:31] window 15: sigma_f=791.3 Hz k=250
+[00:14:50]   window done in 80s: +116 new (total 2022), span 740.3-838.9 Hz
+[00:14:50] {"bc": "bcA_kjlo", "n_modes": 2022, "n_below_400": 674, "n_below_820": 1975, "fmax": 838.8870819123596, "runtime_s": 1366.635043144226}
+[11:11:37] window 0: sigma_f=5.0 Hz k=250
+[11:13:09]   window done in 92s: +250 new (total 250), span 0.0-279.1 Hz
+[11:13:09] window 1: sigma_f=279.1 Hz k=250
+[11:14:28]   window done in 79s: +143 new (total 393), span 225.3-326.6 Hz
+[11:14:28] window 2: sigma_f=326.6 Hz k=250
+[11:15:34]   window done in 66s: +134 new (total 527), span 292.4-357.7 Hz
+[11:15:34] window 3: sigma_f=357.7 Hz k=250
+[11:16:54]   window done in 80s: +108 new (total 635), span 324.3-388.0 Hz
+[11:16:54] window 4: sigma_f=388.0 Hz k=250
+[11:18:14]   window done in 81s: +111 new (total 746), span 351.1-420.9 Hz
+[11:18:14] window 5: sigma_f=420.9 Hz k=250
+[11:19:36]   window done in 82s: +105 new (total 851), span 382.7-455.7 Hz
+[11:19:36] window 6: sigma_f=455.7 Hz k=250
+[11:20:44]   window done in 69s: +135 new (total 986), span 417.6-491.1 Hz
+[11:20:44] window 7: sigma_f=491.1 Hz k=250
+[11:22:06]   window done in 82s: +103 new (total 1089), span 453.5-526.2 Hz
+[11:22:06] window 8: sigma_f=526.2 Hz k=250
+[11:23:29]   window done in 83s: +130 new (total 1219), span 486.4-563.0 Hz
+[11:23:29] window 9: sigma_f=563.0 Hz k=250
+[11:24:57]   window done in 87s: +116 new (total 1335), span 526.1-597.5 Hz
+[11:24:57] window 10: sigma_f=597.5 Hz k=250
+[11:26:21]   window done in 84s: +108 new (total 1443), span 558.8-633.8 Hz
+[11:26:21] window 11: sigma_f=633.8 Hz k=250
+[11:27:46]   window done in 85s: +112 new (total 1555), span 591.1-673.6 Hz
+[11:27:46] window 12: sigma_f=673.6 Hz k=250
+[11:28:59]   window done in 72s: +134 new (total 1689), span 634.3-710.4 Hz
+[11:28:59] window 13: sigma_f=710.4 Hz k=250
+[11:30:13]   window done in 75s: +104 new (total 1793), span 669.4-748.5 Hz
+[11:30:13] window 14: sigma_f=748.5 Hz k=250
+[11:31:40]   window done in 86s: +113 new (total 1906), span 703.3-791.3 Hz
+[11:31:40] window 15: sigma_f=791.3 Hz k=250
+[11:32:54]   window done in 75s: +116 new (total 2022), span 740.3-838.9 Hz
+[11:32:54] {"bc": "bcA_kjlo", "n_modes": 2022, "n_below_400": 674, "n_below_820": 1975, "fmax": 838.8870819123596, "runtime_s": 1276.907175064087}

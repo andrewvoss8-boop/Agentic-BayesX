@@ -1,0 +1,37 @@
+fitting global zeta...
+  global: {'kind': 'band', 'zeta': [0.024294646274508894, 0.024294646274508894, 0.024294646274508894, 0.024294646274508894]} obj 0.6043
+fitting 4-band zeta...
+  band4: [0.0228, 0.0147, 0.0246, 0.0233] obj 0.5996
+fitting rayleigh...
+  rayleigh: {'alpha': 0.507, 'beta': 1.21e-06} obj 0.6298
+fitting joint eta...
+  joint_eta: {'joints': 0.0402, 'contact': 0.0001} obj 0.6396
+
+best A0d family by TRAIN amplitude match: band4
+
+=== A0d (best family) ===
+{
+ "damping": {
+  "kind": "band",
+  "zeta": [
+   0.022840753655781844,
+   0.014664269500534741,
+   0.024648487987449567,
+   0.023296072808204272
+  ]
+ },
+ "train_obj": 0.5995973002346312,
+ "P1p_mean": 0.20761370129926035,
+ "P3_mean": 0.2263040536398905,
+ "P2p_mean": 0.7836542110081077,
+ "alignment_gain": -0.018690352340630156,
+ "P1p_folds": [
+  0.3302,
+  0.5296,
+  0.1375,
+  -0.1668
+ ],
+ "damping_dim": 4
+}
+
+a0d done in 72.9s

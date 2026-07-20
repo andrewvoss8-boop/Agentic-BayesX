@@ -1,0 +1,35 @@
+L5 NUTS: converged=True R-hat=1.001 ESS=2646 div=0 (73.4s)
+[shear_X] theta_only sharp=1.068 wcov=0.984 pk=0.995 | discrep sharp=1.931 wcov=0.998 | LMO theta_only=PASS_humble discrep=PASS_humble
+[shear_Y] theta_only sharp=1.215 wcov=0.947 pk=0.919 | discrep sharp=3.157 wcov=0.998 | LMO theta_only=PASS_humble discrep=PASS_humble
+[normal_Z] theta_only sharp=1.016 wcov=0.969 pk=0.965 | discrep sharp=2.552 wcov=1.0 | LMO theta_only=PASS_humble discrep=PASS_humble
+
+SELECTION: {
+  "shear_X": {
+    "winner": "L5_theta_only",
+    "n_compared": 3,
+    "candidates_passing_gate": [
+      "L5_theta_only",
+      "L5_freq_discrep"
+    ],
+    "note": "coverage + leave-modes-out = hard gate, then sharpest (best of N)"
+  },
+  "shear_Y": {
+    "winner": "L5_theta_only",
+    "n_compared": 3,
+    "candidates_passing_gate": [
+      "L5_theta_only",
+      "L5_freq_discrep"
+    ],
+    "note": "coverage + leave-modes-out = hard gate, then sharpest (best of N)"
+  },
+  "normal_Z": {
+    "winner": "L5_theta_only",
+    "n_compared": 3,
+    "candidates_passing_gate": [
+      "L5_theta_only",
+      "L5_freq_discrep"
+    ],
+    "note": "coverage + leave-modes-out = hard gate, then sharpest (best of N)"
+  }
+}
+wrote bakeoff_scorecard.json, leave_modes_out.json

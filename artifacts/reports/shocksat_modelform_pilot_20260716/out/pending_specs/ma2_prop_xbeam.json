@@ -1,0 +1,15 @@
+{
+ "cid": "ma2_prop_xbeam",
+ "cls": "property_control",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.4
+  }
+ ],
+ "diagnosis_link": "CONTROL: isolate the cross-beam stiffening component of the r1 winner (thickness left at 1.0)",
+ "track": "agent",
+ "round": 2,
+ "rationale": "CONTROL: isolate the cross-beam stiffening component of the r1 winner (thickness left at 1.0)"
+}

@@ -1,0 +1,87 @@
+{
+  "gate": "N0 \u2014 reference reproduction (card B 2, pre-registered)",
+  "status": "PASS",
+  "targets": {
+    "shear_X": 1.508,
+    "shear_Y": 2.301,
+    "normal_Z": 2.526
+  },
+  "tolerance": 0.05,
+  "reproduced": {
+    "shear_X": 1.508,
+    "shear_Y": 2.301,
+    "normal_Z": 2.526
+  },
+  "max_abs_err": 0.0,
+  "detail": {
+    "shear_X": {
+      "width_ratio_vs_fem6db": 1.508,
+      "target": 1.508,
+      "abs_err": 0.0,
+      "weighted_coverage": 0.995,
+      "peak_coverage": 1.0,
+      "energy_wtd_pos_dB_exceed": 0.0,
+      "band_grms_width": 175509.39651,
+      "fem6db_grms_width": 116419.854867
+    },
+    "shear_Y": {
+      "width_ratio_vs_fem6db": 2.301,
+      "target": 2.301,
+      "abs_err": 0.0,
+      "weighted_coverage": 0.982,
+      "peak_coverage": 0.985,
+      "energy_wtd_pos_dB_exceed": 0.0,
+      "band_grms_width": 181236.49381,
+      "fem6db_grms_width": 78776.962323
+    },
+    "normal_Z": {
+      "width_ratio_vs_fem6db": 2.526,
+      "target": 2.526,
+      "abs_err": 0.0,
+      "weighted_coverage": 0.987,
+      "peak_coverage": 0.985,
+      "energy_wtd_pos_dB_exceed": 0.0,
+      "band_grms_width": 243743.793632,
+      "fem6db_grms_width": 96498.342659
+    }
+  },
+  "method": "statfem_Fk (the DELIVERED conservative assumption-light winner)",
+  "theta_source": "REUSED L5 NUTS draws from netcg out/theta_post_L5.npz (no sampler run in this card)",
+  "theta_diag_inherited": {
+    "max_rhat": 1.0012933731423992,
+    "min_ess": 2646.2731676508342,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "n_chains": 4,
+    "draws": 4000,
+    "converged": true,
+    "runtime_s": 73.4
+  },
+  "reused_readonly": [
+    "netcg_qoi.py (QOIModel/Method/truth_ensemble/coverage_vs_truth/grms/FGRID)",
+    "realfrf.load_reduced() [psd_envelope_twin]",
+    "theta_post_L5.npz",
+    "bakeoff.py:54-55 band_ratio formula (copied verbatim)"
+  ],
+  "diagnostic_C5": {
+    "purpose": "locate the C5 non-reproduction (pre-registered in decisions_log D3 BEFORE this ran)",
+    "suspect_1_width_convention": {
+      "netcg_bakeoff.band_ratio": "grms(hi-lo)/grms(fem6_hi-fem6_lo)  [normalized WIDTH vs FEM+6dB]",
+      "study_netcg_wide.band_width_ratio": "grms(smooth(hi))/grms(smooth(lo))  [upper/lower ENVELOPE ratio; never references FEM+6dB]",
+      "same_band_netcg_convention": 1.508,
+      "same_band_study_convention": 21.66,
+      "note": "BOTH computed here from the SAME lo/hi arrays of the SAME delivered statfem_Fk band. They are different quantities, so they cannot agree at any calibration."
+    },
+    "suspect_2_statfem_marginal": {
+      "netcg": "marg = 0.25 + (SD_A_U-0.25)*ufrac ; ufrac = UNMEASURED-mode energy fraction (netcg_qoi.py Method.ensemble/statfem_fk)",
+      "study": "marg = max(0.25, wfrac) ; wfrac = contribution-weighted MEAN SD_A over ALL modes (netcg_wide.py:143-147)",
+      "note": "different functional form -> different width even under the same width convention."
+    },
+    "suspect_3_theta_ensemble": {
+      "netcg": "60 theta draws x n_disc=40 = 2400 spectra (theta uncertainty INSIDE the band)",
+      "study": "single theta (theta_MAP_wide) x 400 draws (theta uncertainty ABSENT from the band)",
+      "note": "study bands carry no theta spread; see N1 for the theta-point contribution."
+    }
+  },
+  "active_s": 5.2
+}

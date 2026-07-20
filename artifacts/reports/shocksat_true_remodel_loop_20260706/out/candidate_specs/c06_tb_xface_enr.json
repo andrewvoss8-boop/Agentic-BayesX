@@ -1,0 +1,23 @@
+{
+ "cid": "c06_tb_xface_enr",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 201,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "tb_xface"
+  }
+ ],
+ "rationale": "Top-box +X face split (the one untested face analog of a01; ch52/69 are +X-face channels).",
+ "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe",
+ "split_info": {
+  "tb_xface": 7132
+ },
+ "enriched_from": "c06_tb_xface"
+}

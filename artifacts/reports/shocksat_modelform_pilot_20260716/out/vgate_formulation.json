@@ -1,0 +1,29 @@
+{
+ "op": "formulation",
+ "status": "PASS",
+ "checks": [
+  {
+   "name": "thin-plate bending freqs x sqrt(1.21)=1.100 (max dev %, first 5 bending modes)",
+   "value": 0.021,
+   "expect": "<=2%",
+   "pass": true
+  },
+  {
+   "name": "ts_t direction: f(0.35) < f(5/6) < f(5.0) thick-plate fundamental",
+   "value": [
+    939.74,
+    956.24,
+    968.37
+   ],
+   "expect": "monotone",
+   "pass": true
+  },
+  {
+   "name": "mass unchanged (max|dM|)",
+   "value": 0.0,
+   "expect": 0.0,
+   "pass": true
+  }
+ ],
+ "ts": "2026-07-16T19:16:03"
+}

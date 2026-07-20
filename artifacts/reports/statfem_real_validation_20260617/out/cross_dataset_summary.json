@@ -1,0 +1,49 @@
+{
+  "deliverable": "Phase5_cross_dataset (.ash-calibrated theta -> predict impact-hammer held-out FRF QOI)",
+  "n_splits": 25,
+  "sources": {
+    "nominal": {
+      "calib_converged": true,
+      "calib_rhat": 1.0,
+      "peak_IS_median": 1508.7629064055352,
+      "peak_cov_median": 0.9032258064516129,
+      "peak_zstd_median": 1.124024769668701,
+      "band_IS_median": 3699.808216319304,
+      "band_cov_median": 0.9032258064516129
+    },
+    "ash_freq": {
+      "calib_converged": true,
+      "calib_rhat": 1.0019259679812533,
+      "peak_IS_median": 1502.0974309073918,
+      "peak_cov_median": 0.9354838709677419,
+      "peak_zstd_median": 1.0629655398085724,
+      "band_IS_median": 3680.045222325899,
+      "band_cov_median": 0.9354838709677419
+    },
+    "ash_freqMAC": {
+      "calib_converged": false,
+      "calib_rhat": 1.0083888186453709,
+      "peak_IS_median": 1501.1495329020738,
+      "peak_cov_median": 0.9032258064516129,
+      "peak_zstd_median": 1.0663107324728227,
+      "band_IS_median": 3642.556668099184,
+      "band_cov_median": 0.9032258064516129
+    },
+    "beck_infer": {
+      "calib_converged": true,
+      "calib_rhat": 1.0040058325445111,
+      "peak_IS_median": 857.9960804920092,
+      "peak_cov_median": 0.9354838709677419,
+      "peak_zstd_median": 0.7223752356205875,
+      "band_IS_median": 2380.9008145498283,
+      "band_cov_median": 0.967741935483871
+    }
+  },
+  "L5_impact_FRF_reference": {
+    "peak_IS": 1660.7707667521245,
+    "peak_cov": 0.9354838709677419,
+    "band_IS": 4236.266721875587
+  },
+  "ash_freqMAC_sigma_mac": 0.3390926280895273,
+  "runtime_s": 1894.776780128479
+}

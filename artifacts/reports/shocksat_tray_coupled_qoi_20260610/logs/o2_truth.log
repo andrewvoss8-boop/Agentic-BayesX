@@ -1,0 +1,6 @@
+[   0.5s] truth mount multipliers: [1.222, 0.819, 1.478, 0.846, 0.843, 0.408]
+[   0.5s] truth tray theta: {'tray_E': 0.98, 'strut_EA': 1.542, 'strut_EI': 0.796, 'joint_axial': 1.205, 'joint_lateral': 0.877}
+[   0.6s] truth: 36 coupled modes 5-240.0 Hz; first 8: [52.3, 62.1, 68.9, 70.2, 74.7, 84.3, 87.5, 96.2]
+[   0.9s] pairing anchor = x1.0 (total MAC 28.08)
+[   0.9s] pairs: 36; calib_ok: 27
+[   0.9s] survey_data + truth_lock + pairing written

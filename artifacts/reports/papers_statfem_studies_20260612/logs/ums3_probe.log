@@ -1,0 +1,7 @@
+H_orth {'tag': 'H_orth', 'max_rhat': 1.0093, 'min_ess': 143.7806, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 188.2738}
+  H_orth: QOI 1/10  gz/chain [2.77 2.75]
+H_local {'tag': 'H_local', 'max_rhat': 1.0064, 'min_ess': 99.0162, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 375.3069}
+  H_local: QOI 0/10  gz/chain [0.91 0.89]
+H_both {'tag': 'H_both', 'max_rhat': 1.0141, 'min_ess': 173.5905, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 398.3196}
+  H_both: QOI 0/10  gz/chain [1.02 0.99]
+saved ums3_summary.json

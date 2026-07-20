@@ -1,0 +1,19 @@
+{
+ "cid": "mr2_conn0_a1",
+ "track": "random",
+ "round": 2,
+ "cls": "connectivity",
+ "seed": 20362716,
+ "ops": [
+  {
+   "op": "rbe3_convert",
+   "eids": [
+    9000095,
+    9000032
+   ],
+   "name": "rrbe320a1"
+  }
+ ],
+ "rationale": "dud replacement draw",
+ "evidence": "none (random)"
+}

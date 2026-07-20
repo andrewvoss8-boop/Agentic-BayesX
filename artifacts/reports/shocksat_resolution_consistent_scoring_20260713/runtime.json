@@ -1,0 +1,16 @@
+{
+ "active_runtime_s": 1066.6,
+ "elapsed_wallclock_s": 12706.7,
+ "logged_steps_s": 81.6,
+ "unlogged_estimates_s": {
+  "gate_w_v1_run": 325,
+  "gate_w_rerun_cached": 60,
+  "mat_inspection_diagnostics": 180,
+  "zeta_fit_diagnostics": 240,
+  "make_figs_x4": 140,
+  "verdicts": 5,
+  "checker_runs": 15,
+  "sha_hashing": 20
+ },
+ "note": "active = sum of executed compute steps (logged + itemized estimates for interactive diagnostics); wall-clock spans the interactive session incl. review pauses"
+}

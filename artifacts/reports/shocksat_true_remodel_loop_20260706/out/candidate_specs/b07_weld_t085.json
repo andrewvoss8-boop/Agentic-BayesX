@@ -1,0 +1,21 @@
+{
+ "cid": "b07_weld_t085",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    104,
+    105,
+    106,
+    204,
+    205,
+    206
+   ],
+   "t_scale": 0.85,
+   "name": "welds_t085"
+  }
+ ],
+ "rationale": "Weld \u00d70.85: gentler point on the thickness curve to locate its dev-P1 optimum.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)"
+}

@@ -1,0 +1,1 @@
+{"seed": 8, "n_modes": 6, "mean_MAC": 0.2514888248626841, "calib_rhat": 1.002883586721649, "calib_converged": true, "matched_fem_hz": [124.4, 113.8, 192.9, 249.4, 151.9, 183.9], "peak_IS": 934.0185243117446, "peak_cov": 0.9032258064516129, "band_IS": 2470.560579799313, "band_cov": 0.9032258064516129, "skipped": false}

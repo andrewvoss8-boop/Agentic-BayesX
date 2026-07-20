@@ -1,0 +1,15 @@
+seed 1: obs 46/ho 31; calib conv=True | 27 modes w/ measured zeta
+  ARM0_uniform1pct                   sigma_QOI_peak=1.113  PEAK cover=1.00 interval=2207 width_db=37.1
+  ARM1_uniform1pct_plus_window       sigma_QOI_peak=1.096  PEAK cover=1.00 interval=1681 width_db=36.5
+  ARM2_permode_struct_plus_window    sigma_QOI_peak=1.135  PEAK cover=0.94 interval=3215 width_db=38.4
+  runtime 188s
+seed 2: obs 46/ho 31; calib conv=True | 27 modes w/ measured zeta
+  ARM0_uniform1pct                   sigma_QOI_peak=1.056  PEAK cover=0.97 interval=2047 width_db=35.6
+  ARM1_uniform1pct_plus_window       sigma_QOI_peak=1.059  PEAK cover=0.97 interval=1589 width_db=35.7
+  ARM2_permode_struct_plus_window    sigma_QOI_peak=1.097  PEAK cover=0.94 interval=3179 width_db=37.7
+  runtime 158s
+seed 3: obs 46/ho 31; calib conv=True | 27 modes w/ measured zeta
+  ARM0_uniform1pct                   sigma_QOI_peak=1.064  PEAK cover=0.94 interval=2822 width_db=35.9
+  ARM1_uniform1pct_plus_window       sigma_QOI_peak=1.061  PEAK cover=0.97 interval=2166 width_db=36.0
+  ARM2_permode_struct_plus_window    sigma_QOI_peak=1.080  PEAK cover=0.87 interval=4594 width_db=37.2
+  runtime 154s

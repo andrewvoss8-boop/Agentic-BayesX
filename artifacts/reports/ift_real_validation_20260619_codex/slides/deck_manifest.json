@@ -1,0 +1,14 @@
+{
+  "final_pptx": "slides/ift_real_validation_honest_negative.pptx",
+  "slide_count": 9,
+  "preview_montage": "slides/deck_preview_montage.webp",
+  "scratch_workspace": "/var/folders/2q/0dzchbr15wj7j5rzcktjj1w8_w1qxk/T/codex-presentations/019edffc-0ad8-7882-95b4-996f62a2e482/ift-real-validation-deck",
+  "sources": [
+    "out/scorecard.json",
+    "out/ift_mc_headline.json",
+    "out/convergence_table.json",
+    "out/discretization_sensitivity.json",
+    "checker_report.json"
+  ],
+  "contact_sheet": "slides/preview/contact_sheet.png"
+}

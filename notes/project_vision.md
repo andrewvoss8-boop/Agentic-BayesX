@@ -1,6 +1,6 @@
 # Project Vision — A Digital Bayesian Twin for Aerospace Structures
 
-Status: working vision (living document). Last updated: 2026-06-06.
+Status: working vision (living document). Last updated: 2026-06-19.
 Owner: Andrew Voss (lead human). Lead agent: Claude Code (Agentic BayesX).
 Communication: written for a beginner-to-intermediate reader (about one year of ML); technical terms
 are defined in plain words on first use.
@@ -18,6 +18,9 @@ are defined in plain words on first use.
 - **Sharpened the contribution** into a novel core (the orthogonal GP discrepancy) plus a supporting
   workflow (evidence-based parameter selection; load-indicator QOIs; QOI-targeted sensor/test
   selection), with honest "novel-candidate vs established" labels (§5).
+- **(2026-06-19) Added §7.1 — evidence from the real ShockSat that the amplitude bands are too WIDE to
+  certify, why, and the path to usable ones** (better/agentic FEM correlation; feature-space discrepancy;
+  our own test stand for maximally-informative testing). Two new directions land in §13 next actions.
 
 ## 1. The vision in one paragraph (the Porsche framing)
 StatFEM (the statistical finite element method — a way to fuse a physics model with test data while
@@ -37,6 +40,36 @@ lives. If the new methods work, there is a patent; if they do not, there is no p
   ~10x true margins, and mass is wasted everywhere.
 - Solve it and structures can be 5-10% lighter WITH more confidence, and the design/test/verification
   process becomes consistent, auditable, and defensible — putting risk where it actually is.
+
+## 2.1 Industry adoption reality — meet the skeptics where they are (Andrew, 2026-06-10)
+Big names in industry with major dynamics experience have **not heard of Bayesian FEM updating** and are
+skeptical it is "**polishing a turd**" or "**pencil whipping**." Their objections are concrete and partly
+fair, and we must address them DIRECTLY rather than out-argue them:
+- **Slow / computationally intensive.** Multi-hour NUTS on a full FEM is a non-starter in a real aero
+  schedule.
+- **Garbage in, garbage out.** Bad test data, a bad model, or bad priors break it — and the user often
+  cannot tell which.
+- **Assumption-dependent / arbitrary.** It leans on choices like the discrepancy/observation-noise scale
+  (sigma_d), priors, etc. that are ultimately arbitrary or unjustified to a practitioner.
+
+**Strategic consequence (foot in the door).** Do NOT lead with a heavy, slow, assumption-laden Bayesian
+machine. Aim first for **very simple, borderline empirical / hand-calc-level tools that plug and play
+directly into existing aero workflows** — give a practitioner something useful and auditable with their
+current data and current process, then earn the right to add the Bayesian layer underneath. This reframes
+the project's near-term deliverable away from "a better posterior" and toward "a tool an aero loads
+engineer would actually run on Monday." It also raises the bar on our honesty gates: every arbitrary
+assumption (sigma_d, priors) must be surfaced with a sensitivity result, and the held-out trust test (§7,
+§12) is our direct answer to "GIGO / pencil-whipping."
+
+## 2.2 Response limiting, not force limiting, is the industry-practical QOI (Andrew, 2026-06-10)
+In practice industry does **little force limiting**; **response limiting is far more common**. To stay
+industry-applicable, use a **response-limit proxy for the force limit**: pick **1-2 sensors (accelerometers)
+that are highly correlated with the net-CG response at the high-priority modes** (the modes driving the
+net-CG response / interface force), and set an appropriately scaled limit on those sensors as a stand-in
+for the interface-force limit. This keeps the 7004C apparent-mass / interface-force story as the physics
+backbone (§5.5) while expressing the deliverable in the response-limit language a test/loads team already
+uses. NOTE for current work: this directly informs the QOI choice in the in-flight ShockSat × tray coupled
+study (per-mount interface load vs net force) — a response-limit-proxy QOI is now a first-class option.
 
 ## 3. Core thesis
 - Girolami/Duffin et al. created StatFEM and statFEM digital twins, cleanly separating model prediction,
@@ -280,6 +313,88 @@ framing.
 Out of scope / back burner: full BOED close-the-loop, geometry optimization, segmentation, the full
 rocket digital twin (also SpaceX prior art).
 
+## 6.1 Robustness-first restatement of the objective (Andrew, 2026-06-10) — THE primary build target
+Andrew re-centered on the ORIGINAL plan and named the headline requirement explicitly: a **LIVE digital
+twin of the primary structure in apparent-mass / interface-environment terms that is ROBUST TO MODEL
+ERROR**. It must keep providing value with coarse models, large model-form error, sensor nodes not aligned
+with the test point, even a WRONG-VERSION model (e.g. a Starship V2 FEM updated against a tap test on a
+partially-assembled V3 at different pressurization). It ingests a SCRAPPY frequency/ID apparent-mass test
+(coupled OR uncoupled config) and still returns meaningful QOI and vibe-test-plan predictions WITH
+confidence intervals carrying BOTH the 7004C apparent-mass effect AND the Bayesian effect. Non-brittle is a
+hard requirement: a bad model must WIDEN the intervals (and say so), never give a confident wrong number.
+
+**Honest scope line (backed by our own ShockSat evidence).** Under large model error the QOI /
+apparent-mass PREDICTION can stay calibrated (intervals widen but COVER) while the PHYSICAL-PARAMETER
+identification degrades gracefully (parameters fall back to prior). We do NOT claim to recover the true
+physics of a wrong model (Brynjarsdottir-O'Hagan / Stage-3 confounding). The defensible claim is a
+calibrated, HELD-OUT-VALIDATED QOI under model error — NOT "we fixed your wrong FEM." The ShockSat modal
+twin already exhibited exactly this: held-out FREQUENCY prediction stayed robust even when identification
+was partial and fragile. Make that the headline proof-of-behavior.
+
+**What delivers the robustness (this is where the design effort goes):**
+- Observe the interface OBSERVABLE that carries the QOI — drive-point / interface apparent mass M(ω)=F/a —
+  not internal mode shapes; the test measures it directly and the load lives there, so interior model
+  error barely matters. M=F/a is forcing-LEVEL independent → robust to unknown forcing level too.
+- Orthogonal, output-space discrepancy (the F(k) thesis, §5.2) generous enough to ABSORB model error
+  without stealing identifiability — robustness IS the discrepancy treatment; a coarse model just makes the
+  discrepancy work harder and the bands wider.
+- Calibrate only what the data pins (a few effective interface/modal params; FIM downselection); let the
+  discrepancy carry the rest.
+- Node/sensor-vs-model misalignment handled by an observation operator / virtual-point transformation WITH
+  its own uncertainty, not assumed exact.
+- Graceful degradation MEASURED by held-out QOI coverage: the trust gate is that the bands cover even when
+  wide. This is our direct, demonstrable answer to the "GIGO / pencil-whipping" skeptics (§2.1).
+
+**Reconciles with §2.1 "simple, plug-and-play."** The simplicity is a LOW MODEL/DATA REQUIREMENT (works
+from a coarse model + a scrappy apparent-mass test), NOT a dumbed-down method. That low barrier is the foot
+in the door; the robust, held-out-validated posterior is the value. The §2.1 hand-calc tool sketches did
+NOT resonate; this robust-twin restatement supersedes them as the build direction.
+
+**Two stated companion asks (already partly built):** (1) optimal sensor placement for LOAD-INDICATOR
+information gain (Papadimitriou QOI-OSP; the Opus FIM experiment-design already produces best accel/tap
+locations); (2) optimal parameter downselection/POOLING for Bayesian updating (Bayesian evidence /
+model-class selection + the F(k) partial-pooling discrepancy; FIM already says ~3 identifiable).
+
+**First discriminating experiment (proposed, NOT yet launched — awaiting Andrew scope confirm):** a
+deliberately wrong/coarse model + a scrappy apparent-mass test on a "different" truth → show the twin's QOI
+interval still COVERS while widening, and a deterministic prediction is confidently wrong. Two open scope
+questions for Andrew: (a) prototype on existing ShockSat+Opus-tray assets vs hold for McCallie real tray;
+(b) lead with the robustness/coverage-under-wrong-model demo vs the uncoupled→coupled
+apparent-mass + vibe-test-plan-with-CIs pipeline.
+
+## 6.2 Discrepancy-prior front-end: a dial / LLM that turns KNOWN config deltas into the error model (Andrew, 2026-06-10)
+Idea: let the user either (a) DIAL A KNOB per discrepancy CATEGORY — different config, forcing, build,
+pressurization, integration/assembly status, etc. — or (b) just DESCRIBE the differences in plain English to
+an LLM, which applies the appropriate knockdowns / mock-ups and tweaks the error assumptions (prior MEANS
+AND prior WIDTHS) accordingly. This is the USER-FACING FRONT DOOR of the robustness-first twin (§6.1): the
+discrepancy does the heavy lifting, and this is how a (non-Bayesian) engineer TELLS the twin how wrong to
+expect the model to be — turning the "arbitrary sigma_d" objection (§2.1) into a defensible ELICITATION from
+KNOWN engineering deltas instead of a made-up number. Speaks the existing-workflow language: aero loads
+already applies model-uncertainty factors / knockdowns; this automates translating a described config delta
+into a discrepancy PRIOR.
+
+Guardrails — these ARE the design, not polish:
+- Map each delta to discrepancy STRUCTURE, not a scalar fudge: which modes/bands/DOF, the
+  frequency-correlation, and the SIGN/mechanism. Pressurization stiffens membrane modes (banded); a missing
+  sub-assembly removes mass + DOF (a mock-up, not just a knockdown); integration status changes the interface
+  BC; build-to-build ≈ per-mode random scatter. Key the delta to WHERE it acts physically (modal strain
+  energy / the F(k) structure) so it composes with the orthogonal output-space discrepancy.
+- Two layers per delta: a prior-MEAN mock-up adjustment AND a prior-UNCERTAINTY inflation. The scrappy
+  apparent-mass test narrows from there.
+- MUST WIDEN, NOT FALSELY NARROW. Safe direction is conservative. A knob that dials sigma_d DOWN to get a
+  tighter answer is the automated pencil-whipping the skeptics fear — gate any TIGHTENING on held-out
+  coverage, never on user preference. The dial can make you humbler for free; confidence must be earned by
+  data.
+- LLM = RETRIEVAL / elicitation front-end over a CALIBRATED knockdown / empirical-delta library
+  (config-to-config, build-to-build, pressurized-vs-not deltas observed in real tests), NOT a free
+  generator. Every applied knockdown TRACEABLE to a source or explicitly labeled a coarse guess with a wide
+  band. An LLM confidently inventing a knockdown is GIGO with extra steps.
+- Held-out QOI coverage remains the trust gate over the whole thing.
+
+Novelty caution: knockdown / model-uncertainty factors are standard practice and "LLM-for-engineering" prior
+art is emerging fast — do NOT claim novelty in the front-end without an FTO/lit scan. Defensible value stays
+the held-out-validated, discrepancy-aware QOI; this is UX / prior-elicitation on top of it.
+
 ## 7. Approach — realistic FEMs + REAL data as the trust foundation
 **Trust comes from REAL data + held-out calibration — not synthetic parameter recovery, and not NUTS
 convergence by itself.** The current synthetic FEMs and the Stage-3 result are preliminary plumbing
@@ -300,6 +415,66 @@ convergence by itself.** The current synthetic FEMs and the Stage-3 result are p
   variables (incl. raw hierarchical latents), divergence fraction, >= 4 chains, non-centered for
   hierarchical variance models. Do not claim "NUTS active" without passing diagnostics + one-command
   replay + checker output. Convergence is a DIAGNOSTIC; the TRUST gate is held-out QOI calibration.
+
+## 7.1 Evidence from the real ShockSat: the bands are too WIDE to certify — why, and the path to usable ones (2026-06-19)
+The real-ShockSat validation (Card C, `artifacts/reports/statfem_real_validation_20260617/`) produced a twin that
+is HONEST (held-out calibrated, never overconfident — the §6.1 robustness behavior) but whose amplitude / energy
+bands are **too wide to be usable for tight aerospace certification**. Andrew's engineering verdict (correct): no one
+can accept a 95% band ~6x above the mean in |H| (≈34 dB; even wider in band-GRMS). This is the central, honest GAP —
+documented here so it shapes priorities, not buried in a study folder.
+
+**Why the bands are that wide (evidence-backed, not a hunch).** The model-form discrepancy must be this wide to stay
+calibrated given how wrong a COARSE FEM is. Three drivers, in order:
+1. **Peak-FREQUENCY misalignment dominates.** A few-% error in where the FEM's resonances sit creates giant
+   per-frequency residuals at every sharp peak (model tall where data is small and vice-versa), inflating the
+   discrepancy sigma even when peak HEIGHTS are right. This is partly an ARTIFACT of measuring the error in the wrong
+   space (per-frequency magnitude of a resonant function) — see the feature-space fix below.
+2. **Mode-shape PARTICIPATION error.** With a single fixed UNITS gain (no per-channel fitting), the FEM mis-
+   distributes band energy across sensors by x0.1-x4.6 — over-predicting at the hard impact-face/joint channels,
+   under-predicting elsewhere. A genuine spatial model error.
+3. **Single hit / single impact.** One strike → noisy damping, no averaging → part of the width is measurement
+   noise this dataset cannot beat.
+
+**The honest meta-finding (the Ilias "find the gap" answer).** StatFEM's discrepancy machinery makes the twin
+TRUSTWORTHY but **cannot manufacture sharpness the underlying model does not have.** Card C threw the full kit at the
+amplitude width — inferred mode-shape FIELD (Beck/Au/Vanik), measured per-mode damping, spatial freq×space kriging,
+more modes, MAC-informed matching — and bought only ~1.4x, and only when the units-gain ambiguity was resolved in
+its favor. Under a physics-honest FIXED units gain (no free knob) every method under-predicts held-out peaks ~2x.
+**The gap is FEM amplitude/shape fidelity; the improvement is a better MODEL, not cleverer statistics.** (The
+gain-ambiguity itself is a symptom: the only reason you must CHOOSE a gain target is that the FEM's peak-to-floor
+shape is wrong; a correct model removes the choice.)
+
+**The path to usable bands (priority order):**
+1. **A better FEM — and the AGENTIC FEM-CORRELATION opportunity (NEW strategic direction).** The primary lever is a
+   model whose peaks land within ~1% and whose mode shapes put energy in the right place; then the discrepancy can be
+   SMALL and the bands tight. **Sobering nuance (Andrew):** the ShockSat FEM we used was ALREADY a vendor-correlated
+   model of a *relatively simple* structure, yet it still needs refinement to give usable amplitude bands. That is a
+   bit concerning for the "works on a coarse model" promise — BUT it is also an **opportunity to explore AGENTIC FEM
+   CORRELATION (data-driven re-meshing / model improvement driven by where the data says the model is wrong), an
+   essentially unexplored domain** and a natural fit for Bilionis's autonomous-engineering interest. Card D
+   (`shocksat_fem_remesh_20260618`) is the first step. Honesty/novelty caution: FEM model-updating / correlation is
+   mature; the *agentic automation* of it (an agent diagnosing the wrong regions from held-out residuals and
+   re-meshing/re-parameterizing them) is the angle — needs the usual lit/FTO scan before any novelty claim, and the
+   held-out trust gate still decides. This complements, not replaces, the orthogonal F(k) discrepancy: a better model
+   shrinks the discrepancy; the discrepancy keeps whatever error remains honest.
+2. **Feature-space discrepancy (a NEXT experiment — Andrew: "we definitely should do this").** Put the uncertainty in
+   FEATURES — "peak at f0 ± X%, amplitude Y ± Z dB per mode" — instead of a per-frequency |H| band. This removes the
+   misalignment-driven inflation (driver 1) and turns a x6 vertical band into a narrow frequency wiggle + a modest
+   amplitude band: a statement a loads engineer can actually use and certify against. We already have the modal
+   machinery; this directly tests how close a USABLE (e.g. +3/+6 dB margin) band is, and how much of the remaining gap
+   is the model (lever 1) vs the single-hit data (lever 3).
+3. **Maximally-informative testing on OUR OWN stand (data lever).** We CANNOT add data to the ShockSat set — it is not
+   ours (one impact, one hit, fixed sensors). The fix is to design our OWN test (the §7 McCallie subscale tray, or a
+   dedicated stand) to be MAXIMALLY INFORMATIVE for exactly the limits found here: multi-hit / multi-reference / roving
+   excitation to beat single-hit damping noise and pin amplitudes; sensor placement at the high-participation /
+   high-discrepancy locations (Papadimitriou QOI-OSP, §5.3); coupled AND uncoupled apparent-mass configs. This turns
+   the band-width finding into a concrete TEST-DESIGN requirement, and is where the "spend the next test dollar here"
+   guidance (Study L) becomes an actual test plan.
+
+**Scope honesty in the meantime.** As-is, the real-data twin is a CONSERVATIVE screening / flag-when-the-FEM-is-wrong
+tool (§6.1 robustness behavior), NOT a tight certification twin. Report it that way — "FEM ± documented model-form,
+not yet validated to a tight margin" — never as a sharp predictive twin. The width is the honest cost of a coarse
+model + scrappy data, exactly the regime §6.1 promises to survive; making it SHARP (not just honest) is the open work.
 
 ## 8. Stakeholders (and honest tensions)
 - Andrew (lead): StatFEM/structural-dynamics digital twin + 7004c; industry expertise. NOTE: the
@@ -399,6 +574,18 @@ These shape our top-level priorities, not just one run. (Full plain-English writ
 1. **Get real (or realistic-validated) inputs.** (a) Plan/begin the McCallie subscale tray test; and/or
    (b) pick ONE real public apparent-mass / FRF record to run the pipeline against; and (c) raise FEM
    fidelity to a VALIDATED level (benchmarks + real modal data).
+   - **(2026-06-19, from §7.1) Design OUR OWN stand for MAXIMALLY-INFORMATIVE testing** (we cannot add data to the
+     ShockSat set — not ours): multi-hit / multi-reference / roving excitation, QOI-OSP sensor placement at the
+     high-participation/high-discrepancy locations, coupled+uncoupled apparent-mass configs — targeted at the
+     amplitude/shape/damping limits §7.1 exposed.
+1b. **(NEW, 2026-06-19) Feature-space discrepancy experiment** — report "peak at f0 ± X%, amplitude Y ± Z dB per
+   mode" instead of a per-frequency |H| band; quantify how close a USABLE (+3/+6 dB) band is and how much of the gap
+   is the model vs the single-hit data. We have the modal machinery; this is a near-term, bounded run.
+1c. **(NEW strategic, 2026-06-19) Agentic FEM correlation** — an agent that diagnoses the wrong FEM regions from
+   held-out residuals and re-meshes / re-parameterizes them (Card D `shocksat_fem_remesh_20260618` is step one). An
+   unexplored automation domain + Bilionis-aligned; complements (does not replace) the orthogonal F(k) discrepancy.
+   Honest gate: lit/FTO scan before any novelty claim; held-out coverage still decides; "already-correlated FEM still
+   needs refinement" is itself a finding to confront.
 2. **The decisive method A/B (cheap, can start on the existing model as a method check):** orthogonal
    output-space `F(k)` vs the same-parameter-space version, gated on **held-out netCG coverage**. This is
    the thesis + patent non-obviousness evidence once run on trusted inputs.

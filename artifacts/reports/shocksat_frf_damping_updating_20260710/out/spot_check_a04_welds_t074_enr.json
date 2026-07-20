@@ -1,0 +1,7 @@
+{
+ "cid": "a04_welds_t074_enr",
+ "rel_err": 8.347904589811606e-10,
+ "n_modes": 60,
+ "pass_0p3pct": true,
+ "provenance": "exact-basis reduction validated in shocksat_true_remodel_loop_20260706 (identical package); reused here read-only"
+}

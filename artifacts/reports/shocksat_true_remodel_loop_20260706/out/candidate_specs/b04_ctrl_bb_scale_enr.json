@@ -1,0 +1,14 @@
+{
+ "cid": "b04_ctrl_bb_scale_enr",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "bottom_box",
+   "factor": 0.9
+  }
+ ],
+ "rationale": "PARAMETRIC-ONLY CONTROL for b02/b03: if bottom_box modulus\u00d70.9 (level, no distribution) matches the bottom-box SPLIT dev P1, the split's gain is level/\u03b8, not distribution/model-form (the finding-#2 discriminator).",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)",
+ "enriched_from": "b04_ctrl_bb_scale"
+}

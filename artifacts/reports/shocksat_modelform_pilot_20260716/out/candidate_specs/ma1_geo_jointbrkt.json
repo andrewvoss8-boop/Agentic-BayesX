@@ -1,0 +1,25 @@
+{
+ "cid": "ma1_geo_jointbrkt",
+ "cls": "geometry",
+ "ops": [
+  {
+   "op": "joint_offset",
+   "eids": [
+    6001445,
+    6001446,
+    6001447,
+    6001448
+   ],
+   "vec": [
+    0.25,
+    0.15,
+    0.0
+   ],
+   "name": "jbrkt"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Brackets|Y 0.734 dex sub-200; the tray-bracket interface position (z=57.4) within build tolerance moves the wall-mode node lines - offset 4 bracket spiders by [0.25,0.15,0] in (|d|=0.29)",
+ "track": "agent",
+ "round": 1,
+ "rationale": "diagnosis_mf_r1.json: Top_Brackets|Y 0.734 dex sub-200; the tray-bracket interface position (z=57.4) within build tolera"
+}

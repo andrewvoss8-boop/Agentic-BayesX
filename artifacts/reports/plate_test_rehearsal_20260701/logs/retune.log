@@ -1,0 +1,69 @@
+targets: [246.1, 249.4, 253.9, 258.3] Hz | basis 12 | extra 6 | cand 41
+[retune] A0_1sensor s1 (was div_frac 0.0236, rhat 1.0113)
+[done] A0_1sensor s1: band 6.166x cov 1.0 rhat 1.0124 ess 401.1 div 2 (1112.2s)
+[retune] A0_1sensor s5 (was div_frac 0.0254, rhat 1.0056)
+[done] A0_1sensor s5: band 5.96x cov 1.0 rhat 1.005 ess 555.5 div 0 (398.2s)
+[retune] A0_1sensor s6 (was div_frac 0.0257, rhat 1.0081)
+[done] A0_1sensor s6: band 6.337x cov 1.0 rhat 1.1388 ess 22.9 div 173 (2016.1s)
+{
+ "A0_1sensor": {
+  "n_runs": 8,
+  "n_converged": 7,
+  "median_band_factor": 6.17,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 7,
+  "worst_rhat": 1.1388,
+  "min_ess": 22.9,
+  "median_eta_post_sd": 0.725
+ },
+ "A1_12sensor": {
+  "n_runs": 8,
+  "n_converged": 8,
+  "median_band_factor": 6.2,
+  "mean_weighted_coverage": 0.998,
+  "seeds_cov_ge_085": 8,
+  "worst_rhat": 1.0028,
+  "min_ess": 1493.3,
+  "median_eta_post_sd": 0.579
+ },
+ "A2_20sensor": {
+  "n_runs": 8,
+  "n_converged": 8,
+  "median_band_factor": 6.2,
+  "mean_weighted_coverage": 0.996,
+  "seeds_cov_ge_085": 8,
+  "worst_rhat": 1.0026,
+  "min_ess": 1311.0,
+  "median_eta_post_sd": 0.559
+ },
+ "A3_12jitter": {
+  "n_runs": 8,
+  "n_converged": 8,
+  "median_band_factor": 6.54,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 8,
+  "worst_rhat": 1.0052,
+  "min_ess": 1613.0,
+  "median_eta_post_sd": 0.62
+ },
+ "S_sd04": {
+  "n_runs": 2,
+  "n_converged": 2,
+  "median_band_factor": 5.72,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 2,
+  "worst_rhat": 1.0033,
+  "min_ess": 1713.3,
+  "median_eta_post_sd": 0.159
+ },
+ "S_sd16": {
+  "n_runs": 2,
+  "n_converged": 2,
+  "median_band_factor": 104.23,
+  "mean_weighted_coverage": 1.0,
+  "seeds_cov_ge_085": 2,
+  "worst_rhat": 1.0015,
+  "min_ess": 2502.8,
+  "median_eta_post_sd": 1.063
+ }
+}

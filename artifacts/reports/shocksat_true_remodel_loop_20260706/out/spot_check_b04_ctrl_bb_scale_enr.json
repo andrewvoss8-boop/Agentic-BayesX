@@ -1,0 +1,8 @@
+{
+ "cid": "b04_ctrl_bb_scale_enr",
+ "basis_r": 127,
+ "n_modes": 74,
+ "max_rel_err": 9.338987871920779e-08,
+ "median_rel_err": 1.1369055696874852e-10,
+ "pass_0p3pct": true
+}

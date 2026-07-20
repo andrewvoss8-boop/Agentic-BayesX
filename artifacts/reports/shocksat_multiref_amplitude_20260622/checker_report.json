@@ -1,0 +1,103 @@
+{
+  "task": "Card G \u2014 multi-reference vs +X-only: does it break the participation\u00f7damping confound and raise held-out per-channel AMPLITUDE skill vs climatology while preserving freq skill?",
+  "overall": "GREEN",
+  "counts": {
+    "green": 18,
+    "yellow": 0,
+    "red": 0
+  },
+  "gates": [
+    {
+      "gate": "integrity.self",
+      "status": "GREEN",
+      "msg": "check.py unchanged"
+    },
+    {
+      "gate": "integrity.inherited",
+      "status": "GREEN",
+      "msg": "inherited code unchanged since lock"
+    },
+    {
+      "gate": "integrity.copy_vs_cardF",
+      "status": "GREEN",
+      "msg": "byte-identical to Card F code"
+    },
+    {
+      "gate": "partA.frequency",
+      "status": "GREEN",
+      "msg": "reproduced freq CRPS-skill 0.931 vs Card F 0.931 (tol 0.1)"
+    },
+    {
+      "gate": "partA.amplitude",
+      "status": "GREEN",
+      "msg": "reproduced non-hard amplitude CRPS-skill mean -1.00 over 3 seeds (Card F \u2248 \u22121.0)"
+    },
+    {
+      "gate": "partA.beck_shapefield",
+      "status": "GREEN",
+      "msg": "reproduced Beck CRPS-skill FEM -0.6796203004290423 \u2192 inferred -0.251943656567879 (Card F \u22120.68 \u2192 \u22120.25)"
+    },
+    {
+      "gate": "partB.coherence",
+      "status": "GREEN",
+      "msg": "per-reference band-median coherence present: xpos_990x=1.0, zpos_990z=0.31, ypos_990y=0.886, z_900z=0.421"
+    },
+    {
+      "gate": "partB.identifiability",
+      "status": "GREEN",
+      "msg": "FIM directions above realized floor: single-ref 3 \u2192 multi-ref 3 (confound-break diagnostic)"
+    },
+    {
+      "gate": "partB.mechanism",
+      "status": "GREEN",
+      "msg": "drive-shape-ratio mechanism present (corr meas vs FEM \u03c6_d ratio = 0.057625997566714715)"
+    },
+    {
+      "gate": "partB.amplitude",
+      "status": "GREEN",
+      "msg": "held-out amplitude CRPS-skill: +X-only -1.00 \u2192 multi-ref -0.11 [amplitude skill RISES (still \u22640)]; calib converged"
+    },
+    {
+      "gate": "partB.frequency",
+      "status": "GREEN",
+      "msg": "freq CRPS-skill +X-only 0.9306578407721781 \u2192 multi-ref 0.9306578407721781 (multi-ref must not hurt frequencies)"
+    },
+    {
+      "gate": "fig.fig_coherence.png",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "fig.fig_mechanism.png",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "fig.fig_value_multiref.png",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "fig.fig_identifiability.png",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "deliverables.image_qa",
+      "status": "GREEN",
+      "msg": "image-QA pass"
+    },
+    {
+      "gate": "deliverables.packet",
+      "status": "GREEN",
+      "msg": "packet.md present"
+    },
+    {
+      "gate": "deliverables.runtime",
+      "status": "GREEN",
+      "msg": "runtime.json present"
+    }
+  ],
+  "note": "Baseline RED = not done. Honest negative (amplitude still \u22640 with the confound broken, or a documented data-quality ceiling) is a YELLOW documented finding, not a failure.",
+  "check_sha256": "4ca1fe1e0628eb7fe2d950e3e93792ec928763d8a306a183c1a009a303d00d87"
+}

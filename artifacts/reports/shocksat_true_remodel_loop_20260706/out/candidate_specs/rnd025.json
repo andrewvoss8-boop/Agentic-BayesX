@@ -1,0 +1,19 @@
+{
+ "cid": "rnd025",
+ "family": "connect",
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    5000904,
+    9000081,
+    3000148
+   ],
+   "k_trans": 1265852.1769193867,
+   "k_rot": 2438.4665380158985,
+   "name": "rconn26"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

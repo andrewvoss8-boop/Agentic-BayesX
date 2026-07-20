@@ -1,0 +1,92 @@
+{
+ "class": "correlated",
+ "level": 0.1,
+ "arm": "A1",
+ "observed": [
+  0,
+  1
+ ],
+ "masked": [
+  2,
+  3
+ ],
+ "nm_fit": 3,
+ "alpha_truth_fit": [
+  0.95,
+  0.95,
+  0.95
+ ],
+ "sigma_meas": 0.05,
+ "runtime_s": 10.91,
+ "nuts": {
+  "max_rhat": 1.002057501285283,
+  "min_ess": 2358.9977686968214,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": true,
+ "heldout_coverage": {
+  "noisy_covered": 199,
+  "noisy_n": 270,
+  "noisy_frac": 0.737037037037037,
+  "truth_covered": 21,
+  "truth_n": 270,
+  "truth_frac": 0.07777777777777778,
+  "nominal": 0.95
+ },
+ "heldout_qoi": {
+  "2": {
+   "lo": 4.894091320668475e-05,
+   "med": 5.211140055341066e-05,
+   "hi": 5.5509486220191184e-05,
+   "truth": 4.945267524807931e-05,
+   "covered": true
+  },
+  "3": {
+   "lo": 3.496399649952816e-05,
+   "med": 3.722753611043278e-05,
+   "hi": 3.965563307915167e-05,
+   "truth": 3.7029368275148855e-05,
+   "covered": true
+  }
+ },
+ "qoi_covered": 2,
+ "qoi_n": 2,
+ "alpha_intervals": [
+  {
+   "mode": 0,
+   "lo": 0.9483250143770355,
+   "med": 0.9497642626631244,
+   "hi": 0.9512388817973595,
+   "truth": 0.95,
+   "covered": true,
+   "width": 0.0029138674203239567
+  },
+  {
+   "mode": 1,
+   "lo": 0.9493367944874854,
+   "med": 0.9502668519298285,
+   "hi": 0.9512241688981351,
+   "truth": 0.95,
+   "covered": true,
+   "width": 0.0018873744106496781
+  },
+  {
+   "mode": 2,
+   "lo": 0.9475209724567417,
+   "med": 0.9485911241947219,
+   "hi": 0.9496292864886311,
+   "truth": 0.95,
+   "covered": false,
+   "width": 0.00210831403188938
+  }
+ ],
+ "sigma_d": {
+  "lo": 0.0,
+  "med": 0.0,
+  "hi": 0.0,
+  "fixed": true
+ }
+}

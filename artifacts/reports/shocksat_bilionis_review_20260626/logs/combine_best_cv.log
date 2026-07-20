@@ -1,0 +1,16 @@
+[    0.0s] baseline oracle CV = 0.322
+[    0.1s] al_rho_lo oracle CV = 0.441  (expect ~0.441)
+[    1.1s] eigsh (al_rho_lo) ...
+[  250.7s] eigsh done; elastic f[0:6] = [ 54.6   73.32  73.92  88.06 105.93 116.17]
+[  364.7s] NUTS R-hat 1.0040 ESS 774 div 0
+[  364.7s] al_rho_lo Bayes-median CV = 0.388
+[  365.8s] al_rho_lo Bayes-posterior CV = {'median': 0.41, 'p2.5': 0.366, 'p97.5': 0.442, 'n_draws': 60}
+
+{
+  "baseline_oracle": 0.322,
+  "remesh_oracle": 0.441,
+  "remesh_bayes_median": 0.388,
+  "remesh_bayes_posterior_median": 0.41
+}
+
+DONE in 366s -> out/combine_best_cv.json

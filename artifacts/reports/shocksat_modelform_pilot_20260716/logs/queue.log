@@ -1,0 +1,200 @@
+[1/20] ma1_conn_rbe3tbox
+[ma1_conn_rbe3tbox] DUD: ValueError: rbe3_convert eid 9000028: singular master geometry (cond inf)
+19 pending
+[2/20] ma1_conn_softbbox
+[ma1_conn_softbbox] agent/connectivity: exact sub200 +0.1418 (spot 1.52e-07%, 953s)
+18 pending
+[3/21] ma1_conn_rbe3tbox2
+[ma1_conn_rbe3tbox2] agent/connectivity: exact sub200 +0.1256 (spot 1.22e-07%, 962s)
+18 pending
+[4/21] ma1_form_platesshear
+[ma1_form_platesshear] agent/element_formulation: exact sub200 +0.1630 (spot 5.43e-08%, 933s)
+17 pending
+[5/21] ma1_form_tboxwalls
+[ma1_form_tboxwalls] agent/element_formulation: exact sub200 +0.1557 (spot 6.55e-08%, 982s)
+16 pending
+[6/21] ma1_geo_jointbrkt
+[ma1_geo_jointbrkt] agent/geometry: exact sub200 +0.1464 (spot 7.29e-08%, 888s)
+15 pending
+[7/21] ma1_geo_warp202
+[ma1_geo_warp202] agent/geometry: exact sub200 +0.1610 (spot 1.45e-07%, 899s)
+14 pending
+[8/21] ma1_mesh_brkt
+[ma1_mesh_brkt] agent/mesh_density: exact sub200 +0.1666 (spot 5.24e-08%, 823s)
+13 pending
+[9/21] ma1_mesh_plates
+[ma1_mesh_plates] agent/mesh_density: exact sub200 +0.1692 (spot 9.69e-08%, 856s)
+12 pending
+[10/21] ma1_prop_bracketsoft
+[ma1_prop_bracketsoft] agent/property_control: exact sub200 +0.1634 (spot 6.66e-08%, 885s)
+11 pending
+[11/21] ma1_prop_tboxxbeam
+[ma1_prop_tboxxbeam] agent/property_control: exact sub200 +0.1765 (spot 5.74e-08%, 940s)
+10 pending
+[12/21] mr1_conn0
+[mr1_conn0] random/connectivity: exact sub200 +0.1778 (spot 4.16e-08%, 857s)
+9 pending
+[13/21] mr1_conn1
+[mr1_conn1] random/connectivity: exact sub200 +0.0993 (spot 2.09e-07%, 852s)
+8 pending
+[14/21] mr1_elem4
+[mr1_elem4] random/element_formulation: exact sub200 +0.1225 (spot 6.07e-08%, 901s)
+7 pending
+[15/21] mr1_elem5
+[mr1_elem5] random/element_formulation: exact sub200 +0.1659 (spot 5.23e-08%, 814s)
+6 pending
+[16/21] mr1_geom6
+[mr1_geom6] random/geometry: exact sub200 +0.1553 (spot 5.88e-08%, 896s)
+5 pending
+[17/21] mr1_geom7
+[mr1_geom7] random/geometry: exact sub200 +0.1142 (spot 9.10e-08%, 861s)
+4 pending
+[18/21] mr1_mesh2
+[mr1_mesh2] DUD: ValueError: mech gate: max mode shift 0.0014% < 0.05% (numerical no-op)
+3 pending
+[19/21] mr1_mesh3
+[mr1_mesh3] DUD: ValueError: mech gate: max mode shift 0.0005% < 0.05% (numerical no-op)
+2 pending
+[20/21] mr1_prop8
+[mr1_prop8] random/property_control: exact sub200 +0.1512 (spot 5.13e-08%, 851s)
+1 pending
+[21/21] mr1_prop9
+[mr1_prop9] random/property_control: exact sub200 +0.1448 (spot 1.59e-07%, 806s)
+0 pending
+ALL DONE (no pending specs without partials)
+[22/43] ma2_conn_rbe3_bbox
+[ma2_conn_rbe3_bbox] agent/connectivity: exact sub200 +0.1445 (spot 6.28e-08%, 968s)
+21 pending
+[23/43] ma2_conn_rotfree_bbox
+[ma2_conn_rotfree_bbox] agent/connectivity: exact sub200 +0.1397 (spot 1.03e-07%, 877s)
+20 pending
+[24/43] ma2_form_bboxstiff
+[ma2_form_bboxstiff] agent/element_formulation: exact sub200 +0.1529 (spot 6.60e-08%, 807s)
+19 pending
+[25/43] ma2_form_plateskirch
+[ma2_form_plateskirch] agent/element_formulation: exact sub200 +0.1480 (spot 5.20e-08%, 856s)
+18 pending
+[26/43] ma2_geo_jointbbox
+[ma2_geo_jointbbox] agent/geometry: exact sub200 +0.1734 (spot 1.17e-07%, 876s)
+17 pending
+[27/43] ma2_geo_warp102
+[ma2_geo_warp102] agent/geometry: exact sub200 +0.1431 (spot 1.26e-07%, 776s)
+16 pending
+[28/43] ma2_mesh_brktxbeam
+[ma2_mesh_brktxbeam] agent/mesh_density: exact sub200 +0.1605 (spot 2.88e-07%, 797s)
+15 pending
+[29/43] ma2_mesh_plates3
+[ma2_mesh_plates3] agent/mesh_density: exact sub200 +0.1710 (spot 1.69e-07%, 1032s)
+14 pending
+[30/43] ma2_prop_tboxxbeam2
+[ma2_prop_tboxxbeam2] agent/property_control: exact sub200 +0.1080 (spot 7.78e-08%, 869s)
+13 pending
+[31/43] ma2_prop_xbeam
+[ma2_prop_xbeam] agent/property_control: exact sub200 +0.1628 (spot 5.84e-08%, 844s)
+12 pending
+[32/43] mr1_mesh2_a1
+[mr1_mesh2_a1] random/mesh_density: exact sub200 +0.1697 (spot 6.21e-08%, 845s)
+11 pending
+[33/43] mr1_mesh3_a1
+[mr1_mesh3_a1] random/mesh_density: exact sub200 +0.1730 (spot 3.62e-07%, 799s)
+10 pending
+[34/43] mr2_conn0
+[mr2_conn0] random/connectivity: exact sub200 +0.1621 (spot 1.10e-07%, 797s)
+9 pending
+[35/43] mr2_conn1
+[mr2_conn1] DUD: ValueError: rbe3_convert eid 9000033: singular master geometry (cond 4.23e+17)
+8 pending
+[36/43] mr2_elem4
+[mr2_elem4] random/element_formulation: exact sub200 +0.0941 (spot 7.13e-08%, 829s)
+7 pending
+[37/43] mr2_elem5
+[mr2_elem5] random/element_formulation: exact sub200 +0.1848 (spot 1.20e-07%, 796s)
+6 pending
+[38/43] mr2_geom6
+[mr2_geom6] random/geometry: exact sub200 +0.1629 (spot 9.27e-08%, 848s)
+5 pending
+[39/43] mr2_geom7
+[mr2_geom7] random/geometry: exact sub200 +0.1163 (spot 2.35e-07%, 900s)
+4 pending
+[40/43] mr2_mesh2
+[mr2_mesh2] random/mesh_density: exact sub200 +0.1655 (spot 1.33e-07%, 980s)
+3 pending
+[41/43] mr2_mesh3
+[mr2_mesh3] random/mesh_density: exact sub200 +0.1426 (spot 1.07e-07%, 1294s)
+2 pending
+[42/43] mr2_prop8
+[mr2_prop8] random/property_control: exact sub200 +0.1355 (spot 1.00e-07%, 877s)
+1 pending
+[43/43] mr2_prop9
+[mr2_prop9] random/property_control: exact sub200 +0.1490 (spot 7.84e-08%, 838s)
+0 pending
+ALL DONE (no pending specs without partials)
+[44/64] ma3_conn_rbe3_angle
+[ma3_conn_rbe3_angle] agent/connectivity: exact sub200 +0.1361 (spot 1.56e-07%, 891s)
+20 pending
+[45/64] ma3_conn_soft_traypath
+[ma3_conn_soft_traypath] agent/connectivity: exact sub200 +0.1050 (spot 1.40e-07%, 805s)
+19 pending
+[46/64] ma3_form_brktshear
+[ma3_form_brktshear] agent/element_formulation: exact sub200 +0.1594 (spot 6.05e-08%, 830s)
+18 pending
+[47/64] ma3_form_tboxstrong
+[ma3_form_tboxstrong] agent/element_formulation: exact sub200 +0.0964 (spot 1.19e-07%, 857s)
+17 pending
+[48/64] ma3_geo_jointbbox2
+[ma3_geo_jointbbox2] agent/geometry: exact sub200 +0.1061 (spot 9.49e-08%, 883s)
+16 pending
+[49/64] ma3_geo_warp401
+[ma3_geo_warp401] agent/geometry: exact sub200 +0.1445 (spot 6.59e-08%, 1241s)
+15 pending
+[50/64] ma3_mesh_covers
+[ma3_mesh_covers] agent/mesh_density: exact sub200 +0.1771 (spot 1.65e-07%, 2917s)
+14 pending
+[51/64] ma3_mesh_welds
+[51/64] ma3_mesh_welds
+[ma3_mesh_welds] agent/mesh_density: exact sub200 +0.1695 (spot 2.42e-07%, 1s)
+13 pending
+[52/64] ma3_prop_brktxbeam
+[ma3_prop_brktxbeam] agent/property_control: exact sub200 +0.1575 (spot 7.17e-08%, 2200s)
+12 pending
+[53/64] ma3_prop_xbeam16
+[ma3_prop_xbeam16] agent/property_control: exact sub200 +0.1641 (spot 4.71e-08%, 1396s)
+11 pending
+[54/64] mr2_conn0_a1
+[mr2_conn0_a1] DUD: ValueError: rbe3_convert eid 9000032: singular master geometry (cond 8.83e+17)
+10 pending
+[55/64] mr3_conn0
+[mr3_conn0] random/connectivity: exact sub200 +0.1706 (spot 5.01e-08%, 860s)
+9 pending
+[56/64] mr3_conn1
+[mr3_conn1] random/connectivity: exact sub200 +0.1702 (spot 8.75e-08%, 802s)
+8 pending
+[57/64] mr3_elem4
+[mr3_elem4] random/element_formulation: exact sub200 +0.1405 (spot 5.82e-08%, 815s)
+7 pending
+[58/64] mr3_elem5
+[mr3_elem5] random/element_formulation: exact sub200 +0.1174 (spot 1.35e-07%, 808s)
+6 pending
+[59/64] mr3_geom6
+[mr3_geom6] random/geometry: exact sub200 +0.1209 (spot 8.55e-08%, 827s)
+5 pending
+[60/64] mr3_geom7
+[mr3_geom7] random/geometry: exact sub200 +0.1125 (spot 6.67e-08%, 815s)
+4 pending
+[61/64] mr3_mesh2
+[mr3_mesh2] random/mesh_density: exact sub200 +0.1662 (spot 1.60e-07%, 798s)
+3 pending
+[62/64] mr3_mesh3
+[mr3_mesh3] random/mesh_density: exact sub200 +0.1766 (spot 9.56e-08%, 893s)
+2 pending
+[63/64] mr3_prop8
+[mr3_prop8] random/property_control: exact sub200 +0.1481 (spot 6.67e-08%, 785s)
+1 pending
+[64/64] mr3_prop9
+[mr3_prop9] random/property_control: exact sub200 +0.1683 (spot 3.56e-08%, 800s)
+0 pending
+ALL DONE (no pending specs without partials)
+[65/65] mr2_conn1_a1
+[mr2_conn1_a1] random/connectivity: exact sub200 +0.1273 (spot 1.18e-07%, 816s)
+0 pending
+ALL DONE (no pending specs without partials)

@@ -1,0 +1,559 @@
+[
+ {
+  "cid": "a01_bb_xface",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 8.0,
+     "side": "hi"
+    },
+    "name": "bb_xface"
+   }
+  ],
+  "rationale": "+X source-face wall gets its own stiffness parameter: impact-face channels ch4/27/38 are confirmed-fail; +X fold Bottom_Box median corr only 0.237; a face-level split changes the achievable stiffness DISTRIBUTION of the wall field (9-group family provably cannot).",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: drives.m_xpos region corr; region_mac Bottom_Box 0.432"
+ },
+ {
+  "cid": "a02_bb_bulkband",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 9.5,
+     "zhi": 13.5
+    },
+    "name": "bb_bulkband"
+   }
+  ],
+  "rationale": "Steel-box wall band at the z=12.4 bulkhead: ch40 (below bulkhead) confirmed-fail; bad-shape cluster m20/m23/m24 (190-203 Hz) stores 0.83-0.96 of strain energy in bottom_box; a near-bulkhead band vs field split lets the local interface stiffness deviate.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: strain_energy_frac m20/m23/m24; pairing t19-t23"
+ },
+ {
+  "cid": "a03_welds_t130",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     104,
+     105,
+     106,
+     204,
+     205,
+     206
+    ],
+    "t_scale": 1.3,
+    "name": "welds_t130"
+   }
+  ],
+  "rationale": "Weld-bead EFFECTIVE THICKNESS +30% (mem \u221dt, bend \u221dt\u00b3, mass \u221dt): \u03b8_MAP pushes weld MODULI up (al_welds 1.31, steel_welds 1.10) \u2014 if the real defect is bead thickness, bending stiffens 2.2x vs membrane 1.3x, a model-form change modulus scaling cannot express. Physically real: weld beads add local section.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: theta_map al_welds=1.306"
+ },
+ {
+  "cid": "a04_welds_t074",
+  "family": "thickness",
+  "ops": [
+   {
+    "op": "thickness",
+    "pids": [
+     104,
+     105,
+     106,
+     204,
+     205,
+     206
+    ],
+    "t_scale": 0.74,
+    "name": "welds_t074"
+   }
+  ],
+  "rationale": "Opposite hypothesis: effective weld section UNDER nominal (partial penetration/undercut) \u2014 bending softens 2.5x vs membrane 1.35x; tests the direction the data actually wants at the t\u00b3 level.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: same as a03, opposite branch"
+ },
+ {
+  "cid": "a05_bolt_soft",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     1024295,
+     1024296,
+     1024297,
+     1024298,
+     1024299,
+     1024300,
+     1024301,
+     1024302,
+     1024303,
+     1024304,
+     1024305,
+     1024306,
+     1024307,
+     1024308,
+     1024309,
+     1024310,
+     1024311,
+     1024312,
+     1024313,
+     1024314,
+     1024315,
+     1024316,
+     1024317,
+     1024318,
+     1024319,
+     1024320,
+     1024321,
+     1024322,
+     2032413,
+     2032414,
+     2032415,
+     2032416,
+     2032417,
+     2032418,
+     2032419,
+     2032420,
+     2032421,
+     2032422,
+     2032423,
+     2032424,
+     2032425,
+     2032426,
+     2032427,
+     2032428,
+     2032429,
+     2032430,
+     2032431,
+     2032432,
+     2032433,
+     2032434,
+     2032435,
+     2032436,
+     2032437,
+     2032438,
+     2032439,
+     2032440
+    ],
+    "k_trans": 1000000.0,
+    "k_rot": 100000.0,
+    "name": "bolt_soft"
+   }
+  ],
+  "rationale": "Bolted steel-to-Al flange (z=18.4) is modeled as 56 RIGID 21-leg spiders \u2014 never touched by any prior campaign (Card D only scaled bush 801). Real bolted flanges have finite bolt/flange compliance (~1e6 lb/in per leg region). Restores 3528 DOFs = a kinematic-hypothesis change; ch52 (above joint) confirmed-fail; t12 (158.2 Hz) df -6.2%.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t12; Card D \u00a73 e08 null on bush-only"
+ },
+ {
+  "cid": "a06_bolt_stiff",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     1024295,
+     1024296,
+     1024297,
+     1024298,
+     1024299,
+     1024300,
+     1024301,
+     1024302,
+     1024303,
+     1024304,
+     1024305,
+     1024306,
+     1024307,
+     1024308,
+     1024309,
+     1024310,
+     1024311,
+     1024312,
+     1024313,
+     1024314,
+     1024315,
+     1024316,
+     1024317,
+     1024318,
+     1024319,
+     1024320,
+     1024321,
+     1024322,
+     2032413,
+     2032414,
+     2032415,
+     2032416,
+     2032417,
+     2032418,
+     2032419,
+     2032420,
+     2032421,
+     2032422,
+     2032423,
+     2032424,
+     2032425,
+     2032426,
+     2032427,
+     2032428,
+     2032429,
+     2032430,
+     2032431,
+     2032432,
+     2032433,
+     2032434,
+     2032435,
+     2032436,
+     2032437,
+     2032438,
+     2032439,
+     2032440
+    ],
+    "k_trans": 10000000.0,
+    "k_rot": 1000000.0,
+    "name": "bolt_stiff"
+   }
+  ],
+  "rationale": "Same kinematic change, upper-plausible bolt stiffness (1e7/leg): brackets the compliance scale so the dev data (not taste) picks the level.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: same as a05"
+ },
+ {
+  "cid": "a07_mount_soft",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     2033593,
+     2033594,
+     2033595,
+     2033596,
+     2033597,
+     2033598,
+     2033599,
+     2033600,
+     3000019,
+     3000071,
+     3000089,
+     3000126,
+     3000147,
+     3000148,
+     3000153,
+     3000488,
+     3000489,
+     3000490,
+     3000715,
+     3000716,
+     4000133,
+     4000134,
+     4000135,
+     4000136,
+     4000137,
+     4000138,
+     4000139,
+     4000140,
+     5000321,
+     5000322,
+     5000323,
+     5000324,
+     5000901,
+     5000902,
+     5000903,
+     5000904,
+     6001321,
+     6001322,
+     6001323,
+     6001324,
+     8000039,
+     8000040,
+     8000041,
+     8000042,
+     8000055,
+     8000056,
+     8000057,
+     8000058,
+     9000028,
+     9000029,
+     9000030,
+     9000031,
+     9000032,
+     9000033,
+     9000034,
+     9000041,
+     9000042,
+     9000043,
+     9000044,
+     9000045,
+     9000046,
+     9000047,
+     9000048,
+     9000079,
+     9000080,
+     9000081,
+     9000082,
+     9000083,
+     9000084,
+     9000085,
+     9000092,
+     9000093,
+     9000094,
+     9000095,
+     9000096,
+     9000097,
+     9000098,
+     9000099
+    ],
+    "k_trans": 1000000.0,
+    "k_rot": 100000.0,
+    "name": "mount_soft"
+   }
+  ],
+  "rationale": "Bracket/strut/plate interface spiders (z 39.5-48.5, 78 spiders incl. strut-base ch92 region): Rectangular_Plates is the WORST region (MAC mean 0.237; t9 plates-MAC 0.003); rigid footprint ties overconstrain the plate local shapes.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: region_mac_mean Rectangular_Plates=0.237"
+ },
+ {
+  "cid": "a08_dishmount_soft",
+  "family": "connect",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     6001445,
+     6001446,
+     6001447,
+     6001448,
+     6001449,
+     6001450,
+     6001451,
+     6001452,
+     7004353,
+     7004354,
+     7004395,
+     7004396,
+     7004397,
+     7004398,
+     7004399,
+     7004400
+    ],
+    "k_trans": 1000000.0,
+    "k_rot": 100000.0,
+    "name": "dishmount_soft"
+   }
+  ],
+  "rationale": "Dish-mount spiders (16 at z\u224857.4): dish region MAC 0.354, ch98 confirmed-fail, dish-heavy test modes t29 (235.3 Hz) MAC 0.324. Mount compliance moves dish local modes; dish MESH is proven converged (V3), so the mount is the remaining dish lever.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: region_mac Top_Circular_Plate=0.354; V3 null"
+ },
+ {
+  "cid": "a09_tb_nearjoint",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 18.4,
+     "zhi": 21.5
+    },
+    "name": "tb_nearjoint"
+   }
+  ],
+  "rationale": "Al-box boundary layer above the bolted joint (ch52 at z=19.1): joint-adjacent wall band vs field; smoke test showed the optimizer immediately exploits band-vs-field freedom (1.71 vs 0.71).",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t12/t8; smoke split result (decisions D12 era)"
+ },
+ {
+  "cid": "a10_tb_nearbulk",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 27.4,
+     "zhi": 30.4
+    },
+    "name": "tb_nearbulk"
+   }
+  ],
+  "rationale": "Al-box band at the z=30.4 bulkhead (ch69 below it, confirmed-fail); t26 (230.7 Hz) is top_box-dominated (SE 0.53) with df +11.2%.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t26; strain_energy m17 top_box 0.85"
+ },
+ {
+  "cid": "a11_ref_202",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     202,
+     204,
+     206
+    ]
+   }
+  ],
+  "rationale": "TRUE refinement of the top bulkhead + its welds (ch69/ch52 region local modes 158-233 Hz have region MAC ~0.0-0.2): tests whether 'mesh converged' (proven for the dish, V3) also holds at the bulkhead \u2014 an honest, evidence-targeted family-1 probe.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t16/t19/t21 near-zero MAC; V3 scope limited to dish"
+ },
+ {
+  "cid": "a12_ref_501",
+  "family": "refine",
+  "ops": [
+   {
+    "op": "refine",
+    "pids": [
+     501
+    ]
+   }
+  ],
+  "rationale": "TRUE refinement of the Rectangular_Plates (worst region MAC 0.237, only 896 elements): if the plate local shapes are under-resolved, refinement is the ONLY family that can add them.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: region_mac_mean Rectangular_Plates=0.237"
+ },
+ {
+  "cid": "a13_bolt_plus_tbsplit",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     1024295,
+     1024296,
+     1024297,
+     1024298,
+     1024299,
+     1024300,
+     1024301,
+     1024302,
+     1024303,
+     1024304,
+     1024305,
+     1024306,
+     1024307,
+     1024308,
+     1024309,
+     1024310,
+     1024311,
+     1024312,
+     1024313,
+     1024314,
+     1024315,
+     1024316,
+     1024317,
+     1024318,
+     1024319,
+     1024320,
+     1024321,
+     1024322,
+     2032413,
+     2032414,
+     2032415,
+     2032416,
+     2032417,
+     2032418,
+     2032419,
+     2032420,
+     2032421,
+     2032422,
+     2032423,
+     2032424,
+     2032425,
+     2032426,
+     2032427,
+     2032428,
+     2032429,
+     2032430,
+     2032431,
+     2032432,
+     2032433,
+     2032434,
+     2032435,
+     2032436,
+     2032437,
+     2032438,
+     2032439,
+     2032440
+    ],
+    "k_trans": 1000000.0,
+    "k_rot": 100000.0,
+    "name": "bolt_soft"
+   },
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 18.4,
+     "zhi": 21.5
+    },
+    "name": "tb_nearjoint"
+   }
+  ],
+  "rationale": "Joint compliance + joint-adjacent band split together: the compliance changes the kinematics, the split lets calibration re-distribute the adjacent wall stiffness to match.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: a05+a09 rationales"
+ },
+ {
+  "cid": "a14_plates_split",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 501,
+    "rule": {
+     "type": "z_band",
+     "zlo": 44.0,
+     "zhi": 48.5
+    },
+    "name": "plates_upper"
+   }
+  ],
+  "rationale": "Upper half of the support plates (tray attachment side) as its own parameter: plates region worst MAC; \u03b8_MAP already wants plates x1.18 as a LEVEL \u2014 the split tests whether the DISTRIBUTION is what's wrong.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: region_mac 0.237; theta_map plates=1.176"
+ },
+ {
+  "cid": "a15_scale_ctrl",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "top_box",
+    "factor": 0.9
+   }
+  ],
+  "rationale": "PARAMETRIC-ONLY CONTROL (proven-dead family, Card D e07 knee): expected \u2248 A0 after \u03b8_MAP re-absorbs the scale; guards the pipeline against family mislabeling.",
+  "evidence": "Card D e07; tagged parametric_only"
+ },
+ {
+  "cid": "a16_bb_splits_combo",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 8.0,
+     "side": "hi"
+    },
+    "name": "bb_xface"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 9.5,
+     "zhi": 13.5
+    },
+    "name": "bb_bulkband"
+   }
+  ],
+  "rationale": "Both bottom-box splits jointly (face + bulkhead band): the +Z@900 fold anti-correlates on Bottom_Box (-0.51) \u2014 the strongest single-region failure in the diagnosis.",
+  "evidence": "diagnosis_r0.json + Card D region_diagnosis: drives.m_zpos_900z Bottom_Box=-0.508"
+ }
+]

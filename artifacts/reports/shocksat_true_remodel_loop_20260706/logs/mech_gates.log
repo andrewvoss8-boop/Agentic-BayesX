@@ -1,0 +1,33 @@
+[V1] reassemble all PID blocks + full eigsh vs stored
+  shell 101: 17416 elems, rel dev 0.00e+00
+  shell 102: 4632 elems, rel dev 0.00e+00
+  shell 103: 1568 elems, rel dev 0.00e+00
+  shell 104: 568 elems, rel dev 0.00e+00
+  shell 105: 118 elems, rel dev 0.00e+00
+  shell 106: 286 elems, rel dev 0.00e+00
+  shell 201: 26430 elems, rel dev 0.00e+00
+  shell 202: 4830 elems, rel dev 0.00e+00
+  shell 203: 1832 elems, rel dev 0.00e+00
+  shell 204: 572 elems, rel dev 0.00e+00
+  shell 205: 182 elems, rel dev 0.00e+00
+  shell 206: 292 elems, rel dev 0.00e+00
+  shell 301: 576 elems, rel dev 0.00e+00
+  shell 302: 192 elems, rel dev 0.00e+00
+  shell 401: 1572 elems, rel dev 0.00e+00
+  shell 501: 896 elems, rel dev 0.00e+00
+  shell 601: 1440 elems, rel dev 0.00e+00
+  shell 701: 4392 elems, rel dev 0.00e+00
+  bush 99: rel dev 0.00e+00
+  bush 801: rel dev 0.00e+00
+  bush 802: rel dev 0.00e+00
+  bush 803: rel dev 0.00e+00
+  bush 804: rel dev 0.00e+00
+  bush 805: rel dev 0.00e+00
+  bush 806: rel dev 0.00e+00
+  bush 807: rel dev 0.00e+00
+  bush 902: rel dev 0.00e+00
+  eigsh (full 399510-DOF, my reassembly)...
+[V1] pass=True eig 1.15e-09, blocks 0.00e+00
+[A0] baseline package from stored Card-D blocks
+[A0] done: eig rel 8.04e-10, pairs 33, meanMAC 0.536
+[V2] free-free RBM on REFINED dish submodel

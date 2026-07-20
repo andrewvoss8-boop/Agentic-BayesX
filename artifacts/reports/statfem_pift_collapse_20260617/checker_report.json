@@ -1,0 +1,350 @@
+{
+  "overall": "RED",
+  "counts": {
+    "GREEN": 14,
+    "YELLOW": 3,
+    "RED": 51
+  },
+  "gates": [
+    {
+      "gate": "artifact:decisions_log.md",
+      "status": "GREEN",
+      "detail": "decisions_log.md"
+    },
+    {
+      "gate": "artifact:priority_deliverables.md",
+      "status": "GREEN",
+      "detail": "priority_deliverables.md"
+    },
+    {
+      "gate": "artifact:analogy_mapping.md",
+      "status": "GREEN",
+      "detail": "analogy_mapping.md"
+    },
+    {
+      "gate": "artifact:references_and_quotes.md",
+      "status": "GREEN",
+      "detail": "references_and_quotes.md"
+    },
+    {
+      "gate": "artifact:assumptions_ledger.md",
+      "status": "RED",
+      "detail": "assumptions_ledger.md"
+    },
+    {
+      "gate": "artifact:question_framing.md",
+      "status": "RED",
+      "detail": "question_framing.md"
+    },
+    {
+      "gate": "artifact:quantity_contracts.md",
+      "status": "RED",
+      "detail": "quantity_contracts.md"
+    },
+    {
+      "gate": "artifact:packet.md",
+      "status": "RED",
+      "detail": "packet.md"
+    },
+    {
+      "gate": "artifact:run_all.sh",
+      "status": "RED",
+      "detail": "run_all.sh"
+    },
+    {
+      "gate": "artifact:runtime.json",
+      "status": "RED",
+      "detail": "runtime.json"
+    },
+    {
+      "gate": "artifact:code/core.py",
+      "status": "GREEN",
+      "detail": "code/core.py"
+    },
+    {
+      "gate": "artifact:code/nuts_arms.py",
+      "status": "GREEN",
+      "detail": "code/nuts_arms.py"
+    },
+    {
+      "gate": "artifact:code/predict.py",
+      "status": "GREEN",
+      "detail": "code/predict.py"
+    },
+    {
+      "gate": "artifact:code/scoring.py",
+      "status": "RED",
+      "detail": "code/scoring.py"
+    },
+    {
+      "gate": "artifact:code/run_ladder.py",
+      "status": "RED",
+      "detail": "code/run_ladder.py"
+    },
+    {
+      "gate": "artifact:code/ess_accounting.py",
+      "status": "RED",
+      "detail": "code/ess_accounting.py"
+    },
+    {
+      "gate": "artifact:code/aggregate_sweep.py",
+      "status": "RED",
+      "detail": "code/aggregate_sweep.py"
+    },
+    {
+      "gate": "artifact:code/identifiability.py",
+      "status": "GREEN",
+      "detail": "code/identifiability.py"
+    },
+    {
+      "gate": "artifact:code/image_qa.py",
+      "status": "GREEN",
+      "detail": "code/image_qa.py"
+    },
+    {
+      "gate": "artifact:code/fig_collapse_curves.py",
+      "status": "RED",
+      "detail": "code/fig_collapse_curves.py"
+    },
+    {
+      "gate": "artifact:code/fig_ess_vs_N.py",
+      "status": "RED",
+      "detail": "code/fig_ess_vs_N.py"
+    },
+    {
+      "gate": "artifact:code/fig_theta_width.py",
+      "status": "RED",
+      "detail": "code/fig_theta_width.py"
+    },
+    {
+      "gate": "artifact:code/fig_synth_collapse_demo.py",
+      "status": "RED",
+      "detail": "code/fig_synth_collapse_demo.py"
+    },
+    {
+      "gate": "artifact:code/fig_schematic.py",
+      "status": "RED",
+      "detail": "code/fig_schematic.py"
+    },
+    {
+      "gate": "artifact:out/config.json",
+      "status": "RED",
+      "detail": "out/config.json"
+    },
+    {
+      "gate": "artifact:out/config_real.json",
+      "status": "RED",
+      "detail": "out/config_real.json"
+    },
+    {
+      "gate": "artifact:out/sweep_synth.json",
+      "status": "RED",
+      "detail": "out/sweep_synth.json"
+    },
+    {
+      "gate": "artifact:out/sweep_real.json",
+      "status": "RED",
+      "detail": "out/sweep_real.json"
+    },
+    {
+      "gate": "artifact:out/ess_accounting.json",
+      "status": "RED",
+      "detail": "out/ess_accounting.json"
+    },
+    {
+      "gate": "artifact:out/verdict.json",
+      "status": "RED",
+      "detail": "out/verdict.json"
+    },
+    {
+      "gate": "artifact:out/identifiability.json",
+      "status": "RED",
+      "detail": "out/identifiability.json"
+    },
+    {
+      "gate": "artifact:out/discretization.json",
+      "status": "RED",
+      "detail": "out/discretization.json"
+    },
+    {
+      "gate": "artifact:out/image_qa.json",
+      "status": "RED",
+      "detail": "out/image_qa.json"
+    },
+    {
+      "gate": "artifact:out/text_overlap.json",
+      "status": "RED",
+      "detail": "out/text_overlap.json"
+    },
+    {
+      "gate": "artifact:figures/fig_collapse_curves.png",
+      "status": "RED",
+      "detail": "figures/fig_collapse_curves.png"
+    },
+    {
+      "gate": "artifact:figures/fig_ess_vs_N.png",
+      "status": "RED",
+      "detail": "figures/fig_ess_vs_N.png"
+    },
+    {
+      "gate": "artifact:figures/fig_theta_width.png",
+      "status": "RED",
+      "detail": "figures/fig_theta_width.png"
+    },
+    {
+      "gate": "artifact:figures/fig_synth_collapse_demo.png",
+      "status": "RED",
+      "detail": "figures/fig_synth_collapse_demo.png"
+    },
+    {
+      "gate": "artifact:figures/fig_schematic.png",
+      "status": "RED",
+      "detail": "figures/fig_schematic.png"
+    },
+    {
+      "gate": "integrity:copied_unedited:core.py",
+      "status": "GREEN",
+      "detail": "code/core.py SHA == companion (e73579698707\u2026)"
+    },
+    {
+      "gate": "integrity:copied_unedited:nuts_arms.py",
+      "status": "GREEN",
+      "detail": "code/nuts_arms.py SHA == companion (a012976e0e26\u2026)"
+    },
+    {
+      "gate": "integrity:copied_unedited:predict.py",
+      "status": "GREEN",
+      "detail": "code/predict.py SHA == companion (248e0272f090\u2026)"
+    },
+    {
+      "gate": "integrity:reduced_blocks_copied_unedited",
+      "status": "GREEN",
+      "detail": "data/reduced_blocks.npz SHA == companion/modal-twin (be9af90efd55\u2026)"
+    },
+    {
+      "gate": "anti_cheat:no_coupled_tray_model",
+      "status": "RED",
+      "detail": "FORBIDDEN tray usage []; prov_ok=False"
+    },
+    {
+      "gate": "anti_cheat:matched_path_not_sol111",
+      "status": "RED",
+      "detail": "out/config_real.json missing (real-data leg not built)"
+    },
+    {
+      "gate": "sweep:synth:present",
+      "status": "RED",
+      "detail": "out/sweep_synth.json missing"
+    },
+    {
+      "gate": "sweep:real:present",
+      "status": "RED",
+      "detail": "out/sweep_real.json missing"
+    },
+    {
+      "gate": "crosscheck:synthetic_known_model_form_error",
+      "status": "RED",
+      "detail": "sweep_synth.json missing"
+    },
+    {
+      "gate": "ess:accounting_present",
+      "status": "RED",
+      "detail": "out/ess_accounting.json missing or incomplete"
+    },
+    {
+      "gate": "verdict:stated_with_pift_quote_and_mapping",
+      "status": "RED",
+      "detail": "verdict_keys=False, pift_quote_in_packet=False, analogy_mapping=True"
+    },
+    {
+      "gate": "finding:collapse_and_cure_direction",
+      "status": "RED",
+      "detail": "verdict.json missing the two finding booleans"
+    },
+    {
+      "gate": "identifiability:strain_energy_and_fim",
+      "status": "RED",
+      "detail": "out/identifiability.json incomplete"
+    },
+    {
+      "gate": "discretization:reduced_frf_validated",
+      "status": "RED",
+      "detail": "out/discretization.json missing reduced_vs_full"
+    },
+    {
+      "gate": "reference:pift_ift_statfem_plumlee_koh",
+      "status": "GREEN",
+      "detail": "PIFT/IFT/statFEM/Plumlee/KOH all cited"
+    },
+    {
+      "gate": "tufte_lint:fig_collapse_curves",
+      "status": "RED",
+      "detail": "missing logs/tufte_fig_collapse_curves.txt"
+    },
+    {
+      "gate": "tufte_lint:fig_ess_vs_N",
+      "status": "RED",
+      "detail": "missing logs/tufte_fig_ess_vs_N.txt"
+    },
+    {
+      "gate": "tufte_lint:fig_theta_width",
+      "status": "RED",
+      "detail": "missing logs/tufte_fig_theta_width.txt"
+    },
+    {
+      "gate": "tufte_lint:fig_synth_collapse_demo",
+      "status": "RED",
+      "detail": "missing logs/tufte_fig_synth_collapse_demo.txt"
+    },
+    {
+      "gate": "tufte_lint:fig_schematic",
+      "status": "RED",
+      "detail": "missing logs/tufte_fig_schematic.txt"
+    },
+    {
+      "gate": "image_qa:legibility",
+      "status": "RED",
+      "detail": "out/image_qa.json missing"
+    },
+    {
+      "gate": "text_overlap:auditor",
+      "status": "RED",
+      "detail": "out/text_overlap.json missing"
+    },
+    {
+      "gate": "doc:method_summary_present",
+      "status": "RED",
+      "detail": "packet has a method-summary section"
+    },
+    {
+      "gate": "doc:likelihood_choice_present",
+      "status": "RED",
+      "detail": "packet states the whole-log-FRF likelihood data-usage choice"
+    },
+    {
+      "gate": "doc:observation_density_axis_defined",
+      "status": "RED",
+      "detail": "packet defines the observation-density N axis (the collocation\u2194observation analogy)"
+    },
+    {
+      "gate": "runtime:accounting",
+      "status": "RED",
+      "detail": "runtime.json missing active/elapsed timing"
+    },
+    {
+      "gate": "scope:synthetic_single_truth",
+      "status": "YELLOW",
+      "detail": "synthetic leg = one truth realization with one injected Schneider field (a controlled known-error twin)"
+    },
+    {
+      "gate": "scope:real_single_impact",
+      "status": "YELLOW",
+      "detail": "real leg = single-impact matched-path FRF (no hit-to-hit averaging); coherence-weighted, 1-hit SNR"
+    },
+    {
+      "gate": "scope:no_universal_parameter_recovery",
+      "status": "YELLOW",
+      "detail": "claim is collapse/plateau of \u03c3_d-uncertainty + held-out score vs N; ~4/9 groups identifiable (modal-twin)"
+    }
+  ]
+}

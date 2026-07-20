@@ -1,0 +1,28 @@
+{
+  "deliverable": "cancellation-factor pilot: per-sensor discrepancy vs net-load discrepancy (data-driven)",
+  "per_sensor_sigma_log": 1.391,
+  "max_envelope_sigma_log": 1.025,
+  "net_load_by_axis": {
+    "X": {
+      "net_load_sigma_log": 0.936,
+      "cancellation_factor": 1.49,
+      "N_eff_coherent_contributors": 2.0,
+      "n_sensors_axis": 25
+    },
+    "Y": {
+      "net_load_sigma_log": 1.421,
+      "cancellation_factor": 0.98,
+      "N_eff_coherent_contributors": 3.2,
+      "n_sensors_axis": 28
+    },
+    "Z": {
+      "net_load_sigma_log": 1.216,
+      "cancellation_factor": 1.14,
+      "N_eff_coherent_contributors": 5.6,
+      "n_sensors_axis": 31
+    }
+  },
+  "interpretation": "net loads integrate over sensors -> incoherent local node-line errors cancel ~1/sqrt(N_eff) -> net-load sigma << per-sensor sigma; the MAX envelope does NOT cancel (sigma stays ~ per-sensor). Residual net-load sigma = the COHERENT (common-mode) discrepancy floor.",
+  "caveat": "uniform tributary mass; complex measured phase (coherence 0.9+ at peaks); gain removed per ref. NO error model, NO NUTS.",
+  "note": "EXPLORATORY; YELLOW."
+}

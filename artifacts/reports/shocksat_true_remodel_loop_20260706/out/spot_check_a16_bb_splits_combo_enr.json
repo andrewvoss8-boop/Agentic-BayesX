@@ -1,0 +1,8 @@
+{
+ "cid": "a16_bb_splits_combo_enr",
+ "basis_r": 130,
+ "n_modes": 74,
+ "max_rel_err": 6.83088947628363e-08,
+ "median_rel_err": 4.746247839193529e-11,
+ "pass_0p3pct": true
+}

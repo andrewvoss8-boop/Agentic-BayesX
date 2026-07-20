@@ -1,0 +1,52 @@
+{
+ "qoi": "held-out peak/band accelerance on the reduced 74-mode basis",
+ "reduced_vs_full": {
+  "max_rel_err_at_peaks": 0.08103011322249853,
+  "diagnosis": "INHERITED (cited, not recomputed) from the companion statfem_shocksat_eval_20260616, which solved a 399510-DOF full-order eigensolve on the IDENTICAL SHA-matched reduced_blocks.npz; re-running the full solve is forbidden by the card ('do NOT re-assemble the 67k FEM'). This is the 74-mode modal-TRUNCATION error (fmax 321 Hz \u2248 1.2\u00d7 band). It does NOT affect the collapse/plateau verdict: this study is INTERNALLY EXACT (truth and model share the 74-mode reduced model), so the truncation shifts truth and model identically and cancels in the residual the likelihood sees.",
+  "inherited_from": "statfem_shocksat_eval_20260616/out/discretization.json",
+  "internally_exact_here": true
+ },
+ "modal_truncation_within_reduced": {
+  "by_n_modes": {
+   "40": {
+    "peak_rel_err": 0.0007345928063875462,
+    "band_rel_err": 0.010601592378709723
+   },
+   "60": {
+    "peak_rel_err": 7.004731630289029e-07,
+    "band_rel_err": 1.145836601357253e-05
+   },
+   "70": {
+    "peak_rel_err": 1.5866419289523037e-11,
+    "band_rel_err": 2.561433287695536e-10
+   },
+   "74": {
+    "peak_rel_err": 0.0,
+    "band_rel_err": 0.0
+   }
+  },
+  "max_rel_err_below_74": 0.010601592378709723
+ },
+ "grid_refine": {
+  "by_nfreq": {
+   "80": {
+    "peak": 1688.0487753911868,
+    "band": 7777.993098661003
+   },
+   "160": {
+    "peak": 1823.3029778985865,
+    "band": 7782.519401848011
+   },
+   "320": {
+    "peak": 1822.4804985470619,
+    "band": 7782.1755387046705
+   },
+   "640": {
+    "peak": 1820.3686560273486,
+    "band": 7782.0804217238065
+   }
+  },
+  "max_qoi_rel_shift": 0.08012458199026629,
+  "note": "QOI-value shift across the N_freq ladder grids; the ladder densifies the SAME fixed truth, so these are the resolution levels the collapse sweep walks."
+ }
+}

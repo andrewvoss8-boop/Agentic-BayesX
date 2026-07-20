@@ -1,0 +1,17 @@
+{
+ "cid": "wa1_plates_stiff",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    501,
+    601,
+    701
+   ],
+   "t_scale": 1.2,
+   "name": "plates_t120"
+  }
+ ],
+ "rationale": "Rectangular_Plates|Y is the single worst cell (resid 0.90) though low-n (4 ch); the rectangular plates carry local Y drumhead response \u2014 stiffen to shift them."
+}

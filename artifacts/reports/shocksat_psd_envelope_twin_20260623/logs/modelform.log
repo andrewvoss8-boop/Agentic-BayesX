@@ -1,0 +1,42 @@
+[    0.2s] cross-attach surgery: 68 coincident cross<->wall pairs to couple
+[    8.1s] [steel_rho_lo] eigsh...
+[  467.7s] [steel_rho_lo] FRF log|H| corr median=0.237 (mean 0.18, frac>0.5 0.14); peak ampl err 17.0 dB; MAC 0.611
+steel_rho_lo           FRFcorr 0.237 | MAC 0.611 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.61, 0.63]
+[  470.2s] [steel_rho_hi] eigsh...
+[ 9662.2s] [steel_rho_hi] FRF log|H| corr median=0.323 (mean 0.256, frac>0.5 0.3); peak ampl err 14.8 dB; MAC 0.616
+steel_rho_hi           FRFcorr 0.323 | MAC 0.616 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.51, 0.49]
+[ 9664.5s] [al_rho_lo] eigsh...
+[ 9919.9s] [al_rho_lo] FRF log|H| corr median=0.379 (mean 0.319, frac>0.5 0.36); peak ampl err 12.3 dB; MAC 0.611
+al_rho_lo              FRFcorr 0.379 | MAC 0.611 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.48, 0.49]
+[ 9921.1s] [al_rho_hi] eigsh...
+[10202.9s] [al_rho_hi] FRF log|H| corr median=0.305 (mean 0.269, frac>0.5 0.32); peak ampl err 15.5 dB; MAC 0.586
+al_rho_hi              FRFcorr 0.305 | MAC 0.586 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.52, 0.53]
+[10206.2s] [dish_mass_lo] eigsh...
+[10487.7s] [dish_mass_lo] FRF log|H| corr median=0.365 (mean 0.307, frac>0.5 0.34); peak ampl err 14.0 dB; MAC 0.602
+dish_mass_lo           FRFcorr 0.365 | MAC 0.602 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.52, 0.51]
+[10489.5s] [dish_mass_hi] eigsh...
+[10768.4s] [dish_mass_hi] FRF log|H| corr median=0.312 (mean 0.261, frac>0.5 0.3); peak ampl err 14.4 dB; MAC 0.636
+dish_mass_hi           FRFcorr 0.312 | MAC 0.636 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.57, 0.59]
+[10771.3s] [steelLight_alHeavy] eigsh...
+[11164.1s] [steelLight_alHeavy] FRF log|H| corr median=0.278 (mean 0.215, frac>0.5 0.17); peak ampl err 17.3 dB; MAC 0.579
+steelLight_alHeavy     FRFcorr 0.278 | MAC 0.579 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.67, 0.68]
+[11167.2s] [steelHeavy_alLight] eigsh...
+[11707.9s] [steelHeavy_alLight] FRF log|H| corr median=0.293 (mean 0.245, frac>0.5 0.27); peak ampl err 16.5 dB; MAC 0.612
+steelHeavy_alLight     FRFcorr 0.293 | MAC 0.612 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.52, 0.51]
+[11725.1s] [steel_soft_light] eigsh...
+[12491.3s] [steel_soft_light] FRF log|H| corr median=0.192 (mean 0.159, frac>0.5 0.15); peak ampl err 17.3 dB; MAC 0.626
+steel_soft_light       FRFcorr 0.192 | MAC 0.626 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.48, 0.5]
+[12494.8s] [steel_stiff_heavy] eigsh...
+[13535.6s] [steel_stiff_heavy] FRF log|H| corr median=0.28 (mean 0.236, frac>0.5 0.26); peak ampl err 15.6 dB; MAC 0.629
+steel_stiff_heavy      FRFcorr 0.280 | MAC 0.629 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.51, 0.52]
+[13535.6s] [al_stiff] correlate already done — skip
+al_stiff               FRFcorr 0.349 | MAC 0.615 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.48, 0.49]
+[13537.9s] [al_soft] eigsh...
+[14046.4s] [al_soft] FRF log|H| corr median=0.224 (mean 0.186, frac>0.5 0.15); peak ampl err 17.9 dB; MAC 0.595
+al_soft                FRFcorr 0.224 | MAC 0.595 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.52, 0.53]
+[14052.4s] [combo_shift] eigsh...
+[14385.5s] [combo_shift] FRF log|H| corr median=0.341 (mean 0.273, frac>0.5 0.33); peak ampl err 16.6 dB; MAC 0.622
+combo_shift            FRFcorr 0.341 | MAC 0.622 | FUND-MAC 0.97 (was 0.12) | low3 [0.97, 0.52, 0.51]
+
+BEST FRFcorr: al_rho_lo 0.379 (baseline 0.296, prior-best 0.359)
+BEST FUND-MAC: steel_rho_lo 0.97 (baseline 0.12 — >0.5 would be a real shape fix)

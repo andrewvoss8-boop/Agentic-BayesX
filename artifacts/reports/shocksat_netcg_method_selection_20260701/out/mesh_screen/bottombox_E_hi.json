@@ -1,0 +1,21 @@
+{
+ "edit_id": "bottombox_E_hi",
+ "n_matched": 31,
+ "global_MAC": 0.616,
+ "mac_shear_band": 0.683,
+ "freq_rms_shear_pct": 11.34,
+ "freq_rms_all_pct": 13.32,
+ "screen_score": 0.3428,
+ "drum_freqs_hz": [
+  232.0,
+  233.8,
+  234.8,
+  235.8,
+  247.8,
+  252.5,
+  254.1,
+  257.2,
+  258.8
+ ],
+ "runtime_s": 468.9
+}

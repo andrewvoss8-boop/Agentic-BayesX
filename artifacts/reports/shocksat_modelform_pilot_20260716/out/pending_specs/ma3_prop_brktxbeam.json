@@ -1,0 +1,24 @@
+{
+ "cid": "ma3_prop_brktxbeam",
+ "cls": "property_control",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    301,
+    302
+   ],
+   "t_scale": 0.85,
+   "name": "brk085"
+  },
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.4
+  }
+ ],
+ "diagnosis_link": "CONTROL: combine the two strongest historical property levers (brackets_soft +0.1634, xbeam component of the r1 winner) - stacking has interfered before; the control class still gets its best shot",
+ "track": "agent",
+ "round": 3,
+ "rationale": "CONTROL: combine the two strongest historical property levers (brackets_soft +0.1634, xbeam component of the r1 winner) "
+}

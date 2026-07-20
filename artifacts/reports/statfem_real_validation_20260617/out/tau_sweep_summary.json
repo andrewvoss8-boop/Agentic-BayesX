@@ -1,0 +1,51 @@
+{
+  "deliverable": "Phase3_tau_sweep (matched-mode MAC quality threshold)",
+  "n_splits": 25,
+  "levels": {
+    "full20": {
+      "n_modes": 20,
+      "mac_min": 0.34029499185730877,
+      "mac_mean": 0.7042813093436247,
+      "calib_converged": true,
+      "calib_rhat": 1.0019552666389457,
+      "peak_IS_median": 797.109796925467,
+      "peak_cov_median": 0.967741935483871,
+      "band_IS_median": 2172.6776113175897,
+      "band_cov_median": 0.9354838709677419
+    },
+    "mac_ge_0.5": {
+      "n_modes": 17,
+      "mac_min": 0.5121832525550393,
+      "mac_mean": 0.756310657352817,
+      "calib_converged": true,
+      "calib_rhat": 1.0023943691968307,
+      "peak_IS_median": 808.9523156581394,
+      "peak_cov_median": 0.967741935483871,
+      "band_IS_median": 2059.2542971055504,
+      "band_cov_median": 0.967741935483871
+    },
+    "mac_ge_0.7": {
+      "n_modes": 10,
+      "mac_min": 0.7033370304494528,
+      "mac_mean": 0.8472924420573149,
+      "calib_converged": true,
+      "calib_rhat": 1.0023111638216868,
+      "peak_IS_median": 842.2605570011481,
+      "peak_cov_median": 0.967741935483871,
+      "band_IS_median": 2206.93484998294,
+      "band_cov_median": 0.967741935483871
+    },
+    "top6": {
+      "n_modes": 6,
+      "mac_min": 0.8825527022868203,
+      "mac_mean": 0.9289598654435083,
+      "calib_converged": true,
+      "calib_rhat": 1.0014949842872456,
+      "peak_IS_median": 1021.4204510971191,
+      "peak_cov_median": 0.967741935483871,
+      "band_IS_median": 2829.93365808724,
+      "band_cov_median": 0.967741935483871
+    }
+  },
+  "runtime_s": 231.01455116271973
+}

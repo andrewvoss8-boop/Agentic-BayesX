@@ -1,0 +1,13 @@
+{
+ "xy_files_opened": 0,
+ "xy_narrow_meta_opens": 122,
+ "narrow_meta_note": "femlib.cache_meta() metadata-only reads (daq/xyz/axis; H1 never accessed) \u2014 the established validated-package convention; the +XY FRF DATA (wide cache) was opened 0 times",
+ "log_hits": [],
+ "checked_paths": [
+  "logs/vault_opens.jsonl (runtime np.load guard)",
+  "out/query_log.jsonl",
+  "out/score_log.jsonl",
+  "out/finalists.json"
+ ],
+ "generated": "2026-07-17T13:40:13"
+}

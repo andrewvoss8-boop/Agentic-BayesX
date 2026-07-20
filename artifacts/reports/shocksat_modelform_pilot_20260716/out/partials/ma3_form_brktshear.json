@@ -1,0 +1,52 @@
+{
+ "cid": "ma3_form_brktshear",
+ "track": "agent",
+ "round": 3,
+ "cls": "element_formulation",
+ "ops": [
+  "formulation"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.15937441550770637,
+ "exact_b200_500": 0.17799239044787102,
+ "exact_folds": {
+  "m_xpos_990x": 0.31673860392484365,
+  "m_zpos_990z": 0.5342448875640013,
+  "m_ypos_990y": 0.06468232067089907,
+  "m_zpos_900z": -0.27816815012891855
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.15181176976040328,
+  "m_zpos_990z": 0.1682935942463177,
+  "m_ypos_990y": 0.14857853579565525,
+  "m_zpos_900z": 0.2432856619891078
+ },
+ "theta_map": [
+  1.0528329589597536,
+  0.999947137162872,
+  1.0082549923016553,
+  1.163366442717441,
+  0.9370994343167087,
+  1.1358212060605977,
+  0.9698881464058077,
+  1.1718374302746735,
+  1.0834357265145669,
+  0.8517570121786949
+ ],
+ "enriched_pkg": "ma3_form_brktshear__xenr",
+ "spot_max_pct": 6.049640788319266e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 2.1098,
+  "pass": true
+ },
+ "solve_s_theta1": 399.2,
+ "solve_s_enrich": 401.7,
+ "wall_s": 829.5,
+ "ts": "2026-07-17T07:05:41",
+ "diagnosis_link": "diagnosis_mf_r3.json: Top_Brackets|Y 0.702 dex; the bracket shells carry the tray load path -> shear-soften their formulation (ts 5/6 -> 0.35), the same knob that gave the agent's r1 formulation best (+0.1630 on plates)"
+}

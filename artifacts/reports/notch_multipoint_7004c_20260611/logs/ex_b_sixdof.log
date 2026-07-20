@@ -1,0 +1,6 @@
+wrote results/ex_b_results.json
+EX-B done.
+  modes numeric : [ 61.87  70.55 103.48 119.95 147.98 151.48]
+  modes analytic: [ 61.87  70.55 103.48 119.95 147.98 151.48]
+  mode err 2.37e-16 | static-limit err 4.73e-07 | eff-mass sum err 2.96e-16
+  trap: net/(4*foot) = 0.000% at 147.8 Hz

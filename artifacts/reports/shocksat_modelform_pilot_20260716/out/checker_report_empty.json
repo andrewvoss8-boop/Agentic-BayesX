@@ -1,0 +1,90 @@
+{
+ "overall": "RED",
+ "gates": [
+  {
+   "name": "G01 finiteness of every reported statistic",
+   "status": "RED",
+   "messages": [
+    "missing out/verdicts.json"
+   ]
+  },
+  {
+   "name": "G02 stratification quota + class attribution",
+   "status": "RED",
+   "messages": [
+    "gate crashed: FileNotFoundError: [Errno 2] No such file or directory: '/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/query_log.jsonl'"
+   ]
+  },
+  {
+   "name": "G03 exact-basis scoring + mech gates + reproduction",
+   "status": "RED",
+   "messages": [
+    "gate crashed: FileNotFoundError: [Errno 2] No such file or directory: '/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/query_log.jsonl'"
+   ]
+  },
+  {
+   "name": "G04 V-gates precede scored use",
+   "status": "RED",
+   "messages": [
+    "gate crashed: FileNotFoundError: [Errno 2] No such file or directory: '/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/query_log.jsonl'"
+   ]
+  },
+  {
+   "name": "G05 finalist fold-provenance (no cross-fold reuse)",
+   "status": "RED",
+   "messages": [
+    "missing out/finalists.json"
+   ]
+  },
+  {
+   "name": "G06 budgets + seeds",
+   "status": "RED",
+   "messages": [
+    "gate crashed: FileNotFoundError: [Errno 2] No such file or directory: '/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/query_log.jsonl'"
+   ]
+  },
+  {
+   "name": "G07 leakage + no vault",
+   "status": "RED",
+   "messages": [
+    "missing out/vault_guard.json",
+    "no query log (cannot certify leakage-free scoring)"
+   ]
+  },
+  {
+   "name": "G08 complexity table + penalty rule",
+   "status": "RED",
+   "messages": [
+    "missing out/complexity.json"
+   ]
+  },
+  {
+   "name": "G09 figures scripted/linted/QA'd",
+   "status": "RED",
+   "messages": [
+    "missing out/fig_manifest.json"
+   ]
+  },
+  {
+   "name": "G10 runtime accounting",
+   "status": "RED",
+   "messages": [
+    "missing runtime.json"
+   ]
+  },
+  {
+   "name": "G11 checker self-SHA",
+   "status": "RED",
+   "messages": [
+    "missing CHECKER.sha256 (checker must be SHA-locked before science)"
+   ]
+  },
+  {
+   "name": "G12 verdict consistency (recomputed)",
+   "status": "RED",
+   "messages": [
+    "missing out/verdicts.json"
+   ]
+  }
+ ]
+}

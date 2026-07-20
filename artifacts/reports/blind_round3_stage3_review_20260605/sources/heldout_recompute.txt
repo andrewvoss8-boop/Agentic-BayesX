@@ -1,3 +1,0 @@
-[OBSERVED] held-out builds 6,7 cov95=0.9106 | band 95-115Hz cov95=0.7148
-[CLEAN truth] held-out builds 6,7 cov95=0.9098 | band 95-115Hz cov95=0.7148
-mean log-width = 2.1729  (~8.8x multiplicative span)

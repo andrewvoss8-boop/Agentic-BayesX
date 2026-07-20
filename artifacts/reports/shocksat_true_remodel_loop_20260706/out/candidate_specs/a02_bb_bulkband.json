@@ -1,0 +1,21 @@
+{
+ "cid": "a02_bb_bulkband",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  }
+ ],
+ "rationale": "Steel-box wall band at the z=12.4 bulkhead: ch40 (below bulkhead) confirmed-fail; bad-shape cluster m20/m23/m24 (190-203 Hz) stores 0.83-0.96 of strain energy in bottom_box; a near-bulkhead band vs field split lets the local interface stiffness deviate.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: strain_energy_frac m20/m23/m24; pairing t19-t23",
+ "split_info": {
+  "bb_bulkband": 3864
+ }
+}

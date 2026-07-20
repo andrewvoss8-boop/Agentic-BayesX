@@ -1,0 +1,34 @@
+{
+  "label": "+Y",
+  "axis": "Y",
+  "xyz": [
+    8.5,
+    9.0,
+    1.0
+  ],
+  "N": 122880,
+  "n_hits_used": 4,
+  "n_hits_skipped": 0,
+  "df_hz": 2.0345052083333335,
+  "n_freqs": 105,
+  "n_channels": 111,
+  "coh_inband_median": 0.8500367668614542,
+  "n_modal_peaks": 8,
+  "modal_peaks_hz": [
+    97.7,
+    138.3,
+    152.6,
+    162.8,
+    189.2,
+    197.3,
+    231.9,
+    254.3
+  ],
+  "used": [
+    "Test03_modalhammer_990y_001_5_21_2021_9_16_11 AM.mat",
+    "Test03_modalhammer_990y_004_5_20_2021_1_24_19 PM.mat",
+    "Test03_modalhammer_990y_005_5_21_2021_9_38_39 AM.mat",
+    "Test03_modalhammer_990y_006_5_21_2021_9_40_51 AM.mat"
+  ],
+  "runtime_s": 6.5
+}

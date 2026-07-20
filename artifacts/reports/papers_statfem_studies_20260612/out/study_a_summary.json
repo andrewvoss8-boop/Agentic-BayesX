@@ -1,0 +1,106 @@
+{
+  "config": {
+    "NF": 56,
+    "band_hz": [
+      30.0,
+      200.0
+    ],
+    "nmp": 2,
+    "injected": {
+      "sig_w": 0.12,
+      "sig_th": 0.1,
+      "len_f": 18.0,
+      "r": 0.8,
+      "sig_iid": 0.03,
+      "add_frac": 0.015
+    },
+    "truth_freqs_uncoupled": [
+      110.0,
+      75.0,
+      220.0
+    ],
+    "hidden_dof": true,
+    "holdout": {
+      "interp_n": 14,
+      "extrap_n": 14,
+      "target_coverage": 0.95
+    }
+  },
+  "primary_interleaved": {
+    "v1": {
+      "max_rhat": 24.9260399414507,
+      "min_ess": 2.004653067439974,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.8214285714285714,
+      "band_width": 5.5323623500582215,
+      "runtime_s": 17.41010093688965
+    },
+    "v2": {
+      "max_rhat": 1.001194576574069,
+      "min_ess": 1268.95166854886,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 1.0,
+      "band_width": 0.857495803875011,
+      "runtime_s": 40.89751482009888
+    },
+    "v3": {
+      "max_rhat": 25.74042412764593,
+      "min_ess": 2.00495923731512,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.9642857142857143,
+      "band_width": 7.298341340027407,
+      "runtime_s": 18.584453105926514
+    }
+  },
+  "secondary_extrapolation": {
+    "v1": {
+      "max_rhat": 32.61201320042548,
+      "min_ess": 2.002897333083824,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.7857142857142857,
+      "band_width": 2.347704335810309,
+      "runtime_s": 23.042199850082397
+    },
+    "v2": {
+      "max_rhat": 1.001277559970656,
+      "min_ess": 1585.168194975903,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.6428571428571429,
+      "band_width": 3.2600464039933286,
+      "runtime_s": 48.427841901779175
+    }
+  },
+  "coupled_f1_truth": 85.75487970587756,
+  "coupled_f2_truth": 139.18010133144202,
+  "v2_hyper_posterior": {
+    "sig_w": [
+      0.2059104488633644,
+      0.24779277642758574,
+      0.3105861204586587
+    ],
+    "sig_th": [
+      2.1701707701791997,
+      2.803392868778554,
+      3.7346329165702454
+    ],
+    "len_f": [
+      23.835642098382984,
+      46.01828212053492,
+      91.14352358496595
+    ],
+    "r": [
+      0.6706781591916816,
+      0.8056313269677822,
+      0.8953403065927847
+    ],
+    "injected_len_f": 18.0,
+    "injected_r": 0.8,
+    "injected_sig_w": 0.12,
+    "injected_sig_th": 0.1
+  }
+}

@@ -1,0 +1,52 @@
+{
+ "cid": "ma1_conn_softbbox",
+ "track": "agent",
+ "round": 1,
+ "cls": "connectivity",
+ "ops": [
+  "rbe2_soften"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.1417655688192254,
+ "exact_b200_500": 0.2520038210529455,
+ "exact_folds": {
+  "m_xpos_990x": 0.26612247737618,
+  "m_zpos_990z": 0.501152717730968,
+  "m_ypos_990y": 0.0966303394766582,
+  "m_zpos_900z": -0.2968432593069047
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.18197131300399286,
+  "m_zpos_990z": 0.23811564421488882,
+  "m_ypos_990y": 0.27034246732532946,
+  "m_zpos_900z": 0.3175858596675708
+ },
+ "theta_map": [
+  1.0761605323796186,
+  1.186372364542,
+  0.9613216247144952,
+  0.9572155710229805,
+  0.7814989106252799,
+  1.4026755223657243,
+  0.9317709868424578,
+  1.0232492507111406,
+  1.1302709961640305,
+  0.9642793146808419
+ ],
+ "enriched_pkg": "ma1_conn_softbbox__xenr",
+ "spot_max_pct": 1.5235106509692287e-07,
+ "n_dof": 400770,
+ "delta_dof_pct": 0.315,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 0.6437,
+  "pass": true
+ },
+ "solve_s_theta1": 468.2,
+ "solve_s_enrich": 446.4,
+ "wall_s": 952.6,
+ "ts": "2026-07-16T20:13:48",
+ "diagnosis_link": "diagnosis_mf_r1.json: Bottom_Box is the largest shape-defect region (0.493) and Bottom_Box|Y/Z sub-200 amplitude cells are 0.76/0.69 dex; soften 20 of the 56 bottom-box joint spiders to compliant springs (k_t=1e5 lbf/in, k_r=1e4)"
+}

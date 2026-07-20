@@ -1,0 +1,26 @@
+{
+ "fig_results_table.png": {
+  "script": "code/make_figs.py",
+  "provenance": "shocksat_modelform_pilot_20260716 | 4 dev drives (LODO), sub-200 Hz P1', EXACT bases"
+ },
+ "fig_score_vs_ddof.png": {
+  "script": "code/make_figs.py",
+  "provenance": "shocksat_modelform_pilot_20260716 | 4 dev drives (LODO), sub-200 Hz P1', EXACT bases"
+ },
+ "fig_fold_deltas.png": {
+  "script": "code/make_figs.py",
+  "provenance": "shocksat_modelform_pilot_20260716 | 4 dev drives (LODO), sub-200 Hz P1', EXACT bases"
+ },
+ "fig_best_frf.png": {
+  "script": "code/make_figs.py",
+  "provenance": "shocksat_modelform_pilot_20260716 | 4 dev drives (LODO), sub-200 Hz P1', EXACT bases"
+ },
+ "fig_diag_links.png": {
+  "script": "code/make_figs.py",
+  "provenance": "shocksat_modelform_pilot_20260716 | 4 dev drives (LODO), sub-200 Hz P1', EXACT bases"
+ },
+ "fig_loop_schematic.png": {
+  "script": "code/make_figs.py",
+  "provenance": "shocksat_modelform_pilot_20260716 | 4 dev drives (LODO), sub-200 Hz P1', EXACT bases"
+ }
+}

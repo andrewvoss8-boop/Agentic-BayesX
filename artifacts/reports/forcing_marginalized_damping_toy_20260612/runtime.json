@@ -1,0 +1,7 @@
+{
+ "active_runtime_s": 15.53,
+ "elapsed_wallclock_s": 18,
+ "stages": {
+  "toy_generation_and_nuts_s": 15.53
+ }
+}

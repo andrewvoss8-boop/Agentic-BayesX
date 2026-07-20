@@ -1,0 +1,34 @@
+{
+ "combo_for_full_check": 3,
+ "zeta": 0.02,
+ "band_hz": [
+  45.0,
+  260.0
+ ],
+ "reduced_vs_full": {
+  "n_full_modes": 90,
+  "eigsh_secs": 297.4,
+  "max_rel_err_at_peaks": 0.08103011322249853,
+  "max_peak_qoi_rel_err": 0.06889235757084655,
+  "max_band_qoi_rel_err": 0.08103011322249853,
+  "max_pointwise_rel_err_near_resonance": 0.18901749243097665,
+  "median_pointwise_rel_err_near_resonance": 0.053619984155542644,
+  "note": "reduced 74-mode FRF vs full-order direct eigensolve (399510-DOF) modal FRF at biased theta (combo 3); 'at QOI peaks' = QOI-value error (peak |H| + band-GRMS), robust to small freq shifts"
+ },
+ "grid_refine": {
+  "n_coarse": 160,
+  "n_fine": 320,
+  "max_peak_qoi_rel_shift": 0.03236996495943967,
+  "max_band_qoi_rel_shift": 0.004199957218642525,
+  "max_qoi_rel_shift": 0.03236996495943967
+ },
+ "modal_truncation": {
+  "band_qoi_rel_err_vs_74modes": {
+   "40": 0.12969542207456608,
+   "50": 0.10317783212856413,
+   "60": 0.010674615590022807,
+   "74": 0.0
+  },
+  "note": "in-band band-QOI converges as modes are added; 74 modes (fmax 321 Hz) well above the 260 Hz band top"
+ }
+}

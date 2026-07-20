@@ -1,0 +1,219 @@
+{
+  "deliverable": "cross-channel SHAPE-pattern test (do measured shapes predict single-impact peak |H|?)",
+  "primary_metric": "log-amplitude pattern correlation across channels vs measured peak-|H| (sigma_QOI lives here)",
+  "n_matched_modes": 20,
+  "n_well_isolated": 10,
+  "all_modes": {
+    "mean_logamp_corr_FEM": 0.1398582131074872,
+    "mean_logamp_corr_measured": 0.11674241229367643,
+    "mean_MAC_FEM": 0.1619633174943153,
+    "mean_MAC_measured": 0.24060115943306853
+  },
+  "well_isolated_modes": {
+    "mean_logamp_corr_FEM": 0.16524280094718963,
+    "mean_logamp_corr_measured": 0.18637213094796107
+  },
+  "per_mode": [
+    {
+      "f_hz": 54.19093322753906,
+      "fem_mode": 0,
+      "match_mac_at_theta1": 0.9696327630777883,
+      "logamp_corr_FEMshape_vs_FRF": 0.3099516364324412,
+      "logamp_corr_measuredshape_vs_FRF": 0.30164777913229857,
+      "MAC_FEMshape_vs_FRF": 0.14809998452068301,
+      "MAC_measuredshape_vs_FRF": 0.1418627447813648,
+      "isolation_hz": 15.792060852050781
+    },
+    {
+      "f_hz": 69.98299407958984,
+      "fem_mode": 2,
+      "match_mac_at_theta1": 0.49725854923594964,
+      "logamp_corr_FEMshape_vs_FRF": 0.12495175127906138,
+      "logamp_corr_measuredshape_vs_FRF": 0.301820681380624,
+      "MAC_FEMshape_vs_FRF": 0.1439300173457627,
+      "MAC_measuredshape_vs_FRF": 0.1252183230332983,
+      "isolation_hz": 5.002845764160156
+    },
+    {
+      "f_hz": 74.98583984375,
+      "fem_mode": 1,
+      "match_mac_at_theta1": 0.5121832525550393,
+      "logamp_corr_FEMshape_vs_FRF": 0.1354138202044099,
+      "logamp_corr_measuredshape_vs_FRF": -0.020411837755940233,
+      "MAC_FEMshape_vs_FRF": 0.2599996568893245,
+      "MAC_measuredshape_vs_FRF": 0.37433325514327326,
+      "isolation_hz": 5.002845764160156
+    },
+    {
+      "f_hz": 85.77835845947266,
+      "fem_mode": 3,
+      "match_mac_at_theta1": 0.8825527022868203,
+      "logamp_corr_FEMshape_vs_FRF": 0.3188815512341086,
+      "logamp_corr_measuredshape_vs_FRF": 0.235660054452852,
+      "MAC_FEMshape_vs_FRF": 0.1400217280703229,
+      "MAC_measuredshape_vs_FRF": 0.14167179170314093,
+      "isolation_hz": 10.792518615722656
+    },
+    {
+      "f_hz": 107.02578735351562,
+      "fem_mode": 4,
+      "match_mac_at_theta1": 0.975039999629126,
+      "logamp_corr_FEMshape_vs_FRF": 0.068223947576668,
+      "logamp_corr_measuredshape_vs_FRF": -0.07569380171118516,
+      "MAC_FEMshape_vs_FRF": 0.003281395887182379,
+      "MAC_measuredshape_vs_FRF": 0.0047736374761946174,
+      "isolation_hz": 10.603401184082031
+    },
+    {
+      "f_hz": 117.62918853759766,
+      "fem_mode": 7,
+      "match_mac_at_theta1": 0.8994173241818386,
+      "logamp_corr_FEMshape_vs_FRF": 0.14984883281195024,
+      "logamp_corr_measuredshape_vs_FRF": 0.07384439625236434,
+      "MAC_FEMshape_vs_FRF": 0.1685137957290215,
+      "MAC_measuredshape_vs_FRF": 0.17102778054939968,
+      "isolation_hz": 0.9036636352539062
+    },
+    {
+      "f_hz": 118.53285217285156,
+      "fem_mode": 5,
+      "match_mac_at_theta1": 0.9581277210473569,
+      "logamp_corr_FEMshape_vs_FRF": 0.10288427528826238,
+      "logamp_corr_measuredshape_vs_FRF": -0.14093792652514922,
+      "MAC_FEMshape_vs_FRF": 0.026709915312414404,
+      "MAC_measuredshape_vs_FRF": 0.0228639802248341,
+      "isolation_hz": 0.9036636352539062
+    },
+    {
+      "f_hz": 125.03355407714844,
+      "fem_mode": 6,
+      "match_mac_at_theta1": 0.7037711998790104,
+      "logamp_corr_FEMshape_vs_FRF": 0.07210364933963198,
+      "logamp_corr_measuredshape_vs_FRF": 0.169911384697231,
+      "MAC_FEMshape_vs_FRF": 0.09975006728704722,
+      "MAC_measuredshape_vs_FRF": 0.19219086227917537,
+      "isolation_hz": 6.500701904296875
+    },
+    {
+      "f_hz": 137.24539184570312,
+      "fem_mode": 13,
+      "match_mac_at_theta1": 0.6918467481670028,
+      "logamp_corr_FEMshape_vs_FRF": 0.2068147136558874,
+      "logamp_corr_measuredshape_vs_FRF": 0.5133440928613667,
+      "MAC_FEMshape_vs_FRF": 0.5013625698328101,
+      "MAC_measuredshape_vs_FRF": 0.6452652666953859,
+      "isolation_hz": 12.211837768554688
+    },
+    {
+      "f_hz": 151.18670654296875,
+      "fem_mode": 14,
+      "match_mac_at_theta1": 0.6101679250968651,
+      "logamp_corr_FEMshape_vs_FRF": 0.025905091043197236,
+      "logamp_corr_measuredshape_vs_FRF": 0.04773178412883797,
+      "MAC_FEMshape_vs_FRF": 0.06188719567326613,
+      "MAC_measuredshape_vs_FRF": 0.2125633654867543,
+      "isolation_hz": 6.98822021484375
+    },
+    {
+      "f_hz": 158.1749267578125,
+      "fem_mode": 12,
+      "match_mac_at_theta1": 0.5806611731384584,
+      "logamp_corr_FEMshape_vs_FRF": 0.27555660162170315,
+      "logamp_corr_measuredshape_vs_FRF": 0.38596253187138646,
+      "MAC_FEMshape_vs_FRF": 0.3258395203955021,
+      "MAC_measuredshape_vs_FRF": 0.5153751330149797,
+      "isolation_hz": 6.98822021484375
+    },
+    {
+      "f_hz": 165.8802490234375,
+      "fem_mode": 15,
+      "match_mac_at_theta1": 0.7551721487127419,
+      "logamp_corr_FEMshape_vs_FRF": -0.11206815834974933,
+      "logamp_corr_measuredshape_vs_FRF": -0.17166937079556716,
+      "MAC_FEMshape_vs_FRF": 0.009813065336124837,
+      "MAC_measuredshape_vs_FRF": 0.040205922539174495,
+      "isolation_hz": 2.1074371337890625
+    },
+    {
+      "f_hz": 167.98768615722656,
+      "fem_mode": 19,
+      "match_mac_at_theta1": 0.7033370304494528,
+      "logamp_corr_FEMshape_vs_FRF": 0.2097425871594386,
+      "logamp_corr_measuredshape_vs_FRF": 0.08291410814664993,
+      "MAC_FEMshape_vs_FRF": 0.4482459048816886,
+      "MAC_measuredshape_vs_FRF": 0.5493214852638554,
+      "isolation_hz": 2.1074371337890625
+    },
+    {
+      "f_hz": 172.25955200195312,
+      "fem_mode": 20,
+      "match_mac_at_theta1": 0.7368848488708939,
+      "logamp_corr_FEMshape_vs_FRF": 0.2324347305774044,
+      "logamp_corr_measuredshape_vs_FRF": 0.2775409511091696,
+      "MAC_FEMshape_vs_FRF": 0.27603181547246464,
+      "MAC_measuredshape_vs_FRF": 0.2139460149382079,
+      "isolation_hz": 2.5153350830078125
+    },
+    {
+      "f_hz": 174.77488708496094,
+      "fem_mode": 17,
+      "match_mac_at_theta1": 0.638798258685621,
+      "logamp_corr_FEMshape_vs_FRF": 0.12883854891092514,
+      "logamp_corr_measuredshape_vs_FRF": -0.030041980742033667,
+      "MAC_FEMshape_vs_FRF": 0.05235418244128381,
+      "MAC_measuredshape_vs_FRF": 0.08154072076731889,
+      "isolation_hz": 2.5153350830078125
+    },
+    {
+      "f_hz": 184.36175537109375,
+      "fem_mode": 18,
+      "match_mac_at_theta1": 0.88898868243812,
+      "logamp_corr_FEMshape_vs_FRF": 0.11462524708478776,
+      "logamp_corr_measuredshape_vs_FRF": 0.0037486404221395066,
+      "MAC_FEMshape_vs_FRF": 0.050573610436375774,
+      "MAC_measuredshape_vs_FRF": 0.0496233879060366,
+      "isolation_hz": 4.275054931640625
+    },
+    {
+      "f_hz": 188.63681030273438,
+      "fem_mode": 21,
+      "match_mac_at_theta1": 0.6901770453743787,
+      "logamp_corr_FEMshape_vs_FRF": 0.29083205874043466,
+      "logamp_corr_measuredshape_vs_FRF": -0.13534165923707814,
+      "MAC_FEMshape_vs_FRF": 0.09132639279468358,
+      "MAC_measuredshape_vs_FRF": 0.15945260384900253,
+      "isolation_hz": 1.58270263671875
+    },
+    {
+      "f_hz": 190.21951293945312,
+      "fem_mode": 25,
+      "match_mac_at_theta1": 0.34029499185730877,
+      "logamp_corr_FEMshape_vs_FRF": 0.055242383264433995,
+      "logamp_corr_measuredshape_vs_FRF": 0.4612260107105198,
+      "MAC_FEMshape_vs_FRF": 0.18354153725570832,
+      "MAC_measuredshape_vs_FRF": 0.7541887771875329,
+      "isolation_hz": 1.58270263671875
+    },
+    {
+      "f_hz": 195.72291564941406,
+      "fem_mode": 23,
+      "match_mac_at_theta1": 0.3907914707813468,
+      "logamp_corr_FEMshape_vs_FRF": 0.15791514815810678,
+      "logamp_corr_measuredshape_vs_FRF": 0.18505908510290983,
+      "MAC_FEMshape_vs_FRF": 0.18347720016208927,
+      "MAC_measuredshape_vs_FRF": 0.31707650393715825,
+      "isolation_hz": 2.092529296875
+    },
+    {
+      "f_hz": 197.81544494628906,
+      "fem_mode": 26,
+      "match_mac_at_theta1": 0.6605223514073745,
+      "logamp_corr_FEMshape_vs_FRF": -0.07093415388336023,
+      "logamp_corr_measuredshape_vs_FRF": -0.13146667762786757,
+      "MAC_FEMshape_vs_FRF": 0.06450679416255047,
+      "MAC_measuredshape_vs_FRF": 0.09952163188528326,
+      "isolation_hz": 2.092529296875
+    }
+  ],
+  "interpretation": "Both FEM and MEASURED shapes correlate only ~0.15 with the single-impact peak-|H| pattern (best mode ~0.5). The measured shapes (which we HAVE) do NOT predict this observable better than FEM -> the wide CI is NOT 'we ignored the shape data'. The single-impact peak accelerance per channel is a near-field/local/overlap quantity, not cleanly modal -> no global modal model (FEM or measured EMA) predicts it well."
+}

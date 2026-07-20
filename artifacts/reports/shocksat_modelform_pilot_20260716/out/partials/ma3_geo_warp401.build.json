@@ -1,0 +1,21 @@
+{
+ "n_dof": 399510,
+ "n_rbm": 6,
+ "solve_s_theta1": 448.0,
+ "mass_x": 0.33096972988441786,
+ "build_info": {
+  "quality": {
+   "min_jac_ratio": 0.9999808981336806,
+   "max_edge_slope": 0.0002869180793724119,
+   "n_edited_quads": 1568
+  },
+  "moved_nodes": 1705,
+  "affected_shell_pids": [
+   401
+  ],
+  "affected_bush_pids": [
+   99
+  ]
+ },
+ "n_params": 9
+}

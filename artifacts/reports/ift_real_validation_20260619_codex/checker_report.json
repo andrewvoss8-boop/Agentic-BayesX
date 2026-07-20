@@ -1,0 +1,128 @@
+{
+  "overall": "YELLOW",
+  "green": 19,
+  "yellow": 5,
+  "red": 0,
+  "checks": [
+    {
+      "name": "provenance_code/core.py",
+      "status": "GREEN",
+      "detail": "code/core.py sha matches"
+    },
+    {
+      "name": "provenance_code/score.py",
+      "status": "GREEN",
+      "detail": "code/score.py sha matches"
+    },
+    {
+      "name": "provenance_data",
+      "status": "GREEN",
+      "detail": "all copied data files byte-identical"
+    },
+    {
+      "name": "doc_decisions_log.md",
+      "status": "GREEN",
+      "detail": "decisions_log.md exists"
+    },
+    {
+      "name": "doc_priority_deliverables.md",
+      "status": "GREEN",
+      "detail": "priority_deliverables.md exists"
+    },
+    {
+      "name": "doc_method_ift.md",
+      "status": "GREEN",
+      "detail": "method_ift.md exists"
+    },
+    {
+      "name": "doc_assumptions_ledger.md",
+      "status": "GREEN",
+      "detail": "assumptions_ledger.md exists"
+    },
+    {
+      "name": "doc_quantity_contracts.md",
+      "status": "GREEN",
+      "detail": "quantity_contracts.md exists"
+    },
+    {
+      "name": "scorecard_exists",
+      "status": "GREEN",
+      "detail": "out/scorecard.json exists"
+    },
+    {
+      "name": "verdict_generated",
+      "status": "GREEN",
+      "detail": "verdict=HONEST_NEGATIVE"
+    },
+    {
+      "name": "scorecard_status",
+      "status": "YELLOW",
+      "detail": "IFT did not satisfy the convergence gate on all splits (converged fraction 0.00); non-convergence is documented, not presented as success."
+    },
+    {
+      "name": "ift_25_splits",
+      "status": "GREEN",
+      "detail": "IFT has 25 splits"
+    },
+    {
+      "name": "ift_mc_exists",
+      "status": "GREEN",
+      "detail": "IFT MC exists with 25 splits"
+    },
+    {
+      "name": "ift_convergence",
+      "status": "YELLOW",
+      "detail": "documented non-convergence fraction 1.00"
+    },
+    {
+      "name": "convergence_table",
+      "status": "GREEN",
+      "detail": "convergence table exists for arms: IFT, L5, M2"
+    },
+    {
+      "name": "discretization_sensitivity",
+      "status": "YELLOW",
+      "detail": "post-hoc split-0 frequency-grid QOI diagnostic exists; not a certified posterior-invariance rerun"
+    },
+    {
+      "name": "method_logmag_adaptation",
+      "status": "YELLOW",
+      "detail": "log-magnitude approximation is explicitly documented"
+    },
+    {
+      "name": "figures_exist",
+      "status": "GREEN",
+      "detail": "required figures exist"
+    },
+    {
+      "name": "image_qa",
+      "status": "GREEN",
+      "detail": "image QA ALL_OK"
+    },
+    {
+      "name": "text_overlap",
+      "status": "GREEN",
+      "detail": "no text overlap hits"
+    },
+    {
+      "name": "deck_pptx",
+      "status": "GREEN",
+      "detail": "deck exists (742706 bytes)"
+    },
+    {
+      "name": "deck_manifest",
+      "status": "GREEN",
+      "detail": "slide_count=9"
+    },
+    {
+      "name": "deck_rendered_preview",
+      "status": "GREEN",
+      "detail": "9 slide previews; montage exists=True; contact sheet exists=True; visual QA exists=True"
+    },
+    {
+      "name": "single_hit_scope",
+      "status": "YELLOW",
+      "detail": "single hit / single impact; channel-split-only validation"
+    }
+  ]
+}

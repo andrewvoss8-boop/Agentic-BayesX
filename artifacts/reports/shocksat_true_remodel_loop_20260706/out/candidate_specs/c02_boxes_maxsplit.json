@@ -1,0 +1,54 @@
+{
+ "cid": "c02_boxes_maxsplit",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 0.0,
+    "zhi": 4.0
+   },
+   "name": "bb_base"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  },
+  {
+   "op": "split",
+   "pid": 201,
+   "rule": {
+    "type": "z_band",
+    "zlo": 18.4,
+    "zhi": 21.5
+   },
+   "name": "tb_nearjoint"
+  },
+  {
+   "op": "split",
+   "pid": 201,
+   "rule": {
+    "type": "z_band",
+    "zlo": 27.4,
+    "zhi": 30.4
+   },
+   "name": "tb_nearbulk"
+  }
+ ],
+ "rationale": "CEILING PROBE (both boxes): distribution freedom in bottom AND top box simultaneously (7 box knobs total).",
+ "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe",
+ "split_info": {
+  "bb_base": 3588,
+  "bb_bulkband": 3864,
+  "tb_nearjoint": 3634,
+  "tb_nearbulk": 2502
+ }
+}

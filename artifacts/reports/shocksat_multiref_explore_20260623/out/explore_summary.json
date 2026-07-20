@@ -1,0 +1,155 @@
+{
+  "Test01 +X modal": {
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "used": [
+      "Test01_modalhammer_990x_001_5_20_2021_12_42_39 PM.mat",
+      "Test01_modalhammer_990x_002_5_20_2021_12_43_19 PM.mat",
+      "Test01_modalhammer_990x_003_5_20_2021_12_43_50 PM.mat",
+      "Test01_modalhammer_990x_004_5_20_2021_12_44_28 PM.mat",
+      "Test01_modalhammer_990x_005_5_20_2021_12_44_49 PM.mat",
+      "Test01_modalhammer_990x_006_5_20_2021_12_45_10 PM.mat"
+    ],
+    "skipped": [],
+    "peak_force_lbf_median": 627.0615513523692,
+    "peak_force_lbf_range": [
+      516.266326553942,
+      724.3606115052308
+    ],
+    "force_-3dB_rolloff_hz": 803.6295572916667,
+    "coh_uncorrelated_floor": 0.167,
+    "coh_inband_median": 0.9309976846024292,
+    "coh_inband_90th": 0.9853430494817677,
+    "coh_inband_max": 0.9986043630838621,
+    "coh_at_peaks_median": 0.9662556943530172,
+    "n_modal_peaks_45_260": 6,
+    "modal_peaks_hz": [
+      75.3,
+      138.3,
+      162.8,
+      189.2,
+      199.4,
+      254.3
+    ],
+    "kind": "modal"
+  },
+  "Test02 +Z modal": {
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "used": [
+      "Test02_modalhammer_990z_001_5_20_2021_12_59_14 PM.mat",
+      "Test02_modalhammer_990z_002_5_20_2021_1_04_40 PM.mat",
+      "Test02_modalhammer_990z_003_5_20_2021_1_05_18 PM.mat",
+      "Test02_modalhammer_990z_004_5_20_2021_1_06_40 PM.mat",
+      "Test02_modalhammer_990z_005_5_20_2021_1_07_00 PM.mat",
+      "Test02_modalhammer_990z_006_5_20_2021_1_07_24 PM.mat"
+    ],
+    "skipped": [],
+    "peak_force_lbf_median": 733.528384478637,
+    "peak_force_lbf_range": [
+      518.0087627357024,
+      880.3665095525753
+    ],
+    "force_-3dB_rolloff_hz": 2990.72265625,
+    "coh_uncorrelated_floor": 0.167,
+    "coh_inband_median": 0.7067854459440547,
+    "coh_inband_90th": 0.9799957196613203,
+    "coh_inband_max": 0.9996481845680402,
+    "coh_at_peaks_median": 0.8986309396112928,
+    "n_modal_peaks_45_260": 8,
+    "modal_peaks_hz": [
+      99.7,
+      126.1,
+      136.3,
+      172.9,
+      189.2,
+      197.3,
+      234.0,
+      254.3
+    ],
+    "kind": "modal"
+  },
+  "Test04 +XY modal": {
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "used": [
+      "Test04_modalhammer_990xy_001_5_20_2021_1_48_47 PM.mat",
+      "Test04_modalhammer_990xy_002_5_20_2021_1_50_38 PM.mat",
+      "Test04_modalhammer_990xy_003_5_20_2021_1_51_16 PM.mat",
+      "Test04_modalhammer_990xy_004_5_20_2021_1_53_00 PM.mat",
+      "Test04_modalhammer_990xy_005_5_20_2021_1_53_23 PM.mat",
+      "Test04_modalhammer_990xy_006_5_20_2021_1_55_32 PM.mat"
+    ],
+    "skipped": [],
+    "peak_force_lbf_median": 805.1419095743547,
+    "peak_force_lbf_range": [
+      532.1494611888529,
+      1083.2372091096677
+    ],
+    "force_-3dB_rolloff_hz": 3108.7239583333335,
+    "coh_uncorrelated_floor": 0.167,
+    "coh_inband_median": 0.805545514746831,
+    "coh_inband_90th": 0.9862801290203473,
+    "coh_inband_max": 0.9986921627444978,
+    "coh_at_peaks_median": 0.9267924089317902,
+    "n_modal_peaks_45_260": 8,
+    "modal_peaks_hz": [
+      75.3,
+      99.7,
+      122.1,
+      136.3,
+      189.2,
+      197.3,
+      234.0,
+      254.3
+    ],
+    "kind": "modal"
+  },
+  "Test07 +X impact (Card A ref)": {
+    "n_hits_used": 1,
+    "n_hits_skipped": 0,
+    "used": [
+      "Test07_impacthammer_990x_001_5_20_2021_2_32_37 PM.mat"
+    ],
+    "skipped": [],
+    "peak_force_lbf_median": 1.2849512446766482,
+    "peak_force_lbf_range": [
+      1.2849512446766482,
+      1.2849512446766482
+    ],
+    "force_-3dB_rolloff_hz": 278.7272135416667,
+    "coh_uncorrelated_floor": 1.0,
+    "coh_inband_median": 1.0,
+    "coh_inband_90th": 1.0000000000000004,
+    "coh_inband_max": 1.000000000000001,
+    "coh_at_peaks_median": 0.9999999999999999,
+    "n_modal_peaks_45_260": 2,
+    "modal_peaks_hz": [
+      120.0,
+      240.1
+    ],
+    "kind": "impact"
+  },
+  "Test08 +Z impact (Card G)": {
+    "n_hits_used": 0,
+    "n_hits_skipped": 0,
+    "skipped": [],
+    "kind": "impact"
+  },
+  "_meta": {
+    "runtime_s": 3.7,
+    "n_daq": 111,
+    "band_hz": [
+      45.0,
+      260.0
+    ],
+    "proc": {
+      "N": 122880,
+      "force_ms": 2.0,
+      "exp_end": 0.05,
+      "pre_gap": 200
+    },
+    "fs_hz": 250000.0,
+    "note": "read-only data diagnostic; no sampler, no FEM"
+  }
+}

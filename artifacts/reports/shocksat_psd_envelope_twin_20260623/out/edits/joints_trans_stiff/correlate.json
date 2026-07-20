@@ -1,0 +1,12 @@
+{
+ "edit_id": "joints_trans_stiff",
+ "n_matched_modes": 29,
+ "global_MAC": 0.641,
+ "FRF_logmag_corr_median": 0.296,
+ "FRF_logmag_corr_mean": 0.238,
+ "FRF_corr_frac_above_0.5": 0.27,
+ "FRF_peak_ampl_err_dB_median": 15.6,
+ "n_channels": 84,
+ "n_refs": 4,
+ "runtime_s": 1101.6
+}

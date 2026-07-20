@@ -1,0 +1,472 @@
+{
+ "card": "EXACT-EVIDENCE COMPLETION for the full-spectrum FRF study (post-review items 1-3)",
+ "generated": "2026-07-16T18:14:14",
+ "supersedes": "the study's out/verdicts.json (NaN S1/S2, invalid F=R row; review C8, accepted D17)",
+ "finiteness_contract": "every asserted statistic in this file was checked finite BEFORE writing (_common.assert_finite raises on NaN/Inf/None); anything unavailable is an explanatory string, never a null. Checker G05 re-walks every leaf.",
+ "sampler_decision": {
+  "sampler_run": false,
+  "rationale": "This card completes deterministic held-out EVIDENCE for existing arms (per-fold MAP refits, exact eigenbases, held-out scoring). It makes no new posterior or uncertainty claim, so no sampler is required. NUTS/HMC remains the project default for Bayesian updating (AGENTS Sampler Rule). Every MAP number here is a deterministic optimizer result, NOT a posterior summary.",
+  "default_sampler_for_future_updating": "NUTS/HMC"
+ },
+ "nonconvergence_carried": {
+  "worst_rhat": 360.63,
+  "worst_ess": 2.0,
+  "source": "study out/nuts_diagnostics.json (arm B, m_zpos_990z; all 8 arm-B runs 29-360 R-hat, ESS ~2; arm C fold-1 R-hat 13.95, ESS 2.02)",
+  "meaning": "arms B and C are scored at a deterministic MAP because their NUTS posteriors are multimodal / non-converged. Their POSTERIOR UNCERTAINTY IS UNRESOLVED. Per the review's C2 correction the amplitude likelihood is locally stiff but globally unidentified; MAP scores are optimizer results only and are never trustworthy as intervals."
+ },
+ "armC_exact": {
+  "method": "deterministic multi-start (n=4) L-BFGS-B MAP of the shape field, refit INDEPENDENTLY per LODO fold on that fold's 3 TRAIN drives only, on the exact-at-theta_MAP basis A0_wide__enr; scored at theta=ones. NO SAMPLER.",
+  "sub200_fold_mean": 0.15950287253793027,
+  "b200_500_fold_mean": 0.03139201771212593,
+  "delta_vs_A1_exact_sub200": 0.04581822287372754,
+  "delta_se_sub200": 0.03609005646062344,
+  "per_fold_delta_sub200": [
+   0.013249929784590997,
+   -0.03426530040302034,
+   0.07205571282350187,
+   0.13223254928983763
+  ],
+  "S1_rule_met": false,
+  "leakage_audit": {
+   "per_fold_map_distinct": true,
+   "no_fold_trained_on_itself": true,
+   "train_keys_are_the_other_three": true
+  },
+  "replaces": "the study's WITHDRAWN leaky exact arm-C aggregate (0.1570), which applied fold m_xpos_990x's shape MAP to all 4 folds (review C6)",
+  "study_leaky_number_for_reference": 0.15696699007007647,
+  "defect_decomposition": {
+   "probe": "decomposition of the study's arm-C exact defect into leak vs basis mismatch",
+   "study_path_reproduced": 0.15696699007007608,
+   "study_reported": 0.15696699007007647,
+   "reproduction_diff": 3.885780586188048e-16,
+   "leak_only": 0.24167765196968966,
+   "honest": 0.15950287253793027,
+   "leak_effect": 0.08217477943175938,
+   "basis_mismatch_effect": -0.08471066189961357,
+   "net_error": -0.002535882467854189,
+   "study_map_fit_basis": "A0_wide (theta=1)",
+   "study_map_applied_to": "A0_wide__enr (theta_MAP)",
+   "reading": "the study's exact arm-C number carries TWO defects, not one. Review C6 caught the leak (+0.082). It did NOT catch that the shape-field raw coefficients were fit in the theta=1 eigenbasis and then applied to the theta_MAP eigenbasis -- different eigenvectors, so the coefficients were transplanted between incompatible coordinate systems (-0.085). The two errors nearly cancelled, which is why 0.157 looked plausible next to the honest 0.1595."
+  },
+  "finding": "the study's 0.1570 was RIGHT BY ACCIDENT. Its exact arm-C path carries TWO defects that nearly cancelled: (1) the leak review C6 caught (fold-1's MAP on all 4 folds) is worth +0.0822; (2) a basis mismatch the review did NOT catch -- the shape-field raw coefficients were fit in the A0_wide theta=1 eigenbasis (r=209, 18 modes, r0=106) and applied to the A0_wide__enr theta_MAP eigenbasis (r=194, 19 modes, r0=108), i.e. transplanted between incompatible coordinate systems -- is worth -0.0847. Net -0.0025 from the honest 0.1595. Near-agreement between a defective and a correct number is NOT evidence the defect is harmless. Separately, the study's sentence 'on the exact basis C's lead collapses' is WRONG as stated: A1 dropped on the exact basis too, so C's LEAD over A1 is essentially unchanged (+0.044 screening -> +0.046 exact). What fails S1 is PRECISION (per-fold deltas -0.034..+0.132), not collapse."
+ },
+ "S1": {
+  "status": "YELLOW",
+  "claim": "an eligible arm (B/C/D/F) beats A1 by >= +0.05 AND >= 2x paired-fold SE, sub-200 Hz",
+  "verdict": "NOT MET",
+  "best_arm": "D",
+  "best_delta_mean": 0.04967060570497424,
+  "best_delta_se": 0.017385612635812963,
+  "best_two_se": 0.034771225271625926,
+  "per_arm": {
+   "B": {
+    "delta_mean": 0.04042185089313294,
+    "delta_se": 0.022659325034923218,
+    "two_se": 0.045318650069846436,
+    "per_fold": [
+     0.030639357294515612,
+     -0.018087743243825227,
+     0.0870251360634573,
+     0.06211065345838407
+    ],
+    "meets_magnitude_bar": false,
+    "meets_precision_bar": false,
+    "S1_rule_met": false
+   },
+   "C": {
+    "delta_mean": 0.04581822287372754,
+    "delta_se": 0.03609005646062344,
+    "two_se": 0.07218011292124688,
+    "per_fold": [
+     0.013249929784590997,
+     -0.03426530040302034,
+     0.07205571282350187,
+     0.13223254928983763
+    ],
+    "meets_magnitude_bar": false,
+    "meets_precision_bar": false,
+    "S1_rule_met": false
+   },
+   "D": {
+    "delta_mean": 0.04967060570497424,
+    "delta_se": 0.017385612635812963,
+    "two_se": 0.034771225271625926,
+    "per_fold": [
+     0.018576139951275605,
+     0.02322820461304209,
+     0.09080436204007133,
+     0.06607371621550792
+    ],
+    "meets_magnitude_bar": false,
+    "meets_precision_bar": true,
+    "S1_rule_met": false
+   }
+  },
+  "note": "Best eligible arm D beats A1-exact by +0.0497, which clears 2x paired SE (0.0348) but MISSES the +0.05 magnitude bar by 0.0003. Unchanged in verdict from the repair; arm C's row is now the honest T1 refit rather than the withdrawn leaky one.",
+  "F_rule": "F = C (B does not beat A1; C beats A1; D does not beat C) \u2014 NOT best-arm, NOT R.",
+  "source": "isolated repair + T1 arm-C refits (this card)"
+ },
+ "S2": {
+  "status": "YELLOW",
+  "claim": "agent D beats equal-budget random R by >= 1x paired-fold SE, sub-200 Hz",
+  "screening_selected": {
+   "convention": "the study's: each track's SCREENING (theta=1 basis) winner, exact-scored",
+   "agent_cid": "wa2_brackets_soft",
+   "random_cid": "wr2_rnd001",
+   "delta_mean": -0.0017163325542214093,
+   "delta_se": 0.009378537692906402,
+   "per_fold": [
+    -0.008551826127966677,
+    0.026134161005439915,
+    -0.014703202927913009,
+    -0.009744462166445866
+   ],
+   "verdict": "NOT MET",
+   "repair_reference": -0.0017163324443401767,
+   "reproduces_repair": true
+  },
+  "exact_selected": {
+   "convention": "winner's-curse-honest: each track's BEST EXACT candidate (select and report on the same trustworthy metric)",
+   "agent_cid": "wa2_tbox_xbeam",
+   "random_cid": "wr2_rnd001",
+   "delta_mean": 0.011462348025379022,
+   "delta_se": 0.015845045948801102,
+   "per_fold": [
+    -0.007156521698772511,
+    0.05582354910339399,
+    0.012135064561099002,
+    -0.014952699864204388
+   ],
+   "verdict": "NOT MET",
+   "caveat": "a per-track maximum over 14 noisy candidates carries selection noise in BOTH arms; a sub-SE gap is not a win for either track"
+  },
+  "coverage": "28/28 loop candidates exact-scored (0 excluded-with-reason) \u2014 the study exact-scored only 2/28 (review C1)",
+  "rank_agreement": {
+   "agent": {
+    "n": 14,
+    "spearman_screening_vs_exact": 0.5252747252747253,
+    "top3_screening": [
+     "wa2_brackets_soft",
+     "wa2_bbox_zsplit_tbox",
+     "wa1_tbox_soft"
+    ],
+    "top3_exact": [
+     "wa2_tbox_xbeam",
+     "wa3_brackets_tbox",
+     "wa2_bbox_zsplit_tbox"
+    ],
+    "top1_agrees": false,
+    "mean_screening_sub200": 0.16261807038938803,
+    "mean_exact_sub200": 0.15737758862818146,
+    "mean_inflation_screening_minus_exact": 0.0052404817612065595
+   },
+   "random": {
+    "n": 14,
+    "spearman_screening_vs_exact": 0.6351648351648351,
+    "top3_screening": [
+     "wr2_rnd001",
+     "wr1_rnd004",
+     "wr1_rnd005"
+    ],
+    "top3_exact": [
+     "wr2_rnd001",
+     "wr1_rnd004",
+     "wr1_rnd000"
+    ],
+    "top1_agrees": true,
+    "mean_screening_sub200": 0.14719430647627021,
+    "mean_exact_sub200": 0.1386203300075163,
+    "mean_inflation_screening_minus_exact": 0.008573976468753918
+   }
+  },
+  "scope_limitation_D16": "all 14 agent candidates were thickness/scale/split edits; the agent proposed ZERO genuine model-form (mesh/connectivity) changes. Any H2 reading is 'within a mostly-parametric edit space', NOT 'agent-proposed geometry/mesh/connectivity edits failed'.",
+  "source": "T2 exact re-rank (this card)"
+ },
+ "S3": {
+  "status": "CANNOT-VERIFY",
+  "claim": "narrows net-CG shear while keeping >= 0.95 coverage",
+  "verdict": "CANNOT-VERIFY (from THIS card's evidence, which is none) \u2014 SEE superseded_by_card_B",
+  "reason": "The wide-package net-CG QOI reimplementation does not reproduce the DELIVERED twin's calibrated bands (8.2x/3.66x/5.12x vs delivered 1.51x/2.30x/2.53x) \u2014 a marginal-calibration difference in the reimplemented statFEM F(k), not a demonstrated widening. Per review C5, 'unassessable' is NOT 'falsified' and NOT 'not-met': the required QOI result is ABSENT. Resolution requires A1 to reproduce 1.51/2.30/2.53 before any arm change is evaluated.",
+  "not_attempted_here": "this card does not touch net-CG; no S3 evidence is produced or implied",
+  "superseded_by_card_B": {
+   "workspace": "artifacts/reports/shocksat_netcg_validated_port_20260716/",
+   "card_B_checker": "GREEN 10G/0Y/0R (INTEGRITY only \u2014 its checker has no gate propagating the science verdicts into OVERALL; its own D7 discloses this)",
+   "N0_reference_reproduction": "GREEN \u2014 driving the ORIGINAL netcg_qoi.py + reduced model + REUSED L5 NUTS draws reproduces the delivered twin EXACTLY (1.508/2.301/2.526, max |err| 0.0000, tol 0.05). The reproduction review C5 required is DONE.",
+   "status_of_this_field": "STALE BY SCOPE: my S3/S4 status is 'CANNOT-VERIFY' because THIS card produced no net-CG evidence and my checker was locked before Card B landed. Card B's verdict below is the current one.",
+   "card_B_S3_status": "YELLOW",
+   "card_B_S3_reading": "CANNOT-VERIFY-through-this-mapping: the three mapping variants DISAGREE on the pre-registered S3 rule, so the verdict is an artifact of the mapping choice (D4).",
+   "card_B_S3_numbers": {
+    "n_finalists": 3,
+    "n_variants": 3,
+    "best_relative_width": 0.804,
+    "best_finalist": "D",
+    "best_variant": "cluster_amp",
+    "best_axis": "shear_X",
+    "best_width": 1.213,
+    "best_delivered": 1.508,
+    "best_heldout_min_coverage": 1.0,
+    "coverage_threshold": 0.95,
+    "n_rows_meeting_rule": 5
+   },
+   "plain_english": "Card B REPRODUCED the delivered reference exactly, so S3 is assessable now. But its three mapping variants DISAGREE on the pre-registered S3 rule, so S3 remains CANNOT-VERIFY-THROUGH-THIS-MAPPING \u2014 the verdict would be an artifact of the mapping choice, not a fact about the arms."
+  },
+  "reimplementation_numbers_for_reference": {
+   "shear_x_width_ratio": 8.225,
+   "shear_y_width_ratio": 3.66,
+   "delivered_x": 1.51,
+   "delivered_y": 2.3,
+   "caveat": "the STUDY's reimplementation failed its reference reproduction; these are NOT a result. Card B's validated port supersedes them."
+  }
+ },
+ "S4": {
+  "status": "CANNOT-VERIFY",
+  "claim": "normal band narrows >= 25% (2.53 -> 1.90) while covering",
+  "verdict": "CANNOT-VERIFY (from THIS card's evidence, which is none) \u2014 SUPERSEDED: Card B falsifies S4. SEE superseded_by_card_B",
+  "reason": "The wide-package net-CG QOI reimplementation does not reproduce the DELIVERED twin's calibrated bands (8.2x/3.66x/5.12x vs delivered 1.51x/2.30x/2.53x) \u2014 a marginal-calibration difference in the reimplemented statFEM F(k), not a demonstrated widening. Per review C5, 'unassessable' is NOT 'falsified' and NOT 'not-met': the required QOI result is ABSENT. Resolution requires A1 to reproduce 1.51/2.30/2.53 before any arm change is evaluated.",
+  "not_attempted_here": "this card does not touch net-CG; no S4 evidence is produced or implied",
+  "superseded_by_card_B": {
+   "workspace": "artifacts/reports/shocksat_netcg_validated_port_20260716/",
+   "card_B_checker": "GREEN 10G/0Y/0R (INTEGRITY only \u2014 its checker has no gate propagating the science verdicts into OVERALL; its own D7 discloses this)",
+   "N0_reference_reproduction": "GREEN \u2014 driving the ORIGINAL netcg_qoi.py + reduced model + REUSED L5 NUTS draws reproduces the delivered twin EXACTLY (1.508/2.301/2.526, max |err| 0.0000, tol 0.05). The reproduction review C5 required is DONE.",
+   "status_of_this_field": "STALE BY SCOPE: my S3/S4 status is 'CANNOT-VERIFY' because THIS card produced no net-CG evidence and my checker was locked before Card B landed. Card B's verdict below is the current one.",
+   "card_B_S4_status": "YELLOW",
+   "card_B_S4_met": false,
+   "card_B_S4_numbers": {
+    "normal_Z_tier_updated_width": 2.958,
+    "normal_Z_tier_updated_coverage": 0.989,
+    "normal_Z_delivered_width": 2.526,
+    "normal_Z_width_change": 0.432,
+    "width_threshold": 1.9,
+    "coverage_threshold": 0.95,
+    "mc_2sd_noise_floor": 0.091,
+    "width_change_exceeds_mc_noise": true,
+    "observed_cluster_sd_ln_amp": 1.393,
+    "assumed_unmeasured_tier_sd_a": 0.8,
+    "widen_audit_hide_top3": 1.04
+   },
+   "plain_english": "S4 IS NOW FALSIFIED, not unresolved. On Card B's validated port the normal-Z band WIDENS to 2.958x vs the delivered 2.526x (the rule needed <= 1.9x), coverage 0.989, and the change exceeds the MC noise floor (0.091). My 'CANNOT-VERIFY' above is a SCOPE artifact of a checker locked before Card B landed (decisions_log D3) \u2014 do not read it as current."
+  },
+  "reimplementation_numbers_for_reference": {
+   "normal_z_width_ratio": 5.117,
+   "delivered": 2.53,
+   "caveat": "the STUDY's reimplementation failed its reference reproduction; these are NOT a result. Card B's validated port supersedes them."
+  }
+ },
+ "S5": {
+  "status": "YELLOW",
+  "claim": "amplitude-inclusive selection Spearman >= 0.5 vs held-out ranking",
+  "verdict": "NOT MET",
+  "spearman_at_declared_prior_sigma_0.25": -0.3,
+  "prior_width_fragility": {
+   "sigma_0.25_declared": -0.3,
+   "sigma_0.15": "null in the repair's collector; the review recomputed a FINITE-ONLY Spearman of +0.139",
+   "sigma_0.40": "null in the repair's collector; the review recomputed a FINITE-ONLY Spearman of +0.367",
+   "reading": "S5 is FRAGILE across prior widths: -0.3 at the declared sigma=0.25 but +0.139 / +0.367 (finite-only) at 0.15 / 0.40. The pre-registered rand10 candidate is ABSENT. The 'selection score does not track held-out skill' conclusion holds at the declared width but must not be stated as width-independent.",
+   "source": "review out/claim_audit.json + repair verdicts.json"
+  },
+  "source": "isolated repair (carried, not recomputed here)"
+ },
+ "arms_bands_table": {
+  "A0": {
+   "sub200": {
+    "mean": 0.11157480586507082,
+    "fold_se": 0.17518433483609516,
+    "folds": {
+     "m_xpos_990x": 0.29657098432112894,
+     "m_zpos_990z": 0.48517575383342776,
+     "m_ypos_990y": -0.029055114762423957,
+     "m_zpos_900z": -0.3063923999318494
+    },
+    "screening": 0.1308132274174828,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b200_500": {
+    "mean": 0.05008684661427574,
+    "fold_se": 0.026605721398984965,
+    "folds": {
+     "m_xpos_990x": 0.0560670881438077,
+     "m_zpos_990z": -0.026324452250874302,
+     "m_ypos_990y": 0.09365869421470997,
+     "m_zpos_900z": 0.07694605634945959
+    },
+    "screening": 0.07422469972410808,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible to 639 Hz (cross-validated); the 1.25x modal-truncation rule caps scorable frequency at 511 Hz -> the 500-1000 Hz band is FEM/compute-limited, NOT data-limited (data certified >1 kHz). Study D11."
+   },
+   "scoring": "deterministic exact-basis score"
+  },
+  "A1": {
+   "sub200": {
+    "mean": 0.11368464966420273,
+    "fold_se": 0.1758038000609491,
+    "folds": {
+     "m_xpos_990x": 0.27383077524106014,
+     "m_zpos_990z": 0.4981758785260245,
+     "m_ypos_990y": -0.0019679768987999383,
+     "m_zpos_900z": -0.3153000782114738
+    },
+    "screening": 0.14536268399461483,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b200_500": {
+    "mean": 0.033476029911270806,
+    "fold_se": 0.028660241232295627,
+    "folds": {
+     "m_xpos_990x": 0.05627857845439767,
+     "m_zpos_990z": -0.047006571666087425,
+     "m_ypos_990y": 0.037861879952953634,
+     "m_zpos_900z": 0.08677023290381934
+    },
+    "screening": 0.05815259893628143,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible to 639 Hz (cross-validated); the 1.25x modal-truncation rule caps scorable frequency at 511 Hz -> the 500-1000 Hz band is FEM/compute-limited, NOT data-limited (data certified >1 kHz). Study D11."
+   },
+   "scoring": "deterministic exact-basis score"
+  },
+  "B": {
+   "sub200": {
+    "mean": 0.15410650055733566,
+    "fold_se": 0.1579902503112192,
+    "folds": {
+     "m_xpos_990x": 0.30447013253557575,
+     "m_zpos_990z": 0.4800881352821993,
+     "m_ypos_990y": 0.08505715916465736,
+     "m_zpos_900z": -0.25318942475308975
+    },
+    "screening": 0.14199298776685407,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b200_500": {
+    "mean": 0.1974333573951441,
+    "fold_se": 0.030016918853107595,
+    "folds": {
+     "m_xpos_990x": 0.14421847931605206,
+     "m_zpos_990z": 0.24973664628183972,
+     "m_ypos_990y": 0.1466821591366406,
+     "m_zpos_900z": 0.24909614484604395
+    },
+    "screening": 0.1678859759951733,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible to 639 Hz (cross-validated); the 1.25x modal-truncation rule caps scorable frequency at 511 Hz -> the 500-1000 Hz band is FEM/compute-limited, NOT data-limited (data certified >1 kHz). Study D11."
+   },
+   "scoring": "deterministic MAP point estimate (NON-converged posterior)"
+  },
+  "C": {
+   "sub200": {
+    "mean": 0.15950287253793027,
+    "fold_se": 0.13972881508287308,
+    "folds": {
+     "m_xpos_990x": 0.28708070502565114,
+     "m_zpos_990z": 0.4639105781230042,
+     "m_ypos_990y": 0.07008773592470194,
+     "m_zpos_900z": -0.1830675289216362
+    },
+    "screening": 0.1893399394253291,
+    "provenance": "THIS CARD (T1): 4 per-fold shape-MAP refits on the exact basis A0_wide__enr, each fit on that fold's 3 TRAIN drives only (multi-start 4, deterministic L-BFGS-B). Replaces the study's WITHDRAWN leaky row (one fold's MAP applied to all 4 folds; review C6)."
+   },
+   "b200_500": {
+    "mean": 0.03139201771212593,
+    "fold_se": 0.020693581759264258,
+    "folds": {
+     "m_xpos_990x": 0.07142287312953792,
+     "m_zpos_990z": -0.017417991448202833,
+     "m_ypos_990y": 0.05939587799877869,
+     "m_zpos_900z": 0.012167311168389936
+    },
+    "screening": 0.057896106604326064,
+    "provenance": "THIS CARD (T1): 4 per-fold shape-MAP refits on the exact basis A0_wide__enr, each fit on that fold's 3 TRAIN drives only (multi-start 4, deterministic L-BFGS-B). Replaces the study's WITHDRAWN leaky row (one fold's MAP applied to all 4 folds; review C6)."
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible to 639 Hz (cross-validated); the 1.25x modal-truncation rule caps scorable frequency at 511 Hz -> the 500-1000 Hz band is FEM/compute-limited, NOT data-limited (data certified >1 kHz). Study D11."
+   },
+   "scoring": "deterministic MAP point estimate (NON-converged posterior)"
+  },
+  "D": {
+   "sub200": {
+    "mean": 0.16335525536917697,
+    "fold_se": 0.1634599713941676,
+    "folds": {
+     "m_xpos_990x": 0.29240691519233575,
+     "m_zpos_990z": 0.5214040831390666,
+     "m_ypos_990y": 0.0888363851412714,
+     "m_zpos_900z": -0.2492263619959659
+    },
+    "screening": 0.17940546316783876,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b200_500": {
+    "mean": 0.18817907632011832,
+    "fold_se": 0.024624715545250062,
+    "folds": {
+     "m_xpos_990x": 0.13372117950607987,
+     "m_zpos_990z": 0.18037781413045662,
+     "m_ypos_990y": 0.18530942251348442,
+     "m_zpos_900z": 0.2533078891304523
+    },
+    "screening": 0.18819583941709886,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible to 639 Hz (cross-validated); the 1.25x modal-truncation rule caps scorable frequency at 511 Hz -> the 500-1000 Hz band is FEM/compute-limited, NOT data-limited (data certified >1 kHz). Study D11."
+   },
+   "scoring": "deterministic exact-basis score"
+  },
+  "R": {
+   "sub200": {
+    "mean": 0.16507158781351716,
+    "fold_se": 0.1567763719835886,
+    "folds": {
+     "m_xpos_990x": 0.3009587411818616,
+     "m_zpos_990z": 0.4952699221008189,
+     "m_ypos_990y": 0.10353958771590052,
+     "m_zpos_900z": -0.23948189974451245
+    },
+    "screening": 0.1656518292277053,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b200_500": {
+    "mean": 0.18879270837839002,
+    "fold_se": 0.02797192025543247,
+    "folds": {
+     "m_xpos_990x": 0.1703677114623563,
+     "m_zpos_990z": 0.14698774075771126,
+     "m_ypos_990y": 0.1665236294728233,
+     "m_zpos_900z": 0.2712917518206692
+    },
+    "screening": 0.18444249318132355,
+    "provenance": "isolated repair, from the study's exact_freeze_scores.json"
+   },
+   "b500_ceiling": {
+    "status": "not_certified",
+    "reason": "FEM basis credible to 639 Hz (cross-validated); the 1.25x modal-truncation rule caps scorable frequency at 511 Hz -> the 500-1000 Hz band is FEM/compute-limited, NOT data-limited (data certified >1 kHz). Study D11."
+   },
+   "scoring": "deterministic exact-basis score"
+  },
+  "F": {
+   "identity": "C",
+   "rule": "pre_registered_sequential_B_then_C_then_D",
+   "decision": "B does not beat A1; C beats A1; D does not beat C; therefore F=C",
+   "sub200_mean": 0.15950287253793027,
+   "b200_500_mean": 0.03139201771212593,
+   "note": "F duplicates C by construction, now with C's honest T1 numbers. The study collector's F = R (the random control) row was INVALID (review C8) and is gone."
+  }
+ },
+ "what_this_card_did_not_do": [
+  "no sampler run -> no posterior/uncertainty claim for any arm",
+  "no vault (+XY) read -> dev drives only",
+  "no net-CG work -> S3/S4 remain CANNOT-VERIFY (Card B)",
+  "no re-litigation of the accepted D17 corrections; the repair's S1/S5 are carried, not recomputed",
+  "theta_MAPs reused verbatim, never re-optimized -> no candidate was re-tuned by this card"
+ ]
+}

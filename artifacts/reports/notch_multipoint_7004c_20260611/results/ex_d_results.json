@@ -1,0 +1,66 @@
+{
+ "ex_offset_m": 0.03,
+ "test_modes_hz": [
+  93.10179488308198,
+  94.06508812754808,
+  132.25788962358024
+ ],
+ "C2_semi_empirical": 3.7239371672858503,
+ "C2_implied_by_flight": 0.8709359791070453,
+ "mass_ratio_used": 0.5555555555555555,
+ "Q2_used": 25.0,
+ "fb_hz": 132.25788962358024,
+ "newton_netF_relerr": 4.18360722028166e-15,
+ "newton_My_relerr": 1.50262978770464e-14,
+ "rigid_lowf_netF_per_ab": 6.191690665312072,
+ "M0": 6.0,
+ "limited_respects_limit": {
+  "ii_net": 1.0000000000000002,
+  "iii_my": 1.0000000000000002
+ },
+ "overtest_table": {
+  "pitch(z-thy lower)@94.1Hz": {
+   "i_unlimited": {
+    "foot_worst": 2107.090593366224,
+    "netF": 144.74846266213694,
+    "My": 110.83365584914135
+   },
+   "ii_netF": {
+    "foot_worst": 220.78077178961146,
+    "netF": 6.279589724202462,
+    "My": 16.89785795610002
+   },
+   "iii_netF_plus_My": {
+    "foot_worst": 32.28678053034719,
+    "netF": 4.378060896852181,
+    "My": 1.0000000000000002
+   }
+  },
+  "bounce(z-thy upper)@132.3Hz": {
+   "i_unlimited": {
+    "foot_worst": 204.37101030911634,
+    "netF": 355.34302093989413,
+    "My": 169.492176108781
+   },
+   "ii_netF": {
+    "foot_worst": 5.224105691420922,
+    "netF": 5.132330373173547,
+    "My": 9.339907526946815
+   },
+   "iii_netF_plus_My": {
+    "foot_worst": 4.193667276658613,
+    "netF": 5.132330373173547,
+    "My": 5.918390772345443
+   }
+  }
+ },
+ "thx_undertest": {
+  "flight_peak_acc_thx": 16.732363993326082,
+  "flight_peak_freq": 52.71420927121363,
+  "test_acc_thx_max": 1.3604202761609185e-13,
+  "statement": "uniform vertical shaker drive with e_y=0 excites thx exactly zero; flight thx response peaks near 93 Hz -> a channel no force/moment limit can restore (needs multi-point/multi-axis excitation)"
+ },
+ "labels": {
+  "flight": "HYPOTHETICAL coupled plate simulation (not flight data)"
+ }
+}

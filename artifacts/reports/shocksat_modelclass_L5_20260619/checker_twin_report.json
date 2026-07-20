@@ -1,0 +1,88 @@
+{
+  "task": "calibrated ShockSat twin \u2014 tightening/value program (damping, shape/topology, value)",
+  "overall": "YELLOW",
+  "counts": {
+    "green": 13,
+    "yellow": 2,
+    "red": 0
+  },
+  "gates": [
+    {
+      "gate": "integrity.self",
+      "status": "GREEN",
+      "msg": "check_twin unchanged"
+    },
+    {
+      "gate": "integrity.reused",
+      "status": "GREEN",
+      "msg": "reused code unchanged"
+    },
+    {
+      "gate": "integrity.copy_vs_cardA",
+      "status": "GREEN",
+      "msg": "byte-identical to Card A"
+    },
+    {
+      "gate": "value.frequency",
+      "status": "GREEN",
+      "msg": "freq CRPS-skill vs climatology +0.93; updating 2.10%->1.07%"
+    },
+    {
+      "gate": "value.amplitude",
+      "status": "YELLOW",
+      "msg": "non-hard amplitude CRPS-skill vs climatology mean -1.00 over 3 splits (documented no-skill limitation)"
+    },
+    {
+      "gate": "gaps.damping_topology",
+      "status": "YELLOW",
+      "msg": "RUN: band -1.02, fitted-damping(\u03b6\u00d72) -0.60, joint-released -0.66 \u2014 all \u22640 (no amplitude value)"
+    },
+    {
+      "gate": "damping.feasibility",
+      "status": "GREEN",
+      "msg": "interface-CBUSH damping identifiability gate present"
+    },
+    {
+      "gate": "shape.pattern",
+      "status": "GREEN",
+      "msg": "shape-pattern test present (FEM & measured shapes ~equal, ~0.15)"
+    },
+    {
+      "gate": "hardregion.overfit",
+      "status": "GREEN",
+      "msg": "hard-region over-fit diagnostic present"
+    },
+    {
+      "gate": "stage1.evidence",
+      "status": "GREEN",
+      "msg": "Card F Stage-1 evidence present (paused thread baseline)"
+    },
+    {
+      "gate": "fig.fig_value_summary.png",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "fig.fig_hardregion.png",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "fig.image_qa",
+      "status": "GREEN",
+      "msg": "image-QA pass"
+    },
+    {
+      "gate": "packet",
+      "status": "GREEN",
+      "msg": "packet.md present"
+    },
+    {
+      "gate": "runtime",
+      "status": "GREEN",
+      "msg": "runtime.json present"
+    }
+  ],
+  "headline": "Twin value: FREQUENCY positive (skill>0, calibration halves freq err); per-channel single-impact AMPLITUDE no skill vs climatology (documented limitation, not a failure).",
+  "check_twin_sha256": "6d25f73024a8b4a982528e6de6ca5ed358ab5783f06914586c99516f48a3fe51"
+}

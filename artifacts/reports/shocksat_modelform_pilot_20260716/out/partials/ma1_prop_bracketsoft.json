@@ -1,0 +1,52 @@
+{
+ "cid": "ma1_prop_bracketsoft",
+ "track": "agent",
+ "round": 1,
+ "cls": "property_control",
+ "ops": [
+  "thickness"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.1633535754635581,
+ "exact_b200_500": 0.18817820745062436,
+ "exact_folds": {
+  "m_xpos_990x": 0.2924062339044641,
+  "m_zpos_990z": 0.521402961965438,
+  "m_ypos_990y": 0.08883736378794352,
+  "m_zpos_900z": -0.24923225780361313
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.13372025618180403,
+  "m_zpos_990z": 0.18038194657992176,
+  "m_ypos_990y": 0.18530516683834755,
+  "m_zpos_900z": 0.25330546020242406
+ },
+ "theta_map": [
+  1.0436240444401834,
+  0.9999852170033897,
+  1.005608386713237,
+  1.0846161379905148,
+  0.9560280101307655,
+  1.4510340682231035,
+  1.0190727261581443,
+  1.1508766214849955,
+  1.047513234401219,
+  0.826841806000522
+ ],
+ "enriched_pkg": "ma1_prop_bracketsoft__xenr",
+ "spot_max_pct": 6.662286278213969e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": -0.0688,
+  "max_mode_shift_pct": 3.0141,
+  "pass": true
+ },
+ "solve_s_theta1": 394.0,
+ "solve_s_enrich": 459.1,
+ "wall_s": 884.7,
+ "ts": "2026-07-16T22:14:22",
+ "diagnosis_link": "CONTROL: verbatim replay of the study's screening winner wa2_brackets_soft (exact 0.1634)"
+}

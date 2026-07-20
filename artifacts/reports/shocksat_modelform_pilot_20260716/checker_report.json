@@ -1,0 +1,92 @@
+{
+ "overall": "GREEN",
+ "gates": [
+  {
+   "name": "G01 finiteness of every reported statistic",
+   "status": "GREEN",
+   "messages": [
+    "every reported statistic finite (verdicts, results table, complexity, query log)"
+   ]
+  },
+  {
+   "name": "G02 stratification quota + class attribution",
+   "status": "GREEN",
+   "messages": [
+    "quota met: 2/class x 5 classes x 3 rounds x 2 tracks = 60 scored"
+   ]
+  },
+  {
+   "name": "G03 exact-basis scoring + mech gates + reproduction",
+   "status": "GREEN",
+   "messages": [
+    "all 60 scored records exact-basis (self-consistency <= 0.01%), mech gates passed, enriched packages on disk, pipeline reproduction within 0.01 of the Card-A number"
+   ]
+  },
+  {
+   "name": "G04 V-gates precede scored use",
+   "status": "GREEN",
+   "messages": [
+    "formulation: V-gate PASS at 2026-07-16T19:16:03, first scored use 2026-07-16T20:45:24",
+    "joint_offset: V-gate PASS at 2026-07-16T19:41:11, first scored use 2026-07-16T21:16:36",
+    "rbe3_convert: V-gate PASS at 2026-07-16T19:27:33, first scored use 2026-07-16T20:29:51",
+    "warp_panel: V-gate PASS at 2026-07-16T19:37:45, first scored use 2026-07-16T21:31:36"
+   ]
+  },
+  {
+   "name": "G05 finalist fold-provenance (no cross-fold reuse)",
+   "status": "GREEN",
+   "messages": [
+    "4 finalists = top-2/track; per-fold refits with clean fold provenance (no cross-fold reuse of fitted objects)"
+   ]
+  },
+  {
+   "name": "G06 budgets + seeds",
+   "status": "GREEN",
+   "messages": [
+    "budgets ok: agent 30/80, random 30/80; seeds recorded"
+   ]
+  },
+  {
+   "name": "G07 leakage + no vault",
+   "status": "GREEN",
+   "messages": [
+    "no vault reads (guard 0 opens; key absent from all logs); no score_vault path"
+   ]
+  },
+  {
+   "name": "G08 complexity table + penalty rule",
+   "status": "GREEN",
+   "messages": [
+    "complexity complete for 60 candidates; not-worth-it rule verified (0 labeled)"
+   ]
+  },
+  {
+   "name": "G09 figures scripted/linted/QA'd",
+   "status": "GREEN",
+   "messages": [
+    "6 figures, all scripted + linted + QA-passed"
+   ]
+  },
+  {
+   "name": "G10 runtime accounting",
+   "status": "GREEN",
+   "messages": [
+    "active 58.87 h <= wallclock 58.87 h; 145 eigensolves logged"
+   ]
+  },
+  {
+   "name": "G11 checker self-SHA",
+   "status": "GREEN",
+   "messages": [
+    "checker sha verified c26489ae771e"
+   ]
+  },
+  {
+   "name": "G12 verdict consistency (recomputed)",
+   "status": "GREEN",
+   "messages": [
+    "verdicts recomputed from query log + pinned A1 folds: all values and met flags consistent; round summaries present"
+   ]
+  }
+ ]
+}

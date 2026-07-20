@@ -1,0 +1,261 @@
+{
+  "generated_utc": "2026-06-12T21:10:53.105184+00:00",
+  "result_status": "YELLOW",
+  "mpl": {
+    "decay_screens": [
+      {
+        "label": "MPL solo ruler pull",
+        "file": "MPL test stand/FEM/test_data/solo beam 12 inch span.csv",
+        "sample_rate_hz": 10000.000000023307,
+        "window_s": [
+          5.8,
+          21.0
+        ],
+        "bandpass_hz": [
+          2.2,
+          4.5
+        ],
+        "fits_by_amplitude": {
+          "high": {
+            "t0_s": 6.9696,
+            "t1_s": 16.9062,
+            "mean_envelope_ms2": 14.167818781227831,
+            "freq_hz": 3.192743757988883,
+            "zeta": 0.003491344626476462,
+            "zeta_percent": 0.3491344626476462,
+            "logenv_r2": 0.9970452789277846
+          },
+          "mid": {
+            "t0_s": 16.9063,
+            "t1_s": 20.5688,
+            "mean_envelope_ms2": 9.0208289929653,
+            "freq_hz": 3.1953551698514002,
+            "zeta": 0.0033714592633737337,
+            "zeta_percent": 0.3371459263373734,
+            "logenv_r2": 0.4467502506455594
+          }
+        },
+        "harmonic_ratios": {
+          "early": {
+            "t0_s": 5.8,
+            "t1_s": 11.12,
+            "fundamental_power": 133.4707605376039,
+            "harmonic_2_4_power": 0.008331168241414453,
+            "harmonic_to_fundamental": 6.241942585670095e-05
+          },
+          "late": {
+            "t0_s": 15.68,
+            "t1_s": 21.0,
+            "fundamental_power": 35.62359957252235,
+            "harmonic_2_4_power": 0.0004644295908527736,
+            "harmonic_to_fundamental": 1.303713258698886e-05
+          }
+        },
+        "harmonic_change_early_over_late": 4.787818597395867
+      },
+      {
+        "label": "MPL solo ruler repeat",
+        "file": "MPL test stand/FEM/test_data/solo beam 12 inch span (repeatability).csv",
+        "sample_rate_hz": 10000.000000023307,
+        "window_s": [
+          6.5,
+          14.0
+        ],
+        "bandpass_hz": [
+          2.2,
+          4.5
+        ],
+        "fits_by_amplitude": {
+          "high": {
+            "t0_s": 8.3982,
+            "t1_s": 13.5307,
+            "mean_envelope_ms2": 8.353627897484614,
+            "freq_hz": 3.1946418126090457,
+            "zeta": 0.0025464444728257665,
+            "zeta_percent": 0.2546444472825766,
+            "logenv_r2": 0.7039938986179063
+          }
+        },
+        "harmonic_ratios": {
+          "early": {
+            "t0_s": 6.5,
+            "t1_s": 9.125,
+            "fundamental_power": 22.241350881498615,
+            "harmonic_2_4_power": 0.0072153780096687456,
+            "harmonic_to_fundamental": 0.000324412759283917
+          },
+          "late": {
+            "t0_s": 11.375,
+            "t1_s": 14.0,
+            "fundamental_power": 14.030410499261519,
+            "harmonic_2_4_power": 0.00013009240887151556,
+            "harmonic_to_fundamental": 9.272174101988169e-06
+          }
+        },
+        "harmonic_change_early_over_late": 34.987776945900464
+      },
+      {
+        "label": "MPL coupled ruler on shield",
+        "file": "MPL test stand/FEM/test_data/center beam pull.csv",
+        "sample_rate_hz": 10000.000000023307,
+        "window_s": [
+          4.0,
+          36.5
+        ],
+        "bandpass_hz": [
+          1.8,
+          4.2
+        ],
+        "fits_by_amplitude": {
+          "high": {
+            "t0_s": 5.5472,
+            "t1_s": 17.7664,
+            "mean_envelope_ms2": 7.007273864393365,
+            "freq_hz": 3.0721422989201668,
+            "zeta": 0.0028952757487509576,
+            "zeta_percent": 0.2895275748750958,
+            "logenv_r2": 0.9994741589940004
+          },
+          "mid": {
+            "t0_s": 17.7665,
+            "t1_s": 33.0664,
+            "mean_envelope_ms2": 3.394565683313661,
+            "freq_hz": 3.0767121243758937,
+            "zeta": 0.0027303802336860966,
+            "zeta_percent": 0.27303802336860966,
+            "logenv_r2": 0.9997801456042408
+          },
+          "low": {
+            "t0_s": 33.0665,
+            "t1_s": 36.147,
+            "mean_envelope_ms2": 2.022877450003472,
+            "freq_hz": 3.0764391241803533,
+            "zeta": 0.003569225663268106,
+            "zeta_percent": 0.3569225663268106,
+            "logenv_r2": 0.24248777598137913
+          }
+        },
+        "harmonic_ratios": {
+          "early": {
+            "t0_s": 4.0,
+            "t1_s": 15.375,
+            "fundamental_power": 32.793691411057,
+            "harmonic_2_4_power": 0.005550155722882799,
+            "harmonic_to_fundamental": 0.00016924461639019576
+          },
+          "late": {
+            "t0_s": 25.125,
+            "t1_s": 36.5,
+            "fundamental_power": 3.4132390008012194,
+            "harmonic_2_4_power": 5.1560084862182414e-05,
+            "harmonic_to_fundamental": 1.5105911086237812e-05
+          }
+        },
+        "high_vs_low": {
+          "freq_shift_percent_high_minus_low": -0.13966878871140603,
+          "zeta_ratio_high_over_low": 0.8111775555541488,
+          "zeta_delta_percentage_points": -0.06739499145171479
+        },
+        "harmonic_change_early_over_late": 11.203866845501658
+      }
+    ],
+    "status": "YELLOW",
+    "signs_present": true,
+    "flagged_cases": [
+      "MPL coupled ruler on shield amplitude-correlated harmonics",
+      "MPL solo ruler repeat amplitude-correlated harmonics"
+    ],
+    "interpretation": "MPL shows weak-to-moderate response-only signs of amplitude-dependent/nonlinear behavior in the ruler pull-release records: small harmonic content is consistently larger in the high-amplitude part of the decay, while damping/frequency shifts are modest. This is not yet a calibrated hysteresis loop because no force/displacement loop was measured."
+  },
+  "shocksat": {
+    "hit_count_loaded": 4,
+    "force_peak_lbf": [
+      1.328770289431798,
+      0.7969924537034412,
+      0.7484646680302295,
+      0.717667558187344
+    ],
+    "force_peak_ratio_max_min": 1.8515122695359854,
+    "channels": {
+      "ch1": {
+        "median_coherence_by_hit": [
+          0.05602812149143011,
+          0.0562346155949607,
+          0.056496449422773314,
+          0.05822902636058157
+        ],
+        "median_coherence_over_hits": 0.05636553250886701,
+        "median_abs_h1_g_per_lbf_by_hit": [
+          5.182658982510273,
+          3.9699666967316576,
+          5.818847736049083,
+          3.6585634981520676
+        ],
+        "pearson_force_peak_vs_median_abs_h1": 0.34304473152388093
+      },
+      "ch50": {
+        "median_coherence_by_hit": [
+          0.05483148579925565,
+          0.05151614046768415,
+          0.054236471667963845,
+          0.05693691030388144
+        ],
+        "median_coherence_over_hits": 0.054533978733609746,
+        "median_abs_h1_g_per_lbf_by_hit": [
+          3.4233103904587896,
+          3.007579992502684,
+          4.265186797804908,
+          2.73867242547871
+        ],
+        "pearson_force_peak_vs_median_abs_h1": 0.06841970259431951
+      },
+      "ch87": {
+        "median_coherence_by_hit": [
+          0.055369226040099126,
+          0.05144949671208975,
+          0.0570460815914477,
+          0.05636800358934377
+        ],
+        "median_coherence_over_hits": 0.05586861481472145,
+        "median_abs_h1_g_per_lbf_by_hit": [
+          1.2161043948148678,
+          0.969488102136807,
+          1.457170522880547,
+          1.0268729674876607
+        ],
+        "pearson_force_peak_vs_median_abs_h1": 0.120443577220069
+      }
+    },
+    "comparison_status": "not_directly_overlayable_currently",
+    "blockers": [
+      "Test07 shock response channels map to 9900001-style FEM grids; NASA SOL 111 PCH response points are modal-test grids such as 1101/2101/11101.",
+      "Test07 source location from channel 116 is not yet mapped to SOL 111 force grids 11101X or 11110Y.",
+      "H1 estimates have low median coherence across 100-10000 Hz."
+    ],
+    "status": "YELLOW",
+    "interpretation": "Inconclusive for amplitude-dependent damping: four hammer hits have force contrast, but median coherence is about 0.05-0.06 and source/response mapping is unresolved."
+  },
+  "suspended_panel": {
+    "h1_shape": [
+      25,
+      3200
+    ],
+    "accel_shape": [
+      25,
+      3200
+    ],
+    "freq_count": 3200,
+    "freq_range_hz": [
+      0.125,
+      400.0
+    ],
+    "response_point_count": 25,
+    "median_peak_freq_hz": 10.5,
+    "peak_freq_range_hz": [
+      0.75,
+      123.25
+    ],
+    "status": "YELLOW",
+    "interpretation": "Inconclusive for amplitude dependence: frequency-domain LDV products are present, but no repeated drive-amplitude levels or raw time histories were identified in the loaded files."
+  }
+}

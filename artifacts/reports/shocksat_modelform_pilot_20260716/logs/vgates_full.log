@@ -1,0 +1,19 @@
+vgate_rbe3_convert: PASS
+   [ok] rigid-field interpolation exactness (rel err, 3 spiders): 3.500407018612969e-16 (expect <=1e-9)
+   [ok] 6 rigid-body modes preserved (full model, 10 spiders converted): 6 (expect 6)
+   [ok] liveness: max elastic mode shift vs baseline (%): 4.7973 (expect >=0.05)
+vgate_warp_panel: FAIL
+   [FAIL] known answer: warp RAISES fundamental drumhead freq, monotone in amp (shallow-shell stiffening): {'flat': 194.75, 'warped': [14.01, 27.93, 55.21]} (expect flat < 0.5t < 1t < 2t)
+   [ok] patch mass drift at amp=t (%): 0.0366 (expect <=0.1%)
+   [ok] element quality at amp=2t (min jac ratio, max edge slope): [0.999, 0.0146] (expect >= 0.2 / <= 0.35)
+   [ok] 6 RBMs preserved (full model, pid 701 warped 0.15 in): 6 (expect 6)
+   [ok] liveness: max elastic mode shift vs baseline (%): 1.4374 (expect >=0.05)
+   [ok] quality on full-model edited quads: {'min_jac_ratio': 0.49998879924553963, 'max_edge_slope': 0.0003444035849861829, 'n_edited_quads': 4056} (expect recorded + within caps)
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/code/vgates.py", line 289, in <module>
+    GATES[w]()
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/code/vgates.py", line 254, in gate_joint_offset
+    mm, blocks, info = MO.build_model_blocks(spec)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/code/mfops.py", line 372, in build_model_blocks
+    raise ValueError(f"geometry: corner-Jacobian ratio {jr:.3f} < {JAC_RATIO_MIN}")
+ValueError: geometry: corner-Jacobian ratio -1.000 < 0.2

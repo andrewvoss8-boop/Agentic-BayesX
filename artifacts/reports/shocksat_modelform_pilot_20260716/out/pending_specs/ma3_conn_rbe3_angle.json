@@ -1,0 +1,32 @@
+{
+ "cid": "ma3_conn_rbe3_angle",
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe3_convert",
+   "eids": [
+    3000019,
+    3000071,
+    3000089,
+    3000126,
+    3000147,
+    3000153,
+    3000488,
+    3000489,
+    3000490,
+    3000716,
+    4000133,
+    4000134,
+    4000135,
+    4000136,
+    4000137,
+    4000138
+   ],
+   "name": "rbe3angle"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: the angle-bracket spiders (20-leg rigid ties into Top_Box walls, z 41.5-42.3) sit exactly where the +9.9%%/+7.9%% too-stiff pairs live -> interpolation constraints remove their rigid-patch stiffening",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: the angle-bracket spiders (20-leg rigid ties into Top_Box walls, z 41.5-42.3) sit exactly where th"
+}

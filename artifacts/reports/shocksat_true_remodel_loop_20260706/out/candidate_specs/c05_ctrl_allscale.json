@@ -1,0 +1,53 @@
+{
+ "cid": "c05_ctrl_allscale",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "bottom_box",
+   "factor": 0.93
+  },
+  {
+   "op": "scale",
+   "group": "top_box",
+   "factor": 0.93
+  },
+  {
+   "op": "scale",
+   "group": "plates",
+   "factor": 1.1
+  },
+  {
+   "op": "scale",
+   "group": "al_welds",
+   "factor": 1.15
+  },
+  {
+   "op": "scale",
+   "group": "steel_welds",
+   "factor": 1.05
+  },
+  {
+   "op": "scale",
+   "group": "joints",
+   "factor": 0.9
+  },
+  {
+   "op": "scale",
+   "group": "contact",
+   "factor": 0.9
+  },
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.0
+  },
+  {
+   "op": "scale",
+   "group": "angle_brackets",
+   "factor": 0.95
+  }
+ ],
+ "rationale": "MAXIMAL PARAMETRIC CONTROL: all 9 groups pre-scaled (\u03b8_MAP re-fits on top) \u2014 the parametric-family ceiling to compare c01/c02 against.",
+ "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+}

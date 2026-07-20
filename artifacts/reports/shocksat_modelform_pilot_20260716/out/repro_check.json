@@ -1,0 +1,17 @@
+{
+ "cid": "wr2_rnd001_mfr",
+ "mine_exact_sub200": 0.1650715878480316,
+ "target": 0.16507158788301496,
+ "tol": 0.01,
+ "abs_diff": 3.498334955054361e-11,
+ "folds": {
+  "m_xpos_990x": 0.30095874119899346,
+  "m_zpos_990z": 0.4952699222308484,
+  "m_ypos_990y": 0.10353958778136205,
+  "m_zpos_900z": -0.23948189981907753
+ },
+ "spot_max_pct": 9.075947771108872e-08,
+ "theta_source": "study theta_maps.json (verbatim, never re-optimized)",
+ "wall_s": 904.5,
+ "ts": "2026-07-16T19:57:01"
+}

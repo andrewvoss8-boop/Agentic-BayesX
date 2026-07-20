@@ -1,0 +1,30 @@
+  split  0: calib R-hat 1.002 conv True | +disc PEAK cov 0.91 IS 1.37e+03
+  split  1: calib R-hat 1.003 conv True | +disc PEAK cov 1.00 IS 1.77e+03
+  split  2: calib R-hat 1.001 conv True | +disc PEAK cov 0.94 IS 1.62e+03
+  split  3: calib R-hat 1.000 conv True | +disc PEAK cov 0.84 IS 2.38e+03
+  split  4: calib R-hat 1.002 conv True | +disc PEAK cov 0.88 IS 1.16e+03
+  split  5: calib R-hat 1.003 conv True | +disc PEAK cov 0.75 IS 2.92e+03
+  split  6: calib R-hat 1.004 conv True | +disc PEAK cov 0.91 IS 2.69e+03
+  split  7: calib R-hat 1.001 conv True | +disc PEAK cov 0.88 IS 2.7e+03
+  split  8: calib R-hat 1.002 conv True | +disc PEAK cov 0.91 IS 1.64e+03
+  split  9: calib R-hat 1.002 conv True | +disc PEAK cov 0.75 IS 1.93e+03
+  split 10: calib R-hat 1.003 conv True | +disc PEAK cov 0.94 IS 3.13e+03
+  split 11: calib R-hat 1.002 conv True | +disc PEAK cov 0.72 IS 3.06e+03
+  split 12: calib R-hat 1.001 conv True | +disc PEAK cov 0.91 IS 2.38e+03
+  split 13: calib R-hat 1.004 conv True | +disc PEAK cov 0.97 IS 1.39e+03
+  split 14: calib R-hat 1.002 conv True | +disc PEAK cov 0.84 IS 1.59e+03
+  split 15: calib R-hat 1.005 conv True | +disc PEAK cov 0.78 IS 1.43e+03
+  split 16: calib R-hat 1.004 conv True | +disc PEAK cov 0.81 IS 1.24e+03
+  split 17: calib R-hat 1.002 conv True | +disc PEAK cov 0.84 IS 1.97e+03
+  split 18: calib R-hat 1.001 conv True | +disc PEAK cov 0.91 IS 2.5e+03
+  split 19: calib R-hat 1.001 conv True | +disc PEAK cov 0.91 IS 2.14e+03
+  split 20: calib R-hat 1.002 conv True | +disc PEAK cov 0.88 IS 2.04e+03
+  split 21: calib R-hat 1.002 conv True | +disc PEAK cov 0.78 IS 1.92e+03
+  split 22: calib R-hat 1.002 conv True | +disc PEAK cov 1.00 IS 2.81e+03
+  split 23: calib R-hat 1.002 conv True | +disc PEAK cov 0.94 IS 1.83e+03
+  split 24: calib R-hat 1.002 conv True | +disc PEAK cov 0.88 IS 3.22e+03
+
+MC DONE: 25 splits | L5 calib converged 100% of splits
+  +disc PEAK coverage med 0.88 [0.75,0.99] | interval med 1.97e+03 | z-std med 0.75
+  runtime 1179s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/mc_summary.json
+MC DONE

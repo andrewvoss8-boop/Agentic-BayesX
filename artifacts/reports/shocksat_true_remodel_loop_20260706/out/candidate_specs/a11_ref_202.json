@@ -1,0 +1,16 @@
+{
+ "cid": "a11_ref_202",
+ "family": "refine",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    202,
+    204,
+    206
+   ]
+  }
+ ],
+ "rationale": "TRUE refinement of the top bulkhead + its welds (ch69/ch52 region local modes 158-233 Hz have region MAC ~0.0-0.2): tests whether 'mesh converged' (proven for the dish, V3) also holds at the bulkhead \u2014 an honest, evidence-targeted family-1 probe.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t16/t19/t21 near-zero MAC; V3 scope limited to dish"
+}

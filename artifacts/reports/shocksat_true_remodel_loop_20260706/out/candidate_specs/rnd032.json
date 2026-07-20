@@ -1,0 +1,35 @@
+{
+ "cid": "rnd032",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 103,
+   "rule": {
+    "type": "z_band",
+    "zlo": 6.977776340261376,
+    "zhi": 12.346276366582543
+   },
+   "name": "rsplit33"
+  },
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    2032416,
+    4000140,
+    1024301,
+    7004395,
+    9000045,
+    1024314
+   ],
+   "k_trans": 8823914.1029084,
+   "k_rot": 20674.90816166868,
+   "name": "rconn33"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)",
+ "split_info": {
+  "rsplit33": 144
+ }
+}

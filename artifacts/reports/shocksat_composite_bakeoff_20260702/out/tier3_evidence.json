@@ -1,0 +1,319 @@
+{
+ "observable": "shape-inclusive: matched .ash eigenvalues omega^2 + MAC (frozen Hungarian pairing)",
+ "shape_inclusive": true,
+ "n_classes": 11,
+ "note": "each class at its own freq+MAC theta_MAP; type-II ML (sigma_w2, sigma_mac) k=2 all classes; freq_only column = LABELED REFERENCE, forbidden as selector (R4).",
+ "by_sigma_prior": {
+  "0.15": {
+   "baseline": {
+    "logZ": -342.788303102018,
+    "sigma_w2": 0.11052885268735715,
+    "sigma_mac": 0.37434237231592404,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand12": {
+    "logZ": -306.48452006894775,
+    "sigma_w2": 0.09353920013011527,
+    "sigma_mac": 0.362654110473252,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell202_hi": {
+    "logZ": -290.9324967439599,
+    "sigma_w2": 0.09618033429066117,
+    "sigma_mac": 0.3287200127224141,
+    "n_params": 9,
+    "post_prob": 0.1646
+   },
+   "dishmass_hi": {
+    "logZ": -310.4154429998838,
+    "sigma_w2": 0.10776969609543571,
+    "sigma_mac": 0.32739246356553386,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell601_lo": {
+    "logZ": -305.7745310947311,
+    "sigma_w2": 0.10959361634835847,
+    "sigma_mac": 0.2932472815972461,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "bush802_allSoft": {
+    "logZ": -308.29616893562536,
+    "sigma_w2": 0.11102314288179177,
+    "sigma_mac": 0.2988325425454589,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "bush802_rotSoft": {
+    "logZ": -307.12996180694455,
+    "sigma_w2": 0.10744548981670521,
+    "sigma_mac": 0.3262618028885063,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand10": {
+    "logZ": -289.3084617620935,
+    "sigma_w2": 0.08189832877595972,
+    "sigma_mac": 0.3297813002044764,
+    "n_params": 9,
+    "post_prob": 0.8354
+   },
+   "rand11": {
+    "logZ": -346.66198297170234,
+    "sigma_w2": 0.09506986051347091,
+    "sigma_mac": 0.36577770572923984,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand07": {
+    "logZ": -312.55864684603245,
+    "sigma_w2": 0.10557358387901263,
+    "sigma_mac": 0.354941006624118,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell206_lo": {
+    "logZ": -323.1433545817555,
+    "sigma_w2": 0.09503258747512923,
+    "sigma_mac": 0.3724317890930648,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "_ranking": [
+    "rand10",
+    "shell202_hi",
+    "shell601_lo",
+    "rand12",
+    "bush802_rotSoft",
+    "bush802_allSoft",
+    "dishmass_hi",
+    "rand07",
+    "shell206_lo",
+    "baseline",
+    "rand11"
+   ]
+  },
+  "0.25": {
+   "baseline": {
+    "logZ": -346.29086587562745,
+    "sigma_w2": 0.11114237884078687,
+    "sigma_mac": 0.37761801288472696,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand12": {
+    "logZ": -308.97044301494043,
+    "sigma_w2": 0.09430261434326498,
+    "sigma_mac": 0.36427070835916625,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell202_hi": {
+    "logZ": -293.19236447899016,
+    "sigma_w2": 0.09652992311904446,
+    "sigma_mac": 0.3293188374233019,
+    "n_params": 9,
+    "post_prob": 0.2843
+   },
+   "dishmass_hi": {
+    "logZ": -313.6023115393841,
+    "sigma_w2": 0.10806139499003548,
+    "sigma_mac": 0.32816017871586756,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell601_lo": {
+    "logZ": -308.4431295068294,
+    "sigma_w2": 0.11020007640776948,
+    "sigma_mac": 0.2943124013030217,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "bush802_allSoft": {
+    "logZ": -310.8158923915857,
+    "sigma_w2": 0.11109845657627715,
+    "sigma_mac": 0.29440636179072077,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "bush802_rotSoft": {
+    "logZ": -309.32724834199985,
+    "sigma_w2": 0.10782421622692338,
+    "sigma_mac": 0.320563867462657,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand10": {
+    "logZ": -292.26917945104896,
+    "sigma_w2": 0.08244800620574447,
+    "sigma_mac": 0.3316042097701646,
+    "n_params": 9,
+    "post_prob": 0.7157
+   },
+   "rand11": {
+    "logZ": -348.7956951251396,
+    "sigma_w2": 0.09547774812341392,
+    "sigma_mac": 0.3671822603662508,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand07": {
+    "logZ": -315.714860229808,
+    "sigma_w2": 0.10561322393380831,
+    "sigma_mac": 0.3581992536351302,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell206_lo": {
+    "logZ": -325.5961035626717,
+    "sigma_w2": 0.09554063069627715,
+    "sigma_mac": 0.3729155259383925,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "_ranking": [
+    "rand10",
+    "shell202_hi",
+    "shell601_lo",
+    "rand12",
+    "bush802_rotSoft",
+    "bush802_allSoft",
+    "dishmass_hi",
+    "rand07",
+    "shell206_lo",
+    "baseline",
+    "rand11"
+   ]
+  },
+  "0.40": {
+   "baseline": {
+    "logZ": -349.92929365042073,
+    "sigma_w2": 0.11167728202444141,
+    "sigma_mac": 0.38016629541824726,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand12": {
+    "logZ": -311.53298285180756,
+    "sigma_w2": 0.09485216461862368,
+    "sigma_mac": 0.3651954352597968,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell202_hi": {
+    "logZ": -295.46442268427745,
+    "sigma_w2": 0.09601477700679553,
+    "sigma_mac": 0.33013149360700444,
+    "n_params": 9,
+    "post_prob": 0.4689
+   },
+   "dishmass_hi": {
+    "logZ": -316.7510173337459,
+    "sigma_w2": 0.10808724117783096,
+    "sigma_mac": 0.3280665004920925,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell601_lo": {
+    "logZ": -311.173718582516,
+    "sigma_w2": 0.11060241884975582,
+    "sigma_mac": 0.2947685391402777,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "bush802_allSoft": {
+    "logZ": -313.5389023418623,
+    "sigma_w2": 0.11147045825614388,
+    "sigma_mac": 0.2916751970313189,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "bush802_rotSoft": {
+    "logZ": -311.30385151623875,
+    "sigma_w2": 0.10770830349911523,
+    "sigma_mac": 0.3094925976308017,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand10": {
+    "logZ": -295.33972308289276,
+    "sigma_w2": 0.0829155403574244,
+    "sigma_mac": 0.3333596717029058,
+    "n_params": 9,
+    "post_prob": 0.5311
+   },
+   "rand11": {
+    "logZ": -351.0026450560709,
+    "sigma_w2": 0.09563859441643564,
+    "sigma_mac": 0.3683478857960055,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "rand07": {
+    "logZ": -318.94592345420097,
+    "sigma_w2": 0.10584916380092046,
+    "sigma_mac": 0.3609791491904546,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "shell206_lo": {
+    "logZ": -328.23272408897105,
+    "sigma_w2": 0.09588035562666027,
+    "sigma_mac": 0.37519132723108545,
+    "n_params": 9,
+    "post_prob": 0.0
+   },
+   "_ranking": [
+    "rand10",
+    "shell202_hi",
+    "shell601_lo",
+    "bush802_rotSoft",
+    "rand12",
+    "bush802_allSoft",
+    "dishmass_hi",
+    "rand07",
+    "shell206_lo",
+    "baseline",
+    "rand11"
+   ]
+  }
+ },
+ "freq_only_reference": {
+  "baseline": -323.12048824489983,
+  "rand12": -293.8980605139643,
+  "shell202_hi": -281.4769708997052,
+  "dishmass_hi": -294.2293675044654,
+  "shell601_lo": -294.7792046493775,
+  "bush802_allSoft": -295.062692894715,
+  "bush802_rotSoft": -294.30114484534676,
+  "rand10": -279.2660102213747,
+  "rand11": -333.8389383652059,
+  "rand07": -295.5247337942361,
+  "shell206_lo": -306.7350243343448
+ },
+ "prior_robust_ranking": false,
+ "prior_robust_top": true,
+ "headline": {
+  "sigma_prior": 0.25,
+  "ranking": [
+   "rand10",
+   "shell202_hi",
+   "shell601_lo",
+   "rand12",
+   "bush802_rotSoft",
+   "bush802_allSoft",
+   "dishmass_hi",
+   "rand07",
+   "shell206_lo",
+   "baseline",
+   "rand11"
+  ],
+  "winner": "rand10",
+  "winner_beats_baseline": true,
+  "logZ_winner_minus_baseline": 54.02
+ },
+ "freq_only_would_have_crowned": "rand10"
+}

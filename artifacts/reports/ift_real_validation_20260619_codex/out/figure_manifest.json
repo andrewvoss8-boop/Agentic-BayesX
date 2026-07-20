@@ -1,0 +1,14 @@
+{
+  "figures": [
+    "figA_scorecard.png",
+    "figB_beta_thermometer.png",
+    "figC_heldout_frf_overlay.png",
+    "figD_discretization_invariance.png",
+    "figE_convergence_table.png"
+  ],
+  "tufte_notes": [
+    "Direct labels and sparse grids used.",
+    "Frequency axis is log in FRF overlay.",
+    "FRF y-axis uses log magnitude scale as a deliberate readability deviation because IFT bands span orders of magnitude."
+  ]
+}

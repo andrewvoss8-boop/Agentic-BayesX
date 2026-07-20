@@ -1,0 +1,140 @@
+{
+ "overall": "RED",
+ "counts": {
+  "GREEN": 23,
+  "YELLOW": 2,
+  "RED": 1
+ },
+ "gates": [
+  {
+   "gate": "gatefile:priority_deliverables.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "gatefile:question_framing.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "gatefile:quantity_contracts.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "gatefile:assumptions_ledger.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "gatefile:decisions_log.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "gatefile:REUSED_code.sha256",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "reused_sha_integrity",
+   "status": "GREEN",
+   "detail": "all reused sources unchanged"
+  },
+  {
+   "gate": "gate_K_kernel",
+   "status": "GREEN",
+   "detail": "light-zeta peak err -0.019794279259882166, broad-peak change 4.862729207743134e-05 (both must be <=0.05)"
+  },
+  {
+   "gate": "gate_W_window",
+   "status": "RED",
+   "detail": "gate W FAILED (pass_mode=fail); window operator unverified \u2014 arm scores must not be interpreted"
+  },
+  {
+   "gate": "gate_R_reproduction",
+   "status": "GREEN",
+   "detail": "B0 P1'=0.1969491558695649 (ref 0.196949\u00b10.002); B1<B0=True"
+  },
+  {
+   "gate": "arm_set_fixed",
+   "status": "GREEN",
+   "detail": "dev arms ['B0', 'B1', 'B2', 'B3', 'B4', 'B5']; extra=[], missing=[], duplicated=[] (exactly B0-B5, once each; duplicates=resume artifacts must be explained)"
+  },
+  {
+   "gate": "damping_specs_preregistered",
+   "status": "GREEN",
+   "detail": "all specs match the card table; no eta; nothing fit"
+  },
+  {
+   "gate": "windowed_flags",
+   "status": "GREEN",
+   "detail": "windowed flags {'B0': False, 'B1': False, 'B2': True, 'B3': True, 'B4': True, 'B5': True}; mismatches: []"
+  },
+  {
+   "gate": "anti_lsq",
+   "status": "GREEN",
+   "detail": "markers=4 (need >=2), forbidden hits=[]"
+  },
+  {
+   "gate": "vault_protocol",
+   "status": "GREEN",
+   "detail": "freeze-before-read=True, touched-once=True, second-read-labeled=True, all-6-arms=True"
+  },
+  {
+   "gate": "verdicts_present",
+   "status": "GREEN",
+   "detail": "S1/S2/S3 present with numbers"
+  },
+  {
+   "gate": "S1_margin_rule",
+   "status": "YELLOW",
+   "detail": "PRE-REGISTERED CLAIM FALSIFIED (honest outcome): dP1'=+0.0401 vs need >=+0.03 & >=2xSE(0.0263) & vault_B2_gt_B0=True"
+  },
+  {
+   "gate": "S2_decomposition",
+   "status": "GREEN",
+   "detail": "decomposition present: {\"interaction\": 0.0193, \"total\": 0.0401, \"damping_alone\": -0.0125, \"window_alone\": 0.0332}"
+  },
+  {
+   "gate": "S3_mechanism",
+   "status": "YELLOW",
+   "detail": "mechanism NOT confirmed (documented finding): B2-B1=+0.0526 (need >=+0.02), gateW=False"
+  },
+  {
+   "gate": "figures_exist",
+   "status": "GREEN",
+   "detail": "all 5 present"
+  },
+  {
+   "gate": "figure_qa",
+   "status": "GREEN",
+   "detail": "all pass"
+  },
+  {
+   "gate": "tufte_lint_run",
+   "status": "GREEN",
+   "detail": "lint output saved"
+  },
+  {
+   "gate": "deliverable:packet.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "deliverable:findings.md",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "deliverable:run_all.sh",
+   "status": "GREEN",
+   "detail": "present"
+  },
+  {
+   "gate": "runtime_accounting",
+   "status": "GREEN",
+   "detail": "active=1066.6s wall=12706.7s"
+  }
+ ]
+}

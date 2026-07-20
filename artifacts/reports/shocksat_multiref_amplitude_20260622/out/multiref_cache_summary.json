@@ -1,0 +1,48 @@
+{
+  "xpos_990x": {
+    "N65536": {
+      "n_hits_used": 1,
+      "df_hz": 3.815,
+      "coh_at_res_p90": null
+    },
+    "N200000": {
+      "n_hits_used": 1,
+      "df_hz": 1.25,
+      "coh_at_res_p90": null
+    }
+  },
+  "zpos_990z": {
+    "N65536": {
+      "n_hits_used": 4,
+      "df_hz": 3.815,
+      "coh_at_res_p90": null
+    },
+    "N200000": {
+      "n_hits_used": 2,
+      "df_hz": 1.25,
+      "coh_at_res_p90": null
+    }
+  },
+  "ypos_990y": {
+    "N65536": {
+      "n_hits_used": 4,
+      "df_hz": 3.815,
+      "coh_at_res_p90": null
+    },
+    "N200000": {
+      "n_hits_used": 0
+    }
+  },
+  "z_900z": {
+    "N65536": {
+      "n_hits_used": 4,
+      "df_hz": 3.815,
+      "coh_at_res_p90": null
+    },
+    "N200000": {
+      "n_hits_used": 1,
+      "df_hz": 1.25,
+      "coh_at_res_p90": null
+    }
+  }
+}

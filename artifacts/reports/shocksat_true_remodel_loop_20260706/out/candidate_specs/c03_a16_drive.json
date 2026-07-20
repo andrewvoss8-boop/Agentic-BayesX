@@ -1,0 +1,55 @@
+{
+ "cid": "c03_a16_drive",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "near_points",
+    "points": [
+     [
+      9.0,
+      7.6,
+      0.6
+     ],
+     [
+      9.0,
+      -7.6,
+      0.6
+     ]
+    ],
+    "radius": 6.0
+   },
+   "name": "bb_drive"
+  }
+ ],
+ "rationale": "a16 (best r1) + b11 drive-corner (best r2 fold-3 fix), splits only, no welds (stacking welds hurt).",
+ "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe",
+ "split_info": {
+  "bb_xface": 4671,
+  "bb_bulkband": 3864,
+  "bb_drive": 1754
+ }
+}

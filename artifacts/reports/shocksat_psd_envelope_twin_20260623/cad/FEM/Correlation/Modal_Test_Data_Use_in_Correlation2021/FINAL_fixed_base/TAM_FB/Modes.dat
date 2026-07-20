@@ -1,0 +1,32 @@
+ASSIGN MASTER ='MODES.MASTER',TEMP
+ASSIGN DBALL  ='MODES.DBALL',TEMP
+$
+SOL SEMODES
+CEND
+$
+$ The display set with all the nodes that are located in the display set
+INCLUDE 'IRKE_DISP.blk'
+$*
+DISPLACEMENT(PUNCH) = 100
+Method=1
+SPC = 101
+$*
+$*
+BEGIN BULK
+$*
+PARAM   AUTOSPC NO 
+PARAM   GRDPNT  0
+PARAM   K6ROT   1.0
+PARAM   POST    -2
+PARAM   POSTEXT YES 
+PARAM   PRGPST  yes
+PARAM   OGEOM   yes
+$
+$---1--><---2--><---3--><---4--><---5--><---6--><---7--><---8--><---9-->
+EIGRL          1    -1.0 300.0                                    mass
+$
+SPC1         101  123   2000000   THRU  2000055
+$
+INCLUDE 'ShockSat_L_04292021.blk'                         
+$
+ENDDATA

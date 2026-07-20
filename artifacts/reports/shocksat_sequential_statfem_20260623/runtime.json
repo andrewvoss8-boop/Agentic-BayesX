@@ -1,0 +1,6 @@
+{
+  "active_runtime_s": 115.895,
+  "elapsed_wallclock_s": 115.895,
+  "machine": "local CPU",
+  "notes": "Filter, stiffness-subset NUTS, scoring. Plot/check time excluded by design; active <= elapsed."
+}

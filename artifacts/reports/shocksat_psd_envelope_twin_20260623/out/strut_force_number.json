@@ -1,0 +1,37 @@
+{
+  "deliverable": "strut-connection force QOI (real CBUSH force) with uncertainty band attributing unmeasured modes",
+  "n_strut_cbush_used": 24,
+  "strut_pids": [
+    803,
+    804,
+    805,
+    806,
+    807
+  ],
+  "n_inband_modes": 40,
+  "n_measured_modes": 20,
+  "qoi_units": "aggregate strut CBUSH force per unit top-plate-center mount drive (relative; abs needs input spec)",
+  "nominal_FEM_rms": 0.7718370677618595,
+  "twin_freqanchored_rms": 0.770404207028296,
+  "measured_modes_only_rms": 0.11555502095304551,
+  "trust_fraction_strut_force": 0.15,
+  "band_all_2p5_50_97p5": [
+    0.2625259152874887,
+    0.779870666880581,
+    3.064111625335557
+  ],
+  "band_pct_of_median": 180.0,
+  "band_variance_share_unmeasured": 1.0,
+  "log_sd_all": 0.617,
+  "log_sd_unmeasured": 0.634,
+  "log_sd_measured": 0.01,
+  "assumptions": {
+    "freq_sd_meas": 0.01,
+    "freq_sd_unmeas": 0.06,
+    "logamp_sd_meas": 0.35,
+    "logamp_sd_unmeas": 0.8,
+    "n_mc": 1000
+  },
+  "caveat": "real CBUSH force but unit mount drive (abs scale needs input); CBUSH force in basic frame (orientation ignored); twin=freq-anchored; MC assumptions labeled. NO NUTS.",
+  "note": "EXPLORATORY; YELLOW."
+}

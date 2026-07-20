@@ -1,0 +1,59 @@
+{
+  "answers_D19": {
+    "quantity": "mobility (m/s)/N",
+    "excitation": "impact hammer, back, top-right node",
+    "lowf": "rigid-body modes"
+  },
+  "panel_dims_m": [
+    1.25,
+    2.43999994
+  ],
+  "n_fea_nodes": 924,
+  "n_fea_modes": 46,
+  "peaks_used_hz": [
+    8.25,
+    10.5,
+    22.125,
+    24.0,
+    39.875,
+    45.0,
+    46.5,
+    58.75
+  ],
+  "matched_fea_mode_idx": [
+    6,
+    7,
+    8,
+    8,
+    11,
+    13,
+    13,
+    15
+  ],
+  "best": {
+    "mean_MAC": 0.48859048188800974,
+    "margin": 0.12,
+    "ordering": "ymajorfx",
+    "per_mode_MAC": [
+      0.9799923768773473,
+      0.9931614157012072,
+      0.990245489450717,
+      0.775012165649069,
+      0.0032244991469244314,
+      0.14582375051393023,
+      0.02101085838962619,
+      0.00025329937525616535
+    ]
+  },
+  "runner_up": {
+    "mean_MAC": 0.48856182978049834,
+    "ordering": "ymajorfxfy",
+    "margin": 0.12
+  },
+  "third": {
+    "mean_MAC": 0.4883954978227456,
+    "ordering": "ymajorfy"
+  },
+  "drive_row_hypothesis": 20,
+  "caveat": "geometry/ID prep from an assumed uniform 5x5 grid (photo); NOT a calibration; exact LDV coordinates would supersede the margin scan"
+}

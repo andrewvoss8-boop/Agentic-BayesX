@@ -1,0 +1,22 @@
+{
+ "cid": "rnd037",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 103,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 1.3052878609208651,
+    "side": "lo"
+   },
+   "name": "rsplit38"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)",
+ "split_info": {
+  "rsplit38": 824
+ }
+}

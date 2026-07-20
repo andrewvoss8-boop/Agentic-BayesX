@@ -1,0 +1,18 @@
+==== FULL KEYSTONE M0 ====
+[M0] faithful Schneider | obs 8 ch x 173 f, theta ['bottom_box', 'cross_beam', 'plates', 'top_box']
+  CONVERGED=True cross-run R-hat 1.000 ESS 4716 div 0.000 | log-evidence -105484.9 +- 3.0
+  theta medians: bottom_box 0.78, cross_beam 3.91, plates 0.43, top_box 0.74
+  runtime 1852s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M0_ident4_n8.json
+==== FULL KEYSTONE M1 ====
+[M1] faithful Schneider | obs 8 ch x 173 f, theta ['bottom_box', 'cross_beam', 'plates', 'top_box']
+  CONVERGED=False cross-run R-hat 1.041 ESS 47 div 0.000 | log-evidence -2859.4 +- 0.3
+  sigma_w med 1.86 [1.80,1.94] (vs old runaway 9.8) | gain c 5.92
+  theta medians: bottom_box 0.78, cross_beam 2.64, plates 0.41, top_box 0.87
+  runtime 961s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M1_ident4_n8.json
+==== FULL KEYSTONE M2 ====
+[M2] faithful Schneider | obs 8 ch x 173 f, theta ['bottom_box', 'cross_beam', 'plates', 'top_box']
+  CONVERGED=False cross-run R-hat 2.577 ESS 1 div 0.000 | log-evidence -2717.5 +- 1.0
+  sigma_w med 12.37 [11.83,12.92] (vs old runaway 9.8) | gain c 6.04
+  theta medians: bottom_box 1.59, cross_beam 1.36, plates 0.81, top_box 0.88
+  runtime 1044s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M2_ident4_n8.json
+KEYSTONE DONE

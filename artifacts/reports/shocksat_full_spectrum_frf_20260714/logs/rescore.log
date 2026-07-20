@@ -1,0 +1,27 @@
+enriching bases at theta_MAP ...
+A0_wide__enr: enriched at theta_MAP, r=194, self-consistency 0.0000% (379s)
+B__enr: enriched at theta_MAP, r=194, self-consistency 0.0000% (406s)
+D__enr: enriched at theta_MAP, r=194, self-consistency 0.0000% (426s)
+R__enr: enriched at theta_MAP, r=194, self-consistency 0.0000% (569s)
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/rescore_freeze.py", line 99, in <module>
+    main()
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/rescore_freeze.py", line 82, in main
+    out["D"] = {"screen": screen("D_" + dcid), "exact": score_exact(p_d, True, None)}
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/rescore_freeze.py", line 36, in score_exact
+    rho, bm = SW._train_warp(pkg, ONE, tks, caches, windowed, flat_zeta, fwd)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/wscore_wide.py", line 87, in _train_warp
+    Hp = fwd(pkg, theta, tk, fc[band])[rows]
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/wscore_wide.py", line 75, in <lambda>
+    return lambda pkg, theta, dkey, fc: WFW.predict_H(pkg, theta, dkey, fc, windowed, flat_zeta)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/wide_forward.py", line 43, in predict_H
+    residues, fi = modal_quantities(pkg, theta, dkey)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/code/wide_forward.py", line 33, in modal_quantities
+    f, Q = pkg.modes(theta)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_true_remodel_loop_20260706/code/femlib.py", line 473, in modes
+    lam, Q = np.linalg.eigh(self.K(theta))
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_true_remodel_loop_20260706/code/femlib.py", line 470, in K
+    return self.A_fix + np.einsum("g,gij->ij", np.asarray(theta, float), self.A)
+  File "/Users/avoss/Library/Python/3.9/lib/python/site-packages/numpy/core/einsumfunc.py", line 1371, in einsum
+    return c_einsum(*operands, **kwargs)
+ValueError: operands could not be broadcast together with remapped shapes [original->remapped]: (9,)->(9) (10,194,194)->(194,194,10) 

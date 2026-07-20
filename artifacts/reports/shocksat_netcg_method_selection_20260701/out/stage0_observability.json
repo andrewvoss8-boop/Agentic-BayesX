@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "coh_threshold": 0.7,
+    "peak_tol_hz": 3.0,
+    "drives": [
+      "+X",
+      "+Z(990)",
+      "+XY",
+      "+Z(900)",
+      "+Y"
+    ]
+  },
+  "per_mode": [
+    {
+      "fem_mode": 0,
+      "fem_freq_hz": 54.6,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 1,
+      "fem_freq_hz": 73.1,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 75.3,
+          "coh": 0.87,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 75.3,
+          "coh": 0.66,
+          "observed": false
+        }
+      }
+    },
+    {
+      "fem_mode": 2,
+      "fem_freq_hz": 73.7,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 75.3,
+          "coh": 0.87,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 75.3,
+          "coh": 0.66,
+          "observed": false
+        }
+      }
+    },
+    {
+      "fem_mode": 3,
+      "fem_freq_hz": 88.0,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 4,
+      "fem_freq_hz": 104.7,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 5,
+      "fem_freq_hz": 113.8,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 6,
+      "fem_freq_hz": 117.3,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 7,
+      "fem_freq_hz": 122.2,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {
+        "+XY": {
+          "peak_hz": 122.1,
+          "coh": 0.62,
+          "observed": false
+        }
+      }
+    },
+    {
+      "fem_mode": 8,
+      "fem_freq_hz": 124.4,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 126.1,
+          "coh": 0.84,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 122.1,
+          "coh": 0.62,
+          "observed": false
+        },
+        "+Z(900)": {
+          "peak_hz": 126.1,
+          "coh": 0.9,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 9,
+      "fem_freq_hz": 124.6,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 126.1,
+          "coh": 0.84,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 122.1,
+          "coh": 0.62,
+          "observed": false
+        },
+        "+Z(900)": {
+          "peak_hz": 126.1,
+          "coh": 0.9,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 10,
+      "fem_freq_hz": 124.6,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 126.1,
+          "coh": 0.84,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 122.1,
+          "coh": 0.62,
+          "observed": false
+        },
+        "+Z(900)": {
+          "peak_hz": 126.1,
+          "coh": 0.9,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 11,
+      "fem_freq_hz": 125.2,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 126.1,
+          "coh": 0.84,
+          "observed": true
+        },
+        "+Z(900)": {
+          "peak_hz": 126.1,
+          "coh": 0.9,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 12,
+      "fem_freq_hz": 146.6,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 13,
+      "fem_freq_hz": 151.9,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+Y": {
+          "peak_hz": 152.6,
+          "coh": 0.9,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 14,
+      "fem_freq_hz": 152.2,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+Y": {
+          "peak_hz": 152.6,
+          "coh": 0.9,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 15,
+      "fem_freq_hz": 160.6,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 162.8,
+          "coh": 0.96,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 162.8,
+          "coh": 0.96,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 16,
+      "fem_freq_hz": 168.8,
+      "ash_measured": false,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 17,
+      "fem_freq_hz": 168.9,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 18,
+      "fem_freq_hz": 183.6,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 19,
+      "fem_freq_hz": 183.9,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 20,
+      "fem_freq_hz": 185.2,
+      "ash_measured": true,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 21,
+      "fem_freq_hz": 190.4,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 189.2,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Z(990)": {
+          "peak_hz": 189.2,
+          "coh": 0.93,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 189.2,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 189.2,
+          "coh": 0.96,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 22,
+      "fem_freq_hz": 191.6,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 189.2,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Z(990)": {
+          "peak_hz": 189.2,
+          "coh": 0.93,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 189.2,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 189.2,
+          "coh": 0.96,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 23,
+      "fem_freq_hz": 192.6,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(900)": {
+          "peak_hz": 195.3,
+          "coh": 0.74,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 24,
+      "fem_freq_hz": 192.9,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(900)": {
+          "peak_hz": 195.3,
+          "coh": 0.74,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 25,
+      "fem_freq_hz": 193.7,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(900)": {
+          "peak_hz": 195.3,
+          "coh": 0.74,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 26,
+      "fem_freq_hz": 196.9,
+      "ash_measured": true,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 199.4,
+          "coh": 0.93,
+          "observed": true
+        },
+        "+Z(990)": {
+          "peak_hz": 197.3,
+          "coh": 0.96,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 197.3,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Z(900)": {
+          "peak_hz": 195.3,
+          "coh": 0.74,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 197.3,
+          "coh": 0.97,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 27,
+      "fem_freq_hz": 211.7,
+      "ash_measured": false,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 28,
+      "fem_freq_hz": 230.6,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Y": {
+          "peak_hz": 231.9,
+          "coh": 0.98,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 29,
+      "fem_freq_hz": 233.7,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 234.0,
+          "coh": 0.92,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 234.0,
+          "coh": 0.97,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 231.9,
+          "coh": 0.98,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 30,
+      "fem_freq_hz": 233.7,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 234.0,
+          "coh": 0.92,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 234.0,
+          "coh": 0.97,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 231.9,
+          "coh": 0.98,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 31,
+      "fem_freq_hz": 234.4,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(990)": {
+          "peak_hz": 234.0,
+          "coh": 0.92,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 234.0,
+          "coh": 0.97,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 231.9,
+          "coh": 0.98,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 32,
+      "fem_freq_hz": 246.1,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+Z(900)": {
+          "peak_hz": 244.1,
+          "coh": 0.97,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 33,
+      "fem_freq_hz": 247.5,
+      "ash_measured": false,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 34,
+      "fem_freq_hz": 249.4,
+      "ash_measured": false,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 35,
+      "fem_freq_hz": 251.6,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 254.3,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Z(990)": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 36,
+      "fem_freq_hz": 253.9,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 254.3,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Z(990)": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 37,
+      "fem_freq_hz": 254.7,
+      "ash_measured": false,
+      "coherently_observed": true,
+      "drives": {
+        "+X": {
+          "peak_hz": 254.3,
+          "coh": 0.98,
+          "observed": true
+        },
+        "+Z(990)": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        },
+        "+XY": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        },
+        "+Y": {
+          "peak_hz": 254.3,
+          "coh": 0.99,
+          "observed": true
+        }
+      }
+    },
+    {
+      "fem_mode": 38,
+      "fem_freq_hz": 258.3,
+      "ash_measured": false,
+      "coherently_observed": false,
+      "drives": {}
+    },
+    {
+      "fem_mode": 39,
+      "fem_freq_hz": 258.9,
+      "ash_measured": false,
+      "coherently_observed": false,
+      "drives": {}
+    }
+  ],
+  "drumhead_band_observability_without_Y": [
+    {
+      "freq_hz": 230.6,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 233.7,
+      "observed": true,
+      "by": [
+        "+Z(990)",
+        "+XY"
+      ]
+    },
+    {
+      "freq_hz": 233.7,
+      "observed": true,
+      "by": [
+        "+Z(990)",
+        "+XY"
+      ]
+    },
+    {
+      "freq_hz": 234.4,
+      "observed": true,
+      "by": [
+        "+Z(990)",
+        "+XY"
+      ]
+    },
+    {
+      "freq_hz": 246.1,
+      "observed": true,
+      "by": [
+        "+Z(900)"
+      ]
+    },
+    {
+      "freq_hz": 247.5,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 249.4,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 251.6,
+      "observed": true,
+      "by": [
+        "+X",
+        "+Z(990)",
+        "+XY"
+      ]
+    },
+    {
+      "freq_hz": 253.9,
+      "observed": true,
+      "by": [
+        "+X",
+        "+Z(990)",
+        "+XY"
+      ]
+    },
+    {
+      "freq_hz": 254.7,
+      "observed": true,
+      "by": [
+        "+X",
+        "+Z(990)",
+        "+XY"
+      ]
+    },
+    {
+      "freq_hz": 258.3,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 258.9,
+      "observed": false,
+      "by": []
+    }
+  ],
+  "drumhead_band_observability_with_Y": [
+    {
+      "freq_hz": 230.6,
+      "observed": true,
+      "by": [
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 233.7,
+      "observed": true,
+      "by": [
+        "+Z(990)",
+        "+XY",
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 233.7,
+      "observed": true,
+      "by": [
+        "+Z(990)",
+        "+XY",
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 234.4,
+      "observed": true,
+      "by": [
+        "+Z(990)",
+        "+XY",
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 246.1,
+      "observed": true,
+      "by": [
+        "+Z(900)"
+      ]
+    },
+    {
+      "freq_hz": 247.5,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 249.4,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 251.6,
+      "observed": true,
+      "by": [
+        "+X",
+        "+Z(990)",
+        "+XY",
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 253.9,
+      "observed": true,
+      "by": [
+        "+X",
+        "+Z(990)",
+        "+XY",
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 254.7,
+      "observed": true,
+      "by": [
+        "+X",
+        "+Z(990)",
+        "+XY",
+        "+Y"
+      ]
+    },
+    {
+      "freq_hz": 258.3,
+      "observed": false,
+      "by": []
+    },
+    {
+      "freq_hz": 258.9,
+      "observed": false,
+      "by": []
+    }
+  ]
+}

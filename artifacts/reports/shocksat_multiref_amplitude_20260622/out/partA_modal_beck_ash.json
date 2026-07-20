@@ -1,0 +1,44 @@
+{
+  "deliverable": "Part A reproduction of Beck shape-field lever (modal_beck_ash seeds 0-2)",
+  "seeds": {
+    "0": {
+      "fem_skill": -0.1818161511601013,
+      "inf_skill": -0.15730021001477756,
+      "fem_IS": 671.3245713962123,
+      "inf_IS": 544.6178942646983,
+      "inf_cover": 0.967741935483871,
+      "conv": true,
+      "max_rhat": 1.0040058325445111,
+      "min_ess": 2384.691148739522
+    },
+    "1": {
+      "fem_skill": -0.6892911868071883,
+      "inf_skill": -0.20208045318716428,
+      "fem_IS": 1052.1275439915958,
+      "inf_IS": 570.0549970375187,
+      "inf_cover": 0.967741935483871,
+      "conv": true,
+      "max_rhat": 1.0040058325445111,
+      "min_ess": 2384.691148739522
+    },
+    "2": {
+      "fem_skill": -1.1677535633198373,
+      "inf_skill": -0.3964503065016951,
+      "fem_IS": 1558.0938333903152,
+      "inf_IS": 741.4024918136618,
+      "inf_cover": 0.9354838709677419,
+      "conv": true,
+      "max_rhat": 1.0040058325445111,
+      "min_ess": 2384.691148739522
+    }
+  },
+  "heldout_peak_FEM_shapes": {
+    "crps_skill_vs_clim": -0.6796203004290423
+  },
+  "heldout_peak_INFERRED_shapes": {
+    "crps_skill_vs_clim": -0.251943656567879
+  },
+  "mean_fem_IS": 1093.848649592708,
+  "mean_inf_IS": 618.6917943719596,
+  "all_converged": true
+}

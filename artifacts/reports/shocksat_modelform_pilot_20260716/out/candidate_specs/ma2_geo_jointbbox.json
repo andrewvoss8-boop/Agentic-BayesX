@@ -1,0 +1,24 @@
+{
+ "cid": "ma2_geo_jointbbox",
+ "cls": "geometry",
+ "ops": [
+  {
+   "op": "joint_offset",
+   "eids": [
+    1024295,
+    1024296,
+    1024297
+   ],
+   "vec": [
+    0.0,
+    0.25,
+    0.05
+   ],
+   "name": "jbbox"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r2.json: bottom-box joint interface offset along Y (the worst axis: Bottom_Box|Y 0.763 dex) within build tolerance (|d|=0.255 in)",
+ "track": "agent",
+ "round": 2,
+ "rationale": "diagnosis_mf_r2.json: bottom-box joint interface offset along Y (the worst axis: Bottom_Box|Y 0.763 dex) within build to"
+}

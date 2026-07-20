@@ -1,0 +1,138 @@
+{
+ "overall": "yellow",
+ "green": 24,
+ "yellow": 2,
+ "red": 0,
+ "gates": [
+  {
+   "name": "ex_a_handbook_anchors",
+   "tier": "green",
+   "detail": "10 anchors vs 7004C Fig8/9+AppB, worst rel err 0.86% (threshold 2%; incl. handbook's own rounding)"
+  },
+  {
+   "name": "ex_a_impedance_equals_direct",
+   "tier": "green",
+   "detail": "Eq3/4 vs direct coupled solve max rel dev 1.22e-14 (<1e-10)"
+  },
+  {
+   "name": "ex_b_modes_match_closed_form",
+   "tier": "green",
+   "detail": "numeric vs analytic 6 modes, max rel err 2.37e-16"
+  },
+  {
+   "name": "ex_b_static_limit_rigid_mass",
+   "tier": "green",
+   "detail": "M(w->0) vs rigid-body matrix rel err 4.73e-07 (<1e-4; quasi-static at 0.05 Hz)"
+  },
+  {
+   "name": "ex_b_effective_mass_sums",
+   "tier": "green",
+   "detail": "sum over modes = rigid totals per direction, rel err 2.96e-16 (7004C p.56)"
+  },
+  {
+   "name": "ex_b_resultant_trap",
+   "tier": "green",
+   "detail": "net/(4*foot) = 0.00e+00 at 147.8 Hz rocking (foot 9.8 N, My 3.5 N*m)"
+  },
+  {
+   "name": "ex_c_lowf_ride_along",
+   "tier": "green",
+   "detail": "payload rides feet rigidly at 22 Hz: ratios ['1.035', '1.004', '1.035', '1.004', '1.004', '1.004', '1.035'] (within 6%; finite 22-Hz dynamic amplification expected)"
+  },
+  {
+   "name": "ex_c_main_notches_detected",
+   "tier": "green",
+   "detail": "all 3 notch channels detected on both main variants (ratio-based, anchored interior minima)"
+  },
+  {
+   "name": "ex_c_truncation_convergence_robust_metrics",
+   "tier": "green",
+   "detail": "2x modal refinement: worst f_notch shift 0.41% (<1%), worst area-frac shift 0.061 (<0.07)"
+  },
+  {
+   "name": "ex_c_rvis_threshold_sensitivity",
+   "tier": "yellow",
+   "detail": "DOCUMENTED caveat (decisions_log D8): r_vis is a 3-dB threshold metric; flips under refinement: ['stiff_t5_Q25/bounce: r_vis shift 0.45 m']. Use f_notch/area-frac as converged metrics; r_vis is descriptive."
+  },
+  {
+   "name": "ex_c_interface_suppression_deep",
+   "tier": "green",
+   "detail": "interface-channel suppression at notches ['33', '40', '36'] dB (>10)"
+  },
+  {
+   "name": "ex_d_newton_checks",
+   "tier": "green",
+   "detail": "netF=m*a_cg and My_cg=Iyy*thdd to 1.50e-14"
+  },
+  {
+   "name": "ex_d_lowf_apparent_mass",
+   "tier": "green",
+   "detail": "net F/a_b at 20 Hz = 6.192 vs M0=6.0 (3.2% \u2014 finite 20-Hz amplification expected)"
+  },
+  {
+   "name": "ex_d_limits_respected",
+   "tier": "green",
+   "detail": "max(limited response / limit) = 1.000000 (<=1)"
+  },
+  {
+   "name": "ex_d_overtest_structure",
+   "tier": "green",
+   "detail": "bounce 204x->5.2x (netF works); pitch stays 221x under netF, ->32x with moment limit"
+  },
+  {
+   "name": "ex_d_thx_undertest",
+   "tier": "green",
+   "detail": "test roll accel 1.4e-13 (exact 0) vs flight peak 16.73 rad/s^2/N"
+  },
+  {
+   "name": "ex_d_flight_labeled_hypothetical",
+   "tier": "green",
+   "detail": "HYPOTHETICAL coupled plate simulation (not flight data)"
+  },
+  {
+   "name": "ex_e_full_impedance_exact",
+   "tier": "green",
+   "detail": "full matrix impedance reconstruction == coupled FEM truth, max rel err 1.81e-12 (<1e-9): a measurement CAN replace the coupled solve"
+  },
+  {
+   "name": "ex_e_scalar_blind_to_rocking",
+   "tier": "green",
+   "detail": "single-point: moment err ['100%', '100%', '100%'] (~100% = predicts 0), per-foot err ['76%', '84%', '84%'] (>50%)"
+  },
+  {
+   "name": "ex_e_rigid3_recovers_rocking",
+   "tier": "green",
+   "detail": "rigid-3 (>=3 feet) per-foot err ['5%', '3%', '3%'] (<25% in the soft/low-overlap regime) = rocking recovered without coupled FEM"
+  },
+  {
+   "name": "ex_e_remote_proxy_config_mismatch",
+   "tier": "green",
+   "detail": "bare-config transmissibility proxy err ['110%', '102%', '96%'] (large = must calibrate in the integrated config; in-config is exact)"
+  },
+  {
+   "name": "figures_exist",
+   "tier": "green",
+   "detail": "16/16 figures present & >30kB"
+  },
+  {
+   "name": "gifs_animate",
+   "tier": "green",
+   "detail": "3 GIFs with >=30 frames each: [True, True, True]"
+  },
+  {
+   "name": "pptx_built",
+   "tier": "green",
+   "detail": "16 slides (>=12)"
+  },
+  {
+   "name": "harness_docs",
+   "tier": "green",
+   "detail": "all harness + handoff docs present"
+  },
+  {
+   "name": "complex_tdof_tables",
+   "tier": "yellow",
+   "detail": "7004C Appendix C complex-TDOF tables NOT replicated (image-only PDF; documented decisions_log D3) \u2014 methods used are equation-anchored instead"
+  }
+ ]
+}

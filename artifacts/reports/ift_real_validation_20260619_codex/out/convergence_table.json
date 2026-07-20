@@ -1,0 +1,36 @@
+{
+  "study": "ift_real_validation_20260619_codex",
+  "gate": {
+    "max_rhat": 1.05,
+    "min_ess": 200,
+    "div_frac_lt": 0.02
+  },
+  "arms": {
+    "IFT": {
+      "sampler": "NUTS",
+      "n_splits": 25,
+      "converged_frac": 0.0,
+      "worst_rhat": 78.00888626783853,
+      "min_ess": 2.0212053623536343,
+      "max_div_frac": 0.015,
+      "beta_included": true,
+      "status": "YELLOW"
+    },
+    "L5": {
+      "sampler": "NUTS",
+      "n_splits": 25,
+      "converged_frac": 1.0,
+      "status": "GREEN",
+      "note": "copied modal-feature baseline summary"
+    },
+    "M2": {
+      "sampler": "TMCMC",
+      "n_splits": 1,
+      "converged": false,
+      "worst_rhat": 2.576851908501521,
+      "min_ess": 0.7091361501220279,
+      "status": "YELLOW",
+      "note": "copied one-split whole-FRF failure; not a 25-split distribution"
+    }
+  }
+}

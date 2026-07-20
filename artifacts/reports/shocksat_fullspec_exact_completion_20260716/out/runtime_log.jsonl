@@ -1,0 +1,3 @@
+{"step": "armC_exact", "active_s": 15.1, "ts": "2026-07-16T10:40:53", "folds": 4}
+{"step": "exact_rerank", "active_s": 0.0, "ts": "2026-07-16T18:13:38", "n_scored": 28}
+{"step": "verdicts_final", "active_s": 0.0, "ts": "2026-07-16T18:14:14"}

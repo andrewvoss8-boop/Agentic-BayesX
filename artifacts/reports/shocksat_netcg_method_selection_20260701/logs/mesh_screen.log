@@ -1,0 +1,29 @@
+[    0.2s] cross-attach surgery: 68 coincident cross<->wall pairs to couple
+[baseline          ] screen=+0.440 MAC_shear=0.677 fRMS_shear=7.88% (329.5s) drum=[230.6, 233.7, 233.7, 234.4, 246.1, 247.5, 249.4, 251.6, 253.9, 254.7, 258.3, 258.9]
+[bottombox_E_lo    ] screen=+0.402 MAC_shear=0.643 fRMS_shear=8.03% (382.9s) drum=[233.3, 233.5, 235.1, 237.5, 240.8, 247.8, 252.0, 254.1, 257.7, 258.8]
+[plates_E_hi       ] screen=+0.402 MAC_shear=0.662 fRMS_shear=8.67% (341.1s) drum=[232.4, 235.2, 235.6, 239.1, 246.3, 248.2, 249.7, 255.3, 256.3, 259.5]
+[cross_bolt_trans  ] screen=+0.360 MAC_shear=0.598 fRMS_shear=7.91% (394.2s) drum=[232.4, 234.6, 235.4, 239.3, 247.6, 252.0, 254.0, 255.7]
+[plates_E_lo       ] screen=+0.433 MAC_shear=0.681 fRMS_shear=8.29% (378.3s) drum=[228.9, 229.0, 230.5, 232.7, 242.4, 246.0, 246.8, 247.9, 249.1, 251.8, 257.1, 257.7]
+[bottombox_E_hi    ] screen=+0.343 MAC_shear=0.683 fRMS_shear=11.34% (468.9s) drum=[232.0, 233.8, 234.8, 235.8, 247.8, 252.5, 254.1, 257.2, 258.8]
+[dish_mass_lo      ] screen=+0.440 MAC_shear=0.677 fRMS_shear=7.88% (298.1s) drum=[230.6, 233.7, 233.7, 234.4, 246.1, 247.5, 249.4, 251.6, 253.9, 254.7, 258.3, 258.9]
+[dish_mass_hi      ] screen=+0.440 MAC_shear=0.677 fRMS_shear=7.88% (259.3s) drum=[230.6, 233.7, 233.7, 234.4, 246.1, 247.5, 249.4, 251.6, 253.9, 254.7, 258.3, 258.9]
+[al_rho_lo         ] screen=+0.440 MAC_shear=0.677 fRMS_shear=7.88% (298.7s) drum=[230.6, 233.7, 233.7, 234.4, 246.1, 247.5, 249.4, 251.6, 253.9, 254.7, 258.3, 258.9]
+[steelLight_alHeavy] screen=+0.440 MAC_shear=0.677 fRMS_shear=7.88% (308.7s) drum=[230.6, 233.7, 233.7, 234.4, 246.1, 247.5, 249.4, 251.6, 253.9, 254.7, 258.3, 258.9]
+[joints_all_soft   ] screen=+0.338 MAC_shear=0.627 fRMS_shear=9.62% (302.9s) drum=[228.9, 233.0, 237.1, 240.9, 246.7, 247.7, 248.8, 249.7, 251.9, 254.6, 257.1, 259.8]
+[cross_bolt        ] screen=+0.365 MAC_shear=0.622 fRMS_shear=8.56% (286.7s) drum=[232.7, 234.6, 235.5, 239.5, 247.9, 252.2, 254.0, 255.6]
+
+=== MESH SCREEN (proxy, imperfect) ===
+  baseline           screen=+0.440 MAC_sh=0.677 fRMS_sh=7.88% drumShift=0.0% <= INHERITED
+  dish_mass_lo       screen=+0.440 MAC_sh=0.677 fRMS_sh=7.88% drumShift=0.0% *KEEP*
+  dish_mass_hi       screen=+0.440 MAC_sh=0.677 fRMS_sh=7.88% drumShift=0.0% *KEEP*
+  al_rho_lo          screen=+0.440 MAC_sh=0.677 fRMS_sh=7.88% drumShift=0.0% *KEEP*
+  steelLight_alHeavy screen=+0.440 MAC_sh=0.677 fRMS_sh=7.88% drumShift=0.0%
+  plates_E_lo        screen=+0.433 MAC_sh=0.681 fRMS_sh=8.29% drumShift=1.23%
+  bottombox_E_lo     screen=+0.402 MAC_sh=0.643 fRMS_sh=8.03% drumShift=1.23%
+  plates_E_hi        screen=+0.402 MAC_sh=0.662 fRMS_sh=8.67% drumShift=1.11%
+  cross_bolt         screen=+0.365 MAC_sh=0.622 fRMS_sh=8.56% drumShift=1.43%
+  cross_bolt_trans   screen=+0.360 MAC_sh=0.598 fRMS_sh=7.91% drumShift=1.39%
+  bottombox_E_hi     screen=+0.343 MAC_sh=0.683 fRMS_sh=11.34% drumShift=1.4%
+  joints_all_soft    screen=+0.338 MAC_sh=0.627 fRMS_sh=9.62% drumShift=1.0%
+
+KEPT for bake-off (inherited + top 3): ['baseline', 'dish_mass_lo', 'dish_mass_hi', 'al_rho_lo']

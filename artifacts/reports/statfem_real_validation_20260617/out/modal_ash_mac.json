@@ -1,0 +1,76 @@
+{
+  "likelihood": "L10_ash_freqMAC (.ash EMA shapes + MAC matching)",
+  "split_seed": 0,
+  "n_matched_ash_modes": 20,
+  "match_MAC_values": [
+    0.97,
+    0.5,
+    0.51,
+    0.88,
+    0.98,
+    0.9,
+    0.96,
+    0.7,
+    0.69,
+    0.61,
+    0.58,
+    0.76,
+    0.7,
+    0.74,
+    0.64,
+    0.89,
+    0.69,
+    0.34,
+    0.39,
+    0.66
+  ],
+  "match_MAC_mean": 0.7045,
+  "n_observed_impact": 46,
+  "n_heldout_impact": 31,
+  "ash_freq_only": {
+    "calib": {
+      "max_rhat": 1.0017817015081336,
+      "min_ess": 1958.4345640254694,
+      "divergences": 0,
+      "converged": true
+    },
+    "heldout_peak": {
+      "coverage": 0.9354838709677419,
+      "sigma_qoi": 1.105815112631126,
+      "interval_score": 1667.1690945444382,
+      "crps": 106.8772922826015,
+      "z_std": 0.44872891140517135,
+      "mean_width_db": 37.00733600992336
+    }
+  },
+  "ash_freq_plus_MAC": {
+    "calib": {
+      "max_rhat": 1.0257566437838066,
+      "min_ess": 95.5292738586163,
+      "divergences": 0,
+      "converged": false
+    },
+    "sigma_mac_med": 0.35093187749648813,
+    "heldout_peak": {
+      "coverage": 0.9354838709677419,
+      "sigma_qoi": 1.126239324604627,
+      "interval_score": 1719.3033512326963,
+      "crps": 110.25555649305655,
+      "z_std": 0.4693441487595277,
+      "mean_width_db": 37.65021119385068
+    }
+  },
+  "theta_med_freq": {
+    "bottom_box": 0.9392604528446771,
+    "cross_beam": 1.108804923127952,
+    "plates": 0.9806969992922676,
+    "top_box": 1.0156764336683946
+  },
+  "theta_med_MAC": {
+    "bottom_box": 0.9727789642553567,
+    "cross_beam": 1.0338555181221918,
+    "plates": 0.9231416182255484,
+    "top_box": 0.9654240531480986
+  },
+  "runtime_s": 4993.183860778809
+}

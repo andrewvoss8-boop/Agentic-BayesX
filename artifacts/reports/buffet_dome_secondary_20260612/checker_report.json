@@ -1,0 +1,136 @@
+{
+ "overall": "YELLOW",
+ "counts": {
+  "GREEN": 22,
+  "YELLOW": 3,
+  "RED": 0
+ },
+ "gates": [
+  {
+   "gate": "S1_artifact_exists",
+   "status": "GREEN",
+   "detail": "out/forcing_validation.json"
+  },
+  {
+   "gate": "S1_G1_fully_correlated_limit",
+   "status": "GREEN",
+   "detail": "max rel err 0.0193 (quadrature-consistent <=0.025); even leak 1.8e-31"
+  },
+  {
+   "gate": "S1_G2_fast_equals_full",
+   "status": "GREEN",
+   "detail": "max rel 4.08e-16"
+  },
+  {
+   "gate": "S1_G3_grid_resolution",
+   "status": "GREEN",
+   "detail": "worst joint-acceptance grid err 0.0217 at 400 Hz with 7.0 nodes/lateral-coherence-length (PRODUCTION MESH RULE: >=6 nodes per Lcoh at f_max)"
+  },
+  {
+   "gate": "S1_G4_daf_lowfreq_limit",
+   "status": "GREEN",
+   "detail": "rel diff 0.00053"
+  },
+  {
+   "gate": "S1_G5_peak_placement",
+   "status": "GREEN",
+   "detail": "worst rel err 0.0039"
+  },
+  {
+   "gate": "S1_G6_rms_closed_form",
+   "status": "GREEN",
+   "detail": "sigma ratio numeric/closed-form 0.9902"
+  },
+  {
+   "gate": "S1_G7_numerics",
+   "status": "GREEN",
+   "detail": "hermitian resid 7.49e-16; min Saa 0.01209"
+  },
+  {
+   "gate": "S1_G8_coherence_physics",
+   "status": "GREEN",
+   "detail": "lateral monotone True; low-f streamwise monotone True; J11(400Hz) non-monotone coincidence curve recorded"
+  },
+  {
+   "gate": "S2_beam_artifact_exists",
+   "status": "GREEN",
+   "detail": "out/beam_validation.json"
+  },
+  {
+   "gate": "S2_V1_rigid_body_modes",
+   "status": "GREEN",
+   "detail": "6 zero modes (expect 6); first elastic 149.3 Hz"
+  },
+  {
+   "gate": "S2_V2toV7_analytic_freq",
+   "status": "GREEN",
+   "detail": "worst |err| 0.040% vs analytic across bending/axial/torsion/SS/bar"
+  },
+  {
+   "gate": "S2_V6_rigid_body_residual",
+   "status": "GREEN",
+   "detail": "trans 0.0e+00, rot 4.7e-18"
+  },
+  {
+   "gate": "S3_assembly_donnell",
+   "status": "GREEN",
+   "detail": "SS-cylinder vs Donnell n=3..6: n3 -5.8%, n4 -3.8%, n5 -3.4%, n6 -3.0%; rigid 6/6; pairs <7.0e-10%"
+  },
+  {
+   "gate": "S3_model_rigid_body",
+   "status": "GREEN",
+   "detail": "free-structure K@rigid resid: trans 1.9e-16, rot 8.3e-17"
+  },
+  {
+   "gate": "S3_mass_sanity",
+   "status": "GREEN",
+   "detail": "barrel 296.9 kg vs analytic 296.9 (0.00%); total 785.8 kg"
+  },
+  {
+   "gate": "S4_modes_bcA",
+   "status": "GREEN",
+   "detail": "2004 modes to 841 Hz (666 below 400 Hz); target >=800 Hz"
+  },
+  {
+   "gate": "S4_qoi_bcA",
+   "status": "GREEN",
+   "detail": "separable-path self-check 9.8e-16; kernel clip frac max 0.000; 1954 modes; BUFFET-ONLY caveat present=True"
+  },
+  {
+   "gate": "S4_modes_bcB",
+   "status": "GREEN",
+   "detail": "2013 modes to 841 Hz (672 below 400 Hz); target >=800 Hz"
+  },
+  {
+   "gate": "S4_qoi_bcB",
+   "status": "GREEN",
+   "detail": "separable-path self-check 9.8e-16; kernel clip frac max 0.000; 1963 modes; BUFFET-ONLY caveat present=True"
+  },
+  {
+   "gate": "S5_ci_bcA",
+   "status": "GREEN",
+   "detail": "144 prior-propagation draws; label honest=True; MC quantile noise at 144 draws ~ +/-10-15% (documented)"
+  },
+  {
+   "gate": "S5_ci_bcB",
+   "status": "GREEN",
+   "detail": "144 prior-propagation draws; label honest=True; MC quantile noise at 144 draws ~ +/-10-15% (documented)"
+  },
+  {
+   "gate": "S6_coupling_truncation",
+   "status": "YELLOW",
+   "detail": "mode-displacement (820 Hz trunc) vs DIRECT full-58k solve: worst 12.24% over interface QOIs (driven point loads, masked to non-negligible response) -> modal superposition validated"
+  },
+  {
+   "gate": "S7_mesh_convergence",
+   "status": "YELLOW",
+   "detail": "meshf variant pending"
+  },
+  {
+   "gate": "S8_response_limit_proxy",
+   "status": "YELLOW",
+   "detail": "controlling 113 Hz: coherence 0.8494; gain eta-CV 47.07% + forcing-invariant 0e+00; CG-gain/mass 0.88 (7004C eff-mass tie); valid band 60-296 Hz = 50% of punch energy"
+  }
+ ],
+ "stage": "S1 forcing math + S2 element + S3 model/assembly certified. S4 modes/QOI and S5 CI gates reflect artifacts present at run time; PENDING entries are YELLOW (no claim made for them). Variant/mesh-convergence results are reported in packet.md when their artifacts exist."
+}

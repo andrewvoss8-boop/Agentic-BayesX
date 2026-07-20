@@ -1,0 +1,46 @@
+{
+ "tag": "bandnar",
+ "sensitivity": true,
+ "combo_idx": 3,
+ "arm": "M0",
+ "zeta": 0.02,
+ "len_logf": 0.3,
+ "len_z": 12.0,
+ "nuts": {
+  "max_rhat": 1.0034711597020916,
+  "min_ess": 1225.4787669217685,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 2800
+ },
+ "converged": true,
+ "heldout_coverage": {
+  "peak": {
+   "covered": 1,
+   "n": 14,
+   "frac": 0.07142857142857142
+  },
+  "band": {
+   "covered": 2,
+   "n": 14,
+   "frac": 0.14285714285714285
+  },
+  "combined": {
+   "covered": 3,
+   "n": 28,
+   "frac": 0.10714285714285714
+  },
+  "peak_noisy_frac": 0.7857142857142857,
+  "band_noisy_frac": 0.35714285714285715,
+  "nominal": 0.95
+ },
+ "sigma_d": {
+  "lo": 0.0,
+  "med": 0.0,
+  "hi": 0.0,
+  "fixed": true
+ },
+ "mean_band_width_db": 0.09992510604007242,
+ "runtime_s": 236.91
+}

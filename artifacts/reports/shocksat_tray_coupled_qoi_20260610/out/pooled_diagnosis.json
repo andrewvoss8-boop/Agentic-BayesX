@@ -1,0 +1,89 @@
+{
+ "verdict": "Diagnosis of the POOLED-mount sampler runs (D15/D16) -> out/pooled_diagnosis.json\n\nFacts established:\n1. Convergence ladder matches the FIM ordering: 6-param R-hat 5.03 ->\n   p3b 1.52 -> p2 1.24 (all 4x(1000+1000) d8, 0 divergences everywhere).\n2. Even p2 (t_all, r_all) misses the gate. Per-variable: worst R-hat moves to\n   theta_T/t_all mixing; chains overlap in range (not separated modes).\n3. The dominant ridge is t_all <-> r_all (corr(log) ~ -0.74): the rocking\n   modes price a COMBINATION of lateral translation + rotation stiffness\n   (CG-offset rocking), so the pair trades.\n4. t_all samples span the whole prior (0.05-39): STIFF-SIDE SATURATION --\n   once the mount is stiffer than the tray (sweep: f1 pins at 84.8 Hz above\n   ~5x nominal), frequencies stop moving and the likelihood goes flat ->\n   one-sided identifiability; the upper tail is prior-dominated.\n5. LOCAL-vs-GLOBAL lesson: the prior-whitened JOINT (mount+tray) FIM at\n   nominal says p2 is fine (2 informed combos, tray params cleanly\n   prior-bound) -- the saturation/banana is invisible to a local Jacobian.\n   This is exactly why the D12 gate names profile-likelihood/posterior\n   analysis as the companion to FIM.",
+ "joint_p2_fim_prior_whitened": [
+  {
+   "eig": 0.0,
+   "mix": {
+    "joint_lat": -1.0
+   }
+  },
+  {
+   "eig": 0.0,
+   "mix": {
+    "joint_ax": 1.0
+   }
+  },
+  {
+   "eig": 0.0,
+   "mix": {
+    "strut_EI": -1.0
+   }
+  },
+  {
+   "eig": 0.0,
+   "mix": {
+    "tray_E": 1.0
+   }
+  },
+  {
+   "eig": 0.01,
+   "mix": {
+    "strut_EA": -1.0
+   }
+  },
+  {
+   "eig": 18.53,
+   "mix": {
+    "t_all": -0.95,
+    "r_all": 0.31
+   }
+  },
+  {
+   "eig": 132.13,
+   "mix": {
+    "t_all": -0.31,
+    "r_all": -0.95
+   }
+  }
+ ],
+ "sampler": {
+  "p2": {
+   "worst_rhat": 1.244,
+   "min_ess": 8.2,
+   "divergences": 0,
+   "per_variable": {
+    "sigma_f": 1.044,
+    "theta_T": 1.244,
+    "theta_pool": 1.116
+   },
+   "corr_log_tall_rall": -0.736,
+   "corr_log_tall_tray": {
+    "tray_E": 0.17,
+    "strut_EA": 0.02,
+    "strut_EI": 0.113,
+    "joint_ax": 0.169,
+    "joint_lat": 0.114
+   },
+   "t_all_sample_range": [
+    0.05,
+    38.64
+   ]
+  },
+  "p3b": {
+   "worst_rhat": 1.516,
+   "min_ess": 4.4,
+   "divergences": 0,
+   "per_variable": {
+    "sigma_f": 1.194,
+    "theta_T": 1.288,
+    "theta_pool": 1.516
+   }
+  },
+  "p2r_remedy_2000x2000_d9": {
+   "worst_rhat": 2.22,
+   "min_ess": 3.0,
+   "divergences": 0,
+   "gate_pass": false
+  }
+ }
+}

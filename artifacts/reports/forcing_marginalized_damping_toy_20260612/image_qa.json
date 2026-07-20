@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "failures": [],
+  "n_figures": 4,
+  "figures": [
+    {
+      "file": "fig1_forcing_cancellation.png",
+      "width": 1620,
+      "height": 1260,
+      "bytes": 139239,
+      "pass": true
+    },
+    {
+      "file": "fig2_ratio_fit.png",
+      "width": 1620,
+      "height": 1314,
+      "bytes": 167249,
+      "pass": true
+    },
+    {
+      "file": "fig3_damping_posterior.png",
+      "width": 1620,
+      "height": 972,
+      "bytes": 55987,
+      "pass": true
+    },
+    {
+      "file": "fig4_qoi_posterior.png",
+      "width": 1655,
+      "height": 1044,
+      "bytes": 58406,
+      "pass": true
+    }
+  ]
+}

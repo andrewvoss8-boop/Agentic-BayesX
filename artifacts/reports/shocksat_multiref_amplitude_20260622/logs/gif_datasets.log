@@ -1,0 +1,8 @@
+selected held-out example channel 108 (DR 74, full-set coverage 0.75)
+  [prior (no data)] modes 0 (+0) skill +0.68 cover 0.97 Rhat nan
+  [+X (Test07)] modes 16 (+16) skill +0.76 cover 0.96 Rhat 1.002
+  [+X (Test07) + +Z (Test08)] modes 20 (+4) skill +0.76 cover 0.97 Rhat 1.002
+  [+X (Test07) + +Z (Test08) + +Y (Test03, modal)] +0 new modes (already covered) -> frame unchanged
+  [+X (Test07) + +Z (Test08) + +Y (Test03, modal) + 900z (Test10)] +0 new modes (already covered) -> frame unchanged
+
+wrote evolving_posterior_frf_datasets.gif (7 frames, ch 108); modes [0, 16, 20, 20, 20, 20, 20]; skill [0.68, 0.76, 0.76, 0.76, 0.76, 0.76, 0.76] | 178s

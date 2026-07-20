@@ -1,0 +1,51 @@
+{
+ "cid": "ma3_prop_xbeam16",
+ "track": "agent",
+ "round": 3,
+ "cls": "property_control",
+ "ops": [
+  "scale"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.16413588231025186,
+ "exact_b200_500": 0.21425964501940314,
+ "exact_folds": {
+  "m_xpos_990x": 0.34370607343022574,
+  "m_zpos_990z": 0.44706448607008964,
+  "m_ypos_990y": 0.09974044515164726,
+  "m_zpos_900z": -0.23396747541095522
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.20292753626380933,
+  "m_zpos_990z": 0.2126607073164053,
+  "m_ypos_990y": 0.164388002283117,
+  "m_zpos_900z": 0.2770623342142809
+ },
+ "theta_map": [
+  1.128030965401648,
+  0.9876436343707201,
+  1.002684547224237,
+  0.9573103552465222,
+  0.9472746017214904,
+  1.3751557103733423,
+  0.8594055164906477,
+  0.9907768690268991,
+  0.8242636108197967
+ ],
+ "enriched_pkg": "ma3_prop_xbeam16__xenr",
+ "spot_max_pct": 4.70765204596546e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 6.8912,
+  "pass": true
+ },
+ "solve_s_theta1": 667.8,
+ "solve_s_enrich": 656.2,
+ "wall_s": 1396.2,
+ "ts": "2026-07-17T11:06:43",
+ "diagnosis_link": "CONTROL: cross_beam x1.4 alone scored +0.1628; probe the response curve at x1.6"
+}

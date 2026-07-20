@@ -1,0 +1,334 @@
+{
+  "study": "ift_real_validation_20260619_codex",
+  "kind": "posthoc_frequency_grid_qoi_sensitivity",
+  "status": "YELLOW",
+  "posterior_invariance_certified": false,
+  "reason": "Uses the same split-0 posterior samples and varies only the QOI frequency grid. Because the headline IFT run is non-converged and this does not rerun the sampler on each grid, it is a bounded diagnostic, not a certified IFT invariance result.",
+  "split_seed": 0,
+  "grids": {
+    "full_173": {
+      "n_freq": 173,
+      "spacing": "subsampled from copied 45-260 Hz StatFEM grid"
+    },
+    "every_2nd_87": {
+      "n_freq": 87,
+      "spacing": "subsampled from copied 45-260 Hz StatFEM grid"
+    },
+    "every_4th_44": {
+      "n_freq": 44,
+      "spacing": "subsampled from copied 45-260 Hz StatFEM grid"
+    }
+  },
+  "arms": {
+    "IFT": {
+      "full_173": {
+        "peak": {
+          "interval_score": {
+            "mean": 6882149.3748676805,
+            "med": 980435.5526593362
+          },
+          "crps": {
+            "mean": 58324.874414459926,
+            "med": 11368.910711926845
+          },
+          "logpd": {
+            "mean": -14.400859598269694,
+            "med": -13.977393192840516
+          },
+          "coverage": {
+            "mean": 0.6451612903225806,
+            "med": 1.0
+          },
+          "zstd": {
+            "mean": -6.38277465586452e-05,
+            "std": 0.0005530918274868188
+          }
+        },
+        "band": {
+          "interval_score": {
+            "mean": 7746440.638410859,
+            "med": 1156129.2951402706
+          },
+          "crps": {
+            "mean": 65818.15822640336,
+            "med": 13603.731360714795
+          },
+          "logpd": {
+            "mean": -14.513242623701515,
+            "med": -14.182957818662626
+          },
+          "coverage": {
+            "mean": 0.6129032258064516,
+            "med": 1.0
+          },
+          "zstd": {
+            "mean": -0.00019751141473141044,
+            "std": 0.0011595965871037948
+          }
+        }
+      },
+      "every_2nd_87": {
+        "peak": {
+          "interval_score": {
+            "mean": 756306.3464047434,
+            "med": 370367.2885948605
+          },
+          "crps": {
+            "mean": 32871.04559520842,
+            "med": 2994.7897214485274
+          },
+          "logpd": {
+            "mean": -13.471100341724458,
+            "med": -12.956466569638158
+          },
+          "coverage": {
+            "mean": 0.6451612903225806,
+            "med": 1.0
+          },
+          "zstd": {
+            "mean": -0.0001017015337545288,
+            "std": 0.00040380131760933604
+          }
+        },
+        "band": {
+          "interval_score": {
+            "mean": 1223653.0811586143,
+            "med": 599284.3423520912
+          },
+          "crps": {
+            "mean": 52429.294357534774,
+            "med": 4853.504530303355
+          },
+          "logpd": {
+            "mean": -13.932457998955794,
+            "med": -13.418506952683195
+          },
+          "coverage": {
+            "mean": 0.6451612903225806,
+            "med": 1.0
+          },
+          "zstd": {
+            "mean": -0.0001227776786122521,
+            "std": 0.0009004984878911133
+          }
+        }
+      },
+      "every_4th_44": {
+        "peak": {
+          "interval_score": {
+            "mean": 1228662.8146076885,
+            "med": 106319.79402887198
+          },
+          "crps": {
+            "mean": 12876.17043832376,
+            "med": 1220.485498110982
+          },
+          "logpd": {
+            "mean": -12.503543534750076,
+            "med": -12.371863472692105
+          },
+          "coverage": {
+            "mean": 0.6774193548387096,
+            "med": 1.0
+          },
+          "zstd": {
+            "mean": -0.0001410649132704729,
+            "std": 0.0018982309922141033
+          }
+        },
+        "band": {
+          "interval_score": {
+            "mean": 2755892.3000688762,
+            "med": 237841.59849608244
+          },
+          "crps": {
+            "mean": 28896.596325844785,
+            "med": 2767.2175605940283
+          },
+          "logpd": {
+            "mean": -13.29284160156236,
+            "med": -13.180414735584073
+          },
+          "coverage": {
+            "mean": 0.6451612903225806,
+            "med": 1.0
+          },
+          "zstd": {
+            "mean": -0.0005601505443853476,
+            "std": 0.0028405724315819633
+          }
+        }
+      }
+    },
+    "L5": {
+      "full_173": {
+        "peak": {
+          "interval_score": {
+            "mean": 3885.4935484262915,
+            "med": 2472.6030634862013
+          },
+          "crps": {
+            "mean": 113.7189954628489,
+            "med": 74.02566444389413
+          },
+          "logpd": {
+            "mean": -142.11282766817732,
+            "med": -62.26651406436784
+          },
+          "coverage": {
+            "mean": 0.16129032258064516,
+            "med": 0.0
+          },
+          "zstd": {
+            "mean": -5.0528264631704705,
+            "std": 7.121249402183985
+          }
+        },
+        "band": {
+          "interval_score": {
+            "mean": 12353.2226224595,
+            "med": 7709.086172307121
+          },
+          "crps": {
+            "mean": 341.88114352665156,
+            "med": 219.4933082918372
+          },
+          "logpd": {
+            "mean": -237.70732146825915,
+            "med": -185.71247759332513
+          },
+          "coverage": {
+            "mean": 0.0967741935483871,
+            "med": 0.0
+          },
+          "zstd": {
+            "mean": -6.958607403664403,
+            "std": 7.647413791057181
+          }
+        }
+      },
+      "every_2nd_87": {
+        "peak": {
+          "interval_score": {
+            "mean": 3467.419175561684,
+            "med": 2071.1590825792982
+          },
+          "crps": {
+            "mean": 105.99900084654873,
+            "med": 66.05901723944075
+          },
+          "logpd": {
+            "mean": -67.32259268670255,
+            "med": -30.073067476995007
+          },
+          "coverage": {
+            "mean": 0.1935483870967742,
+            "med": 0.0
+          },
+          "zstd": {
+            "mean": -3.5598279882377852,
+            "std": 5.186613955060974
+          }
+        },
+        "band": {
+          "interval_score": {
+            "mean": 12253.623962277064,
+            "med": 7543.8152440689955
+          },
+          "crps": {
+            "mean": 341.33715976681447,
+            "med": 216.3726774578344
+          },
+          "logpd": {
+            "mean": -198.07176853597923,
+            "med": -145.25683021189442
+          },
+          "coverage": {
+            "mean": 0.12903225806451613,
+            "med": 0.0
+          },
+          "zstd": {
+            "mean": -6.340507773129747,
+            "std": 7.131493300374395
+          }
+        }
+      },
+      "every_4th_44": {
+        "peak": {
+          "interval_score": {
+            "mean": 2551.717462180152,
+            "med": 1433.406043501293
+          },
+          "crps": {
+            "mean": 89.0542658502689,
+            "med": 54.54636358650721
+          },
+          "logpd": {
+            "mean": -28.7889813777696,
+            "med": -9.903085134874356
+          },
+          "coverage": {
+            "mean": 0.2903225806451613,
+            "med": 0.0
+          },
+          "zstd": {
+            "mean": -1.9227046582381746,
+            "std": 3.5563748734193794
+          }
+        },
+        "band": {
+          "interval_score": {
+            "mean": 11836.128490929985,
+            "med": 6647.9910571220735
+          },
+          "crps": {
+            "mean": 345.2527200167774,
+            "med": 208.12375602738084
+          },
+          "logpd": {
+            "mean": -91.64283818884071,
+            "med": -70.388158905743
+          },
+          "coverage": {
+            "mean": 0.12903225806451613,
+            "med": 0.0
+          },
+          "zstd": {
+            "mean": -4.695473050272386,
+            "std": 5.1116284283462115
+          }
+        }
+      }
+    }
+  },
+  "relative_shifts_vs_full": {
+    "IFT": {
+      "full_173": {
+        "peak_interval_rel_shift": 0.0,
+        "band_interval_rel_shift": 0.0
+      },
+      "every_2nd_87": {
+        "peak_interval_rel_shift": -0.6222420866009242,
+        "band_interval_rel_shift": -0.4816459154947878
+      },
+      "every_4th_44": {
+        "peak_interval_rel_shift": -0.8915586101090583,
+        "band_interval_rel_shift": -0.7942776820068159
+      }
+    },
+    "L5": {
+      "full_173": {
+        "peak_interval_rel_shift": 0.0,
+        "band_interval_rel_shift": 0.0
+      },
+      "every_2nd_87": {
+        "peak_interval_rel_shift": -0.1623568242048906,
+        "band_interval_rel_shift": -0.021438459052620047
+      },
+      "every_4th_44": {
+        "peak_interval_rel_shift": -0.4202846123306632,
+        "band_interval_rel_shift": -0.13764213960881055
+      }
+    }
+  }
+}

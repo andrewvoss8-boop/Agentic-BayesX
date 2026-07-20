@@ -1,0 +1,6 @@
+{
+  "generated_utc": "2026-06-12T21:10:54.239174+00:00",
+  "active_runtime_s": 3.864,
+  "elapsed_wallclock_s": 3.864,
+  "command": "python scripts/scan_amplitude_dependence.py"
+}

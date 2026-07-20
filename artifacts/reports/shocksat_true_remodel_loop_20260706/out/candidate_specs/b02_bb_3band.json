@@ -1,0 +1,32 @@
+{
+ "cid": "b02_bb_3band",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 0.0,
+    "zhi": 4.0
+   },
+   "name": "bb_base"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  }
+ ],
+ "rationale": "Bottom-box into 3 stiffness sub-regions (base / field / bulkhead-band): maximal DISTRIBUTION freedom for the region carrying ~0.9 of the +Z@900 modes' strain energy \u2014 tests whether more model-form distribution freedom (not just level) clears the floor.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)",
+ "split_info": {
+  "bb_base": 3588,
+  "bb_bulkband": 3864
+ }
+}

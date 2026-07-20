@@ -1,0 +1,209 @@
+{
+  "strain_energy": {
+    "al_welds": {
+      "typical_frac": 0.002281648699512306,
+      "peak_frac": 0.02135869594870062,
+      "n_modes_dominant": 0
+    },
+    "angle_brackets": {
+      "typical_frac": 0.002508844874366683,
+      "peak_frac": 0.14338637792717118,
+      "n_modes_dominant": 0
+    },
+    "bottom_box": {
+      "typical_frac": 0.10397354915613542,
+      "peak_frac": 0.9937603037433993,
+      "n_modes_dominant": 17
+    },
+    "contact": {
+      "typical_frac": 0.0006733746044534085,
+      "peak_frac": 0.060417614578545754,
+      "n_modes_dominant": 0
+    },
+    "cross_beam": {
+      "typical_frac": 0.012732213920408892,
+      "peak_frac": 0.49791216523266785,
+      "n_modes_dominant": 1
+    },
+    "joints": {
+      "typical_frac": 0.01728200006365161,
+      "peak_frac": 0.23159722140112984,
+      "n_modes_dominant": 0
+    },
+    "plates": {
+      "typical_frac": 0.03614166642283346,
+      "peak_frac": 0.9999968954565117,
+      "n_modes_dominant": 6
+    },
+    "steel_welds": {
+      "typical_frac": 0.0010311288557348787,
+      "peak_frac": 0.022325060502397992,
+      "n_modes_dominant": 0
+    },
+    "top_box": {
+      "typical_frac": 0.34335467557398214,
+      "peak_frac": 0.9223716321862078,
+      "n_modes_dominant": 23
+    }
+  },
+  "n_identifiable_groups": 4,
+  "identifiability_order_by_peak_SE": [
+    "plates",
+    "bottom_box",
+    "top_box",
+    "cross_beam",
+    "joints",
+    "angle_brackets",
+    "contact",
+    "steel_welds",
+    "al_welds"
+  ],
+  "n_calibration_modes": 45,
+  "realized_discrepancy_floor_sigma_d0": 1.725776888481742,
+  "fim": {
+    "eigvals": [
+      8803389.65324139,
+      5949129.139960012,
+      1433342.257243958,
+      166161.14220319866,
+      78425.1102127947,
+      1246.0505788141509,
+      674.5237627305198,
+      522.031781932972,
+      193.96587243425085
+    ],
+    "prior_precision": 16.0,
+    "n_combos_above_prior": 9,
+    "combos": [
+      {
+        "eigval": 8803389.65324139,
+        "above_prior": true,
+        "top_groups": {
+          "bottom_box": -0.949,
+          "top_box": -0.303,
+          "plates": 0.075
+        }
+      },
+      {
+        "eigval": 5949129.139960012,
+        "above_prior": true,
+        "top_groups": {
+          "top_box": 0.89,
+          "plates": -0.328,
+          "bottom_box": -0.311
+        }
+      },
+      {
+        "eigval": 1433342.257243958,
+        "above_prior": true,
+        "top_groups": {
+          "plates": 0.903,
+          "top_box": 0.316,
+          "joints": 0.272
+        }
+      },
+      {
+        "eigval": 166161.14220319866,
+        "above_prior": true,
+        "top_groups": {
+          "cross_beam": 0.835,
+          "joints": 0.472,
+          "plates": -0.199
+        }
+      },
+      {
+        "eigval": 78425.1102127947,
+        "above_prior": true,
+        "top_groups": {
+          "joints": -0.837,
+          "cross_beam": 0.493,
+          "plates": 0.179
+        }
+      },
+      {
+        "eigval": 1246.0505788141509,
+        "above_prior": true,
+        "top_groups": {
+          "angle_brackets": 0.789,
+          "contact": 0.481,
+          "steel_welds": 0.324
+        }
+      },
+      {
+        "eigval": 674.5237627305198,
+        "above_prior": true,
+        "top_groups": {
+          "steel_welds": 0.796,
+          "contact": -0.591,
+          "al_welds": 0.116
+        }
+      },
+      {
+        "eigval": 522.031781932972,
+        "above_prior": true,
+        "top_groups": {
+          "contact": 0.579,
+          "angle_brackets": -0.566,
+          "steel_welds": 0.503
+        }
+      },
+      {
+        "eigval": 193.96587243425085,
+        "above_prior": true,
+        "top_groups": {
+          "al_welds": 0.949,
+          "contact": 0.289,
+          "angle_brackets": -0.09
+        }
+      }
+    ]
+  },
+  "finite_perturbation": {
+    "al_welds": {
+      "max_rel_freq_shift_pct": 0.3073488562643778,
+      "median_rel_freq_shift_pct": 0.01068624619513514,
+      "in_load_path": true
+    },
+    "angle_brackets": {
+      "max_rel_freq_shift_pct": 1.3701728771464028,
+      "median_rel_freq_shift_pct": 0.009942405784979513,
+      "in_load_path": true
+    },
+    "bottom_box": {
+      "max_rel_freq_shift_pct": 9.43555538271097,
+      "median_rel_freq_shift_pct": 1.2149153389110046,
+      "in_load_path": true
+    },
+    "contact": {
+      "max_rel_freq_shift_pct": 0.5554068024937964,
+      "median_rel_freq_shift_pct": 0.002501357257045367,
+      "in_load_path": true
+    },
+    "cross_beam": {
+      "max_rel_freq_shift_pct": 4.163679931911024,
+      "median_rel_freq_shift_pct": 0.14142170405768706,
+      "in_load_path": true
+    },
+    "joints": {
+      "max_rel_freq_shift_pct": 1.98327890159804,
+      "median_rel_freq_shift_pct": 0.09587038800219494,
+      "in_load_path": true
+    },
+    "plates": {
+      "max_rel_freq_shift_pct": 9.544261653446062,
+      "median_rel_freq_shift_pct": 0.09090874379761305,
+      "in_load_path": true
+    },
+    "steel_welds": {
+      "max_rel_freq_shift_pct": 0.2227212225626385,
+      "median_rel_freq_shift_pct": 0.0051079218704841445,
+      "in_load_path": true
+    },
+    "top_box": {
+      "max_rel_freq_shift_pct": 9.544508718674628,
+      "median_rel_freq_shift_pct": 5.964894075482219,
+      "in_load_path": true
+    }
+  },
+  "note": "Strain energy certifies signal-above-floor per GROUP; FIM eigen-view certifies how many parameter COMBINATIONS separate. No real-data ground-truth theta, so this is the pre-test identifiability lever, not a recovery claim."
+}

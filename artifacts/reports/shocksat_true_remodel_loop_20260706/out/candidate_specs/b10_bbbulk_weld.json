@@ -1,0 +1,31 @@
+{
+ "cid": "b10_bbbulk_weld",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    104,
+    105,
+    106
+   ],
+   "t_scale": 0.74,
+   "name": "steelweld_t074"
+  }
+ ],
+ "rationale": "a02(bb bulkhead split)+steel-weld-thin: the two bottom-box-targeted positive directions combined, minimal.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)",
+ "split_info": {
+  "bb_bulkband": 3864
+ }
+}

@@ -1,0 +1,20 @@
+arm-C exact: basis A0_wide__enr (r=194), theta=ones(9), 4 per-fold refits
+  [m_xpos_990x] refitting shape MAP on TRAIN ['m_zpos_990z', 'm_ypos_990y', 'm_zpos_900z'] ...
+/Users/avoss/Library/Python/3.9/lib/python/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+  [m_xpos_990x] MAP done, nlp -2630.851 (4s)
+  [m_xpos_990x] sub200 +0.2871  b200_500 +0.0714
+  [m_zpos_990z] refitting shape MAP on TRAIN ['m_xpos_990x', 'm_ypos_990y', 'm_zpos_900z'] ...
+  [m_zpos_990z] MAP done, nlp -2668.552 (4s)
+  [m_zpos_990z] sub200 +0.4639  b200_500 -0.0174
+  [m_ypos_990y] refitting shape MAP on TRAIN ['m_xpos_990x', 'm_zpos_990z', 'm_zpos_900z'] ...
+  [m_ypos_990y] MAP done, nlp -2702.240 (4s)
+  [m_ypos_990y] sub200 +0.0701  b200_500 +0.0594
+  [m_zpos_900z] refitting shape MAP on TRAIN ['m_xpos_990x', 'm_zpos_990z', 'm_ypos_990y'] ...
+  [m_zpos_900z] MAP done, nlp -2811.834 (3s)
+  [m_zpos_900z] sub200 -0.1831  b200_500 +0.0122
+
+=== T1 RESULT (arm C, honest per-fold exact refits) ===
+  sub200   : C +0.1595  A1 +0.1137  delta +0.0458 +/- 0.0361 (2SE 0.0722)  S1 rule met: False
+  b200_500 : C +0.0314  A1 +0.0335  delta -0.0021 +/- 0.0244 (2SE 0.0487)  S1 rule met: False
+  (study's withdrawn leaky number was sub200 0.1570)

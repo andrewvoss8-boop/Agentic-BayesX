@@ -1,0 +1,57 @@
+{
+ "figA_coverage_vs_delta.png": {
+  "w": 1960,
+  "h": 990,
+  "ink_frac": 0.0656,
+  "color_frac": 0.017,
+  "ok": true
+ },
+ "figB_sigmad_thermometer.png": {
+  "w": 1461,
+  "h": 986,
+  "ink_frac": 0.1485,
+  "color_frac": 0.0395,
+  "ok": true
+ },
+ "figC_alpha_intervals.png": {
+  "w": 2259,
+  "h": 1306,
+  "ink_frac": 0.1205,
+  "color_frac": 0.0741,
+  "ok": true
+ },
+ "figD_honest_limit.png": {
+  "w": 2292,
+  "h": 1080,
+  "ink_frac": 0.355,
+  "color_frac": 0.0366,
+  "ok": true
+ },
+ "figE_identifiability.png": {
+  "w": 2352,
+  "h": 1000,
+  "ink_frac": 0.4033,
+  "color_frac": 0.3599,
+  "ok": true
+ },
+ "fig_testbed.png": {
+  "w": 2343,
+  "h": 1020,
+  "ink_frac": 0.0721,
+  "color_frac": 0.0118,
+  "ok": true
+ },
+ "gif1_still.png": {
+  "w": 1720,
+  "h": 1040,
+  "ink_frac": 0.0932,
+  "color_frac": 0.05,
+  "ok": true
+ },
+ "gif1_frf_bands.gif": {
+  "exists": true,
+  "bytes": 276764,
+  "ok": true
+ },
+ "ALL_OK": true
+}

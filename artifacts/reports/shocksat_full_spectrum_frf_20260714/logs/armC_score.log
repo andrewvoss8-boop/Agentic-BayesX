@@ -1,0 +1,26 @@
+/Users/avoss/Library/Python/3.9/lib/python/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+  C m_xpos_990x: sub200 0.3883303769385974
+  C m_zpos_990z: sub200 0.43685962553677804
+  C m_ypos_990y: sub200 0.1101064931376635
+  C m_zpos_900z: sub200 -0.17793673791172263
+C {
+ "sub200": {
+  "P1p_mean": 0.1893399394253291,
+  "P1p_se": 0.1420191553866348,
+  "P3_mean": 0.17437224054682401,
+  "n_folds": 4
+ },
+ "b200_500": {
+  "P1p_mean": 0.057896106604326064,
+  "P1p_se": 0.013559228342320354,
+  "P3_mean": 0.055608527629471015,
+  "n_folds": 4
+ },
+ "b500_ceiling": {
+  "P1p_mean": null,
+  "P1p_se": null,
+  "P3_mean": null,
+  "n_folds": 0
+ }
+}

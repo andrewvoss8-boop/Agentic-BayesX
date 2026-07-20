@@ -1,0 +1,2398 @@
+{
+ "config": "nominal (deck + shield 1.7mm steel, feet SPC)",
+ "n_modes_below_500": 184,
+ "modes": [
+  {
+   "mode": 1,
+   "freq_hz": 13.511,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0008,
+    "thrust_plate": 0.0,
+    "shield": 0.7558,
+    "valve_panel": 0.0,
+    "electronics_box": 0.2433,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 2,
+   "freq_hz": 17.592,
+   "dominant_region": "white_box_upper",
+   "ke_fractions": {
+    "frame": 0.0017,
+    "thrust_plate": 0.0,
+    "shield": 0.0002,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.998
+   }
+  },
+  {
+   "mode": 3,
+   "freq_hz": 17.81,
+   "dominant_region": "white_box_upper",
+   "ke_fractions": {
+    "frame": 0.0019,
+    "thrust_plate": 0.0001,
+    "shield": 0.0003,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.9976
+   }
+  },
+  {
+   "mode": 4,
+   "freq_hz": 18.377,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0005,
+    "thrust_plate": 0.0,
+    "shield": 0.8854,
+    "valve_panel": 0.0,
+    "electronics_box": 0.1141,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 5,
+   "freq_hz": 24.166,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7577,
+    "thrust_plate": 0.0244,
+    "shield": 0.1193,
+    "valve_panel": 0.0462,
+    "electronics_box": 0.018,
+    "white_box_upper": 0.0343
+   }
+  },
+  {
+   "mode": 6,
+   "freq_hz": 25.32,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0003,
+    "thrust_plate": 0.0,
+    "shield": 0.9997,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 7,
+   "freq_hz": 26.77,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0056,
+    "thrust_plate": 0.0002,
+    "shield": 0.5475,
+    "valve_panel": 0.0003,
+    "electronics_box": 0.4462,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 8,
+   "freq_hz": 27.944,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0007,
+    "thrust_plate": 0.0,
+    "shield": 0.9991,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 9,
+   "freq_hz": 32.039,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.036,
+    "thrust_plate": 0.001,
+    "shield": 0.9583,
+    "valve_panel": 0.0025,
+    "electronics_box": 0.0018,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 10,
+   "freq_hz": 34.207,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.5947,
+    "thrust_plate": 0.0224,
+    "shield": 0.2897,
+    "valve_panel": 0.0554,
+    "electronics_box": 0.0224,
+    "white_box_upper": 0.0155
+   }
+  },
+  {
+   "mode": 11,
+   "freq_hz": 35.97,
+   "dominant_region": "white_box_upper",
+   "ke_fractions": {
+    "frame": 0.0039,
+    "thrust_plate": 0.0001,
+    "shield": 0.0083,
+    "valve_panel": 0.0003,
+    "electronics_box": 0.0006,
+    "white_box_upper": 0.9868
+   }
+  },
+  {
+   "mode": 12,
+   "freq_hz": 37.222,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1318,
+    "thrust_plate": 0.0054,
+    "shield": 0.7906,
+    "valve_panel": 0.0138,
+    "electronics_box": 0.0542,
+    "white_box_upper": 0.0042
+   }
+  },
+  {
+   "mode": 13,
+   "freq_hz": 38.39,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0008,
+    "thrust_plate": 0.0,
+    "shield": 0.9991,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 14,
+   "freq_hz": 38.598,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0072,
+    "thrust_plate": 0.0003,
+    "shield": 0.9913,
+    "valve_panel": 0.0009,
+    "electronics_box": 0.0003,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 15,
+   "freq_hz": 42.598,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0072,
+    "thrust_plate": 0.0002,
+    "shield": 0.8046,
+    "valve_panel": 0.0007,
+    "electronics_box": 0.1872,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 16,
+   "freq_hz": 42.666,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0002,
+    "thrust_plate": 0.0,
+    "shield": 0.9997,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 17,
+   "freq_hz": 44.037,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0005,
+    "thrust_plate": 0.0,
+    "shield": 0.9978,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0015,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 18,
+   "freq_hz": 44.133,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0226,
+    "thrust_plate": 0.0004,
+    "shield": 0.8565,
+    "valve_panel": 0.0012,
+    "electronics_box": 0.1192,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 19,
+   "freq_hz": 45.334,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0172,
+    "thrust_plate": 0.0002,
+    "shield": 0.9062,
+    "valve_panel": 0.0011,
+    "electronics_box": 0.0752,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 20,
+   "freq_hz": 47.274,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.704,
+    "thrust_plate": 0.0056,
+    "shield": 0.1856,
+    "valve_panel": 0.0522,
+    "electronics_box": 0.0485,
+    "white_box_upper": 0.0041
+   }
+  },
+  {
+   "mode": 21,
+   "freq_hz": 47.613,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9525,
+    "thrust_plate": 0.0006,
+    "shield": 0.0281,
+    "valve_panel": 0.0022,
+    "electronics_box": 0.0104,
+    "white_box_upper": 0.0062
+   }
+  },
+  {
+   "mode": 22,
+   "freq_hz": 49.136,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.2093,
+    "thrust_plate": 0.001,
+    "shield": 0.4323,
+    "valve_panel": 0.0085,
+    "electronics_box": 0.3482,
+    "white_box_upper": 0.0008
+   }
+  },
+  {
+   "mode": 23,
+   "freq_hz": 51.159,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0311,
+    "thrust_plate": 0.0002,
+    "shield": 0.968,
+    "valve_panel": 0.0005,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 24,
+   "freq_hz": 53.317,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7912,
+    "thrust_plate": 0.0014,
+    "shield": 0.1655,
+    "valve_panel": 0.0145,
+    "electronics_box": 0.0213,
+    "white_box_upper": 0.0061
+   }
+  },
+  {
+   "mode": 25,
+   "freq_hz": 54.922,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1501,
+    "thrust_plate": 0.0014,
+    "shield": 0.8096,
+    "valve_panel": 0.0026,
+    "electronics_box": 0.0359,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 26,
+   "freq_hz": 55.674,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0103,
+    "thrust_plate": 0.0002,
+    "shield": 0.9566,
+    "valve_panel": 0.0005,
+    "electronics_box": 0.0323,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 27,
+   "freq_hz": 56.099,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0455,
+    "thrust_plate": 0.0001,
+    "shield": 0.9198,
+    "valve_panel": 0.0041,
+    "electronics_box": 0.0299,
+    "white_box_upper": 0.0007
+   }
+  },
+  {
+   "mode": 28,
+   "freq_hz": 56.996,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0009,
+    "thrust_plate": 0.0001,
+    "shield": 0.9989,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 29,
+   "freq_hz": 59.17,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0019,
+    "thrust_plate": 0.0,
+    "shield": 0.9927,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0054,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 30,
+   "freq_hz": 62.988,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0001,
+    "thrust_plate": 0.0,
+    "shield": 0.9999,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 31,
+   "freq_hz": 65.22,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1562,
+    "thrust_plate": 0.0005,
+    "shield": 0.8396,
+    "valve_panel": 0.0011,
+    "electronics_box": 0.0024,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 32,
+   "freq_hz": 66.143,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0019,
+    "thrust_plate": 0.0001,
+    "shield": 0.9976,
+    "valve_panel": 0.0002,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 33,
+   "freq_hz": 66.837,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0806,
+    "thrust_plate": 0.0006,
+    "shield": 0.7909,
+    "valve_panel": 0.0019,
+    "electronics_box": 0.1258,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 34,
+   "freq_hz": 69.299,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.5599,
+    "thrust_plate": 0.0028,
+    "shield": 0.3775,
+    "valve_panel": 0.0099,
+    "electronics_box": 0.0481,
+    "white_box_upper": 0.0018
+   }
+  },
+  {
+   "mode": 35,
+   "freq_hz": 72.846,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0008,
+    "thrust_plate": 0.0,
+    "shield": 0.9986,
+    "valve_panel": 0.0006,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 36,
+   "freq_hz": 73.346,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0041,
+    "thrust_plate": 0.0002,
+    "shield": 0.9952,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 37,
+   "freq_hz": 75.414,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0003,
+    "thrust_plate": 0.0,
+    "shield": 0.9997,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 38,
+   "freq_hz": 77.893,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0267,
+    "thrust_plate": 0.002,
+    "shield": 0.8819,
+    "valve_panel": 0.0064,
+    "electronics_box": 0.0829,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 39,
+   "freq_hz": 78.382,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0243,
+    "thrust_plate": 0.0022,
+    "shield": 0.8537,
+    "valve_panel": 0.0047,
+    "electronics_box": 0.1151,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 40,
+   "freq_hz": 79.815,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7043,
+    "thrust_plate": 0.0686,
+    "shield": 0.0809,
+    "valve_panel": 0.1355,
+    "electronics_box": 0.0099,
+    "white_box_upper": 0.0008
+   }
+  },
+  {
+   "mode": 41,
+   "freq_hz": 88.948,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.5958,
+    "thrust_plate": 0.0051,
+    "shield": 0.0748,
+    "valve_panel": 0.309,
+    "electronics_box": 0.0025,
+    "white_box_upper": 0.0128
+   }
+  },
+  {
+   "mode": 42,
+   "freq_hz": 90.951,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0056,
+    "thrust_plate": 0.0,
+    "shield": 0.9396,
+    "valve_panel": 0.0005,
+    "electronics_box": 0.0542,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 43,
+   "freq_hz": 94.984,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0137,
+    "thrust_plate": 0.0001,
+    "shield": 0.9774,
+    "valve_panel": 0.0064,
+    "electronics_box": 0.0022,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 44,
+   "freq_hz": 95.548,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0054,
+    "thrust_plate": 0.0001,
+    "shield": 0.9935,
+    "valve_panel": 0.0009,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 45,
+   "freq_hz": 97.525,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0075,
+    "thrust_plate": 0.0003,
+    "shield": 0.9847,
+    "valve_panel": 0.0042,
+    "electronics_box": 0.0032,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 46,
+   "freq_hz": 98.865,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0004,
+    "thrust_plate": 0.0,
+    "shield": 0.9987,
+    "valve_panel": 0.0008,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 47,
+   "freq_hz": 99.094,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0237,
+    "thrust_plate": 0.0002,
+    "shield": 0.9479,
+    "valve_panel": 0.0075,
+    "electronics_box": 0.0203,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 48,
+   "freq_hz": 99.33,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0146,
+    "thrust_plate": 0.0001,
+    "shield": 0.9628,
+    "valve_panel": 0.0187,
+    "electronics_box": 0.0036,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 49,
+   "freq_hz": 101.03,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0048,
+    "thrust_plate": 0.0001,
+    "shield": 0.9794,
+    "valve_panel": 0.001,
+    "electronics_box": 0.0146,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 50,
+   "freq_hz": 101.547,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0314,
+    "thrust_plate": 0.0005,
+    "shield": 0.9601,
+    "valve_panel": 0.0076,
+    "electronics_box": 0.0002,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 51,
+   "freq_hz": 101.724,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0216,
+    "thrust_plate": 0.0001,
+    "shield": 0.9273,
+    "valve_panel": 0.0093,
+    "electronics_box": 0.0415,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 52,
+   "freq_hz": 103.821,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.5351,
+    "thrust_plate": 0.0025,
+    "shield": 0.1193,
+    "valve_panel": 0.3343,
+    "electronics_box": 0.0029,
+    "white_box_upper": 0.0058
+   }
+  },
+  {
+   "mode": 53,
+   "freq_hz": 106.535,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.2209,
+    "thrust_plate": 0.0024,
+    "shield": 0.7247,
+    "valve_panel": 0.0285,
+    "electronics_box": 0.0222,
+    "white_box_upper": 0.0013
+   }
+  },
+  {
+   "mode": 54,
+   "freq_hz": 106.649,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.53,
+    "thrust_plate": 0.0057,
+    "shield": 0.3614,
+    "valve_panel": 0.0905,
+    "electronics_box": 0.0092,
+    "white_box_upper": 0.0031
+   }
+  },
+  {
+   "mode": 55,
+   "freq_hz": 109.171,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0063,
+    "thrust_plate": 0.0001,
+    "shield": 0.979,
+    "valve_panel": 0.0025,
+    "electronics_box": 0.0119,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 56,
+   "freq_hz": 109.925,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0195,
+    "thrust_plate": 0.0002,
+    "shield": 0.9775,
+    "valve_panel": 0.0025,
+    "electronics_box": 0.0002,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 57,
+   "freq_hz": 110.418,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0066,
+    "thrust_plate": 0.0001,
+    "shield": 0.9776,
+    "valve_panel": 0.0026,
+    "electronics_box": 0.013,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 58,
+   "freq_hz": 113.963,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0454,
+    "thrust_plate": 0.0003,
+    "shield": 0.9263,
+    "valve_panel": 0.0061,
+    "electronics_box": 0.0211,
+    "white_box_upper": 0.0009
+   }
+  },
+  {
+   "mode": 59,
+   "freq_hz": 115.499,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0029,
+    "thrust_plate": 0.0,
+    "shield": 0.9968,
+    "valve_panel": 0.0003,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 60,
+   "freq_hz": 115.882,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.6336,
+    "thrust_plate": 0.0016,
+    "shield": 0.2283,
+    "valve_panel": 0.1091,
+    "electronics_box": 0.0013,
+    "white_box_upper": 0.026
+   }
+  },
+  {
+   "mode": 61,
+   "freq_hz": 118.0,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0124,
+    "thrust_plate": 0.0002,
+    "shield": 0.974,
+    "valve_panel": 0.0023,
+    "electronics_box": 0.0111,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 62,
+   "freq_hz": 118.243,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.121,
+    "thrust_plate": 0.0004,
+    "shield": 0.837,
+    "valve_panel": 0.0239,
+    "electronics_box": 0.0107,
+    "white_box_upper": 0.007
+   }
+  },
+  {
+   "mode": 63,
+   "freq_hz": 120.556,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.4613,
+    "thrust_plate": 0.0029,
+    "shield": 0.3805,
+    "valve_panel": 0.135,
+    "electronics_box": 0.0175,
+    "white_box_upper": 0.0027
+   }
+  },
+  {
+   "mode": 64,
+   "freq_hz": 121.856,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.288,
+    "thrust_plate": 0.0015,
+    "shield": 0.6151,
+    "valve_panel": 0.0767,
+    "electronics_box": 0.0174,
+    "white_box_upper": 0.0013
+   }
+  },
+  {
+   "mode": 65,
+   "freq_hz": 125.919,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0301,
+    "thrust_plate": 0.0003,
+    "shield": 0.6429,
+    "valve_panel": 0.0025,
+    "electronics_box": 0.3237,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 66,
+   "freq_hz": 128.158,
+   "dominant_region": "electronics_box",
+   "ke_fractions": {
+    "frame": 0.016,
+    "thrust_plate": 0.0,
+    "shield": 0.3547,
+    "valve_panel": 0.0003,
+    "electronics_box": 0.6264,
+    "white_box_upper": 0.0026
+   }
+  },
+  {
+   "mode": 67,
+   "freq_hz": 131.131,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0084,
+    "thrust_plate": 0.0,
+    "shield": 0.9909,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0003,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 68,
+   "freq_hz": 131.874,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0004,
+    "thrust_plate": 0.0,
+    "shield": 0.9989,
+    "valve_panel": 0.0002,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 69,
+   "freq_hz": 132.219,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0112,
+    "thrust_plate": 0.0,
+    "shield": 0.8904,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0979,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 70,
+   "freq_hz": 134.426,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.244,
+    "thrust_plate": 0.0003,
+    "shield": 0.5589,
+    "valve_panel": 0.002,
+    "electronics_box": 0.0042,
+    "white_box_upper": 0.1905
+   }
+  },
+  {
+   "mode": 71,
+   "freq_hz": 134.621,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1317,
+    "thrust_plate": 0.0002,
+    "shield": 0.7352,
+    "valve_panel": 0.0025,
+    "electronics_box": 0.0025,
+    "white_box_upper": 0.1279
+   }
+  },
+  {
+   "mode": 72,
+   "freq_hz": 135.11,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.242,
+    "thrust_plate": 0.001,
+    "shield": 0.4391,
+    "valve_panel": 0.0449,
+    "electronics_box": 0.0095,
+    "white_box_upper": 0.2635
+   }
+  },
+  {
+   "mode": 73,
+   "freq_hz": 138.04,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1218,
+    "thrust_plate": 0.0002,
+    "shield": 0.8305,
+    "valve_panel": 0.0186,
+    "electronics_box": 0.011,
+    "white_box_upper": 0.0178
+   }
+  },
+  {
+   "mode": 74,
+   "freq_hz": 139.125,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.6006,
+    "thrust_plate": 0.0004,
+    "shield": 0.2988,
+    "valve_panel": 0.0812,
+    "electronics_box": 0.0024,
+    "white_box_upper": 0.0165
+   }
+  },
+  {
+   "mode": 75,
+   "freq_hz": 141.525,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7025,
+    "thrust_plate": 0.0022,
+    "shield": 0.2326,
+    "valve_panel": 0.0234,
+    "electronics_box": 0.002,
+    "white_box_upper": 0.0374
+   }
+  },
+  {
+   "mode": 76,
+   "freq_hz": 142.541,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0078,
+    "thrust_plate": 0.0,
+    "shield": 0.9898,
+    "valve_panel": 0.001,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0014
+   }
+  },
+  {
+   "mode": 77,
+   "freq_hz": 143.704,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0009,
+    "thrust_plate": 0.0,
+    "shield": 0.9989,
+    "valve_panel": 0.0002,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 78,
+   "freq_hz": 146.751,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0038,
+    "thrust_plate": 0.0001,
+    "shield": 0.9374,
+    "valve_panel": 0.003,
+    "electronics_box": 0.0557,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 79,
+   "freq_hz": 151.544,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0018,
+    "thrust_plate": 0.0001,
+    "shield": 0.9952,
+    "valve_panel": 0.0026,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 80,
+   "freq_hz": 152.734,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0006,
+    "thrust_plate": 0.0,
+    "shield": 0.9983,
+    "valve_panel": 0.001,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 81,
+   "freq_hz": 152.958,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0108,
+    "thrust_plate": 0.0001,
+    "shield": 0.8532,
+    "valve_panel": 0.0002,
+    "electronics_box": 0.1354,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 82,
+   "freq_hz": 153.324,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0328,
+    "thrust_plate": 0.0009,
+    "shield": 0.7535,
+    "valve_panel": 0.0606,
+    "electronics_box": 0.1515,
+    "white_box_upper": 0.0007
+   }
+  },
+  {
+   "mode": 83,
+   "freq_hz": 154.958,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.017,
+    "thrust_plate": 0.0004,
+    "shield": 0.9597,
+    "valve_panel": 0.0195,
+    "electronics_box": 0.0031,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 84,
+   "freq_hz": 156.366,
+   "dominant_region": "valve_panel",
+   "ke_fractions": {
+    "frame": 0.314,
+    "thrust_plate": 0.0144,
+    "shield": 0.1816,
+    "valve_panel": 0.4758,
+    "electronics_box": 0.0015,
+    "white_box_upper": 0.0128
+   }
+  },
+  {
+   "mode": 85,
+   "freq_hz": 157.485,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0021,
+    "thrust_plate": 0.0001,
+    "shield": 0.9955,
+    "valve_panel": 0.0022,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 86,
+   "freq_hz": 158.242,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0084,
+    "thrust_plate": 0.0004,
+    "shield": 0.9801,
+    "valve_panel": 0.0107,
+    "electronics_box": 0.0003,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 87,
+   "freq_hz": 158.679,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9996,
+    "thrust_plate": 0.0,
+    "shield": 0.0003,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 88,
+   "freq_hz": 159.876,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0213,
+    "thrust_plate": 0.0011,
+    "shield": 0.8417,
+    "valve_panel": 0.0139,
+    "electronics_box": 0.1198,
+    "white_box_upper": 0.0022
+   }
+  },
+  {
+   "mode": 89,
+   "freq_hz": 160.194,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0133,
+    "thrust_plate": 0.0,
+    "shield": 0.9751,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0109,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 90,
+   "freq_hz": 161.846,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0012,
+    "thrust_plate": 0.0,
+    "shield": 0.9984,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 91,
+   "freq_hz": 163.033,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0003,
+    "thrust_plate": 0.0,
+    "shield": 0.9997,
+    "valve_panel": 0.0,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 92,
+   "freq_hz": 163.252,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0076,
+    "thrust_plate": 0.0001,
+    "shield": 0.9833,
+    "valve_panel": 0.0012,
+    "electronics_box": 0.0078,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 93,
+   "freq_hz": 164.413,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.908,
+    "thrust_plate": 0.0032,
+    "shield": 0.0325,
+    "valve_panel": 0.0526,
+    "electronics_box": 0.0029,
+    "white_box_upper": 0.0007
+   }
+  },
+  {
+   "mode": 94,
+   "freq_hz": 167.132,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0069,
+    "thrust_plate": 0.0,
+    "shield": 0.9796,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0132,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 95,
+   "freq_hz": 167.506,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0031,
+    "thrust_plate": 0.0001,
+    "shield": 0.9958,
+    "valve_panel": 0.0008,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 96,
+   "freq_hz": 168.373,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0174,
+    "thrust_plate": 0.0002,
+    "shield": 0.9799,
+    "valve_panel": 0.001,
+    "electronics_box": 0.0014,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 97,
+   "freq_hz": 170.211,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0142,
+    "thrust_plate": 0.0002,
+    "shield": 0.9068,
+    "valve_panel": 0.0012,
+    "electronics_box": 0.0772,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 98,
+   "freq_hz": 171.226,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1947,
+    "thrust_plate": 0.001,
+    "shield": 0.7584,
+    "valve_panel": 0.0037,
+    "electronics_box": 0.021,
+    "white_box_upper": 0.0212
+   }
+  },
+  {
+   "mode": 99,
+   "freq_hz": 171.587,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.67,
+    "thrust_plate": 0.0011,
+    "shield": 0.2075,
+    "valve_panel": 0.003,
+    "electronics_box": 0.0123,
+    "white_box_upper": 0.1061
+   }
+  },
+  {
+   "mode": 100,
+   "freq_hz": 172.769,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0202,
+    "thrust_plate": 0.0003,
+    "shield": 0.8985,
+    "valve_panel": 0.0013,
+    "electronics_box": 0.0778,
+    "white_box_upper": 0.0019
+   }
+  },
+  {
+   "mode": 101,
+   "freq_hz": 174.57,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0077,
+    "thrust_plate": 0.0001,
+    "shield": 0.929,
+    "valve_panel": 0.0008,
+    "electronics_box": 0.0621,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 102,
+   "freq_hz": 175.857,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.004,
+    "thrust_plate": 0.0,
+    "shield": 0.9948,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0002,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 103,
+   "freq_hz": 176.587,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0994,
+    "thrust_plate": 0.0003,
+    "shield": 0.8695,
+    "valve_panel": 0.0067,
+    "electronics_box": 0.0184,
+    "white_box_upper": 0.0057
+   }
+  },
+  {
+   "mode": 104,
+   "freq_hz": 176.624,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.037,
+    "thrust_plate": 0.0001,
+    "shield": 0.9524,
+    "valve_panel": 0.0026,
+    "electronics_box": 0.006,
+    "white_box_upper": 0.0018
+   }
+  },
+  {
+   "mode": 105,
+   "freq_hz": 178.18,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.6934,
+    "thrust_plate": 0.0021,
+    "shield": 0.2014,
+    "valve_panel": 0.0751,
+    "electronics_box": 0.0036,
+    "white_box_upper": 0.0243
+   }
+  },
+  {
+   "mode": 106,
+   "freq_hz": 180.06,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0363,
+    "thrust_plate": 0.0,
+    "shield": 0.9433,
+    "valve_panel": 0.0033,
+    "electronics_box": 0.0167,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 107,
+   "freq_hz": 181.362,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0069,
+    "thrust_plate": 0.0,
+    "shield": 0.9579,
+    "valve_panel": 0.0009,
+    "electronics_box": 0.0333,
+    "white_box_upper": 0.0009
+   }
+  },
+  {
+   "mode": 108,
+   "freq_hz": 181.886,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8472,
+    "thrust_plate": 0.0003,
+    "shield": 0.055,
+    "valve_panel": 0.0191,
+    "electronics_box": 0.0078,
+    "white_box_upper": 0.0707
+   }
+  },
+  {
+   "mode": 109,
+   "freq_hz": 182.557,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0279,
+    "thrust_plate": 0.0001,
+    "shield": 0.8898,
+    "valve_panel": 0.0061,
+    "electronics_box": 0.0746,
+    "white_box_upper": 0.0015
+   }
+  },
+  {
+   "mode": 110,
+   "freq_hz": 183.788,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0053,
+    "thrust_plate": 0.0001,
+    "shield": 0.9854,
+    "valve_panel": 0.0092,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 111,
+   "freq_hz": 183.965,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0136,
+    "thrust_plate": 0.0001,
+    "shield": 0.9698,
+    "valve_panel": 0.0029,
+    "electronics_box": 0.0134,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 112,
+   "freq_hz": 187.951,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0513,
+    "thrust_plate": 0.0006,
+    "shield": 0.7743,
+    "valve_panel": 0.0702,
+    "electronics_box": 0.1029,
+    "white_box_upper": 0.0007
+   }
+  },
+  {
+   "mode": 113,
+   "freq_hz": 189.82,
+   "dominant_region": "valve_panel",
+   "ke_fractions": {
+    "frame": 0.154,
+    "thrust_plate": 0.0009,
+    "shield": 0.2533,
+    "valve_panel": 0.5474,
+    "electronics_box": 0.0374,
+    "white_box_upper": 0.007
+   }
+  },
+  {
+   "mode": 114,
+   "freq_hz": 190.487,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0771,
+    "thrust_plate": 0.0009,
+    "shield": 0.6986,
+    "valve_panel": 0.1404,
+    "electronics_box": 0.0803,
+    "white_box_upper": 0.0027
+   }
+  },
+  {
+   "mode": 115,
+   "freq_hz": 190.932,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0003,
+    "thrust_plate": 0.0,
+    "shield": 0.9992,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0
+   }
+  },
+  {
+   "mode": 116,
+   "freq_hz": 195.097,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0067,
+    "thrust_plate": 0.0004,
+    "shield": 0.9841,
+    "valve_panel": 0.0005,
+    "electronics_box": 0.008,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 117,
+   "freq_hz": 195.694,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0263,
+    "thrust_plate": 0.0004,
+    "shield": 0.9694,
+    "valve_panel": 0.002,
+    "electronics_box": 0.0016,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 118,
+   "freq_hz": 196.283,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0421,
+    "thrust_plate": 0.0001,
+    "shield": 0.953,
+    "valve_panel": 0.0008,
+    "electronics_box": 0.0038,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 119,
+   "freq_hz": 197.986,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0751,
+    "thrust_plate": 0.0012,
+    "shield": 0.7678,
+    "valve_panel": 0.0266,
+    "electronics_box": 0.1282,
+    "white_box_upper": 0.0011
+   }
+  },
+  {
+   "mode": 120,
+   "freq_hz": 200.022,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8071,
+    "thrust_plate": 0.0013,
+    "shield": 0.1627,
+    "valve_panel": 0.0114,
+    "electronics_box": 0.0107,
+    "white_box_upper": 0.0069
+   }
+  },
+  {
+   "mode": 121,
+   "freq_hz": 202.265,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.4682,
+    "thrust_plate": 0.0016,
+    "shield": 0.4349,
+    "valve_panel": 0.0717,
+    "electronics_box": 0.0164,
+    "white_box_upper": 0.0072
+   }
+  },
+  {
+   "mode": 122,
+   "freq_hz": 206.342,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.2496,
+    "thrust_plate": 0.0002,
+    "shield": 0.7196,
+    "valve_panel": 0.0208,
+    "electronics_box": 0.006,
+    "white_box_upper": 0.0038
+   }
+  },
+  {
+   "mode": 123,
+   "freq_hz": 206.491,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0311,
+    "thrust_plate": 0.0,
+    "shield": 0.9625,
+    "valve_panel": 0.0047,
+    "electronics_box": 0.0013,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 124,
+   "freq_hz": 206.883,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0306,
+    "thrust_plate": 0.0,
+    "shield": 0.9401,
+    "valve_panel": 0.0019,
+    "electronics_box": 0.0269,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 125,
+   "freq_hz": 209.686,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.984,
+    "thrust_plate": 0.0002,
+    "shield": 0.0121,
+    "valve_panel": 0.0032,
+    "electronics_box": 0.0004,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 126,
+   "freq_hz": 210.069,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0388,
+    "thrust_plate": 0.0002,
+    "shield": 0.9383,
+    "valve_panel": 0.0011,
+    "electronics_box": 0.021,
+    "white_box_upper": 0.0006
+   }
+  },
+  {
+   "mode": 127,
+   "freq_hz": 210.333,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.4741,
+    "thrust_plate": 0.0054,
+    "shield": 0.3858,
+    "valve_panel": 0.125,
+    "electronics_box": 0.0055,
+    "white_box_upper": 0.0042
+   }
+  },
+  {
+   "mode": 128,
+   "freq_hz": 211.331,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1358,
+    "thrust_plate": 0.0019,
+    "shield": 0.8202,
+    "valve_panel": 0.0382,
+    "electronics_box": 0.0017,
+    "white_box_upper": 0.0022
+   }
+  },
+  {
+   "mode": 129,
+   "freq_hz": 213.504,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0832,
+    "thrust_plate": 0.0018,
+    "shield": 0.8809,
+    "valve_panel": 0.0052,
+    "electronics_box": 0.0273,
+    "white_box_upper": 0.0016
+   }
+  },
+  {
+   "mode": 130,
+   "freq_hz": 215.822,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.007,
+    "thrust_plate": 0.0002,
+    "shield": 0.9915,
+    "valve_panel": 0.0004,
+    "electronics_box": 0.0004,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 131,
+   "freq_hz": 216.444,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0105,
+    "thrust_plate": 0.0003,
+    "shield": 0.9819,
+    "valve_panel": 0.0008,
+    "electronics_box": 0.006,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 132,
+   "freq_hz": 219.144,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0178,
+    "thrust_plate": 0.0,
+    "shield": 0.9493,
+    "valve_panel": 0.0028,
+    "electronics_box": 0.03,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 133,
+   "freq_hz": 223.061,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.1614,
+    "thrust_plate": 0.0055,
+    "shield": 0.7942,
+    "valve_panel": 0.0057,
+    "electronics_box": 0.0243,
+    "white_box_upper": 0.009
+   }
+  },
+  {
+   "mode": 134,
+   "freq_hz": 225.966,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.2399,
+    "thrust_plate": 0.008,
+    "shield": 0.6777,
+    "valve_panel": 0.007,
+    "electronics_box": 0.05,
+    "white_box_upper": 0.0173
+   }
+  },
+  {
+   "mode": 135,
+   "freq_hz": 226.973,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.3417,
+    "thrust_plate": 0.0059,
+    "shield": 0.4293,
+    "valve_panel": 0.1274,
+    "electronics_box": 0.0669,
+    "white_box_upper": 0.0288
+   }
+  },
+  {
+   "mode": 136,
+   "freq_hz": 230.577,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0085,
+    "thrust_plate": 0.0001,
+    "shield": 0.9516,
+    "valve_panel": 0.0019,
+    "electronics_box": 0.0377,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 137,
+   "freq_hz": 233.638,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0118,
+    "thrust_plate": 0.0002,
+    "shield": 0.9767,
+    "valve_panel": 0.0005,
+    "electronics_box": 0.0105,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 138,
+   "freq_hz": 236.238,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.3308,
+    "thrust_plate": 0.0062,
+    "shield": 0.4889,
+    "valve_panel": 0.16,
+    "electronics_box": 0.008,
+    "white_box_upper": 0.0061
+   }
+  },
+  {
+   "mode": 139,
+   "freq_hz": 237.573,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.3228,
+    "thrust_plate": 0.0064,
+    "shield": 0.562,
+    "valve_panel": 0.0918,
+    "electronics_box": 0.0158,
+    "white_box_upper": 0.0011
+   }
+  },
+  {
+   "mode": 140,
+   "freq_hz": 241.476,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7394,
+    "thrust_plate": 0.0017,
+    "shield": 0.005,
+    "valve_panel": 0.0047,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.2492
+   }
+  },
+  {
+   "mode": 141,
+   "freq_hz": 244.592,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.65,
+    "thrust_plate": 0.0003,
+    "shield": 0.3332,
+    "valve_panel": 0.0067,
+    "electronics_box": 0.0085,
+    "white_box_upper": 0.0013
+   }
+  },
+  {
+   "mode": 142,
+   "freq_hz": 244.946,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.3395,
+    "thrust_plate": 0.0002,
+    "shield": 0.649,
+    "valve_panel": 0.0053,
+    "electronics_box": 0.0057,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 143,
+   "freq_hz": 248.877,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9196,
+    "thrust_plate": 0.0102,
+    "shield": 0.0328,
+    "valve_panel": 0.0292,
+    "electronics_box": 0.0009,
+    "white_box_upper": 0.0073
+   }
+  },
+  {
+   "mode": 144,
+   "freq_hz": 250.236,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9491,
+    "thrust_plate": 0.004,
+    "shield": 0.0064,
+    "valve_panel": 0.0335,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0068
+   }
+  },
+  {
+   "mode": 145,
+   "freq_hz": 253.085,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.0175,
+    "thrust_plate": 0.0,
+    "shield": 0.9744,
+    "valve_panel": 0.0001,
+    "electronics_box": 0.0048,
+    "white_box_upper": 0.0032
+   }
+  },
+  {
+   "mode": 146,
+   "freq_hz": 264.264,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.6976,
+    "thrust_plate": 0.0025,
+    "shield": 0.0898,
+    "valve_panel": 0.0131,
+    "electronics_box": 0.0013,
+    "white_box_upper": 0.1957
+   }
+  },
+  {
+   "mode": 147,
+   "freq_hz": 271.111,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9096,
+    "thrust_plate": 0.0032,
+    "shield": 0.0117,
+    "valve_panel": 0.0172,
+    "electronics_box": 0.0002,
+    "white_box_upper": 0.0581
+   }
+  },
+  {
+   "mode": 148,
+   "freq_hz": 271.806,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9008,
+    "thrust_plate": 0.001,
+    "shield": 0.0015,
+    "valve_panel": 0.0082,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0885
+   }
+  },
+  {
+   "mode": 149,
+   "freq_hz": 277.602,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7642,
+    "thrust_plate": 0.0055,
+    "shield": 0.0424,
+    "valve_panel": 0.1797,
+    "electronics_box": 0.0008,
+    "white_box_upper": 0.0075
+   }
+  },
+  {
+   "mode": 150,
+   "freq_hz": 284.54,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7012,
+    "thrust_plate": 0.0033,
+    "shield": 0.0188,
+    "valve_panel": 0.2246,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0521
+   }
+  },
+  {
+   "mode": 151,
+   "freq_hz": 287.986,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7142,
+    "thrust_plate": 0.0019,
+    "shield": 0.0215,
+    "valve_panel": 0.139,
+    "electronics_box": 0.0003,
+    "white_box_upper": 0.1232
+   }
+  },
+  {
+   "mode": 152,
+   "freq_hz": 290.055,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8421,
+    "thrust_plate": 0.0002,
+    "shield": 0.0062,
+    "valve_panel": 0.0956,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0558
+   }
+  },
+  {
+   "mode": 153,
+   "freq_hz": 299.946,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7227,
+    "thrust_plate": 0.0015,
+    "shield": 0.0034,
+    "valve_panel": 0.0137,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.2585
+   }
+  },
+  {
+   "mode": 154,
+   "freq_hz": 303.759,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7348,
+    "thrust_plate": 0.0037,
+    "shield": 0.0092,
+    "valve_panel": 0.236,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0162
+   }
+  },
+  {
+   "mode": 155,
+   "freq_hz": 304.904,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9226,
+    "thrust_plate": 0.0042,
+    "shield": 0.0071,
+    "valve_panel": 0.0245,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0415
+   }
+  },
+  {
+   "mode": 156,
+   "freq_hz": 307.376,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.6774,
+    "thrust_plate": 0.0014,
+    "shield": 0.0052,
+    "valve_panel": 0.0207,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.2953
+   }
+  },
+  {
+   "mode": 157,
+   "freq_hz": 312.362,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9425,
+    "thrust_plate": 0.0041,
+    "shield": 0.0136,
+    "valve_panel": 0.0231,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0168
+   }
+  },
+  {
+   "mode": 158,
+   "freq_hz": 317.519,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8663,
+    "thrust_plate": 0.0015,
+    "shield": 0.0221,
+    "valve_panel": 0.0121,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0981
+   }
+  },
+  {
+   "mode": 159,
+   "freq_hz": 323.23,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9431,
+    "thrust_plate": 0.0019,
+    "shield": 0.002,
+    "valve_panel": 0.0478,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0051
+   }
+  },
+  {
+   "mode": 160,
+   "freq_hz": 325.883,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9555,
+    "thrust_plate": 0.0054,
+    "shield": 0.0025,
+    "valve_panel": 0.0301,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0064
+   }
+  },
+  {
+   "mode": 161,
+   "freq_hz": 331.38,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9274,
+    "thrust_plate": 0.0024,
+    "shield": 0.0015,
+    "valve_panel": 0.0612,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0074
+   }
+  },
+  {
+   "mode": 162,
+   "freq_hz": 333.895,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.932,
+    "thrust_plate": 0.0005,
+    "shield": 0.0079,
+    "valve_panel": 0.039,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0206
+   }
+  },
+  {
+   "mode": 163,
+   "freq_hz": 340.735,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8667,
+    "thrust_plate": 0.0045,
+    "shield": 0.0035,
+    "valve_panel": 0.1249,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 164,
+   "freq_hz": 352.486,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7945,
+    "thrust_plate": 0.0055,
+    "shield": 0.0072,
+    "valve_panel": 0.0283,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.1645
+   }
+  },
+  {
+   "mode": 165,
+   "freq_hz": 353.928,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9237,
+    "thrust_plate": 0.0141,
+    "shield": 0.0141,
+    "valve_panel": 0.0426,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0054
+   }
+  },
+  {
+   "mode": 166,
+   "freq_hz": 391.218,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9504,
+    "thrust_plate": 0.0,
+    "shield": 0.0306,
+    "valve_panel": 0.0112,
+    "electronics_box": 0.0005,
+    "white_box_upper": 0.0072
+   }
+  },
+  {
+   "mode": 167,
+   "freq_hz": 399.228,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7803,
+    "thrust_plate": 0.0029,
+    "shield": 0.003,
+    "valve_panel": 0.2133,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0003
+   }
+  },
+  {
+   "mode": 168,
+   "freq_hz": 410.038,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7007,
+    "thrust_plate": 0.0023,
+    "shield": 0.0014,
+    "valve_panel": 0.2954,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 169,
+   "freq_hz": 413.624,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.907,
+    "thrust_plate": 0.0129,
+    "shield": 0.0106,
+    "valve_panel": 0.0678,
+    "electronics_box": 0.0002,
+    "white_box_upper": 0.0015
+   }
+  },
+  {
+   "mode": 170,
+   "freq_hz": 419.309,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.96,
+    "thrust_plate": 0.0023,
+    "shield": 0.0071,
+    "valve_panel": 0.03,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0006
+   }
+  },
+  {
+   "mode": 171,
+   "freq_hz": 423.295,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9305,
+    "thrust_plate": 0.0003,
+    "shield": 0.0047,
+    "valve_panel": 0.064,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0004
+   }
+  },
+  {
+   "mode": 172,
+   "freq_hz": 428.995,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8479,
+    "thrust_plate": 0.0003,
+    "shield": 0.0059,
+    "valve_panel": 0.1456,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 173,
+   "freq_hz": 430.241,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9214,
+    "thrust_plate": 0.0024,
+    "shield": 0.0265,
+    "valve_panel": 0.0451,
+    "electronics_box": 0.0002,
+    "white_box_upper": 0.0045
+   }
+  },
+  {
+   "mode": 174,
+   "freq_hz": 435.69,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8021,
+    "thrust_plate": 0.0008,
+    "shield": 0.0057,
+    "valve_panel": 0.1913,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0002
+   }
+  },
+  {
+   "mode": 175,
+   "freq_hz": 445.883,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8823,
+    "thrust_plate": 0.0012,
+    "shield": 0.0771,
+    "valve_panel": 0.0343,
+    "electronics_box": 0.0016,
+    "white_box_upper": 0.0035
+   }
+  },
+  {
+   "mode": 176,
+   "freq_hz": 449.418,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8971,
+    "thrust_plate": 0.0009,
+    "shield": 0.0251,
+    "valve_panel": 0.0749,
+    "electronics_box": 0.0003,
+    "white_box_upper": 0.0017
+   }
+  },
+  {
+   "mode": 177,
+   "freq_hz": 457.29,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.5332,
+    "thrust_plate": 0.0005,
+    "shield": 0.0125,
+    "valve_panel": 0.4529,
+    "electronics_box": 0.0001,
+    "white_box_upper": 0.0009
+   }
+  },
+  {
+   "mode": 178,
+   "freq_hz": 467.934,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8406,
+    "thrust_plate": 0.0006,
+    "shield": 0.1026,
+    "valve_panel": 0.0309,
+    "electronics_box": 0.0008,
+    "white_box_upper": 0.0244
+   }
+  },
+  {
+   "mode": 179,
+   "freq_hz": 472.3,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.9841,
+    "thrust_plate": 0.0019,
+    "shield": 0.0065,
+    "valve_panel": 0.0074,
+    "electronics_box": 0.0,
+    "white_box_upper": 0.0001
+   }
+  },
+  {
+   "mode": 180,
+   "freq_hz": 475.144,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.908,
+    "thrust_plate": 0.0019,
+    "shield": 0.0377,
+    "valve_panel": 0.0481,
+    "electronics_box": 0.0003,
+    "white_box_upper": 0.004
+   }
+  },
+  {
+   "mode": 181,
+   "freq_hz": 486.484,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.8933,
+    "thrust_plate": 0.0071,
+    "shield": 0.0217,
+    "valve_panel": 0.077,
+    "electronics_box": 0.0004,
+    "white_box_upper": 0.0005
+   }
+  },
+  {
+   "mode": 182,
+   "freq_hz": 487.718,
+   "dominant_region": "shield",
+   "ke_fractions": {
+    "frame": 0.4544,
+    "thrust_plate": 0.0042,
+    "shield": 0.4667,
+    "valve_panel": 0.0522,
+    "electronics_box": 0.0216,
+    "white_box_upper": 0.0008
+   }
+  },
+  {
+   "mode": 183,
+   "freq_hz": 494.194,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.5093,
+    "thrust_plate": 0.0022,
+    "shield": 0.4642,
+    "valve_panel": 0.0151,
+    "electronics_box": 0.0061,
+    "white_box_upper": 0.0032
+   }
+  },
+  {
+   "mode": 184,
+   "freq_hz": 498.156,
+   "dominant_region": "frame",
+   "ke_fractions": {
+    "frame": 0.7296,
+    "thrust_plate": 0.0053,
+    "shield": 0.1395,
+    "valve_panel": 0.1178,
+    "electronics_box": 0.0077,
+    "white_box_upper": 0.0002
+   }
+  }
+ ]
+}

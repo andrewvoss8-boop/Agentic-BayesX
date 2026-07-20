@@ -1,0 +1,28 @@
+{
+ "cid": "a04_welds_t074",
+ "shear_X": {
+  "hidden_modes_inb_idx": [
+   16,
+   12,
+   30
+  ],
+  "widen_ratio": 1.1105
+ },
+ "shear_Y": {
+  "hidden_modes_inb_idx": [
+   7,
+   26,
+   11
+  ],
+  "widen_ratio": 1.12
+ },
+ "normal_Z": {
+  "hidden_modes_inb_idx": [
+   29,
+   6,
+   21
+  ],
+  "widen_ratio": 1.0702
+ },
+ "lmo_widen_ratio": 1.0702
+}

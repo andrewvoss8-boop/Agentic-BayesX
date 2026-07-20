@@ -1,0 +1,21 @@
+{
+ "round": 2,
+ "compass": "diagnosis_r2 on best (wa1_tbox_soft): Bottom_Box|Y STILL worst (corr -0.09) after softening top box; Rectangular_Plates|Y (0.46), Top_Brackets|Y (0.43). Round-1 winners: tbox_soft 0.171, xbeam_scale 0.170. Strategy: STACK the winners + attack the stubborn bottom-box Y with a shape d.o.f.",
+ "specs": [
+  {"cid": "wa2_tbox_xbeam", "family": "thickness+scale",
+   "ops": [{"op": "thickness", "pids": [201,202,203], "t_scale": 0.9, "name": "tbox090"},
+           {"op": "scale", "group": "cross_beam", "factor": 1.4}],
+   "rationale": "stack the two best round-1 edits (top_box soften + cross_beam scale) to test additivity."},
+  {"cid": "wa2_bothbox_soft", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [101,102,103], "t_scale": 0.9, "name": "bbox090"},
+           {"op": "thickness", "pids": [201,202,203], "t_scale": 0.9, "name": "tbox090"}],
+   "rationale": "soften BOTH boxes: Bottom_Box|Y remains the worst cell after tbox-only; move both together."},
+  {"cid": "wa2_bbox_zsplit_tbox", "family": "split+thickness",
+   "ops": [{"op": "split", "pid": 101, "rule": {"type": "z_band", "zlo": 0.0, "zhi": 22.0}, "name": "bbox_lower"},
+           {"op": "thickness", "pids": [201,202,203], "t_scale": 0.9, "name": "tbox090"}],
+   "rationale": "give the stubborn bottom-box lower half its own theta (shape d.o.f. for Y) ON TOP of the tbox winner."},
+  {"cid": "wa2_brackets_soft", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [301,302], "t_scale": 0.85, "name": "brackets085"}],
+   "rationale": "Top_Brackets|Y resid 0.74 (corr 0.43): soften the angle brackets that tie box to plate."}
+ ]
+}

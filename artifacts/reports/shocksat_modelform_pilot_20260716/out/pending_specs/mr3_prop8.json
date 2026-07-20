@@ -1,0 +1,16 @@
+{
+ "cid": "mr3_prop8",
+ "track": "random",
+ "round": 3,
+ "cls": "property_control",
+ "seed": 20263724,
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 0.6084573349176821
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

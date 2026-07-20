@@ -1,0 +1,12 @@
+{"step": "vgates", "active_s": 0.4, "ts": "2026-07-16T19:16:03", "which": ["tbuilder", "formulation"]}
+{"step": "baseline_ref", "active_s": 464.9, "ts": "2026-07-16T19:23:59", "n_dof": 399510}
+{"step": "diag_r1", "active_s": 1.6, "ts": "2026-07-16T19:34:42", "model": "A0_wide"}
+{"step": "diag_r1", "active_s": 2.0, "ts": "2026-07-16T19:35:30", "model": "A0_wide"}
+{"step": "vgates", "active_s": 404.5, "ts": "2026-07-16T19:41:11", "which": ["warp_panel", "joint_offset"]}
+{"step": "diag_r2", "active_s": 1.8, "ts": "2026-07-17T00:48:11", "model": "ma1_prop_tboxxbeam__xenr"}
+{"step": "diag_r3", "active_s": 1.8, "ts": "2026-07-17T06:22:48", "model": "ma2_geo_jointbbox__xenr"}
+{"step": "collect", "active_s": 0.0, "ts": "2026-07-17T13:40:13", "n": 60}
+{"step": "finalists", "active_s": 76707.0, "ts": "2026-07-18T10:59:32", "n": 4}
+{"step": "make_figs", "active_s": 2.0, "ts": "2026-07-18T16:47:37", "n": 6}
+{"step": "make_figs", "active_s": 1.9, "ts": "2026-07-18T16:48:31", "n": 6}
+{"step": "make_figs", "active_s": 1.9, "ts": "2026-07-18T16:49:29", "n": 6}

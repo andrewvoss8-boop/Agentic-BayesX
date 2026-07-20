@@ -1,0 +1,11 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+REAL_SHAPES = True
+probe7_realshapes {'tag': 'probe7_realshapes', 'max_rhat': 86797.2116, 'min_ess': 1.002, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 1100.5317, 'n_draws': 500}
+2-chain: R-hat 86797.21  ESS 1  div 0 (0.0%)
+QOI-A held-out coverage: 0/5
+truth A: [54.6 32.8 48.9 35.6 38.1]
+pred med: [2.39951682e+08 2.28072654e+08 2.27052723e+08 2.51760456e+08
+ 2.35572674e+08]
+post f: [ 4.03 10.77 15.08 20.15 21.37 33.88 41.21 45.89 50.88 55.61 65.58 66.59
+ 79.41]

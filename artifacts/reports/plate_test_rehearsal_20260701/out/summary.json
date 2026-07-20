@@ -1,0 +1,182 @@
+{
+ "arms": {
+  "A0_1sensor": {
+   "n_runs": 8,
+   "n_converged": 7,
+   "median_band_factor": 6.17,
+   "band_factors": [
+    6.529,
+    6.166,
+    5.873,
+    6.17,
+    6.141,
+    5.96,
+    6.436
+   ],
+   "mean_weighted_coverage": 1.0,
+   "coverages": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "seeds_cov_ge_085": 7,
+   "worst_rhat": 1.1388,
+   "min_ess": 22.9,
+   "median_eta_post_sd": 0.725
+  },
+  "A1_12sensor": {
+   "n_runs": 8,
+   "n_converged": 8,
+   "median_band_factor": 6.2,
+   "band_factors": [
+    7.156,
+    6.933,
+    6.232,
+    5.752,
+    6.368,
+    6.096,
+    6.151,
+    6.165
+   ],
+   "mean_weighted_coverage": 0.998,
+   "coverages": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.982
+   ],
+   "seeds_cov_ge_085": 8,
+   "worst_rhat": 1.0028,
+   "min_ess": 1493.3,
+   "median_eta_post_sd": 0.579
+  },
+  "A2_20sensor": {
+   "n_runs": 8,
+   "n_converged": 8,
+   "median_band_factor": 6.2,
+   "band_factors": [
+    6.803,
+    6.205,
+    6.152,
+    5.994,
+    6.19,
+    6.209,
+    6.54,
+    5.854
+   ],
+   "mean_weighted_coverage": 0.996,
+   "coverages": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.964
+   ],
+   "seeds_cov_ge_085": 8,
+   "worst_rhat": 1.0026,
+   "min_ess": 1311.0,
+   "median_eta_post_sd": 0.559
+  },
+  "A3_12jitter": {
+   "n_runs": 8,
+   "n_converged": 8,
+   "median_band_factor": 6.54,
+   "band_factors": [
+    6.636,
+    6.394,
+    6.621,
+    5.731,
+    5.972,
+    6.777,
+    6.463,
+    6.847
+   ],
+   "mean_weighted_coverage": 1.0,
+   "coverages": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "seeds_cov_ge_085": 8,
+   "worst_rhat": 1.0052,
+   "min_ess": 1613.0,
+   "median_eta_post_sd": 0.62
+  },
+  "S_sd04": {
+   "n_runs": 2,
+   "n_converged": 2,
+   "median_band_factor": 5.72,
+   "band_factors": [
+    5.698,
+    5.74
+   ],
+   "mean_weighted_coverage": 1.0,
+   "coverages": [
+    1.0,
+    1.0
+   ],
+   "seeds_cov_ge_085": 2,
+   "worst_rhat": 1.0033,
+   "min_ess": 1713.3,
+   "median_eta_post_sd": 0.159
+  },
+  "S_sd16": {
+   "n_runs": 2,
+   "n_converged": 2,
+   "median_band_factor": 104.23,
+   "band_factors": [
+    111.468,
+    96.994
+   ],
+   "mean_weighted_coverage": 1.0,
+   "coverages": [
+    1.0,
+    1.0
+   ],
+   "seeds_cov_ge_085": 2,
+   "worst_rhat": 1.0015,
+   "min_ess": 2502.8,
+   "median_eta_post_sd": 1.063
+  }
+ },
+ "analytic_reference": {
+  "current_1sensor": 5.41,
+  "promised_12sensor": 3.51,
+  "floor": 2.8
+ },
+ "target_modes_hz": [
+  246.1,
+  249.4,
+  253.9,
+  258.3
+ ],
+ "n_basis": 12,
+ "n_extra_truth_modes": 6,
+ "config": {
+  "warmup": 700,
+  "samples": 700,
+  "chains": 4,
+  "noise_frac": 0.1,
+  "jitter_in": 1.5,
+  "delivery": [
+   60,
+   40
+  ]
+ }
+}

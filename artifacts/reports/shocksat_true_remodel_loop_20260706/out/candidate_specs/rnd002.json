@@ -1,0 +1,13 @@
+{
+ "cid": "rnd002",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "contact",
+   "factor": 0.7081871242741166
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

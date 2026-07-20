@@ -1,0 +1,10 @@
+L8b Beck-on-.ash (split 1, 12 modes, MAC 0.75): conv True R-hat 1.004 ESS 2385 div 0 | 23s
+  held-out peak  FEM-shapes : cover 0.94 IS 1052 sig 0.88
+  held-out peak  INFERRED   : cover 0.97 IS 570 sig 0.84
+  -> inferring the shape field SHARPENS (IS 570 vs 1052); sigma_phi 0.68
+SEED 1 INFERRED skill -0.202 FEM skill -0.689 IS inf 570 IS fem 1052
+L8b Beck-on-.ash (split 2, 12 modes, MAC 0.75): conv True R-hat 1.004 ESS 2385 div 0 | 22s
+  held-out peak  FEM-shapes : cover 0.94 IS 1558 sig 1.11
+  held-out peak  INFERRED   : cover 0.94 IS 741 sig 0.88
+  -> inferring the shape field SHARPENS (IS 741 vs 1558); sigma_phi 0.68
+SEED 2 INFERRED skill -0.396 FEM skill -1.168 IS inf 741 IS fem 1558

@@ -1,0 +1,39 @@
+{
+  "deliverable": "Q1 gap closures RUN: damping inference (band-GRMS) + joint topology alternative",
+  "split_seed": 0,
+  "calib_converged": true,
+  "n_heldout_nonhard": 29,
+  "arms": {
+    "baseline_peak": {
+      "nonhard_crps_skill_vs_clim": -0.7955057028373855,
+      "nonhard_coverage": 1.0,
+      "sigma_log": 1.0989803153210997
+    },
+    "baseline_band": {
+      "nonhard_crps_skill_vs_clim": -1.0153118740980447,
+      "nonhard_coverage": 1.0,
+      "sigma_log": 1.0005161736707608
+    },
+    "band_zeta_x0.5": {
+      "nonhard_crps_skill_vs_clim": -1.5652862037367687,
+      "nonhard_coverage": 1.0,
+      "sigma_log": 0.9990299774019533
+    },
+    "band_zeta_x2.0": {
+      "nonhard_crps_skill_vs_clim": -0.5958076376261479,
+      "nonhard_coverage": 1.0,
+      "sigma_log": 1.0016438569260446
+    },
+    "topo_joint_soften0.3_peak": {
+      "nonhard_crps_skill_vs_clim": -0.7427973974837678,
+      "nonhard_coverage": 1.0,
+      "sigma_log": 1.0915041457753607
+    },
+    "topo_joint_soften0.0_peak": {
+      "nonhard_crps_skill_vs_clim": -0.6611457508070853,
+      "nonhard_coverage": 1.0,
+      "sigma_log": 1.055630256668408
+    }
+  },
+  "runtime_s": 205.00612998008728
+}

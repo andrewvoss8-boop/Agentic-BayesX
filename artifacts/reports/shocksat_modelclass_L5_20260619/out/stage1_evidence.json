@@ -1,0 +1,329 @@
+{
+  "observable": "modal_peak_frequency_omega2 (matched, n=27)",
+  "stage": "1_fixed_MAP_theta_analytic_evidence",
+  "note": "theta held at L5 MAP; richer classes can only inflate predictive covariance (conservative statFEM Eq-38 screen). Stage-2 TMCMC (theta free) lets the mean move = rigorous re-rank.",
+  "n_matched_modes": 27,
+  "theta_map": {
+    "al_welds": 1.0019449288549491,
+    "angle_brackets": 0.9265279064516001,
+    "bottom_box": 0.8985558947238682,
+    "contact": 1.00117827738354,
+    "cross_beam": 0.8077082423114501,
+    "joints": 0.9980502489783297,
+    "plates": 0.981079642967984,
+    "steel_welds": 1.0178972021487378,
+    "top_box": 1.0482134321087373
+  },
+  "sig_w2_l5": 0.0688609491263773,
+  "damping_frequency_blindness": {
+    "max_zeta": 0.01052,
+    "max_damped_freq_shift_rel": 5.533673107693815e-05,
+    "sig_w2_floor": 0.0688609491263773,
+    "verdict": "damping shifts modal frequency by ~5.5e-05 << 0.069 discrepancy floor => the FREQUENCY observable cannot rank M2/M3 vs M0; evidence here Ockham-penalizes their extra params. Damping is judged on amplitude/held-out QOI (confound-limited)."
+  },
+  "by_sigma_prior": {
+    "0.15": {
+      "M0_fixed_thetaMAP": {
+        "logZ": -329.82848869112684,
+        "sigma_w2": 0.054621048655659706,
+        "fit_quad": 26.999725906847708,
+        "logdet": 632.6572514754059,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -331.476407124129
+      },
+      "M0_base9": {
+        "logZ": -335.59427019100644,
+        "sigma_w2": 0.05763505917401201,
+        "fit_quad": 23.24205651577794,
+        "logdet": 647.946483866235,
+        "n_params": 9,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -337.24218862400863
+      },
+      "M1_box_split": {
+        "logZ": -335.90374383594764,
+        "sigma_w2": 0.057628332066713105,
+        "fit_quad": 22.365452087463243,
+        "logdet": 649.442035584432,
+        "n_params": 13,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -337.5516622689498
+      },
+      "M1_joint_split": {
+        "logZ": -335.52402880230625,
+        "sigma_w2": 0.05737360447213488,
+        "fit_quad": 23.3434080085083,
+        "logdet": 647.7046495961042,
+        "n_params": 10,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -337.17194723530844
+      },
+      "M1_full_rich": {
+        "logZ": -336.1556387701106,
+        "sigma_w2": 0.0578379007671056,
+        "fit_quad": 21.8497432481634,
+        "logdet": 650.4615342920579,
+        "n_params": 16,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -337.8035572031128
+      },
+      "M4_corr_discrepancy": {
+        "logZ": -328.80524804512396,
+        "sigma_w2": 0.055192965514920325,
+        "ell_f_hz": 4.193250591578541,
+        "rmix": 0.998999983014397,
+        "n_extra_hyperparams_vs_M0fixed": 2,
+        "n_typeII_hyperparams": 3,
+        "bic_adjusted_logZ": -333.7490033441305
+      },
+      "_log_bayes_factor_vs_M0base9_bicadj": {
+        "M0_fixed_thetaMAP": 5.765781499879608,
+        "M0_base9": 0.0,
+        "M1_box_split": -0.30947364494119256,
+        "M1_joint_split": 0.0702413887001967,
+        "M1_full_rich": -0.5613685791041689,
+        "M4_corr_discrepancy": 3.493185279878162
+      },
+      "_posterior_model_prob_bicadj": {
+        "M0_fixed_thetaMAP": 0.8979688679774221,
+        "M0_base9": 0.002813287981936422,
+        "M1_box_split": 0.0020644838729318906,
+        "M1_joint_split": 0.0030180028007040487,
+        "M1_full_rich": 0.0016047778255328627,
+        "M4_corr_discrepancy": 0.09253057954147266
+      },
+      "_ranking_best_to_worst_bicadj": [
+        "M0_fixed_thetaMAP",
+        "M4_corr_discrepancy",
+        "M1_joint_split",
+        "M0_base9",
+        "M1_box_split",
+        "M1_full_rich"
+      ],
+      "_ranking_best_to_worst_raw": [
+        "M4_corr_discrepancy",
+        "M0_fixed_thetaMAP",
+        "M1_joint_split",
+        "M0_base9",
+        "M1_box_split",
+        "M1_full_rich"
+      ]
+    },
+    "0.25": {
+      "M0_fixed_thetaMAP": {
+        "logZ": -329.82848869112684,
+        "sigma_w2": 0.054621048655659706,
+        "fit_quad": 26.999725906847708,
+        "logdet": 632.6572514754059,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -331.476407124129
+      },
+      "M0_base9": {
+        "logZ": -337.63289487395537,
+        "sigma_w2": 0.05805119945657973,
+        "fit_quad": 22.779597461307933,
+        "logdet": 652.4861922866028,
+        "n_params": 9,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -339.28081330695755
+      },
+      "M1_box_split": {
+        "logZ": -338.5160055741327,
+        "sigma_w2": 0.05835655459746881,
+        "fit_quad": 21.42741659382906,
+        "logdet": 655.6045945544363,
+        "n_params": 13,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -340.1639240071349
+      },
+      "M1_joint_split": {
+        "logZ": -337.4944763596549,
+        "sigma_w2": 0.05753223860403011,
+        "fit_quad": 22.939018436493892,
+        "logdet": 652.0499342828159,
+        "n_params": 10,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -339.1423947926571
+      },
+      "M1_full_rich": {
+        "logZ": -339.0569405882721,
+        "sigma_w2": 0.05848839843732036,
+        "fit_quad": 20.827583472248882,
+        "logdet": 657.2862977042953,
+        "n_params": 16,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -340.7048590212743
+      },
+      "M4_corr_discrepancy": {
+        "logZ": -328.80524804512396,
+        "sigma_w2": 0.055192965514920325,
+        "ell_f_hz": 4.193250591578541,
+        "rmix": 0.998999983014397,
+        "n_extra_hyperparams_vs_M0fixed": 2,
+        "n_typeII_hyperparams": 3,
+        "bic_adjusted_logZ": -333.7490033441305
+      },
+      "_log_bayes_factor_vs_M0base9_bicadj": {
+        "M0_fixed_thetaMAP": 7.804406182828529,
+        "M0_base9": 0.0,
+        "M1_box_split": -0.8831107001773262,
+        "M1_joint_split": 0.13841851430044017,
+        "M1_full_rich": -1.4240457143167191,
+        "M4_corr_discrepancy": 5.531809962827083
+      },
+      "_posterior_model_prob_bicadj": {
+        "M0_fixed_thetaMAP": 0.9056431932025784,
+        "M0_base9": 0.0003694422729988443,
+        "M1_box_split": 0.0001527624037898876,
+        "M1_joint_split": 0.00042428823017947643,
+        "M1_full_rich": 8.893882588769255e-05,
+        "M4_corr_discrepancy": 0.09332137506456568
+      },
+      "_ranking_best_to_worst_bicadj": [
+        "M0_fixed_thetaMAP",
+        "M4_corr_discrepancy",
+        "M1_joint_split",
+        "M0_base9",
+        "M1_box_split",
+        "M1_full_rich"
+      ],
+      "_ranking_best_to_worst_raw": [
+        "M4_corr_discrepancy",
+        "M0_fixed_thetaMAP",
+        "M1_joint_split",
+        "M0_base9",
+        "M1_box_split",
+        "M1_full_rich"
+      ]
+    },
+    "0.40": {
+      "M0_fixed_thetaMAP": {
+        "logZ": -329.82848869112684,
+        "sigma_w2": 0.054621048655659706,
+        "fit_quad": 26.999725906847708,
+        "logdet": 632.6572514754059,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -331.476407124129
+      },
+      "M0_base9": {
+        "logZ": -339.7150790332172,
+        "sigma_w2": 0.05841079272448781,
+        "fit_quad": 22.357386570835406,
+        "logdet": 657.072771495599,
+        "n_params": 9,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -341.3629974662194
+      },
+      "M1_box_split": {
+        "logZ": -341.3134855694953,
+        "sigma_w2": 0.05888602234778233,
+        "fit_quad": 20.68983456956169,
+        "logdet": 661.937136569429,
+        "n_params": 13,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -342.9614040024975
+      },
+      "M1_joint_split": {
+        "logZ": -339.5079926290441,
+        "sigma_w2": 0.05765598575025477,
+        "fit_quad": 22.46260074625141,
+        "logdet": 656.5533845118368,
+        "n_params": 10,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -341.1559110620463
+      },
+      "M1_full_rich": {
+        "logZ": -342.14862519485035,
+        "sigma_w2": 0.058852852173470825,
+        "fit_quad": 20.02642179504132,
+        "logdet": 664.2708285946594,
+        "n_params": 16,
+        "n_typeII_hyperparams": 1,
+        "bic_adjusted_logZ": -343.79654362785254
+      },
+      "M4_corr_discrepancy": {
+        "logZ": -328.80524804512396,
+        "sigma_w2": 0.055192965514920325,
+        "ell_f_hz": 4.193250591578541,
+        "rmix": 0.998999983014397,
+        "n_extra_hyperparams_vs_M0fixed": 2,
+        "n_typeII_hyperparams": 3,
+        "bic_adjusted_logZ": -333.7490033441305
+      },
+      "_log_bayes_factor_vs_M0base9_bicadj": {
+        "M0_fixed_thetaMAP": 9.886590342090358,
+        "M0_base9": 0.0,
+        "M1_box_split": -1.5984065362781052,
+        "M1_joint_split": 0.20708640417308288,
+        "M1_full_rich": -2.43354616163316,
+        "M4_corr_discrepancy": 7.613994122088911
+      },
+      "_posterior_model_prob_bicadj": {
+        "M0_fixed_thetaMAP": 0.9064765847968345,
+        "M0_base9": 4.60961824515997e-05,
+        "M1_box_split": 9.321500374553172e-06,
+        "M1_joint_split": 5.670240015343555e-05,
+        "M1_full_rich": 4.04379648524744e-06,
+        "M4_corr_discrepancy": 0.09340725132370059
+      },
+      "_ranking_best_to_worst_bicadj": [
+        "M0_fixed_thetaMAP",
+        "M4_corr_discrepancy",
+        "M1_joint_split",
+        "M0_base9",
+        "M1_box_split",
+        "M1_full_rich"
+      ],
+      "_ranking_best_to_worst_raw": [
+        "M4_corr_discrepancy",
+        "M0_fixed_thetaMAP",
+        "M1_joint_split",
+        "M0_base9",
+        "M1_box_split",
+        "M1_full_rich"
+      ]
+    }
+  },
+  "headline_sigma_prior": "0.25",
+  "headline_ranking_bicadj": [
+    "M0_fixed_thetaMAP",
+    "M4_corr_discrepancy",
+    "M1_joint_split",
+    "M0_base9",
+    "M1_box_split",
+    "M1_full_rich"
+  ],
+  "headline_ranking_raw": [
+    "M4_corr_discrepancy",
+    "M0_fixed_thetaMAP",
+    "M1_joint_split",
+    "M0_base9",
+    "M1_box_split",
+    "M1_full_rich"
+  ],
+  "log_evidence": {
+    "M0_fixed_thetaMAP": -331.476407124129,
+    "M0_base9": -339.28081330695755,
+    "M1_box_split": -340.1639240071349,
+    "M1_joint_split": -339.1423947926571,
+    "M1_full_rich": -340.7048590212743,
+    "M4_corr_discrepancy": -333.7490033441305
+  },
+  "bayes_factors": {
+    "M0_fixed_thetaMAP": 7.804406182828529,
+    "M0_base9": 0.0,
+    "M1_box_split": -0.8831107001773262,
+    "M1_joint_split": 0.13841851430044017,
+    "M1_full_rich": -1.4240457143167191,
+    "M4_corr_discrepancy": 5.531809962827083
+  },
+  "posterior_model_prob": {
+    "M0_fixed_thetaMAP": 0.9056431932025784,
+    "M0_base9": 0.0003694422729988443,
+    "M1_box_split": 0.0001527624037898876,
+    "M1_joint_split": 0.00042428823017947643,
+    "M1_full_rich": 8.893882588769255e-05,
+    "M4_corr_discrepancy": 0.09332137506456568
+  },
+  "runtime_s": 2.1341700553894043
+}

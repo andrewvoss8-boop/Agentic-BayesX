@@ -1,0 +1,41 @@
+{
+ "task": "plate_test_rehearsal_20260701 (synthetic end-to-end plate-test rehearsal)",
+ "active_runtime_s": 9623.6,
+ "active_runtime_breakdown_s": {
+  "nuts_runs_recorded": 7869.6,
+  "per_arm": {
+   "A0_1sensor": {
+    "total_s": 4022.0,
+    "n_runs": 8
+   },
+   "A1_12sensor": {
+    "total_s": 813.5,
+    "n_runs": 8
+   },
+   "A2_20sensor": {
+    "total_s": 1400.2,
+    "n_runs": 8
+   },
+   "A3_12jitter": {
+    "total_s": 858.0,
+    "n_runs": 8
+   },
+   "S_sd04": {
+    "total_s": 157.8,
+    "n_runs": 2
+   },
+   "S_sd16": {
+    "total_s": 618.1,
+    "n_runs": 2
+   }
+  },
+  "discarded_prefix_smoke_run_s": 354.3,
+  "setup_calibration_decompose_ablate_figs_s": 1400
+ },
+ "elapsed_wallclock_s": "campaign detached ~4h + retune ~1h overnight; per-run stamps in logs/campaign.log and logs/retune.log",
+ "n_nuts_runs": 36,
+ "n_retuned_target_accept_098": 3,
+ "n_excluded_nonconverged": 1,
+ "sampler": "NUTS (numpyro 0.19.0, jax x64, 4 chains sequential, warmup/samples 700/700, target_accept 0.9 base / 0.98 retune)",
+ "compute_protocol": "local CPU, OMP/VECLIB threads pinned to 1, detached nohup launches, resumable per-(arm,seed)"
+}

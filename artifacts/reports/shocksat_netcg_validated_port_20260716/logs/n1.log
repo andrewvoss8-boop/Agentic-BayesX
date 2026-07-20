@@ -1,0 +1,6 @@
+group-order bridge OK: ['al_welds', 'angle_brackets', 'bottom_box', 'contact', 'cross_beam', 'joints', 'plates', 'steel_welds', 'top_box']
+[shear_X] A(delivered)=1.508  B(L5 median pt)=0.74  C(study theta pt)=1.72  | study published=8.225  residual=6.505
+[shear_Y] A(delivered)=2.301  B(L5 median pt)=1.189  C(study theta pt)=0.744  | study published=3.66  residual=2.916
+[normal_Z] A(delivered)=2.526  B(L5 median pt)=2.18  C(study theta pt)=1.727  | study published=5.117  residual=3.39
+
+wrote out/n1_bridge.json

@@ -1,0 +1,51 @@
+{
+ "cid": "ma2_mesh_plates3",
+ "track": "agent",
+ "round": 2,
+ "cls": "mesh_density",
+ "ops": [
+  "refine"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.17097614251547116,
+ "exact_b200_500": 0.22754810301493286,
+ "exact_folds": {
+  "m_xpos_990x": 0.3300194923280849,
+  "m_zpos_990z": 0.48619373339761773,
+  "m_ypos_990y": 0.11108202069765996,
+  "m_zpos_900z": -0.2433906763614779
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.2103964474401555,
+  "m_zpos_990z": 0.19670662362528554,
+  "m_ypos_990y": 0.21238110968309473,
+  "m_zpos_900z": 0.2907082313111956
+ },
+ "theta_map": [
+  0.9980396364496061,
+  1.108017496548277,
+  0.9995524030408389,
+  0.9390613447506664,
+  1.4457189749453145,
+  1.261670769832346,
+  0.9579530415077546,
+  1.0226687790674198,
+  0.7957831948516534
+ ],
+ "enriched_pkg": "ma2_mesh_plates3__xenr",
+ "spot_max_pct": 1.688699846624786e-07,
+ "n_dof": 520026,
+ "delta_dof_pct": 30.166,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 40.1322,
+  "pass": true
+ },
+ "solve_s_theta1": 453.9,
+ "solve_s_enrich": 513.9,
+ "wall_s": 1032.5,
+ "ts": "2026-07-17T03:01:40",
+ "diagnosis_link": "diagnosis_mf_r2.json: r1 refine of 501+601 was the agent's best model-form candidate (+0.1692); extend the same lever to the drumhead plate 701 (6392 quads <= cap) - Rectangular_Plates|Y cell still worst (0.832 dex)"
+}

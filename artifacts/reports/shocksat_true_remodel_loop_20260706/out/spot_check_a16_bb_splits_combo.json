@@ -1,0 +1,21 @@
+{
+ "cid": "a16_bb_splits_combo",
+ "theta_map": {
+  "al_welds": 1.1114,
+  "angle_brackets": 1.148,
+  "bb_bulkband": 1.22,
+  "bb_xface": 0.9479,
+  "bottom_box": 0.9982,
+  "contact": 0.9254,
+  "cross_beam": 1.0375,
+  "joints": 0.9749,
+  "plates": 1.1455,
+  "steel_welds": 1.0711,
+  "top_box": 0.8412
+ },
+ "n_modes": 54,
+ "max_rel_err": 0.00662632093748039,
+ "median_rel_err": 0.0014030125417278105,
+ "pass_0p3pct": false,
+ "solve_s": 2625.7
+}

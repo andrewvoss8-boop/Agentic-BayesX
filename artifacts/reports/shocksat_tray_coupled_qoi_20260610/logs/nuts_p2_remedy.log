@@ -1,0 +1,2 @@
+[    0.0s] p2r: NUTS 4x(2000+2000) depth 9, 2 pooled mount params
+[ 6625.1s] p2r: worst_rhat 2.2197 min_ess 3 div 0 gate_pass False

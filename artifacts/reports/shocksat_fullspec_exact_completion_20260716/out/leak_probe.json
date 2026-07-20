@@ -1,0 +1,14 @@
+{
+ "probe": "decomposition of the study's arm-C exact defect into leak vs basis mismatch",
+ "study_path_reproduced": 0.15696699007007608,
+ "study_reported": 0.15696699007007647,
+ "reproduction_diff": 3.885780586188048e-16,
+ "leak_only": 0.24167765196968966,
+ "honest": 0.15950287253793027,
+ "leak_effect": 0.08217477943175938,
+ "basis_mismatch_effect": -0.08471066189961357,
+ "net_error": -0.002535882467854189,
+ "study_map_fit_basis": "A0_wide (theta=1)",
+ "study_map_applied_to": "A0_wide__enr (theta_MAP)",
+ "reading": "the study's exact arm-C number carries TWO defects, not one. Review C6 caught the leak (+0.082). It did NOT catch that the shape-field raw coefficients were fit in the theta=1 eigenbasis and then applied to the theta_MAP eigenbasis -- different eigenvectors, so the coefficients were transplanted between incompatible coordinate systems (-0.085). The two errors nearly cancelled, which is why 0.157 looked plausible next to the honest 0.1595."
+}

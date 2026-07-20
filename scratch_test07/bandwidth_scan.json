@@ -1,0 +1,168 @@
+{
+ "hits": [
+  {
+   "hit": "001",
+   "fs": 250000.0,
+   "record_s": 1.000004,
+   "pre_trigger_s": 0.5006,
+   "post_impact_s": 0.49940399999999985,
+   "n_accel": 127,
+   "force_channels": [
+    {
+     "name": "Ch D20",
+     "units": "lb",
+     "std": 0.27048368470397294,
+     "absmax": 1.2849512446766482
+    }
+   ]
+  },
+  {
+   "hit": "002",
+   "fs": 250000.0,
+   "record_s": 1.000004,
+   "pre_trigger_s": 0.500012,
+   "post_impact_s": 0.4999919999999999,
+   "n_accel": 127,
+   "force_channels": [
+    {
+     "name": "Ch D20",
+     "units": "lb",
+     "std": 0.16521015835333674,
+     "absmax": 1.155834580264222
+    }
+   ]
+  },
+  {
+   "hit": "003",
+   "fs": 250000.0,
+   "record_s": 1.000004,
+   "pre_trigger_s": 0.500608,
+   "post_impact_s": 0.49939599999999984,
+   "n_accel": 127,
+   "force_channels": [
+    {
+     "name": "Ch D20",
+     "units": "lb",
+     "std": 0.1644031771795559,
+     "absmax": 0.9825446735713381
+    }
+   ]
+  },
+  {
+   "hit": "004",
+   "fs": 250000.0,
+   "record_s": 1.000004,
+   "pre_trigger_s": 0.500608,
+   "post_impact_s": 0.49939599999999984,
+   "n_accel": 127,
+   "force_channels": [
+    {
+     "name": "Ch D20",
+     "units": "lb",
+     "std": 0.16521169894907667,
+     "absmax": 0.8534237321981104
+    }
+   ]
+  }
+ ],
+ "caveats": [
+  "Test07 force channel dead -> response-only; ceiling inferred from response SNR, not input-referenced coherence",
+  "one drive (+X); n=4 hits for coherence (pure-noise bias ~1/n=0.25)"
+ ],
+ "fs_hz": 250000.0,
+ "fs_decimated": 12500.0,
+ "snr_gate_db": 10.0,
+ "ceiling_median_ch_hz": 2389.5263671874995,
+ "ceiling_q25_ch_hz": 1058.9599609374998,
+ "coherence_gate": 0.9,
+ "coherence_ceiling_hz": 2041.960281870596,
+ "coherence_octave_medians": [
+  0.36106571157755274,
+  0.5842037751596956,
+  0.7228663440585255,
+  0.7641525096730433,
+  0.8962629505159161,
+  0.7844460586734396,
+  0.5522843387728068
+ ],
+ "octave_edges": [
+  45,
+  90,
+  180,
+  355,
+  710,
+  1400,
+  2800,
+  5600
+ ],
+ "ringdown": [
+  {
+   "band": [
+    45,
+    90
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  },
+  {
+   "band": [
+    90,
+    180
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  },
+  {
+   "band": [
+    180,
+    355
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  },
+  {
+   "band": [
+    355,
+    710
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  },
+  {
+   "band": [
+    710,
+    1400
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  },
+  {
+   "band": [
+    1400,
+    2800
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  },
+  {
+   "band": [
+    2800,
+    5600
+   ],
+   "ring_s": 0.49952,
+   "truncated_by_record": true
+  }
+ ],
+ "usable_frame_s": 0.49952,
+ "achievable_df_hz": 2.0019218449711724,
+ "cache_df_hz": 2.03,
+ "sub200_modes": 22,
+ "sub200_halfpower_hz": {
+  "min": 0.1987903233187899,
+  "median": 0.8080977421174793,
+  "max": 2.493222546547331
+ },
+ "resolvable_at_cache": 0,
+ "resolvable_at_achievable": 0,
+ "median_mode_needs_df_hz": 0.26936591403915977
+}

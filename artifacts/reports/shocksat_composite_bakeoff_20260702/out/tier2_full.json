@@ -1,0 +1,238 @@
+{
+ "design": "full eigsh k=80 (A12); frozen Hungarian .ash pairing; shape-inclusive full score (no amplitude fitting)",
+ "n_planned": 29,
+ "results": {
+  "baseline": {
+   "n_matched": 25,
+   "mac_mean": 0.6417,
+   "freq_rms_pct": 6.002,
+   "full_score": 0.4617,
+   "family": "reference",
+   "runtime_s": 428.4
+  },
+  "shell202_hi": {
+   "n_matched": 22,
+   "mac_mean": 0.6806,
+   "freq_rms_pct": 4.91,
+   "full_score": 0.5333,
+   "family": "thickness_offset_proxy",
+   "runtime_s": 808.4
+  },
+  "rand21": {
+   "n_matched": 23,
+   "mac_mean": 0.6703,
+   "freq_rms_pct": 5.39,
+   "full_score": 0.5086,
+   "family": "random_tranche",
+   "runtime_s": 1173.8
+  },
+  "shell601_lo": {
+   "n_matched": 23,
+   "mac_mean": 0.6888,
+   "freq_rms_pct": 5.245,
+   "full_score": 0.5315,
+   "family": "thickness_offset_proxy",
+   "runtime_s": 271.1
+  },
+  "bush801_transStiff": {
+   "n_matched": 25,
+   "mac_mean": 0.6419,
+   "freq_rms_pct": 6.0,
+   "full_score": 0.4619,
+   "family": "joint_compliance",
+   "runtime_s": 577.2
+  },
+  "rand12": {
+   "n_matched": 23,
+   "mac_mean": 0.6793,
+   "freq_rms_pct": 4.661,
+   "full_score": 0.5394,
+   "family": "random_tranche",
+   "runtime_s": 906.2
+  },
+  "rand27": {
+   "n_matched": 25,
+   "mac_mean": 0.6631,
+   "freq_rms_pct": 5.973,
+   "full_score": 0.4839,
+   "family": "random_tranche",
+   "runtime_s": 1185.3
+  },
+  "rand07": {
+   "n_matched": 23,
+   "mac_mean": 0.6763,
+   "freq_rms_pct": 5.472,
+   "full_score": 0.5121,
+   "family": "random_tranche",
+   "runtime_s": 1514.9
+  },
+  "rand10": {
+   "n_matched": 22,
+   "mac_mean": 0.6559,
+   "freq_rms_pct": 4.622,
+   "full_score": 0.5173,
+   "family": "random_tranche",
+   "runtime_s": 1830.0
+  },
+  "dishmass_hi": {
+   "n_matched": 23,
+   "mac_mean": 0.6878,
+   "freq_rms_pct": 5.164,
+   "full_score": 0.5329,
+   "family": "mass_distribution",
+   "runtime_s": 2112.8
+  },
+  "rand11": {
+   "n_matched": 26,
+   "mac_mean": 0.6604,
+   "freq_rms_pct": 4.781,
+   "full_score": 0.5169,
+   "family": "random_tranche",
+   "runtime_s": 2498.7
+  },
+  "cablemass_double": {
+   "n_matched": 23,
+   "mac_mean": 0.6754,
+   "freq_rms_pct": 5.494,
+   "full_score": 0.5106,
+   "family": "mass_distribution",
+   "runtime_s": 267.7
+  },
+  "cablemass_full": {
+   "n_matched": 24,
+   "mac_mean": 0.663,
+   "freq_rms_pct": 5.078,
+   "full_score": 0.5106,
+   "family": "mass_distribution",
+   "runtime_s": 519.2
+  },
+  "weld204_stiff": {
+   "n_matched": 24,
+   "mac_mean": 0.6433,
+   "freq_rms_pct": 5.935,
+   "full_score": 0.4652,
+   "family": "weld_contact",
+   "runtime_s": 818.5
+  },
+  "mass_dish_hi": {
+   "n_matched": 24,
+   "mac_mean": 0.6522,
+   "freq_rms_pct": 4.774,
+   "full_score": 0.509,
+   "family": "mass_distribution",
+   "runtime_s": 1074.4
+  },
+  "rand25": {
+   "n_matched": 24,
+   "mac_mean": 0.6436,
+   "freq_rms_pct": 4.66,
+   "full_score": 0.5038,
+   "family": "random_tranche",
+   "runtime_s": 1368.3
+  },
+  "shell701_hi": {
+   "n_matched": 26,
+   "mac_mean": 0.6305,
+   "freq_rms_pct": 4.641,
+   "full_score": 0.4913,
+   "family": "thickness_offset_proxy",
+   "runtime_s": 1637.5
+  },
+  "bush805_rotStiff": {
+   "n_matched": 25,
+   "mac_mean": 0.6415,
+   "freq_rms_pct": 6.017,
+   "full_score": 0.461,
+   "family": "joint_compliance",
+   "runtime_s": 1903.1
+  },
+  "bush805_transStiff": {
+   "n_matched": 25,
+   "mac_mean": 0.6414,
+   "freq_rms_pct": 4.779,
+   "full_score": 0.498,
+   "family": "joint_compliance",
+   "runtime_s": 2158.6
+  },
+  "bush802_rotSoft": {
+   "n_matched": 23,
+   "mac_mean": 0.6824,
+   "freq_rms_pct": 5.476,
+   "full_score": 0.5182,
+   "family": "joint_compliance",
+   "runtime_s": 2414.5
+  },
+  "shell206_lo": {
+   "n_matched": 24,
+   "mac_mean": 0.656,
+   "freq_rms_pct": 4.834,
+   "full_score": 0.511,
+   "family": "thickness_offset_proxy",
+   "runtime_s": 2666.2
+  },
+  "bush807_transSoft": {
+   "n_matched": 25,
+   "mac_mean": 0.6419,
+   "freq_rms_pct": 6.015,
+   "full_score": 0.4614,
+   "family": "joint_compliance",
+   "runtime_s": 2946.4
+  },
+  "bush807_rotStiff": {
+   "n_matched": 25,
+   "mac_mean": 0.6413,
+   "freq_rms_pct": 6.016,
+   "full_score": 0.4608,
+   "family": "joint_compliance",
+   "runtime_s": 3208.1
+  },
+  "bush802_allSoft": {
+   "n_matched": 23,
+   "mac_mean": 0.6849,
+   "freq_rms_pct": 5.361,
+   "full_score": 0.5241,
+   "family": "joint_compliance",
+   "runtime_s": 3468.5
+  },
+  "alwelds_stiff": {
+   "n_matched": 24,
+   "mac_mean": 0.6377,
+   "freq_rms_pct": 5.912,
+   "full_score": 0.4603,
+   "family": "weld_contact",
+   "runtime_s": 3738.3
+  },
+  "mass_cross_hi": {
+   "n_matched": 22,
+   "mac_mean": 0.6849,
+   "freq_rms_pct": 6.437,
+   "full_score": 0.4918,
+   "family": "mass_distribution",
+   "runtime_s": 4012.3
+  },
+  "dishmass_lo": {
+   "n_matched": 27,
+   "mac_mean": 0.6164,
+   "freq_rms_pct": 4.545,
+   "full_score": 0.4801,
+   "family": "mass_distribution",
+   "runtime_s": 4272.3
+  },
+  "cablemass_half": {
+   "n_matched": 26,
+   "mac_mean": 0.6361,
+   "freq_rms_pct": 4.882,
+   "full_score": 0.4897,
+   "family": "mass_distribution",
+   "runtime_s": 4526.9
+  },
+  "cross_weld_k1e4": {
+   "n_matched": 24,
+   "mac_mean": 0.6229,
+   "freq_rms_pct": 6.045,
+   "full_score": 0.4415,
+   "family": "connectivity",
+   "runtime_s": 4804.1
+  }
+ }
+}

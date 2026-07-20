@@ -1,0 +1,18 @@
+{
+ "cid": "ma3_mesh_covers",
+ "cls": "mesh_density",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    202,
+    501,
+    601
+   ]
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: refine keeps helping in-track (r1 plates +0.1692, r2 plates3 +0.1710) though the global mesh-size corr is ~0; extend to the top cover 202 whose drumhead cluster carries the Top_Box|Z 0.716 dex cell (7166 quads <= cap)",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: refine keeps helping in-track (r1 plates +0.1692, r2 plates3 +0.1710) though the global mesh-size "
+}

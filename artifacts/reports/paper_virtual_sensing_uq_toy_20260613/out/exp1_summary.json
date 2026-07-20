@@ -1,0 +1,154 @@
+{
+  "experiment": "E1_discriminating",
+  "runtime_s": 7.99,
+  "design": {
+    "n_modes": 4,
+    "n_channels": 4,
+    "observed_channels": [
+      "Ch1",
+      "Ch2"
+    ],
+    "masked_channels": [
+      "Ch3",
+      "Ch4"
+    ],
+    "sigma_meas": 0.05,
+    "sigma_virtual_credibility": 0.3,
+    "realized_recon_peak_err_db_mean": 4.430906013759397,
+    "note": "Virtual ground truth is a LABELED surrogate, not the FAU network."
+  },
+  "truth": {
+    "alpha": [
+      0.97,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "beta": [
+      1.2,
+      1.3,
+      1.4,
+      1.5
+    ],
+    "gamma_over_gamma0": 1.05
+  },
+  "deterministic": {
+    "alpha": [
+      0.9706416671250018,
+      0.8998250855012877,
+      0.8692218357264506,
+      0.9471463577897682
+    ],
+    "beta": [
+      1.2062306721764104,
+      1.3081148258308668,
+      1.3143700535687284,
+      3.5806261484081463
+    ],
+    "gamma": 0.02149477797050307,
+    "cost": 0.4360505799999298
+  },
+  "nuts_diagnostics": {
+    "max_rhat": 1.0001702691304661,
+    "min_ess": 3258.1427114591334,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "n_chains": 4,
+    "draws": 3200
+  },
+  "nuts_converged": true,
+  "bayes_posterior": {
+    "alpha": [
+      [
+        0.9586070427746971,
+        0.9675212090225087,
+        0.9760843060440216
+      ],
+      [
+        0.8918272129713477,
+        0.8988368421172859,
+        0.9059805253462693
+      ],
+      [
+        0.8462671749507723,
+        0.8534246772493304,
+        0.8609369096300139
+      ],
+      [
+        0.8030678322907016,
+        0.8568364427895505,
+        0.9270747349104005
+      ]
+    ],
+    "sigma_d": [
+      0.3342708294952345,
+      0.3558746762496484,
+      0.37859349836567724
+    ],
+    "gamma": [
+      0.01834296541431286,
+      0.018923581356068114,
+      0.01953089532971905
+    ]
+  },
+  "masked_channel_results": {
+    "Ch3": {
+      "peak_freq_hz": 586.7455597996121,
+      "det_peak_amp_err_db": 2.801878561893517,
+      "qoi_truth": 1.49402872257689e-09,
+      "qoi_det_point": 1.0820940741837528e-09,
+      "det_qoi_err_db": 2.80187856189351,
+      "det_qoi_interval_meas_noise": [
+        9.810794061173134e-10,
+        1.1935094938111242e-09
+      ],
+      "det_qoi_covers_truth": false,
+      "bayes_qoi_interval": [
+        4.1711207316164533e-10,
+        1.0221537423868217e-09,
+        2.6296695369283046e-09
+      ],
+      "bayes_qoi_covers_truth": true
+    },
+    "Ch4": {
+      "peak_freq_hz": 567.5157580851808,
+      "det_peak_amp_err_db": 10.490721891579312,
+      "qoi_truth": 1.1576823398393367e-09,
+      "qoi_det_point": 3.4598184772468163e-10,
+      "det_qoi_err_db": 10.490721891579337,
+      "det_qoi_interval_meas_noise": [
+        3.136840629583386e-10,
+        3.816051023634025e-10
+      ],
+      "det_qoi_covers_truth": false,
+      "bayes_qoi_interval": [
+        1.7340907819649086e-10,
+        4.44246455215326e-10,
+        1.2060325090320531e-09
+      ],
+      "bayes_qoi_covers_truth": true
+    }
+  },
+  "heldout_logmag_coverage": {
+    "covered": 270,
+    "n": 270,
+    "fraction": 1.0
+  },
+  "heldout_hf_logmag_coverage": {
+    "band_hz": [
+      450.0,
+      900.0
+    ],
+    "covered": 40,
+    "n": 40,
+    "fraction": 1.0
+  },
+  "det_masked_qoi_coverage": {
+    "covered": 0,
+    "n": 2
+  },
+  "bayes_masked_qoi_coverage": {
+    "covered": 2,
+    "n": 2
+  }
+}

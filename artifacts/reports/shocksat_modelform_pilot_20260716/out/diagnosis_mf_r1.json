@@ -1,0 +1,350 @@
+{
+ "round": 1,
+ "model": "A0_wide",
+ "theta_source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_full_spectrum_frf_20260714/out/theta_map_wide.json",
+ "region_axis_band_residuals": {
+  "Rectangular_Plates|Y|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.901,
+   "median_corr": 0.416
+  },
+  "Bottom_Box|Y|sub200": {
+   "n_ch_drive": 72,
+   "mean_abs_resid_dex": 0.756,
+   "median_corr": -0.143
+  },
+  "Top_Brackets|Y|sub200": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.734,
+   "median_corr": 0.356
+  },
+  "Top_Box|Y|sub200": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.686,
+   "median_corr": 0.165
+  },
+  "Bottom_Box|Z|sub200": {
+   "n_ch_drive": 74,
+   "mean_abs_resid_dex": 0.685,
+   "median_corr": -0.003
+  },
+  "Rectangular_Plates|Y|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.679,
+   "median_corr": -0.002
+  },
+  "Top_Box|Z|sub200": {
+   "n_ch_drive": 43,
+   "mean_abs_resid_dex": 0.676,
+   "median_corr": 0.224
+  },
+  "Top_Box|X|b200_500": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.673,
+   "median_corr": 0.24
+  },
+  "Bottom_Box|X|sub200": {
+   "n_ch_drive": 70,
+   "mean_abs_resid_dex": 0.633,
+   "median_corr": 0.1
+  },
+  "Top_Box|Z|b200_500": {
+   "n_ch_drive": 43,
+   "mean_abs_resid_dex": 0.625,
+   "median_corr": -0.028
+  },
+  "Top_Brackets|Z|sub200": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.624,
+   "median_corr": -0.139
+  },
+  "Top_Brackets|Y|b200_500": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.619,
+   "median_corr": 0.119
+  },
+  "Cross_Beam|Z|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.607,
+   "median_corr": 0.491
+  },
+  "Bottom_Box|X|b200_500": {
+   "n_ch_drive": 70,
+   "mean_abs_resid_dex": 0.605,
+   "median_corr": 0.139
+  },
+  "Top_Circular_Plate|Y|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.603,
+   "median_corr": 0.29
+  },
+  "Top_Circular_Plate|X|sub200": {
+   "n_ch_drive": 3,
+   "mean_abs_resid_dex": 0.596,
+   "median_corr": 0.01
+  },
+  "Top_Box|X|sub200": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.594,
+   "median_corr": 0.17
+  },
+  "Top_Box|Y|b200_500": {
+   "n_ch_drive": 42,
+   "mean_abs_resid_dex": 0.593,
+   "median_corr": 0.123
+  },
+  "Bottom_Box|Z|b200_500": {
+   "n_ch_drive": 74,
+   "mean_abs_resid_dex": 0.578,
+   "median_corr": -0.083
+  },
+  "Top_Brackets|Z|b200_500": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.566,
+   "median_corr": 0.046
+  },
+  "Top_Brackets|X|sub200": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.563,
+   "median_corr": 0.562
+  },
+  "Cross_Beam|Z|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.562,
+   "median_corr": 0.043
+  },
+  "Top_Circular_Plate|Z|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.561,
+   "median_corr": 0.413
+  },
+  "Bottom_Box|Y|b200_500": {
+   "n_ch_drive": 72,
+   "mean_abs_resid_dex": 0.555,
+   "median_corr": 0.122
+  },
+  "Cross_Beam|Y|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.539,
+   "median_corr": 0.507
+  },
+  "Cross_Beam|Y|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.535,
+   "median_corr": 0.139
+  },
+  "Rectangular_Plates|Z|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.533,
+   "median_corr": 0.106
+  },
+  "Top_Circular_Plate|Y|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.496,
+   "median_corr": -0.044
+  },
+  "Cross_Beam|X|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.493,
+   "median_corr": 0.557
+  },
+  "Top_Circular_Plate|X|b200_500": {
+   "n_ch_drive": 3,
+   "mean_abs_resid_dex": 0.491,
+   "median_corr": 0.256
+  },
+  "Top_Circular_Plate|Z|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.49,
+   "median_corr": 0.259
+  },
+  "Cross_Beam|X|b200_500": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.476,
+   "median_corr": 0.36
+  },
+  "Top_Brackets|X|b200_500": {
+   "n_ch_drive": 8,
+   "mean_abs_resid_dex": 0.471,
+   "median_corr": 0.448
+  },
+  "Rectangular_Plates|Z|sub200": {
+   "n_ch_drive": 4,
+   "mean_abs_resid_dex": 0.416,
+   "median_corr": 0.414
+  }
+ },
+ "region_shape_defect_fraction": {
+  "Bottom_Box": 0.493,
+  "Top_Box": 0.3921,
+  "Cross_Beam": 0.0789,
+  "Top_Circular_Plate": 0.0322,
+  "Rectangular_Plates": 0.0038
+ },
+ "n_shape_pairs": 25,
+ "residual_vs_mesh_size_corr_sub200": 0.04980321975287756,
+ "n_mesh_channels": 104,
+ "peak_width_curvature": {
+  "sub200": {
+   "median_curv_ratio_model_over_meas": 1.232,
+   "n": 37
+  },
+  "b200_500": {
+   "median_curv_ratio_model_over_meas": 3.64,
+   "n": 3
+  }
+ },
+ "survey_peak_df": [
+  {
+   "f_test": 54.2,
+   "f_model": 54.8,
+   "df_pct": 1.18,
+   "mac": 0.97
+  },
+  {
+   "f_test": 70.0,
+   "f_model": 73.8,
+   "df_pct": 5.46,
+   "mac": 0.497
+  },
+  {
+   "f_test": 75.0,
+   "f_model": 73.2,
+   "df_pct": -2.32,
+   "mac": 0.512
+  },
+  {
+   "f_test": 85.8,
+   "f_model": 88.4,
+   "df_pct": 3.08,
+   "mac": 0.883
+  },
+  {
+   "f_test": 107.0,
+   "f_model": 103.4,
+   "df_pct": -3.36,
+   "mac": 0.975
+  },
+  {
+   "f_test": 117.6,
+   "f_model": 122.2,
+   "df_pct": 3.85,
+   "mac": 0.899
+  },
+  {
+   "f_test": 118.5,
+   "f_model": 114.6,
+   "df_pct": -3.33,
+   "mac": 0.958
+  },
+  {
+   "f_test": 125.0,
+   "f_model": 118.8,
+   "df_pct": -4.98,
+   "mac": 0.704
+  },
+  {
+   "f_test": 137.2,
+   "f_model": 141.9,
+   "df_pct": 3.37,
+   "mac": 0.692
+  },
+  {
+   "f_test": 151.2,
+   "f_model": 149.9,
+   "df_pct": -0.86,
+   "mac": 0.61
+  },
+  {
+   "f_test": 158.2,
+   "f_model": 141.7,
+   "df_pct": -10.42,
+   "mac": 0.581
+  },
+  {
+   "f_test": 165.9,
+   "f_model": 153.1,
+   "df_pct": -7.73,
+   "mac": 0.755
+  },
+  {
+   "f_test": 168.0,
+   "f_model": 180.5,
+   "df_pct": 7.44,
+   "mac": 0.703
+  },
+  {
+   "f_test": 172.3,
+   "f_model": 182.1,
+   "df_pct": 5.72,
+   "mac": 0.737
+  },
+  {
+   "f_test": 174.8,
+   "f_model": 169.1,
+   "df_pct": -3.22,
+   "mac": 0.639
+  },
+  {
+   "f_test": 184.4,
+   "f_model": 179.9,
+   "df_pct": -2.41,
+   "mac": 0.889
+  },
+  {
+   "f_test": 188.6,
+   "f_model": 184.7,
+   "df_pct": -2.11,
+   "mac": 0.69
+  },
+  {
+   "f_test": 190.2,
+   "f_model": 193.4,
+   "df_pct": 1.66,
+   "mac": 0.34
+  },
+  {
+   "f_test": 195.7,
+   "f_model": 190.8,
+   "df_pct": -2.53,
+   "mac": 0.391
+  },
+  {
+   "f_test": 197.8,
+   "f_model": 194.3,
+   "df_pct": -1.76,
+   "mac": 0.661
+  },
+  {
+   "f_test": 198.9,
+   "f_model": 192.1,
+   "df_pct": -3.39,
+   "mac": 0.387
+  },
+  {
+   "f_test": 222.2,
+   "f_model": 212.2,
+   "df_pct": -4.48,
+   "mac": 0.62
+  },
+  {
+   "f_test": 230.7,
+   "f_model": 249.3,
+   "df_pct": 8.08,
+   "mac": 0.427
+  },
+  {
+   "f_test": 232.7,
+   "f_model": 229.7,
+   "df_pct": -1.29,
+   "mac": 0.304
+  },
+  {
+   "f_test": 235.3,
+   "f_model": 239.2,
+   "df_pct": 1.66,
+   "mac": 0.342
+  }
+ ],
+ "note": "TRAIN-side residual fields only; no fold dev scores computed here; proposals link to these diagnostics (round summaries)"
+}

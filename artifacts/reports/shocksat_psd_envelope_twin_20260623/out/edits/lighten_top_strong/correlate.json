@@ -1,0 +1,18 @@
+{
+ "edit_id": "lighten_top_strong",
+ "n_matched_modes": 28,
+ "global_MAC": 0.615,
+ "fundamental_MAC": 0.97,
+ "low3_MAC": [
+  0.97,
+  0.54,
+  0.53
+ ],
+ "FRF_logmag_corr_median": 0.235,
+ "FRF_logmag_corr_mean": 0.18,
+ "FRF_corr_frac_above_0.5": 0.13,
+ "FRF_peak_ampl_err_dB_median": 17.8,
+ "n_channels": 84,
+ "n_refs": 4,
+ "runtime_s": 678.3
+}

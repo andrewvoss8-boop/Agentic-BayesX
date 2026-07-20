@@ -1,0 +1,13 @@
+{
+ "cid": "rnd058",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "joints",
+   "factor": 0.6875059141865828
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

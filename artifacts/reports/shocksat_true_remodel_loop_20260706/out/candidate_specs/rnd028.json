@@ -1,0 +1,21 @@
+{
+ "cid": "rnd028",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 201,
+   "rule": {
+    "type": "z_band",
+    "zlo": 37.34047442797527,
+    "zhi": 41.425460547856105
+   },
+   "name": "rsplit29"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)",
+ "split_info": {
+  "rsplit29": 3614
+ }
+}

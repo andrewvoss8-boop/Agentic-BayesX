@@ -1,0 +1,22 @@
+{
+ "round": 3,
+ "compass": "diagnosis_r3 on best (wa2_brackets_soft 0.179): Rectangular_Plates|Y (0.42), Bottom_Box|Y still (-0.04), Top_Box|Z (0.38). Strategy: STACK the round-2 bracket winner with the round-1 winners (cross_beam scale, top_box) and add plate/box-Z shape freedom.",
+ "specs": [
+  {"cid": "wa3_brackets_xbeam", "family": "thickness+scale",
+   "ops": [{"op": "thickness", "pids": [301,302], "t_scale": 0.85, "name": "brackets085"},
+           {"op": "scale", "group": "cross_beam", "factor": 1.4}],
+   "rationale": "stack the round-2 bracket winner (0.179) with the round-1 parametric cross_beam winner (0.170)."},
+  {"cid": "wa3_brackets_tbox", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [301,302], "t_scale": 0.85, "name": "brackets085"},
+           {"op": "thickness", "pids": [201,202,203], "t_scale": 0.9, "name": "tbox090"}],
+   "rationale": "brackets + top_box soften: Top_Box|Z (0.38) is now among the worst on the brackets model."},
+  {"cid": "wa3_brackets_plates", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [301,302], "t_scale": 0.85, "name": "brackets085"},
+           {"op": "thickness", "pids": [501,601,701], "t_scale": 1.2, "name": "plates120"}],
+   "rationale": "Rectangular_Plates|Y is now the single worst cell (0.84); stiffen plates on the bracket model."},
+  {"cid": "wa3_brackets_bbox_split", "family": "thickness+split",
+   "ops": [{"op": "thickness", "pids": [301,302], "t_scale": 0.85, "name": "brackets085"},
+           {"op": "split", "pid": 101, "rule": {"type": "z_band", "zlo": 0.0, "zhi": 22.0}, "name": "bbox_lower"}],
+   "rationale": "brackets + bottom-box lower-half own-theta: the persistent Bottom_Box|Y needs a shape d.o.f."}
+ ]
+}

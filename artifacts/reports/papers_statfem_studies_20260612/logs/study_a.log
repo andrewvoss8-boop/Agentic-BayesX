@@ -1,0 +1,52 @@
+{
+  "primary": {
+    "v1": {
+      "max_rhat": 23.874821438667816,
+      "min_ess": 2.0048133654710045,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.8571428571428571,
+      "band_width": 6.3342119910737535,
+      "runtime_s": 34.73637104034424
+    },
+    "v2": {
+      "max_rhat": 1.0020703565433098,
+      "min_ess": 1327.8664774983267,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 1.0,
+      "band_width": 0.8573256976159783,
+      "runtime_s": 39.527710914611816
+    },
+    "v3": {
+      "max_rhat": 22.83701542967791,
+      "min_ess": 2.0047357929936696,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.9285714285714286,
+      "band_width": 2.1625253957745145,
+      "runtime_s": 10.998748064041138
+    }
+  },
+  "secondary": {
+    "v1": {
+      "max_rhat": 41.11919399378667,
+      "min_ess": 2.0024218779312903,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.6785714285714286,
+      "band_width": 11.756651517466254,
+      "runtime_s": 35.8970251083374
+    },
+    "v2": {
+      "max_rhat": 1.0016079808396863,
+      "min_ess": 1754.5813501450075,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.5714285714285714,
+      "band_width": 3.2071413694359157,
+      "runtime_s": 46.478445053100586
+    }
+  }
+}
+saved out/study_a_summary.json + arrays

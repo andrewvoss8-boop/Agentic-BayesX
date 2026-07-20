@@ -1,0 +1,20 @@
+{
+ "cid": "b11_bb_drivecorner",
+ "theta_map": {
+  "al_welds": 1.0907,
+  "angle_brackets": 1.1341,
+  "bb_drive": 0.7038,
+  "bottom_box": 1.0703,
+  "contact": 0.9058,
+  "cross_beam": 1.0461,
+  "joints": 1.0958,
+  "plates": 1.0388,
+  "steel_welds": 1.0414,
+  "top_box": 0.8673
+ },
+ "n_modes": 54,
+ "max_rel_err": 0.00770003091231497,
+ "median_rel_err": 0.0015495937228148238,
+ "pass_0p3pct": false,
+ "solve_s": 25044.7
+}

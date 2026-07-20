@@ -1,0 +1,8 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+medium_probe {'tag': 'medium_probe', 'max_rhat': 5.3815, 'min_ess': 2.3487, 'divergences': 200, 'div_frac': 1.0, 'runtime_s': 35.8126, 'n_draws': 200}
+posterior f (med): [ 2.21  5.85 12.62 17.74 19.12 31.62 38.87 43.62 48.49 52.   64.29 65.3
+ 77.78]
+truth f          : [ 2.21  5.71 12.66 17.75 19.13 31.58 38.89 43.59 48.46 52.02 63.37 63.76
+ 75.82]
+sig_w med 0.400  sig_th med 0.601  tau med 0.0300  len_f med 6.00

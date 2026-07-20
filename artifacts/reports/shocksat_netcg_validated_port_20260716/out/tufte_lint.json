@@ -1,0 +1,22 @@
+{
+  "tool": ".claude/skills/tufte-data-graphics/scripts/tufte_lint.py (advisory heuristic, exit 0 always)",
+  "script": "code/fig_port.py",
+  "raw_output": "\n=== /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_validated_port_20260716/code/fig_port.py ===\n  [INFO] Legend present: prefer direct end-of-line labels to avoid eye ping-pong (Beautiful Evidence).\n  [INFO] Bar chart: ensure baseline starts at zero (set_ylim(bottom=0)) \u2014 no truncated baselines.\n  [INFO] dB detected: state linear/dB explicitly and justify dB (project rule: avoid dB unless standard).\n\n3 heuristic flag(s). Advisory only \u2014 review each against intent and the Tufte checklist.\n",
+  "n_warn": 0,
+  "n_info": 3,
+  "adjudication": [
+    {
+      "flag": "INFO: legend present \u2014 prefer direct end-of-line labels",
+      "verdict": "DELIBERATE DEVIATION, 2 places. (a) fig_s4 middle panel: the grouped delivered/updated bars sit too close for two direct labels \u2014 they collided on first render; a 2-entry frameless legend is strictly more legible. (b) fig_s3 left panel: three overlaid marker families NEED a key; without it the figure was unreadable (caught in by-eye review). Everywhere else labels are direct/in-panel."
+    },
+    {
+      "flag": "INFO: bar chart \u2014 ensure baseline starts at zero",
+      "verdict": "SATISFIED. Every bar axis is set_ylim(0, ...) / set_xlim(0, ...); the panels say so ('bars start at 0'). Lie factor ~1: no truncated baselines anywhere."
+    },
+    {
+      "flag": "INFO: dB detected \u2014 state linear/dB explicitly",
+      "verdict": "SATISFIED / false positive. No axis is in dB. 'dB' appears only in the NAME of the FEM+6dB incumbent envelope (the ratio's denominator) and in the A5b caption text. All magnitude axes are linear |G| on log scales; frequency axes are log (project rule); the captions state this."
+    }
+  ],
+  "notes": "A clean lint is not proof of a good figure; the by-eye review in out/fig_qa.json is the real check, and it caught the missing marker key that the linter cannot see."
+}

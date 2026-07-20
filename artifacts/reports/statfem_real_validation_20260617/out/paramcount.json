@@ -1,0 +1,34 @@
+{
+  "deliverable": "parameter_count_study",
+  "scored_on": "TMCMC log-evidence (Ockham) + FIM/strain-energy identifiability; whole-FRF arms are NON-CONVERGED (YELLOW) so evidence is indicative not definitive; held-out QOI useless for whole-FRF (scores_summary.json)",
+  "methods": {
+    "all9": {
+      "n_params": 9,
+      "log_evidence": -2697.4473856610275,
+      "log_evidence_std": 4.382916460400894,
+      "max_rhat": 9.244647733014805,
+      "converged": false
+    },
+    "fim_downselect": {
+      "n_params": 4,
+      "groups": [
+        "bottom_box",
+        "cross_beam",
+        "plates",
+        "top_box"
+      ],
+      "log_evidence": -2717.524535405688,
+      "log_evidence_std": 1.0416577393309838,
+      "max_rhat": 2.576851908501521,
+      "converged": false
+    },
+    "evidence": {
+      "delta_logZ_all9_minus_ident4": 20.1,
+      "note": "raw evidence mildly favors all9 (~20 logZ) BUT both non-converged; all9 evidence unreliable (+-4.4) and far worse conditioned (R-hat 9.24 vs 2.58)"
+    }
+  },
+  "winner": "fim_downselect",
+  "winner_rationale": "Modal/Eigenproblem Identifiability Gate FIRST: 4 groups clear the realized discrepancy floor (identifiability.json, peak strain-energy >30%). The 4-group is dramatically better conditioned (R-hat 2.58 vs 9.24) with reliable evidence (+-1.0 vs +-4.4); the +20 raw logZ for all9 is not decisive on a non-converged whole-FRF likelihood. The CONVERGED working method (L5 modal) also uses these 4 groups.",
+  "tied_to_strain_energy": "identifiability.json: 4/9 groups (bottom_box, cross_beam, plates, top_box) clear the FIM-realized floor sigma_d0=1.73",
+  "caveat": "evidence-based selection here is indicative (whole-FRF non-converged). A converged param-count would need the modal-feature likelihood; the 4 identifiable groups are the defensible set either way."
+}

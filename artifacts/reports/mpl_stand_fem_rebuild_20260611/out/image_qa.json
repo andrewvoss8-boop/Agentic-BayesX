@@ -1,0 +1,269 @@
+{
+ "figures": {
+  "fig_geometry.png": {
+   "exists": true,
+   "size_px": [
+    2560,
+    960
+   ],
+   "std": 37.7,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_mode_small_multiples.png": {
+   "exists": true,
+   "size_px": [
+    2240,
+    1680
+   ],
+   "std": 32.9,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_freq_ladders.png": {
+   "exists": true,
+   "size_px": [
+    1920,
+    1040
+   ],
+   "std": 48.3,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_identifiability.png": {
+   "exists": true,
+   "size_px": [
+    1680,
+    1440
+   ],
+   "std": 106.4,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_interface_motion.png": {
+   "exists": true,
+   "size_px": [
+    1760,
+    1120
+   ],
+   "std": 31.4,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_prior_predictive.png": {
+   "exists": true,
+   "size_px": [
+    2400,
+    736
+   ],
+   "std": 55.2,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_pseudo_frf_transfer.png": {
+   "exists": true,
+   "size_px": [
+    2720,
+    1520
+   ],
+   "std": 43.4,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_pseudo_frf_acoustic.png": {
+   "exists": true,
+   "size_px": [
+    2080,
+    672
+   ],
+   "std": 43.1,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_pseudo_frf_qoi.png": {
+   "exists": true,
+   "size_px": [
+    1760,
+    1632
+   ],
+   "std": 44.2,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  },
+  "fig_tuning_box_foot.png": {
+   "exists": true,
+   "size_px": [
+    1920,
+    704
+   ],
+   "std": 38.7,
+   "blank": false,
+   "big_enough": true,
+   "ok": true
+  }
+ },
+ "gifs": {
+  "mode_01_13.5Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_02_17.6Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_03_17.8Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_04_18.4Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_05_24.2Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_06_25.3Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_07_26.8Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_08_27.9Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_09_32.0Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_10_34.2Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_11_36.0Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_12_37.2Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_13_38.4Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_14_38.6Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  },
+  "mode_15_42.6Hz.gif": {
+   "frames": 24,
+   "size_px": [
+    675,
+    585
+   ],
+   "animated": true,
+   "blank": false,
+   "ok": true
+  }
+ },
+ "pass": true,
+ "n_gifs": 15,
+ "manual_checklist": "verified at generation: stamps+flags drawn at 7pt/>=140dpi; titles >=10pt; no overlapping axes labels (orthographic panels share scales); math rendered via mathtext in identifiability colorbar label"
+}

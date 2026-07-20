@@ -1,0 +1,7 @@
+full solve at old theta_MAP: 760s
+enriched basis r=130, M-orth resid 4.10e-07
+{"cid": "a16_bb_splits_combo_enr", "basis_r": 130, "n_modes": 74, "max_rel_err": 6.83088947628363e-08, "median_rel_err": 4.746247839193529e-11, "pass_0p3pct": true}
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_true_remodel_loop_20260706/code/enrich_candidate.py", line 130, in <module>
+    tray[a] = (W[6 * tray_nodes + a, :] @ Q1)
+ValueError: could not broadcast input array from shape (4678,130) into shape (130,)

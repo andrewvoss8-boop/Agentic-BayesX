@@ -1,0 +1,44 @@
+{
+ "cid": "b03_bb_4way",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 0.0,
+    "zhi": 4.0
+   },
+   "name": "bb_base"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  }
+ ],
+ "rationale": "Push a16 finer: +X face + base + bulkhead band as 4 sub-regions.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)",
+ "split_info": {
+  "bb_xface": 4671,
+  "bb_base": 3588,
+  "bb_bulkband": 3864
+ }
+}

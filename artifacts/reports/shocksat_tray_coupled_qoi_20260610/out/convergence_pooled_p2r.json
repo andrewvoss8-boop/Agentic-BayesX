@@ -1,0 +1,32 @@
+{
+ "tag": "p2r",
+ "per_variable": {
+  "sigma_f": {
+   "r_hat_max": 1.3622693928378673,
+   "ess_min": 9.419791256391216
+  },
+  "theta_T": {
+   "r_hat_max": 1.322268880369715,
+   "ess_min": 10.379510581970031
+  },
+  "theta_pool": {
+   "r_hat_max": 2.2196677478951305,
+   "ess_min": 3.0463308610700444
+  }
+ },
+ "worst_rhat": 2.2196677478951305,
+ "min_ess": 3.0463308610700444,
+ "divergences": 0,
+ "divergence_fraction": 0.0,
+ "gate_pass": false,
+ "settings": {
+  "nwarm": 2000,
+  "ndraw": 2000,
+  "max_tree_depth": 9,
+  "chains": 4
+ },
+ "pooling": [
+  "k_tx + k_ty + k_tz",
+  "k_rx + k_ry + k_rz"
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "cid": "A0",
+ "theta_map": {
+  "al_welds": 1.1024,
+  "angle_brackets": 1.1648,
+  "bottom_box": 1.0077,
+  "contact": 0.9271,
+  "cross_beam": 1.0589,
+  "joints": 0.9577,
+  "plates": 1.1501,
+  "steel_welds": 1.085,
+  "top_box": 0.8396
+ },
+ "n_modes": 54,
+ "max_rel_err": 0.006934814933807099,
+ "median_rel_err": 0.0011871097247428963,
+ "pass_0p3pct": false,
+ "solve_s": 743.6
+}

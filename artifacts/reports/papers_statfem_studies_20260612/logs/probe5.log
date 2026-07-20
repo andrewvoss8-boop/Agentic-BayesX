@@ -1,0 +1,7 @@
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+probe5_zprior {'tag': 'probe5_zprior', 'max_rhat': 176.2675, 'min_ess': 1.0023, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 527.2643, 'n_draws': 440}
+2-chain: R-hat 176.268  ESS 1  div 0 (0.0%)
+chain0 zeta[%]: [0.74 0.82 6.22 5.67 0.74 0.87 1.23 1.42 1.69 6.52 0.79 0.78 0.77]
+chain1 zeta[%]: [0.73 0.88 6.76 5.99 0.28 0.7  1.33 1.46 1.37 6.15 0.84 0.88 0.73]
+true    zeta[%]: [4.53 1.4  0.51 0.47 0.55 0.54 1.09 0.9  0.82 0.74 0.99 0.88 1.04]

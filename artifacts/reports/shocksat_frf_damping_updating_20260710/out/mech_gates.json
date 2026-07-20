@@ -1,0 +1,98 @@
+{
+  "V1": {
+    "block_rel_dev_max": 0.0,
+    "block_rel_dev": {
+      "shell_101": 0.0,
+      "shell_102": 0.0,
+      "shell_103": 0.0,
+      "shell_104": 0.0,
+      "shell_105": 0.0,
+      "shell_106": 0.0,
+      "shell_201": 0.0,
+      "shell_202": 0.0,
+      "shell_203": 0.0,
+      "shell_204": 0.0,
+      "shell_205": 0.0,
+      "shell_206": 0.0,
+      "shell_301": 0.0,
+      "shell_302": 0.0,
+      "shell_401": 0.0,
+      "shell_501": 0.0,
+      "shell_601": 0.0,
+      "shell_701": 0.0,
+      "bush_99": 0.0,
+      "bush_801": 0.0,
+      "bush_802": 0.0,
+      "bush_803": 0.0,
+      "bush_804": 0.0,
+      "bush_805": 0.0,
+      "bush_806": 0.0,
+      "bush_807": 0.0,
+      "bush_902": 0.0
+    },
+    "M_rel_dev": 0.0,
+    "eig_rel_err_max": 1.1547435478613322e-09,
+    "n_keep": 399510,
+    "metric": "eig 1.15e-09, blocks 0.00e+00",
+    "t_s": 266.3,
+    "pass": true
+  },
+  "V2": {
+    "n_elems": 17568,
+    "n_hanging": 0,
+    "lam_rbm_max": 0.001156430693981747,
+    "f7_hz": 474.59947517143854,
+    "rbm_over_elastic": 4.621050386183481e-12,
+    "metric": "|lam_rbm|/lam_el 4.62e-12, f7 474.6 Hz",
+    "t_s": 63.4,
+    "pass": true
+  },
+  "V3": {
+    "info": {
+      "pids": [
+        701
+      ],
+      "n_quads_refined": 4056,
+      "n_trias_refined": 336,
+      "n_new_grids": null,
+      "n_hanging": 0,
+      "note": "V3 dish refine null",
+      "n_grids": 80427
+    },
+    "n_participating": [
+      52,
+      50
+    ],
+    "n_matched": 50,
+    "median_abs_df": 8.27737768555048e-05,
+    "frac_df_gt_0p5pct": 0.02,
+    "max_abs_df": 0.0076538492115273415,
+    "mean_mac_to_test_base": 0.526368194639908,
+    "mean_mac_to_test_refined": 0.5363333638154598,
+    "d_mac": 0.009965169175551791,
+    "artifact_note": "4 accel-drilling penalty modes move 124.5->62.7 Hz by construction (excluded as unobservable, D12); see decisions_log D12/D13",
+    "metric": "median|df| 0.0083%, frac>0.5% 0.020, dMAC +0.0100, matched 50",
+    "t_s": 326.6,
+    "pass": true
+  },
+  "V4": {
+    "membrane_ratio": 2.0,
+    "bending_ratio": 7.991952037391308,
+    "k_axial_fe": 125000.00584378945,
+    "k_axial_analytic": 125000.0,
+    "k_bend_fe": 4.906235819433406,
+    "k_bend_analytic": 4.882812500000002,
+    "metric": "t x2: membrane x2.000 (want 2), bending x7.992 (want 8)",
+    "t_s": 0.0,
+    "pass": true
+  },
+  "V5": {
+    "churn_if_repaired_hungarian": 16,
+    "churn_if_repaired_greedy": 10,
+    "frozen_pairs_theta_invariant": true,
+    "n_pairs": 33,
+    "metric": "re-pairing churns 16 (hung) / 10 (greedy) pairs on +10% shift; frozen pairing untouched=True",
+    "t_s": 0.0,
+    "pass": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "task": "Card G — multi-reference amplitude / participation-vs-damping confound",
+  "active_runtime_s": 516,
+  "elapsed_wallclock_s": 1850,
+  "note": "active_runtime_s = sum of the production-pipeline command runtimes (below). elapsed includes detached waits + reasoning. Development smoke/superseded runs (~600 s) NOT counted in active.",
+  "components_s": {
+    "partA_reproduce (freq + 3x value_eval + 3x beck NUTS)": 302,
+    "coherence_diagnostic": 9.4,
+    "multiref_build_caches": 10,
+    "drive_shape_ratio": 0.9,
+    "multiref_identifiability": 0.8,
+    "multiref_value (3 splits x 4 drives, FEM-forward + measured-residue + oracle, NUTS)": 187.6,
+    "multiref_freq": 1,
+    "figs (+ image_qa)": 5
+  },
+  "compute_env": {"threads": "OMP/VECLIB/OPENBLAS/MKL=1", "dtype": "float64", "sampler": "NUTS (numpyro 0.19, jax 0.4.30)",
+                  "chains": 4, "warmup": 1000, "samples": 1000, "reduced_model_dim": 74},
+  "disk_footprint": {
+    "new_artifacts_total_mb": 2.8,
+    "band_limited_frf_caches_mb": 2.0,
+    "out_json_mb": 0.2, "figures_mb": 0.5, "logs_mb": 0.02,
+    "raw_mat_and_zips_deleted_gb": 5.0,
+    "note": "Band-limited per-reference FRF caches (KB-MB) kept; raw 256 MB .mat hits (Test08/10/03) + Test03/Test10 zips DELETED after caching (disk hygiene). From-scratch cache rebuild needs re-extracting the NASA delivery .mat; all analysis/figures replay from the kept caches."
+  }
+}

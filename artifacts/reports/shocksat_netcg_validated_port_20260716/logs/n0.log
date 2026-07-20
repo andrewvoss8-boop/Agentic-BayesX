@@ -1,0 +1,9 @@
+reduced model: nM=40 in-band modes 54.6-258.9 Hz, 20 measured
+L5 posterior (REUSED): (4000, 9) draws, converged=True max_rhat=1.0012933731423992 min_ess=2646.2731676508342 div=0
+[shear_X] statfem_Fk width 1.508x vs target 1.508 (|err| 0.0000)  cov 0.995
+[shear_Y] statfem_Fk width 2.301x vs target 2.301 (|err| 0.0000)  cov 0.982
+[normal_Z] statfem_Fk width 2.526x vs target 2.526 (|err| 0.0000)  cov 0.987
+
+GATE N0: PASS  (max |err| 0.0000 vs tol 0.05)
+DIAGNOSTIC same-band: netcg convention 1.508 vs study convention 21.660
+wrote out/n0_reference.json

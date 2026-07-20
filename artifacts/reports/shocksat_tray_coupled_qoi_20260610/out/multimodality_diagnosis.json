@@ -1,0 +1,237 @@
+{
+ "base": {
+  "worst_rhat": 5.029741167382107,
+  "min_ess": 2.3853158769147287,
+  "divergences": 0,
+  "per_chain": [
+   {
+    "chain": 0,
+    "theta_m_median": [
+     0.169,
+     1.761,
+     0.512,
+     1.188,
+     1.407,
+     1.792
+    ],
+    "rms_log_residual_pct": 3.46
+   },
+   {
+    "chain": 1,
+    "theta_m_median": [
+     2.438,
+     3.584,
+     1.222,
+     0.512,
+     0.877,
+     2.331
+    ],
+    "rms_log_residual_pct": 3.53
+   },
+   {
+    "chain": 2,
+    "theta_m_median": [
+     0.275,
+     1.793,
+     1.959,
+     1.703,
+     1.42,
+     2.84
+    ],
+    "rms_log_residual_pct": 3.34
+   },
+   {
+    "chain": 3,
+    "theta_m_median": [
+     0.662,
+     4.179,
+     2.859,
+     0.55,
+     1.139,
+     2.291
+    ],
+    "rms_log_residual_pct": 3.45
+   }
+  ],
+  "cross_chain_pred_freq_spread_pct": {
+   "max": 7.0,
+   "median": 0.06
+  }
+ },
+ "remedy": {
+  "worst_rhat": 9.735682839791982,
+  "min_ess": 2.032974269629744,
+  "divergences": 0,
+  "per_chain": [
+   {
+    "chain": 0,
+    "theta_m_median": [
+     4.213,
+     1.093,
+     0.366,
+     1.416,
+     0.93,
+     0.061
+    ],
+    "rms_log_residual_pct": 4.24
+   },
+   {
+    "chain": 1,
+    "theta_m_median": [
+     0.865,
+     0.247,
+     0.4,
+     0.637,
+     4.228,
+     0.219
+    ],
+    "rms_log_residual_pct": 10.93
+   },
+   {
+    "chain": 2,
+    "theta_m_median": [
+     1.229,
+     2.708,
+     1.214,
+     0.589,
+     0.959,
+     1.522
+    ],
+    "rms_log_residual_pct": 3.43
+   },
+   {
+    "chain": 3,
+    "theta_m_median": [
+     0.824,
+     4.19,
+     2.128,
+     1.298,
+     1.146,
+     1.634
+    ],
+    "rms_log_residual_pct": 3.35
+   }
+  ],
+  "cross_chain_pred_freq_spread_pct": {
+   "max": 58.12,
+   "median": 0.055
+  }
+ },
+ "fim_combinations": {
+  "actual_discrepancy_3.7pct": {
+   "sigma": 0.037,
+   "eigenvalues": [
+    0.002,
+    0.021,
+    0.442,
+    0.745,
+    15.023,
+    97.015
+   ],
+   "prior_precision": 0.756,
+   "n_identifiable_combos": 2,
+   "eigvectors_by_combo": [
+    {
+     "eig": 0.0,
+     "vec": {
+      "k_tx": -0.14,
+      "k_ty": 0.74,
+      "k_rx": -0.66
+     }
+    },
+    {
+     "eig": 0.02,
+     "vec": {
+      "k_tx": 0.95,
+      "k_rx": -0.13,
+      "k_ry": -0.26
+     }
+    },
+    {
+     "eig": 0.44,
+     "vec": {
+      "k_ty": 0.67,
+      "k_rx": 0.74
+     }
+    },
+    {
+     "eig": 0.74,
+     "vec": {
+      "k_rz": 1.0
+     }
+    },
+    {
+     "eig": 15.02,
+     "vec": {
+      "k_tz": -1.0
+     }
+    },
+    {
+     "eig": 97.02,
+     "vec": {
+      "k_tx": -0.26,
+      "k_ry": -0.96
+     }
+    }
+   ]
+  },
+  "injected_noise_only_0.3pct": {
+   "sigma": 0.003,
+   "eigenvalues": [
+    0.236,
+    3.246,
+    67.177,
+    113.287,
+    2285.198,
+    14757.076
+   ],
+   "prior_precision": 0.756,
+   "n_identifiable_combos": 5,
+   "eigvectors_by_combo": [
+    {
+     "eig": 0.24,
+     "vec": {
+      "k_tx": -0.14,
+      "k_ty": 0.74,
+      "k_rx": -0.66
+     }
+    },
+    {
+     "eig": 3.25,
+     "vec": {
+      "k_tx": 0.95,
+      "k_rx": -0.13,
+      "k_ry": -0.26
+     }
+    },
+    {
+     "eig": 67.18,
+     "vec": {
+      "k_ty": 0.67,
+      "k_rx": 0.74
+     }
+    },
+    {
+     "eig": 113.29,
+     "vec": {
+      "k_rz": 1.0
+     }
+    },
+    {
+     "eig": 2285.2,
+     "vec": {
+      "k_tz": -1.0
+     }
+    },
+    {
+     "eig": 14757.08,
+     "vec": {
+      "k_tx": -0.26,
+      "k_ry": -0.96
+     }
+    }
+   ]
+  }
+ },
+ "verdict": "Multimodality is GENUINE under-identification of the 6-axis mount decomposition at the realized model-form discrepancy floor (~3.7 %), not a sampler bug: chains agree in data space (0.06 % median predicted-frequency spread) and disagree in parameter space. Only 2 stiffness COMBINATIONS are identified (k_ry-dominated rocking, k_tz bounce); at the 0.3 % injected-noise floor 5/6 would be -> the binding constraint is model-form discrepancy (cross-confirms the predecessor's joints finding). The packet-7 gate statement (overall mount level identifiable) HOLDS for those combinations; the per-axis claim does not. Pre-test lever refined: add observables that break the lateral/rocking symmetry (mode shapes, FRF amplitudes, interface force gauges) or reduce discrepancy; frequencies alone cannot split the axes."
+}

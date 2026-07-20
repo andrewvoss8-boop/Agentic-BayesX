@@ -1,0 +1,62 @@
+{
+ "fig_results_table.png": {
+  "pass": true,
+  "bytes": 162362,
+  "px": [
+   1686,
+   639
+  ],
+  "provenance_on_figure": true,
+  "visual_review": "runner viewed the rendered PNG in-session"
+ },
+ "fig_score_vs_ddof.png": {
+  "pass": true,
+  "bytes": 98647,
+  "px": [
+   1240,
+   782
+  ],
+  "provenance_on_figure": true,
+  "visual_review": "runner viewed the rendered PNG in-session"
+ },
+ "fig_fold_deltas.png": {
+  "pass": true,
+  "bytes": 103622,
+  "px": [
+   1476,
+   839
+  ],
+  "provenance_on_figure": true,
+  "visual_review": "runner viewed the rendered PNG in-session"
+ },
+ "fig_best_frf.png": {
+  "pass": true,
+  "bytes": 199638,
+  "px": [
+   2038,
+   970
+  ],
+  "provenance_on_figure": true,
+  "visual_review": "runner viewed the rendered PNG in-session"
+ },
+ "fig_diag_links.png": {
+  "pass": true,
+  "bytes": 559769,
+  "px": [
+   1770,
+   1517
+  ],
+  "provenance_on_figure": true,
+  "visual_review": "runner viewed the rendered PNG in-session"
+ },
+ "fig_loop_schematic.png": {
+  "pass": true,
+  "bytes": 113098,
+  "px": [
+   1715,
+   561
+  ],
+  "provenance_on_figure": true,
+  "visual_review": "runner viewed the rendered PNG in-session"
+ }
+}

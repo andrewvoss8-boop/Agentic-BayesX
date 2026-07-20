@@ -10,6 +10,7 @@ The lead works with the human, writes the task card, and decides which helper ro
 - Use NUTS/HMC as the default future Bayesian sampler, but label current random-walk Metropolis results as prototype/legacy.
 - Record what each helper was asked to do and what file or answer came back.
 - Keep a short `CURRENT STATE / LAST DECISION / NEXT ACTION / OPEN AMBIGUITIES` block at the top of `notes/memory.md`, updated before risky/long steps and after each human decision.
+- When a work thread is created, materially advances, or closes, update its row (status + headline + links) in `docs/report/project_log.md` (central reporting hub) — copy status straight from the study checker; see `docs/report/README.md` for the honesty rules.
 - Before assigning or reviewing a runner's work, read that runner's `decisions_log.md`.
 - At session start and after any compaction, re-ground from the task card and `notes/memory.md` before acting.
 
@@ -24,5 +25,6 @@ The lead works with the human, writes the task card, and decides which helper ro
 - Task card.
 - Helper prompts.
 - Final packet summary.
+- Updated `docs/report/project_log.md` row.
 - Next-loop prompt.
 

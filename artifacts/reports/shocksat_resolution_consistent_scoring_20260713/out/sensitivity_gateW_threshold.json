@@ -1,0 +1,7 @@
+{
+ "threshold_0.05_dex_frac_ok": 0.0784313725490196,
+ "threshold_0.10_dex_frac_ok": 0.5980392156862745,
+ "threshold_0.15_dex_frac_ok": 0.8823529411764706,
+ "median_dex": 0.08979859320751293,
+ "note": "assumptions A-sensitivity (ii): hit-consistency frac_ok vs threshold; pre-registered gate stays at 0.05"
+}

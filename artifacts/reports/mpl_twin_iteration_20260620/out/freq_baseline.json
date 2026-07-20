@@ -1,0 +1,230 @@
+{
+  "deliverable": "(b) FREQUENCY headline: matched-eigenfrequency NUTS twin vs climatology, 5 LOLO splits",
+  "groups_calibrated": [
+    "K_shield_bend",
+    "K_shield_mem",
+    "K_beam_wall",
+    "K_beam_rest",
+    "K_plate_bend",
+    "K_bush_joints"
+  ],
+  "alive_frac": 0.1,
+  "match_window": 0.08,
+  "band_hz": [
+    40.0,
+    300.0
+  ],
+  "per_split": [
+    {
+      "n_peaks": 7,
+      "twin_crps": 4.905150239503087,
+      "clim_crps_pooled": 40.12294419642857,
+      "crps_skill_vs_clim_pooled": 0.8777470014291796,
+      "twin_interval": 24.35425384098965,
+      "twin_coverage": 1.0,
+      "z_mean": -0.47967024422516685,
+      "twin_median_df_pct": 4.583461539297645,
+      "nominal_fem_median_df_pct": 3.533747865128367,
+      "nearest_pooled_peak_median_df_pct": 1.0673568479818631,
+      "held_out": "interface",
+      "convergence": {
+        "max_rhat": 1.0015597424086073,
+        "min_ess": 2872.8491265815856,
+        "div_frac": 0.0,
+        "n_pairs": 14,
+        "converged": true
+      },
+      "theta_median": {
+        "K_shield_bend": 1.0060219764709473,
+        "K_shield_mem": 1.0054795742034912,
+        "K_beam_wall": 1.105953574180603,
+        "K_beam_rest": 1.0137029886245728,
+        "K_plate_bend": 0.9979998469352722,
+        "K_bush_joints": 1.0075726509094238
+      }
+    },
+    {
+      "n_peaks": 5,
+      "twin_crps": 2.1511673491737264,
+      "clim_crps_pooled": 33.42264821222606,
+      "crps_skill_vs_clim_pooled": 0.9356374355642224,
+      "twin_interval": 25.68321311320638,
+      "twin_coverage": 1.0,
+      "z_mean": 0.03719059064347422,
+      "twin_median_df_pct": 2.0417989197725035,
+      "nominal_fem_median_df_pct": 1.0844512884158304,
+      "nearest_pooled_peak_median_df_pct": 7.502776414680135,
+      "held_out": "beam",
+      "convergence": {
+        "max_rhat": 1.0012038069761882,
+        "min_ess": 3086.3267703967517,
+        "div_frac": 0.0,
+        "n_pairs": 16,
+        "converged": true
+      },
+      "theta_median": {
+        "K_shield_bend": 1.0229984521865845,
+        "K_shield_mem": 1.001573085784912,
+        "K_beam_wall": 1.0439257621765137,
+        "K_beam_rest": 0.9628644585609436,
+        "K_plate_bend": 0.9977567791938782,
+        "K_bush_joints": 1.0024596452713013
+      }
+    },
+    {
+      "n_peaks": 3,
+      "twin_crps": 7.379254204057225,
+      "clim_crps_pooled": 48.0270163127116,
+      "crps_skill_vs_clim_pooled": 0.8463520166231082,
+      "twin_interval": 52.05183012776265,
+      "twin_coverage": 0.6666666666666666,
+      "z_mean": 1.0710199199415282,
+      "twin_median_df_pct": 5.808708527984681,
+      "nominal_fem_median_df_pct": 5.651275957820874,
+      "nearest_pooled_peak_median_df_pct": 3.2726100274060954,
+      "held_out": "valve",
+      "convergence": {
+        "max_rhat": 1.0006805356374415,
+        "min_ess": 2849.688537072133,
+        "div_frac": 0.0,
+        "n_pairs": 18,
+        "converged": true
+      },
+      "theta_median": {
+        "K_shield_bend": 1.0066026449203491,
+        "K_shield_mem": 1.0017882585525513,
+        "K_beam_wall": 1.083627700805664,
+        "K_beam_rest": 0.9504891633987427,
+        "K_plate_bend": 0.9989044666290283,
+        "K_bush_joints": 0.9934176802635193
+      }
+    },
+    {
+      "n_peaks": 3,
+      "twin_crps": 2.9214003967130577,
+      "clim_crps_pooled": 42.91848444444445,
+      "crps_skill_vs_clim_pooled": 0.9319314175575177,
+      "twin_interval": 35.18119544904942,
+      "twin_coverage": 1.0,
+      "z_mean": -0.40076177171337846,
+      "twin_median_df_pct": 1.2038022733146039,
+      "nominal_fem_median_df_pct": 1.4772788706151099,
+      "nearest_pooled_peak_median_df_pct": 0.3399151294708567,
+      "held_out": "avi-L",
+      "convergence": {
+        "max_rhat": 1.0005813828022827,
+        "min_ess": 3161.101890944646,
+        "div_frac": 0.0,
+        "n_pairs": 18,
+        "converged": true
+      },
+      "theta_median": {
+        "K_shield_bend": 1.0268895626068115,
+        "K_shield_mem": 1.0043143033981323,
+        "K_beam_wall": 1.0624325275421143,
+        "K_beam_rest": 0.9696336984634399,
+        "K_plate_bend": 0.9971110820770264,
+        "K_bush_joints": 1.0019464492797852
+      }
+    },
+    {
+      "n_peaks": 3,
+      "twin_crps": 1.7853996567852846,
+      "clim_crps_pooled": 37.252055555555565,
+      "crps_skill_vs_clim_pooled": 0.9520724526429785,
+      "twin_interval": 24.398029397090266,
+      "twin_coverage": 1.0,
+      "z_mean": 0.2660651032111953,
+      "twin_median_df_pct": 0.1746442752984225,
+      "nominal_fem_median_df_pct": 0.5942407058355296,
+      "nearest_pooled_peak_median_df_pct": 0.3920814914472432,
+      "held_out": "avi-R",
+      "convergence": {
+        "max_rhat": 1.000949614059249,
+        "min_ess": 3039.9483711189882,
+        "div_frac": 0.0,
+        "n_pairs": 18,
+        "converged": true
+      },
+      "theta_median": {
+        "K_shield_bend": 1.013244867324829,
+        "K_shield_mem": 1.005271077156067,
+        "K_beam_wall": 1.0360199213027954,
+        "K_beam_rest": 0.9768258929252625,
+        "K_plate_bend": 0.9973665475845337,
+        "K_bush_joints": 1.005389928817749
+      }
+    }
+  ],
+  "summary": {
+    "crps_skill_vs_clim_pooled": {
+      "mean": 0.9087480647634013,
+      "std": 0.039979598410586285,
+      "per_split": [
+        0.878,
+        0.936,
+        0.846,
+        0.932,
+        0.952
+      ]
+    },
+    "twin_median_df_pct": {
+      "mean": 2.7624831071335714,
+      "std": 2.109086685000265,
+      "per_split": [
+        4.583,
+        2.042,
+        5.809,
+        1.204,
+        0.175
+      ]
+    },
+    "nominal_fem_median_df_pct": {
+      "mean": 2.468198937563142,
+      "std": 1.8802007033180757,
+      "per_split": [
+        3.534,
+        1.084,
+        5.651,
+        1.477,
+        0.594
+      ]
+    },
+    "nearest_pooled_peak_median_df_pct": {
+      "mean": 2.5149479821972385,
+      "std": 2.712391357694611,
+      "per_split": [
+        1.067,
+        7.503,
+        3.273,
+        0.34,
+        0.392
+      ]
+    },
+    "twin_coverage": {
+      "mean": 0.9333333333333332,
+      "std": 0.13333333333333336,
+      "per_split": [
+        1.0,
+        1.0,
+        0.667,
+        1.0,
+        1.0
+      ]
+    },
+    "twin_interval": {
+      "mean": 32.33370438561967,
+      "std": 10.656343564482958,
+      "per_split": [
+        24.354,
+        25.683,
+        52.052,
+        35.181,
+        24.398
+      ]
+    }
+  },
+  "all_splits_converged": true,
+  "caveat": "dense modal forest (29-71 alive modes/node) => a FEM mode sits near every measured peak; the pooled-ensemble climatology is a WIDE (weak) bar, the nearest-pooled-peak |df| is the fairer bar for 'does the twin add location-specific info beyond global modes'.",
+  "runtime_s": 37.2
+}

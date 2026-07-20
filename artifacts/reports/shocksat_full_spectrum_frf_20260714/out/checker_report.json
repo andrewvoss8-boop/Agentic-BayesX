@@ -1,0 +1,51 @@
+{
+ "G01_continuity_bars": {
+  "status": "GREEN",
+  "detail": "A0=0.1969 in 0.1969\u00b10.002; A1=0.2371 in 0.2371\u00b10.005"
+ },
+ "G02_wide_cache_overlap": {
+  "status": "GREEN",
+  "detail": "5 wide drives validated (corr>=0.999, med|dlog10|<=0.01); 0 excluded+reported"
+ },
+ "G03_no_amplitude_lsq_in_selection": {
+  "status": "GREEN",
+  "detail": "6 selection files clean (one global gain per fold only)"
+ },
+ "G04_frozen_pairing_exact_basis": {
+  "status": "GREEN",
+  "detail": "4 freeze-set candidates spot-checked, worst 0.000% <= 0.3%"
+ },
+ "G05_query_budgets": {
+  "status": "GREEN",
+  "detail": "agent 14/80, random 14/80, random seeded"
+ },
+ "G06_fold_leakage": {
+  "status": "GREEN",
+  "detail": "leakage audit pass (36 files); fold/train_keys consistent"
+ },
+ "G07_vault_discipline": {
+  "status": "GREEN",
+  "detail": "5 arms vault-graded once each, post-freeze, labeled third program read"
+ },
+ "G08_nuts_convergence": {
+  "status": "YELLOW",
+  "detail": "non-converged posterior(s), intervals not-trustworthy: armB_with_error_term_m_xpos_990x: rhat 48.779646846796034, ess 2.0027743107061564, div 0.0; armB_with_error_term_m_zpos_990z: rhat 360.63406923662427, ess 2.0020643780987712, div 0.0; armB_with_error_term_m_ypos_990y: rhat 29.622771033868915, ess 2.0051211121381614, div 0.0; armB_with_error_term_m_zpos_900z: rhat 102.20475675723522, ess 2.002210847122915, div 0.0"
+ },
+ "G09_results_and_verdicts": {
+  "status": "GREEN",
+  "detail": "bands table complete for all arms; S/H verdicts + netcg + findings present"
+ },
+ "G10_figures": {
+  "status": "GREEN",
+  "detail": "7 figures scripted, labeled, linted, QA-passed"
+ },
+ "G11_runtime": {
+  "status": "GREEN",
+  "detail": "active 61589s <= elapsed 123583s"
+ },
+ "G12_checker_immutable": {
+  "status": "GREEN",
+  "detail": "check.py sha256 c238113b53e2... matches lock"
+ },
+ "OVERALL": "YELLOW"
+}

@@ -1,0 +1,21 @@
+{
+ "construction": "M-lik",
+ "depth": 0.0,
+ "nuts": {
+  "max_rhat": 1.003439810043435,
+  "min_ess": 1447.2789681244806,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": true,
+ "runtime_s": 9.08,
+ "theta": {
+  "mean": 1.1495709515067305,
+  "sd": 0.00202330451199827,
+  "lo": 1.1456737412818547,
+  "hi": 1.1535621465049701
+ },
+ "coverage_heldout": 1.0
+}

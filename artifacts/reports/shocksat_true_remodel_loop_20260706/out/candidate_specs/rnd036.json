@@ -1,0 +1,23 @@
+{
+ "cid": "rnd036",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    102,
+    401
+   ]
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    102
+   ],
+   "t_scale": 1.5585473661927811,
+   "name": "rthick37"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

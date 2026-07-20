@@ -1,0 +1,305 @@
+{
+  "swept": "unmeasured-mode sigma SD_F_U (freq) and SD_A_U (log-amp), each /2, x1, x2",
+  "baseline": {
+    "SD_F_U": 0.06,
+    "SD_A_U": 0.8
+  },
+  "grid": {
+    "tray_normal_Z": [
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.4,
+        "band_factor": 2.6,
+        "band_pm_pct": 51.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 91.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.8,
+        "band_factor": 5.6,
+        "band_pm_pct": 120.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 97.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 1.6,
+        "band_factor": 34.2,
+        "band_pm_pct": 450.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 99.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.4,
+        "band_factor": 2.7,
+        "band_pm_pct": 52.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 91.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.8,
+        "band_factor": 5.7,
+        "band_pm_pct": 120.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 97.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 1.6,
+        "band_factor": 34.4,
+        "band_pm_pct": 454.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 99.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.4,
+        "band_factor": 2.7,
+        "band_pm_pct": 52.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 91.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.8,
+        "band_factor": 5.6,
+        "band_pm_pct": 119.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 97.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 1.6,
+        "band_factor": 33.5,
+        "band_pm_pct": 463.0,
+        "trust_pct": 45.0,
+        "var_unmeas_pct": 99.0
+      }
+    ],
+    "tray_shear_X": [
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.4,
+        "band_factor": 2.4,
+        "band_pm_pct": 45.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 6.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.8,
+        "band_factor": 3.1,
+        "band_pm_pct": 68.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 41.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 1.6,
+        "band_factor": 15.2,
+        "band_pm_pct": 378.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 89.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.4,
+        "band_factor": 2.4,
+        "band_pm_pct": 46.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 5.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.8,
+        "band_factor": 3.2,
+        "band_pm_pct": 68.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 41.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 1.6,
+        "band_factor": 15.4,
+        "band_pm_pct": 382.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 89.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.4,
+        "band_factor": 2.4,
+        "band_pm_pct": 45.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 6.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.8,
+        "band_factor": 3.2,
+        "band_pm_pct": 68.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 42.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 1.6,
+        "band_factor": 15.4,
+        "band_pm_pct": 384.0,
+        "trust_pct": 96.0,
+        "var_unmeas_pct": 89.0
+      }
+    ],
+    "base_shear_Y": [
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.4,
+        "band_factor": 2.6,
+        "band_pm_pct": 51.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 21.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.8,
+        "band_factor": 3.9,
+        "band_pm_pct": 81.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 60.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 1.6,
+        "band_factor": 23.7,
+        "band_pm_pct": 521.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 92.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.4,
+        "band_factor": 2.7,
+        "band_pm_pct": 51.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 21.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.8,
+        "band_factor": 3.9,
+        "band_pm_pct": 80.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 60.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 1.6,
+        "band_factor": 23.9,
+        "band_pm_pct": 522.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 92.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.4,
+        "band_factor": 2.7,
+        "band_pm_pct": 51.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 21.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.8,
+        "band_factor": 3.9,
+        "band_pm_pct": 79.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 60.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 1.6,
+        "band_factor": 24.0,
+        "band_pm_pct": 530.0,
+        "trust_pct": 97.0,
+        "var_unmeas_pct": 92.0
+      }
+    ],
+    "mount_response": [
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.4,
+        "band_factor": 3.3,
+        "band_pm_pct": 66.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 0.8,
+        "band_factor": 10.2,
+        "band_pm_pct": 163.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.03,
+        "SD_A_U": 1.6,
+        "band_factor": 65.5,
+        "band_pm_pct": 539.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.4,
+        "band_factor": 3.3,
+        "band_pm_pct": 66.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 0.8,
+        "band_factor": 10.2,
+        "band_pm_pct": 163.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.06,
+        "SD_A_U": 1.6,
+        "band_factor": 65.2,
+        "band_pm_pct": 538.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.4,
+        "band_factor": 3.3,
+        "band_pm_pct": 66.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 0.8,
+        "band_factor": 10.2,
+        "band_pm_pct": 162.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      },
+      {
+        "SD_F_U": 0.12,
+        "SD_A_U": 1.6,
+        "band_factor": 66.0,
+        "band_pm_pct": 536.0,
+        "trust_pct": 13.0,
+        "var_unmeas_pct": 100.0
+      }
+    ]
+  }
+}

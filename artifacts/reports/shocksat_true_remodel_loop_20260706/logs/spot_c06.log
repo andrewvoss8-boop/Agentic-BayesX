@@ -1,0 +1,20 @@
+{
+ "cid": "c06_tb_xface",
+ "theta_map": {
+  "al_welds": 1.3716,
+  "angle_brackets": 1.0869,
+  "bottom_box": 1.0023,
+  "contact": 0.9766,
+  "cross_beam": 1.6075,
+  "joints": 0.9489,
+  "plates": 1.0651,
+  "steel_welds": 1.061,
+  "tb_xface": 1.2152,
+  "top_box": 0.7499
+ },
+ "n_modes": 54,
+ "max_rel_err": 0.022338879721465643,
+ "median_rel_err": 0.00446755849769187,
+ "pass_0p3pct": false,
+ "solve_s": 25676.2
+}

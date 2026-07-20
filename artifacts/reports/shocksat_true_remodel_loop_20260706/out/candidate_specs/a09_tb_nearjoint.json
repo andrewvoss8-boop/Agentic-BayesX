@@ -1,0 +1,21 @@
+{
+ "cid": "a09_tb_nearjoint",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 201,
+   "rule": {
+    "type": "z_band",
+    "zlo": 18.4,
+    "zhi": 21.5
+   },
+   "name": "tb_nearjoint"
+  }
+ ],
+ "rationale": "Al-box boundary layer above the bolted joint (ch52 at z=19.1): joint-adjacent wall band vs field; smoke test showed the optimizer immediately exploits band-vs-field freedom (1.71 vs 0.71).",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: pairing t12/t8; smoke split result (decisions D12 era)",
+ "split_info": {
+  "tb_nearjoint": 3634
+ }
+}

@@ -1,0 +1,513 @@
+{
+  "deliverable": "held-out per-channel AMPLITUDE skill vs climatology \u2014 BEFORE(+X-only) vs AFTER(multi-ref)",
+  "common_N": 65536,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "units_gain_note": "R_{d,k} is one training-only per-mode complex residue from OBSERVED channels; no per-held-out / per-draw peak tuning (units-honest, Card A protocol).",
+  "before_xonly": {
+    "crps_skill_vs_clim": -0.9997627324262283,
+    "per_seed": [
+      -0.7587735012783043,
+      -0.8412694965265117,
+      -1.399245199473869
+    ],
+    "source": "partA value_eval (FEM drive amplitude phi_d/zeta), N=200000 (Card F documented -1.0)"
+  },
+  "before_xonly_sameN": {
+    "crps_skill_vs_clim": -1.6874647048628788,
+    "source": "FEM-forward control on the SAME N=65536 +X grid (isolates df from method)"
+  },
+  "after_multiref": {
+    "crps_skill_vs_clim": -0.10528864218922569,
+    "drive": "+X peak reconstructed from per-mode MEASURED residue R_{+X,k} (operational-modal)",
+    "note": "this residue uses ONLY +X observed-channel data; the MULTI-reference contribution is the by-drive table below (other drives do NOT beat +X)."
+  },
+  "after_by_drive_meanskill": {
+    "xpos_990x": -0.10528864218922569,
+    "zpos_990z": -0.4024821776318734,
+    "ypos_990y": -0.4557495352708212,
+    "z_900z": -0.08759945251540853
+  },
+  "after_by_drive_FEMforward_sameN": {
+    "xpos_990x": -1.6874647048628788,
+    "zpos_990z": -1.2962538316832433,
+    "ypos_990y": -1.9128779223934547,
+    "z_900z": -1.3454398225638053
+  },
+  "shape_oracle_xX_meanskill": 0.5757015351546769,
+  "calib_converged": true,
+  "per_seed": [
+    {
+      "seed": 0,
+      "calib_converged": true,
+      "calib_diag": {
+        "max_rhat": 1.0027915554650957,
+        "min_ess": 1414.8680235289346,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 4000,
+        "converged": true
+      },
+      "n_heldout": 31,
+      "by_drive": {
+        "xpos_990x": {
+          "label": "+X",
+          "instrument": "impact",
+          "n_hits": 1,
+          "n_modes_excited": 23,
+          "sigma_qoi_log": 0.8647347974116752,
+          "NON_HARD": {
+            "n": 29,
+            "twin_crps": 7.894673396414713,
+            "clim_crps": 7.244886396867276,
+            "crps_skill_vs_clim": -0.08968905293372265,
+            "coverage": 0.8275862068965517
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 7.713158469033108,
+            "clim_crps": 7.080918983946337,
+            "crps_skill_vs_clim": -0.08928777274816535,
+            "coverage": 0.8387096774193549
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 29,
+            "twin_crps": 26.710169700655435,
+            "clim_crps": 7.244886396867276,
+            "crps_skill_vs_clim": -2.68676170163345,
+            "coverage": 0.5517241379310345
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 29,
+            "twin_crps": 2.8238692700908143,
+            "clim_crps": 7.244886396867276,
+            "crps_skill_vs_clim": 0.610225873063811,
+            "coverage": 0.5862068965517241
+          }
+        },
+        "zpos_990z": {
+          "label": "+Z",
+          "instrument": "impact",
+          "n_hits": 4,
+          "n_modes_excited": 23,
+          "sigma_qoi_log": 0.9140238002840996,
+          "NON_HARD": {
+            "n": 29,
+            "twin_crps": 5.699495328586255,
+            "clim_crps": 4.471435957692977,
+            "crps_skill_vs_clim": -0.274645412013659,
+            "coverage": 0.7931034482758621
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 5.521892989184953,
+            "clim_crps": 4.507681298587521,
+            "crps_skill_vs_clim": -0.22499631704558065,
+            "coverage": 0.8064516129032258
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 29,
+            "twin_crps": 11.215351695913025,
+            "clim_crps": 4.471435957692977,
+            "crps_skill_vs_clim": -1.5082214756128476,
+            "coverage": 0.7241379310344828
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 29,
+            "twin_crps": 1.910673469977343,
+            "clim_crps": 4.471435957692977,
+            "crps_skill_vs_clim": 0.572693540049459,
+            "coverage": 0.6896551724137931
+          }
+        },
+        "ypos_990y": {
+          "label": "+Y",
+          "instrument": "modal",
+          "n_hits": 4,
+          "n_modes_excited": 23,
+          "sigma_qoi_log": 1.018884525370697,
+          "NON_HARD": {
+            "n": 29,
+            "twin_crps": 0.12418548607977796,
+            "clim_crps": 0.08308394883619608,
+            "crps_skill_vs_clim": -0.4946988897291762,
+            "coverage": 0.6896551724137931
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 0.11821777279091045,
+            "clim_crps": 0.08270344569961408,
+            "crps_skill_vs_clim": -0.4294177442169389,
+            "coverage": 0.7096774193548387
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 29,
+            "twin_crps": 0.28348991276981295,
+            "clim_crps": 0.08308394883619608,
+            "crps_skill_vs_clim": -2.4120900214881056,
+            "coverage": 0.7931034482758621
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 29,
+            "twin_crps": 0.04697353420947697,
+            "clim_crps": 0.08308394883619608,
+            "crps_skill_vs_clim": 0.4346256422875674,
+            "coverage": 0.5517241379310345
+          }
+        },
+        "z_900z": {
+          "label": "900z",
+          "instrument": "impact",
+          "n_hits": 4,
+          "n_modes_excited": 23,
+          "sigma_qoi_log": 0.9886689457247811,
+          "NON_HARD": {
+            "n": 29,
+            "twin_crps": 7.441093132572763,
+            "clim_crps": 6.425940049871718,
+            "crps_skill_vs_clim": -0.15797736592972278,
+            "coverage": 0.9655172413793104
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 7.070902708978391,
+            "clim_crps": 6.5249864835670826,
+            "crps_skill_vs_clim": -0.08366549521384847,
+            "coverage": 0.967741935483871
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 29,
+            "twin_crps": 27.413941896687334,
+            "clim_crps": 6.425940049871718,
+            "crps_skill_vs_clim": -3.2661372007718317,
+            "coverage": 0.8620689655172413
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 29,
+            "twin_crps": 3.148710145465398,
+            "clim_crps": 6.425940049871718,
+            "crps_skill_vs_clim": 0.5100000745372257,
+            "coverage": 0.6551724137931034
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "calib_converged": true,
+      "calib_diag": {
+        "max_rhat": 1.000682025358564,
+        "min_ess": 2824.7788410768053,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 4000,
+        "converged": true
+      },
+      "n_heldout": 31,
+      "by_drive": {
+        "xpos_990x": {
+          "label": "+X",
+          "instrument": "impact",
+          "n_hits": 1,
+          "n_modes_excited": 28,
+          "sigma_qoi_log": 1.1327583969635535,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 22.703316221790807,
+            "clim_crps": 21.100015931332457,
+            "crps_skill_vs_clim": -0.07598573838408962,
+            "coverage": 0.8
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 22.025833182896555,
+            "clim_crps": 20.52397365941857,
+            "crps_skill_vs_clim": -0.07317586488856032,
+            "coverage": 0.8064516129032258
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 38.68689825427535,
+            "clim_crps": 21.100015931332457,
+            "crps_skill_vs_clim": -0.8335009025669624,
+            "coverage": 0.7333333333333333
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 6.371526677368477,
+            "clim_crps": 21.100015931332457,
+            "crps_skill_vs_clim": 0.6980321390228392,
+            "coverage": 0.7
+          }
+        },
+        "zpos_990z": {
+          "label": "+Z",
+          "instrument": "impact",
+          "n_hits": 4,
+          "n_modes_excited": 28,
+          "sigma_qoi_log": 0.9405362090638647,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 10.718072468713785,
+            "clim_crps": 7.059844372688034,
+            "crps_skill_vs_clim": -0.5181740422179988,
+            "coverage": 0.7
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 10.396928979289008,
+            "clim_crps": 6.95100693665365,
+            "crps_skill_vs_clim": -0.4957442963356171,
+            "coverage": 0.7096774193548387
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 11.134972086948661,
+            "clim_crps": 7.059844372688034,
+            "crps_skill_vs_clim": -0.577226281364758,
+            "coverage": 0.9333333333333333
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 2.2668069207452737,
+            "clim_crps": 7.059844372688034,
+            "crps_skill_vs_clim": 0.6789154546359798,
+            "coverage": 0.8333333333333334
+          }
+        },
+        "ypos_990y": {
+          "label": "+Y",
+          "instrument": "modal",
+          "n_hits": 4,
+          "n_modes_excited": 28,
+          "sigma_qoi_log": 1.0364008364977297,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 0.1606224183297988,
+            "clim_crps": 0.10960900686343239,
+            "crps_skill_vs_clim": -0.4654125872149055,
+            "coverage": 0.6333333333333333
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 0.15597231336716294,
+            "clim_crps": 0.10825237399016627,
+            "crps_skill_vs_clim": -0.440821181264178,
+            "coverage": 0.6451612903225806
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 0.2293393802394406,
+            "clim_crps": 0.10960900686343239,
+            "crps_skill_vs_clim": -1.0923406461038967,
+            "coverage": 0.9666666666666667
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 0.03852300980692338,
+            "clim_crps": 0.10960900686343239,
+            "crps_skill_vs_clim": 0.6485415668903813,
+            "coverage": 0.9
+          }
+        },
+        "z_900z": {
+          "label": "900z",
+          "instrument": "impact",
+          "n_hits": 4,
+          "n_modes_excited": 28,
+          "sigma_qoi_log": 1.3461138340159882,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 55.516457741210985,
+            "clim_crps": 52.18993894187034,
+            "crps_skill_vs_clim": -0.06373869881407135,
+            "coverage": 0.8333333333333334
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 53.80709718209532,
+            "clim_crps": 50.64516578308618,
+            "crps_skill_vs_clim": -0.062433034824127764,
+            "coverage": 0.8387096774193549
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 68.16022094778258,
+            "clim_crps": 52.18993894187034,
+            "crps_skill_vs_clim": -0.3060030789401784,
+            "coverage": 0.8333333333333334
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 6.698234146777358,
+            "clim_crps": 52.18993894187034,
+            "crps_skill_vs_clim": 0.8716566012035785,
+            "coverage": 0.6333333333333333
+          }
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "calib_converged": true,
+      "calib_diag": {
+        "max_rhat": 1.0019601514326577,
+        "min_ess": 1747.4314387121963,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 4000,
+        "converged": true
+      },
+      "n_heldout": 31,
+      "by_drive": {
+        "xpos_990x": {
+          "label": "+X",
+          "instrument": "impact",
+          "n_hits": 1,
+          "n_modes_excited": 26,
+          "sigma_qoi_log": 1.1938209996006668,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 19.245824027696823,
+            "clim_crps": 16.732718100384165,
+            "crps_skill_vs_clim": -0.15019113524986483,
+            "coverage": 0.9
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 18.919652694527,
+            "clim_crps": 16.31696233526609,
+            "crps_skill_vs_clim": -0.15950826543465602,
+            "coverage": 0.9032258064516129
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 42.53676993742998,
+            "clim_crps": 16.732718100384165,
+            "crps_skill_vs_clim": -1.5421315103882245,
+            "coverage": 0.8
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 9.724276126094223,
+            "clim_crps": 16.732718100384165,
+            "crps_skill_vs_clim": 0.4188465933773806,
+            "coverage": 0.3333333333333333
+          }
+        },
+        "zpos_990z": {
+          "label": "+Z",
+          "instrument": "impact",
+          "n_hits": 4,
+          "n_modes_excited": 26,
+          "sigma_qoi_log": 0.9833739093862892,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 7.824717039299914,
+            "clim_crps": 5.531293128285039,
+            "crps_skill_vs_clim": -0.4146270786639623,
+            "coverage": 0.8666666666666667
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 7.6210486501169505,
+            "clim_crps": 5.449499935145245,
+            "crps_skill_vs_clim": -0.3984858685779262,
+            "coverage": 0.8709677419354839
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 15.50595001582539,
+            "clim_crps": 5.531293128285039,
+            "crps_skill_vs_clim": -1.8033137380721245,
+            "coverage": 0.8333333333333334
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 2.84853047598349,
+            "clim_crps": 5.531293128285039,
+            "crps_skill_vs_clim": 0.4850154548098107,
+            "coverage": 0.7666666666666667
+          }
+        },
+        "ypos_990y": {
+          "label": "+Y",
+          "instrument": "modal",
+          "n_hits": 4,
+          "n_modes_excited": 26,
+          "sigma_qoi_log": 1.0514842999373812,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 0.14430011331713735,
+            "clim_crps": 0.10254872134116975,
+            "crps_skill_vs_clim": -0.4071371288683818,
+            "coverage": 0.8333333333333334
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 0.14123827410917866,
+            "clim_crps": 0.10120018456133002,
+            "crps_skill_vs_clim": -0.3956325744009339,
+            "coverage": 0.8387096774193549
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 0.3316633924204344,
+            "clim_crps": 0.10254872134116975,
+            "crps_skill_vs_clim": -2.234203099588362,
+            "coverage": 0.8
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 0.04117517905332913,
+            "clim_crps": 0.10254872134116975,
+            "crps_skill_vs_clim": 0.5984817897792869,
+            "coverage": 0.8666666666666667
+          }
+        },
+        "z_900z": {
+          "label": "900z",
+          "instrument": "impact",
+          "n_hits": 4,
+          "n_modes_excited": 26,
+          "sigma_qoi_log": 1.2901962900581756,
+          "NON_HARD": {
+            "n": 30,
+            "twin_crps": 52.33717018133596,
+            "clim_crps": 50.27188584722967,
+            "crps_skill_vs_clim": -0.041082292802431475,
+            "coverage": 0.9333333333333333
+          },
+          "ALL": {
+            "n": 31,
+            "twin_crps": 50.682876364456966,
+            "clim_crps": 48.8551248227198,
+            "crps_skill_vs_clim": -0.0374116645565743,
+            "coverage": 0.9354838709677419
+          },
+          "FEM_forward_sameN_NON_HARD": {
+            "n": 30,
+            "twin_crps": 73.60704899799012,
+            "clim_crps": 50.27188584722967,
+            "crps_skill_vs_clim": -0.4641791879794057,
+            "coverage": 0.8666666666666667
+          },
+          "shape_oracle_NON_HARD": {
+            "n": 30,
+            "twin_crps": 12.059907120680448,
+            "clim_crps": 50.27188584722967,
+            "crps_skill_vs_clim": 0.7601063314527511,
+            "coverage": 0.8666666666666667
+          }
+        }
+      }
+    }
+  ],
+  "runtime_s": 187.55340790748596
+}

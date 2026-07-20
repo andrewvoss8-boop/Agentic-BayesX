@@ -1,0 +1,22 @@
+{
+  "drive": "+Z(900)",
+  "qoi": "shear_Y",
+  "heldout_drive_coverage": 0.6,
+  "miss_frequency_hz": 56.9,
+  "culprit_mode": {
+    "fem_hz": 73.1,
+    "measured_hz": 75.0,
+    "measured": true,
+    "freq_err_pct": -2.46
+  },
+  "culprit_a_gainnorm_by_drive": {
+    "+X": 0.331,
+    "+Z(990)": 1.593,
+    "+XY": 2.156,
+    "+Z(900)": 5.233,
+    "+Y": 2.13
+  },
+  "plusZ900_zscore_vs_other_drives": 1.92,
+  "verdict": "drive-specific outlier (+Z@900 weakly/anomalously excites this Y-mode -> reconstruction sensitive; the OTHER drives constrain it, so the delivered shear_Y is reliable except this end-drive)",
+  "note": "answer key uses FEM shapes (g^Y, phi_drive) + fitted scalar a_i, so the gap localizes to a mode whose effective modal Y-participation the FEM gets wrong for this drive; cross-drive a_i separates drive-specific from systematic. NO NUTS."
+}

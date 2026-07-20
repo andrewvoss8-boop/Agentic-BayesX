@@ -1,0 +1,52 @@
+{
+ "cid": "ma1_form_platesshear",
+ "track": "agent",
+ "round": 1,
+ "cls": "element_formulation",
+ "ops": [
+  "formulation"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.1630289629440902,
+ "exact_b200_500": 0.2239461451835055,
+ "exact_folds": {
+  "m_xpos_990x": 0.3287542206838458,
+  "m_zpos_990z": 0.5224968722375124,
+  "m_ypos_990y": 0.07131882497569773,
+  "m_zpos_900z": -0.27045406612069506
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.1908593940145632,
+  "m_zpos_990z": 0.18419011400886606,
+  "m_ypos_990y": 0.2500820698794963,
+  "m_zpos_900z": 0.2706530028310964
+ },
+ "theta_map": [
+  1.090131453301775,
+  1.1304200132838038,
+  0.9787046027611626,
+  0.9110163672370383,
+  1.1426396495753661,
+  1.2542033690842265,
+  0.999991482406941,
+  1.0939419291865744,
+  0.8048027729416274,
+  1.3876907199075434
+ ],
+ "enriched_pkg": "ma1_form_platesshear__xenr",
+ "spot_max_pct": 5.4283955108758164e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 4.8297,
+  "pass": true
+ },
+ "solve_s_theta1": 459.2,
+ "solve_s_enrich": 436.9,
+ "wall_s": 932.7,
+ "ts": "2026-07-16T20:45:24",
+ "diagnosis_link": "diagnosis_mf_r1.json: peak-width curvature ratio 3.64 (200-500) and 1.23 (sub-200) = model peaks too sharp/stiff; the thick plates (t 0.78-1.0 in over ~18 in span, t/L~0.05) are where Mindlin shear matters -> ts_t 5/6 -> 0.35"
+}

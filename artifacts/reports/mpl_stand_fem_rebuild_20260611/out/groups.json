@@ -1,0 +1,76 @@
+{
+ "K_beam_wall": {
+  "nnz": 11870
+ },
+ "K_beam_rest": {
+  "nnz": 30076
+ },
+ "K_plate_mem": {
+  "nnz": 6341
+ },
+ "K_plate_bend": {
+  "nnz": 2331
+ },
+ "K_shield_mem": {
+  "nnz": 25274
+ },
+ "K_shield_bend": {
+  "nnz": 30553
+ },
+ "K_bush_joints": {
+  "nnz": 4068
+ },
+ "K_shield_att": {
+  "nnz": 1216
+ },
+ "K_valveframe": {
+  "nnz": 816
+ },
+ "K_valve_mount": {
+  "nnz": 384
+ },
+ "K_att_ebox": {
+  "nnz": 240
+ },
+ "K_att_ebox_rot": {
+  "nnz": 30
+ },
+ "K_att_wbox": {
+  "nnz": 168
+ },
+ "K_feet_springs": {
+  "nnz": 24
+ },
+ "M_m_beam_wall": {
+  "nnz": 1254,
+  "total_mass_x": 0.40656349168045436
+ },
+ "M_m_beam_rest": {
+  "nnz": 3080,
+  "total_mass_x": 0.8832239856751831
+ },
+ "M_m_plate": {
+  "nnz": 912,
+  "total_mass_x": 0.028563318026366195
+ },
+ "M_m_shield": {
+  "nnz": 1260,
+  "total_mass_x": 0.09529253848133856
+ },
+ "M_m_valveframe": {
+  "nnz": 48,
+  "total_mass_x": 0.0481059744
+ },
+ "M_m_valvemass": {
+  "nnz": 36,
+  "total_mass_x": 0.04144122210163978
+ },
+ "M_m_ebox": {
+  "nnz": 6,
+  "total_mass_x": 0.007770229144057459
+ },
+ "M_m_wbox": {
+  "nnz": 6,
+  "total_mass_x": 0.02072061105081989
+ }
+}

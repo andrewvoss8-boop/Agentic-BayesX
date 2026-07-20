@@ -1,0 +1,19 @@
+{
+  "deliverable": "FRF comparison: as-delivered FEM vs clean measured (reconcile NASA 'already correlated')",
+  "reference": "m_xpos_990x",
+  "global_units_gain_x": 0.74,
+  "peak_freq_match_median_relpct": 3.67,
+  "peak_height_scatter_sigma_log_below_135Hz": 1.788,
+  "peak_height_scatter_sigma_log_above_135Hz": 1.6,
+  "n_sensors": 84,
+  "sensors_shown_best_to_worst": [
+    72,
+    73,
+    44,
+    111,
+    102,
+    77
+  ],
+  "interpretation": "FEM is correlated in FREQUENCY (peaks line up, median match ~3.7%) but per-sensor peak HEIGHT scatters, worse >135 Hz -> matches NASA cross-ortho degrade + node-line local modes. 'Correlated' (freq + global MAC) != per-sensor FRF amplitude.",
+  "note": "EXPLORATORY; YELLOW; no success claim."
+}

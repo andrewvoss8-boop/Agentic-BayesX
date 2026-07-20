@@ -1,0 +1,47 @@
+{
+  "deliverable": "hybrid (measured-shape) vs all-FEM modal model, held-out QOI (D15 method-vs-data test)",
+  "split_seed": 0,
+  "n_modes_total": 40,
+  "n_measured_shape_modes": 20,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "n_ho_hard": 2,
+  "ridge": 0.01,
+  "FEM_ALL": {
+    "in_sample": {
+      "median_abs_db": 25.016309835261687,
+      "sigma_log": 0.9873119658780142
+    },
+    "heldout": {
+      "median_abs_db": 19.386532258172295,
+      "sigma_log": 1.162744434070481
+    },
+    "heldout_rest": {
+      "median_abs_db": 21.773422617992217,
+      "sigma_log": 1.1782348613370743
+    },
+    "heldout_hard": {
+      "median_abs_db": 14.809373403809007,
+      "sigma_log": 0.1852228279325846
+    }
+  },
+  "HYBRID_measured": {
+    "in_sample": {
+      "median_abs_db": 22.379512403013173,
+      "sigma_log": 1.0095120786921947
+    },
+    "heldout": {
+      "median_abs_db": 18.92683839453601,
+      "sigma_log": 1.1075077424188893
+    },
+    "heldout_rest": {
+      "median_abs_db": 21.539376470463555,
+      "sigma_log": 1.1322808269772018
+    },
+    "heldout_hard": {
+      "median_abs_db": 16.5740273537961,
+      "sigma_log": 0.14450876980438676
+    }
+  },
+  "runtime_s": 1.3589990139007568
+}

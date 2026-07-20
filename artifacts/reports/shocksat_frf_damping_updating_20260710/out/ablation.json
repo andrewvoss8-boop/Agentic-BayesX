@@ -1,0 +1,12 @@
+{
+  "winner_label": "a04_enr",
+  "winner_margin": 0.0367,
+  "damping_only_margin": -0.0039,
+  "shape_only_margin": 0.0367,
+  "both_margin": 0.0293,
+  "damping_share": -0.105,
+  "attribution": "improvement is shape/theta; DAMPING lever unproven",
+  "A0_enr_dev_P1p": 0.1969,
+  "A0_enr_fold_se": 0.1311,
+  "note": "margins in exact-basis dev P1' (FDAC-aligned FRAC) over A0_enr; damping_share = damping_only_margin / winner_margin; >=2/3 required to credit damping (S4)."
+}

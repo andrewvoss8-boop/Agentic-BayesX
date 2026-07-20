@@ -1,0 +1,3 @@
+TMCMC M3: converged=False | cross-run R-hat 129.381 ESS 0 | log-evid -17900.42±739.46 | sigma_d 7.41 [1.30,8.66] | gain 5.80 | 992s
+  (NUTS on SAME likelihood: R-hat 104, ESS 2, sigma_d 9.8 -> multimodal)
+  theta medians: {'al_welds': 0.74, 'angle_brackets': 1.59, 'bottom_box': 0.79, 'contact': 0.56, 'cross_beam': 0.83, 'joints': 1.19, 'plates': 0.52, 'steel_welds': 0.96, 'top_box': 1.18}

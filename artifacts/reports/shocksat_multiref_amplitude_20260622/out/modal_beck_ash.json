@@ -1,0 +1,35 @@
+{
+  "likelihood": "L8b_Beck_on_ash (free system shapes + .ash MAC + Rayleigh)",
+  "split_seed": 2,
+  "n_modes": 12,
+  "n_observed_impact": 46,
+  "n_heldout_impact": 31,
+  "match_MAC_mean": 0.7529859589173332,
+  "tau": 0.3,
+  "diag": {
+    "max_rhat": 1.0040058325445111,
+    "min_ess": 2384.691148739522,
+    "divergences": 0,
+    "converged": true
+  },
+  "sigma_phi_med": 0.6795484051817939,
+  "heldout_peak_FEM_shapes": {
+    "coverage": 0.9354838709677419,
+    "sigma_qoi": 1.1118306739865491,
+    "interval_score": 1558.0938333903152,
+    "crps": 95.31749630047888,
+    "z_std": 0.9270043285650083,
+    "clim_crps": 43.97063296923085,
+    "crps_skill_vs_clim": -1.1677535633198373
+  },
+  "heldout_peak_INFERRED_shapes": {
+    "coverage": 0.9354838709677419,
+    "sigma_qoi": 0.8805527618575044,
+    "interval_score": 741.4024918136618,
+    "crps": 61.40280388695596,
+    "z_std": 0.7734257968475721,
+    "clim_crps": 43.97063296923085,
+    "crps_skill_vs_clim": -0.3964503065016951
+  },
+  "runtime_s": 19.75742197036743
+}

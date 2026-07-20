@@ -1,0 +1,16 @@
+{
+ "cid": "wr2_rnd003",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    302
+   ],
+   "t_scale": 0.6793499216874223,
+   "name": "rthick4"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

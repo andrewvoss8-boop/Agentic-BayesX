@@ -1,0 +1,122 @@
+== waiting for campaign to finish ==
+== campaign done; running dish-refined assemble+solve ==
+== assemble refined ==
+shell pid 101: 17416 elems, nnz 5727744, t=3s
+shell pid 102: 4632 elems, nnz 1513332, t=4s
+shell pid 103: 1568 elems, nnz 553176, t=4s
+shell pid 104: 568 elems, nnz 212544, t=5s
+shell pid 105: 118 elems, nnz 51264, t=5s
+shell pid 106: 286 elems, nnz 121032, t=5s
+shell pid 201: 26430 elems, nnz 8662536, t=10s
+shell pid 202: 4830 elems, nnz 1579968, t=11s
+shell pid 203: 1832 elems, nnz 645840, t=11s
+shell pid 204: 572 elems, nnz 214056, t=11s
+shell pid 205: 182 elems, nnz 78912, t=11s
+shell pid 206: 292 elems, nnz 121608, t=11s
+shell pid 301: 576 elems, nnz 211392, t=11s
+shell pid 302: 192 elems, nnz 63504, t=11s
+shell pid 401: 1572 elems, nnz 524052, t=12s
+shell pid 501: 896 elems, nnz 303264, t=12s
+shell pid 601: 1440 elems, nnz 489600, t=12s
+shell pid 701: 16560 elems, nnz 5362884, t=15s
+bush pid 99: 76 elems
+bush pid 801: 28 elems
+bush pid 802: 8 elems
+bush pid 803: 8 elems
+bush pid 804: 4 elems
+bush pid 805: 4 elems
+bush pid 806: 4 elems
+bush pid 807: 4 elems
+bush pid 902: 30 elems
+{
+ "total_mass": 0.3309686213560344,
+ "total_weight_lb": 127.78301308210861,
+ "nasa_weight_lb": 127.89,
+ "weight_err_pct": -0.08365542098005552,
+ "cg": [
+  -0.0005776587379769806,
+  -0.0008158341597866286,
+  28.014218065137015
+ ],
+ "nasa_cg": [
+  0.0,
+  0.0,
+  28.01
+ ],
+ "rigid_energy": [
+  -6.248879799386486e-06,
+  -1.0345402188249864e-05,
+  -1.4895983895257814e-06,
+  1216.7243525959373,
+  1216.8199179834946,
+  1843.5877845948455
+ ],
+ "K_max": 9925773176.960453,
+ "rigid_energy_rel": [
+  -6.295610113166083e-16,
+  -1.0422767076990482e-15,
+  -1.500737890105542e-16,
+  1.2258232491350684e-07,
+  1.2259195291788027e-07,
+  1.8573744853188386e-07
+ ],
+ "n_dep_dofs": 6588,
+ "n_keep_dofs": 474102
+}
+done in 17s
+== solve refined ==
+[    0.9s] loaded K (nnz 12702134), M, T (480690, 474102)
+[    1.1s] reduced: Kr nnz 12606889, Mr nnz 476776, n 474102
+[  270.6s] eigsh done: f[0:8] = [0.0000e+00 0.0000e+00 2.0000e-03 4.3100e-01 4.8100e-01 1.1330e+00
+ 5.4596e+01 6.2677e+01]
+[  270.6s] elastic f[6:31] = [ 54.6   62.68  62.68  62.7   62.7   73.14  73.74  88.05 104.73 113.8
+ 117.35 122.19 146.14 151.77 152.19 160.6  167.48 168.54 181.56 183.55
+ 183.88 185.18 190.34 191.55 192.59]
+[  271.0s] MAC pairing (test -> our elastic mode):
+[  271.0s]   test  1   54.19 Hz -> fem  1   54.60 Hz  MAC 0.970  df +0.75%
+[  271.0s]   test  2   69.98 Hz -> fem  7   73.74 Hz  MAC 0.499  df +5.37%
+[  271.0s]   test  3   74.99 Hz -> fem  4   62.70 Hz  MAC 0.545  df -16.38%
+[  271.0s]   test  4   85.78 Hz -> fem  8   88.05 Hz  MAC 0.883  df +2.65%
+[  271.0s]   test  5  107.03 Hz -> fem  9  104.73 Hz  MAC 0.975  df -2.14%
+[  271.0s]   test  6  117.63 Hz -> fem 12  122.19 Hz  MAC 0.900  df +3.88%
+[  271.0s]   test  7  118.53 Hz -> fem 10  113.80 Hz  MAC 0.958  df -3.99%
+[  271.0s]   test  8  125.03 Hz -> fem 11  117.35 Hz  MAC 0.704  df -6.15%
+[  271.0s]   test  9  137.25 Hz -> fem 14  151.77 Hz  MAC 0.698  df +10.58%
+[  271.0s]   test 10  142.44 Hz -> fem 14  151.77 Hz  MAC 0.551  df +6.55%
+[  271.0s]   test 11  151.19 Hz -> fem 15  152.19 Hz  MAC 0.610  df +0.67%
+[  271.0s]   test 12  158.17 Hz -> fem 13  146.14 Hz  MAC 0.580  df -7.61%
+[  271.0s]   test 13  165.88 Hz -> fem 16  160.60 Hz  MAC 0.755  df -3.18%
+[  271.0s]   test 14  167.99 Hz -> fem 21  183.88 Hz  MAC 0.703  df +9.46%
+[  271.0s]   test 15  172.26 Hz -> fem 22  185.18 Hz  MAC 0.736  df +7.50%
+[  271.0s]   test 16  174.77 Hz -> fem 18  168.54 Hz  MAC 0.645  df -3.57%
+[  271.0s]   test 17  184.36 Hz -> fem 20  183.55 Hz  MAC 0.889  df -0.44%
+[  271.0s]   test 18  188.64 Hz -> fem 23  190.34 Hz  MAC 0.691  df +0.90%
+[  271.0s]   test 19  190.22 Hz -> fem 27  193.66 Hz  MAC 0.337  df +1.81%
+[  271.0s]   test 20  195.72 Hz -> fem 25  192.59 Hz  MAC 0.392  df -1.60%
+[  271.0s]   test 21  197.82 Hz -> fem 28  196.74 Hz  MAC 0.661  df -0.54%
+[  271.0s]   test 22  198.86 Hz -> fem 26  192.86 Hz  MAC 0.390  df -3.02%
+[  271.0s]   test 23  203.01 Hz -> fem 24  191.55 Hz  MAC 0.285  df -5.65%
+[  271.0s]   test 24  213.91 Hz -> fem 20  183.55 Hz  MAC 0.612  df -14.19%
+[  271.0s]   test 25  222.17 Hz -> fem 29  211.70 Hz  MAC 0.620  df -4.71%
+[  271.0s] done
+== DISH REFINED DONE ==
+== aggregate before/after ==
+BASELINE: global MAC 0.6308  calib 0.7260  |df%| 6.0659  f1 54.596
+  region MACs: {'source_face': 0.4664, 'box_column': 0.6587, 'strut_base': 0.4573, 'dish': None}
+
+edit                       dMAC   d|df%|       f1  regionMAC deltas
+e01_calibrated_theta    -0.0193  -0.3205   53.609  {'source_face': 0.0678, 'box_column': 0.0037, 'strut_base': 0.0045, 'dish': None}
+e02_joints_soft         -0.0044  +0.6244   54.595  {'source_face': 0.1096, 'box_column': 0.118, 'strut_base': 0.0216, 'dish': None}
+e03_joints_stiff        -0.0190  +0.4165   54.596  {'source_face': -0.0064, 'box_column': 0.0128, 'strut_base': -0.0579, 'dish': None}
+e04_bottombox_soft      -0.0301  -0.4811   51.827  {'source_face': 0.0555, 'box_column': 0.0288, 'strut_base': -0.0228, 'dish': None}
+e05_bottombox_stiff     +0.0002  +0.9224   57.228  {'source_face': 0.0234, 'box_column': 0.0891, 'strut_base': 0.0004, 'dish': None}
+e06_topbox_stiff        -0.0062  +0.3152   54.598  {'source_face': 0.1107, 'box_column': 0.0129, 'strut_base': 0.0078, 'dish': None}
+e07_topbox_soft         +0.0104  +0.9300   54.594  {'source_face': 0.0668, 'box_column': 0.0918, 'strut_base': 0.0408, 'dish': None}
+e08_joint801_soft       -0.0223  +0.7584   54.595  {'source_face': 0.0562, 'box_column': 0.0836, 'strut_base': 0.0011, 'dish': None}
+e09_strut807_soft       +0.0005  +0.0048   54.596  {'source_face': 0.0002, 'box_column': -0.0041, 'strut_base': 0.0007, 'dish': None}
+e10_contact902_stiff    -0.0038  -0.0139   54.596  {'source_face': 0.087, 'box_column': 0.0199, 'strut_base': 0.0052, 'dish': None}
+
+0 of 10 edits improved a hard-region metric without degrading global. -> out/before_after.json
+== figure ==
+wrote /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_remesh_20260618/figures/fig_before_after.png
+== FINISH DONE ==

@@ -1,0 +1,32 @@
+{
+  "n_eligible": 77,
+  "gain_c": 6.350241699172241,
+  "residual_db": {
+    "median_abs": 6.596152094410286,
+    "p90_abs": 15.562180677207765,
+    "max_abs": 22.64346633170834,
+    "frac_gt3": 0.7532467532467533,
+    "frac_gt6": 0.5324675324675324
+  },
+  "spearman_absres_vs": {
+    "log_dynamic_range": -0.047636573952363426,
+    "snap_distance_in": -0.024712129975287867,
+    "abs_z_in": 0.14482885535517112
+  },
+  "hard_accels": {
+    "n_present": 8,
+    "present_daqs": [
+      4,
+      27,
+      38,
+      40,
+      52,
+      69,
+      92,
+      98
+    ],
+    "mean_abs_res_hard_db": 17.452205490645362,
+    "mean_abs_res_rest_db": 6.535379707426281
+  },
+  "note": "if |residual| correlates with a feature (|rho|>~0.3) OR hard>>rest, a feature-keyed heteroscedastic discrepancy can tighten the easy-channel CI while keeping coverage."
+}

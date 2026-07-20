@@ -1,0 +1,7 @@
+[PASS] fig_n0_bands.png: 1811x1235, ink 0.077, caption ink 0.09542
+[PASS] fig_n1_theta_bridge.png: 2190x809, ink 0.086, caption ink 0.05546
+[PASS] fig_s4_tier_update.png: 1967x985, ink 0.135, caption ink 0.06797
+[PASS] fig_s3_finalists.png: 2163x1172, ink 0.061, caption ink 0.06045
+
+tufte_lint: 0 WARN / 3 INFO (each adjudicated in out/tufte_lint.json)
+wrote out/fig_qa.json, out/tufte_lint.json

@@ -1,0 +1,19 @@
+{
+ "cid": "ma1_form_tboxwalls",
+ "cls": "element_formulation",
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    201,
+    203
+   ],
+   "br_scale": 0.8,
+   "name": "brtbox"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Box pairs at 168.0/172.3 Hz are +7.44/+5.72% too stiff while thickness is survey-constrained -> bending-formulation softening (br 0.8) on the top-box walls redistributes wall-bending stiffness without touching mass",
+ "track": "agent",
+ "round": 1,
+ "rationale": "diagnosis_mf_r1.json: Top_Box pairs at 168.0/172.3 Hz are +7.44/+5.72% too stiff while thickness is survey-constrained -"
+}

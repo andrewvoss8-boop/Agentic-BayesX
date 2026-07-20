@@ -1,0 +1,22 @@
+{
+ "cid": "rnd047",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "joints",
+   "factor": 1.4495457805136616
+  },
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    9000029
+   ],
+   "k_trans": 5182166.416421545,
+   "k_rot": 1250.889146488473,
+   "name": "rconn48"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

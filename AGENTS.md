@@ -107,6 +107,7 @@ Before claiming a structural-dynamics, StatFEM, BOED, FEM, or autonomous-experim
 ### Modal / Eigenproblem Identifiability Gate
 Applies to ANY task that infers element/group/material/joint parameters from modal data (eigenfrequencies, mode shapes, MAC) or uses an eigenproblem-based forward model, and to any claim that a parameter is or is not identifiable from such data.
 - Compute and report the parameter->mode sensitivity that physically links each inferred parameter to the modes: the modal strain-energy fraction each calibration mode stores in each parameter group, `f_{i,g} = (phi_i^T K_g phi_i) / lambda_i` (= 2*SE/lambda for mass-normalized modes), normalized to sum to 1 over groups; report which modes drive which parameters and each parameter's typical and peak sensitivity. (For shape/MAC observations, report the analogous eigenvector sensitivity.) Do this BEFORE concluding identifiable vs not.
+- For any PER-PARAMETER identifiability claim (e.g. "parameter X is/is not identifiable", as distinct from a group/aggregate claim), ALSO report the eigen-decomposition of the sensitivity Fisher information `J^T Σ^-1 J` (J = parameter->observable sensitivity Jacobian, Σ = noise+discrepancy covariance) evaluated at the REALIZED discrepancy floor (not just the measurement-noise floor): state how many parameter COMBINATIONS clear the prior precision and which raw parameters each strong/weak combination mixes. A group can store ample strain energy (be identifiable in aggregate) while its individual parameters are NOT separable — the strain-energy table certifies signal-above-floor for a group; only the FIM/eigen view (or an equivalent profile-likelihood / posterior-correlation analysis) certifies that the individual parameters separate. Run BOTH before any per-parameter identifiable/not claim; a converged-or-not sampler that goes multimodal in parameter space while agreeing in data space is the same finding and must be reported as under-identification, not a sampler bug.
 - When a parameter is poorly identified, state the CAUSE with evidence and distinguish: (a) low sensitivity but IN the load path (near-rigid, or signal below the noise / model-discrepancy floor) — confirm with a finite parameter perturbation that DOES move the eigenvalues/QOI; vs (b) genuinely OUT of the load path (~zero strain energy AND a finite perturbation moves ~nothing). Never assert a parameter is "irrelevant" / "out of the load path" without BOTH the strain-energy decomposition and the finite-perturbation check.
 - Compare each parameter's modal sensitivity to the inferred discrepancy/noise level: a parameter whose sensitivity sits below that floor is unidentifiable due to discrepancy/noise, not absence — say so, and give the pre-test lever (which modes/bands carry its signal, or how much discrepancy reduction would resolve it).
 - This ties identifiability claims to physical mechanism and to pre-test design (cf. Fisher-information/sensitivity analyses); it is method-agnostic (applies whether or not a sampler is run).
@@ -144,6 +145,7 @@ Applies to ANY task that infers element/group/material/joint parameters from mod
   - `notes/runs.md`
   - `notes/lessons-learned.md`
   - `notes/todo.md`
+  - `docs/report/project_log.md` (central reporting hub: indexed, status-tagged log of every work thread for end-of-summer reporting; update the relevant row when a thread is created/advances/closes — see `docs/report/README.md`)
 
 ## Context and Compaction
 - Treat the file system + git as the source of truth; the live chat is a cache that can be compacted or lost at any time.
@@ -161,4 +163,5 @@ A task is done only when all of the following are true:
 - outputs are traceable and replayable from a single command;
 - relevant references/standards were checked or explicitly ruled out;
 - sensitivity to important assumptions was run or logged as a justified gap;
-- the human-review packet exposes enough numerical and graphical evidence for a reviewer to find mistakes.
+- the human-review packet exposes enough numerical and graphical evidence for a reviewer to find mistakes;
+- if the task creates, materially advances, or closes a work thread, its row in `docs/report/project_log.md` is updated with the status copied straight from the study checker (never stronger than checker output).

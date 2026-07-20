@@ -1,0 +1,32 @@
+{
+ "figures": [
+  {
+   "file": "figures/fig_bands_table.png",
+   "pass": true
+  },
+  {
+   "file": "figures/fig_identifiability.png",
+   "pass": true
+  },
+  {
+   "file": "figures/fig_qoi_sensors.png",
+   "pass": true
+  },
+  {
+   "file": "figures/fig_loop_trajectory.png",
+   "pass": true
+  },
+  {
+   "file": "figures/fig_selection_scatter.png",
+   "pass": true
+  },
+  {
+   "file": "figures/fig_netcg_bands.png",
+   "pass": true
+  },
+  {
+   "file": "figures/fig_graphical_model.png",
+   "pass": true
+  }
+ ]
+}

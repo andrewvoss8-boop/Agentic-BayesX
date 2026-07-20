@@ -1,0 +1,67 @@
+{
+  "deliverable": "STEP 0: top-plate-center mount modal effective-mass (drive-point residue) decomposition + does this QOI lean on the well-predicted modes?",
+  "mount": {
+    "gid": 7000072,
+    "xyz_in": [
+      0.0,
+      0.0,
+      57.74989
+    ],
+    "axis": "Z",
+    "snap_in": 0.0,
+    "shocksat_mass_kg": 57.961
+  },
+  "band_hz": [
+    45.0,
+    260.0
+  ],
+  "n_fem_modes_in_band": 40,
+  "n_modes_for_90pct_mount_residue": 4,
+  "dominant_modes_90pct": [
+    {
+      "fem_mode": 35,
+      "freq_hz": 251.6,
+      "mount_weight_pct": 58.0,
+      "matched_to_measured": false,
+      "meas_freq_hz": null,
+      "freq_err_pct": null,
+      "mac": null
+    },
+    {
+      "fem_mode": 30,
+      "freq_hz": 233.7,
+      "mount_weight_pct": 12.7,
+      "matched_to_measured": false,
+      "meas_freq_hz": null,
+      "freq_err_pct": null,
+      "mac": null
+    },
+    {
+      "fem_mode": 6,
+      "freq_hz": 117.3,
+      "mount_weight_pct": 9.7,
+      "matched_to_measured": true,
+      "meas_freq_hz": 125.0,
+      "freq_err_pct": 6.1,
+      "mac": 0.7
+    },
+    {
+      "fem_mode": 36,
+      "freq_hz": 253.9,
+      "mount_weight_pct": 9.6,
+      "matched_to_measured": false,
+      "meas_freq_hz": null,
+      "freq_err_pct": null,
+      "mac": null
+    }
+  ],
+  "dominant_residue_fraction_that_is_MAC_matched_to_data": 0.108,
+  "validity_gate": {
+    "unweighted_median_freq_err_pct": 2.91,
+    "MOUNT_weighted_median_freq_err_pct": 6.15,
+    "unweighted_median_mac": 0.7,
+    "MOUNT_weighted_median_mac": 0.7
+  },
+  "convention_note": "drive-point a/F (peaks=resonance); reciprocal=local apparent mass (dips). 7004C source/load interface apparent mass + total-mass anchor = Step 1. Ranking is convention-robust.",
+  "note": "EXPLORATORY; YELLOW; no success claim; ZETA=1% physical (swap measured ~0.45% in Step 1)."
+}

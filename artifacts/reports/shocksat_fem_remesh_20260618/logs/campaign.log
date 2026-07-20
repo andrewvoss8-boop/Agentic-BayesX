@@ -1,0 +1,56 @@
+wrote 10 edit specs to out/edit_specs/:
+   e01_calibrated_theta modal-twin NUTS posterior median theta (the data-driven FEM update)
+   e02_joints_soft soften all bolted/contact joints x0.5
+   e03_joints_stiff stiffen all joints x2
+   e04_bottombox_soft bottom_box x0.9
+   e05_bottombox_stiff bottom_box x1.1
+   e06_topbox_stiff top_box x1.1
+   e07_topbox_soft top_box x0.9
+   e08_joint801_soft bolted joint PID801 x0.3 (ch52)
+   e09_strut807_soft strut base PID807 x0.3 (ch92)
+   e10_contact902_stiff plate contact PID902 x20 (ch92)
+== RUN baseline_reuse ==
+[    1.0s] [baseline_reuse] reduced n=399510; eigsh k=80...
+[  300.2s] [baseline_reuse] f[6:12]=[ 54.6   73.14  73.74  88.05 104.74 113.8 ] n_rbm=6
+[  300.4s] [baseline_reuse] global MAC(well)=0.6308 calib=0.7260 |df%|=6.066 regions={'source_face': 0.466, 'box_column': 0.659, 'strut_base': 0.457, 'dish': None}
+== RUN e01_calibrated_theta ==
+[    1.0s] [e01_calibrated_theta] reduced n=399510; eigsh k=80...
+[  344.3s] [e01_calibrated_theta] f[6:12]=[ 53.61  71.87  72.46  86.46 106.7  113.49] n_rbm=6
+[  344.5s] [e01_calibrated_theta] global MAC(well)=0.6114 calib=0.7215 |df%|=5.745 regions={'source_face': 0.534, 'box_column': 0.662, 'strut_base': 0.462, 'dish': None}
+== RUN e02_joints_soft ==
+[    1.1s] [e02_joints_soft] reduced n=399510; eigsh k=80...
+[  327.7s] [e02_joints_soft] f[6:12]=[ 54.6   72.88  73.43  88.04 101.9  113.47] n_rbm=6
+[  327.9s] [e02_joints_soft] global MAC(well)=0.6263 calib=0.7109 |df%|=6.690 regions={'source_face': 0.576, 'box_column': 0.777, 'strut_base': 0.479, 'dish': None}
+== RUN e03_joints_stiff ==
+[    1.1s] [e03_joints_stiff] reduced n=399510; eigsh k=80...
+[  271.0s] [e03_joints_stiff] f[6:12]=[ 54.6   73.28  73.9   88.05 106.45 114.05] n_rbm=6
+[  271.1s] [e03_joints_stiff] global MAC(well)=0.6118 calib=0.7522 |df%|=6.482 regions={'source_face': 0.46, 'box_column': 0.672, 'strut_base': 0.399, 'dish': None}
+== RUN e04_bottombox_soft ==
+[    0.9s] [e04_bottombox_soft] reduced n=399510; eigsh k=80...
+[  281.9s] [e04_bottombox_soft] f[6:12]=[ 51.83  69.49  70.07  83.58 104.67 109.93] n_rbm=6
+[  281.9s] [e04_bottombox_soft] global MAC(well)=0.6007 calib=0.7253 |df%|=5.585 regions={'source_face': 0.522, 'box_column': 0.688, 'strut_base': 0.434, 'dish': None}
+== RUN e05_bottombox_stiff ==
+[    1.0s] [e05_bottombox_stiff] reduced n=399510; eigsh k=80...
+[  255.6s] [e05_bottombox_stiff] f[6:12]=[ 57.23  76.59  77.22  92.3  104.76 114.63] n_rbm=6
+[  255.7s] [e05_bottombox_stiff] global MAC(well)=0.6310 calib=0.7384 |df%|=6.988 regions={'source_face': 0.49, 'box_column': 0.748, 'strut_base': 0.458, 'dish': None}
+== RUN e06_topbox_stiff ==
+[    1.0s] [e06_topbox_stiff] reduced n=399510; eigsh k=80...
+[  264.5s] [e06_topbox_stiff] f[6:12]=[ 54.6   73.17  73.77  88.06 105.94 115.59] n_rbm=6
+[  264.6s] [e06_topbox_stiff] global MAC(well)=0.6245 calib=0.7089 |df%|=6.381 regions={'source_face': 0.577, 'box_column': 0.672, 'strut_base': 0.465, 'dish': None}
+== RUN e07_topbox_soft ==
+[    1.0s] [e07_topbox_soft] reduced n=399510; eigsh k=80...
+[  284.6s] [e07_topbox_soft] f[6:12]=[ 54.59  73.11  73.71  88.04 102.91 109.78] n_rbm=6
+[  284.8s] [e07_topbox_soft] global MAC(well)=0.6412 calib=0.7021 |df%|=6.996 regions={'source_face': 0.533, 'box_column': 0.751, 'strut_base': 0.498, 'dish': None}
+== RUN e08_joint801_soft ==
+[    1.1s] [e08_joint801_soft] reduced n=399510; eigsh k=80...
+[  256.0s] [e08_joint801_soft] f[6:12]=[ 54.6   72.67  73.14  88.04 104.62 113.28] n_rbm=6
+[  256.2s] [e08_joint801_soft] global MAC(well)=0.6085 calib=0.7065 |df%|=6.824 regions={'source_face': 0.523, 'box_column': 0.742, 'strut_base': 0.458, 'dish': None}
+== RUN e09_strut807_soft ==
+[    1.0s] [e09_strut807_soft] reduced n=399510; eigsh k=80...
+[  252.3s] [e09_strut807_soft] f[6:12]=[ 54.6   73.14  73.74  88.05 104.7  113.8 ] n_rbm=6
+[  252.5s] [e09_strut807_soft] global MAC(well)=0.6313 calib=0.7265 |df%|=6.071 regions={'source_face': 0.467, 'box_column': 0.655, 'strut_base': 0.458, 'dish': None}
+== RUN e10_contact902_stiff ==
+[    1.1s] [e10_contact902_stiff] reduced n=399510; eigsh k=80...
+[  254.4s] [e10_contact902_stiff] f[6:12]=[ 54.6   73.14  73.74  88.05 105.1  113.86] n_rbm=6
+[  254.5s] [e10_contact902_stiff] global MAC(well)=0.6270 calib=0.7259 |df%|=6.052 regions={'source_face': 0.553, 'box_column': 0.679, 'strut_base': 0.463, 'dish': None}
+== CAMPAIGN DONE ==

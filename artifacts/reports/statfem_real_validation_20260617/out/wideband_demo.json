@@ -1,0 +1,10 @@
+{
+  "base_coverage": 0.9563333333333334,
+  "wide_coverage": 1.0,
+  "base_interval_score": 0.9186861588114841,
+  "wide_interval_score": 7.89877503682564,
+  "base_crps": 0.11260489780362354,
+  "wide_crps": 0.48074995034027324,
+  "coverage_up_but_score_worse": true,
+  "note": "averaged over truths ~ N(1,0.2); wide N(1,2.0) covers more but scores worse (proper)."
+}

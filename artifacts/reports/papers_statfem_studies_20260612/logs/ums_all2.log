@@ -1,0 +1,22 @@
+[G1] headline (unified 4x800+800, iid 4x600+600)
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)
+data saved; FLOOR 5.759e-03  FLOOR_EST 3.201e-02  n_obs 15  nf_inf 401
+unified {'tag': 'unified', 'max_rhat': 364.4176, 'min_ess': 2.0025, 'divergences': 18, 'div_frac': 0.0112, 'runtime_s': 8469.2143, 'n_draws': 1600}
+iid {'tag': 'iid', 'max_rhat': 11023.1597, 'min_ess': 1.0013, 'divergences': 800, 'div_frac': 1.0, 'runtime_s': 176.5315, 'n_draws': 800}
+{
+  "unified": {
+    "rhat": 364.4176309068573,
+    "ess": 2.00254146928876,
+    "div": 18,
+    "qoi_cover": "0/10"
+  },
+  "iid": {
+    "rhat": 11023.159730301144,
+    "qoi_cover": "6/10"
+  }
+}
+saved ums_summary.json / ums_headline.npz
+[G2] frames (10 reduced runs, resumable)
+/Users/avoss/Downloads/bayesX/Agentic BayesX/.venv_nuts/lib/python3.9/site-packages/jax/_src/lax/lax.py:2785: ComplexWarning: Casting complex values to real discards the imaginary part
+  x_bar = _convert_element_type(x_bar, x.aval.dtype, x.aval.weak_type)

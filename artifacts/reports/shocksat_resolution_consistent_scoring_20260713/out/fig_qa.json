@@ -1,0 +1,37 @@
+{
+ "fig_money.png": {
+  "exists": true,
+  "size_B": 113271,
+  "auto_pass": true,
+  "visual_review": "lead visual check 2026-07-13: fold dots, means, vault diamonds and second-read caveat all legible; B0 reference line labeled left; S1 falsified verdict printed on-figure; no clipped/overlapping text after ylabel shortened",
+  "pass": true
+ },
+ "fig_s2_decomp.png": {
+  "exists": true,
+  "size_B": 75728,
+  "auto_pass": true,
+  "visual_review": "lead visual check 2026-07-13: 4 bars from zero baseline with signed values labeled; tick labels no longer overlap after wrap+widen; attribution conclusion printed on-figure",
+  "pass": true
+ },
+ "fig_gateW_overlay.png": {
+  "exists": true,
+  "size_B": 212118,
+  "auto_pass": true,
+  "visual_review": "lead visual check 2026-07-13: overlay legible (corr 0.95 channel, shape-only caveat on-figure); physics scatter labels hand-nudged (163/188/233 cluster resolved); GATE W FAIL + dead-force evidence printed in red footer; titles wrapped to avoid ylabel",
+  "pass": true
+ },
+ "fig_apparent_zeta.png": {
+  "exists": true,
+  "size_B": 137900,
+  "auto_pass": true,
+  "visual_review": "lead visual check 2026-07-13: zeta_w curve, survey dots, ERA crosses, apparent-zeta dashed curve and flat-1% line all directly labeled without overlap; log-log axes stated",
+  "pass": true
+ },
+ "fig_peak_zoom.png": {
+  "exists": true,
+  "size_B": 191489,
+  "auto_pass": true,
+  "visual_review": "lead visual check 2026-07-13: 3 matched-pair panels populated (54/151/189 Hz), edge-alignment note on-figure, model-vs-measured freq offset shown by gray line; direct labels in panel 3 clear of curves",
+  "pass": true
+ }
+}

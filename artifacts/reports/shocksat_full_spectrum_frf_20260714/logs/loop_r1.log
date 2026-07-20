@@ -1,0 +1,24 @@
+wa1_bbox_stiff: own-space r=194, top 635 Hz, 390s
+[agent r1] wa1_bbox_stiff: sub200 0.1453  200-500 0.19797838797604728
+wa1_bbox_soft: own-space r=194, top 586 Hz, 393s
+[agent r1] wa1_bbox_soft: sub200 0.1586  200-500 0.1853514684790395
+wa1_tbox_soft: own-space r=194, top 587 Hz, 424s
+[agent r1] wa1_tbox_soft: sub200 0.1706  200-500 0.08708716930109077
+wa1_plates_stiff: own-space r=194, top 557 Hz, 645s
+[agent r1] wa1_plates_stiff: sub200 0.1499  200-500 0.22741660680567533
+wa1_bbox_zsplit: projected (r=209)
+[agent r1] wa1_bbox_zsplit: sub200 0.1590  200-500 0.2663504380795746
+wa1_xbeam_scale: already queried (resume-skip)
+wr1_rnd000: projected (r=209)
+[random r1] wr1_rnd000: sub200 0.1511  200-500 0.1973070023594514
+wr1_rnd001: own-space r=194, top 545 Hz, 394s
+[random r1] wr1_rnd001: sub200 0.0773  200-500 0.11314033652956944
+wr1_rnd002: own-space r=194, top 613 Hz, 407s
+[random r1] wr1_rnd002: sub200 0.1507  200-500 0.23876299711084525
+wr1_rnd003: projected (r=209)
+[random r1] wr1_rnd003: sub200 0.1395  200-500 0.24886069419210965
+wr1_rnd004: projected (r=209)
+[random r1] wr1_rnd004: sub200 0.1656  200-500 0.17965041859861727
+wr1_rnd005: projected (r=209)
+[random r1] wr1_rnd005: sub200 0.1634  200-500 0.1700758166722516
+ROUND1_DONE 2923s

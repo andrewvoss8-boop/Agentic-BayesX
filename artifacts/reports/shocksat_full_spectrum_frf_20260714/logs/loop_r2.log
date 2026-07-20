@@ -1,0 +1,17 @@
+wa2_tbox_xbeam: own-space r=194, top 594 Hz, 405s
+[agent r2] wa2_tbox_xbeam: sub200 0.1680  200-500 0.20456334183341435
+wa2_bothbox_soft: own-space r=194, top 564 Hz, 355s
+[agent r2] wa2_bothbox_soft: sub200 0.1514  200-500 0.13479295427403415
+wa2_bbox_zsplit_tbox: own-space r=194, top 587 Hz, 407s
+[agent r2] wa2_bbox_zsplit_tbox: sub200 0.1766  200-500 0.13483266611361872
+wa2_brackets_soft: own-space r=194, top 613 Hz, 378s
+[agent r2] wa2_brackets_soft: sub200 0.1794  200-500 0.18819583941709886
+wr2_rnd000: own-space r=194, top 614 Hz, 401s
+[random r2] wr2_rnd000: sub200 0.1490  200-500 0.06175922517853435
+wr2_rnd001: own-space r=194, top 617 Hz, 381s
+[random r2] wr2_rnd001: sub200 0.1657  200-500 0.18444249318132355
+wr2_rnd002: projected (r=209)
+[random r2] wr2_rnd002: sub200 0.1414  200-500 0.16676858668424588
+wr2_rnd003: own-space r=194, top 613 Hz, 421s
+[random r2] wr2_rnd003: sub200 0.1612  200-500 0.20428441193802915
+ROUND2_DONE 2977s best=wa2_brackets_soft 0.1794

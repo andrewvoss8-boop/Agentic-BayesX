@@ -1,0 +1,28 @@
+{
+  "deliverable": "PIVOTAL: is per-channel amplitude scatter reducible by better shapes? (clean modal data)",
+  "reference": "m_xpos_990x",
+  "seed": 0,
+  "obs_frac": 0.9,
+  "n_modes_matched": 20,
+  "n_obs": 76,
+  "n_ho": 8,
+  "MAC_fem_vs_ash": {
+    "median": 0.6975918893082278,
+    "min": 0.34029499185730877,
+    "n_below_0.7": 10,
+    "n_below_0.5": 3,
+    "worst_modes_hz": [
+      190.2,
+      195.7,
+      70.0,
+      75.0,
+      158.2
+    ]
+  },
+  "sigma_FEM_shape": 1.26,
+  "sigma_MEASURED_shape": 0.7,
+  "heldout_median_abs_db_FEM": 18.1,
+  "heldout_median_abs_db_MEAS": 8.7,
+  "reducible_by_shapes": true,
+  "sigma_needed_to_beat_fem6": 0.35
+}

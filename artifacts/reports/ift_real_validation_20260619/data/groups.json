@@ -1,0 +1,52 @@
+{
+ "groups": {
+  "bottom_box": [
+   "shell_101",
+   "shell_102",
+   "shell_103"
+  ],
+  "steel_welds": [
+   "shell_104",
+   "shell_105",
+   "shell_106"
+  ],
+  "top_box": [
+   "shell_201",
+   "shell_202",
+   "shell_203"
+  ],
+  "al_welds": [
+   "shell_204",
+   "shell_205",
+   "shell_206"
+  ],
+  "angle_brackets": [
+   "shell_301",
+   "shell_302"
+  ],
+  "cross_beam": [
+   "shell_401"
+  ],
+  "plates": [
+   "shell_501",
+   "shell_601",
+   "shell_701"
+  ],
+  "joints": [
+   "bush_801",
+   "bush_802",
+   "bush_803",
+   "bush_804",
+   "bush_805",
+   "bush_806",
+   "bush_807"
+  ],
+  "contact": [
+   "bush_902"
+  ]
+ },
+ "fixed": [
+  "bush_99"
+ ],
+ "note": "theta_g scales the stiffness blocks of these PIDs; exact modulus scaling (K linear in E, k)"
+}

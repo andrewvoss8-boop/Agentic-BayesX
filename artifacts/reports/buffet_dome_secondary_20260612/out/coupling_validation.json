@@ -1,0 +1,47 @@
+{
+ "eta": 0.02,
+ "n_modes": 1954,
+ "fmax_mode": 819.1693557497275,
+ "loads": [
+  "LtrayZ",
+  "LcopvN"
+ ],
+ "per_qoi": {
+  "tray_net_punch": {
+   "md_max_rel": 0.0032171589043735837,
+   "md_median_rel": 0.0016992605581186602,
+   "ma_max_rel": 0.010255855172854647,
+   "ma_median_rel": 0.00541637190328434,
+   "n_freq_used": 2,
+   "peak_abs": 29.227639417810042
+  },
+  "av_acc_z": {
+   "md_max_rel": 0.004298960826761024,
+   "md_median_rel": 0.0015767391769995194,
+   "ma_max_rel": 0.004298960826761024,
+   "ma_median_rel": 0.0015767391769995194,
+   "n_freq_used": 3,
+   "peak_abs": 2.008472709588934
+  },
+  "copv_net_punch": {
+   "md_max_rel": 0.12236330829754319,
+   "md_median_rel": 0.045570732156373056,
+   "ma_max_rel": 0.04268122055589221,
+   "ma_median_rel": 0.016440037555586942,
+   "n_freq_used": 8,
+   "peak_abs": 6.450422992114632
+  },
+  "copv_mount1_Fx": {
+   "md_max_rel": 0.11509446170436034,
+   "md_median_rel": 0.03489016225309603,
+   "ma_max_rel": 0.0522396182506951,
+   "ma_median_rel": 0.01655178271948555,
+   "n_freq_used": 8,
+   "peak_abs": 1.2470957876987512
+  }
+ },
+ "md_worst_max_rel": 0.12236330829754319,
+ "ma_worst_max_rel": 0.0522396182506951,
+ "verdict": "modal superposition (MD, 820 Hz truncation) vs direct full solve; MA adds the static residual. Errors masked to non-negligible response (>5% of peak).",
+ "runtime_s": 572.4113919734955
+}

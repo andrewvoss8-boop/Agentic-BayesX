@@ -1,0 +1,32 @@
+{
+ "cid": "wr3_rnd004",
+ "family": "connect+refine",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    103,
+    102
+   ]
+  },
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    2032413,
+    1024301,
+    1024300,
+    2032432,
+    4000140,
+    6001322,
+    9000095,
+    1024303,
+    9000097
+   ],
+   "k_trans": 2996319.088366019,
+   "k_rot": 148473.32415769057,
+   "name": "rconn5"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

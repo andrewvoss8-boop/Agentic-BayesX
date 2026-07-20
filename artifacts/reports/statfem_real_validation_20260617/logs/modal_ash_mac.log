@@ -1,0 +1,5 @@
+L10 .ash + MAC-matching (split 0): 20 modes matched, mean match-MAC 0.70
+  .ash FREQ-only: conv True R-hat 1.002 | held-out peak cover 0.94 IS 1667 z-std 0.45 width 37.0dB sig 1.11
+  .ash FREQ+MAC : conv False R-hat 1.026 div 0 | held-out peak cover 0.94 IS 1719 z-std 0.47 width 37.7dB sig 1.13  (sigma_mac 0.35093187749648813)
+  -> shapes do NOT meaningfully sharpen (IS 1719 vs 1667); runtime 4993s
+L10 DONE

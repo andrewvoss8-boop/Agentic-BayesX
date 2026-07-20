@@ -1,0 +1,120 @@
+{
+  "reference": "+X",
+  "n_channels": 84,
+  "overall_resid_rms": 1.784,
+  "residual_by_height_region": {
+    "Z<12.4 (lower/bottom_box)": 2.004,
+    "12.4-18.4": 1.702,
+    "18.4-24.4": 1.606,
+    "Z>=24.4 (upper/top_box)": 1.6
+  },
+  "worst_sensors": [
+    {
+      "daq": 23,
+      "rms": 3.03,
+      "bias_dB": 21.7,
+      "z_in": 1.9,
+      "desc": "Source +X Face Center (10k)"
+    },
+    {
+      "daq": 103,
+      "rms": 2.95,
+      "bias_dB": 21.8,
+      "z_in": 3.0,
+      "desc": "Wave Prop Above 8 (+X Face Cente"
+    },
+    {
+      "daq": 38,
+      "rms": 2.94,
+      "bias_dB": -22.6,
+      "z_in": 1.8,
+      "desc": "Source -Y Face + X Edge (10k)"
+    },
+    {
+      "daq": 19,
+      "rms": 2.82,
+      "bias_dB": 5.8,
+      "z_in": 2.1,
+      "desc": "Source -Y Face -X Edge (100k)"
+    },
+    {
+      "daq": 62,
+      "rms": 2.71,
+      "bias_dB": 20.9,
+      "z_in": 16.4,
+      "desc": "Steel Box Below Bolted Joint (+Y"
+    },
+    {
+      "daq": 104,
+      "rms": 2.7,
+      "bias_dB": -20.9,
+      "z_in": 3.0,
+      "desc": "Wave Prop Above 8 (+X Face Cente"
+    },
+    {
+      "daq": 24,
+      "rms": 2.69,
+      "bias_dB": -23.1,
+      "z_in": 1.9,
+      "desc": "Source +X Face Center (10k)"
+    },
+    {
+      "daq": 40,
+      "rms": 2.53,
+      "bias_dB": -14.9,
+      "z_in": 10.4,
+      "desc": "Steel Box Below Bulkhead (+X)"
+    }
+  ],
+  "worst_modes": [
+    {
+      "f_hz": 54.2,
+      "shape_MAC": 0.17,
+      "peak_amp_err_dB": -8.9,
+      "band_resid_rms": 2.45
+    },
+    {
+      "f_hz": 190.2,
+      "shape_MAC": 0.69,
+      "peak_amp_err_dB": -12.0,
+      "band_resid_rms": 2.12
+    },
+    {
+      "f_hz": 190.2,
+      "shape_MAC": 0.69,
+      "peak_amp_err_dB": -12.0,
+      "band_resid_rms": 2.12
+    },
+    {
+      "f_hz": 197.8,
+      "shape_MAC": 0.44,
+      "peak_amp_err_dB": -14.5,
+      "band_resid_rms": 2.12
+    },
+    {
+      "f_hz": 190.2,
+      "shape_MAC": 0.69,
+      "peak_amp_err_dB": -12.0,
+      "band_resid_rms": 2.12
+    },
+    {
+      "f_hz": 195.7,
+      "shape_MAC": 0.52,
+      "peak_amp_err_dB": -14.7,
+      "band_resid_rms": 2.11
+    },
+    {
+      "f_hz": 184.4,
+      "shape_MAC": 0.22,
+      "peak_amp_err_dB": -24.9,
+      "band_resid_rms": 2.02
+    },
+    {
+      "f_hz": 184.4,
+      "shape_MAC": 0.22,
+      "peak_amp_err_dB": -24.9,
+      "band_resid_rms": 2.02
+    }
+  ],
+  "guide": "target the height-region + modes with the largest shape residual (freq+damping already corrected)"
+}

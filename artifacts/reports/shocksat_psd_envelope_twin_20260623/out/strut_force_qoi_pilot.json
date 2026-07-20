@@ -1,0 +1,100 @@
+{
+  "deliverable": "QOI-weighted (goal-oriented) twin/FEM/data comparison for unmeasured QOI = strut force",
+  "qoi_proxy": "strut racking deformation |mean_3D phi(z>=50) - mean_3D phi(z<50)| over strut region z45-55",
+  "n_inband_modes": 40,
+  "strut_force_trust_fraction_measured_modes": 0.412,
+  "comparison_FEMvsDATA": {
+    "uniform_median_freq_err_pct": 2.91,
+    "QOI_weighted_median_freq_err_pct": 3.38,
+    "uniform_median_mac": 0.7,
+    "QOI_weighted_median_mac": 0.64
+  },
+  "top_strut_force_modes": [
+    {
+      "freq_hz": 254.7,
+      "qoi_weight_pct": 15.3,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 258.3,
+      "qoi_weight_pct": 12.0,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 122.2,
+      "qoi_weight_pct": 9.6,
+      "measured": [
+        117.6,
+        0.9
+      ],
+      "freq_err_pct": 3.9
+    },
+    {
+      "freq_hz": 146.6,
+      "qoi_weight_pct": 8.6,
+      "measured": [
+        158.2,
+        0.58
+      ],
+      "freq_err_pct": 7.3
+    },
+    {
+      "freq_hz": 234.4,
+      "qoi_weight_pct": 7.8,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 168.9,
+      "qoi_weight_pct": 7.8,
+      "measured": [
+        174.8,
+        0.64
+      ],
+      "freq_err_pct": 3.4
+    },
+    {
+      "freq_hz": 196.9,
+      "qoi_weight_pct": 7.5,
+      "measured": [
+        197.8,
+        0.66
+      ],
+      "freq_err_pct": 0.5
+    },
+    {
+      "freq_hz": 230.6,
+      "qoi_weight_pct": 5.6,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 233.7,
+      "qoi_weight_pct": 4.6,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 125.2,
+      "qoi_weight_pct": 4.5,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 258.9,
+      "qoi_weight_pct": 2.4,
+      "measured": null,
+      "freq_err_pct": null
+    },
+    {
+      "freq_hz": 251.6,
+      "qoi_weight_pct": 2.3,
+      "measured": null,
+      "freq_err_pct": null
+    }
+  ],
+  "caveat": "displacement-based proxy (no element forces / per-DOF mass); twin = frequency-anchored approximation of the calibrated twin (matched modes -> measured freq). Demonstrates the METHOD.",
+  "note": "EXPLORATORY; YELLOW; NO NUTS."
+}

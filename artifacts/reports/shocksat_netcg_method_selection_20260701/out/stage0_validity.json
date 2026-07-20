@@ -1,0 +1,33 @@
+{
+  "per_qoi": {
+    "tray_shear_X": {
+      "verdict": "PASS_NUMBER",
+      "why": "shape-trust 96% (measured modes carry it) -> held-out drives discriminate the number"
+    },
+    "tray_shear_Y": {
+      "verdict": "PASS_NUMBER",
+      "why": "shape-trust 94% (measured modes carry it) -> held-out drives discriminate the number"
+    },
+    "tray_normal_Z": {
+      "verdict": "PARTIAL",
+      "why": "shape-trust 45% -> number partly data-starved (drumhead shape unresolved); band informative, leave-modes-out mechanism test required"
+    },
+    "base_shear_X": {
+      "verdict": "PASS_NUMBER",
+      "why": "shape-trust 98% (measured modes carry it) -> held-out drives discriminate the number"
+    },
+    "base_shear_Y": {
+      "verdict": "PASS_NUMBER",
+      "why": "shape-trust 97% (measured modes carry it) -> held-out drives discriminate the number"
+    },
+    "base_shear_Z": {
+      "verdict": "PASS_NUMBER",
+      "why": "shape-trust 99% (measured modes carry it) -> held-out drives discriminate the number"
+    },
+    "mount_response": {
+      "verdict": "DATA_STARVED_NUMBER",
+      "why": "shape-trust 13% -> number data-starved; deliverable = covering band + leave-modes-out mechanism validation + next-test recommendation"
+    }
+  },
+  "leave_modes_out": "the low-trust QOIs keep their place in the bake-off via the leave-modes-out humility test (Stage 2/\u00a75): hide measured modes -> band MUST widen to cover them."
+}

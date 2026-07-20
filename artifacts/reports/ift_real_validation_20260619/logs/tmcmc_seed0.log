@@ -1,0 +1,4 @@
+IFT-TMCMC seed 0: cross-run R-hat 1.001 ESS 1371 converged=True | logEvid -18208.2±0.2
+  beta_med 0.168 (beta* 42.8) bounded=True collapsed=True
+  PEAK cover 1.00 interval 7.33e+03 CRPS 77.8 | BAND cover 1.00 interval 1.12e+05
+  runtime 1837s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/out/ift_tmcmc_cells/ift_tmcmc_seed00.json

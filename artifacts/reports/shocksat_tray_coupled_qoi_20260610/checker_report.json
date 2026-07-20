@@ -1,0 +1,151 @@
+{
+ "overall": "yellow",
+ "counts": {
+  "green": 32,
+  "yellow": 3,
+  "red": 0
+ },
+ "gates": {
+  "docs_present": {
+   "status": "green",
+   "note": "[]"
+  },
+  "quantity_contract_conventions": {
+   "status": "green",
+   "note": "[]"
+  },
+  "verification_overall": {
+   "status": "green",
+   "note": "15 gates all green (V1-V9: tray rebuild exact, rigid-mass/units, SRS filter, FBS algebra, exact damped apparent mass, Newmark cross-check, 7004C TDOF anchors)"
+  },
+  "outputs_present": {
+   "status": "green",
+   "note": "[]"
+  },
+  "hypothetical_label_in_results": {
+   "status": "green",
+   "note": ""
+  },
+  "force_limiting_unc_ge_cpl": {
+   "status": "green",
+   "note": "median peak_unc/peak_cpl per axis = [1.27, 1.31, 1.12] (>1 = over-test; <1 possible near shifted coupled resonances)"
+  },
+  "method_ratios_finite": {
+   "status": "green",
+   "note": ""
+  },
+  "variance_decomposition_present": {
+   "status": "green",
+   "note": "mount-dominated axes (coupled th): [True, True, True]; OAT note present: True"
+  },
+  "se_closure": {
+   "status": "green",
+   "note": "max |closure-1| = 1.1e-10 over 59 coupled modes <= 300 Hz"
+  },
+  "finite_perturbation_present": {
+   "status": "green",
+   "note": "x0.5/x2 mount perturbation with QOI shifts"
+  },
+  "identifiability_cause_stated": {
+   "status": "green",
+   "note": "peak dlnf/dlnk = 0.4487 vs sigma_f floor 0.046"
+  },
+  "no_sampler_decision_documented": {
+   "status": "green",
+   "note": "propagation-only decision D1; no NUTS claim made"
+  },
+  "figures_present": {
+   "status": "green",
+   "note": "[]"
+  },
+  "figure_provenance_labels": {
+   "status": "green",
+   "note": "every data figure stamped with run + hypothetical flag"
+  },
+  "image_qa": {
+   "status": "green",
+   "note": "artifact-backed legibility report (sizes + manual review notes)"
+  },
+  "inputs_unchanged": {
+   "status": "green",
+   "note": "[]"
+  },
+  "coupled_rom_reduction": {
+   "status": "green",
+   "note": "worst matched |df|/f = 3.6e-04 vs 0.005 (nb=98; off-anchor probe is the span test)"
+  },
+  "truth_lock_integrity": {
+   "status": "green",
+   "note": "SHA verified; sampler reads only survey_data.npz (A28)"
+  },
+  "survey_pairing": {
+   "status": "green",
+   "note": "n_calib = 27 (anchor x1.0)"
+  },
+  "convergence_mount_nuts": {
+   "status": "yellow",
+   "note": "tag=base worst R-hat 5.030, min ESS 2, div 0 (NOT converged - YELLOW finding, intervals not trustworthy)"
+  },
+  "voi_truth_coverage": {
+   "status": "yellow",
+   "note": "after-bands cover truth: [False, True, True]; width95 ratios [0.929, 0.3839, 0.9133] (miss = honest negative, documented)"
+  },
+  "voi_artifacts": {
+   "status": "green",
+   "note": "qoi_table + recovery + sigma_f present"
+  },
+  "fig_voi": {
+   "status": "green",
+   "note": ""
+  },
+  "pooled_fim_present": {
+   "status": "green",
+   "note": "FIM over pooled parameterizations at realized + noise floors"
+  },
+  "pooled_nuts_convergence": {
+   "status": "yellow",
+   "note": "sampler ladder 6->3->2 params: R-hat 5.03 -> 1.52 -> 1.24; remedy p2r (2000+2000 d9) WORSE at 2.22 = STRUCTURAL one-sided non-identifiability (stiff-side saturation; r_all pinned, t_all lower-bound only). Documented finding; intervals not trustworthy."
+  },
+  "deck_pptx": {
+   "status": "green",
+   "note": "14-slide program deck for Bilionis/Girolami/Yunis"
+  },
+  "deck_figures": {
+   "status": "green",
+   "note": "[]"
+  },
+  "deck_gifs": {
+   "status": "green",
+   "note": "supplementary animations (not embedded)"
+  },
+  "deck_fig_provenance": {
+   "status": "green",
+   "note": "deck figures carry run + hypothetical stamp"
+  },
+  "runtime_json": {
+   "status": "green",
+   "note": ""
+  },
+  "runtime_accounting": {
+   "status": "green",
+   "note": "active 20506 <= wall 174204"
+  },
+  "manifest": {
+   "status": "green",
+   "note": ""
+  },
+  "files_changed": {
+   "status": "green",
+   "note": ""
+  },
+  "packet": {
+   "status": "green",
+   "note": ""
+  },
+  "packet_honesty": {
+   "status": "green",
+   "note": "hypothetical banner + method summary + graphical model at top"
+  }
+ },
+ "standard": "green/yellow/red per AGENTS.md Result Status Standard; exit non-zero only on red"
+}

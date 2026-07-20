@@ -1,0 +1,13 @@
+{
+ "cid": "A0",
+ "rhat_max": 1.001,
+ "ess_min": 1800.0,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 1527.0,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}

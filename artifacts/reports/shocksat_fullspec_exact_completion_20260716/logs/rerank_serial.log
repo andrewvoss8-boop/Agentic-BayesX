@@ -1,0 +1,95 @@
+[19/28] wr2_rnd002
+  [wr2_rnd002] (random, split) enriching at theta_MAP ...
+wr2_rnd002__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (427s)
+  [wr2_rnd002] screening +0.1414 -> exact +0.1469  (428s, self-consistency 0.0000%)
+9 candidates still pending
+[20/28] wr2_rnd003
+  [wr2_rnd003] (random, thickness) enriching at theta_MAP ...
+wr2_rnd003__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (533s)
+  [wr2_rnd003] screening +0.1612 -> exact +0.1584  (534s, self-consistency 0.0000%)
+8 candidates still pending
+[21/28] wa3_brackets_xbeam
+  [wa3_brackets_xbeam] (agent, thickness+scale) enriching at theta_MAP ...
+wa3_brackets_xbeam__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (517s)
+  [wa3_brackets_xbeam] screening +0.1634 -> exact +0.1575  (518s, self-consistency 0.0000%)
+7 candidates still pending
+[22/28] wa3_brackets_tbox
+  [wa3_brackets_tbox] (agent, thickness) enriching at theta_MAP ...
+wa3_brackets_tbox__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (452s)
+  [wa3_brackets_tbox] screening +0.1698 -> exact +0.1724  (452s, self-consistency 0.0000%)
+6 candidates still pending
+[23/28] wa3_brackets_plates
+  [wa3_brackets_plates] (agent, thickness) enriching at theta_MAP ...
+wa3_brackets_plates__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (504s)
+  [wa3_brackets_plates] screening +0.1647 -> exact +0.1506  (505s, self-consistency 0.0000%)
+5 candidates still pending
+[24/28] wa3_brackets_bbox_split
+  [wa3_brackets_bbox_split] (agent, thickness+split) enriching at theta_MAP ...
+wa3_brackets_bbox_split__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (466s)
+  [wa3_brackets_bbox_split] screening +0.1495 -> exact +0.1494  (466s, self-consistency 0.0000%)
+4 candidates still pending
+[25/28] wr3_rnd000
+  [wr3_rnd000] (random, refine) enriching at theta_MAP ...
+wr3_rnd000__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (616s)
+  [wr3_rnd000] screening +0.1418 -> exact +0.1403  (618s, self-consistency 0.0000%)
+3 candidates still pending
+[26/28] wr3_rnd002
+  [wr3_rnd002] (random, thickness) enriching at theta_MAP ...
+wr3_rnd002__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (514s)
+  [wr3_rnd002] screening +0.1514 -> exact +0.1110  (514s, self-consistency 0.0000%)
+2 candidates still pending
+[27/28] wr3_rnd003
+  [wr3_rnd003] (random, scale) enriching at theta_MAP ...
+wr3_rnd003__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (505s)
+  [wr3_rnd003] screening +0.1538 -> exact +0.1227  (506s, self-consistency 0.0000%)
+1 candidates still pending
+[28/28] wr3_rnd004
+  [wr3_rnd004] (random, combo) enriching at theta_MAP ...
+wr3_rnd004__xenr: enriched at theta_MAP, r=194, self-consistency 0.0000% (738s)
+  [wr3_rnd004] screening +0.1489 -> exact +0.1271  (739s, self-consistency 0.0000%)
+0 candidates still pending
+ALL DONE (28/28 candidates have records)
+=== all candidates have records; running aggregation ===
+exact re-rank: 28 loop candidates (14 agent + 14 random)
+  [wa1_xbeam_scale] resume-skip (ok)
+  [wa1_bbox_stiff] resume-skip (ok)
+  [wa1_bbox_soft] resume-skip (ok)
+  [wa1_tbox_soft] resume-skip (ok)
+  [wa1_plates_stiff] resume-skip (ok)
+  [wa1_bbox_zsplit] resume-skip (ok)
+  [wr1_rnd000] resume-skip (ok)
+  [wr1_rnd001] resume-skip (ok)
+  [wr1_rnd002] resume-skip (ok)
+  [wr1_rnd003] resume-skip (ok)
+  [wr1_rnd004] resume-skip (ok)
+  [wr1_rnd005] resume-skip (ok)
+  [wa2_tbox_xbeam] resume-skip (ok)
+  [wa2_bothbox_soft] resume-skip (ok)
+  [wa2_bbox_zsplit_tbox] resume-skip (ok)
+  [wa2_brackets_soft] resume-skip (ok)
+  [wr2_rnd000] resume-skip (ok)
+  [wr2_rnd001] resume-skip (ok)
+  [wr2_rnd002] resume-skip (ok)
+  [wr2_rnd003] resume-skip (ok)
+  [wa3_brackets_xbeam] resume-skip (ok)
+  [wa3_brackets_tbox] resume-skip (ok)
+  [wa3_brackets_plates] resume-skip (ok)
+  [wa3_brackets_bbox_split] resume-skip (ok)
+  [wr3_rnd000] resume-skip (ok)
+  [wr3_rnd002] resume-skip (ok)
+  [wr3_rnd003] resume-skip (ok)
+  [wr3_rnd004] resume-skip (ok)
+
+28 candidates exact-scored, 0 excluded-with-reason
+
+=== T2 RESULT (exact re-rank, all 28) ===
+  agent  : screening->exact Spearman +0.525; top1 agrees: False; mean inflation +0.0052
+           top3 screening ['wa2_brackets_soft', 'wa2_bbox_zsplit_tbox', 'wa1_tbox_soft']
+           top3 exact     ['wa2_tbox_xbeam', 'wa3_brackets_tbox', 'wa2_bbox_zsplit_tbox']
+  random : screening->exact Spearman +0.635; top1 agrees: True; mean inflation +0.0086
+           top3 screening ['wr2_rnd001', 'wr1_rnd004', 'wr1_rnd005']
+           top3 exact     ['wr2_rnd001', 'wr1_rnd004', 'wr1_rnd000']
+  S2 [screening_selected] wa2_brackets_soft vs wr2_rnd001: delta -0.0017 +/- 0.0094  rule met: False
+  S2 [exact_selected    ] wa2_tbox_xbeam vs wr2_rnd001: delta +0.0115 +/- 0.0158  rule met: False
+  reproduction D: mine 0.1634 vs study 0.1634 (diff 0.0000)
+  reproduction R: mine 0.1651 vs study 0.1651 (diff 0.0000)

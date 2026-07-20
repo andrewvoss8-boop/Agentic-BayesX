@@ -1,0 +1,42 @@
+{
+ "vault": "m_xy_990xy",
+ "median_channel_coherence_inband": 0.83,
+ "coherence_gate_0.6": true,
+ "models": {
+  "A0_enr": {
+   "P1_vault": 0.4377247281870582,
+   "n_ch": 87,
+   "P2_vault_dB": 16.952349199248626
+  },
+  "A0": {
+   "P1_vault": 0.4760618146263694,
+   "n_ch": 87,
+   "P2_vault_dB": 16.318955809911934
+  },
+  "a04_welds_t074_enr": {
+   "P1_vault": 0.476381837083508,
+   "n_ch": 87,
+   "P2_vault_dB": 15.995453384954432
+  },
+  "a16_bb_splits_combo_enr": {
+   "P1_vault": 0.4893160847572391,
+   "n_ch": 87,
+   "P2_vault_dB": 15.578673616807938
+  },
+  "b04_ctrl_bb_scale_enr": {
+   "P1_vault": 0.47452223227041074,
+   "n_ch": 87,
+   "P2_vault_dB": 16.87291717939525
+  },
+  "c06_tb_xface_enr": {
+   "P1_vault": 0.4955866070011552,
+   "n_ch": 87,
+   "P2_vault_dB": 16.040502291053947
+  },
+  "rnd003_enr": {
+   "P1_vault": 0.4969948459891326,
+   "n_ch": 87,
+   "P2_vault_dB": 16.668547524952807
+  }
+ }
+}

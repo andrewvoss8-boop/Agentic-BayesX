@@ -1,0 +1,14 @@
+{
+  "rule": "card 3.4 \u2014 the +XY drive is NOT read; its QOI answer key stays unbuilt",
+  "xy_files_opened": 0,
+  "hits": [],
+  "dev_drives_only": true,
+  "dev_drives": [
+    "m_xpos_990x",
+    "m_zpos_990z",
+    "m_zpos_900z",
+    "m_ypos_990y"
+  ],
+  "mechanism": "np.load wrapped process-wide by a guard that RAISES on any +XY path, active across every reused read-only module (netcg_qoi, heldout_drive, realfrf, wide_package).",
+  "n_dev_drives_read": 4
+}

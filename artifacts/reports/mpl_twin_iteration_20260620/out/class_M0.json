@@ -1,0 +1,13 @@
+{
+  "class_id": "M0_baseline_calibrated9grp",
+  "hypothesis": "as-received fable rev-3 FEM, 6 major K-groups calibrated, uniform zeta, iid log|T| discrepancy",
+  "changed": "baseline (carry-forward reference)",
+  "n_params": 9,
+  "nuts_converged": false,
+  "worst_rhat": 96.18819293200782,
+  "min_ess": 1.0026245706867436,
+  "heldout_crps_skill_grms_mean": -24.655586617175224,
+  "heldout_interval_skill_curve_mean": 0.3727206850387761,
+  "grms_rel_err_mean": 2.2517614199308857,
+  "verdict": "baseline/carry-forward"
+}

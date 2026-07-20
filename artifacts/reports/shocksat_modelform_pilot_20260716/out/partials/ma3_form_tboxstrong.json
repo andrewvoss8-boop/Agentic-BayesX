@@ -1,0 +1,52 @@
+{
+ "cid": "ma3_form_tboxstrong",
+ "track": "agent",
+ "round": 3,
+ "cls": "element_formulation",
+ "ops": [
+  "formulation"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.09638745572837162,
+ "exact_b200_500": 0.0856994472497298,
+ "exact_folds": {
+  "m_xpos_990x": 0.2679730314874341,
+  "m_zpos_990z": 0.47309035798456217,
+  "m_ypos_990y": -0.01473397954937343,
+  "m_zpos_900z": -0.34077958700913635
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.09536881013271845,
+  "m_zpos_990z": 0.01246377196071974,
+  "m_ypos_990y": 0.1029295036421002,
+  "m_zpos_900z": 0.13203570326338082
+ },
+ "theta_map": [
+  1.2917881816274748,
+  1.3864647704196937,
+  0.9827955610074967,
+  1.1305328039317166,
+  1.5024284132613155,
+  0.5375877987906047,
+  1.4712231059973129,
+  1.129830864306891,
+  0.963997489806879,
+  0.8213262429081057
+ ],
+ "enriched_pkg": "ma3_form_tboxstrong__xenr",
+ "spot_max_pct": 1.1880096906224935e-07,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 9.9796,
+  "pass": true
+ },
+ "solve_s_theta1": 394.5,
+ "solve_s_enrich": 405.0,
+ "wall_s": 857.4,
+ "ts": "2026-07-17T07:19:59",
+ "diagnosis_link": "diagnosis_mf_r3.json: 168.0/172.3 Hz pairs are +9.9/+7.9%% too stiff ON the current best model-form candidate; r1's br 0.8 on the same walls scored +0.1557 -> push the same lever harder (0.75)"
+}

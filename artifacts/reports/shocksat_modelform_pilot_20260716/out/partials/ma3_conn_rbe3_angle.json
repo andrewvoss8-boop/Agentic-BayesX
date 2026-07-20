@@ -1,0 +1,51 @@
+{
+ "cid": "ma3_conn_rbe3_angle",
+ "track": "agent",
+ "round": 3,
+ "cls": "connectivity",
+ "ops": [
+  "rbe3_convert"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.13614172336283747,
+ "exact_b200_500": 0.27025781627737194,
+ "exact_folds": {
+  "m_xpos_990x": 0.26721908494609253,
+  "m_zpos_990z": 0.48702001993207994,
+  "m_ypos_990y": 0.08732749484964424,
+  "m_zpos_900z": -0.29699970627646677
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.19697477275834174,
+  "m_zpos_990z": 0.27535580448224944,
+  "m_ypos_990y": 0.2631225965449972,
+  "m_zpos_900z": 0.34557809132389933
+ },
+ "theta_map": [
+  1.118889965727812,
+  1.1570040309272398,
+  0.966348778194318,
+  0.8606423358819121,
+  1.173730771226665,
+  1.3795284250664233,
+  0.9564938628207069,
+  1.2651676120820787,
+  0.9299934863426466
+ ],
+ "enriched_pkg": "ma3_conn_rbe3_angle__xenr",
+ "spot_max_pct": 1.5632718453062466e-07,
+ "n_dof": 400374,
+ "delta_dof_pct": 0.216,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 9.7598,
+  "pass": true
+ },
+ "solve_s_theta1": 418.1,
+ "solve_s_enrich": 439.8,
+ "wall_s": 890.6,
+ "ts": "2026-07-17T06:38:26",
+ "diagnosis_link": "diagnosis_mf_r3.json: the angle-bracket spiders (20-leg rigid ties into Top_Box walls, z 41.5-42.3) sit exactly where the +9.9%%/+7.9%% too-stiff pairs live -> interpolation constraints remove their rigid-patch stiffening"
+}

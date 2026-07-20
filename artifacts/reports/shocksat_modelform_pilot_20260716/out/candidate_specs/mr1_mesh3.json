@@ -1,0 +1,17 @@
+{
+ "cid": "mr1_mesh3",
+ "track": "random",
+ "round": 1,
+ "cls": "mesh_density",
+ "seed": 20261719,
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    205
+   ]
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

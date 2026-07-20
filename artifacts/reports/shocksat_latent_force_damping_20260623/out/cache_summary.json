@@ -1,0 +1,93 @@
+{
+  "m_xpos_990x": {
+    "label": "+X (990)",
+    "axis": "X",
+    "xyz": [
+      9.0,
+      7.6,
+      0.6
+    ],
+    "folder": "Test01_ModalHammer_990x",
+    "n_hits": 6,
+    "n_daq": 111,
+    "n_t": 2501,
+    "fs_dec": 2500.0,
+    "decim": 100,
+    "ringdown_ms": 500.4,
+    "impact_ms_median": 500.03600000000006,
+    "force_peak_lbf_median": 627.0615513523692,
+    "snr_post_pre_median": 24.822863943747098,
+    "snr_post_pre_p90": 80.89460013830072
+  },
+  "m_zpos_990z": {
+    "label": "+Z (990)",
+    "axis": "Z",
+    "xyz": [
+      9.0,
+      7.8,
+      0.0
+    ],
+    "folder": "Test02_ModalHammer_990z",
+    "n_hits": 6,
+    "n_daq": 111,
+    "n_t": 2501,
+    "fs_dec": 2500.0,
+    "decim": 100,
+    "ringdown_ms": 500.4,
+    "impact_ms_median": 500.09999999999997,
+    "force_peak_lbf_median": 733.528384478637,
+    "snr_post_pre_median": 9.112921968290284,
+    "snr_post_pre_p90": 19.51077100786005
+  },
+  "m_xy_990xy": {
+    "label": "+XY (990)",
+    "axis": "XY",
+    "xyz": [
+      9.0,
+      9.0,
+      1.1
+    ],
+    "folder": "Test04_ModalHammer_990xy",
+    "n_hits": 6,
+    "n_daq": 111,
+    "n_t": 2501,
+    "fs_dec": 2500.0,
+    "decim": 100,
+    "ringdown_ms": 500.4,
+    "impact_ms_median": 500.086,
+    "force_peak_lbf_median": 805.1419095743547,
+    "snr_post_pre_median": 10.810601174918318,
+    "snr_post_pre_p90": 28.333006325259092
+  },
+  "m_zpos_900z": {
+    "label": "+Z (900)",
+    "axis": "Z",
+    "xyz": [
+      9.0,
+      0.0,
+      0.0
+    ],
+    "folder": "Test06_ModalHammer_900z",
+    "n_hits": 6,
+    "n_daq": 111,
+    "n_t": 2501,
+    "fs_dec": 2500.0,
+    "decim": 100,
+    "ringdown_ms": 500.4,
+    "impact_ms_median": 500.10200000000003,
+    "force_peak_lbf_median": 488.5292322537782,
+    "snr_post_pre_median": 4.092458803658496,
+    "snr_post_pre_p90": 11.197346613616485
+  },
+  "_meta": {
+    "fs_raw": 250000.0,
+    "fs_dec": 2500.0,
+    "decim": 100,
+    "band": [
+      45.0,
+      260.0
+    ],
+    "note": "time-domain ring-down caches (decimated 250k->2.5k); g & lbf; impact pre-triggered ~500 ms",
+    "runtime_s": 31.4
+  }
+}

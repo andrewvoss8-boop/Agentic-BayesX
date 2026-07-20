@@ -1,0 +1,75 @@
+{
+  "arm": "M0",
+  "likelihood": "faithful_schneider_additive_M0",
+  "tag": "ident4_n8",
+  "free_groups": [
+    "bottom_box",
+    "cross_beam",
+    "plates",
+    "top_box"
+  ],
+  "n_obs_channels": 8,
+  "n_band_freqs": 173,
+  "dim": 5,
+  "tmcmc": {
+    "n": 4000,
+    "n_runs": 4
+  },
+  "fixed_hyper": {
+    "l_f_hz": 10.0,
+    "l_z_in": 2000.0,
+    "r_split": 0.82,
+    "sigma_meas": 0.15,
+    "zeta": 0.01,
+    "sigma_w_prior_logN_center": 1.726,
+    "sigma_w_prior_logsd": 0.6
+  },
+  "diag": {
+    "max_rhat": 1.0001740560416237,
+    "min_ess": 4716.189286380408,
+    "div_frac": 0.0,
+    "n_runs": 4,
+    "draws": 16000,
+    "rhat_per_dim": [
+      1.0001248151690423,
+      0.999921458464853,
+      1.0001740560416237,
+      0.9999916382160803,
+      0.9999502091106188
+    ],
+    "log_evidence_mean": -105484.85550531678,
+    "log_evidence_std": 3.005165452959938,
+    "mean_accept_rate": 0.31838667371747364,
+    "mean_stages": 23.0
+  },
+  "converged": true,
+  "gain_c": {
+    "med": 5.915704023183557,
+    "lo": 5.90776344972452,
+    "hi": 5.923619689755477
+  },
+  "sigma_w": null,
+  "theta_post": {
+    "bottom_box": {
+      "med": 0.7790103726765137,
+      "lo": 0.7782552252655955,
+      "hi": 0.7797941470542811
+    },
+    "cross_beam": {
+      "med": 3.913076325347823,
+      "lo": 3.8935301068840116,
+      "hi": 3.9326518535235615
+    },
+    "plates": {
+      "med": 0.4338684402575936,
+      "lo": 0.4319301899082235,
+      "hi": 0.43579661318634466
+    },
+    "top_box": {
+      "med": 0.737056743886418,
+      "lo": 0.7361468428702326,
+      "hi": 0.7379975208332652
+    }
+  },
+  "runtime_s": 1852.4927172660828
+}

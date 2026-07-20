@@ -1,0 +1,26 @@
+[resume 11:35] IFT-TMCMC seed 2 ...
+IFT-TMCMC seed 2: cross-run R-hat 1.001 ESS 1495 converged=True | logEvid -18080.9±0.5
+  beta_med 0.174 (beta* 41) bounded=True collapsed=True
+  PEAK cover 0.97 interval 980 CRPS 49.8 | BAND cover 1.00 interval 1.18e+05
+  runtime 4168s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/out/ift_tmcmc_cells/ift_tmcmc_seed02.json
+[resume 12:45] IFT-TMCMC seed 3 ...
+IFT-TMCMC seed 3: cross-run R-hat 1.001 ESS 1143 converged=True | logEvid -17882.2±4.3
+  beta_med 0.181 (beta* 52.1) bounded=True collapsed=True
+  PEAK cover 0.90 interval 866 CRPS 75.7 | BAND cover 0.94 interval 3.48e+03
+  runtime 3525s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/out/ift_tmcmc_cells/ift_tmcmc_seed03.json
+[resume 13:44] IFT-TMCMC seed 4 ...
+IFT-TMCMC seed 4: cross-run R-hat 1.001 ESS 1613 converged=True | logEvid -17368.1±0.4
+  beta_med 0.162 (beta* 32.5) bounded=True collapsed=True
+  PEAK cover 0.97 interval 9.44e+03 CRPS 94.7 | BAND cover 1.00 interval 2.22e+05
+  runtime 2595s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/out/ift_tmcmc_cells/ift_tmcmc_seed04.json
+[resume 14:27] M2 seed 0 ...
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/code/resume_compute.py", line 19, in <module>
+    run_sweep.m2_split(s, 800, 800, 4, 250, False)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/code/run_sweep.py", line 105, in m2_split
+    flat, diag = ra.run_arm("M2", None, freqs, tru_obs, obs_rows, ch.drive_row, coords_obs, c0,
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/code/real_arms.py", line 97, in run_arm
+    jfwd = rf.jax_fem_logmag_factory(R, freqs, resp_rows_obs, drive_row, zeta=zeta)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/ift_real_validation_20260619/code/realfrf.py", line 173, in jax_fem_logmag_factory
+    A = jnp.asarray(R.A); A_fix = jnp.asarray(R.A_fix)
+AttributeError: 'NoneType' object has no attribute 'A'

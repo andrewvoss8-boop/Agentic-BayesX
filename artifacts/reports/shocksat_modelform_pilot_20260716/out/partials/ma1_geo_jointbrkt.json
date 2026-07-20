@@ -1,0 +1,53 @@
+{
+ "cid": "ma1_geo_jointbrkt",
+ "track": "agent",
+ "round": 1,
+ "cls": "geometry",
+ "ops": [
+  "joint_offset"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.14643161134838284,
+ "exact_b200_500": 0.13186098877274466,
+ "exact_folds": {
+  "m_xpos_990x": 0.27631199597905143,
+  "m_zpos_990z": 0.521291970421434,
+  "m_ypos_990y": 0.07600638879266507,
+  "m_zpos_900z": -0.2878839097996192
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.11188869106651537,
+  "m_zpos_990z": 0.0803399663901943,
+  "m_ypos_990y": 0.1274836221866697,
+  "m_zpos_900z": 0.20773167544759927
+ },
+ "theta_map": [
+  1.0276414139055097,
+  1.1729493033216867,
+  0.9980115781021254,
+  0.8520419391969811,
+  1.7177712783190937,
+  0.6829571871397321,
+  1.264707586255088,
+  1.0487209047229022,
+  0.770949839256918
+ ],
+ "enriched_pkg": "ma1_geo_jointbrkt__xenr",
+ "spot_max_pct": 7.289002734722771e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": -0.0009,
+  "max_mode_shift_pct": 5.899,
+  "min_jac_ratio": 0.6374042196603241,
+  "max_edge_slope": 0.010834164573566885,
+  "pass": true
+ },
+ "solve_s_theta1": 409.4,
+ "solve_s_enrich": 447.2,
+ "wall_s": 888.1,
+ "ts": "2026-07-16T21:16:36",
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Brackets|Y 0.734 dex sub-200; the tray-bracket interface position (z=57.4) within build tolerance moves the wall-mode node lines - offset 4 bracket spiders by [0.25,0.15,0] in (|d|=0.29)"
+}

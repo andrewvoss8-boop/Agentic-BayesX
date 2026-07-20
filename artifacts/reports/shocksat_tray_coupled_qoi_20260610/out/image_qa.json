@@ -1,0 +1,106 @@
+{
+ "reviewed_by": "lead-as-runner visual review via Read tool + size checks",
+ "date": "2026-06-10",
+ "figures": {
+  "fig_apparent_mass.png": {
+   "size_px": [
+    1575,
+    660
+   ],
+   "bytes": 165134,
+   "note": "z+x small multiples; source mass-like in z (annotated honestly), notches visible in x; mass guide lines labeled",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_force_limiting.png": {
+   "size_px": [
+    1170,
+    870
+   ],
+   "bytes": 137970,
+   "note": "smooth per-unit-input transfers (seed spectra moved to fig_th_sample); notch annotated x1.3 @ 114 Hz; annotations no longer overlap data",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_graphical_model.png": {
+   "size_px": [
+    1260,
+    690
+   ],
+   "bytes": 138475,
+   "note": "schematic; boxes/arrows legible; no data plotted (provenance label present, invalidity flag N/A by gate exception)",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": false
+  },
+  "fig_identifiability.png": {
+   "size_px": [
+    1575,
+    630
+   ],
+   "bytes": 125035,
+   "note": "REGENERATED after QA: SE bars limited to modes <=160 Hz (160-300 noted as ~all-ShockSat); legend below axis",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_input_env.png": {
+   "size_px": [
+    1575,
+    480
+   ],
+   "bytes": 164274,
+   "note": "3 panels legible; grms printed on panel; spec line labeled directly",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_method_comparison.png": {
+   "size_px": [
+    1725,
+    660
+   ],
+   "bytes": 128568,
+   "note": "REGENERATED after QA: caption de-duplicated, log ticks fixed at 100/200/400/800/1600; ratio labels clear",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_mount_sensitivity.png": {
+   "size_px": [
+    1575,
+    630
+   ],
+   "bytes": 137559,
+   "note": "Fx/Fy end labels offset; legend moved upper-center 2-col; bar values printed",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_proxy.png": {
+   "size_px": [
+    1725,
+    660
+   ],
+   "bytes": 138635,
+   "note": "channel dot plot legible; top picks red with alpha printed",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  },
+  "fig_th_sample.png": {
+   "size_px": [
+    1575,
+    510
+   ],
+   "bytes": 202455,
+   "note": "full record + 1 s zoom; peaks printed on panel",
+   "min_font_pt": 6.5,
+   "run_label": true,
+   "hypothetical_flag": true
+  }
+ },
+ "tufte_lint": "3 advisory flags, all reviewed: legend-on-grouped-bars (direct labels would overlap -> justified), bar-baseline (bars start at 0 by construction), 'dB detected' (false positive - the string is the 'no dB' axis label)"
+}

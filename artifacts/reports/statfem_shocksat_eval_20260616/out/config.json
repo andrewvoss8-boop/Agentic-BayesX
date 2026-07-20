@@ -1,0 +1,217 @@
+{
+ "testbed": "plain_shocksat_9group",
+ "uses_tray": false,
+ "source": "reduced_blocks.npz copied from shocksat_fem_modal_twin_20260609 (D1)",
+ "groups": [
+  "al_welds",
+  "angle_brackets",
+  "bottom_box",
+  "contact",
+  "cross_beam",
+  "joints",
+  "plates",
+  "steel_welds",
+  "top_box"
+ ],
+ "band_hz": [
+  45.0,
+  260.0
+ ],
+ "nfreq": 160,
+ "zeta_nom": 0.02,
+ "sigma_meas": 0.05,
+ "schneider": {
+  "std_lo": 0.03,
+  "std_hi": 0.12,
+  "len_logf": 0.3,
+  "len_z": 12.0,
+  "phase_frac": 0.5
+ },
+ "theta_prior_lognormal_sigma": 0.25,
+ "drive_dof": 225,
+ "drive_xyz": [
+  8.937482,
+  -6.0,
+  2.774995
+ ],
+ "drive_axis": 0,
+ "observed_dofs": [
+  192,
+  180,
+  143,
+  68,
+  32,
+  2
+ ],
+ "observed_xyz": [
+  [
+   8.937482,
+   -0.499999,
+   2.774995
+  ],
+  [
+   8.937482,
+   -0.499999,
+   6.37499
+  ],
+  [
+   -8.93748,
+   -0.499999,
+   17.18746
+  ],
+  [
+   8.93748,
+   7.499985,
+   30.37494
+  ],
+  [
+   -8.93748,
+   8.249985,
+   42.37542
+  ],
+  [
+   0.1736479,
+   0.9848063,
+   57.74989
+  ]
+ ],
+ "heldout_dofs": [
+  195,
+  210,
+  190,
+  164,
+  167,
+  152,
+  125,
+  110,
+  77,
+  83,
+  54,
+  44,
+  17,
+  5
+ ],
+ "heldout_xyz": [
+  [
+   8.937482,
+   4.499995,
+   2.774995
+  ],
+  [
+   -8.93748,
+   -0.499999,
+   2.774995
+  ],
+  [
+   -0.499999,
+   -8.93748,
+   6.37499
+  ],
+  [
+   8.937482,
+   -8.30602,
+   12.37498
+  ],
+  [
+   -0.999998,
+   0.0,
+   12.37498
+  ],
+  [
+   8.937482,
+   -8.31249,
+   17.18746
+  ],
+  [
+   0.0,
+   -8.93748,
+   19.19441
+  ],
+  [
+   8.937482,
+   7.499985,
+   19.19441
+  ],
+  [
+   8.93748,
+   -8.28706,
+   30.37494
+  ],
+  [
+   3.249995,
+   3.249995,
+   30.37494
+  ],
+  [
+   8.937481,
+   0.0,
+   35.60231
+  ],
+  [
+   3.369993,
+   0.0,
+   42.37542
+  ],
+  [
+   9.37498,
+   0.0,
+   46.74991
+  ],
+  [
+   7.999984,
+   0.0,
+   57.74989
+  ]
+ ],
+ "combos": {
+  "1": {
+   "name": "identifiable_only",
+   "theta": {
+    "top_box": 1.15,
+    "bottom_box": 0.9
+   }
+  },
+  "2": {
+   "name": "unidentifiable_only",
+   "theta": {
+    "joints": 1.2,
+    "contact": 1.15
+   }
+  },
+  "3": {
+   "name": "mixed",
+   "theta": {
+    "top_box": 1.15,
+    "joints": 1.2,
+    "plates": 0.88
+   }
+  },
+  "4": {
+   "name": "large",
+   "theta": {
+    "cross_beam": 1.2,
+    "joints": 0.82
+   }
+  },
+  "5": {
+   "name": "broad_small",
+   "theta": {
+    "bottom_box": 1.08,
+    "top_box": 0.92,
+    "plates": 1.1,
+    "cross_beam": 0.9,
+    "joints": 1.1
+   }
+  }
+ },
+ "informed_groups_expected": [
+  "bottom_box",
+  "top_box",
+  "plates",
+  "cross_beam"
+ ],
+ "n_observed": 6,
+ "n_heldout": 14,
+ "inference_uses_true_corr_lengths": true,
+ "note": "M2/M3 inference uses the injected Schneider correlation lengths (favorable to the correlated arm; mismatch tested in sensitivity)"
+}

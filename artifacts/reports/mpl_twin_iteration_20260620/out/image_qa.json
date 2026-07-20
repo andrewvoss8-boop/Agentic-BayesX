@@ -1,0 +1,70 @@
+{
+  "deliverable": "image-legibility QA",
+  "pass": true,
+  "n_figures": 9,
+  "figures": [
+    {
+      "file": "fig_forward_diagnostic.png",
+      "w": 1947,
+      "h": 1089,
+      "ok": true,
+      "note": "visually verified: log-f axes, direct labels readable, no clipped text, no dB/jet; signed-correlation bar uses a 0 reference line (justified deviation)."
+    },
+    {
+      "file": "fig_freq_result.png",
+      "w": 1967,
+      "h": 738,
+      "ok": true,
+      "note": "visually verified: grouped bars start at 0, legend ordered to bars, no dB/jet axes; caption carries the full honest verdict + convergence stamp."
+    },
+    {
+      "file": "fig_geometry.png",
+      "w": 1773,
+      "h": 847,
+      "ok": true,
+      "note": "3-D structural geometry (honest 3-D for a physical stand); accel locations marked + labeled; region legend; two views for depth."
+    },
+    {
+      "file": "fig_graphical_model.png",
+      "w": 1566,
+      "h": 676,
+      "ok": true,
+      "note": "run-specific statFEM schematic (not a copied paper figure); boxes/arrows legible."
+    },
+    {
+      "file": "fig_measured_transmissibility.png",
+      "w": 1639,
+      "h": 811,
+      "ok": true,
+      "note": "log-log; 5 curves direct-labeled at peaks; shield ref line annotated."
+    },
+    {
+      "file": "fig_modal_forest.png",
+      "w": 1937,
+      "h": 731,
+      "ok": true,
+      "note": "histogram + barh both start at 0; measured peaks overlaid; no jet."
+    },
+    {
+      "file": "fig_near_resonance.png",
+      "w": 1224,
+      "h": 930,
+      "ok": true,
+      "note": "scatter with 1:1 reference line; categorical location colors; corr annotated."
+    },
+    {
+      "file": "fig_registry.png",
+      "w": 2045,
+      "h": 372,
+      "ok": true,
+      "note": "table-as-figure; minor trailing-word truncation at right cell edges (full values in model_registry.json + caption); meaning not hidden."
+    },
+    {
+      "file": "fig_strain_energy.png",
+      "w": 1789,
+      "h": 753,
+      "ok": true,
+      "note": "scatter, y in [0,1]; tab10 categorical colors (not jet); legend identifies groups."
+    }
+  ]
+}

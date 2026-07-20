@@ -1,0 +1,101 @@
+{
+ "note": "joint 9-parameter frontier, tracked (re-pairing-robust) metric, reduced model",
+ "n_samples": 6000,
+ "n_calib_modes": 21,
+ "groups": [
+  "al_welds",
+  "angle_brackets",
+  "bottom_box",
+  "contact",
+  "cross_beam",
+  "joints",
+  "plates",
+  "steel_welds",
+  "top_box"
+ ],
+ "nominal": {
+  "mean_abs_df_pct": 6.065886639254126,
+  "global_mac": 0.7260154104524313,
+  "hard_region_mac": 0.7123735543406523
+ },
+ "n_both_improve": 0,
+ "best_both_improve": null,
+ "runtime_s": 30.0,
+ "pareto_front": [
+  {
+   "mean_abs_df_pct": 5.504,
+   "hard_region_mac": 0.7,
+   "global_mac": 0.697
+  },
+  {
+   "mean_abs_df_pct": 5.707,
+   "hard_region_mac": 0.704,
+   "global_mac": 0.693
+  },
+  {
+   "mean_abs_df_pct": 5.731,
+   "hard_region_mac": 0.705,
+   "global_mac": 0.696
+  },
+  {
+   "mean_abs_df_pct": 5.961,
+   "hard_region_mac": 0.707,
+   "global_mac": 0.696
+  },
+  {
+   "mean_abs_df_pct": 6.227,
+   "hard_region_mac": 0.711,
+   "global_mac": 0.698
+  },
+  {
+   "mean_abs_df_pct": 6.362,
+   "hard_region_mac": 0.721,
+   "global_mac": 0.72
+  },
+  {
+   "mean_abs_df_pct": 6.376,
+   "hard_region_mac": 0.739,
+   "global_mac": 0.735
+  },
+  {
+   "mean_abs_df_pct": 6.628,
+   "hard_region_mac": 0.744,
+   "global_mac": 0.732
+  },
+  {
+   "mean_abs_df_pct": 7.096,
+   "hard_region_mac": 0.744,
+   "global_mac": 0.739
+  },
+  {
+   "mean_abs_df_pct": 7.177,
+   "hard_region_mac": 0.745,
+   "global_mac": 0.711
+  },
+  {
+   "mean_abs_df_pct": 7.272,
+   "hard_region_mac": 0.746,
+   "global_mac": 0.727
+  },
+  {
+   "mean_abs_df_pct": 7.29,
+   "hard_region_mac": 0.754,
+   "global_mac": 0.735
+  },
+  {
+   "mean_abs_df_pct": 7.426,
+   "hard_region_mac": 0.755,
+   "global_mac": 0.721
+  },
+  {
+   "mean_abs_df_pct": 7.618,
+   "hard_region_mac": 0.769,
+   "global_mac": 0.731
+  },
+  {
+   "mean_abs_df_pct": 11.541,
+   "hard_region_mac": 0.769,
+   "global_mac": 0.716
+  }
+ ]
+}

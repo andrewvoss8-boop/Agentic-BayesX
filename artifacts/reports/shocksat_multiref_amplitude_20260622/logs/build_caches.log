@@ -1,0 +1,10 @@
+cached xpos_990x N65536: 1 hits, df 3.81 Hz -> xpos_990x_N65536.npz
+cached xpos_990x N200000: 1 hits, df 1.25 Hz -> xpos_990x_N200000.npz
+cached zpos_990z N65536: 4 hits, df 3.81 Hz -> zpos_990z_N65536.npz
+cached zpos_990z N200000: 2 hits, df 1.25 Hz -> zpos_990z_N200000.npz
+cached ypos_990y N65536: 4 hits, df 3.81 Hz -> ypos_990y_N65536.npz
+cached z_900z N65536: 4 hits, df 3.81 Hz -> z_900z_N65536.npz
+cached z_900z N200000: 1 hits, df 1.25 Hz -> z_900z_N200000.npz
+
+cache summary: {"xpos_990x": {"N65536": {"n_hits_used": 1, "df_hz": 3.815, "coh_at_res_p90": null}, "N200000": {"n_hits_used": 1, "df_hz": 1.25, "coh_at_res_p90": null}}, "zpos_990z": {"N65536": {"n_hits_used": 4, "df_hz": 3.815, "coh_at_res_p90": null}, "N200000": {"n_hits_used": 2, "df_hz": 1.25, "coh_at_res_p90": null}}, "ypos_990y": {"N65536": {"n_hits_used": 4, "df_hz": 3.815, "coh_at_res_p90": null}, "N200000": {"n_hits_used": 0}}, "z_900z": {"N65536": {"n_hits_used": 4, "df_hz": 3.815, "coh_at_res_p90": null}, "N200000": {"n_hits_used": 1, "df_hz": 1.25, "coh_at_res_p90": null}}}
+runtime 10s

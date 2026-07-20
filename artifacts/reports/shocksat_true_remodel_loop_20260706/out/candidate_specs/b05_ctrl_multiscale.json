@@ -1,0 +1,28 @@
+{
+ "cid": "b05_ctrl_multiscale",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "bottom_box",
+   "factor": 0.92
+  },
+  {
+   "op": "scale",
+   "group": "top_box",
+   "factor": 0.95
+  },
+  {
+   "op": "scale",
+   "group": "al_welds",
+   "factor": 0.8
+  },
+  {
+   "op": "scale",
+   "group": "steel_welds",
+   "factor": 0.8
+  }
+ ],
+ "rationale": "PARAMETRIC-ONLY multi-knob control for b01: pure modulus freedom mimicking the stacked edit's group targets \u2014 if it matches b01, the stack is \u03b8, not form.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)"
+}

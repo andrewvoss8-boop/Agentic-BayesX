@@ -1,0 +1,145 @@
+{
+ "note": "Pooled-mount FIM analysis (D15, Andrew: 'could get 6 stiffnesses down to 3",
+ "sigma_levels": {
+  "P6_full (baseline)": {
+   "n_params": 6,
+   "groups": [
+    "k_tx",
+    "k_ty",
+    "k_tz",
+    "k_rx",
+    "k_ry",
+    "k_rz"
+   ],
+   "real_3.7pct": {
+    "eigenvalues": [
+     0.0,
+     0.02,
+     0.44,
+     0.74,
+     15.02,
+     97.02
+    ],
+    "n_identifiable": 2,
+    "fully_separable": false
+   },
+   "noise_0.3pct": {
+    "eigenvalues": [
+     0.24,
+     3.25,
+     67.18,
+     113.29,
+     2285.2,
+     14757.08
+    ],
+    "n_identifiable": 5,
+    "fully_separable": false
+   }
+  },
+  "P4_symmetric (t_lat, t_z, r_lat, r_z)": {
+   "n_params": 4,
+   "groups": [
+    "k_tx + k_ty",
+    "k_tz",
+    "k_rx + k_ry",
+    "k_rz"
+   ],
+   "real_3.7pct": {
+    "eigenvalues": [
+     0.14,
+     0.74,
+     15.02,
+     97.42
+    ],
+    "n_identifiable": 2,
+    "fully_separable": false
+   },
+   "noise_0.3pct": {
+    "eigenvalues": [
+     20.74,
+     113.29,
+     2285.2,
+     14818.36
+    ],
+    "n_identifiable": 4,
+    "fully_separable": true
+   }
+  },
+  "P3_A (t_lat, t_z, r_all)": {
+   "n_params": 3,
+   "groups": [
+    "k_tx + k_ty",
+    "k_tz",
+    "k_rx + k_ry + k_rz"
+   ],
+   "real_3.7pct": {
+    "eigenvalues": [
+     0.19,
+     15.02,
+     98.64
+    ],
+    "n_identifiable": 2,
+    "fully_separable": false
+   },
+   "noise_0.3pct": {
+    "eigenvalues": [
+     28.74,
+     2285.2,
+     15004.66
+    ],
+    "n_identifiable": 3,
+    "fully_separable": true
+   }
+  },
+  "P3_B (t_all, r_lat, r_z)": {
+   "n_params": 3,
+   "groups": [
+    "k_tx + k_ty + k_tz",
+    "k_rx + k_ry",
+    "k_rz"
+   ],
+   "real_3.7pct": {
+    "eigenvalues": [
+     0.74,
+     13.92,
+     98.66
+    ],
+    "n_identifiable": 2,
+    "fully_separable": false
+   },
+   "noise_0.3pct": {
+    "eigenvalues": [
+     113.29,
+     2116.78,
+     15007.52
+    ],
+    "n_identifiable": 3,
+    "fully_separable": true
+   }
+  },
+  "P2 (t_all, r_all)": {
+   "n_params": 2,
+   "groups": [
+    "k_tx + k_ty + k_tz",
+    "k_rx + k_ry + k_rz"
+   ],
+   "real_3.7pct": {
+    "eigenvalues": [
+     13.99,
+     99.86
+    ],
+    "n_identifiable": 2,
+    "fully_separable": true
+   },
+   "noise_0.3pct": {
+    "eigenvalues": [
+     2128.76,
+     15189.85
+    ],
+    "n_identifiable": 2,
+    "fully_separable": true
+   }
+  }
+ },
+ "prior_precision": 0.756
+}

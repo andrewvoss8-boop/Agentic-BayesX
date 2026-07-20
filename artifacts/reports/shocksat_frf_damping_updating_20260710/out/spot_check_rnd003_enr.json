@@ -1,0 +1,7 @@
+{
+ "cid": "rnd003_enr",
+ "rel_err": 3.6751707188642513e-07,
+ "n_modes": 74,
+ "pass_0p3pct": true,
+ "provenance": "exact-basis reduction validated in shocksat_true_remodel_loop_20260706 (identical package); reused here read-only"
+}

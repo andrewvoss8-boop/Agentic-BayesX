@@ -1,0 +1,46 @@
+{
+ "cid": "b01_stack_bb_weld",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  },
+  {
+   "op": "thickness",
+   "pids": [
+    104,
+    105,
+    106,
+    204,
+    205,
+    206
+   ],
+   "t_scale": 0.74,
+   "name": "welds_t074"
+  }
+ ],
+ "rationale": "STACK a16(bb face+bulkhead splits)+a04(weld thin \u00d70.74): the two only above-A0 real-model-form directions together \u2014 the agent's best shot at clearing the noise floor.",
+ "evidence": "round_r1_summary.md: bb-splits + weld-thin only positive real-form directions; +Z@900 gains matched by parametric control a15 (=theta-refit, not form)",
+ "split_info": {
+  "bb_xface": 4671,
+  "bb_bulkband": 3864
+ }
+}

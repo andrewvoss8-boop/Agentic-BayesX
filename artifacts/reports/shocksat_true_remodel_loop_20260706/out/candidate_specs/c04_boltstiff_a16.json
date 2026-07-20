@@ -1,0 +1,97 @@
+{
+ "cid": "c04_boltstiff_a16",
+ "family": "combo",
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    1024295,
+    1024296,
+    1024297,
+    1024298,
+    1024299,
+    1024300,
+    1024301,
+    1024302,
+    1024303,
+    1024304,
+    1024305,
+    1024306,
+    1024307,
+    1024308,
+    1024309,
+    1024310,
+    1024311,
+    1024312,
+    1024313,
+    1024314,
+    1024315,
+    1024316,
+    1024317,
+    1024318,
+    1024319,
+    1024320,
+    1024321,
+    1024322,
+    2032413,
+    2032414,
+    2032415,
+    2032416,
+    2032417,
+    2032418,
+    2032419,
+    2032420,
+    2032421,
+    2032422,
+    2032423,
+    2032424,
+    2032425,
+    2032426,
+    2032427,
+    2032428,
+    2032429,
+    2032430,
+    2032431,
+    2032432,
+    2032433,
+    2032434,
+    2032435,
+    2032436,
+    2032437,
+    2032438,
+    2032439,
+    2032440
+   ],
+   "k_trans": 10000000.0,
+   "k_rot": 1000000.0,
+   "name": "bolt_stiff"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  }
+ ],
+ "rationale": "Cross-family: bolt_stiff (only non-negative connect, +0.003) + a16 splits \u2014 the untested connect+split combination.",
+ "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe",
+ "split_info": {
+  "bb_xface": 4671,
+  "bb_bulkband": 3864
+ }
+}

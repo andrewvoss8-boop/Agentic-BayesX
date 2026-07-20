@@ -1,0 +1,526 @@
+{
+  "deliverable": "Layer 1: time-domain per-mode damping (band-pass + analytic-signal log-decrement)",
+  "method": "multi-reference/channel/hit decay fits; bootstrap CI over accepted traces",
+  "d22_baseline": "0/9 identified from the single windowed FRF (df=1.25 Hz) -- REPRODUCED this run",
+  "gates": {
+    "r2min": 0.9,
+    "snrmin": 8.0,
+    "cycmin": 10.0,
+    "prior_zeta_pct": [
+      0.05,
+      6.0
+    ],
+    "resolved_rule": "CI logwidth < 0.5*prior AND interior AND >=8 kept traces"
+  },
+  "n_modes": 16,
+  "n_resolved": 14,
+  "n_resolved_uncontaminated": 7,
+  "fem_nominal_zeta_pct": 1.0,
+  "ash_zeta_pct_range": [
+    0.25,
+    0.44
+  ],
+  "modes": [
+    {
+      "f_hz": 75.3,
+      "n_traces": 2,
+      "resolved": false,
+      "note": "too few clean traces",
+      "neighbour_gap_hz": 24.4,
+      "contaminated": false
+    },
+    {
+      "f_hz": 99.7,
+      "n_traces": 116,
+      "n_kept": 104,
+      "zeta_pct": {
+        "med": 0.667,
+        "lo": 0.654,
+        "hi": 0.675
+      },
+      "ci_logwidth_frac_of_prior": 0.007,
+      "ash_zeta_pct": 0.778,
+      "ash_f_hz": 107.0,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 1.955,
+        "m_zpos_990z": 0.625,
+        "m_xy_990xy": 0.7,
+        "m_zpos_900z": 0.412
+      },
+      "neighbour_gap_hz": 22.4,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 237.2,
+        "T_fit_ms": 406.8,
+        "ringdown_ms": 500.0,
+        "cycles": 41.0,
+        "snr": 18.0,
+        "db_decay": 11.0,
+        "r2": 0.931,
+        "half_power_df_hz": 1.331,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 122.1,
+      "n_traces": 4,
+      "resolved": false,
+      "note": "too few clean traces",
+      "neighbour_gap_hz": 4.0,
+      "contaminated": true
+    },
+    {
+      "f_hz": 126.1,
+      "n_traces": 158,
+      "n_kept": 142,
+      "zeta_pct": {
+        "med": 0.985,
+        "lo": 0.962,
+        "hi": 0.998
+      },
+      "ci_logwidth_frac_of_prior": 0.008,
+      "ash_zeta_pct": 0.338,
+      "ash_f_hz": 125.0,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.995,
+        "m_xy_990xy": 0.552
+      },
+      "neighbour_gap_hz": 4.0,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 130.5,
+        "T_fit_ms": 105.0,
+        "ringdown_ms": 500.0,
+        "cycles": 13.0,
+        "snr": 11.0,
+        "db_decay": 8.6,
+        "r2": 0.921,
+        "half_power_df_hz": 2.483,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": false
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 136.3,
+      "n_traces": 37,
+      "n_kept": 33,
+      "zeta_pct": {
+        "med": 0.383,
+        "lo": 0.333,
+        "hi": 0.486
+      },
+      "ci_logwidth_frac_of_prior": 0.079,
+      "ash_zeta_pct": 0.352,
+      "ash_f_hz": 137.2,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.711,
+        "m_zpos_990z": 0.333,
+        "m_xy_990xy": 0.381,
+        "m_zpos_900z": 0.794
+      },
+      "neighbour_gap_hz": 2.0,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 250.2,
+        "T_fit_ms": 268.4,
+        "ringdown_ms": 500.0,
+        "cycles": 37.0,
+        "snr": 10.0,
+        "db_decay": 7.7,
+        "r2": 0.926,
+        "half_power_df_hz": 1.045,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 138.3,
+      "n_traces": 26,
+      "n_kept": 23,
+      "zeta_pct": {
+        "med": 0.758,
+        "lo": 0.533,
+        "hi": 0.803
+      },
+      "ci_logwidth_frac_of_prior": 0.085,
+      "ash_zeta_pct": 0.352,
+      "ash_f_hz": 137.2,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.758,
+        "m_zpos_990z": 0.79,
+        "m_xy_990xy": 0.401
+      },
+      "neighbour_gap_hz": 2.0,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 160.9,
+        "T_fit_ms": 175.6,
+        "ringdown_ms": 500.0,
+        "cycles": 24.0,
+        "snr": 10.0,
+        "db_decay": 7.6,
+        "r2": 0.929,
+        "half_power_df_hz": 2.098,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": false
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 140.4,
+      "n_traces": 243,
+      "n_kept": 218,
+      "zeta_pct": {
+        "med": 0.346,
+        "lo": 0.326,
+        "hi": 0.364
+      },
+      "ci_logwidth_frac_of_prior": 0.023,
+      "ash_zeta_pct": 0.271,
+      "ash_f_hz": 142.4,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.316,
+        "m_zpos_990z": 0.474,
+        "m_xy_990xy": 0.706,
+        "m_zpos_900z": 0.327
+      },
+      "neighbour_gap_hz": 2.1,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 312.5,
+        "T_fit_ms": 315.2,
+        "ringdown_ms": 500.0,
+        "cycles": 44.0,
+        "snr": 11.0,
+        "db_decay": 8.3,
+        "r2": 0.933,
+        "half_power_df_hz": 0.971,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 162.8,
+      "n_traces": 35,
+      "n_kept": 31,
+      "zeta_pct": {
+        "med": 0.309,
+        "lo": 0.289,
+        "hi": 0.778
+      },
+      "ci_logwidth_frac_of_prior": 0.207,
+      "ash_zeta_pct": 0.317,
+      "ash_f_hz": 165.9,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.279,
+        "m_zpos_990z": 1.081,
+        "m_xy_990xy": 1.279
+      },
+      "neighbour_gap_hz": 10.1,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 238.5,
+        "T_fit_ms": 240.4,
+        "ringdown_ms": 500.0,
+        "cycles": 39.0,
+        "snr": 15.0,
+        "db_decay": 10.8,
+        "r2": 0.927,
+        "half_power_df_hz": 1.005,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 172.9,
+      "n_traces": 129,
+      "n_kept": 116,
+      "zeta_pct": {
+        "med": 1.172,
+        "lo": 1.12,
+        "hi": 1.266
+      },
+      "ci_logwidth_frac_of_prior": 0.025,
+      "ash_zeta_pct": 0.058,
+      "ash_f_hz": 172.3,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 1.19,
+        "m_zpos_990z": 0.459,
+        "m_xy_990xy": 1.137
+      },
+      "neighbour_gap_hz": 10.1,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 81.6,
+        "T_fit_ms": 78.8,
+        "ringdown_ms": 500.0,
+        "cycles": 14.0,
+        "snr": 13.0,
+        "db_decay": 10.1,
+        "r2": 0.929,
+        "half_power_df_hz": 4.052,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": false
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 189.2,
+      "n_traces": 29,
+      "n_kept": 26,
+      "zeta_pct": {
+        "med": 0.403,
+        "lo": 0.347,
+        "hi": 0.491
+      },
+      "ci_logwidth_frac_of_prior": 0.073,
+      "ash_zeta_pct": 0.453,
+      "ash_f_hz": 188.6,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.33,
+        "m_zpos_990z": 0.489,
+        "m_zpos_900z": 0.504
+      },
+      "neighbour_gap_hz": 6.1,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 193.8,
+        "T_fit_ms": 195.2,
+        "ringdown_ms": 500.0,
+        "cycles": 37.0,
+        "snr": 10.0,
+        "db_decay": 8.0,
+        "r2": 0.937,
+        "half_power_df_hz": 1.526,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 195.3,
+      "n_traces": 66,
+      "n_kept": 59,
+      "zeta_pct": {
+        "med": 0.457,
+        "lo": 0.343,
+        "hi": 0.525
+      },
+      "ci_logwidth_frac_of_prior": 0.089,
+      "ash_zeta_pct": 0.121,
+      "ash_f_hz": 195.7,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.665,
+        "m_zpos_990z": 0.322,
+        "m_xy_990xy": 0.336
+      },
+      "neighbour_gap_hz": 2.0,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 172.6,
+        "T_fit_ms": 139.8,
+        "ringdown_ms": 500.0,
+        "cycles": 27.0,
+        "snr": 11.0,
+        "db_decay": 8.5,
+        "r2": 0.943,
+        "half_power_df_hz": 1.785,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 197.3,
+      "n_traces": 35,
+      "n_kept": 31,
+      "zeta_pct": {
+        "med": 0.304,
+        "lo": 0.25,
+        "hi": 0.434
+      },
+      "ci_logwidth_frac_of_prior": 0.115,
+      "ash_zeta_pct": 0.493,
+      "ash_f_hz": 197.8,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.547,
+        "m_zpos_990z": 0.233,
+        "m_xy_990xy": 0.253,
+        "m_zpos_900z": 0.434
+      },
+      "neighbour_gap_hz": 2.0,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 210.2,
+        "T_fit_ms": 297.2,
+        "ringdown_ms": 500.0,
+        "cycles": 59.0,
+        "snr": 11.0,
+        "db_decay": 8.5,
+        "r2": 0.923,
+        "half_power_df_hz": 1.201,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 199.4,
+      "n_traces": 41,
+      "n_kept": 37,
+      "zeta_pct": {
+        "med": 0.287,
+        "lo": 0.252,
+        "hi": 0.368
+      },
+      "ci_logwidth_frac_of_prior": 0.079,
+      "ash_zeta_pct": 0.153,
+      "ash_f_hz": 198.9,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.585,
+        "m_zpos_990z": 0.207,
+        "m_xy_990xy": 0.222,
+        "m_zpos_900z": 0.368
+      },
+      "neighbour_gap_hz": 2.1,
+      "contaminated": true,
+      "resolvability": {
+        "tau_ms": 252.7,
+        "T_fit_ms": 268.4,
+        "ringdown_ms": 500.0,
+        "cycles": 54.0,
+        "snr": 11.0,
+        "db_decay": 8.4,
+        "r2": 0.938,
+        "half_power_df_hz": 1.144,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 234.0,
+      "n_traces": 214,
+      "n_kept": 192,
+      "zeta_pct": {
+        "med": 0.427,
+        "lo": 0.339,
+        "hi": 0.538
+      },
+      "ci_logwidth_frac_of_prior": 0.096,
+      "ash_zeta_pct": 0.499,
+      "ash_f_hz": 234.2,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.474,
+        "m_zpos_990z": 0.658,
+        "m_xy_990xy": 0.275,
+        "m_zpos_900z": 0.646
+      },
+      "neighbour_gap_hz": 10.1,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 132.4,
+        "T_fit_ms": 149.0,
+        "ringdown_ms": 500.0,
+        "cycles": 35.0,
+        "snr": 13.0,
+        "db_decay": 9.9,
+        "r2": 0.938,
+        "half_power_df_hz": 2.0,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 244.1,
+      "n_traces": 541,
+      "n_kept": 487,
+      "zeta_pct": {
+        "med": 0.65,
+        "lo": 0.579,
+        "hi": 0.71
+      },
+      "ci_logwidth_frac_of_prior": 0.043,
+      "ash_zeta_pct": 0.398,
+      "ash_f_hz": 243.9,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.534,
+        "m_zpos_990z": 0.674,
+        "m_xy_990xy": 0.939,
+        "m_zpos_900z": 0.194
+      },
+      "neighbour_gap_hz": 10.1,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 99.0,
+        "T_fit_ms": 142.0,
+        "ringdown_ms": 500.0,
+        "cycles": 35.0,
+        "snr": 15.0,
+        "db_decay": 11.1,
+        "r2": 0.933,
+        "half_power_df_hz": 3.173,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": false
+      },
+      "resolved": true
+    },
+    {
+      "f_hz": 254.3,
+      "n_traces": 259,
+      "n_kept": 233,
+      "zeta_pct": {
+        "med": 0.336,
+        "lo": 0.313,
+        "hi": 0.368
+      },
+      "ci_logwidth_frac_of_prior": 0.034,
+      "ash_zeta_pct": 0.462,
+      "ash_f_hz": 254.2,
+      "fem_nominal_zeta_pct": 1.0,
+      "per_reference_zeta_pct": {
+        "m_xpos_990x": 0.37,
+        "m_zpos_990z": 0.228,
+        "m_xy_990xy": 0.244,
+        "m_zpos_900z": 0.472
+      },
+      "neighbour_gap_hz": 10.2,
+      "contaminated": false,
+      "resolvability": {
+        "tau_ms": 170.5,
+        "T_fit_ms": 272.8,
+        "ringdown_ms": 500.0,
+        "cycles": 69.0,
+        "snr": 27.0,
+        "db_decay": 15.8,
+        "r2": 0.929,
+        "half_power_df_hz": 1.709,
+        "df_fft_hz": 2.035,
+        "subbin_in_freq": true
+      },
+      "resolved": true
+    }
+  ],
+  "runtime_s": 56.6,
+  "verdict": "14/16 union modes give a RESOLVED time-domain zeta (7 of them neighbour-uncontaminated), vs D22's 0/9 from the single windowed FRF. Time-domain decay dodges the df=2.03 Hz frequency bin (half-power Delta_f = 2*zeta*f is sub-bin for these light modes) -- damping is a time-domain decay rate, resolvable in many cycles of ring-down."
+}

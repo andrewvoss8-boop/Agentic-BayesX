@@ -1,0 +1,49 @@
+{
+  "seed": 0,
+  "obs_frac": 0.9,
+  "baseline_sigma": 1.6039519333107313,
+  "note": "damping lever experiment",
+  "A_global_absorption": {
+    "1pct": {
+      "twin_gain": 0.31,
+      "twin_sigma": 1.52,
+      "median_grms_ratio": 10.62,
+      "win_rate": 0.0
+    },
+    "3pct": {
+      "twin_gain": 0.64,
+      "twin_sigma": 1.45,
+      "median_grms_ratio": 7.72,
+      "win_rate": 0.0
+    },
+    "5pct": {
+      "twin_gain": 0.8,
+      "twin_sigma": 1.42,
+      "median_grms_ratio": 6.48,
+      "win_rate": 0.0
+    }
+  },
+  "B_per_mode": {
+    "n_modes": 7,
+    "zeta_median": 0.0106,
+    "zeta_range": [
+      0.0093,
+      0.0218
+    ],
+    "per_mode_zeta": {
+      "75.3": 0.0218,
+      "138.3": 0.012,
+      "162.8": 0.0093,
+      "189.2": 0.0098,
+      "199.4": 0.0174,
+      "244.1": 0.0106,
+      "254.3": 0.0101
+    },
+    "twin_gain": 0.2,
+    "twin_sigma": 1.56,
+    "median_grms_ratio": 12.52,
+    "win_rate": 0.0,
+    "twin_exc_energy": 0.0,
+    "fem_exc_energy": 0.521
+  }
+}

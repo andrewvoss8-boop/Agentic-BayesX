@@ -1,0 +1,34 @@
+{
+ "n_dof": 399510,
+ "k": 560,
+ "top_hz": 668.0949729719728,
+ "n_rbm": 6,
+ "n_elastic_to_1250": 554,
+ "n_elastic_to_1000": 554,
+ "n_elastic_to_500": 136,
+ "n_elastic_to_260": 40,
+ "m_orth_offdiag_max": 1.8595732923677755e-12,
+ "crosscheck_vs_slices": {
+  "slice_0": {
+   "n": 150,
+   "max_rel_lam_err": 3.8021426007617265e-09,
+   "median_rel_lam_err": 1.516474737095318e-11
+  },
+  "slice_1": {
+   "n": 150,
+   "max_rel_lam_err": 7.17314259101298e-10,
+   "median_rel_lam_err": 2.9023929184996624e-11
+  }
+ },
+ "solve_s": 32828.8,
+ "active_s": 32837.7,
+ "filtered_D11": true,
+ "n_clamped_dropped": 19,
+ "clamp_hz": 668.1,
+ "n_modes_kept": 215,
+ "credible_top_hz": 666.9,
+ "n_elastic_kept": 209,
+ "n_elastic_to_550": 170,
+ "crossvalidated_to_hz": 639.0,
+ "note_D11": "unconverged clamped modes removed; credible basis top set by the last converged mode, cross-validated to 639 Hz by the independent interior-shift slice-1 solve"
+}

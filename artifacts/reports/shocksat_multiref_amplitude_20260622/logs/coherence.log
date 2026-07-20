@@ -1,0 +1,6 @@
+xpos_990x (+X, impact): N200000 hits 1, N65536 hits 1 | at-resonance coh median 1.0, p90 1.0000000000000004, drivepoint 1.0
+zpos_990z (+Z, impact): N200000 hits 2, N65536 hits 4 | at-resonance coh median 0.27725682585331257, p90 0.7487453352526038, drivepoint 0.2319487341377956
+ypos_990y (+Y, modal): N200000 hits 0, N65536 hits 4 | at-resonance coh median 0.9164479716439117, p90 0.98804419058892, drivepoint 0.9621722231814137
+z_900z (900z, impact): N200000 hits 1, N65536 hits 4 | at-resonance coh median 0.3866146833880234, p90 0.75033388004898, drivepoint 0.299053592904882
+
+wrote coherence_by_reference.json (9s)

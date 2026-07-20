@@ -1,0 +1,74 @@
+{
+ "op": "warp_panel",
+ "status": "PASS",
+ "checks": [
+  {
+   "name": "known answer: warp RAISES fundamental drumhead freq, monotone in amp (shallow-shell stiffening; rigid-leak modes excluded by rigid-fit filter, D2)",
+   "value": {
+    "flat": 194.75,
+    "warped": [
+     195.94,
+     199.43,
+     212.06
+    ]
+   },
+   "expect": "flat < 0.5t < 1t < 2t",
+   "pass": true
+  },
+  {
+   "name": "rigid-rotation leak (facet-shell non-invariance) stays << drumhead at amp=t (patch is the WORST case: element-relative warp far above any full-model candidate)",
+   "value": {
+    "leak_hz": [
+     14.01,
+     27.93,
+     55.21
+    ],
+    "drumhead_hz": [
+     195.94,
+     199.43,
+     212.06
+    ]
+   },
+   "expect": "leak(amp=t) < 25% of drumhead",
+   "pass": true
+  },
+  {
+   "name": "patch mass drift at amp=t (%)",
+   "value": 0.0366,
+   "expect": "<=0.1%",
+   "pass": true
+  },
+  {
+   "name": "element quality at amp=2t (min jac ratio, max edge slope)",
+   "value": [
+    0.999,
+    0.0146
+   ],
+   "expect": ">= 0.2 / <= 0.35",
+   "pass": true
+  },
+  {
+   "name": "6 RBMs preserved (full model, pid 701 warped 0.15 in)",
+   "value": 6,
+   "expect": 6,
+   "pass": true
+  },
+  {
+   "name": "liveness: max elastic mode shift vs baseline (%)",
+   "value": 1.4374,
+   "expect": ">=0.05",
+   "pass": true
+  },
+  {
+   "name": "quality on full-model edited quads",
+   "value": {
+    "min_jac_ratio": 0.49998879924553963,
+    "max_edge_slope": 0.0003444035849861829,
+    "n_edited_quads": 4056
+   },
+   "expect": "recorded + within caps",
+   "pass": true
+  }
+ ],
+ "ts": "2026-07-16T19:37:45"
+}

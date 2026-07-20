@@ -1,0 +1,8 @@
+seed 0 (calib True); NON-HARD CRPS-skill vs climatology (<0 = no value):
+  baseline_peak                  skill -0.80  cover 1.00  sigma 1.10
+  baseline_band                  skill -1.02  cover 1.00  sigma 1.00
+  band_zeta_x0.5                 skill -1.57  cover 1.00  sigma 1.00
+  band_zeta_x2.0                 skill -0.60  cover 1.00  sigma 1.00
+  topo_joint_soften0.3_peak      skill -0.74  cover 1.00  sigma 1.09
+  topo_joint_soften0.0_peak      skill -0.66  cover 1.00  sigma 1.06
+  runtime 205s

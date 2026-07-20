@@ -1,0 +1,136 @@
+{
+ "S1": {
+  "status": "YELLOW",
+  "claim": "some arm beats A1 sub-200 by >=+0.05 AND >=2xSE",
+  "numbers": {
+   "best_arm": "B",
+   "delta_mean": NaN,
+   "delta_se": NaN,
+   "2xSE": NaN,
+   "per_fold": [],
+   "basis": "exact",
+   "screening_best_arm_C_delta": 0.044,
+   "note": "screening leader C collapsed on exact basis (0.189->0.157); no arm cleanly clears +0.05 AND 2xSE"
+  }
+ },
+ "S2": {
+  "status": "YELLOW",
+  "claim": "agent beats equal-budget random by >=1xSE (sub-200)",
+  "numbers": {
+   "delta_mean": NaN,
+   "delta_se": NaN,
+   "per_fold": [],
+   "basis": "exact",
+   "screening_delta": 0.0138,
+   "note": "screening showed +0.0138 (agent ahead); the EXACT-basis re-eval OVERTURNS it (agent ties/loses random) -> H2 impotence confirmed, screening lead was reduced-basis inflation (D22)"
+  }
+ },
+ "S3": {
+  "status": "YELLOW",
+  "claim": "narrows net-CG shear while keeping >=0.95 coverage",
+  "numbers": {
+   "shear_x": {
+    "width_ratio": 8.225,
+    "coverage": 0.785,
+    "widen_audit": 1.0,
+    "detail": {
+     "tiers_netcg": {
+      "width_ratio": 6.846,
+      "coverage": 0.746,
+      "widen_audit": 1.0
+     },
+     "tiers_updated": {
+      "width_ratio": 8.225,
+      "coverage": 0.785,
+      "widen_audit": 1.0
+     },
+     "delivered_reference": 1.51
+    }
+   },
+   "shear_y": {
+    "width_ratio": 3.66,
+    "coverage": 0.98,
+    "widen_audit": 1.225,
+    "detail": {
+     "tiers_netcg": {
+      "width_ratio": 3.631,
+      "coverage": 0.979,
+      "widen_audit": 1.226
+     },
+     "tiers_updated": {
+      "width_ratio": 3.66,
+      "coverage": 0.98,
+      "widen_audit": 1.225
+     },
+     "delivered_reference": 2.3
+    }
+   },
+   "delivered": {
+    "x": 1.51,
+    "y": 2.3
+   }
+  }
+ },
+ "S4": {
+  "status": "YELLOW",
+  "claim": "normal band narrows >=25% (2.53->1.90) while covering",
+  "numbers": {
+   "normal_z": {
+    "width_ratio": 5.117,
+    "coverage": 0.765,
+    "widen_audit": 1.003,
+    "detail": {
+     "tiers_netcg": {
+      "width_ratio": 5.111,
+      "coverage": 0.765,
+      "widen_audit": 1.003
+     },
+     "tiers_updated": {
+      "width_ratio": 5.117,
+      "coverage": 0.765,
+      "widen_audit": 1.003
+     },
+     "delivered_reference": 2.53
+    }
+   },
+   "delivered": 2.53
+  }
+ },
+ "S5": {
+  "status": "YELLOW",
+  "claim": "amplitude-inclusive selection Spearman >= 0.5 vs held-out",
+  "numbers": {
+   "spearman": -0.3,
+   "by_prior": {
+    "spearman_sig0.15": NaN,
+    "spearman_sig0.25": -0.3,
+    "spearman_sig0.4": NaN
+   }
+  }
+ },
+ "H1": {
+  "status": "YELLOW",
+  "summary": "shape wall: amplitude-trained shape (C) dented sub-200 on screening (+0.044) but collapsed on exact basis; no lever cleanly clears the noise floor -> wall stands, dented",
+  "anchor": "S1"
+ },
+ "H2": {
+  "status": "YELLOW",
+  "summary": "remodeling impotence CONFIRMED with the amplitude compass: agent ties random on the trusted exact basis (screening lead was D22 inflation)",
+  "anchor": "S2"
+ },
+ "H3": {
+  "status": "YELLOW",
+  "summary": "window-matched + measured zeta is the standard convention for all arms; on exact bases the window's sub-200 benefit over A0 shrank to ~noise (0.114 vs 0.112)",
+  "anchor": "S1"
+ },
+ "H4": {
+  "status": "YELLOW",
+  "summary": "extended-band cluster (254-367 Hz) measured; normal-band tier update -> see S4/netcg",
+  "anchor": "S4"
+ },
+ "H5": {
+  "status": "YELLOW",
+  "summary": "amplitude-inclusive selection vs held-out ranking -> see S5",
+  "anchor": "S5"
+ }
+}

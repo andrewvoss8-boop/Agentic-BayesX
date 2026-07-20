@@ -1,0 +1,16 @@
+{
+ "cid": "wa2_brackets_soft",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    301,
+    302
+   ],
+   "t_scale": 0.85,
+   "name": "brackets085"
+  }
+ ],
+ "rationale": "Top_Brackets|Y resid 0.74 (corr 0.43): soften the angle brackets that tie box to plate."
+}

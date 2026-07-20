@@ -1,0 +1,83 @@
+{
+ "active_runtime_s": 647,
+ "elapsed_wallclock_s": 647,
+ "note": "replay timing (runner authoring time tracked separately in runtime.json history)",
+ "steps": [
+  {
+   "step": "parse",
+   "seconds": 0
+  },
+  {
+   "step": "validate_elems",
+   "seconds": 0
+  },
+  {
+   "step": "assemble",
+   "seconds": 1
+  },
+  {
+   "step": "modal",
+   "seconds": 222
+  },
+  {
+   "step": "drill_arm_asm",
+   "seconds": 1
+  },
+  {
+   "step": "drill_arm_modal",
+   "seconds": 21
+  },
+  {
+   "step": "refine_arm_asm",
+   "seconds": 1
+  },
+  {
+   "step": "refine_arm_modal",
+   "seconds": 36
+  },
+  {
+   "step": "discretization",
+   "seconds": 0
+  },
+  {
+   "step": "interface",
+   "seconds": 0
+  },
+  {
+   "step": "priors",
+   "seconds": 0
+  },
+  {
+   "step": "prior_predictive",
+   "seconds": 209
+  },
+  {
+   "step": "ledger",
+   "seconds": 1
+  },
+  {
+   "step": "figures",
+   "seconds": 6
+  },
+  {
+   "step": "pseudo_frf",
+   "seconds": 3
+  },
+  {
+   "step": "pseudo_frf_fig",
+   "seconds": 8
+  },
+  {
+   "step": "finalize_tuning",
+   "seconds": 103
+  },
+  {
+   "step": "gifs",
+   "seconds": 34
+  },
+  {
+   "step": "image_qa",
+   "seconds": 1
+  }
+ ]
+}

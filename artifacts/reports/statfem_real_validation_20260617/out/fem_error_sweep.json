@@ -1,0 +1,95 @@
+{
+  "simulation": "A_controlled_FEM_error_sweep",
+  "synthetic": true,
+  "perturbation": "per-mode lambda_k*(1+delta*xi_k)^2, xi=+-1 fixed; same mode shapes (peak misalignment)",
+  "n_obs_channels": 8,
+  "n_band_freqs": 173,
+  "free_groups": [
+    "bottom_box",
+    "cross_beam",
+    "plates",
+    "top_box"
+  ],
+  "tmcmc": {
+    "n": 2000,
+    "n_runs": 4
+  },
+  "deltas_pct": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "sweep": [
+    {
+      "delta": 0.0,
+      "max_rhat": 1.0000260208487293,
+      "min_ess": 3802.1282191580476,
+      "converged": true,
+      "sigma_w_med": 0.03179053387410535,
+      "sigma_w_lo": 0.021556619068416397,
+      "sigma_w_hi": 0.04332814385038348,
+      "log_evidence_mean": 597.7423359590296,
+      "log_evidence_std": 0.5018962869576162
+    },
+    {
+      "delta": 0.01,
+      "max_rhat": 1.0000614618154966,
+      "min_ess": 3562.118058168164,
+      "converged": true,
+      "sigma_w_med": 0.4414748876291801,
+      "sigma_w_lo": 0.38974224056153783,
+      "sigma_w_hi": 0.503077319105998,
+      "log_evidence_mean": -645.7777848052359,
+      "log_evidence_std": 0.8237372472386144
+    },
+    {
+      "delta": 0.02,
+      "max_rhat": 1.0567168223642167,
+      "min_ess": 33.99902209721159,
+      "converged": false,
+      "sigma_w_med": 3.7550085256221237,
+      "sigma_w_lo": 3.4591259362415783,
+      "sigma_w_hi": 4.040367357213405,
+      "log_evidence_mean": -1223.686194156882,
+      "log_evidence_std": 3.233762476496031
+    },
+    {
+      "delta": 0.05,
+      "max_rhat": 2.042833549526425,
+      "min_ess": 1.2601723827767854,
+      "converged": false,
+      "sigma_w_med": 3.185507321159231,
+      "sigma_w_lo": 2.901905797502284,
+      "sigma_w_hi": 3.6532502241635707,
+      "log_evidence_mean": -1225.4478531591772,
+      "log_evidence_std": 6.950160750287323
+    },
+    {
+      "delta": 0.1,
+      "max_rhat": 4.31192122265281,
+      "min_ess": 0.22735456677380747,
+      "converged": false,
+      "sigma_w_med": 3.25560256938679,
+      "sigma_w_lo": 2.8464705400961288,
+      "sigma_w_hi": 3.6576692677340255,
+      "log_evidence_mean": -1193.5070747842515,
+      "log_evidence_std": 4.684322105485255
+    },
+    {
+      "delta": 0.2,
+      "max_rhat": 1.142842248477173,
+      "min_ess": 13.0255650689441,
+      "converged": false,
+      "sigma_w_med": 4.3875196319613945,
+      "sigma_w_lo": 4.031990697840689,
+      "sigma_w_hi": 4.680383119050798,
+      "log_evidence_mean": -1416.236699802132,
+      "log_evidence_std": 1.193564766418788
+    }
+  ],
+  "delta_star_converged_pct": 1.0,
+  "runtime_s": 3469.7039959430695
+}

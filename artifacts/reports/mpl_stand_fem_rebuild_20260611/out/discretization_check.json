@@ -1,0 +1,82 @@
+{
+ "note": "Discretization Resolution Gate artifact. Coarse shield mesh (10x6 upper / 10x3 lower, ~4.6 in elements) vs 2x h-refined; sorted-frequency pairing valid only while lists track (first ~30 modes). Above that, compare cumulative mode COUNTS N(f) only.",
+ "first30_shift_pct": [
+  2.07,
+  0.76,
+  1.24,
+  3.18,
+  2.73,
+  4.86,
+  1.54,
+  -0.08,
+  3.05,
+  7.04,
+  3.1,
+  3.43,
+  -2.17,
+  -1.85,
+  5.96,
+  -1.68,
+  -1.85,
+  -3.91,
+  -4.31,
+  -0.42,
+  -0.97,
+  -2.17,
+  -0.04,
+  0.14,
+  -2.0,
+  -3.28,
+  -3.25,
+  -6.48,
+  -6.33,
+  -3.36
+ ],
+ "max_abs_shift_first30_pct": 7.04,
+ "median_abs_shift_first30_pct": 2.45,
+ "f1": {
+  "coarse": 13.511,
+  "refined": 13.237
+ },
+ "cumulative_mode_counts": {
+  "50": {
+   "coarse": 22,
+   "refined_x2": 21
+  },
+  "100": {
+   "coarse": 48,
+   "refined_x2": 42
+  },
+  "150": {
+   "coarse": 78,
+   "refined_x2": 67
+  },
+  "200": {
+   "coarse": 119,
+   "refined_x2": 94
+  },
+  "250": {
+   "coarse": 143,
+   "refined_x2": 118
+  },
+  "300": {
+   "coarse": 153,
+   "refined_x2": 143
+  },
+  "400": {
+   "coarse": 167,
+   "refined_x2": 194
+  },
+  "500": {
+   "coarse": 184,
+   "refined_x2": 250
+  }
+ },
+ "drill_arm": {
+  "f1_nominal": 13.511,
+  "f1_drillx100": 13.517,
+  "first20_max_abs_shift_pct": 0.654,
+  "verdict": "drilling-stiffness choice does not drive in-band modes"
+ },
+ "verdict": "Mode-by-mode trustworthy to ~mode 30 (~150 Hz): median |shift| 2.45%, max 7.04%. Above ~250 Hz the coarse mesh distorts panel modal density (184 vs 250 modes <=500 Hz): treat upper band as modal-density-only, not mode-matched. Acceptable for the coarse-prior purpose; calibration features should weight the lower band."
+}

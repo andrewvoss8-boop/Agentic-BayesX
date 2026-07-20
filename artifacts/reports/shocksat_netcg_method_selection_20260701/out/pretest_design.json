@@ -1,0 +1,154 @@
+{
+  "target_drumhead_modes_hz": [
+    246.1,
+    249.4,
+    253.9,
+    258.3
+  ],
+  "n_target_modes": 4,
+  "note_on_targets": "NET-CG normal is driven by the PARTIAL-cancellation drumhead modes (246/249/254/258 Hz with net tray-Z participation), NOT the pure 234/252 Hz modes (net~0 -> cancel). This is why net-normal (45% trust) beats the point mount_response (13%).",
+  "current_plate_Z_sensors": 1,
+  "node_ring_evidence": [
+    {
+      "hz": 246.1,
+      "edge_over_antinode_amp": 0.607,
+      "antinode_radius_in": 5.0
+    },
+    {
+      "hz": 249.4,
+      "edge_over_antinode_amp": 0.319,
+      "antinode_radius_in": 9.0
+    },
+    {
+      "hz": 253.9,
+      "edge_over_antinode_amp": 0.566,
+      "antinode_radius_in": 5.0
+    },
+    {
+      "hz": 258.3,
+      "edge_over_antinode_amp": 0.526,
+      "antinode_radius_in": 5.0
+    }
+  ],
+  "candidate_grid_size": 41,
+  "buy_down_curve": [
+    {
+      "n_sensors": 0,
+      "min_resolved_frac": 0.0,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 5.41
+    },
+    {
+      "n_sensors": 1,
+      "min_resolved_frac": 0.032,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": -0.0,
+      "normal_band_factor": 5.22
+    },
+    {
+      "n_sensors": 2,
+      "min_resolved_frac": 0.064,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": -0.0,
+      "normal_band_factor": 5.03
+    },
+    {
+      "n_sensors": 3,
+      "min_resolved_frac": 0.086,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 4.85
+    },
+    {
+      "n_sensors": 4,
+      "min_resolved_frac": 0.124,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 4.69
+    },
+    {
+      "n_sensors": 5,
+      "min_resolved_frac": 0.161,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 4.52
+    },
+    {
+      "n_sensors": 6,
+      "min_resolved_frac": 0.185,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 4.36
+    },
+    {
+      "n_sensors": 7,
+      "min_resolved_frac": 0.227,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 4.16
+    },
+    {
+      "n_sensors": 8,
+      "min_resolved_frac": 0.253,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 3.99
+    },
+    {
+      "n_sensors": 9,
+      "min_resolved_frac": 0.285,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 3.83
+    },
+    {
+      "n_sensors": 10,
+      "min_resolved_frac": 0.326,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 3.71
+    },
+    {
+      "n_sensors": 11,
+      "min_resolved_frac": 0.365,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 3.59
+    },
+    {
+      "n_sensors": 12,
+      "min_resolved_frac": 0.392,
+      "n_resolved_modes": 0,
+      "subspace_min_eig": 0.0,
+      "normal_band_factor": 3.51
+    }
+  ],
+  "fully_resolved_floor_band_factor": 2.8,
+  "buy_down_pct_of_floor_at_12_sensors": 73.0,
+  "modes_individually_separable": false,
+  "recommended_drive_by_drumhead_coverage": [
+    [
+      "+Y",
+      7
+    ],
+    [
+      "+Z(990)",
+      6
+    ],
+    [
+      "+XY",
+      6
+    ],
+    [
+      "+X",
+      3
+    ],
+    [
+      "+Z(900)",
+      1
+    ]
+  ],
+  "recommendation": "Current plate is essentially UNINSTRUMENTED for Z (1 sensor). Add plate accelerometers on a center+ring grid: 12 well-placed Z accels cut the normal-QOI band factor from 5.41x to 3.51x (~35% reduction, 73% of the way to the fully-resolved floor 2.8x). The 246-258 Hz net-drivers have FINE spatial structure (worst-mode captured only 0.39 at 12 sensors) -> a denser array (or accepting the partial buy-down) is needed for full resolution. They are not individually SEPARABLE by point sensors (measure their net combination = the QOI, which is enough). DRIVE: +Y covers the most drumhead peaks (incl the unique 230.6 Hz); +Z(990)/+XY tie next. THIS is the next test dollar.",
+  "note": "NO NUTS; reduced-model shapes; uniform-mass proxy; captured-energy (EfI-style) placement referenced to a full ~candidate-size plate array; band factor via MC over mode uncertainty."
+}

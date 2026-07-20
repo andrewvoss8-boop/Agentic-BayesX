@@ -1,0 +1,201 @@
+{
+  "deliverable": "DECISIVE DIAGNOSTIC: is the per-mode FEM mode-shape error spatially borrowable to a held-out sensor?",
+  "data": "clean .ash modal survey (33 modes x 76 nodes x 3 axes) + reduced FEM basis; NO NUTS",
+  "n_matched_modes": 20,
+  "mac_min": 0.3,
+  "matched_pairs_freq_mac": [
+    {
+      "meas_mode": 0,
+      "fem_mode": 0,
+      "mac": 0.97,
+      "freq_hz": 54.2
+    },
+    {
+      "meas_mode": 1,
+      "fem_mode": 2,
+      "mac": 0.497,
+      "freq_hz": 70.0
+    },
+    {
+      "meas_mode": 2,
+      "fem_mode": 1,
+      "mac": 0.512,
+      "freq_hz": 75.0
+    },
+    {
+      "meas_mode": 3,
+      "fem_mode": 3,
+      "mac": 0.883,
+      "freq_hz": 85.8
+    },
+    {
+      "meas_mode": 4,
+      "fem_mode": 4,
+      "mac": 0.975,
+      "freq_hz": 107.0
+    },
+    {
+      "meas_mode": 5,
+      "fem_mode": 7,
+      "mac": 0.899,
+      "freq_hz": 117.6
+    },
+    {
+      "meas_mode": 6,
+      "fem_mode": 5,
+      "mac": 0.958,
+      "freq_hz": 118.5
+    },
+    {
+      "meas_mode": 7,
+      "fem_mode": 6,
+      "mac": 0.704,
+      "freq_hz": 125.0
+    },
+    {
+      "meas_mode": 8,
+      "fem_mode": 13,
+      "mac": 0.692,
+      "freq_hz": 137.2
+    },
+    {
+      "meas_mode": 10,
+      "fem_mode": 14,
+      "mac": 0.61,
+      "freq_hz": 151.2
+    },
+    {
+      "meas_mode": 11,
+      "fem_mode": 12,
+      "mac": 0.581,
+      "freq_hz": 158.2
+    },
+    {
+      "meas_mode": 12,
+      "fem_mode": 15,
+      "mac": 0.755,
+      "freq_hz": 165.9
+    },
+    {
+      "meas_mode": 13,
+      "fem_mode": 19,
+      "mac": 0.703,
+      "freq_hz": 168.0
+    },
+    {
+      "meas_mode": 14,
+      "fem_mode": 20,
+      "mac": 0.737,
+      "freq_hz": 172.3
+    },
+    {
+      "meas_mode": 15,
+      "fem_mode": 17,
+      "mac": 0.639,
+      "freq_hz": 174.8
+    },
+    {
+      "meas_mode": 16,
+      "fem_mode": 18,
+      "mac": 0.889,
+      "freq_hz": 184.4
+    },
+    {
+      "meas_mode": 17,
+      "fem_mode": 21,
+      "mac": 0.69,
+      "freq_hz": 188.6
+    },
+    {
+      "meas_mode": 18,
+      "fem_mode": 25,
+      "mac": 0.34,
+      "freq_hz": 190.2
+    },
+    {
+      "meas_mode": 19,
+      "fem_mode": 23,
+      "mac": 0.391,
+      "freq_hz": 195.7
+    },
+    {
+      "meas_mode": 20,
+      "fem_mode": 26,
+      "mac": 0.661,
+      "freq_hz": 197.8
+    }
+  ],
+  "n_instrumented_dof": 132,
+  "nn_median_in": 4.81,
+  "by_length": {
+    "0.5x_nn": {
+      "borrow_R2": -0.18936652260048414,
+      "borrow_R2_per_axis": {
+        "X": -0.2241859920950835,
+        "Y": -0.17776970670293735,
+        "Z": -0.1649686248441169
+      },
+      "sigma_log_fem_only": 1.6316883051157542,
+      "sigma_log_fem_interp": 0.9599697231771517,
+      "n_heldout_dof": 2640,
+      "n_logamp_dof": 460
+    },
+    "1x_nn": {
+      "borrow_R2": -0.010773259032584637,
+      "borrow_R2_per_axis": {
+        "X": -0.031772382975932434,
+        "Y": -0.03795119207726816,
+        "Z": 0.05425960937301344
+      },
+      "sigma_log_fem_only": 1.6316883051157542,
+      "sigma_log_fem_interp": 0.9850127084291271,
+      "n_heldout_dof": 2640,
+      "n_logamp_dof": 460
+    },
+    "2x_nn": {
+      "borrow_R2": -0.0014346351687031245,
+      "borrow_R2_per_axis": {
+        "X": 0.012988600841169706,
+        "Y": -0.036830501864085985,
+        "Z": 0.021798350572914793
+      },
+      "sigma_log_fem_only": 1.6316883051157542,
+      "sigma_log_fem_interp": 1.0262965245291582,
+      "n_heldout_dof": 2640,
+      "n_logamp_dof": 460
+    },
+    "4x_nn": {
+      "borrow_R2": -0.005548361085489839,
+      "borrow_R2_per_axis": {
+        "X": 0.011715626438678295,
+        "Y": -0.026675243843721885,
+        "Z": -0.0095824117581087
+      },
+      "sigma_log_fem_only": 1.6316883051157542,
+      "sigma_log_fem_interp": 1.0508904511057495,
+      "n_heldout_dof": 2640,
+      "n_logamp_dof": 460
+    }
+  },
+  "best_length": "2x_nn",
+  "coord_shuffle_null_at_best": {
+    "borrow_R2": -0.06606644230873071,
+    "borrow_R2_per_axis": {
+      "X": -0.05779377421966303,
+      "Y": -0.10261475375967621,
+      "Z": -0.032283197779825246
+    },
+    "sigma_log_fem_only": 1.6316883051157542,
+    "sigma_log_fem_interp": 1.0863519117534435,
+    "n_heldout_dof": 2640,
+    "n_logamp_dof": 460
+  },
+  "reference_marks": {
+    "old_spatial_reanalysis_R2_aggregate_noisy": 0.04,
+    "D9_oracle_sigma_log_measured_shapes": 0.7,
+    "current_broadband_sigma_log": 0.97,
+    "FEM_shape_sigma_log_D9": 1.26
+  },
+  "interpretation_rule": "borrow_R2 high (>~0.4) AND sigma_log_fem_interp << fem_only => shape-field transfer works => run multi-ref Beck. borrow_R2 ~ null => capped => pivot to regional/pooled QOI.",
+  "note": "EXPLORATORY validity gate; YELLOW by default; no success claim."
+}

@@ -1,0 +1,53 @@
+{
+ "cid": "ma2_prop_tboxxbeam2",
+ "track": "agent",
+ "round": 2,
+ "cls": "property_control",
+ "ops": [
+  "thickness",
+  "scale"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.10798218929253356,
+ "exact_b200_500": 0.1559628396564729,
+ "exact_folds": {
+  "m_xpos_990x": 0.2653697492909904,
+  "m_zpos_990z": 0.4890065312405276,
+  "m_ypos_990y": 0.04976246823727634,
+  "m_zpos_900z": -0.3722099915986601
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.15830735046986366,
+  "m_zpos_990z": 0.07195271052717014,
+  "m_ypos_990y": 0.16042531556317935,
+  "m_zpos_900z": 0.23316598206567843
+ },
+ "theta_map": [
+  1.1420635729900568,
+  1.2963301004404444,
+  0.9767158201218956,
+  1.2300739601165458,
+  0.539511351220497,
+  0.8572839178311367,
+  1.4814876648829098,
+  1.1596224221875562,
+  0.8947362337124851,
+  1.0022214338374864
+ ],
+ "enriched_pkg": "ma2_prop_tboxxbeam2__xenr",
+ "spot_max_pct": 7.779503707894264e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": -3.5408,
+  "max_mode_shift_pct": 12.384,
+  "pass": true
+ },
+ "solve_s_theta1": 402.1,
+ "solve_s_enrich": 405.9,
+ "wall_s": 868.9,
+ "ts": "2026-07-17T03:16:11",
+ "diagnosis_link": "CONTROL: perturb the r1 winner (0.9/1.4 -> 0.85/1.5) - give the control class its best shot at improving on +0.1765"
+}

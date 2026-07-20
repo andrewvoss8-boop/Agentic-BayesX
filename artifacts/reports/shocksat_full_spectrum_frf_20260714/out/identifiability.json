@@ -1,0 +1,489 @@
+{
+ "realized_discrepancy_floor_dex": 0.73,
+ "prior_precision_logtheta": 16.0,
+ "n_identified_combinations": 9,
+ "n_params": 9,
+ "fim_eigenvalues": [
+  3579278.91,
+  2472387.77,
+  310682.14,
+  190933.2,
+  56536.66,
+  12052.42,
+  6332.17,
+  3215.9,
+  1641.17
+ ],
+ "fim_note": "FIM local curvature is inflated by resonance-crossing (2% theta moves peaks across 2 Hz bins); this large local curvature IS the multimodality source.",
+ "fim_combinations": [
+  {
+   "eigval": 3579278.91,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "bottom_box",
+     0.71
+    ],
+    [
+     "top_box",
+     0.69
+    ],
+    [
+     "plates",
+     0.08
+    ]
+   ]
+  },
+  {
+   "eigval": 2472387.77,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "top_box",
+     -0.71
+    ],
+    [
+     "bottom_box",
+     0.7
+    ],
+    [
+     "plates",
+     -0.07
+    ]
+   ]
+  },
+  {
+   "eigval": 310682.14,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "cross_beam",
+     -0.92
+    ],
+    [
+     "plates",
+     -0.28
+    ],
+    [
+     "angle_brackets",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "eigval": 190933.2,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "plates",
+     -0.91
+    ],
+    [
+     "cross_beam",
+     0.32
+    ],
+    [
+     "joints",
+     -0.23
+    ]
+   ]
+  },
+  {
+   "eigval": 56536.66,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "joints",
+     -0.96
+    ],
+    [
+     "plates",
+     0.27
+    ],
+    [
+     "cross_beam",
+     0.07
+    ]
+   ]
+  },
+  {
+   "eigval": 12052.42,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "angle_brackets",
+     -0.97
+    ],
+    [
+     "cross_beam",
+     0.22
+    ],
+    [
+     "contact",
+     -0.11
+    ]
+   ]
+  },
+  {
+   "eigval": 6332.17,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "contact",
+     -0.99
+    ],
+    [
+     "angle_brackets",
+     0.11
+    ],
+    [
+     "al_welds",
+     -0.08
+    ]
+   ]
+  },
+  {
+   "eigval": 3215.9,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "al_welds",
+     0.98
+    ],
+    [
+     "steel_welds",
+     0.14
+    ],
+    [
+     "contact",
+     -0.09
+    ]
+   ]
+  },
+  {
+   "eigval": 1641.17,
+   "clears_prior": true,
+   "mixes": [
+    [
+     "steel_welds",
+     0.99
+    ],
+    [
+     "al_welds",
+     -0.14
+    ],
+    [
+     "angle_brackets",
+     0.03
+    ]
+   ]
+  }
+ ],
+ "strain_energy_group_peak": {
+  "al_welds": {
+   "peak_frac_over_modes": 0.044
+  },
+  "angle_brackets": {
+   "peak_frac_over_modes": 0.096
+  },
+  "bottom_box": {
+   "peak_frac_over_modes": 0.992
+  },
+  "contact": {
+   "peak_frac_over_modes": 0.028
+  },
+  "cross_beam": {
+   "peak_frac_over_modes": 0.298
+  },
+  "joints": {
+   "peak_frac_over_modes": 0.121
+  },
+  "plates": {
+   "peak_frac_over_modes": 0.981
+  },
+  "steel_welds": {
+   "peak_frac_over_modes": 0.023
+  },
+  "top_box": {
+   "peak_frac_over_modes": 0.892
+  }
+ },
+ "strain_energy_per_mode": {
+  "54.2Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.988,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.0,
+   "plates": 0.0,
+   "steel_welds": 0.011,
+   "top_box": 0.001
+  },
+  "70.0Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.962,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.009,
+   "plates": 0.007,
+   "steel_welds": 0.008,
+   "top_box": 0.013
+  },
+  "75.0Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.964,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.007,
+   "plates": 0.008,
+   "steel_welds": 0.007,
+   "top_box": 0.013
+  },
+  "85.8Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.988,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.0,
+   "plates": 0.0,
+   "steel_welds": 0.01,
+   "top_box": 0.001
+  },
+  "107.0Hz": {
+   "al_welds": 0.044,
+   "angle_brackets": 0.012,
+   "bottom_box": 0.006,
+   "contact": 0.003,
+   "cross_beam": 0.037,
+   "joints": 0.003,
+   "plates": 0.003,
+   "steel_welds": 0.0,
+   "top_box": 0.892
+  },
+  "117.6Hz": {
+   "al_welds": 0.002,
+   "angle_brackets": 0.005,
+   "bottom_box": 0.098,
+   "contact": 0.0,
+   "cross_beam": 0.019,
+   "joints": 0.103,
+   "plates": 0.44,
+   "steel_welds": 0.001,
+   "top_box": 0.332
+  },
+  "118.5Hz": {
+   "al_welds": 0.001,
+   "angle_brackets": 0.065,
+   "bottom_box": 0.584,
+   "contact": 0.001,
+   "cross_beam": 0.185,
+   "joints": 0.02,
+   "plates": 0.004,
+   "steel_welds": 0.018,
+   "top_box": 0.122
+  },
+  "125.0Hz": {
+   "al_welds": 0.003,
+   "angle_brackets": 0.096,
+   "bottom_box": 0.358,
+   "contact": 0.001,
+   "cross_beam": 0.298,
+   "joints": 0.018,
+   "plates": 0.009,
+   "steel_welds": 0.011,
+   "top_box": 0.206
+  },
+  "137.2Hz": {
+   "al_welds": 0.015,
+   "angle_brackets": 0.002,
+   "bottom_box": 0.022,
+   "contact": 0.0,
+   "cross_beam": 0.043,
+   "joints": 0.011,
+   "plates": 0.477,
+   "steel_welds": 0.0,
+   "top_box": 0.428
+  },
+  "151.2Hz": {
+   "al_welds": 0.024,
+   "angle_brackets": 0.011,
+   "bottom_box": 0.111,
+   "contact": 0.006,
+   "cross_beam": 0.028,
+   "joints": 0.004,
+   "plates": 0.004,
+   "steel_welds": 0.001,
+   "top_box": 0.812
+  },
+  "158.2Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.002,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.002,
+   "plates": 0.981,
+   "steel_welds": 0.0,
+   "top_box": 0.014
+  },
+  "165.9Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.954,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.002,
+   "plates": 0.031,
+   "steel_welds": 0.004,
+   "top_box": 0.008
+  },
+  "168.0Hz": {
+   "al_welds": 0.006,
+   "angle_brackets": 0.019,
+   "bottom_box": 0.038,
+   "contact": 0.007,
+   "cross_beam": 0.062,
+   "joints": 0.03,
+   "plates": 0.433,
+   "steel_welds": 0.0,
+   "top_box": 0.404
+  },
+  "172.3Hz": {
+   "al_welds": 0.002,
+   "angle_brackets": 0.002,
+   "bottom_box": 0.402,
+   "contact": 0.001,
+   "cross_beam": 0.092,
+   "joints": 0.121,
+   "plates": 0.129,
+   "steel_welds": 0.004,
+   "top_box": 0.248
+  },
+  "174.8Hz": {
+   "al_welds": 0.014,
+   "angle_brackets": 0.005,
+   "bottom_box": 0.068,
+   "contact": 0.0,
+   "cross_beam": 0.019,
+   "joints": 0.036,
+   "plates": 0.001,
+   "steel_welds": 0.0,
+   "top_box": 0.856
+  },
+  "184.4Hz": {
+   "al_welds": 0.006,
+   "angle_brackets": 0.02,
+   "bottom_box": 0.068,
+   "contact": 0.008,
+   "cross_beam": 0.072,
+   "joints": 0.04,
+   "plates": 0.362,
+   "steel_welds": 0.0,
+   "top_box": 0.424
+  },
+  "188.6Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.992,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.0,
+   "plates": 0.0,
+   "steel_welds": 0.005,
+   "top_box": 0.002
+  },
+  "190.2Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.935,
+   "contact": 0.0,
+   "cross_beam": 0.005,
+   "joints": 0.001,
+   "plates": 0.007,
+   "steel_welds": 0.022,
+   "top_box": 0.03
+  },
+  "195.7Hz": {
+   "al_welds": 0.007,
+   "angle_brackets": 0.004,
+   "bottom_box": 0.087,
+   "contact": 0.001,
+   "cross_beam": 0.115,
+   "joints": 0.016,
+   "plates": 0.098,
+   "steel_welds": 0.001,
+   "top_box": 0.671
+  },
+  "197.8Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.955,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.001,
+   "plates": 0.003,
+   "steel_welds": 0.023,
+   "top_box": 0.016
+  },
+  "198.9Hz": {
+   "al_welds": 0.0,
+   "angle_brackets": 0.0,
+   "bottom_box": 0.977,
+   "contact": 0.0,
+   "cross_beam": 0.0,
+   "joints": 0.0,
+   "plates": 0.0,
+   "steel_welds": 0.018,
+   "top_box": 0.005
+  },
+  "222.2Hz": {
+   "al_welds": 0.011,
+   "angle_brackets": 0.002,
+   "bottom_box": 0.528,
+   "contact": 0.001,
+   "cross_beam": 0.009,
+   "joints": 0.047,
+   "plates": 0.043,
+   "steel_welds": 0.006,
+   "top_box": 0.353
+  },
+  "230.7Hz": {
+   "al_welds": 0.003,
+   "angle_brackets": 0.003,
+   "bottom_box": 0.543,
+   "contact": 0.005,
+   "cross_beam": 0.039,
+   "joints": 0.055,
+   "plates": 0.032,
+   "steel_welds": 0.003,
+   "top_box": 0.316
+  },
+  "232.7Hz": {
+   "al_welds": 0.013,
+   "angle_brackets": 0.038,
+   "bottom_box": 0.01,
+   "contact": 0.023,
+   "cross_beam": 0.012,
+   "joints": 0.004,
+   "plates": 0.017,
+   "steel_welds": 0.0,
+   "top_box": 0.884
+  },
+  "235.3Hz": {
+   "al_welds": 0.003,
+   "angle_brackets": 0.016,
+   "bottom_box": 0.016,
+   "contact": 0.028,
+   "cross_beam": 0.008,
+   "joints": 0.007,
+   "plates": 0.065,
+   "steel_welds": 0.0,
+   "top_box": 0.857
+  }
+ },
+ "mechanism": "MULTIMODAL, not flat: every theta combination is LOCALLY informative (FIM eigenvalues 1641-3579279 >> prior precision 16) because log|H| has huge gradients near resonances; but many distinct theta align different subsets of the dense resonances comparably well, so the GLOBAL posterior has many sharp modes separated by high barriers. Single-chain NUTS gets trapped one mode per chain (R-hat 29-360, ESS~2 across arm-B folds). This is the ridged/multimodal regime the compute protocol names for TMCMC; per AGENTS it is reported as a non-converged, multimodal posterior (many theta fit comparably in data space), NOT a sampler bug and NOT under-identification-by-insensitivity."
+}

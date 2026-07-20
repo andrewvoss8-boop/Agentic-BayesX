@@ -1,0 +1,38 @@
+{
+ "cid": "ma2_conn_rotfree_bbox",
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    1024295,
+    1024296,
+    1024297,
+    1024298,
+    1024299,
+    1024300,
+    1024301,
+    1024302,
+    1024303,
+    1024304,
+    1024305,
+    1024306,
+    1024307,
+    1024308,
+    1024309,
+    1024310,
+    1024311,
+    1024312,
+    1024313,
+    1024314
+   ],
+   "k_trans": 1000000.0,
+   "k_rot": 3000.0,
+   "name": "rotfree"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r2.json: Bottom_Box shape defect persists (0.487) after r1; r1's k_t=1e5 soften scored +0.1418 - keep the shear path stiff (k_t=1e6) but release joint ROTATIONS (k_r=3e3): wall-bending clamp is the hypothesized defect, not the shear tie",
+ "track": "agent",
+ "round": 2,
+ "rationale": "diagnosis_mf_r2.json: Bottom_Box shape defect persists (0.487) after r1; r1's k_t=1e5 soften scored +0.1418 - keep the s"
+}

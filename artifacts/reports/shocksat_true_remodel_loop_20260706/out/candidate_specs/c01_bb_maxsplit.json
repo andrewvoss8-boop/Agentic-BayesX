@@ -1,0 +1,66 @@
+{
+ "cid": "c01_bb_maxsplit",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "halfspace",
+    "axis": 0,
+    "cut": 8.0,
+    "side": "hi"
+   },
+   "name": "bb_xface"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 0.0,
+    "zhi": 4.0
+   },
+   "name": "bb_base"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 9.5,
+    "zhi": 13.5
+   },
+   "name": "bb_bulkband"
+  },
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "near_points",
+    "points": [
+     [
+      9.0,
+      7.6,
+      0.6
+     ],
+     [
+      9.0,
+      -7.6,
+      0.6
+     ]
+    ],
+    "radius": 6.0
+   },
+   "name": "bb_drive"
+  }
+ ],
+ "rationale": "CEILING PROBE (bottom box): 5 independent stiffness sub-regions of the wall (face/base/bulkband/drive-corner/field) = the maximal distribution freedom any split family offers where all evidence concentrated. If this \u2248 parametric control, the split-family ceiling is established.",
+ "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe",
+ "split_info": {
+  "bb_xface": 4671,
+  "bb_base": 3588,
+  "bb_bulkband": 3864,
+  "bb_drive": 1754
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "edit_id": "plates_E_hi",
+ "n_matched": 30,
+ "global_MAC": 0.609,
+ "mac_shear_band": 0.662,
+ "freq_rms_shear_pct": 8.67,
+ "freq_rms_all_pct": 10.59,
+ "screen_score": 0.4015,
+ "drum_freqs_hz": [
+  232.4,
+  235.2,
+  235.6,
+  239.1,
+  246.3,
+  248.2,
+  249.7,
+  255.3,
+  256.3,
+  259.5
+ ],
+ "runtime_s": 341.1
+}

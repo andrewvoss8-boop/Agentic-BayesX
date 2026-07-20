@@ -1,0 +1,117 @@
+{
+  "overall": "YELLOW",
+  "green": 26,
+  "yellow": 1,
+  "red": 0,
+  "checks": [
+    {
+      "gate": "required_file:lit_review.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:bibliography.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:novelty_and_fto_notes.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:gaps_and_next_experiments.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:decisions_log.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "required_file:priority_deliverables.md",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:A",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:B",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:C",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:D",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:E",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:F",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:G",
+      "status": "GREEN"
+    },
+    {
+      "gate": "lit_section:H",
+      "status": "GREEN"
+    },
+    {
+      "gate": "in_house_status_label_seen:CONFIRMED",
+      "status": "GREEN"
+    },
+    {
+      "gate": "in_house_status_label_seen:PARTIALLY-KNOWN",
+      "status": "GREEN"
+    },
+    {
+      "gate": "in_house_status_label_seen:NOVEL-AS-FAR-AS-FOUND",
+      "status": "GREEN"
+    },
+    {
+      "gate": "in_house_status_label_seen:CONTRADICTED",
+      "status": "GREEN"
+    },
+    {
+      "gate": "source_tier_seen:Tier: standard",
+      "status": "GREEN"
+    },
+    {
+      "gate": "source_tier_seen:Tier: peer-reviewed",
+      "status": "GREEN"
+    },
+    {
+      "gate": "source_tier_seen:Tier: conference",
+      "status": "GREEN"
+    },
+    {
+      "gate": "source_tier_seen:Tier: patent",
+      "status": "GREEN"
+    },
+    {
+      "gate": "fto_phrase:US8731868B2",
+      "status": "GREEN"
+    },
+    {
+      "gate": "fto_phrase:not a legal opinion",
+      "status": "GREEN"
+    },
+    {
+      "gate": "fto_phrase:before public sharing",
+      "status": "GREEN"
+    },
+    {
+      "gate": "no_unverified_fact_marker",
+      "status": "GREEN"
+    },
+    {
+      "gate": "coverage_limits_documented",
+      "status": "YELLOW",
+      "note": "Limited-access sources are documented; review is usable with this caveat."
+    }
+  ]
+}

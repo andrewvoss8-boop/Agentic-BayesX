@@ -1,0 +1,27 @@
+{
+ "active_runtime_s": 26941.7,
+ "elapsed_wallclock_s": 27784.8,
+ "machine": "CPU (Mac, 16 GB, float64); no GPU \u2014 the eigensolves are sequential sparse shift-invert solves, not parallel-shaped, so the compute protocol's CPU default applies (no A100 case)",
+ "active_breakdown_s": {
+  "T2_candidates_wall": 26926.6,
+  "other_steps": 15.1,
+  "n_candidates_timed": 28
+ },
+ "n_steps": 3,
+ "n_eigensolves": 28,
+ "eigensolve_s_total": 26602.0,
+ "eigensolve_s_mean": 950.1,
+ "eigensolve_s_median": 505.7,
+ "eigensolve_s_max": 11187.3,
+ "blas_threads": "OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 (pinned per compute protocol)",
+ "note": "active = sum of per-candidate wall time (T2) + other step timers. It is NOT the step log alone: after the D4 restart each candidate ran in its own `--one` process that exits before main()'s timer fires, so the step log alone would report ~15 s for a ~7.7 h compute. Eigensolve time is measured inside enrich() and is a SUBSET of the candidate wall time (itemised here, not added twice).",
+ "thrash_incident": {
+  "what": "the single long-lived T2 process drove the 16 GB box to 10.8/12.3 GB swap by candidate ~18; one eigensolve took 11187 s vs a 506 s median (22x)",
+  "fix": "killed and restarted with ONE candidate per process (decisions_log D4)",
+  "science_impact": "none \u2014 a slow ARPACK solve is still an exact solve; the affected candidate (wr2_rnd001) reproduces the study's independently-computed exact score to 1e-5 and its self-consistency is 8.5e-8 %",
+  "cost": "wall-clock only; elapsed_wallclock_s is inflated by roughly 3 h of thrash"
+ },
+ "sampler_runtime_s": 0.0,
+ "sampler_note": "no sampler was run in this card (decisions_log D0)",
+ "generated": "2026-07-16T18:21:03"
+}

@@ -1,0 +1,356 @@
+{
+  "proxy": "BLIND shear-band-weighted matched-mode freq RMS error + MAC; NO amplitude fit; IMPERFECT PROXY (does NOT select the twin \u2014 the post-update held-out-QOI bake-off does)",
+  "shear_band_hz": [
+    114.0,
+    197.0
+  ],
+  "drum_band_hz": [
+    228.0,
+    260.0
+  ],
+  "n_screened": 12,
+  "ranking": [
+    [
+      "baseline",
+      0.4401
+    ],
+    [
+      "dish_mass_lo",
+      0.4401
+    ],
+    [
+      "dish_mass_hi",
+      0.4401
+    ],
+    [
+      "al_rho_lo",
+      0.4401
+    ],
+    [
+      "steelLight_alHeavy",
+      0.4401
+    ],
+    [
+      "plates_E_lo",
+      0.4327
+    ],
+    [
+      "bottombox_E_lo",
+      0.4018
+    ],
+    [
+      "plates_E_hi",
+      0.4015
+    ],
+    [
+      "cross_bolt",
+      0.3649
+    ],
+    [
+      "cross_bolt_trans",
+      0.3602
+    ],
+    [
+      "bottombox_E_hi",
+      0.3428
+    ],
+    [
+      "joints_all_soft",
+      0.3379
+    ]
+  ],
+  "kept_meshes_for_bakeoff": [
+    "baseline",
+    "dish_mass_lo",
+    "dish_mass_hi",
+    "al_rho_lo"
+  ],
+  "baseline_screen": 0.4401,
+  "rows": [
+    {
+      "edit_id": "baseline",
+      "n_matched": 29,
+      "global_MAC": 0.631,
+      "mac_shear_band": 0.677,
+      "freq_rms_shear_pct": 7.88,
+      "freq_rms_all_pct": 10.56,
+      "screen_score": 0.4401,
+      "drum_freqs_hz": [
+        230.6,
+        233.7,
+        233.7,
+        234.4,
+        246.1,
+        247.5,
+        249.4,
+        251.6,
+        253.9,
+        254.7,
+        258.3,
+        258.9
+      ],
+      "runtime_s": 329.5,
+      "drum_shift_vs_inherited_pct": 0.0
+    },
+    {
+      "edit_id": "bottombox_E_lo",
+      "n_matched": 30,
+      "global_MAC": 0.609,
+      "mac_shear_band": 0.643,
+      "freq_rms_shear_pct": 8.03,
+      "freq_rms_all_pct": 10.94,
+      "screen_score": 0.4018,
+      "drum_freqs_hz": [
+        233.3,
+        233.5,
+        235.1,
+        237.5,
+        240.8,
+        247.8,
+        252.0,
+        254.1,
+        257.7,
+        258.8
+      ],
+      "runtime_s": 382.9,
+      "drum_shift_vs_inherited_pct": 1.23
+    },
+    {
+      "edit_id": "plates_E_hi",
+      "n_matched": 30,
+      "global_MAC": 0.609,
+      "mac_shear_band": 0.662,
+      "freq_rms_shear_pct": 8.67,
+      "freq_rms_all_pct": 10.59,
+      "screen_score": 0.4015,
+      "drum_freqs_hz": [
+        232.4,
+        235.2,
+        235.6,
+        239.1,
+        246.3,
+        248.2,
+        249.7,
+        255.3,
+        256.3,
+        259.5
+      ],
+      "runtime_s": 341.1,
+      "drum_shift_vs_inherited_pct": 1.11
+    },
+    {
+      "edit_id": "cross_bolt_trans",
+      "n_matched": 28,
+      "global_MAC": 0.585,
+      "mac_shear_band": 0.598,
+      "freq_rms_shear_pct": 7.91,
+      "freq_rms_all_pct": 10.76,
+      "screen_score": 0.3602,
+      "drum_freqs_hz": [
+        232.4,
+        234.6,
+        235.4,
+        239.3,
+        247.6,
+        252.0,
+        254.0,
+        255.7
+      ],
+      "runtime_s": 394.2,
+      "drum_shift_vs_inherited_pct": 1.39
+    },
+    {
+      "edit_id": "plates_E_lo",
+      "n_matched": 29,
+      "global_MAC": 0.639,
+      "mac_shear_band": 0.681,
+      "freq_rms_shear_pct": 8.29,
+      "freq_rms_all_pct": 10.82,
+      "screen_score": 0.4327,
+      "drum_freqs_hz": [
+        228.9,
+        229.0,
+        230.5,
+        232.7,
+        242.4,
+        246.0,
+        246.8,
+        247.9,
+        249.1,
+        251.8,
+        257.1,
+        257.7
+      ],
+      "runtime_s": 378.3,
+      "drum_shift_vs_inherited_pct": 1.23
+    },
+    {
+      "edit_id": "bottombox_E_hi",
+      "n_matched": 31,
+      "global_MAC": 0.616,
+      "mac_shear_band": 0.683,
+      "freq_rms_shear_pct": 11.34,
+      "freq_rms_all_pct": 13.32,
+      "screen_score": 0.3428,
+      "drum_freqs_hz": [
+        232.0,
+        233.8,
+        234.8,
+        235.8,
+        247.8,
+        252.5,
+        254.1,
+        257.2,
+        258.8
+      ],
+      "runtime_s": 468.9,
+      "drum_shift_vs_inherited_pct": 1.4
+    },
+    {
+      "edit_id": "dish_mass_lo",
+      "n_matched": 29,
+      "global_MAC": 0.631,
+      "mac_shear_band": 0.677,
+      "freq_rms_shear_pct": 7.88,
+      "freq_rms_all_pct": 10.56,
+      "screen_score": 0.4401,
+      "drum_freqs_hz": [
+        230.6,
+        233.7,
+        233.7,
+        234.4,
+        246.1,
+        247.5,
+        249.4,
+        251.6,
+        253.9,
+        254.7,
+        258.3,
+        258.9
+      ],
+      "runtime_s": 298.1,
+      "drum_shift_vs_inherited_pct": 0.0
+    },
+    {
+      "edit_id": "dish_mass_hi",
+      "n_matched": 29,
+      "global_MAC": 0.631,
+      "mac_shear_band": 0.677,
+      "freq_rms_shear_pct": 7.88,
+      "freq_rms_all_pct": 10.56,
+      "screen_score": 0.4401,
+      "drum_freqs_hz": [
+        230.6,
+        233.7,
+        233.7,
+        234.4,
+        246.1,
+        247.5,
+        249.4,
+        251.6,
+        253.9,
+        254.7,
+        258.3,
+        258.9
+      ],
+      "runtime_s": 259.3,
+      "drum_shift_vs_inherited_pct": 0.0
+    },
+    {
+      "edit_id": "al_rho_lo",
+      "n_matched": 29,
+      "global_MAC": 0.631,
+      "mac_shear_band": 0.677,
+      "freq_rms_shear_pct": 7.88,
+      "freq_rms_all_pct": 10.56,
+      "screen_score": 0.4401,
+      "drum_freqs_hz": [
+        230.6,
+        233.7,
+        233.7,
+        234.4,
+        246.1,
+        247.5,
+        249.4,
+        251.6,
+        253.9,
+        254.7,
+        258.3,
+        258.9
+      ],
+      "runtime_s": 298.7,
+      "drum_shift_vs_inherited_pct": 0.0
+    },
+    {
+      "edit_id": "steelLight_alHeavy",
+      "n_matched": 29,
+      "global_MAC": 0.631,
+      "mac_shear_band": 0.677,
+      "freq_rms_shear_pct": 7.88,
+      "freq_rms_all_pct": 10.56,
+      "screen_score": 0.4401,
+      "drum_freqs_hz": [
+        230.6,
+        233.7,
+        233.7,
+        234.4,
+        246.1,
+        247.5,
+        249.4,
+        251.6,
+        253.9,
+        254.7,
+        258.3,
+        258.9
+      ],
+      "runtime_s": 308.7,
+      "drum_shift_vs_inherited_pct": 0.0
+    },
+    {
+      "edit_id": "joints_all_soft",
+      "n_matched": 30,
+      "global_MAC": 0.596,
+      "mac_shear_band": 0.627,
+      "freq_rms_shear_pct": 9.62,
+      "freq_rms_all_pct": 11.5,
+      "screen_score": 0.3379,
+      "drum_freqs_hz": [
+        228.9,
+        233.0,
+        237.1,
+        240.9,
+        246.7,
+        247.7,
+        248.8,
+        249.7,
+        251.9,
+        254.6,
+        257.1,
+        259.8
+      ],
+      "runtime_s": 302.9,
+      "drum_shift_vs_inherited_pct": 1.0
+    },
+    {
+      "edit_id": "cross_bolt",
+      "n_matched": 30,
+      "global_MAC": 0.574,
+      "mac_shear_band": 0.622,
+      "freq_rms_shear_pct": 8.56,
+      "freq_rms_all_pct": 11.45,
+      "screen_score": 0.3649,
+      "drum_freqs_hz": [
+        232.7,
+        234.6,
+        235.5,
+        239.5,
+        247.9,
+        252.2,
+        254.0,
+        255.6
+      ],
+      "runtime_s": 286.7,
+      "drum_shift_vs_inherited_pct": 1.43
+    }
+  ]
+}

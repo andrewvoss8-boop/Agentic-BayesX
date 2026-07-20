@@ -1,0 +1,238 @@
+{
+  "sampler": "NUTS (L5 modal-frequency, Kiran Eq25)",
+  "convergence": {
+    "max_rhat": 1.0012933731423992,
+    "min_ess": 2646.2731676508342,
+    "divergences": 0,
+    "div_frac": 0.0,
+    "n_chains": 4,
+    "draws": 4000,
+    "converged": true,
+    "runtime_s": 73.4
+  },
+  "n_configs_compared": 18,
+  "qois": {
+    "shear_X": {
+      "L5_theta_only": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.068,
+        "weighted_coverage": 0.984,
+        "peak_coverage": 0.995,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "L5_freq_discrep": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.931,
+        "weighted_coverage": 0.998,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "feature_space": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.735,
+        "weighted_coverage": 0.997,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "statfem_Fk": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.508,
+        "weighted_coverage": 0.995,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "hier_pooled": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.682,
+        "weighted_coverage": 0.998,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "baseline_fem+6dB": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.0,
+        "weighted_coverage": 0.865,
+        "peak_coverage": 0.889,
+        "energy_wtd_pos_dB_exceed": 0.0
+      }
+    },
+    "shear_Y": {
+      "L5_theta_only": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.215,
+        "weighted_coverage": 0.947,
+        "peak_coverage": 0.919,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "L5_freq_discrep": {
+        "sharpness_band_grms_ratio_vs_fem6db": 3.157,
+        "weighted_coverage": 0.998,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "feature_space": {
+        "sharpness_band_grms_ratio_vs_fem6db": 3.059,
+        "weighted_coverage": 0.997,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "statfem_Fk": {
+        "sharpness_band_grms_ratio_vs_fem6db": 2.301,
+        "weighted_coverage": 0.982,
+        "peak_coverage": 0.985,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "hier_pooled": {
+        "sharpness_band_grms_ratio_vs_fem6db": 2.67,
+        "weighted_coverage": 0.995,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "baseline_fem+6dB": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.0,
+        "weighted_coverage": 0.706,
+        "peak_coverage": 0.793,
+        "energy_wtd_pos_dB_exceed": 0.55
+      }
+    },
+    "normal_Z": {
+      "L5_theta_only": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.016,
+        "weighted_coverage": 0.969,
+        "peak_coverage": 0.965,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "L5_freq_discrep": {
+        "sharpness_band_grms_ratio_vs_fem6db": 2.552,
+        "weighted_coverage": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "feature_space": {
+        "sharpness_band_grms_ratio_vs_fem6db": 2.535,
+        "weighted_coverage": 1.0,
+        "peak_coverage": 1.0,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "statfem_Fk": {
+        "sharpness_band_grms_ratio_vs_fem6db": 2.526,
+        "weighted_coverage": 0.987,
+        "peak_coverage": 0.985,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "hier_pooled": {
+        "sharpness_band_grms_ratio_vs_fem6db": 2.005,
+        "weighted_coverage": 0.994,
+        "peak_coverage": 0.995,
+        "energy_wtd_pos_dB_exceed": 0.0,
+        "covers_hard_gate": true
+      },
+      "baseline_fem+6dB": {
+        "sharpness_band_grms_ratio_vs_fem6db": 1.0,
+        "weighted_coverage": 0.738,
+        "peak_coverage": 0.702,
+        "energy_wtd_pos_dB_exceed": 0.002
+      }
+    }
+  },
+  "method_humility": {
+    "humble": {
+      "L5_theta_only": false,
+      "L5_freq_discrep": true,
+      "feature_space": true,
+      "statfem_Fk": true,
+      "hier_pooled": true
+    },
+    "basis": "leave-modes-out widening on QOIs where hidden measured modes carry >=10% participation (shear); overconfidence is a method property that also disqualifies it on the untestable normal QOI"
+  },
+  "selection": {
+    "shear_X": {
+      "winner": "statfem_Fk",
+      "n_compared": 6,
+      "candidates_passing_gate": [
+        [
+          "statfem_Fk",
+          1.508
+        ],
+        [
+          "hier_pooled",
+          1.682
+        ],
+        [
+          "feature_space",
+          1.735
+        ],
+        [
+          "L5_freq_discrep",
+          1.931
+        ]
+      ],
+      "band_ratio_vs_fem6db": 1.508,
+      "conservative_assumption_light_winner": "statfem_Fk",
+      "conservative_band_ratio": 1.508,
+      "caveat": null,
+      "note": "coverage(hard) + method-humility(leave-modes-out) gate, then sharpest (best of N)"
+    },
+    "shear_Y": {
+      "winner": "statfem_Fk",
+      "n_compared": 6,
+      "candidates_passing_gate": [
+        [
+          "statfem_Fk",
+          2.301
+        ],
+        [
+          "hier_pooled",
+          2.67
+        ],
+        [
+          "feature_space",
+          3.059
+        ],
+        [
+          "L5_freq_discrep",
+          3.157
+        ]
+      ],
+      "band_ratio_vs_fem6db": 2.301,
+      "conservative_assumption_light_winner": "statfem_Fk",
+      "conservative_band_ratio": 2.301,
+      "caveat": null,
+      "note": "coverage(hard) + method-humility(leave-modes-out) gate, then sharpest (best of N)"
+    },
+    "normal_Z": {
+      "winner": "hier_pooled",
+      "n_compared": 6,
+      "candidates_passing_gate": [
+        [
+          "hier_pooled",
+          2.005
+        ],
+        [
+          "statfem_Fk",
+          2.526
+        ],
+        [
+          "feature_space",
+          2.535
+        ],
+        [
+          "L5_freq_discrep",
+          2.552
+        ]
+      ],
+      "band_ratio_vs_fem6db": 2.005,
+      "conservative_assumption_light_winner": "statfem_Fk",
+      "conservative_band_ratio": 2.526,
+      "caveat": "sharpest winner rests on a POOLING (shared-amplitude-scale) assumption over UNMEASURED drumhead modes = unverifiable without the >200 Hz plate test; the assumption-light conservative choice is statfem_Fk at 2.526x.",
+      "note": "coverage(hard) + method-humility(leave-modes-out) gate, then sharpest (best of N)"
+    }
+  }
+}

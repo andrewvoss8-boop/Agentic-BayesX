@@ -1,0 +1,18 @@
+{
+ "edit_id": "dish_mass_lo",
+ "n_matched_modes": 30,
+ "global_MAC": 0.602,
+ "fundamental_MAC": 0.97,
+ "low3_MAC": [
+  0.97,
+  0.52,
+  0.51
+ ],
+ "FRF_logmag_corr_median": 0.365,
+ "FRF_logmag_corr_mean": 0.307,
+ "FRF_corr_frac_above_0.5": 0.34,
+ "FRF_peak_ampl_err_dB_median": 14.0,
+ "n_channels": 84,
+ "n_refs": 4,
+ "runtime_s": 10487.7
+}

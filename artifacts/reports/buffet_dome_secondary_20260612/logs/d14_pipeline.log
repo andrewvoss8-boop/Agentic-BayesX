@@ -1,0 +1,13 @@
+[d14] wait bcA modes
+[d14] qoi bcA ready
+[d14] wait bcB modes
+[d14] qoi bcB ready
+[d14] compare done
+[d14] ci bcA done
+[d14] ci bcB done
+[d14] figures done
+[d14] image QA done
+[d14] meshf variant build+solve+qoi
+[d14] meshf done
+[d14] checker refreshed
+[d14] ALL DONE

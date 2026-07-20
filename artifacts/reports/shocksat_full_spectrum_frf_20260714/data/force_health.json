@@ -1,0 +1,261 @@
+{
+ "m_ypos_990y": {
+  "hits": [
+   {
+    "hit": "Test03_modalhammer_990y_001_5_21_2021_9_16_11 AM.mat",
+    "force_std_lb": 6.633928951729263,
+    "force_absmax_lb": 542.4448464176885,
+    "impact_idx": 125020,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test03_modalhammer_990y_004_5_20_2021_1_24_19 PM.mat",
+    "force_std_lb": 2.860836534558336,
+    "force_absmax_lb": 207.4358269003137,
+    "impact_idx": 125011,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test03_modalhammer_990y_005_5_21_2021_9_38_39 AM.mat",
+    "force_std_lb": 6.125548909661748,
+    "force_absmax_lb": 488.16939803348447,
+    "impact_idx": 125013,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test03_modalhammer_990y_006_5_21_2021_9_40_51 AM.mat",
+    "force_std_lb": 7.155682271855534,
+    "force_absmax_lb": 581.4618000690274,
+    "impact_idx": 125014,
+    "n_samples": 250001,
+    "status": "used"
+   }
+  ],
+  "n_used": 4,
+  "n_skipped": 0,
+  "coh_floor_uncorrelated": 0.25
+ },
+ "m_zpos_900z": {
+  "hits": [
+   {
+    "hit": "Test06_modalhammer_900z_001_5_20_2021_2_16_29 PM.mat",
+    "force_std_lb": 3.90122513300808,
+    "force_absmax_lb": 416.45639422644024,
+    "impact_idx": 125027,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test06_modalhammer_900z_002_5_20_2021_2_17_34 PM.mat",
+    "force_std_lb": 7.207192079961031,
+    "force_absmax_lb": 822.1526568625321,
+    "impact_idx": 125021,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test06_modalhammer_900z_003_5_20_2021_2_18_04 PM.mat",
+    "force_std_lb": 7.053584907783989,
+    "force_absmax_lb": 773.0705472678275,
+    "impact_idx": 125022,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test06_modalhammer_900z_004_5_20_2021_2_18_25 PM.mat",
+    "force_std_lb": 4.44187812502804,
+    "force_absmax_lb": 439.08775461194466,
+    "impact_idx": 125029,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test06_modalhammer_900z_005_5_20_2021_2_18_48 PM.mat",
+    "force_std_lb": 5.160411999528218,
+    "force_absmax_lb": 537.9707098956118,
+    "impact_idx": 125024,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test06_modalhammer_900z_006_5_20_2021_2_19_10 PM.mat",
+    "force_std_lb": 4.66005799822,
+    "force_absmax_lb": 366.41218701784317,
+    "impact_idx": 125034,
+    "n_samples": 250001,
+    "status": "used"
+   }
+  ],
+  "n_used": 6,
+  "n_skipped": 0,
+  "coh_floor_uncorrelated": 0.16666666666666666
+ },
+ "m_zpos_990z": {
+  "hits": [
+   {
+    "hit": "Test02_modalhammer_990z_001_5_20_2021_12_59_14 PM.mat",
+    "force_std_lb": 6.565402278878139,
+    "force_absmax_lb": 518.0087627357024,
+    "impact_idx": 125032,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test02_modalhammer_990z_002_5_20_2021_1_04_40 PM.mat",
+    "force_std_lb": 6.837650072737935,
+    "force_absmax_lb": 686.2465402328748,
+    "impact_idx": 125027,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test02_modalhammer_990z_003_5_20_2021_1_05_18 PM.mat",
+    "force_std_lb": 7.603825501364778,
+    "force_absmax_lb": 767.00412338167,
+    "impact_idx": 125024,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test02_modalhammer_990z_004_5_20_2021_1_06_40 PM.mat",
+    "force_std_lb": 6.931925404610401,
+    "force_absmax_lb": 700.052645575604,
+    "impact_idx": 125026,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test02_modalhammer_990z_005_5_20_2021_1_07_00 PM.mat",
+    "force_std_lb": 8.300158171959538,
+    "force_absmax_lb": 880.3665095525753,
+    "impact_idx": 125023,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test02_modalhammer_990z_006_5_20_2021_1_07_24 PM.mat",
+    "force_std_lb": 7.908970395767348,
+    "force_absmax_lb": 868.7605039999634,
+    "impact_idx": 125021,
+    "n_samples": 250001,
+    "status": "used"
+   }
+  ],
+  "n_used": 6,
+  "n_skipped": 0,
+  "coh_floor_uncorrelated": 0.16666666666666666
+ },
+ "m_xy_990xy": {
+  "hits": [
+   {
+    "hit": "Test04_modalhammer_990xy_001_5_20_2021_1_48_47 PM.mat",
+    "force_std_lb": 6.052392131419039,
+    "force_absmax_lb": 659.9546090935538,
+    "impact_idx": 125020,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test04_modalhammer_990xy_002_5_20_2021_1_50_38 PM.mat",
+    "force_std_lb": 7.449993542283575,
+    "force_absmax_lb": 709.2800802078931,
+    "impact_idx": 125026,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test04_modalhammer_990xy_003_5_20_2021_1_51_16 PM.mat",
+    "force_std_lb": 5.9456121257135015,
+    "force_absmax_lb": 532.1494611888529,
+    "impact_idx": 125032,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test04_modalhammer_990xy_004_5_20_2021_1_53_00 PM.mat",
+    "force_std_lb": 9.622350108284508,
+    "force_absmax_lb": 1011.8919337602009,
+    "impact_idx": 125023,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test04_modalhammer_990xy_005_5_20_2021_1_53_23 PM.mat",
+    "force_std_lb": 9.647038806236088,
+    "force_absmax_lb": 1083.2372091096677,
+    "impact_idx": 125020,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test04_modalhammer_990xy_006_5_20_2021_1_55_32 PM.mat",
+    "force_std_lb": 8.236139336228097,
+    "force_absmax_lb": 901.0037389408164,
+    "impact_idx": 125020,
+    "n_samples": 250001,
+    "status": "used"
+   }
+  ],
+  "n_used": 6,
+  "n_skipped": 0,
+  "coh_floor_uncorrelated": 0.16666666666666666
+ },
+ "m_xpos_990x": {
+  "hits": [
+   {
+    "hit": "Test01_modalhammer_990x_001_5_20_2021_12_42_39 PM.mat",
+    "force_std_lb": 8.251065940566232,
+    "force_absmax_lb": 663.0788544100104,
+    "impact_idx": 125009,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test01_modalhammer_990x_002_5_20_2021_12_43_19 PM.mat",
+    "force_std_lb": 8.09967371869992,
+    "force_absmax_lb": 635.3496278714325,
+    "impact_idx": 125012,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test01_modalhammer_990x_003_5_20_2021_12_43_50 PM.mat",
+    "force_std_lb": 8.091422231453345,
+    "force_absmax_lb": 724.3606115052308,
+    "impact_idx": 125007,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test01_modalhammer_990x_004_5_20_2021_12_44_28 PM.mat",
+    "force_std_lb": 7.216613908257927,
+    "force_absmax_lb": 618.7734748333058,
+    "impact_idx": 125011,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test01_modalhammer_990x_005_5_20_2021_12_44_49 PM.mat",
+    "force_std_lb": 7.328188492899237,
+    "force_absmax_lb": 617.0502650825183,
+    "impact_idx": 125009,
+    "n_samples": 250001,
+    "status": "used"
+   },
+   {
+    "hit": "Test01_modalhammer_990x_006_5_20_2021_12_45_10 PM.mat",
+    "force_std_lb": 8.247366456301018,
+    "force_absmax_lb": 516.266326553942,
+    "impact_idx": 125005,
+    "n_samples": 250001,
+    "status": "used"
+   }
+  ],
+  "n_used": 6,
+  "n_skipped": 0,
+  "coh_floor_uncorrelated": 0.16666666666666666
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "cid": "ma2_geo_warp102",
+ "cls": "geometry",
+ "ops": [
+  {
+   "op": "warp_panel",
+   "pid": 102,
+   "amp": 0.2,
+   "name": "warp102"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r2.json: Bottom_Box carries the dominant shape defect and Bottom_Box|Y/Z 0.76/0.72 dex; the flat bottom cover 102 modeled perfectly flat is the same build idealization r1 tested on 202 (+0.1610)",
+ "track": "agent",
+ "round": 2,
+ "rationale": "diagnosis_mf_r2.json: Bottom_Box carries the dominant shape defect and Bottom_Box|Y/Z 0.76/0.72 dex; the flat bottom cov"
+}

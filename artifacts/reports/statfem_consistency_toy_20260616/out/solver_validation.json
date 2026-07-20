@@ -1,0 +1,76 @@
+{
+ "fd": {
+  "levels": [
+   8,
+   16,
+   32,
+   64,
+   128
+  ],
+  "max_rel_err": [
+   0.01064257489918886,
+   0.002655879511849273,
+   0.0006637096474131222,
+   0.00016593995127478966,
+   4.151444083805565e-05
+  ],
+  "rate_est": 2.0005045653619034,
+  "quantity": "forced drive-point response at sensors (w=2.5)",
+  "ref": "analytic u(x)=sum f_n phi_n/(theta lambda_n - w^2)"
+ },
+ "fe": {
+  "levels": [
+   8,
+   16,
+   32,
+   64,
+   128
+  ],
+  "max_rel_err": [
+   0.01059303668177465,
+   0.002652722257390336,
+   0.000663436099862962,
+   0.00016584641221896524,
+   4.14321488235181e-05
+  ],
+  "rate_est": 1.9995374654174607,
+  "quantity": "consistent-mass FE forced response at sensors (w=2.5)",
+  "ref": "same analytic response"
+ },
+ "fd_eigfreq": {
+  "levels": [
+   8,
+   16,
+   32,
+   64,
+   128
+  ],
+  "max_rel_err": [
+   0.1833476151918846,
+   0.04788953605283527,
+   0.012104058465746356,
+   0.00303429800873012,
+   0.0007590930572136953
+  ],
+  "rate_est": 1.9790222572988039
+ },
+ "fe_eigfreq": {
+  "levels": [
+   8,
+   16,
+   32,
+   64,
+   128
+  ],
+  "max_rel_err": [
+   0.17692732770213637,
+   0.049003002136870054,
+   0.012188356657709325,
+   0.003039767647650253,
+   0.0007594379453538204
+  ],
+  "rate_est": 1.9660022748681434
+ },
+ "theta": 1.15,
+ "note": "both forward solvers converge to the analytic truth at ~2nd order; the finest level error is far below the inference noise floor, so posterior drift is attributable to the METHOD, not under-resolution."
+}

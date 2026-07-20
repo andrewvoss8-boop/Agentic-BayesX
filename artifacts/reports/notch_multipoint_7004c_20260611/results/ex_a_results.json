@@ -1,0 +1,71 @@
+{
+ "anchors": {
+  "As_at_1": {
+   "ours": 50.00999900019995,
+   "handbook": 50.01,
+   "rel_err": 1.9992002614465105e-08
+  },
+  "Ms_at_1": {
+   "ours": 0.02,
+   "handbook": 0.02,
+   "rel_err": 0.0
+  },
+  "Ml_at_0p62": {
+   "ours": 1.6242268582684123,
+   "handbook": 1.62,
+   "rel_err": 0.002609171770624803
+  },
+  "Ml_at_1": {
+   "ours": 50.00999900019995,
+   "handbook": 50.01,
+   "rel_err": 1.9992002614465105e-08
+  },
+  "sum_at_1": {
+   "ours": 50.02999500299795,
+   "handbook": 50.03,
+   "rel_err": 9.98801129573184e-08
+  },
+  "A_at_0p62": {
+   "ours": 51.76397333400168,
+   "handbook": 51.76,
+   "rel_err": 7.676456726594286e-05
+  },
+  "A_at_1_notch": {
+   "ours": 0.01999200639424537,
+   "handbook": 0.02,
+   "rel_err": 0.00039968028773158804
+  },
+  "F_at_0p62": {
+   "ours": 84.07643577977541,
+   "handbook": 84.08,
+   "rel_err": 4.2390820939457376e-05
+  },
+  "F_at_1p62": {
+   "ours": 5.247947276908148,
+   "handbook": 5.25,
+   "rel_err": 0.0003909948746384982
+  },
+  "fig8_ordinate_mr1_Q50": {
+   "ours": 2.61738703393632,
+   "handbook": 2.64,
+   "rel_err": 0.008565517448363726
+  }
+ },
+ "golden": {
+  "r_low": 0.6180339887498948,
+  "r_high": 1.618033988749895,
+  "A_true_peak": 58.524117010251054,
+  "note": "handbook Fig 9 values are read on its r-grid (0.62/1.62); the exact undamped coupled freqs are golden-ratio 0.618/1.618 and the true damped |A| peak there is higher than the 51.76 grid value"
+ },
+ "impedance_vs_direct": {
+  "A": 1.1898391516172208e-14,
+  "F": 1.2191888838068882e-14
+ },
+ "C2_from_fig8": 2.61738703393632,
+ "A_spec_envelope": 58.524117010251054,
+ "overtest_factor_unlimited": 30.90828653513564,
+ "overtest_factor_limited": 0.9998410176096214,
+ "notch_depth_vs_spec_dB": 69.32956975847904,
+ "unnotched_force_estimate": 2926.933286329085,
+ "handbook_unnotched_quote": "~2500 (7004C p.37)"
+}

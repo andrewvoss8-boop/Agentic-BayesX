@@ -1,0 +1,89 @@
+L5 NUTS: converged=True R-hat=1.001 ESS=2646 div=0 (73.4s)
+[shear_X] theta_only: 1.068x cov0.984 FAIL | freq_discrep: 1.931x cov0.998 PASS | feature_space: 1.735x cov0.997 PASS | statfem_Fk: 1.508x cov0.995 PASS | hier_pooled: 1.682x cov0.998 PASS
+[shear_Y] theta_only: 1.215x cov0.947 FAIL | freq_discrep: 3.157x cov0.998 PASS | feature_space: 3.059x cov0.997 PASS | statfem_Fk: 2.301x cov0.982 PASS | hier_pooled: 2.67x cov0.995 PASS
+[normal_Z] theta_only: 1.016x cov0.969 FAIL | freq_discrep: 2.552x cov1.0 PASS | feature_space: 2.535x cov1.0 PASS | statfem_Fk: 2.526x cov0.987 PASS | hier_pooled: 2.005x cov0.994 PASS
+
+SELECTION: {
+  "shear_X": {
+    "winner": "statfem_Fk",
+    "n_compared": 6,
+    "candidates_passing_gate": [
+      [
+        "statfem_Fk",
+        1.508
+      ],
+      [
+        "hier_pooled",
+        1.682
+      ],
+      [
+        "feature_space",
+        1.735
+      ],
+      [
+        "L5_freq_discrep",
+        1.931
+      ]
+    ],
+    "band_ratio_vs_fem6db": 1.508,
+    "conservative_assumption_light_winner": "statfem_Fk",
+    "conservative_band_ratio": 1.508,
+    "caveat": null,
+    "note": "coverage(hard) + method-humility(leave-modes-out) gate, then sharpest (best of N)"
+  },
+  "shear_Y": {
+    "winner": "statfem_Fk",
+    "n_compared": 6,
+    "candidates_passing_gate": [
+      [
+        "statfem_Fk",
+        2.301
+      ],
+      [
+        "hier_pooled",
+        2.67
+      ],
+      [
+        "feature_space",
+        3.059
+      ],
+      [
+        "L5_freq_discrep",
+        3.157
+      ]
+    ],
+    "band_ratio_vs_fem6db": 2.301,
+    "conservative_assumption_light_winner": "statfem_Fk",
+    "conservative_band_ratio": 2.301,
+    "caveat": null,
+    "note": "coverage(hard) + method-humility(leave-modes-out) gate, then sharpest (best of N)"
+  },
+  "normal_Z": {
+    "winner": "hier_pooled",
+    "n_compared": 6,
+    "candidates_passing_gate": [
+      [
+        "hier_pooled",
+        2.005
+      ],
+      [
+        "statfem_Fk",
+        2.526
+      ],
+      [
+        "feature_space",
+        2.535
+      ],
+      [
+        "L5_freq_discrep",
+        2.552
+      ]
+    ],
+    "band_ratio_vs_fem6db": 2.005,
+    "conservative_assumption_light_winner": "statfem_Fk",
+    "conservative_band_ratio": 2.526,
+    "caveat": "sharpest winner rests on a POOLING (shared-amplitude-scale) assumption over UNMEASURED drumhead modes = unverifiable without the >200 Hz plate test; the assumption-light conservative choice is statfem_Fk at 2.526x.",
+    "note": "coverage(hard) + method-humility(leave-modes-out) gate, then sharpest (best of N)"
+  }
+}
+wrote bakeoff_scorecard.json, leave_modes_out.json

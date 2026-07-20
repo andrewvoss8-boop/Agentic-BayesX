@@ -1,0 +1,82 @@
+{
+  "vault_key": "m_xy_990xy",
+  "scores": {
+    "A0_enr": {
+      "cid": "A0_enr",
+      "vault_P1p": 0.4197,
+      "vault_P3": 0.4377,
+      "n_ch": 87,
+      "median_coh": 0.881,
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    },
+    "A0d_enr": {
+      "cid": "A0_enr",
+      "vault_P1p": 0.4563,
+      "vault_P3": 0.4591,
+      "n_ch": 87,
+      "median_coh": 0.881,
+      "damping": {
+        "kind": "band",
+        "zeta": [
+          0.022840753655781844,
+          0.014664269500534741,
+          0.024648487987449567,
+          0.023296072808204272
+        ]
+      }
+    },
+    "c06_enr": {
+      "cid": "c06_tb_xface_enr",
+      "vault_P1p": 0.5019,
+      "vault_P3": 0.4956,
+      "n_ch": 87,
+      "median_coh": 0.881,
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    },
+    "a04_enr": {
+      "cid": "a04_welds_t074_enr",
+      "vault_P1p": 0.4697,
+      "vault_P3": 0.4764,
+      "n_ch": 87,
+      "median_coh": 0.881,
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    },
+    "b_c06_enr": {
+      "cid": "c06_tb_xface_enr",
+      "vault_P1p": 0.5259,
+      "vault_P3": 0.5216,
+      "n_ch": 87,
+      "median_coh": 0.881,
+      "damping": {
+        "kind": "band",
+        "zeta": [
+          0.022840753655781844,
+          0.014664269500534741,
+          0.024648487987449567,
+          0.023296072808204272
+        ]
+      }
+    },
+    "rnd003_enr": {
+      "cid": "rnd003_enr",
+      "vault_P1p": 0.497,
+      "vault_P3": 0.497,
+      "n_ch": 87,
+      "median_coh": 0.881,
+      "damping": {
+        "kind": "fixed",
+        "zeta": 0.01
+      }
+    }
+  },
+  "note": "vault = +XY/Test04, held out from ALL selection since run start (label: not never-seen-by-any-run; also the 'easy' location per the completed run's uniform dev-vs-vault gap). FDAC warp+gain from the 4 dev drives; graded ONCE after freeze."
+}

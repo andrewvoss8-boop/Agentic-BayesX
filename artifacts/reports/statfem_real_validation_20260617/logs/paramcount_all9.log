@@ -1,0 +1,6 @@
+[M2] faithful Schneider | obs 8 ch x 173 f, theta ['al_welds', 'angle_brackets', 'bottom_box', 'contact', 'cross_beam', 'joints', 'plates', 'steel_welds', 'top_box']
+  CONVERGED=False cross-run R-hat 9.245 ESS 0 div 0.000 | log-evidence -2697.4 +- 4.4
+  sigma_w med 11.90 [11.37,12.77] (vs old runaway 9.8) | gain c 5.89
+  theta medians: al_welds 1.39, angle_brackets 1.66, bottom_box 1.72, contact 1.01, cross_beam 1.29, joints 0.58, plates 0.87, steel_welds 1.07, top_box 0.91
+  runtime 580s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M2_all9.json
+ALL9 DONE

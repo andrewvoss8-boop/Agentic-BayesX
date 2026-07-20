@@ -1,0 +1,325 @@
+{
+ "overall": "YELLOW",
+ "counts": {
+  "green": 57,
+  "yellow": 6,
+  "red": 0
+ },
+ "gates": [
+  {
+   "tier": "GREEN",
+   "gate": "gatefile:priority_deliverables.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "gatefile:question_framing.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "gatefile:quantity_contracts.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "gatefile:assumptions_ledger.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "gatefile:decisions_log.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "funnel:n_candidates",
+   "detail": "151 candidates (floor 100)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "funnel:allowed_families",
+   "detail": "declared within allowed families (no geometry rebuild)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "funnel:tier1_complete",
+   "detail": "tier1 scored 151/151"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "funnel:tier2_count",
+   "detail": "29 full eigensolves (plan ~30)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "evidence:shape_inclusive",
+   "detail": "evidence observable includes shape/MAC"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "evidence:prior_robustness",
+   "detail": "sigma_prior grid complete ['0.15', '0.25', '0.40']"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "trap1:amp_fit",
+   "detail": "no per-mode amplitude/phase fitting in scores (declared)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "trap2:pairing",
+   "detail": "pairing=assignment_hungarian frozen=True"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:full_set",
+   "detail": "full in-band mode set declared (LIMITED DATA, NEVER LIMITED MODES)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "nuts:M0S0",
+   "detail": "R-hat 1.0009 ESS 1431.7 div 0"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:M0S0",
+   "detail": "n_modes_used=25"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R3:M0S0",
+   "detail": "widen ratios ['1.36', '1.29', '1.01'] all > 1"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M0S0:shear_X",
+   "detail": "cov 1.0 exceed 0.0 dB sharpness 1.838 (bar 1.508)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M0S0:shear_Y",
+   "detail": "cov 0.999 exceed 0.0 dB sharpness 1.982 (bar 2.301)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M0S0:normal_Z",
+   "detail": "cov 1.0 exceed 0.0 dB sharpness 2.542 (bar 2.526)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R1:M0S0",
+   "detail": "cov 0.875 CRPS-skill -0.784 sigma 1.084"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "nuts:M0S1",
+   "detail": "R-hat 1.0011 ESS 2964.0 div 0"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:M0S1",
+   "detail": "n_modes_used=25"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R3:M0S1",
+   "detail": "widen ratios ['1.45', '1.24', '1.06'] all > 1"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M0S1:shear_X",
+   "detail": "cov 0.999 exceed 0.0 dB sharpness 1.716 (bar 1.508)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M0S1:shear_Y",
+   "detail": "cov 1.0 exceed 0.0 dB sharpness 2.056 (bar 2.301)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M0S1:normal_Z",
+   "detail": "cov 1.0 exceed 0.0 dB sharpness 2.343 (bar 2.526)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R1:M0S1",
+   "detail": "cov 0.883 CRPS-skill -0.766 sigma 1.082"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "nuts:M0S2",
+   "detail": "R-hat 1.0004 ESS 5201.3 div 0"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:M0S2",
+   "detail": "n_modes_used=25"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R3:M0S2",
+   "detail": "widen ratios ['1.06', '1.06', '1.07'] all > 1"
+  },
+  {
+   "tier": "YELLOW",
+   "gate": "R2:M0S2:shear_X",
+   "detail": "cov 0.696 exceed 0.571 dB sharpness 1.777 (bar 1.508) \u2014 DOES NOT COVER (cannot win this QOI)"
+  },
+  {
+   "tier": "YELLOW",
+   "gate": "R2:M0S2:shear_Y",
+   "detail": "cov 0.574 exceed 2.696 dB sharpness 2.245 (bar 2.301) \u2014 DOES NOT COVER (cannot win this QOI)"
+  },
+  {
+   "tier": "YELLOW",
+   "gate": "R2:M0S2:normal_Z",
+   "detail": "cov 0.318 exceed 4.471 dB sharpness 1.822 (bar 2.526) \u2014 DOES NOT COVER (cannot win this QOI)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R1:M0S2",
+   "detail": "cov 0.892 CRPS-skill -0.34 sigma 0.89"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "nuts:M1S0",
+   "detail": "R-hat 1.0008 ESS 2660.0 div 0"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:M1S0",
+   "detail": "n_modes_used=22"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R3:M1S0",
+   "detail": "widen ratios ['1.23', '1.62', '1.04'] all > 1"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M1S0:shear_X",
+   "detail": "cov 0.998 exceed 0.0 dB sharpness 1.94 (bar 1.508)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M1S0:shear_Y",
+   "detail": "cov 0.998 exceed 0.0 dB sharpness 1.655 (bar 2.301)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M1S0:normal_Z",
+   "detail": "cov 1.0 exceed 0.0 dB sharpness 2.421 (bar 2.526)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R1:M1S0",
+   "detail": "cov 0.867 CRPS-skill -0.754 sigma 1.098"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "nuts:M1S1",
+   "detail": "R-hat 1.0008 ESS 3213.9 div 0"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:M1S1",
+   "detail": "n_modes_used=22"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R3:M1S1",
+   "detail": "widen ratios ['1.23', '1.63', '1.10'] all > 1"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M1S1:shear_X",
+   "detail": "cov 0.999 exceed 0.0 dB sharpness 1.707 (bar 1.508)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M1S1:shear_Y",
+   "detail": "cov 0.998 exceed 0.0 dB sharpness 1.513 (bar 2.301)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R2:M1S1:normal_Z",
+   "detail": "cov 0.999 exceed 0.0 dB sharpness 2.504 (bar 2.526)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R1:M1S1",
+   "detail": "cov 0.883 CRPS-skill -0.708 sigma 1.075"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "nuts:M1S2",
+   "detail": "R-hat 1.0005 ESS 5708.7 div 0"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "modes:M1S2",
+   "detail": "n_modes_used=22"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R3:M1S2",
+   "detail": "widen ratios ['1.04', '1.05', '1.09'] all > 1"
+  },
+  {
+   "tier": "YELLOW",
+   "gate": "R2:M1S2:shear_X",
+   "detail": "cov 0.553 exceed 1.674 dB sharpness 1.604 (bar 1.508) \u2014 DOES NOT COVER (cannot win this QOI)"
+  },
+  {
+   "tier": "YELLOW",
+   "gate": "R2:M1S2:shear_Y",
+   "detail": "cov 0.575 exceed 2.396 dB sharpness 2.184 (bar 2.301) \u2014 DOES NOT COVER (cannot win this QOI)"
+  },
+  {
+   "tier": "YELLOW",
+   "gate": "R2:M1S2:normal_Z",
+   "detail": "cov 0.228 exceed 6.918 dB sharpness 1.573 (bar 2.526) \u2014 DOES NOT COVER (cannot win this QOI)"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "R1:M1S2",
+   "detail": "cov 0.883 CRPS-skill -0.366 sigma 0.913"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "winnerscurse:shear",
+   "detail": "best-of-6"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "winnerscurse:normal",
+   "detail": "best-of-6"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "fig:money",
+   "detail": "['fig_matrix_money.png', 'fig_matrix_money.png']"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "deliv:packet.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "deliv:findings.md",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "deliv:runtime.json",
+   "detail": "exists"
+  },
+  {
+   "tier": "GREEN",
+   "gate": "runtime:accounting",
+   "detail": "active 8150s <= wallclock 20079s"
+  }
+ ]
+}

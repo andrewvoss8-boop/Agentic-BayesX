@@ -1,0 +1,1277 @@
+{
+ "coupled_mode_se": [
+  {
+   "mode": 1,
+   "f_hz": 53.61108800367299,
+   "closure": 1.0000000000000002,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 2e-05
+  },
+  {
+   "mode": 2,
+   "f_hz": 71.16501624178437,
+   "closure": 1.0000000000129141,
+   "mount_trans": 0.01995,
+   "mount_rot": 0.01729,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.01789,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.00028,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.94459,
+   "shocksat_joints": 0.01056
+  },
+  {
+   "mode": 3,
+   "f_hz": 71.79855697827676,
+   "closure": 0.9999999999788625,
+   "mount_trans": 0.01819,
+   "mount_rot": 0.01488,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 0.01755,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.00027,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.9491,
+   "shocksat_joints": 0.01049
+  },
+  {
+   "mode": 4,
+   "f_hz": 80.5704702475977,
+   "closure": 0.999999999889756,
+   "mount_trans": 0.15264,
+   "mount_rot": 0.00155,
+   "tray_tray_E": 0.01088,
+   "tray_strut_EA": 0.77255,
+   "tray_strut_EI": 0.0001,
+   "tray_joint_axial": 0.01192,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.05036,
+   "shocksat_joints": 0.00228
+  },
+  {
+   "mode": 5,
+   "f_hz": 80.60952845548191,
+   "closure": 1.000000000002116,
+   "mount_trans": 0.17014,
+   "mount_rot": 0.00285,
+   "tray_tray_E": 0.00952,
+   "tray_strut_EA": 0.72323,
+   "tray_strut_EI": 9e-05,
+   "tray_joint_axial": 0.01115,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.08302,
+   "shocksat_joints": 0.0034
+  },
+  {
+   "mode": 6,
+   "f_hz": 86.43109379521177,
+   "closure": 1.0000000000085048,
+   "mount_trans": 0.13255,
+   "mount_rot": 0.66401,
+   "tray_tray_E": 0.0147,
+   "tray_strut_EA": 0.12244,
+   "tray_strut_EI": 0.0002,
+   "tray_joint_axial": 0.00189,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.0642,
+   "shocksat_joints": 0.00404
+  },
+  {
+   "mode": 7,
+   "f_hz": 86.44871234127064,
+   "closure": 1.0000000000002778,
+   "mount_trans": 0.0007,
+   "mount_rot": 0.00204,
+   "tray_tray_E": 5e-05,
+   "tray_strut_EA": 0.00044,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99677,
+   "shocksat_joints": 0.00017
+  },
+  {
+   "mode": 8,
+   "f_hz": 86.50319235176796,
+   "closure": 0.9999999999258613,
+   "mount_trans": 0.00082,
+   "mount_rot": 0.69381,
+   "tray_tray_E": 2e-05,
+   "tray_strut_EA": 0.20981,
+   "tray_strut_EI": 0.00069,
+   "tray_joint_axial": 0.00324,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.09161,
+   "shocksat_joints": 0.01124
+  },
+  {
+   "mode": 9,
+   "f_hz": 87.08063226858924,
+   "closure": 0.999999999907438,
+   "mount_trans": 0.19249,
+   "mount_rot": 0.7049,
+   "tray_tray_E": 0.01103,
+   "tray_strut_EA": 0.06292,
+   "tray_strut_EI": 0.0002,
+   "tray_joint_axial": 0.00097,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.0275,
+   "shocksat_joints": 0.0019
+  },
+  {
+   "mode": 10,
+   "f_hz": 106.71004423980399,
+   "closure": 0.999999999999976,
+   "mount_trans": 8e-05,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 1e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99991,
+   "shocksat_joints": 0.06115
+  },
+  {
+   "mode": 11,
+   "f_hz": 111.89081174569695,
+   "closure": 0.9999999999993868,
+   "mount_trans": 0.2044,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.00302,
+   "tray_strut_EA": 0.03478,
+   "tray_strut_EI": 0.00013,
+   "tray_joint_axial": 0.00054,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.75714,
+   "shocksat_joints": 0.01085
+  },
+  {
+   "mode": 12,
+   "f_hz": 115.98059945512613,
+   "closure": 1.0000000000008376,
+   "mount_trans": 0.20134,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.00298,
+   "tray_strut_EA": 0.03426,
+   "tray_strut_EI": 0.00013,
+   "tray_joint_axial": 0.00053,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.76076,
+   "shocksat_joints": 0.00323
+  },
+  {
+   "mode": 13,
+   "f_hz": 121.61448628246488,
+   "closure": 0.9999999999999308,
+   "mount_trans": 0.40284,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.00598,
+   "tray_strut_EA": 0.06856,
+   "tray_strut_EI": 0.00025,
+   "tray_joint_axial": 0.00106,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.52131,
+   "shocksat_joints": 0.00719
+  },
+  {
+   "mode": 14,
+   "f_hz": 122.76123991565117,
+   "closure": 0.9999999999998221,
+   "mount_trans": 0.00228,
+   "mount_rot": 0.00261,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0015,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 2e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99358,
+   "shocksat_joints": 0.01117
+  },
+  {
+   "mode": 15,
+   "f_hz": 122.9360008557842,
+   "closure": 0.999999999999979,
+   "mount_trans": 0.0,
+   "mount_rot": 0.00076,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.00023,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.999,
+   "shocksat_joints": 0.00064
+  },
+  {
+   "mode": 16,
+   "f_hz": 123.09830228454665,
+   "closure": 0.9999999999999998,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 17,
+   "f_hz": 123.10395751620159,
+   "closure": 0.9999999999999976,
+   "mount_trans": 1e-05,
+   "mount_rot": 5e-05,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99993,
+   "shocksat_joints": 0.00039
+  },
+  {
+   "mode": 18,
+   "f_hz": 127.02449426545635,
+   "closure": 1.0000000000036877,
+   "mount_trans": 0.02763,
+   "mount_rot": 0.03296,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 0.01717,
+   "tray_strut_EI": 2e-05,
+   "tray_joint_axial": 0.00026,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.92194,
+   "shocksat_joints": 0.10547
+  },
+  {
+   "mode": 19,
+   "f_hz": 149.53595193531137,
+   "closure": 0.9999999999995423,
+   "mount_trans": 0.00628,
+   "mount_rot": 0.00402,
+   "tray_tray_E": 4e-05,
+   "tray_strut_EA": 0.00962,
+   "tray_strut_EI": 3e-05,
+   "tray_joint_axial": 0.00015,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.97987,
+   "shocksat_joints": 0.19259
+  },
+  {
+   "mode": 20,
+   "f_hz": 149.74576890734306,
+   "closure": 0.9999999999999885,
+   "mount_trans": 1e-05,
+   "mount_rot": 0.0048,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.00152,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 2e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99364,
+   "shocksat_joints": 0.0039
+  },
+  {
+   "mode": 21,
+   "f_hz": 155.53095781977433,
+   "closure": 0.9999999999999933,
+   "mount_trans": 8e-05,
+   "mount_rot": 8e-05,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 9e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99975,
+   "shocksat_joints": 0.05306
+  },
+  {
+   "mode": 22,
+   "f_hz": 163.63573260776946,
+   "closure": 1.0000000000000049,
+   "mount_trans": 0.00017,
+   "mount_rot": 0.00011,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 6e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99965,
+   "shocksat_joints": 0.00713
+  },
+  {
+   "mode": 23,
+   "f_hz": 171.4357581266116,
+   "closure": 0.9999999999999646,
+   "mount_trans": 0.00066,
+   "mount_rot": 4e-05,
+   "tray_tray_E": 5e-05,
+   "tray_strut_EA": 0.00312,
+   "tray_strut_EI": 2e-05,
+   "tray_joint_axial": 5e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99607,
+   "shocksat_joints": 0.03336
+  },
+  {
+   "mode": 24,
+   "f_hz": 173.75880488467493,
+   "closure": 0.9999999999992617,
+   "mount_trans": 0.0,
+   "mount_rot": 0.06367,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.02028,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 0.00031,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.91572,
+   "shocksat_joints": 0.10813
+  },
+  {
+   "mode": 25,
+   "f_hz": 180.54153536051427,
+   "closure": 1.0000000000000042,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 1e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99999,
+   "shocksat_joints": 0.0002
+  },
+  {
+   "mode": 26,
+   "f_hz": 181.81318942009807,
+   "closure": 0.9999999999999971,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 1e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99999,
+   "shocksat_joints": 0.00013
+  },
+  {
+   "mode": 27,
+   "f_hz": 187.26242128345567,
+   "closure": 0.999999999999944,
+   "mount_trans": 9e-05,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 2e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99989,
+   "shocksat_joints": 0.01404
+  },
+  {
+   "mode": 28,
+   "f_hz": 188.15399697472012,
+   "closure": 0.9999999999999181,
+   "mount_trans": 0.00011,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 2e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99986,
+   "shocksat_joints": 0.00661
+  },
+  {
+   "mode": 29,
+   "f_hz": 189.25052388783124,
+   "closure": 0.999999999999996,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99999,
+   "shocksat_joints": 0.0005
+  },
+  {
+   "mode": 30,
+   "f_hz": 190.37064664430028,
+   "closure": 1.0000000000000095,
+   "mount_trans": 1e-05,
+   "mount_rot": 1e-05,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 1e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99998,
+   "shocksat_joints": 0.00074
+  },
+  {
+   "mode": 31,
+   "f_hz": 193.45815350549103,
+   "closure": 1.0000000000000222,
+   "mount_trans": 0.00011,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 2e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99986,
+   "shocksat_joints": 0.18079
+  },
+  {
+   "mode": 32,
+   "f_hz": 194.80055599327017,
+   "closure": 1.0000000000001295,
+   "mount_trans": 0.00261,
+   "mount_rot": 0.0,
+   "tray_tray_E": 4e-05,
+   "tray_strut_EA": 0.00045,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.9969,
+   "shocksat_joints": 0.02901
+  },
+  {
+   "mode": 33,
+   "f_hz": 200.63361945167148,
+   "closure": 0.9999999999999905,
+   "mount_trans": 0.0002,
+   "mount_rot": 9e-05,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0005,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99918,
+   "shocksat_joints": 0.04418
+  },
+  {
+   "mode": 34,
+   "f_hz": 207.95241609679167,
+   "closure": 0.9999999999999954,
+   "mount_trans": 0.00021,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 4e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99975,
+   "shocksat_joints": 0.00224
+  },
+  {
+   "mode": 35,
+   "f_hz": 233.91253547290992,
+   "closure": 1.000000000000039,
+   "mount_trans": 3e-05,
+   "mount_rot": 0.0002,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 0.00014,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.9996,
+   "shocksat_joints": 0.10268
+  },
+  {
+   "mode": 36,
+   "f_hz": 236.22803164900307,
+   "closure": 1.0000000000001512,
+   "mount_trans": 7e-05,
+   "mount_rot": 0.00041,
+   "tray_tray_E": 2e-05,
+   "tray_strut_EA": 0.00021,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99927,
+   "shocksat_joints": 0.08739
+  },
+  {
+   "mode": 37,
+   "f_hz": 238.46978091721599,
+   "closure": 1.0000000000000138,
+   "mount_trans": 0.0023,
+   "mount_rot": 0.0,
+   "tray_tray_E": 4e-05,
+   "tray_strut_EA": 0.00039,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99727,
+   "shocksat_joints": 0.029
+  },
+  {
+   "mode": 38,
+   "f_hz": 238.8306286146581,
+   "closure": 0.9999999999999859,
+   "mount_trans": 0.0,
+   "mount_rot": 6e-05,
+   "tray_tray_E": 2e-05,
+   "tray_strut_EA": 0.00048,
+   "tray_strut_EI": 2e-05,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99941,
+   "shocksat_joints": 0.02136
+  },
+  {
+   "mode": 39,
+   "f_hz": 244.42104431153027,
+   "closure": 0.9999999999999225,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 1e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99999,
+   "shocksat_joints": 0.01552
+  },
+  {
+   "mode": 40,
+   "f_hz": 247.4160383436765,
+   "closure": 0.9999999999999032,
+   "mount_trans": 4e-05,
+   "mount_rot": 0.00014,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 3e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.9998,
+   "shocksat_joints": 0.05531
+  },
+  {
+   "mode": 41,
+   "f_hz": 251.60561769381886,
+   "closure": 1.0000000000001144,
+   "mount_trans": 0.00053,
+   "mount_rot": 0.0,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 9e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99936,
+   "shocksat_joints": 0.09365
+  },
+  {
+   "mode": 42,
+   "f_hz": 254.08276134657228,
+   "closure": 1.0000000000002736,
+   "mount_trans": 0.00069,
+   "mount_rot": 0.0,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 0.00012,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99917,
+   "shocksat_joints": 0.0662
+  },
+  {
+   "mode": 43,
+   "f_hz": 257.7474483187721,
+   "closure": 1.0000000000000075,
+   "mount_trans": 0.00832,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.00013,
+   "tray_strut_EA": 0.00143,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 2e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99009,
+   "shocksat_joints": 0.05238
+  },
+  {
+   "mode": 44,
+   "f_hz": 259.4886553237987,
+   "closure": 0.9999999999999967,
+   "mount_trans": 7e-05,
+   "mount_rot": 0.00042,
+   "tray_tray_E": 3e-05,
+   "tray_strut_EA": 0.00035,
+   "tray_strut_EI": 2e-05,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99911,
+   "shocksat_joints": 0.02185
+  },
+  {
+   "mode": 45,
+   "f_hz": 263.3296112172935,
+   "closure": 0.9999999999999825,
+   "mount_trans": 1e-05,
+   "mount_rot": 0.00012,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 0.00022,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99962,
+   "shocksat_joints": 0.06444
+  },
+  {
+   "mode": 46,
+   "f_hz": 263.93444640691143,
+   "closure": 1.000000000000031,
+   "mount_trans": 1e-05,
+   "mount_rot": 7e-05,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 9e-05,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99981,
+   "shocksat_joints": 0.01587
+  },
+  {
+   "mode": 47,
+   "f_hz": 270.6869444586872,
+   "closure": 0.9999999999999959,
+   "mount_trans": 1e-05,
+   "mount_rot": 8e-05,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 0.00011,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99978,
+   "shocksat_joints": 0.0077
+  },
+  {
+   "mode": 48,
+   "f_hz": 274.44871833220043,
+   "closure": 1.000000000000004,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99999,
+   "shocksat_joints": 0.00691
+  },
+  {
+   "mode": 49,
+   "f_hz": 276.38703397434256,
+   "closure": 1.0000000000000098,
+   "mount_trans": 3e-05,
+   "mount_rot": 0.00013,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 7e-05,
+   "tray_strut_EI": 1e-05,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99975,
+   "shocksat_joints": 0.20563
+  },
+  {
+   "mode": 50,
+   "f_hz": 282.2721067492205,
+   "closure": 0.9999999999999755,
+   "mount_trans": 0.00015,
+   "mount_rot": 0.00062,
+   "tray_tray_E": 6e-05,
+   "tray_strut_EA": 0.00041,
+   "tray_strut_EI": 4e-05,
+   "tray_joint_axial": 1e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99872,
+   "shocksat_joints": 0.11092
+  },
+  {
+   "mode": 51,
+   "f_hz": 282.88608905260935,
+   "closure": 0.9999999999997152,
+   "mount_trans": 0.01618,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.00026,
+   "tray_strut_EA": 0.00278,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 4e-05,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.98072,
+   "shocksat_joints": 0.23511
+  },
+  {
+   "mode": 52,
+   "f_hz": 286.3959403888222,
+   "closure": 1.0000000000000462,
+   "mount_trans": 0.00043,
+   "mount_rot": 1e-05,
+   "tray_tray_E": 1e-05,
+   "tray_strut_EA": 8e-05,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99947,
+   "shocksat_joints": 0.01148
+  },
+  {
+   "mode": 53,
+   "f_hz": 291.97278631647214,
+   "closure": 1.0000000000000002,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 54,
+   "f_hz": 293.2696399065396,
+   "closure": 1.0000000000000022,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 55,
+   "f_hz": 293.2699267096526,
+   "closure": 1.0000000000000009,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 56,
+   "f_hz": 293.2699267139037,
+   "closure": 1.0000000000000007,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 57,
+   "f_hz": 293.26992706578005,
+   "closure": 1.0000000000000007,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 58,
+   "f_hz": 293.2699489943007,
+   "closure": 1.0000000000000029,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 1.0,
+   "shocksat_joints": 0.0
+  },
+  {
+   "mode": 59,
+   "f_hz": 298.50278720347774,
+   "closure": 1.0000000000000018,
+   "mount_trans": 0.0,
+   "mount_rot": 0.0,
+   "tray_tray_E": 0.0,
+   "tray_strut_EA": 0.0,
+   "tray_strut_EI": 0.0,
+   "tray_joint_axial": 0.0,
+   "tray_joint_lateral": 0.0,
+   "tray_fixed_antispin": 0.0,
+   "shocksat_total": 0.99999,
+   "shocksat_joints": 0.0004
+  }
+ ],
+ "mount_sensitivity": [
+  {
+   "mode": 1,
+   "f_hz": 53.61108800367299,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 2,
+   "f_hz": 71.16501624178437,
+   "dlnf_dlnk_mount": 0.0186
+  },
+  {
+   "mode": 3,
+   "f_hz": 71.79855697827676,
+   "dlnf_dlnk_mount": 0.0165
+  },
+  {
+   "mode": 4,
+   "f_hz": 80.5704702475977,
+   "dlnf_dlnk_mount": 0.0771
+  },
+  {
+   "mode": 5,
+   "f_hz": 80.60952845548191,
+   "dlnf_dlnk_mount": 0.0865
+  },
+  {
+   "mode": 6,
+   "f_hz": 86.43109379521177,
+   "dlnf_dlnk_mount": 0.3983
+  },
+  {
+   "mode": 7,
+   "f_hz": 86.44871234127064,
+   "dlnf_dlnk_mount": 0.0014
+  },
+  {
+   "mode": 8,
+   "f_hz": 86.50319235176796,
+   "dlnf_dlnk_mount": 0.3473
+  },
+  {
+   "mode": 9,
+   "f_hz": 87.08063226858924,
+   "dlnf_dlnk_mount": 0.4487
+  },
+  {
+   "mode": 10,
+   "f_hz": 106.71004423980399,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 11,
+   "f_hz": 111.89081174569695,
+   "dlnf_dlnk_mount": 0.1022
+  },
+  {
+   "mode": 12,
+   "f_hz": 115.98059945512613,
+   "dlnf_dlnk_mount": 0.1007
+  },
+  {
+   "mode": 13,
+   "f_hz": 121.61448628246488,
+   "dlnf_dlnk_mount": 0.2014
+  },
+  {
+   "mode": 14,
+   "f_hz": 122.76123991565117,
+   "dlnf_dlnk_mount": 0.0024
+  },
+  {
+   "mode": 15,
+   "f_hz": 122.9360008557842,
+   "dlnf_dlnk_mount": 0.0004
+  },
+  {
+   "mode": 16,
+   "f_hz": 123.09830228454665,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 17,
+   "f_hz": 123.10395751620159,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 18,
+   "f_hz": 127.02449426545635,
+   "dlnf_dlnk_mount": 0.0303
+  },
+  {
+   "mode": 19,
+   "f_hz": 149.53595193531137,
+   "dlnf_dlnk_mount": 0.0052
+  },
+  {
+   "mode": 20,
+   "f_hz": 149.74576890734306,
+   "dlnf_dlnk_mount": 0.0024
+  },
+  {
+   "mode": 21,
+   "f_hz": 155.53095781977433,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 22,
+   "f_hz": 163.63573260776946,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 23,
+   "f_hz": 171.4357581266116,
+   "dlnf_dlnk_mount": 0.0003
+  },
+  {
+   "mode": 24,
+   "f_hz": 173.75880488467493,
+   "dlnf_dlnk_mount": 0.0318
+  },
+  {
+   "mode": 25,
+   "f_hz": 180.54153536051427,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 26,
+   "f_hz": 181.81318942009807,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 27,
+   "f_hz": 187.26242128345567,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 28,
+   "f_hz": 188.15399697472012,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 29,
+   "f_hz": 189.25052388783124,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 30,
+   "f_hz": 190.37064664430028,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 31,
+   "f_hz": 193.45815350549103,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 32,
+   "f_hz": 194.80055599327017,
+   "dlnf_dlnk_mount": 0.0013
+  },
+  {
+   "mode": 33,
+   "f_hz": 200.63361945167148,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 34,
+   "f_hz": 207.95241609679167,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 35,
+   "f_hz": 233.91253547290992,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 36,
+   "f_hz": 236.22803164900307,
+   "dlnf_dlnk_mount": 0.0002
+  },
+  {
+   "mode": 37,
+   "f_hz": 238.46978091721599,
+   "dlnf_dlnk_mount": 0.0011
+  },
+  {
+   "mode": 38,
+   "f_hz": 238.8306286146581,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 39,
+   "f_hz": 244.42104431153027,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 40,
+   "f_hz": 247.4160383436765,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 41,
+   "f_hz": 251.60561769381886,
+   "dlnf_dlnk_mount": 0.0003
+  },
+  {
+   "mode": 42,
+   "f_hz": 254.08276134657228,
+   "dlnf_dlnk_mount": 0.0003
+  },
+  {
+   "mode": 43,
+   "f_hz": 257.7474483187721,
+   "dlnf_dlnk_mount": 0.0042
+  },
+  {
+   "mode": 44,
+   "f_hz": 259.4886553237987,
+   "dlnf_dlnk_mount": 0.0002
+  },
+  {
+   "mode": 45,
+   "f_hz": 263.3296112172935,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 46,
+   "f_hz": 263.93444640691143,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 47,
+   "f_hz": 270.6869444586872,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 48,
+   "f_hz": 274.44871833220043,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 49,
+   "f_hz": 276.38703397434256,
+   "dlnf_dlnk_mount": 0.0001
+  },
+  {
+   "mode": 50,
+   "f_hz": 282.2721067492205,
+   "dlnf_dlnk_mount": 0.0004
+  },
+  {
+   "mode": 51,
+   "f_hz": 282.88608905260935,
+   "dlnf_dlnk_mount": 0.0081
+  },
+  {
+   "mode": 52,
+   "f_hz": 286.3959403888222,
+   "dlnf_dlnk_mount": 0.0002
+  },
+  {
+   "mode": 53,
+   "f_hz": 291.97278631647214,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 54,
+   "f_hz": 293.2696399065396,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 55,
+   "f_hz": 293.2699267096526,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 56,
+   "f_hz": 293.2699267139037,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 57,
+   "f_hz": 293.26992706578005,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 58,
+   "f_hz": 293.2699489943007,
+   "dlnf_dlnk_mount": 0.0
+  },
+  {
+   "mode": 59,
+   "f_hz": 298.50278720347774,
+   "dlnf_dlnk_mount": 0.0
+  }
+ ],
+ "finite_perturbation": {
+  "x0.5": {
+   "coupled_freqs_hz": [
+    53.61,
+    60.93,
+    61.38,
+    66.28,
+    72.15,
+    72.7,
+    76.36,
+    76.7,
+    86.16,
+    87.32,
+    106.71,
+    113.65,
+    118.52,
+    122.59
+   ],
+   "qoi_th_cpl_N": [
+    254.39,
+    256.14,
+    364.14
+   ],
+   "qoi_shift_pct": [
+    -28.8,
+    -25.6,
+    -24.2
+   ]
+  },
+  "x1.0": {
+   "coupled_freqs_hz": [
+    53.61,
+    71.17,
+    71.8,
+    80.57,
+    80.61,
+    86.43,
+    86.45,
+    86.5,
+    87.08,
+    106.71,
+    111.89,
+    115.98,
+    121.61,
+    122.76
+   ],
+   "qoi_th_cpl_N": [
+    357.37,
+    344.15,
+    480.33
+   ]
+  },
+  "x2.0": {
+   "coupled_freqs_hz": [
+    53.61,
+    71.5,
+    72.11,
+    83.32,
+    83.56,
+    86.45,
+    106.39,
+    106.71,
+    111.12,
+    113.23,
+    117.9,
+    119.06,
+    123.0,
+    123.01
+   ],
+   "qoi_th_cpl_N": [
+    398.76,
+    381.11,
+    631.16
+   ],
+   "qoi_shift_pct": [
+    11.6,
+    10.7,
+    31.4
+   ]
+  }
+ },
+ "verdict": {
+  "mount_in_load_path": true,
+  "peak_mount_se_fraction": 0.897,
+  "peak_dlnf_dlnk": 0.4487,
+  "peak_mode_hz": 87.08063226858924,
+  "sigma_f_floor": 0.046,
+  "identifiable_from_coupled_modal_test": true,
+  "statement": "The mount stores its strain energy in the coupled interface (bounce/rock) modes; d ln f / d ln k there exceeds the predecessor's sigma_f ~ 0.046 discrepancy floor by an order of magnitude, so -- UNLIKE the bare-ShockSat joints (3 % < 4.6 % floor) -- the mount WOULD be identifiable from a modal test of the mounted configuration. Until such a test exists the mount is UNCONSTRAINED (prior-driven), which is exactly why the QOI variance decomposition matters. Finite x0.5/x2 perturbation confirms in-path: bounce modes and QOI move strongly (see perturbation table). No sampler was run; this is a sensitivity/information statement."
+ },
+ "note": "SE fractions of mass-normalized coupled modes; closure should be ~1.0 per mode. HYPOTHETICAL configuration."
+}

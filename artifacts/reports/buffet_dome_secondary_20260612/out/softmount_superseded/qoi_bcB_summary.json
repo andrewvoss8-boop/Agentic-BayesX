@@ -1,0 +1,52 @@
+{
+ "bc": "bcB",
+ "n_modes_used": 1978,
+ "fmax_mode": 819.1693557501494,
+ "band": [
+  20.0,
+  400.0
+ ],
+ "n_freq": 320,
+ "forcing": {
+  "q_bar": 30000.0,
+  "Cp_rms": 0.04,
+  "Uc": 210.0,
+  "ax": 0.12,
+  "ay": 0.72,
+  "f0_shape": 50.0,
+  "p_rms_total_Pa": 1200.0
+ },
+ "eta": 0.02,
+ "self_check_rel": 9.799305493143503e-16,
+ "caveat": "BUFFET-ONLY (D12); representative unverified vehicle numbers; deterministic nominal (no CI yet)",
+ "rms_headline": {
+  "strut_1_F": 24.69659720085473,
+  "strut_2_F": 30.93328365492561,
+  "strut_3_F": 22.19901502457257,
+  "strut_4_F": 23.577116056025293,
+  "strut_5_F": 32.33257056546719,
+  "strut_6_F": 24.068974409392705,
+  "tray_net_Fx": 35.48746323705712,
+  "tray_net_Fy": 38.293717287865356,
+  "tray_net_Fz": 37.24792995161172,
+  "tray_net_punch": 42.62225161594048,
+  "tray_net_Mx": 8.086978228700112,
+  "tray_net_My": 7.569361927455122,
+  "tray_net_Mz": 6.101736279330085,
+  "copv_mount1_Fx": 22.870599178078177,
+  "copv_mount1_Fy": 12.991235030134492,
+  "copv_mount1_Fz": 23.398869923733965,
+  "copv_mount2_Fx": 22.852200365452287,
+  "copv_mount2_Fy": 12.996712727044692,
+  "copv_mount2_Fz": 23.382474033242065,
+  "copv_net_Fx": 42.68619598519239,
+  "copv_net_Fy": 25.939109125677636,
+  "copv_net_Fz": 32.22279332047647,
+  "copv_net_punch": 34.55590451900141,
+  "av_acc_x": 2.7135582260900524,
+  "av_acc_y": 2.68187039461631,
+  "av_acc_z": 3.393253198303691
+ },
+ "clip_frac_max": 0.0,
+ "runtime_s": 466.176283121109
+}

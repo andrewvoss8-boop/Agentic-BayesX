@@ -1,0 +1,13 @@
+{
+ "cid": "rnd022",
+ "family": "scale",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "al_welds",
+   "factor": 0.7491932815881451
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

@@ -1,0 +1,26 @@
+[build] a01_bb_xface (split): OK n_modes=74 pairs=33
+[build] a02_bb_bulkband (split): OK n_modes=74 pairs=33
+[build] a03_welds_t130 (thickness): OK n_modes=74 pairs=33
+[build] a04_welds_t074 (thickness): OK n_modes=74 pairs=33
+[build] a05_bolt_soft (connect): OK n_modes=74 pairs=33
+[build] a06_bolt_stiff (connect): OK n_modes=74 pairs=33
+[build] a07_mount_soft (connect): OK n_modes=74 pairs=33
+[build] a08_dishmount_soft (connect): OK n_modes=74 pairs=33
+[build] a09_tb_nearjoint (split): OK n_modes=74 pairs=33
+[build] a10_tb_nearbulk (split): OK n_modes=74 pairs=33
+[build] a01_bb_xface: exists, skip
+[build] a02_bb_bulkband: exists, skip
+[build] a03_welds_t130: exists, skip
+[build] a04_welds_t074: exists, skip
+[build] a05_bolt_soft: exists, skip
+[build] a06_bolt_stiff: exists, skip
+[build] a07_mount_soft: exists, skip
+[build] a08_dishmount_soft: exists, skip
+[build] a09_tb_nearjoint: exists, skip
+[build] a10_tb_nearbulk: exists, skip
+[build] a11_ref_202 (refine): OK n_modes=74 pairs=33
+[build] a12_ref_501 (refine): OK n_modes=74 pairs=33
+[build] a13_bolt_plus_tbsplit (connect+split): OK n_modes=74 pairs=33
+[build] a14_plates_split (split): OK n_modes=74 pairs=33
+[build] a15_scale_ctrl (parametric_only): OK n_modes=74 pairs=33
+[build] a16_bb_splits_combo (split): OK n_modes=74 pairs=33

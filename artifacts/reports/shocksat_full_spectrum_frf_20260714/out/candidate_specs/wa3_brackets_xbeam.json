@@ -1,0 +1,21 @@
+{
+ "cid": "wa3_brackets_xbeam",
+ "family": "scale+thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    301,
+    302
+   ],
+   "t_scale": 0.85,
+   "name": "brackets085"
+  },
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.4
+  }
+ ],
+ "rationale": "stack the round-2 bracket winner (0.179) with the round-1 parametric cross_beam winner (0.170)."
+}

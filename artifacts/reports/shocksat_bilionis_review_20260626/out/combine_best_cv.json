@@ -1,0 +1,25 @@
+{
+  "deliverable": "held-out-SENSOR CV FRF correlation: does the remesh gain survive Bayesian updating?",
+  "metric": "fit per-mode amp on 90% sensors -> predict held-out 10%, median log|H| corr; peaks moved by theta",
+  "baseline_oracle_cv": 0.322,
+  "remesh_oracle_cv": 0.441,
+  "nuts_convergence": {
+    "max_rhat": 1.004,
+    "min_ESS": 774.0,
+    "divergences": 0,
+    "converged": true
+  },
+  "remesh_bayes_median_cv": 0.388,
+  "remesh_bayes_posterior_cv": {
+    "median": 0.41,
+    "p2.5": 0.366,
+    "p97.5": 0.442,
+    "n_draws": 60
+  },
+  "summary_FRF_corr_heldout_sensor_CV": {
+    "baseline_oracle": 0.322,
+    "remesh_oracle": 0.441,
+    "remesh_bayes_median": 0.388,
+    "remesh_bayes_posterior_median": 0.41
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "deliverable": "value of L5 updating for held-out MODAL FREQUENCY",
+  "split_seed": 0,
+  "n_observed_modes": 16,
+  "n_heldout_modes": 11,
+  "calib_converged": true,
+  "twin_vs_climatology": {
+    "twin_crps_hz": 2.094823921594405,
+    "clim_crps_hz": 30.2099609375,
+    "crps_skill": 0.9306578407721781,
+    "twin_coverage": 0.8181818181818182
+  },
+  "value_of_updating_vs_nominal": {
+    "nominal_fem_median_abs_freq_err_pct": 2.1019692014386604,
+    "calibrated_median_abs_freq_err_pct": 1.0667620729129084
+  },
+  "runtime_s": 148.5074508190155
+}

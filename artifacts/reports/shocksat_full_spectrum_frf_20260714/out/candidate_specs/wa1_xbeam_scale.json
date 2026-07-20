@@ -1,0 +1,12 @@
+{
+ "cid": "wa1_xbeam_scale",
+ "family": "parametric_only",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.4
+  }
+ ],
+ "rationale": "parametric_only control: the cross-beam couples the two box halves and governs the in-plane (X/Y) global modes; a pure parametric scale is the honest baseline the shape/thickness edits must beat (true-remodel lesson: parametric controls matched every shape edit)."
+}

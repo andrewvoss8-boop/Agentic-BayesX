@@ -1,0 +1,13 @@
+{
+ "cid": "wr1_rnd005",
+ "family": "parametric_only",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "top_box",
+   "factor": 1.5971893843640252
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

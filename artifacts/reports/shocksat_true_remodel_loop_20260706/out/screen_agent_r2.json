@@ -1,0 +1,101 @@
+{
+ "note": "NO-sampler train-side proxy (D9); not a posterior, not the metric",
+ "rank": [
+  {
+   "cid": "b09_alweld_t074",
+   "family": "thickness",
+   "proxy": 1.0006,
+   "mean_mac": 0.4423,
+   "mean_abs_df": 0.05086,
+   "n_matched": 33
+  },
+  {
+   "cid": "b07_weld_t085",
+   "family": "thickness",
+   "proxy": 0.9867,
+   "mean_mac": 0.4274,
+   "mean_abs_df": 0.05034,
+   "n_matched": 33
+  },
+  {
+   "cid": "b06_weld_t060",
+   "family": "thickness",
+   "proxy": 0.9711,
+   "mean_mac": 0.4128,
+   "mean_abs_df": 0.05087,
+   "n_matched": 33
+  },
+  {
+   "cid": "b03_bb_4way",
+   "family": "split",
+   "proxy": 0.9372,
+   "mean_mac": 0.3718,
+   "mean_abs_df": 0.04729,
+   "n_matched": 33
+  },
+  {
+   "cid": "b02_bb_3band",
+   "family": "split",
+   "proxy": 0.9043,
+   "mean_mac": 0.3367,
+   "mean_abs_df": 0.04621,
+   "n_matched": 33
+  },
+  {
+   "cid": "b12_bb3band_weld",
+   "family": "split+thickness",
+   "proxy": 0.89,
+   "mean_mac": 0.3208,
+   "mean_abs_df": 0.04537,
+   "n_matched": 33
+  },
+  {
+   "cid": "b11_bb_drivecorner",
+   "family": "split",
+   "proxy": 0.8882,
+   "mean_mac": 0.3274,
+   "mean_abs_df": 0.04959,
+   "n_matched": 33
+  },
+  {
+   "cid": "b01_stack_bb_weld",
+   "family": "split+thickness",
+   "proxy": 0.8807,
+   "mean_mac": 0.3212,
+   "mean_abs_df": 0.0503,
+   "n_matched": 33
+  },
+  {
+   "cid": "b10_bbbulk_weld",
+   "family": "split+thickness",
+   "proxy": 0.8499,
+   "mean_mac": 0.2928,
+   "mean_abs_df": 0.05147,
+   "n_matched": 33
+  },
+  {
+   "cid": "b08_steelweld_t074",
+   "family": "thickness",
+   "proxy": 0.8451,
+   "mean_mac": 0.2879,
+   "mean_abs_df": 0.0514,
+   "n_matched": 33
+  },
+  {
+   "cid": "b04_ctrl_bb_scale",
+   "family": "parametric_only",
+   "proxy": 0.8095,
+   "mean_mac": 0.2488,
+   "mean_abs_df": 0.04963,
+   "n_matched": 33
+  },
+  {
+   "cid": "b05_ctrl_multiscale",
+   "family": "parametric_only",
+   "proxy": 0.8038,
+   "mean_mac": 0.2486,
+   "mean_abs_df": 0.05242,
+   "n_matched": 33
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "cid": "ma1_mesh_brkt",
+ "cls": "mesh_density",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    301,
+    302
+   ]
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: residual-vs-mesh-size corr is ~0 (+0.05) so no global refinement signal; quota slot spent where local bending is coarsest per residual cells - Top_Brackets|Y 0.734 dex with only ~2 elements across each bracket leg (768 quads refined)",
+ "track": "agent",
+ "round": 1,
+ "rationale": "diagnosis_mf_r1.json: residual-vs-mesh-size corr is ~0 (+0.05) so no global refinement signal; quota slot spent where lo"
+}

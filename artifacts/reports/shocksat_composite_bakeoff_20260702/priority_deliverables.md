@@ -1,0 +1,18 @@
+# priority_deliverables — COMPOSITE BAKE-OFF (task card: docs/lab/composite_remodel_beck_runner_prompt.md, approved by Andrew 2026-07-02)
+
+Each priority ask restated in my own words, its interpretation, and where it is delivered. A priority with no
+delivered artifact is a failure; an "assumed" interpretation without confirmation is flagged.
+
+| # | Priority ask (my words) | Interpretation / notes | Delivered at |
+|---|---|---|---|
+| P1 | Pre-register and run the FULL 2x3 matrix: MODEL {M0 inherited FEM, M1 best agent remodel} x SHAPE-USE {S0 freq-only L5, S1 freq+MAC, S2 Beck shape field}, statFEM F(k) discrepancy always ON. No silent arm-dropping. | 6 core arms M0S0/M0S1/M0S2/M1S0/M1S1/M1S2, all reported even if null/falsified. M0S0+F(k) = proven baseline A; M1S2+F(k) = full composite D. | `out/matrix_scorecard.json`, `packet.md` matrix table, money figure |
+| P2 | Agentic remodeling track feeding M1: O(100+) diagnosis-seeded + random candidates, two-tier screen (cheap -> full eigensolve top ~30 -> NUTS+evidence top ~10), NO from-scratch geometry rebuild. | Allowed families: joint/interface compliance (incl. new DOFs), per-region thickness/offset, connectivity, weld/contact, mass distribution. Seeds: region_diagnosis.md (bolted joint, steel bottom corner, 150-210 Hz cluster, bulkhead interfaces) + random tranche. | `out/candidates.json`, `out/tier1_screen.json`, `out/tier2_full.json`, `out/tier3_evidence.json` |
+| P3 | Model selection by Bayesian EVIDENCE on a SHAPE-INCLUSIVE likelihood (freq+MAC minimum). Frequency-only evidence FORBIDDEN as the selector. Prior-robustness of the ranking reported. | Evidence machinery per stage1_evidence pattern, extended with the MAC/shape block; sigma_prior sweep 0.15/0.25/0.40. | `out/tier3_evidence.json`, evidence table in `packet.md` |
+| P4 | Score everything on HELD-OUT data: leave-one-DRIVE-out (5 folds) primary + held-out-SENSOR splits (R1); net-CG QOI bands (R2, coverage=HARD gate); leave-modes-out overconfidence audit (R3, widen>1 or DISQUALIFIED); evidence sanity (R4: an M1 winner must beat M0 on evidence AND on held-out R1 or R2). | Thresholds + baseline bars pre-registered in `question_framing.md` BEFORE science; checker SHA-locked first. | `out/matrix_scorecard.json`, `check.py` output |
+| P5 | LIMITED DATA, NEVER LIMITED MODES: full in-band mode set (45-260 Hz), all 5 drives, never prune modes to flatter a method. | Encoded in quantity contract + checker (n_modes reported per arm; pruning = RED). | all scoring code; checker gate |
+| P6 | Encode the two historic metric traps in the checker: (i) NO per-mode amplitude/phase fitting in any selection score; (ii) re-pairing-robust mode matching (one-to-one assignment pairing, not greedy MAC). | Answer-key reconstruction from HELD-OUT measured FRFs may use LSQ participation (it reconstructs truth, not the candidate's score) — pre-registered distinction, see decisions_log D2. | `check.py`, `out/matrix_scorecard.json` declarations |
+| P7 | Deliverable: full-matrix scorecard, prior-robust evidence table, single delivered-twin recommendation per QOI, packet + findings, Tufte-linted figures incl. money figure vs baseline bars + oracle ceiling, runtime.json, runs.md entry + project_log row copied from checker. | Winner's curse: every "best" reported as best-of-N with N. RED labeled "pre-registered claim falsified" vs "pipeline failure". | `packet.md`, `findings.md`, `figures/`, `runtime.json`, notes |
+
+Ambiguities flagged at start (see decisions_log for resolutions): D1 (which measured-frequency set for
+multi-reference L5), D2 (answer-key LSQ vs metric-trap #1), D3 (card's Beck bar -0.68->-0.25 provenance =
+shapefield_lever.json 3-seed mean, not the single-seed modal_beck_ash.json).

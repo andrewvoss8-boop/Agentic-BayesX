@@ -1,0 +1,6 @@
+[M0] R-hat 1.00 ESS 1674 | sigma_w 0.00 | PEAK cover 0.00 IS 5.77e+03 | BAND cover 0.00 IS 1.85e+04 | 664s
+[M1] R-hat 1.01 ESS 147 | sigma_w 1.61 | PEAK cover 1.00 IS 5.44e+03 | BAND cover 1.00 IS 1.81e+04 | 436s
+[M2] R-hat 6.41 ESS 0 | sigma_w 15.75 | PEAK cover 1.00 IS 4.47e+17 | BAND cover 1.00 IS 1.28e+18 | 490s
+[M3] R-hat 26.08 ESS 0 | sigma_w 15.05 | PEAK cover 1.00 IS 3.95e+17 | BAND cover 1.00 IS 1.14e+18 | 680s
+-> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/scores_summary.json (2272s)
+SCORE_ARMS DONE

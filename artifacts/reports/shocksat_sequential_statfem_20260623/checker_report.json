@@ -1,0 +1,117 @@
+{
+  "task": "ShockSat sequential statFEM PSD-envelope pilot",
+  "overall": "YELLOW",
+  "counts": {
+    "green": 18,
+    "yellow": 3,
+    "red": 0
+  },
+  "gates": [
+    {
+      "gate": "file.priority_deliverables.md",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.decisions_log.md",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.question_framing.md",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.quantity_contracts.md",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.assumptions_ledger.md",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.run_all.sh",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.check.py",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.runtime.json",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "file.out/results.json",
+      "status": "GREEN",
+      "msg": "present"
+    },
+    {
+      "gate": "split.no_leakage",
+      "status": "GREEN",
+      "msg": "76 observed / 8 held-out; disjoint"
+    },
+    {
+      "gate": "quantity.units",
+      "status": "GREEN",
+      "msg": "{'acceleration': 'g', 'force': 'lbf', 'frf': 'g/lbf', 'psd': 'g^2/Hz'}"
+    },
+    {
+      "gate": "psd.metrics_present",
+      "status": "GREEN",
+      "msg": "64 held-out sensor-reference rows"
+    },
+    {
+      "gate": "result.psd_improvement",
+      "status": "YELLOW",
+      "msg": "no green PSD-envelope win: best stiffness_residual median ratio 2.07, clean-win 0.19"
+    },
+    {
+      "gate": "filter.hyperparameters",
+      "status": "YELLOW",
+      "msg": "process and observation noise scales are fixed validity-probe assumptions, not inferred/posterior"
+    },
+    {
+      "gate": "stiffness.nuts_subset",
+      "status": "GREEN",
+      "msg": "small-subset NUTS converged: R-hat 1.002, ESS 1157, div 0"
+    },
+    {
+      "gate": "discrepancy.residual_band",
+      "status": "YELLOW",
+      "msg": "worst training residual 97.5% PSD multiplier 22.0 dB"
+    },
+    {
+      "gate": "baseline.l5_reused",
+      "status": "GREEN",
+      "msg": "existing L5/modal-frequency probe reused by path"
+    },
+    {
+      "gate": "runtime.accounting",
+      "status": "GREEN",
+      "msg": "active=115.895 elapsed=115.895"
+    },
+    {
+      "gate": "figures.present",
+      "status": "GREEN",
+      "msg": "figures/fig_method_graph.png, figures/fig_grms_summary.png, figures/fig_example_envelope.png"
+    },
+    {
+      "gate": "figures.image_qa",
+      "status": "GREEN",
+      "msg": "{\"fig_grms_summary.png\": {\"width\": 1734, \"height\": 940, \"mode\": \"RGBA\", \"legible_min_size_px\": true}, \"fig_example_envelope.png\": {\"width\": 1620, \"height\": 942, \"mode\": \"RGBA\", \"legible_min_size_px\": true}, \"fig_method_graph.png\": {\"width\": 1700, \"height\": 720, \"mode\": \"RGBA\", \"legible_min_size_px\": true}}"
+    },
+    {
+      "gate": "figures.tufte_lint",
+      "status": "GREEN",
+      "msg": "lint output present"
+    }
+  ],
+  "headline": "YELLOW: best variant stiffness_residual median GRMS ratio 2.07; clean-win rate 0.19"
+}

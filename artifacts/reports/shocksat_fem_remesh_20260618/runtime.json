@@ -1,0 +1,12 @@
+{
+ "active_runtime_s": 3853.2,
+ "elapsed_wallclock_s": null,
+ "breakdown": {
+  "campaign_solves_s": 3094.1,
+  "n_solves": 11,
+  "baseline_solve_s": 288.1,
+  "dish_refine_solve_s": 271.0,
+  "misc_assemble_diag_agg_s": 200
+ },
+ "note": "active = sum per-command solve times (BLAS pinned, float64, eigsh 80 modes). elapsed wallclock spanned human-approval waits + detached idle; not comparable."
+}

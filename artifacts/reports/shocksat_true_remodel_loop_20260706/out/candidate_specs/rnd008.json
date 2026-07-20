@@ -1,0 +1,42 @@
+{
+ "cid": "rnd008",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 701,
+   "rule": {
+    "type": "near_points",
+    "points": [
+     [
+      8.937482,
+      1.749999,
+      42.75036
+     ],
+     [
+      -4.99999,
+      -10.0146,
+      18.37496
+     ],
+     [
+      -8.93748,
+      1.749996,
+      44.62504
+     ],
+     [
+      -6.62499,
+      0.0,
+      57.37489
+     ]
+    ],
+    "radius": 1.1145017800655599
+   },
+   "name": "rsplit9"
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)",
+ "split_info": {
+  "rsplit9": 48
+ }
+}

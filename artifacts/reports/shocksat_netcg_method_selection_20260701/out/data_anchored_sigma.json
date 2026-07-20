@@ -1,0 +1,124 @@
+{
+  "n_drives": 5,
+  "drives": [
+    "+X",
+    "+Z(990)",
+    "+XY",
+    "+Z(900)",
+    "+Y"
+  ],
+  "n_measured_modes": 20,
+  "assumed_SD_A_M": 0.35,
+  "naive_SD_A_M_median": 1.032,
+  "robust_SD_A_M_median": 0.862,
+  "robust_SD_A_M_range": [
+    0.211,
+    1.443
+  ],
+  "n_modes_robustly_estimated": 20,
+  "note_robust": "robust = std across only the drives that EXCITE each mode (|a_i|>=0.25*drive median, >=2 drives); the naive std is inflated by poorly-excited modes (DD1's +Z@900 73Hz 5x outlier is exactly this).",
+  "per_mode": [
+    {
+      "hz": 54.2,
+      "emp_sd": 1.443
+    },
+    {
+      "hz": 75.0,
+      "emp_sd": 0.901
+    },
+    {
+      "hz": 70.0,
+      "emp_sd": 0.878
+    },
+    {
+      "hz": 85.8,
+      "emp_sd": 0.923
+    },
+    {
+      "hz": 107.0,
+      "emp_sd": 0.705
+    },
+    {
+      "hz": 118.5,
+      "emp_sd": 0.949
+    },
+    {
+      "hz": 125.0,
+      "emp_sd": 1.11
+    },
+    {
+      "hz": 117.6,
+      "emp_sd": 1.27
+    },
+    {
+      "hz": 158.2,
+      "emp_sd": 0.817
+    },
+    {
+      "hz": 137.2,
+      "emp_sd": 0.878
+    },
+    {
+      "hz": 151.2,
+      "emp_sd": 0.758
+    },
+    {
+      "hz": 165.9,
+      "emp_sd": 0.424
+    },
+    {
+      "hz": 174.8,
+      "emp_sd": 0.517
+    },
+    {
+      "hz": 184.4,
+      "emp_sd": 0.413
+    },
+    {
+      "hz": 168.0,
+      "emp_sd": 0.711
+    },
+    {
+      "hz": 172.3,
+      "emp_sd": 0.846
+    },
+    {
+      "hz": 188.6,
+      "emp_sd": 1.337
+    },
+    {
+      "hz": 195.7,
+      "emp_sd": 0.211
+    },
+    {
+      "hz": 190.2,
+      "emp_sd": 0.889
+    },
+    {
+      "hz": 197.8,
+      "emp_sd": 0.75
+    }
+  ],
+  "pooling_test": {
+    "between_mode_var": 0.3591,
+    "within_drive_var": 0.7898,
+    "ICC": 0.313,
+    "interpretation": "drive scatter dominates (ICC<0.5) -> a shared amplitude scale (pooling) IS reasonable for the measured modes"
+  },
+  "band_factor_assumed_vs_data": {
+    "shear_X": {
+      "assumed_SD_A_M_0.35": 4.46,
+      "data_anchored": 6.43
+    },
+    "shear_Y": {
+      "assumed_SD_A_M_0.35": 4.41,
+      "data_anchored": 12.68
+    },
+    "normal_Z": {
+      "assumed_SD_A_M_0.35": 5.41,
+      "data_anchored": 6.04
+    }
+  },
+  "verdict": "ROBUST empirical measured-mode SD_A_M median 0.86 (naive 1.03 is inflated by poorly-excited modes) vs assumed 0.35 -> the 0.35 assumption is somewhat OPTIMISTIC; data says ~0.86, widening the shear band modestly (see band_factor_assumed_vs_data)",
+  "note": "a_i is the per-drive modal scale (drive-independent up to gain); cross-drive log-spread = the empirical amplitude uncertainty. NO NUTS; NO new hardware."
+}

@@ -1,0 +1,53 @@
+{
+ "cid": "ma3_prop_brktxbeam",
+ "track": "agent",
+ "round": 3,
+ "cls": "property_control",
+ "ops": [
+  "thickness",
+  "scale"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.15749121884370096,
+ "exact_b200_500": 0.19838248283413695,
+ "exact_folds": {
+  "m_xpos_990x": 0.29663029270699126,
+  "m_zpos_990z": 0.49380895959152227,
+  "m_ypos_990y": 0.09452086036252229,
+  "m_zpos_900z": -0.25499523728623197
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.18174452319322842,
+  "m_zpos_990z": 0.18371758041019193,
+  "m_ypos_990y": 0.1651943209940482,
+  "m_zpos_900z": 0.2628735067390793
+ },
+ "theta_map": [
+  1.0215961978568024,
+  0.9999675913960516,
+  0.9855216346881258,
+  1.2908849051549172,
+  0.9777131574731884,
+  1.300347672985778,
+  0.8969239739923918,
+  1.0844160844581099,
+  1.0798337605407147,
+  0.8425328453169755
+ ],
+ "enriched_pkg": "ma3_prop_brktxbeam__xenr",
+ "spot_max_pct": 7.170639637621434e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 10,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": -0.0688,
+  "max_mode_shift_pct": 4.2056,
+  "pass": true
+ },
+ "solve_s_theta1": 1378.5,
+ "solve_s_enrich": 766.7,
+ "wall_s": 2199.8,
+ "ts": "2026-07-17T10:43:27",
+ "diagnosis_link": "CONTROL: combine the two strongest historical property levers (brackets_soft +0.1634, xbeam component of the r1 winner) - stacking has interfered before; the control class still gets its best shot"
+}

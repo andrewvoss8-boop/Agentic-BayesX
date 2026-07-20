@@ -1,0 +1,14 @@
+{
+ "cid": "a12_ref_501",
+ "family": "refine",
+ "ops": [
+  {
+   "op": "refine",
+   "pids": [
+    501
+   ]
+  }
+ ],
+ "rationale": "TRUE refinement of the Rectangular_Plates (worst region MAC 0.237, only 896 elements): if the plate local shapes are under-resolved, refinement is the ONLY family that can add them.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: region_mac_mean Rectangular_Plates=0.237"
+}

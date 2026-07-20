@@ -1,0 +1,10 @@
+{
+ "files": [
+  "code/wscore_wide.py",
+  "code/wide_forward.py",
+  "code/arm_e_evidence.py",
+  "code/collect_results.py",
+  "code/loop_wide.py",
+  "code/rescore_freeze.py"
+ ]
+}

@@ -37,3 +37,267 @@ detail remains in `notes/runs.md` and the per-run workspaces.
 - STEERING (durable): scope-drift RED FLAG -> no bigger/more-technical plan without re-confirming the REAL objective; keep the human in the COMPREHENSION loop (not just approvals); prefer the simplest experiment that answers the real question. (lessons-learned.md 2026-06-05.)
 - MASTER 2026-06-05: Stage-3 INDEPENDENTLY SCORED + VERIFIED (artifacts/reports/blind_round3_stage3_review_20260605/review.md). Reviewer recomputed every number from saved artifacts; self-report CORROBORATED (and conservative on sigma_e). Apples-to-apples confirmed (canonical FBS netCG both sides; calibration apparent-mass data intact). VERDICT = honest MIXED result, no overclaim. REAL GAINS: (1) per-strut ASYMMETRIC physics alone CONVERGES (R-hat 1.009, ESS 487, 0 div, k_pop near nominal) -- real vs prior blind non-convergence; (2) canonical FBS netCG -> apples-to-apples + netCG bias 4.86x->3.10x (converged without-d, 0% cov = genuine over-prediction) / 1.71x (with-d, wide/non-converged); (3) held-out bands sharper (~8.8x vs prior 12-18x). OPEN FAILURES: (a) the Stage-3 novel structure/property-based discrepancy is CONFOUNDED (k_j=k_pop*exp(d_j) is in the SAME parameter space as per-strut k) -> traded the sigma_d<->sigma_e ridge for a parameter<->discrepancy ridge; with-d FAILS gate (R-hat 2.85, ESS 4.7, sigma_d->1.33), correctly NOT claimed NUTS-active; (b) sigma_e ~150-190x true sensor noise = MISSING-HIGHER-MODE floor (truth has 2-3 in-band + 1-3 >160 Hz modes/DOF the coarse 6-mount+1-dome-SDOF model cannot represent); (c) f_dome ~20 Hz low; held-out band 95-115 Hz cov95 0.715 (under-covers). Companions verified: starve-data still R-hat 2.85 (ridge STRUCTURAL not data-deluge); n_eff(k_pop)=0.64; grid-invariance honestly intractable under ridge. Integrity/blindness PASS (bias points AWAY from leakage). NEXT ACTION (DECISION): proceed to STAGE 4 (inference-only, SAME blind truth, NO Codex re-publish) = (i) higher-fidelity FEM (flexible isogrid panel + strut/shell bending; reduced-order/modal-truncation or TensorMesh-sparse to stay NUTS-feasible) to add the missing modes, and (ii) ORTHOGONAL discrepancy (output-mode/participation space) or modular/cut updating so it can't confound k_pop. Reviewer agrees this is the evidence-motivated fix.
 - STAGE 3 DONE (2026-06-04): INFERENCE runner, BLIND, built+ran the three fixes in runs/round3/opus48/ (blind3_{model,infer,qoi,figs,gridinv,pptx}.py; packet_stage3.md + packet.pptx + manifest.json + runtime.json + files_changed.md; decisions D25-D30; sealed truth NOT opened). MIXED HONEST RESULT: (1) per-strut ASYMMETRIC physics ALONE CONVERGES (rank-split R-hat 1.009, bulk ESS 487, 0 div; k_pop 1.685e7 near nominal) = real gain over the prior blind non-convergence; (2) the structure/property-based per-strut discrepancy DOES NOT resolve the ridge -- it is CONFOUNDED with the per-strut stiffness it sits on -> INTRODUCES a parameter<->discrepancy ridge, with-d FAILS gate (R-hat 2.85, ESS 4.7, sigma_d->1.33). Did NOT claim NUTS active for with-d. (3) FBS netCG contract cut bias 4.86x->1.71x(with-d wide)/3.10x(without-d converged, 0% cov = genuine over-prediction); f->0 limit exact 0.282. sigma_e 0.69(with-d)/0.93(without-d) BOTH ~2x inflated = DOMINANT residual error is MISSING HIGHER MODES (z 62/77/120; lateral 51/87/137) outside the coarse model span. Held-out new-build cov95 0.911 logwidth 2.16 (~8.7x, far sharper than prior 12-18x); band 95-115 cov95 0.715 (under-covers). Companions: starve-data still R-hat 2.85 (ridge STRUCTURAL not data-deluge), n_eff(k_pop) 0.6/7920, grid-invariance bounded/intractable under ridge. KEY LESSON: a structure-based discrepancy must be ORTHOGONAL to the calibration params (output-mode/participation space) or use modular/cut updating; same-parameter-space discrepancy = confounded. Immutable checkers verified OK. NEXT (for master/Stage-4): higher-fidelity FEM (flexible isogrid panel + strut/shell bending) = real fix for the missing-mode floor; then orthogonal discrepancy. Handed back to master for scoring vs sealed truth (handoff_to_master.md S9).
+
+## CURRENT STATE entries archived 2026-06-12 (trim into docs/report/project_log.md)
+Verbatim per-thread narrative blocks moved out when the CURRENT STATE block was
+compressed. Authoritative detail also lives in each workspace `packet.md` +
+`decisions_log.md`, `notes/runs.md`, and the central log `docs/report/project_log.md`.
+
+- 7004C MULTI-POINT/6-DOF TEACHING STUDY **COMPLETE, PENDING ANDREW REVIEW** (2026-06-11,
+  lead-as-runner, Claude Code session; design judgment delegated). Workspace
+  `artifacts/reports/notch_multipoint_7004c_20260611/`; `bash run_all.sh` replays in 34 s;
+  check.py OVERALL **YELLOW 20g/2y/0r** exit 0 (yellows = documented r_vis threshold
+  sensitivity D8 + complex-TDOF tables not replicated D3). Deliverables: packet.md, 13 figs,
+  3 GIFs, 14-slide PPTX (numbers pulled from results JSONs). NO sampler (D1). HEADLINES:
+  (1) EX-A replicates 7004C Fig8/9+AppB to 0.86% worst (10 anchors; impedance==direct 1e-14);
+  (2) EX-B 6x6 apparent-mass matrix (f->0 = rigid matrix exact), rotary effective masses
+  (p.56 sums 3e-16), RESULTANT TRAP: net Fz EXACTLY 0 at rocking mode while feet see 9.8 N —
+  the p.10 default limited quantity is blind to rocking; (3) EX-C notch geography: single notch
+  -> shifted CLUSTER (-11..+6% off fixed-base) in mean vs DIFFERENTIAL channels; "how far" =
+  MODAL-OVERLAP REGIME question, not a radius: MOF<1 -> notch GLOBAL (to plate boundary, ~6 foot
+  spacings), MOF>~1 -> r≈λ/4 (0.07-0.09 m vs λ/4 0.08-0.10); rocking notches more local, can be
+  invisible in point spectra; (4) EX-D: net-F limiting fixes bounce (204x->5x PSD) but leaves
+  221x (23 dB) per-foot rocking overtest; moment limit ->32x; roll channel = EXACT-ZERO undertest.
+  λ/4 first-principles guess held ONLY in the diffuse regime — the cheap backing model was needed.
+  NEXT: Andrew review of packet + PPTX; candidate follow-on = same questions on ShockSat × tray
+  coupled thread (real hardware). OPEN AMBIGUITIES: none.
+- MPL STAND FEM REBUILD **COMPLETE, PENDING ANDREW REVIEW** (2026-06-11, runner = FABLE in-chat per
+  Andrew's override; workspace `artifacts/reports/mpl_stand_fem_rebuild_20260611/`; `bash run_all.sh`
+  replays in ~4 min; check.py OVERALL **YELLOW 15g/3y/0r**, exit 0; packet.md). HEADLINES:
+  (1) PARSE-BACKED CARD CORRECTION (D19): PSHELL39 t=0.5in = the 12×6.5in THRUST PLATE (receives the
+  10,000 lbf FORCEs), NOT the sticker shield — the shield was ABSENT from the deck. Andrew confirmed
+  live (D22): shield VERTICAL ⊥ thrust, **t=1.7mm CONFIRMED**, must be modeled → added as 2 coarse
+  steel panels (material ASSUMED steel = yellow) on 14 screw springs (k est 1e5 lbf/in = NEW top knob).
+  Also: F-clamp = 415.3 g CONFIRMED (ledgered, not modeled); PBEAM PID38 unused → beam groups split
+  wall-vs-rest (D25). (2) K(θ)=Σs_g·K_g per-group sparse structure (ShockSat pattern), 19 groups,
+  reassembly ms — sampler-ready, NO sampler run (no convergence claims). (3) Modes: TABLE A nominal
+  189 ≤500 Hz (f1 14.3 Hz; 112 shield / 67 frame / 10 item-local; QOI items have clean local modes
+  19–41 Hz); TABLE B no-shield 77. Gates: mass closure exact 584.8 lbm; free-free exactly 6 RBM —
+  after catching a REAL bug (absolute drilling spring corrupted one rotation RBM → implemented proper
+  K6ROT-style relative penalty, D27); 0 negative eigs; element library 9/9 textbook gates.
+  (4) Identifiability (SE): shield_bend median 83% (band = panel physics); bush_joints ≤21%@210Hz in
+  load path; thrust plate ~0% = not calibratable <500 Hz (documented w/ both evidence lines);
+  item-attachment springs 94–99% in their local modes. (5) Interface points: SHIELD MOUNT = shield
+  grid 800071 (61.5,−24,48.5) — NOTE: mount station rides FRAME/boundary motion (panel/frame ratio
+  ≤1.3), panel antinodes live mid-panel; BEAM MOUNT = grid 670 back wall (60.0,−42.2,48.5), station
+  interpretation = yellow. (6) Discretization honesty: mode-matched to ~150 Hz (median 0.8%, max
+  6.5% vs 2× refine); above ~250 Hz modal-density-only (189 vs 255). YELLOWS (all by design until
+  Andrew confirms): mounted-mass estimates (valve 12 / ebox 15 / wbox 8 / PSU 4 lbm + locations +
+  attach k), shield material, beam-mount station. ROUND-2 ANSWERS FOLDED IN (D31, rev-2 replayed,
+  still YELLOW 15g/3y/0r): valve panel = WHOLE Clippard assembly BOLTED TO STAND BASE → 28 lbm est.
+  at (52,−24,10) on base grids 351-354 (mode 1 now valve rocking 14.57 Hz, in BOTH tables); shield
+  WELDED at a few points → weld-spot springs k_t 1e6 (×10), 'probably steel' kept; box masses =
+  authorized photo guesses (stay yellow). Rev-2 nominal: 185 modes ≤500 (first shield mode 14.92 Hz,
+  mass 600.8 lbm; t-limiting ratios improved 0.511/1.756). D32: drilling penalty = Hughes-Brezzi
+  relative formulation (legit, = deck's own K6ROT device; ×100 arm ≤0.32%), not a patch. NEXT:
+  Andrew packet §9 rev-2 (6 questions). ROUND-3 (D33, rev-3 replayed, YELLOW 15g/3y/0r): "PSU"
+  and electronics box were ONE silver fan box double-counted → MERGED (10 lbm est.), and it mounts
+  ON THE SHIELD over the LabJack sticker w/ 3 bolts (springs to shield grids 800062/64/41) →
+  mass-loads the 1.7mm panel: mode 1 = box-on-panel 11.92 Hz, mode 2 valve 14.9, mode 3 first clean
+  shield 17.2; steel/aluminum freq coincidence BROKEN by box loading (alum arm −29%) → material
+  now testable. BEAM MOUNT corrected → leftmost VERTICAL post (grid 1510, back wall x=59, z≈46.6).
+  Valve assembly under the box on the flat BOTTOM PLATE (not in deck; springs to base rails,
+  flagged). Table B (deck-as-given) = 71 modes (box removed with its mounting surface — fixed a
+  floating-mechanism 0 Hz artifact). Mass 591.8 lbm. NEXT: Andrew packet §9 rev-3 (box mass is the
+  #1 ask — sets mode 1); then test-data ingest (14 CSVs scanned, see below) + NUTS calibration
+  consuming out/model/ groups.
+- NEW THREAD (2026-06-11, Andrew) — MPL TEST STAND scrappy modal test + robust-twin demo (serves §6.1 vision).
+  PLAN: tap tests (wrench) + acoustic tests (home speakers), SINGLE accel, COUPLED vs UNCOUPLED. Secondary =
+  metal ruler clamped to top-right corner of the blue welded-steel MPL stand. Impacts at: (1) interface point,
+  (2) ruler tip, (3) across the stand/other side, (4) middle of plate shield. Goal = "upgrade FEM but not too
+  well" → coarse model + HIGH assumed model discrepancy → robust QOI (intervals widen+cover, deterministic misses).
+  FEM REVIEWED: `MPL test stand/FEM/Test Stand FEA.dat` = Femap/Simcenter SOL SESTATIC (linear STATIC, 10,000 lbf
+  thrust strength case), inch-lbf-sec units. 1415 GRID, 1288 CBEAM (rect-tube steel frame), 72 CQUAD4 + 1 PSHELL
+  t=0.5in (shield panels — thickness suspect for "thin sheet metal"), 70 CBUSH K=1e7 all-DOF (generic joints),
+  39 RBE2, MAT1 E=29e6 psi/nu .29/rho 7.324e-4 (steel, mass IS defined → modal will run), 4 SPC1 123456 (feet
+  fixed). NOT a dynamics model yet → needs SOL 103 + EIGRL. Photos: tall blue A-frame, front = white sheet-metal
+  sticker shield, back = Clippard pneumatic panel + boxes (BIG unmodeled mounted mass).
+  DECISIONS (Andrew 2026-06-11): (D-mpl-3) NO FORCE MEASUREMENT — uncalibrated wrench + speakers only. Ambition =
+  deliver parameter-updating + QOI + 7004C + OSP from ONE single-axis sensor. HONEST SCOPE (lead): freqs+damping are
+  the solid observables → param-updating (~3-5 ID params: clamp/root stiffness, panel t/stiffness, maybe 1 global BC)
+  + OSP (model-based, STRONGER under 1-sensor constraint) + coupled/uncoupled freq SHIFT = 7004C interaction
+  QUALITATIVELY (NOT calibrated apparent mass in kg, NOT clean MAC/shapes from 1 sensor+no force). Absolute-g QOI
+  needs input characterization. (D-mpl-2) START on SHIELD (strong coupling), beam if time. (D-mpl-5) magnet BONDS to
+  ruler (ferromagnetic) → magnet root mount viable; Andrew also procuring a small clamp to model. (D-mpl-4) mounted
+  masses CONM2 OK, BUT QOI = VALVE accelerations + ELECTRONICS BOX → those QOI items need a local mass-on-spring
+  (CONM2+CBUSH/CELAS for a local mode), not a bare rigid CONM2, or QOI = just frame-attach accel. (D-mpl-6, Andrew
+  idea, lead ENDORSED w/ conditions) ACOUSTIC test = HELD-OUT ground truth at valves/box: VALID for held-out
+  frequencies + transmissibility (output/output, input cancels) IF acoustic field repeatable across sequential
+  1-sensor placements + a reference run; NOT valid for absolute g without input proxy (mic). Train=taps,
+  Held-out=acoustic valve/box → coverage = trust gate (= §6.1 robust-twin demo). Data gathered TODAY → lead wrote
+  field protocol (`MPL test stand/FEM/field_protocol_20260611.md`) + full prioritized test matrix
+  (`MPL test stand/FEM/test_matrix_20260611.md`, 6 blocks P1/P2/P3, P1 fast path ~24 runs). Clamp = Jorgensen
+  F-clamp (snug+fixed-turn, marked grip point; spring clamp rejected — floppy/lossy). Acoustic source =
+  audiocheck.net pink noise WAV looped 90 s (loop gaps OK; frozen volume/position is what matters). RUNNER
+  SPOOLED (2026-06-11): `docs/lab/mpl_stand_fem_rebuild_runner_prompt.md` = parametric FEM rebuild (parse deck →
+  python K(θ),M(θ) per-group scaling à la ShockSat; PSHELL t=0.5in SUSPECT → dual mode tables 0.5 vs 16ga; add
+  backside valve-panel + electronics-box as CONM2+spring QOI items with ANDREW-CONFIRM-REQUIRED estimated
+  masses; modes 0-500Hz + sanity gates; mode-shape GIFs; NO sampler this task). RUNNER = FABLE per Andrew
+  2026-06-11 (explicit human override of the 2026-06-08 "FEM tasks = Opus" default; logged in the card itself).
+  MOUNT LOCATIONS (Andrew, final): shield mount = TOP-CENTER of shield (middle of top edge, logo side); beam
+  mount = top-LEFT viewed from logo side, on the BACK wall of the top steel beam; Jorgensen F-clamp both.
+  Card Deliverable 5 = runner must identify + report nearest grid IDs at both interface points. Test matrix
+  updated to match. NOT YET LAUNCHED.
+  DATA GATHERED 2026-06-11 (Andrew; DAQ cable broke early, no avionics-box-top QOI, got 2 avi feet + 1 valve):
+  14 CSVs in `MPL test stand/FEM/test_data/` (single ch, m/s², 10 kHz). Lead scanned (scripts/mpl_event_scan.py
+  + mpl_event_zoom.py) → `MPL test stand/FEM/test_data_scan_20260611/` (inventory.md, second_pass.md,
+  run_mapping.md = authoritative file↔narrative map + figures). KEY: (1) uncoupled stand: 3 accel positions
+  (top-center IF, shield-mid, top-left beam) all clean 3-tap groups + 35-62 s pink-noise acoustic; (2) drive-pt
+  saturation: unloaded-top tap3 @24.6s (793-916 m/s² ≈ ~100g rail) DROP; top-left-beam drive amb. (Q2);
+  (3) shield-tap has 5 groups vs 6 named locations (Q1); (4) SOLO ruler (Jorgensen on Tormach mill, 12" span):
+  f1=3.25 Hz, f2=28.0, re-clamp repeatable; COUPLED on shield: f1=3.00 (-7.7% = THE 7004C shift RESOLVED),
+  f2=27.8, IF ring 28.5+70.8 Hz; (5) `center beam IF above clamp pull attempt 2.csv` = featureless 1/f noise =
+  probable broken-cable file (Q4, unusable); (6) valve acoustic response weak (RMS 0.019 vs 0.14) — SNR check
+  needed. OPEN Qs Q1-Q7 in run_mapping.md (group→location maps, accel axes, sensor range, speaker fixity).
+  Dewesoft mandatory-HPF low-freq relic confirmed; analysis uses 5 Hz zero-phase HP, raw untouched. CAUTION:
+  ruler f1 3 Hz is near that HPF + shows 2nd-harmonic distortion (large-amplitude pull) — damping/freq fits
+  should use the late (small-amplitude) decay.
+  Q1-Q7 ANSWERED (Andrew) + FEATURES EXTRACTED (2026-06-11, scripts/mpl_feature_extract.py → features.md/.json):
+  A1 steel beam=engine beam (5 locations, narrative-order map); A2 drop 47.1+61.4s keep 74.4/80.8/87.4;
+  A3 tappers map confirmed, accel was ON RULER TIP for coupled pull+tappers (FLAGGED: ruler-path filtered,
+  mass loading 22.4g on 43.9g ruler); A4 broken-cable file DELETED at Andrew direction (13 CSVs remain; scan
+  records retained); A5 axis = out-of-plane-of-shield ALWAYS; A6 sensor = MMF KS78C 100mV/g ±100g (rail 981
+  m/s² confirms the 916 drop); A7 speaker chain frozen → transmissibility held-out VALID.
+  HEADLINE FEATURES: ruler solo f1=3.196 Hz ζ=0.31%, re-clamp f1=3.196 ζ=0.24% (freq repeatability exact at
+  0.31 Hz Welch res / zero-crossing; damping scatter ±25%); COUPLED f1=3.078 Hz ζ=0.27% → 7004C shift = -3.7%
+  (CORRECTED from earlier -7.7% which was 0.25Hz-Welch-resolution error; zero-crossing fit authoritative);
+  coupled decay rings 33+s past EOF. Stand tap peaks (recurring): ~10(panel?), 21.3, 65.9, 71-72, 78.7, 102.5,
+  117, 124-128, 147.5, 165, 193.7, 208-211, 230-241, 280, 371, 395, 450 Hz — dense <500 Hz as expected.
+  Acoustic PSDs + held-out |T| (valve, 2 avi feet vs shield ref) computed; valve SNR weak (flagged).
+  RULER GEOMETRY CLOSED (Andrew 2026-06-11: total ~13in, span 12in, accel at very tip, clamp 417.3 g —
+  fable ledger says 415.3, 0.5% delta immaterial, using 417.3): back-calc from measured f1=3.196 Hz →
+  k_tip=12.9 N/m, EI=0.122 N·m², b=1in h=0.66mm section whose implied mass 44.3-44.8 g matches measured
+  43.9 g within ~1-2% = solo ruler model PINNED (two independent checks). Coupled dead mass on shield top
+  edge = 483.6 g (clamp+ruler+accel) — NOT negligible, must be in coupled FEM. In features.md addendum.
+  CURSORY FEM-vs-TEST COMPARISON DONE (lead, 2026-06-11, Andrew's "go ahead"; scripts/mpl_fem_test_compare.py
+  → `MPL test stand/FEM/test_data_scan_20260611/fem_compare/` comparison.md + ladder fig, vs fable rev-3
+  out/modes_nominal.json 183 modes <500 Hz): (1) GLOBAL stat: median |nearest-mode error| of 80 tap peaks =
+  0.52% vs MC-null median 1.10% (5-95%: 0.74-1.59) → below null 5th pct = better than chance, BUT per-peak
+  matching >35 Hz uninformative at 1.55 Hz median spacing (needs shapes/calibration) — stated on figure.
+  (2) SPARSE-BAND ANCHORS: valve-body 11.25 ↔ mode1 box-on-panel 11.92 (-5.6%); top-left-beam 21.25 ↔ mode4
+  ebox 20.65 (+2.9%); avi-L-foot 25.62 ↔ valve_panel 25.41 (+0.8%). (3) KEY FIND: tap top-6 picks empty
+  12-65 Hz where model predicts dense shield band → ACOUSTIC PSDs (df 0.125) DO show it (10.75, 12.5, 16.25,
+  21.6, 26.5, 29.5, 30.9, 40.5, 46-48, 55.7, 60, 66.9, 74.5, 78.3 Hz) = uncalibrated model ladder aligns in
+  density+band placement, ~5-15% offsets ≈ the yellow knobs (box mass, screw k); 1-to-1 pairing NOT claimed.
+  Wrench taps can't excite the panel band — acoustic records carry the panel TRAIN info too → split doc must
+  decide: QOI transmissibilities stay HELD-OUT, reference-point acoustic freqs may join train. NEXT:
+  (1) Andrew §9 rev-3 answers (box mass #1); (2) lead drafts train/held-out split + calibration feature
+  table; (3) next card = ingest + NUTS calibration consuming out/model/ groups. REFS: cantilever-w-end-mass
+  closed form (vibrationdata beam.pdf) = uncoupled sanity; NASA-HDBK-7004C Fig 9 = coupled apparent-mass
+  benchmark.
+- BLOG EXPERIMENT "statFEM replicate-and-extend" ACTIVE (2026-06-10). 3 agents (opus,
+  fable, CODEX) each ran Part 1 (replicate Girolami statFEM §4.1 1-D Poisson) + Part 2
+  (own frequency-domain statFEM extension), separate fresh sessions. Runs in
+  `runs/statfem_freq_2026-06-10/{opus,fable,CODEX}/{part1,part2}/`. Analysis + blog work in
+  `artifacts/reports/statfem_freq_blog_20260610/` (findings_note.md, post_draft.md,
+  challenger_prompt.md, challenger_rubric.md, challenger_reviews/).
+  INTEGRITY: code scan of all 41 scripts = CLEAN (none of Bilionis's 3 cheats; paper renders
+  isolated in reference folders). KEY FINDINGS: (1) anti-cheat rule held — failure shifted to
+  honest UNDER-AMBITION; (2) CODEX chose a 1-DOF toy, all-green but hollow, no gate catches
+  "too-easy problem"; (3) opus+fable INDEPENDENTLY found+control-validated the same result
+  (scalar ρ / stationary-discrepancy GP confound under peaky model error → need model-update
+  or non-stationary d); (4) frequency-grid assembly is the discriminator no checker sees
+  (fable even densified grid at the hidden 50 Hz feature = honest-but-circular); (5) all 3 hit
+  the paper's flat-improper-prior fragility at low n_o (NUTS exposed; RW-Metropolis masked) —
+  NOT a bug, likely known obj-Bayes-for-GP phenomenon, do NOT email Girolami without verifying.
+  DECISIONS: (a) blog framed as follow-on to Bilionis cheating essay; (b) "bug" language
+  removed from all files per anti-overclaim rule. NEXT ACTION: run 3 reviewer models (opus,
+  codex, fable) as framing challengers over the Part-2 runs (then Part-1), score via
+  challenger_rubric.md (reviewer×run matrix; blind-spot-tracks-runner question). GATE: opus
+  Part 2 production run still MID-FLIGHT (figs empty, report has unfilled STATUS/RESULTS
+  placeholders) — do NOT launch the 3 opus_part2 reviews until it finishes (~1-2h); fable/codex
+  reviews can start now. OPEN AMBIGUITIES: whether to run the optional Part-1 reviews; publication
+  still gated on the IP/disclose-before-publish sequence in notes/todo.md.
+  CHALLENGER RESULT (2026-06-10, all 9 done — 3 reviewers × 3 Part-2 runs, in
+  `runs/statfem_freq_2026-06-10/challenger_reviews/`; opus run finished so its reviews valid;
+  scored in challenger_rubric.md Matrix A/B): all 9 reviews caught their target's core flaw
+  (easy-problem/inverse-crime/circular-grid) UNPROMPTED, ZERO false positives. (1) Critic role ≫
+  author role IN THE SAME MODEL — judgment missing during authoring is present when switched to
+  critic. (2) "Blind spots track runner" REFUTED — codex reviewer caught codex runner's own grid
+  + easy-problem traps. (3) Self-review NOT lenient (diagonals among sharpest: opus called its own
+  run "inverse crime"; caveat = prompt told them to press harder, partly induced). (4) Critics
+  caught what gates+authors missed: computed grid bandwidths, rank(C_u)=3/160; ALL 3 caught opus
+  report says ρ "inferred" but code fixes ρ=1; fable+opus-self caught stale ledger σ_f 0.15≠0.05 +
+  died/resumed run; "GREEN over 0.65-coverage headline." Reviewer ranking ≈ tie at ceiling (opus
+  deepest mechanism critiques; fable most quantitative; codex tightest on report-vs-code). BLOG
+  PAYLOAD = "the critic is the product": fix is architectural (mandatory separate challenger pass),
+  not a smarter model. Synthesis written into findings_note.md (Finding 6), post_draft.md ("critic
+  is the product" section now evidence-backed), challenger_rubric.md. NEXT: Andrew review of draft;
+  decide optional Part-1 reviews; still gated on IP/disclose sequence before any publication.
+- TEACHING DELIVERABLE (2026-06-10, Andrew request, side task — NOT a gate/checker/rule change): visual teaching example of Schneider et al. 2022 (rational-surrogate Bayesian FRF updating). Workspace `artifacts/teaching/schneider2022_20260610/`; `bash run_all.sh` regenerates. Outputs: 15 PNG figures, 8 animated GIFs, 26-slide `schneider2022_teaching.pptx`, README. Covers (1) PCE-rational FRF surrogate — faithful Eqs.(6)-(9) linearized rational fit, poly-vs-rational in freq AND in parameter (mp=3,mq=4), complex/mag-phase views; (2) likelihood — multiplicative complex error, improper-complex-normal kidney PDF (Eq.A.9 reproduces Fig.1 structure), one-obs likelihood in (w,theta), space+freq correlation R (Eq.19-25) + over-counting/over-confidence intuition; (3) BUS-SuS — genuine small Subset Simulation VALIDATED vs analytic posterior (mean 2.725 vs 2.752, sd 0.295 vs 0.287). ALL figures stamped synthetic/conceptual, NOT the paper's CLT results; reused public paper values labeled. SuS sampler explicitly labeled teaching PROTOTYPE (modified-Metropolis), NOT NUTS/HMC and NOT the paper's adaptive aBUS-SuS. Pending Andrew review of content/teaching quality.
+- COUPLED-QOI THREAD + PROGRAM DECK DONE (2026-06-12, lead-as-runner), PENDING
+  ANDREW REVIEW. Two Andrew asks this turn, both delivered: (1) HARNESS CHANGE
+  APPROVED ("I agree, make the change") — AGENTS.md Modal/Eigenproblem
+  Identifiability Gate now requires the FIM eigen-view (parameter COMBINATIONS
+  clearing prior at the REALIZED discrepancy floor) for any PER-PARAMETER claim,
+  + multimodal-in-params/agree-in-data = under-ID not a bug (workspace D12; also
+  in docs/report §7). (2) PROGRAM DECK for Girolami/Bilionis/Yunis:
+  `artifacts/reports/shocksat_tray_coupled_qoi_20260610/slides/shocksat_program_deck.pptx`
+  (14 slides, 6 tufte figs, findings scored 1-5 median 4) + 3 supplementary
+  GIFs (force_limiting_sweep, mode_walk_qoi, multimodality — NOT embedded) +
+  slides/README.md talk track. check.py now 31g/2y/0r (YELLOW = documented
+  honest negatives). Findings 1-5: ShockSat-FEM-vs-NASA=5, twin-converges=4,
+  discrepancy-real=4, 7004C-force-limiting=4, mount-dominance=5, response-proxy=4,
+  one-survey-recovers-mount=2 (honest negative), harness-caught-own-overclaim=5.
+  NEXT ACTION: Andrew review deck + packet; sign-off D2/D3/D4/D7; candidate next
+  phase = symmetry-breaking-observable survey. Full prior detail below.
+- CURRENT STATE: ShockSat × tray coupled QOI study COMPLETE (2026-06-10, lead-as-
+  runner, single session), PENDING ANDREW REVIEW. Workspace
+  `artifacts/reports/shocksat_tray_coupled_qoi_20260610/` (packet.md; `bash
+  run_all.sh` replays; check.py OVERALL GREEN 22/0/0; verify 15/15 green incl.
+  FBS-algebra-exact, Newmark 0.6%, 7004C TDOF anchors; no sampler run = D1
+  sampler decision, propagation only). LAST DECISION: D9 (figure QA regeneration;
+  results logged). HEADLINE (all HYPOTHETICAL-labeled, methods demo): (1) QOI =
+  net CG interface load is MOUNT-DOMINATED — mount prior ≈ 100% of joint QOI
+  variance vs <1% from the calibrated ShockSat posterior (predecessor's joint
+  under-identification propagates straight into the QOI); (2) force-limiting
+  over-test factor (unc/cpl) median 1.12–1.31, p97.5 ≤2.2 (7004C novelty thread,
+  validated source model); (3) method error is ASSUMPTION error: modal-SRS
+  ~unbiased at informed Q (×0.95–0.98 vs TH), Q=10→50 swings ×0.7–2.3; Miles 3σ
+  = ×0.74 (the pre-stated 3σ-vs-4σ peak-factor effect); (4) mount WOULD be
+  identifiable from mounted-config interface modes (dlnf/dlnk 0.449 ≈ 10× the
+  4.6% σ_f floor; 90% SE in 87 Hz mode) → pre-test lever = cheap mounted modal
+  survey collapses most QOI uncertainty; (5) D7 response-limit proxy (Andrew's
+  mid-run vision §2.2 ask): tray-center accel ρ≈1.000, α≈m_tray (band-specific
+  caveat stated). OVERNIGHT RESULT (D10/D11, 2026-06-11): synthetic mounted-
+  survey NUTS calibration = STRUCTURED HONEST NEGATIVE, status YELLOW. NUTS
+  NOT converged (base R-hat 5.03/ESS 2/0 div; remedy d9 WORSE 9.74 = more
+  multimodality found). DIAGNOSIS (multimodality_diagnosis.json): genuine
+  under-identification — chains agree in DATA space (0.06% median predicted-
+  freq spread, rms residual 3.3-3.5%) but disagree wildly in PARAMETER space;
+  σ_f posterior ≈3.7% ≫ injected 0.3% noise = the structured discrepancy
+  (off-diag mount truth + θ_S gap) measured honestly; FIM at that floor: only
+  2/6 mount-stiffness COMBINATIONS identifiable (k_ry-rocking eig 97, k_tz
+  bounce eig 15) vs 5/6 at the noise-only floor → BINDING CONSTRAINT = MODEL-
+  FORM DISCREPANCY (controlled-synthetic cross-confirmation of the
+  predecessor σ_f=4.6% joints wall). §7 claim sharpened not withdrawn:
+  overall mount level identifiable, per-axis 6-DOF split NOT, from
+  frequencies alone. VOI: width ratios 0.93/0.38/0.91, truth missed on Fx
+  both before+after — ALL YELLOW (fig_voi carries NOT-CONVERGED flag).
+  REFINED PRE-TEST LEVER: symmetry-breaking observables (mode shapes / FRF
+  amplitudes / interface force gauges) or discrepancy reduction; more
+  frequencies will NOT split the mount axes. Checker overall YELLOW (27
+  green / 2 yellow / 0 red), replay exits 0. NEXT ACTION (Andrew): sign-off
+  D2/D3/D4/D7 + review packet §10 honest negative; candidate next phase =
+  the symmetry-breaking-observable survey design (shape/FRF likelihood —
+  needs the degenerate-pair-safe subspace-MAC from notes/todo.md).
+  OPEN AMBIGUITIES: none beyond the sign-off items.
+- DONE (2026-06-09, Andrew said "execute this"): pre-test FIM identifiability + experiment-design analysis on the Opus Phase-1 hexapod tray FEM. Workspace `artifacts/reports/fim_identifiability_opus_20260609/`; `bash run_all.sh` reproduces; checker 15/15 PASS. RESULT (artifact-backed, turns "~1-3 params" into a number): **3 identifiable stiffness params** (strut_EA, tray_E, strut_EI), band-conditional **1(≤181Hz)→2(≤371Hz)→3(≤570Hz)**; both JOINT stiffnesses UNIDENTIFIABLE from modal data (near-rigid + moment-free; joint_lateral sensitivity exactly 0), robust ×0.5-4 noise. Same for 1-sensor vs 2-sensor. Profile likelihood confirms FIM (joints flat across ±30%). QOI (payload transmissibility) lies 100% in the identifiable subspace (frac_sloppy=0.0) = test fit for THAT QOI. Experiment design: best 1-accel near-center z (x63,y28mm); best tap = corner (excites all 8 modes); sensor placement spans 20.9 in log-det FIM. Method = exact analytic eigenvalue/Fox-Kapoor sensitivities -> FIM=J^T Σ^-1 J; validated vs JAX modes (4e-4 Hz) and FD. NOT a sampler run (no NUTS claim). Recommendations in workspace `next_prompt.md` (incl. a possible reusable pre-test FIM gate — needs Andrew's OK before AGENTS.md).
+- SHOCKSAT FEM MODAL TWIN session 1 DONE (2026-06-09, runner out of credits; workspace `artifacts/reports/shocksat_fem_modal_twin_20260609/`): Task 0 resolved — REAL measured free-free test modes found in `Final_FF_Test_Shapes_100121.ash` (33 modes 54.19-256.79 Hz, shapes on 76 accel nodes / 132 DOFs; `TAM_FF/Modes.pch` is FEM, NOT test). Lead REVIEWED + ACCEPTED Task-0 provenance (4 independent evidence lines + honest caveats). Deck parsed, element library validated, per-PID K/M blocks assembled. BLOCKER at handoff: RBE2 double-dependency; fix = drop `Shock_Test_Instrumentation.blk` (lead endorsed; must be logged in decisions_log + assumptions ledger). No reduction/NUTS/held-out work yet.
+- CONCURRENCY RESOLVED (2026-06-10, Claude Code lead session): TWO Claude sessions were both continuing the same ShockSat handoff in the same workspace (Andrew pasted the handoff into both; each independently did overlapping work and each flagged the other — see workspace decisions_log D16/D19/D20/D21). No corruption occurred: the unpinned/thread-thrashing band job was killed (D20); exactly ONE band NUTS job now runs (pinned .venv_nuts, dense_mass + max_tree_depth=8 per D21, logs/nuts_band.log). OWNERSHIP: the Claude Code lead session (this one, per Andrew's direct "do the work yourself") owns the pipeline end-to-end; the other session is PAUSED per its own halt note — if it resumes it must re-read decisions_log D19-D21 and NOT relaunch compute. Work credit is interleaved across both sessions; the packet will describe the two-writer history honestly.
+- SHOCKSAT SESSION 3 (2026-06-10, Claude Code lead SOLE owner, re-grounded): VERIFIED in-flight compute is the PINNED venv, not a D20 repeat (ps shows CommandLineTools python3.9 = venv's resolved base interpreter; env has OMP/VECLIB=1 + __PYVENV_LAUNCHER__=.venv_nuts; jax 0.4.30/numpyro 0.15.3; single-thread ~98% CPU). Band remedy (PID 14930, depth10 2000+2000) + LOMO (4 workers, 18 runs, skips finished partials) RUNNING — letting them finish, NOT relaunching (D24). NEW FINDING (D25): first LOMO partial (mode 1) = rhat 1.38 / ess 5.5 / div 0 -> LOMO ALSO misses the convergence gate. So BOTH designs likely non-converged: the 9-theta modal-twin posterior is genuinely MULTIMODAL / under-identified, cross-confirming the parked FIM result (~3 identifiable stiffness params from modal data). HONEST HEADLINE = under-identification finding; report both designs per D22/AGENTS gate language (worst R-hat/ESS next to every interval, labeled not-yet-converged). Do NOT sell LOMO as clean-converged.
+- SESSION 3 RESULTS (2026-06-10 ~08:35, all 3 designs done; D26/D28 logged):
+  * FULL (18 modes): CONVERGES, gate PASS (R-hat 1.022, ESS 232, 0 div). sigma_f median 4.6% >> 0.3-0.9% noise floor = model/element discrepancy. Only ~4/9 theta groups informed (bottom_box, top_box, plates, cross_beam); other 5 sit at LogNormal(0.25) prior width = NOT identifiable. Cross-confirms parked FIM (~3 identifiable).
+  * BAND remedy (depth10 2000+2000): R-hat 1.076, ESS 63, 0 div = still FAILS gate (big improvement vs failrun1 1.92); held-out coverage 10/12.
+  * LOMO (17-in x18): mostly FAILS (worst R-hat 2.50) yet held-out pred coverage 18/18.
+  * RECONCILED HEADLINE (supersedes "all non-identified"): twin IS calibratable from full modal set (converged) but identification is PARTIAL (~4/9) and FRAGILE under mode removal (band/LOMO reopen multimodality); held-out FREQUENCY prediction robust (predictable QOI in identifiable subspace). Report all 3 designs w/ worst R-hat/ESS next to intervals; full PASSES, band+LOMO FAIL (labeled). Never claim global "NUTS converged."
+  * DONE so far: make_lock (heldout_lock.json), 7 figures incl NEW theta_posterior_full.png (informed vs prior), FEMAP nominal+posterior decks (full theta_mean), validate_posterior repointed to theta_full (D29).
+- SHOCKSAT MODAL TWIN COMPLETE (2026-06-10, pending Andrew review): all 13 next_prompt steps done. checker 15/17 PASS (`checker_report.json`); the 2 FAILs = convergence_band + convergence_lomo = DOCUMENTED honest findings (full PASSES R-hat 1.022/ESS 232). Deliverables: packet.md, 7 figures, FEMAP nominal+posterior decks, sensitivity.json (5 arms), posterior_validation.json (0.068%), heldout_lock.json, runtime.json (active 38099 / wall 63791), files_changed.md, manifest.json (70 artifacts), decisions_log D1-D30. HEADLINE: twin calibratable from full modal set (converged) but PARTIAL (~4/9 groups) + FRAGILE identification (joints NOT identified ≤222Hz); held-out freq coverage band 10/12, LOMO 18/18; sigma_f 4.6% = element discrepancy. This-session script edits (all logged, all trial-scripts, none touch AGENTS.md): D29 validate_posterior repoint, D30 hash_inputs schema fix, make_figures theta_posterior_full add.
+- HARNESS CHANGE 2026-06-10 (Andrew APPROVED): added Detached-launch gate to AGENTS.md §Compute (jobs > tool timeout MUST be nohup/disown + monitored + resumable + BLAS-pinned). Logged workspace D31. Motivated by D20 timeout-kill.
+- FIGURE HONESTY (2026-06-10, Andrew directive D33, gate D34): every data figure now states its run/data + flags non-convergence in red (band theta, band heldout, LOMO heldout). AGENTS.md Plot gate UPDATED (D34, Andrew approved): figures must state run/dataset + flag invalidity on figure/caption "unless obviously unnecessary"; print worst R-hat/ESS next to non-converged intervals. DONE.
+- GREEN/YELLOW/RED STANDARD (2026-06-10, Andrew directive, D35): replaced binary pass/fail with 3-tier status; added to AGENTS.md "Result Status Standard". GREEN=met; YELLOW=not met but documented/non-fatal, caveated, never "converged"/success; RED=blocking. Overall=red>yellow>green; checker exits non-zero ONLY on red. check.py implemented; ShockSat overall=YELLOW (15 green/2 yellow[convergence_band,lomo]/0 red), exits 0 -> RESOLVES the run_all.sh exit-code question. Packet §0/§4/§6/§10 + manifest + files_changed + notes updated. Non-relaxing (non-converged = yellow at best, never green).
+- HARNESS CHANGES THIS SESSION (all Andrew-approved, durable, in AGENTS.md): D31 detached-launch gate, D34 figure-provenance/invalidity gate, D35 green/yellow/red standard, D37 Modal/Eigenproblem Identifiability Gate (require parameter->mode strain-energy decomposition + cause-of-unidentifiability with finite-perturbation check, before claiming identifiable/not). No OPEN items remaining for the ShockSat modal-twin task.
+- SE FINDING (D36): joints ARE in the modal load path (peak 19% SE in mode 12/147Hz, >5% in 4 modes) — unidentified because sensitivity ~3% < sigma_f 4.6% discrepancy floor (signal<noise, NOT out-of-path; corrects earlier chat hypothesis). joint_strain_energy.py/.json; folded into packet §4a; checker gate modal_identifiability_se_reported (green). Checker now 16 green/2 yellow/0 red.
+- NEXT DIRECTION (agreed with Andrew, NOT yet built): coupled primary/secondary QOI study = ShockSat (primary, real shock data) + Opus tray (secondary, hypothetical). Experiment matrix: uncoupled (ground-truth-checked on primary far-field SRS via channel-to-channel transmissibility, blind/vault protocol) vs coupled (hypothetical) x {time-history (faithful), modal-SRS (MMF=participation, SRSS, sweep Q), PSD/Miles (labeled envelope arm)} x {multi-mount distributed 6-DOF CBUSH (faithful) vs single-point condensation (2DOF/7004C idealization)}. Mount = uncertain 6-DOF CBUSH (dominant QOI knob; joints drive 120-185Hz band). Input = measured strut-base accel time history (locations 29/30, grids 9900029/30). Data: pyro NSI/NSD .mat (128 ch, 100kHz, vaulted/blind); frangible-joint time history NOT extracted locally (fetch item). A-vs-B gap = force-limiting/apparent-mass (7004C novelty); single-vs-multi = 2DOF-intuition limit. NEXT ACTION: draft quantity contract + task card to docs/lab/ for sign-off (QOI per-mount interface load vs net force still to confirm).
+- FEMAP CROSS-CHECK DEFERRED (2026-06-10, Andrew, D32): independent second-solver re-solve of our deck is now an OPTIONAL nice-to-have, NOT done. Blocker = Andrew's FEMAP/NX is a STUDENT license (node cap) vs 67,683-grid model. Packet §1/§7/§9 + fem_assembly_report §6 corrected to NOT claim a completed FEMAP re-solve; independence rests on NASA-published NX numbers (~2.5pp on 19/24 modes) + analytic element validation + check.py. Decks/instructions in femap_handoff/ remain ready for a future Purdue full-NX or MYSTRAN run; compare_femap.py to be written when a freqs CSV arrives.
+- NEXT ACTION: await Andrew review; if approved, consider commit. FIM identifiability thread still PARKED (now a cross-confirming companion result). -> read heldout_lomo.json + heldout_band/convergence_band -> run_full.py (theta_full.json) -> validate_posterior.py (point at theta_full if band/lomo non-converged; log D-entry) -> make_femap_deck posterior -> sensitivity.py (detached ~1-2h) -> make_lock BEFORE any predicted-vs-actual table -> make_figures(+2) (tufte lint) -> packet.md (lead-as-runner label, D16/D19 integrity story, freq-only-primary-likelihood deviation + MAC arm, BOTH designs' honest coverage+convergence, under-identification finding) -> hash_inputs end -> check.py -> runtime.json -> files_changed/manifest -> rewrite next_prompt.md. FIM identifiability thread PARKED (but now directly relevant as cross-confirmation).

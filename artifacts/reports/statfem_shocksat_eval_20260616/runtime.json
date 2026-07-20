@@ -1,0 +1,6 @@
+{
+ "active_runtime_s": 10928,
+ "elapsed_wallclock_s": 10928,
+ "nuts_only_active_s": 11490.5,
+ "note": "active_runtime_s = sum of run_all stage durations; nuts_only_active_s = sum of stored per-cell NUTS+predict runtimes (resumable replay skips finished cells)."
+}

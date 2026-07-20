@@ -1,0 +1,38 @@
+{
+ "cid": "ma1_conn_softbbox",
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    1024295,
+    1024296,
+    1024297,
+    1024298,
+    1024299,
+    1024300,
+    1024301,
+    1024302,
+    1024303,
+    1024304,
+    1024305,
+    1024306,
+    1024307,
+    1024308,
+    1024309,
+    1024310,
+    1024311,
+    1024312,
+    1024313,
+    1024314
+   ],
+   "k_trans": 100000.0,
+   "k_rot": 10000.0,
+   "name": "softbbox"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: Bottom_Box is the largest shape-defect region (0.493) and Bottom_Box|Y/Z sub-200 amplitude cells are 0.76/0.69 dex; soften 20 of the 56 bottom-box joint spiders to compliant springs (k_t=1e5 lbf/in, k_r=1e4)",
+ "track": "agent",
+ "round": 1,
+ "rationale": "diagnosis_mf_r1.json: Bottom_Box is the largest shape-defect region (0.493) and Bottom_Box|Y/Z sub-200 amplitude cells a"
+}

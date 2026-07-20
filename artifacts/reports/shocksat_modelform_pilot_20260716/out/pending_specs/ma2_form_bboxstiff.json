@@ -1,0 +1,19 @@
+{
+ "cid": "ma2_form_bboxstiff",
+ "cls": "element_formulation",
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    101,
+    103
+   ],
+   "br_scale": 1.25,
+   "name": "bboxbr"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r2.json: pairs 118.5 Hz (-13.0%) and 158.2 Hz (-15.1%) are model-SOFT and curvature ratio dropped to 0.647 (peaks too blunt) -> RAISE bottom-box wall bending formulation (br 1.25; mass untouched)",
+ "track": "agent",
+ "round": 2,
+ "rationale": "diagnosis_mf_r2.json: pairs 118.5 Hz (-13.0%) and 158.2 Hz (-15.1%) are model-SOFT and curvature ratio dropped to 0.647 "
+}

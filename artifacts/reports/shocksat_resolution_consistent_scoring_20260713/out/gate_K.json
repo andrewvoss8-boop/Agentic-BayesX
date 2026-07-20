@@ -1,0 +1,34 @@
+{
+ "fn_hz": 99.69075520833334,
+ "df_hz": 2.0345052083333335,
+ "tau_s": 0.16407207157296783,
+ "sigma_w": 6.094882513598725,
+ "zeta_w_at_fn": 0.009730397543648121,
+ "light_peak_err_frac": -0.019794279259882166,
+ "broad_peak_change_frac": 4.862729207743134e-05,
+ "broad_change_vs_unwindowed_frac_REPORTED": -0.16286458116967192,
+ "checks": {
+  "light": {
+   "zeta": 0.003,
+   "zeta_app_analytic": 0.01273039754364812,
+   "peak_windowed": 38.498629653132674,
+   "peak_analytic_app": 39.27607117418551,
+   "peak_unwindowed": 166.66666666666666,
+   "peak_err_frac_vs_analytic": -0.019794279259882166,
+   "median_curve_err_frac": 0.019794279259882166,
+   "change_vs_unwindowed_frac": -0.769008222081204
+  },
+  "broad": {
+   "zeta": 0.05,
+   "zeta_app_analytic": 0.059730397543648124,
+   "peak_windowed": 8.37135418830328,
+   "peak_analytic_app": 8.370947131812137,
+   "peak_unwindowed": 10.0,
+   "peak_err_frac_vs_analytic": 4.862729207743134e-05,
+   "median_curve_err_frac": 0.0019464944437553166,
+   "change_vs_unwindowed_frac": -0.16286458116967192
+  }
+ },
+ "pass": true,
+ "runtime_s": 0.0
+}

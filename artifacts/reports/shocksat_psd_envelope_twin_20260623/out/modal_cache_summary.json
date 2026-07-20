@@ -1,0 +1,130 @@
+{
+  "m_xpos_990x": {
+    "label": "+X (990)",
+    "axis": "X",
+    "xyz": [
+      9.0,
+      7.6,
+      0.6
+    ],
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "df_hz": 2.0345052083333335,
+    "n_freqs": 105,
+    "coh_inband_median": 0.9309976846024292,
+    "coh_at_peaks_median": 0.9662556943530172,
+    "n_modal_peaks": 6,
+    "modal_peaks_hz": [
+      75.3,
+      138.3,
+      162.8,
+      189.2,
+      199.4,
+      254.3
+    ]
+  },
+  "m_zpos_990z": {
+    "label": "+Z (990)",
+    "axis": "Z",
+    "xyz": [
+      9.0,
+      7.8,
+      0.0
+    ],
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "df_hz": 2.0345052083333335,
+    "n_freqs": 105,
+    "coh_inband_median": 0.7067854459440547,
+    "coh_at_peaks_median": 0.8986309396112928,
+    "n_modal_peaks": 8,
+    "modal_peaks_hz": [
+      99.7,
+      126.1,
+      136.3,
+      172.9,
+      189.2,
+      197.3,
+      234.0,
+      254.3
+    ]
+  },
+  "m_xy_990xy": {
+    "label": "+XY (990)",
+    "axis": "XY",
+    "xyz": [
+      9.0,
+      9.0,
+      1.1
+    ],
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "df_hz": 2.0345052083333335,
+    "n_freqs": 105,
+    "coh_inband_median": 0.805545514746831,
+    "coh_at_peaks_median": 0.9267924089317902,
+    "n_modal_peaks": 8,
+    "modal_peaks_hz": [
+      75.3,
+      99.7,
+      122.1,
+      136.3,
+      189.2,
+      197.3,
+      234.0,
+      254.3
+    ]
+  },
+  "m_zpos_900z": {
+    "label": "+Z (900)",
+    "axis": "Z",
+    "xyz": [
+      9.0,
+      0.0,
+      0.0
+    ],
+    "n_hits_used": 6,
+    "n_hits_skipped": 0,
+    "df_hz": 2.0345052083333335,
+    "n_freqs": 105,
+    "coh_inband_median": 0.771436088847512,
+    "coh_at_peaks_median": 0.9131536893155963,
+    "n_modal_peaks": 6,
+    "modal_peaks_hz": [
+      126.1,
+      136.3,
+      140.4,
+      172.9,
+      195.3,
+      244.1
+    ]
+  },
+  "_meta": {
+    "N": 122880,
+    "band": [
+      45.0,
+      260.0
+    ],
+    "n_daq": 111,
+    "runtime_s": 10.9,
+    "union_peaks_hz": [
+      75.0,
+      100.0,
+      122.0,
+      126.0,
+      136.0,
+      138.0,
+      140.0,
+      163.0,
+      173.0,
+      189.0,
+      195.0,
+      197.0,
+      199.0,
+      234.0,
+      244.0,
+      254.0
+    ],
+    "note": "clean modal multi-reference caches, both drive nodes (D2); samples in g & lbf"
+  }
+}

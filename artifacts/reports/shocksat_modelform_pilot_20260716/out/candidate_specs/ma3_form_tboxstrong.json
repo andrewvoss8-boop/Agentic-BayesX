@@ -1,0 +1,19 @@
+{
+ "cid": "ma3_form_tboxstrong",
+ "cls": "element_formulation",
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    201,
+    203
+   ],
+   "br_scale": 0.75,
+   "name": "tbox075"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: 168.0/172.3 Hz pairs are +9.9/+7.9%% too stiff ON the current best model-form candidate; r1's br 0.8 on the same walls scored +0.1557 -> push the same lever harder (0.75)",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: 168.0/172.3 Hz pairs are +9.9/+7.9%% too stiff ON the current best model-form candidate; r1's br 0"
+}

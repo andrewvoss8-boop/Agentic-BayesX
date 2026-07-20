@@ -1,0 +1,67 @@
+{
+ "m_ypos_990y": {
+  "ceiling_hz_last_run": 2998.8606770833335,
+  "ceiling_hz_first_run": 73.2421875,
+  "frac_bins_above_thresh_below_ceiling": 0.9944903581267218,
+  "n_runs": 4,
+  "coh_threshold": 0.6,
+  "n_hits": 4,
+  "coh_floor_uncorrelated": 0.25,
+  "med_coh_200_500": 0.9419805900864752,
+  "med_coh_500_1000": 0.9338441592182091,
+  "med_coh_1000_2000": 0.9463998197074286,
+  "med_coh_2000_3000": 0.9236856581381621
+ },
+ "m_zpos_900z": {
+  "ceiling_hz_last_run": 2998.8606770833335,
+  "ceiling_hz_first_run": 113.93229166666667,
+  "frac_bins_above_thresh_below_ceiling": 0.7761707988980716,
+  "n_runs": 40,
+  "coh_threshold": 0.6,
+  "n_hits": 6,
+  "coh_floor_uncorrelated": 0.167,
+  "med_coh_200_500": 0.9055547531610427,
+  "med_coh_500_1000": 0.709930421562164,
+  "med_coh_1000_2000": 0.6375445735322889,
+  "med_coh_2000_3000": 0.7960797469604126
+ },
+ "m_zpos_990z": {
+  "ceiling_hz_last_run": 2998.8606770833335,
+  "ceiling_hz_first_run": 103.75976562500001,
+  "frac_bins_above_thresh_below_ceiling": 0.46831955922865015,
+  "n_runs": 42,
+  "coh_threshold": 0.6,
+  "n_hits": 6,
+  "coh_floor_uncorrelated": 0.167,
+  "med_coh_200_500": 0.9422540244300844,
+  "med_coh_500_1000": 0.6335661206668397,
+  "med_coh_1000_2000": 0.5192997897704974,
+  "med_coh_2000_3000": 0.4829981082071006
+ },
+ "m_xy_990xy": {
+  "ceiling_hz_last_run": 2998.8606770833335,
+  "ceiling_hz_first_run": 79.345703125,
+  "frac_bins_above_thresh_below_ceiling": 0.9387052341597796,
+  "n_runs": 17,
+  "coh_threshold": 0.6,
+  "n_hits": 6,
+  "coh_floor_uncorrelated": 0.167,
+  "med_coh_200_500": 0.9542113359801337,
+  "med_coh_500_1000": 0.8668102763148569,
+  "med_coh_1000_2000": 0.7707081795673796,
+  "med_coh_2000_3000": 0.8936274332142068
+ },
+ "m_xpos_990x": {
+  "ceiling_hz_last_run": 2998.8606770833335,
+  "ceiling_hz_first_run": 2998.8606770833335,
+  "frac_bins_above_thresh_below_ceiling": 1.0,
+  "n_runs": 1,
+  "coh_threshold": 0.6,
+  "n_hits": 6,
+  "coh_floor_uncorrelated": 0.167,
+  "med_coh_200_500": 0.9592583196713665,
+  "med_coh_500_1000": 0.9625782678602963,
+  "med_coh_1000_2000": 0.9182351179203478,
+  "med_coh_2000_3000": 0.8577288870582835
+ }
+}

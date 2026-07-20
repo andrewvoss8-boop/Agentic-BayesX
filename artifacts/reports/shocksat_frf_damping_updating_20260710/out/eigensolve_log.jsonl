@@ -1,0 +1,3 @@
+{"tag": "baseline", "cid": "A0", "n_dof": 399510, "t_s": 270.8, "ts": "2026-07-10T12:50:46"}
+{"tag": "vgate", "cid": "v1_reassembly", "n_dof": 399510, "t_s": 266.3, "ts": "2026-07-10T13:29:46"}
+{"tag": "vgate", "cid": "v3_dishrefine", "n_dof": 475974, "t_s": 304.7, "ts": "2026-07-10T13:35:58"}

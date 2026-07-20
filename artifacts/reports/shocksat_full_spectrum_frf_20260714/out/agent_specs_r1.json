@@ -1,0 +1,25 @@
+{
+ "round": 1,
+ "compass": "TRAIN-side per-channel log|H| residuals (out/diagnosis_r1.json). Worst cells: Bottom_Box|Y (corr -0.14, n72), Top_Box|Y (0.17, n42), Rectangular_Plates|Y (0.42, n4), Top_Box|Z (0.22). Survey peaks: 150-180 Hz cluster mis-paired (158->142 -10%, 166->153 -8%, 168->180 +7%). Extended peaks 254-367 Hz match model freq <0.5% (freq is good up there; error is amplitude/shape).",
+ "specs": [
+  {"cid": "wa1_bbox_stiff", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [101, 102, 103], "t_scale": 1.15, "name": "bottombox_t115"}],
+   "rationale": "Bottom_Box|Y is the worst high-n residual (corr -0.14, 72 ch) AND the 150-180 Hz cluster (box-dominated Y modes) is mis-paired by up to 10%; stiffen bottom-box panels to raise/re-order those Y modes."},
+  {"cid": "wa1_bbox_soft", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [101, 102, 103], "t_scale": 0.87, "name": "bottombox_t087"}],
+   "rationale": "Same Bottom_Box|Y cell; the peak errors have BOTH signs (158->142 low, 168->180 high) so the direction is ambiguous — soften to bracket the stiffen candidate."},
+  {"cid": "wa1_tbox_soft", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [201, 202, 203], "t_scale": 0.9, "name": "topbox_t090"}],
+   "rationale": "Top_Box|Y resid 0.69 (n42) and Top_Box|Z 0.68; soften top-box panels to move the top-box Y/Z modes toward the measured amplitudes."},
+  {"cid": "wa1_plates_stiff", "family": "thickness",
+   "ops": [{"op": "thickness", "pids": [501, 601, 701], "t_scale": 1.2, "name": "plates_t120"}],
+   "rationale": "Rectangular_Plates|Y is the single worst cell (resid 0.90) though low-n (4 ch); the rectangular plates carry local Y drumhead response — stiffen to shift them."},
+  {"cid": "wa1_bbox_zsplit", "family": "split",
+   "ops": [{"op": "split", "pid": 101, "rule": {"type": "z_band", "zlo": 0.0, "zhi": 22.0},
+            "name": "bbox101_lowerhalf"}],
+   "rationale": "Give the bottom-box LOWER half its own stiffness theta so amplitude updating can correct the Y sub-region without moving the upper box (targets the mis-paired cluster with a shape d.o.f.)."},
+  {"cid": "wa1_xbeam_scale", "family": "scale",
+   "ops": [{"op": "scale", "group": "cross_beam", "factor": 1.4}],
+   "rationale": "parametric_only control: the cross-beam couples the two box halves and governs the in-plane (X/Y) global modes; a pure parametric scale is the honest baseline the shape/thickness edits must beat (true-remodel lesson: parametric controls matched every shape edit)."}
+ ]
+}

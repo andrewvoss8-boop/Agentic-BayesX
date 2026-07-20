@@ -1,0 +1,26 @@
+{
+ "cid": "a16_bb_splits_combo_enr",
+ "rhat_max": 1.0009,
+ "ess_min": 1864.2,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 534.5,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}
+{
+ "cid": "c06_tb_xface_enr",
+ "rhat_max": 1.0042,
+ "ess_min": 673.2,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 2555.3,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}

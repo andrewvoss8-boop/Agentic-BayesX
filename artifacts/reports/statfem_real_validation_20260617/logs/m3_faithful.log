@@ -1,0 +1,7 @@
+==== M3 FULL (Q-B starvation) n=4000x4 ====
+[M3] faithful Schneider | obs 8 ch x 173 f, theta ['bottom_box', 'cross_beam', 'plates', 'top_box']
+  CONVERGED=False cross-run R-hat 1.112 ESS 17 div 0.000 | log-evidence -2822.1 +- 0.4
+  sigma_w med 12.60 [12.01,13.26] (vs old runaway 9.8) | gain c 6.68
+  theta medians: bottom_box 0.78, cross_beam 0.98, plates 0.44, top_box 0.75
+  runtime 1431s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M3_ident4_n8.json
+M3 DONE

@@ -1,0 +1,33 @@
+{
+  "figures": {
+    "fig_coherence.png": {
+      "exists": true,
+      "w": 1500,
+      "h": 847,
+      "kb": 158.7,
+      "ok": true
+    },
+    "fig_mechanism.png": {
+      "exists": true,
+      "w": 2047,
+      "h": 621,
+      "kb": 94.6,
+      "ok": true
+    },
+    "fig_value_multiref.png": {
+      "exists": true,
+      "w": 2684,
+      "h": 636,
+      "kb": 117.3,
+      "ok": true
+    },
+    "fig_identifiability.png": {
+      "exists": true,
+      "w": 1490,
+      "h": 607,
+      "kb": 116.6,
+      "ok": true
+    }
+  },
+  "pass": true
+}

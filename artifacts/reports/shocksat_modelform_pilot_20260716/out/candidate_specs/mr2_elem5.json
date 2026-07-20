@@ -1,0 +1,22 @@
+{
+ "cid": "mr2_elem5",
+ "track": "random",
+ "round": 2,
+ "cls": "element_formulation",
+ "seed": 20262721,
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    601,
+    401,
+    302
+   ],
+   "name": "rform25a0",
+   "br_scale": 1.2327736529833717,
+   "ts_t": 5.0
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

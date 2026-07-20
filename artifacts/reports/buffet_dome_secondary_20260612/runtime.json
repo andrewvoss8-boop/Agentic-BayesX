@@ -1,0 +1,8 @@
+{
+ "active_runtime_s": 80.1,
+ "elapsed_wallclock_s": 91,
+ "stages": {
+  "S1_forcing_validation_s": 79.9,
+  "S2_beam_validation_s": 0.1
+ }
+}

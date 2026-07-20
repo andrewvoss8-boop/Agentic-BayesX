@@ -1,0 +1,6 @@
+coverage by arm (mean combined over 5 combos):
+  M0 naive (no discrepancy)   0.10 (std 0.083, per-combo ['0.18', '0.00', '0.14', '0.18', '0.00'])
+  M1 StatFEM-iid              0.57 (std 0.146, per-combo ['0.75', '0.54', '0.68', '0.32', '0.57'])
+  M2 StatFEM-Schneider        0.89 (std 0.069, per-combo ['0.89', '0.93', '0.93', '0.75', '0.93'])
+  M3 StatFEM-orthogonal       0.89 (std 0.083, per-combo ['0.89', '0.86', '0.93', '0.75', '1.00'])
+scorecard headline: StatFEM discrepancy improves but does not fully restore held-out-QOI coverage

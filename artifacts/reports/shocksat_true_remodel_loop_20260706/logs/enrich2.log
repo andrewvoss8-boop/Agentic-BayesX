@@ -1,0 +1,27 @@
+full solve at old theta_MAP: 585s
+enriched basis r=130, M-orth resid 4.10e-07
+{"cid": "a16_bb_splits_combo_enr", "basis_r": 130, "n_modes": 74, "max_rel_err": 6.83088947628363e-08, "median_rel_err": 4.746247839193529e-11, "pass_0p3pct": true}
+package a16_bb_splits_combo_enr saved (basis 130)
+full solve at old theta_MAP: 649s
+enriched basis r=132, M-orth resid 7.90e-07
+{"cid": "c06_tb_xface_enr", "basis_r": 132, "n_modes": 67, "max_rel_err": 4.524286691953705e-07, "median_rel_err": 1.3354162220480248e-10, "pass_0p3pct": true}
+package c06_tb_xface_enr saved (basis 132)
+{
+ "cid": "A0",
+ "theta_map": {
+  "al_welds": 1.1024,
+  "angle_brackets": 1.1648,
+  "bottom_box": 1.0077,
+  "contact": 0.9271,
+  "cross_beam": 1.0589,
+  "joints": 0.9577,
+  "plates": 1.1501,
+  "steel_welds": 1.085,
+  "top_box": 0.8396
+ },
+ "n_modes": 54,
+ "max_rel_err": 0.006934814933807099,
+ "median_rel_err": 0.0011871097247428963,
+ "pass_0p3pct": false,
+ "solve_s": 743.6
+}

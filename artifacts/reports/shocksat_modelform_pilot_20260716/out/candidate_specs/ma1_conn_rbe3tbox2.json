@@ -1,0 +1,36 @@
+{
+ "cid": "ma1_conn_rbe3tbox2",
+ "track": "agent",
+ "round": 1,
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe3_convert",
+   "eids": [
+    2033593,
+    2033594,
+    2033595,
+    2033596,
+    2033597,
+    2033598,
+    2033599,
+    2033600,
+    3000148,
+    3000715,
+    5000321,
+    5000322,
+    5000901,
+    5000902,
+    6001321,
+    6001322,
+    6001323,
+    6001324,
+    8000042,
+    8000058
+   ],
+   "name": "rbe3tbox2"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Box carries 0.392 of survey-shape residual energy and its 168/172 Hz pairs are +7.4/+5.7% too stiff; REPLACEMENT for ma1_conn_rbe3tbox (dud: single-leg spiders are singular for RBE3) - convert the multi-leg (>=3) Top_Box wall spiders to interpolation constraints",
+ "rationale": "replacement for dud ma1_conn_rbe3tbox; multi-leg spiders only"
+}

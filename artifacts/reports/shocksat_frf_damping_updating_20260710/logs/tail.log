@@ -1,0 +1,56 @@
+=== A0_enr NUTS done ===
+rhat 24.798 ess 2.0 conv False zeta_med [0.0491, 0.0402, 0.05, 0.05]
+=== A0_enr Q/H ===
+ok
+=== augment honesty ===
+  honesty_A0_enr: lmo=1.0825 zeta[0.0100,0.0100] eta0.000 dim0 DQ=False
+  honesty_A0d_enr: lmo=1.0825 zeta[0.0147,0.0246] eta0.000 dim4 DQ=False
+  honesty_c06_enr: lmo=1.0493 zeta[0.0100,0.0100] eta0.000 dim0 DQ=False
+  honesty_a04_enr: lmo=1.0623 zeta[0.0100,0.0100] eta0.000 dim0 DQ=False
+  honesty_b_c06_enr: lmo=1.0493 zeta[0.0147,0.0246] eta0.000 dim4 DQ=False
+  honesty_rnd003_enr: lmo=None zeta[0.0100,0.0100] eta0.000 dim0 DQ=False
+=== vault freeze ===
+frozen
+=== vault grade ===
+  A0_enr       vault P1'=0.4197 P3=0.4377 (n_ch 87, coh 0.881)
+  A0d_enr      vault P1'=0.4563 P3=0.4591 (n_ch 87, coh 0.881)
+  c06_enr      vault P1'=0.5019 P3=0.4956 (n_ch 87, coh 0.881)
+  a04_enr      vault P1'=0.4697 P3=0.4764 (n_ch 87, coh 0.881)
+  b_c06_enr    vault P1'=0.5259 P3=0.5216 (n_ch 87, coh 0.881)
+  rnd003_enr   vault P1'=0.497 P3=0.497 (n_ch 87, coh 0.881)
+=== verdicts ===
+{
+  "S1": false,
+  "S2": false,
+  "S3": false,
+  "S4": false,
+  "overall_claim": "pre-registered claim FALSIFIED: S1 FAIL; S2 FAIL; S3 FAIL; S4 FAIL"
+}
+=== figures ===
+figures: ['fig1_money_leaderboard', 'fig2_s4_ablation', 'fig3_gates_D2_O', 'fig4_alignment_effect', 'fig5_graphical_model']
+=== runtime ===
+ok
+=== CHECKER ===
+[GREEN ] gate_files: all present
+[GREEN ] reused_integrity: all reused sources unchanged
+[GREEN ] mechanics_V1_V5: V1-V5 pass: V1=eig 1.15e-09, blocks 0.00e+00, V2=|lam_rbm|/lam_el 4.62e-12, f7 474.6 Hz, V3=median|df| 0.0083%, frac>0.5% 0.020, dMAC +0.0100, matched 50, V4=t x2: membrane x2.000 (want 2), bending x7.992 (want 8), V5=re-pairing churns 16 (hung) / 10 (greedy) pairs on +10% shift; frozen pairing untouched=True
+[GREEN ] gate_D1_damping_physics: damping physics: viscous 0.00045, structural 0.0018, rayleigh 0.0 (<=2%)
+[GREEN ] gate_D2_identifiability: identifiability@2Hz honored: recovered True, flagged-not-identifiable 3 (survey in-band zeta 0.06-1.05% (median 0.32%) => half-power bands 0.10-1.25 lines (median 0.53); ALL 33 in-band modes < 1.5 lines. At 2 Hz + noise sigma_log=0.06, per-mode zeta recovery error in that regime is 27% (median), vs 14% best-resolved => per-mode/narrow-band zeta NOT identifiable; only band-average zeta weakly constrained by the off-resonance envelope (D7). Damping enters the loop as band/Rayleigh/joint-eta LOW-DIM params, never per mode.)
+[GREEN ] gate_F_metrics: FDAC/FRAC/FRSF correct on all 4 synthetic sub-tests (identical, freq-shift, amp-scale, phase-flip)
+[GREEN ] gate_O_observability: observability computed: 0.07 residual unobservable, self-MAC off-diag 0.9972, Fisher rank 36/40
+[GREEN ] query_budget: within budget: agent 21<=60, random 40<=60
+[GREEN ] no_dev_residual_leak: loop.py contains no direct drive-cache reads (dev returns scalars only)
+[GREEN ] no_amplitude_or_damping_lsq: score.py: one global gain + low-dim physical damping only, no per-mode amp/damping LSQ
+[GREEN ] damping_dim_le_10: all audited candidates have damping_dim <= 10
+[GREEN ] exact_basis_decision_scores: all 6 freeze-set spot checks within exact-basis tol 0.003
+[GREEN ] physical_damping_bounds: all audited arms within physical damping bounds zeta[0.002,0.05] eta<=0.2
+[GREEN ] a0d_baseline_present: A0d damping-updated baseline present
+[GREEN ] s4_ablation: S4 ablation: damping_share -0.105 -> improvement is shape/theta; DAMPING lever unproven
+[GREEN ] vault_freeze_ordering: finalists frozen before vault read; vault graded once
+[YELLOW] nuts_finalists: non-converged finalist(s) [('nuts_A0_enr.json', 24.798, 2.0, 0.0, False)] -> intervals not-trustworthy
+[GREEN ] leave_modes_out: leave-modes-out present, all widen>1.0 across 6 arm(s)
+[GREEN ] figures_legibility: 5 figures present + legibility QA passed
+[GREEN ] runtime_accounting: active 8722.7s <= elapsed 8722.7s
+[YELLOW] s1_s2_s3_s4_verdicts: pre-registered claim FALSIFIED (honest outcome): pre-registered claim FALSIFIED: S1 FAIL; S2 FAIL; S3 FAIL; S4 FAIL
+OVERALL: YELLOW  {'GREEN': 19, 'YELLOW': 2, 'RED': 0}
+=== TAIL COMPLETE ===

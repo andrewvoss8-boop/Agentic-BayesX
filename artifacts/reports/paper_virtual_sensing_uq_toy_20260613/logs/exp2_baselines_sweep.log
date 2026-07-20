@@ -1,0 +1,109 @@
+{
+  "experiment": "E2_baselines_sweep",
+  "runtime_s": 32.27,
+  "meas_up_floor_db": 6.310710487700874,
+  "note": "Meas-Up predicts masked channels from shared physics (discard). Interp-Up interpolates across channels. FAU-Up trusts the surrogate virtual target. Bayes down-weights the virtual target and reports an interval.",
+  "levels": [
+    {
+      "level": "good",
+      "scale_lambda": 0.4,
+      "realized_recon_peak_err_db": 1.2837431487291582,
+      "interp_up_err_db": 2.7019933025216716,
+      "meas_up_err_db": 6.310710487700874,
+      "fau_up_err_db": 0.7495429801271882,
+      "bayes_median_err_db": 1.6835460605898365,
+      "bayes_masked_qoi_covered": 2,
+      "bayes_masked_qoi_n": 2,
+      "nuts": {
+        "max_rhat": 1.000545558349211,
+        "min_ess": 2897.830296027421,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 2800
+      },
+      "nuts_converged": true
+    },
+    {
+      "level": "fair",
+      "scale_lambda": 0.9,
+      "realized_recon_peak_err_db": 2.8884220846406095,
+      "interp_up_err_db": 2.7019933025216716,
+      "meas_up_err_db": 6.310710487700874,
+      "fau_up_err_db": 3.260509943556883,
+      "bayes_median_err_db": 1.4383250820639768,
+      "bayes_masked_qoi_covered": 2,
+      "bayes_masked_qoi_n": 2,
+      "nuts": {
+        "max_rhat": 1.0000338775710902,
+        "min_ess": 2495.8795432290426,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 2800
+      },
+      "nuts_converged": true
+    },
+    {
+      "level": "poor",
+      "scale_lambda": 1.6,
+      "realized_recon_peak_err_db": 5.134972594916604,
+      "interp_up_err_db": 2.7019933025216716,
+      "meas_up_err_db": 6.310710487700874,
+      "fau_up_err_db": 4.712472318446487,
+      "bayes_median_err_db": 1.1363379222957952,
+      "bayes_masked_qoi_covered": 2,
+      "bayes_masked_qoi_n": 2,
+      "nuts": {
+        "max_rhat": 1.0004977898423364,
+        "min_ess": 2483.3993169175906,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 2800
+      },
+      "nuts_converged": true
+    },
+    {
+      "level": "bad",
+      "scale_lambda": 2.6,
+      "realized_recon_peak_err_db": 8.344330466739493,
+      "interp_up_err_db": 2.7019933025216716,
+      "meas_up_err_db": 6.310710487700874,
+      "fau_up_err_db": 2.9348125680228065,
+      "bayes_median_err_db": 4.5690263960005115,
+      "bayes_masked_qoi_covered": 2,
+      "bayes_masked_qoi_n": 2,
+      "nuts": {
+        "max_rhat": 1.0003653418105058,
+        "min_ess": 2445.111387912817,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 2800
+      },
+      "nuts_converged": true
+    },
+    {
+      "level": "severe",
+      "scale_lambda": 3.8,
+      "realized_recon_peak_err_db": 12.195559912926967,
+      "interp_up_err_db": 2.7019933025216716,
+      "meas_up_err_db": 6.310710487700874,
+      "fau_up_err_db": 1.4754287029866333,
+      "bayes_median_err_db": 6.630149629118229,
+      "bayes_masked_qoi_covered": 2,
+      "bayes_masked_qoi_n": 2,
+      "nuts": {
+        "max_rhat": 1.0018479013413155,
+        "min_ess": 2263.390357883616,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 2800
+      },
+      "nuts_converged": true
+    }
+  ],
+  "all_nuts_converged": true
+}

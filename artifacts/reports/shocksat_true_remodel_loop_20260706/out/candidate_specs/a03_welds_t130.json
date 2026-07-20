@@ -1,0 +1,21 @@
+{
+ "cid": "a03_welds_t130",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    104,
+    105,
+    106,
+    204,
+    205,
+    206
+   ],
+   "t_scale": 1.3,
+   "name": "welds_t130"
+  }
+ ],
+ "rationale": "Weld-bead EFFECTIVE THICKNESS +30% (mem \u221dt, bend \u221dt\u00b3, mass \u221dt): \u03b8_MAP pushes weld MODULI up (al_welds 1.31, steel_welds 1.10) \u2014 if the real defect is bead thickness, bending stiffens 2.2x vs membrane 1.3x, a model-form change modulus scaling cannot express. Physically real: weld beads add local section.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: theta_map al_welds=1.306"
+}

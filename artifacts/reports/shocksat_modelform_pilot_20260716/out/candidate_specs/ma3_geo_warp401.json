@@ -1,0 +1,16 @@
+{
+ "cid": "ma3_geo_warp401",
+ "cls": "geometry",
+ "ops": [
+  {
+   "op": "warp_panel",
+   "pid": 401,
+   "amp": 0.2,
+   "name": "warp401"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: cross_beam stiffening keeps winning in the control class (xbeam x1.4 alone +0.1628) and Cross_Beam carries 0.093 of shape defect -> test the GEOMETRY counterpart: warp the flat cross-beam plate (stiffens via membrane-bending coupling, V-gated)",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: cross_beam stiffening keeps winning in the control class (xbeam x1.4 alone +0.1628) and Cross_Beam"
+}

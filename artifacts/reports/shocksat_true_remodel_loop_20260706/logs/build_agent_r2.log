@@ -1,0 +1,12 @@
+[build] b01_stack_bb_weld (split+thickness): OK n_modes=74 pairs=33
+[build] b02_bb_3band (split): OK n_modes=74 pairs=33
+[build] b03_bb_4way (split): OK n_modes=74 pairs=33
+[build] b04_ctrl_bb_scale (parametric_only): OK n_modes=74 pairs=33
+[build] b05_ctrl_multiscale (parametric_only): OK n_modes=74 pairs=33
+[build] b06_weld_t060 (thickness): OK n_modes=74 pairs=33
+[build] b07_weld_t085 (thickness): OK n_modes=74 pairs=33
+[build] b08_steelweld_t074 (thickness): OK n_modes=74 pairs=33
+[build] b09_alweld_t074 (thickness): OK n_modes=74 pairs=33
+[build] b10_bbbulk_weld (split+thickness): OK n_modes=74 pairs=33
+[build] b11_bb_drivecorner (split): OK n_modes=74 pairs=33
+[build] b12_bb3band_weld (split+thickness): OK n_modes=74 pairs=33

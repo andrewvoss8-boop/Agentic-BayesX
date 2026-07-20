@@ -1,0 +1,62 @@
+{
+  "likelihood": "L6_freq_plus_MAC (Argyris/Metsovo)",
+  "split_seed": 0,
+  "n_modes": 24,
+  "n_observed": 48,
+  "n_heldout": 32,
+  "free_groups": [
+    "bottom_box",
+    "cross_beam",
+    "plates",
+    "top_box"
+  ],
+  "L5_freq_only": {
+    "calib": {
+      "max_rhat": 1.001072019172457,
+      "min_ess": 2034.0397580852405,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "n_chains": 4,
+      "draws": 4000,
+      "converged": true
+    },
+    "heldout_peak": {
+      "coverage": 0.875,
+      "sigma_qoi": 0.9978543437772918,
+      "interval_score": 1422.3265975836866,
+      "crps": 117.37024048866425,
+      "z_std": 0.8751892799650822,
+      "mean_width_db": 33.68207368004918
+    }
+  },
+  "L6_freq_plus_MAC": {
+    "calib": {
+      "max_rhat": 1.0030472416389293,
+      "min_ess": 1140.8157613681085,
+      "divergences": 2,
+      "converged": true
+    },
+    "sigma_mac_med": 0.8416479165578357,
+    "heldout_peak": {
+      "coverage": 0.90625,
+      "sigma_qoi": 0.9915793137354191,
+      "interval_score": 1386.1867678967933,
+      "crps": 116.5336393285751,
+      "z_std": 0.8375646428439812,
+      "mean_width_db": 33.31299797822815
+    }
+  },
+  "theta_med_L5": {
+    "bottom_box": 0.9464141982609188,
+    "cross_beam": 0.7990519846576238,
+    "plates": 0.9410774954515189,
+    "top_box": 1.0421242349359288
+  },
+  "theta_med_L6": {
+    "bottom_box": 0.9419072225285022,
+    "cross_beam": 0.7877644724130249,
+    "plates": 0.9394037640072226,
+    "top_box": 1.050194570110464
+  },
+  "runtime_s": 1035.4137573242188
+}

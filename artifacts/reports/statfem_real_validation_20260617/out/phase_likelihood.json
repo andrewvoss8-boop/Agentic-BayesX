@@ -1,0 +1,21 @@
+{
+  "deliverable": "Phase4_complex_phase_likelihood_L4 (diagnostic; single-hit phase)",
+  "split_seed": 0,
+  "n_obs_channels": 46,
+  "n_matched_modes": 12,
+  "phase_circular_variance_at_modes": 0.8536364364877632,
+  "phase_note": "circular variance ~1 => measured-vs-model phase incoherent across channels (single-hit/timing noise); ~0 => coherent",
+  "residual_RMS_complex_over_magnitude": 0.6836282357583016,
+  "residual_RMS_magnitude": 1.4616612376543285,
+  "residual_RMS_complex_normalized": 0.9992328931739242,
+  "theta_slice_magnitude": {
+    "argmin_theta": 0.82,
+    "rel_contrast": 0.009354773354431413
+  },
+  "theta_slice_complex": {
+    "argmin_theta": 0.6,
+    "rel_contrast": 0.00012696626713511031
+  },
+  "verdict": "phase adds NOTHING over magnitude: single-hit measured-vs-model phase is incoherent across channels (circular variance 0.85, ~1=uniform), and the complex theta-slice minimum is NOT sharper than magnitude (rel-contrast complex 0.00 vs magnitude 0.01). Magnitude/modal likelihoods retained.",
+  "residual_note": "complex residual is normalized linear amplitude; magnitude residual is log-scale RMS -- different units, NOT directly comparable; the decisive evidence is the circular variance and the theta-slice contrast."
+}

@@ -1,0 +1,18 @@
+{
+  "run": "shocksat_netcg_validated_port_20260716 (runner card B \u2014 validated net-CG QOI port)",
+  "machine": "Mac CPU, float64, OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1. Per docs/compute_protocol.md the CPU is the default and the source of truth; no GPU is used or needed \u2014 this card runs NO sampler (the L5 NUTS posterior is reused cached draws) and every forward solve is a 74x74 or 194x194 dense eigh.",
+  "active_runtime_s": 96.79,
+  "elapsed_wallclock_s": 97.46,
+  "per_step_active_s": {
+    "n0_reference.py": 3.7,
+    "mc_noise.py": 17.69,
+    "n1_bridge.py": 3.75,
+    "s3s4_assess.py": 68.84,
+    "fig_port.py": 2.32,
+    "fig_qa.py": 0.49
+  },
+  "measurement": "active_runtime_s = measured sum of per-command execution time (logs/step_times.txt, each step timed individually incl. interpreter start + imports). elapsed_wallclock_s = measured end-to-end for the same sequence plus check.py. active <= elapsed as required by the AGENTS Runtime Accounting Gate.",
+  "one_command_replay": "./run_all.sh \u2014 measured 77 s wallclock end-to-end on a warm filesystem cache, exit 0.",
+  "note": "The card estimated ~2-4 h of compute. Actual scored compute is ~1.5 min because the whole point of the card was REUSE: the delivered netcg machinery and its cached L5 NUTS posterior are driven read-only rather than re-derived. The expensive item the card feared (re-deriving a reference) never had to happen once N0 passed.",
+  "agent_session_note": "The agent session wallclock (reading the prior threads, pre-registration, the D4 mapping diagnosis, figure QA) is far longer than the scored compute; active_runtime_s is the cross-runner-comparable number per the gate."
+}

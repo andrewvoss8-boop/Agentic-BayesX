@@ -1,0 +1,25 @@
+{
+ "cid": "ma1_prop_tboxxbeam",
+ "cls": "property_control",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    201,
+    202,
+    203
+   ],
+   "t_scale": 0.9,
+   "name": "tbox090"
+  },
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.4
+  }
+ ],
+ "diagnosis_link": "CONTROL: verbatim replay of the study's best EXACT candidate wa2_tbox_xbeam (exact 0.1765) - the bar the model-form classes must beat",
+ "track": "agent",
+ "round": 1,
+ "rationale": "CONTROL: verbatim replay of the study's best EXACT candidate wa2_tbox_xbeam (exact 0.1765) - the bar the model-form clas"
+}

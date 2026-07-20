@@ -1,0 +1,28 @@
+{"track": "agent", "cid": "wa1_xbeam_scale", "round": 1, "family": "scale", "sub200_P1p": 0.17040672602367232, "b200_500_P1p": 0.2072499729394281, "ts": "2026-07-15T16:42:44"}
+{"track": "agent", "cid": "wa1_bbox_stiff", "round": 1, "family": "thickness", "sub200_P1p": 0.14527722249510006, "b200_500_P1p": 0.19797838797604728, "ts": "2026-07-15T16:50:13"}
+{"track": "agent", "cid": "wa1_bbox_soft", "round": 1, "family": "thickness", "sub200_P1p": 0.15858359746466605, "b200_500_P1p": 0.1853514684790395, "ts": "2026-07-15T16:57:16"}
+{"track": "agent", "cid": "wa1_tbox_soft", "round": 1, "family": "thickness", "sub200_P1p": 0.17055691148017704, "b200_500_P1p": 0.08708716930109077, "ts": "2026-07-15T17:04:53"}
+{"track": "agent", "cid": "wa1_plates_stiff", "round": 1, "family": "thickness", "sub200_P1p": 0.1499490154122886, "b200_500_P1p": 0.22741660680567533, "ts": "2026-07-15T17:16:01"}
+{"track": "agent", "cid": "wa1_bbox_zsplit", "round": 1, "family": "split", "sub200_P1p": 0.15903247152973266, "b200_500_P1p": 0.2663504380795746, "ts": "2026-07-15T17:16:21"}
+{"track": "random", "cid": "wr1_rnd000", "round": 1, "family": "scale", "sub200_P1p": 0.1510963919830014, "b200_500_P1p": 0.1973070023594514, "ts": "2026-07-15T17:16:33", "seed": 20260715}
+{"track": "random", "cid": "wr1_rnd001", "round": 1, "family": "thickness", "sub200_P1p": 0.07727895702620145, "b200_500_P1p": 0.11314033652956944, "ts": "2026-07-15T17:23:39", "seed": 20260715}
+{"track": "random", "cid": "wr1_rnd002", "round": 1, "family": "connect", "sub200_P1p": 0.1507298657771109, "b200_500_P1p": 0.23876299711084525, "ts": "2026-07-15T17:30:46", "seed": 20260715}
+{"track": "random", "cid": "wr1_rnd003", "round": 1, "family": "scale", "sub200_P1p": 0.13945594574096454, "b200_500_P1p": 0.24886069419210965, "ts": "2026-07-15T17:31:08", "seed": 20260715}
+{"track": "random", "cid": "wr1_rnd004", "round": 1, "family": "split", "sub200_P1p": 0.1655621534514054, "b200_500_P1p": 0.17965041859861727, "ts": "2026-07-15T17:31:32", "seed": 20260715}
+{"track": "random", "cid": "wr1_rnd005", "round": 1, "family": "scale", "sub200_P1p": 0.163352943185465, "b200_500_P1p": 0.1700758166722516, "ts": "2026-07-15T17:31:47", "seed": 20260715}
+{"track": "agent", "cid": "wa2_tbox_xbeam", "round": 2, "family": "thickness+scale", "sub200_P1p": 0.1679662495502327, "b200_500_P1p": 0.20456334183341435, "ts": "2026-07-15T17:41:35"}
+{"track": "agent", "cid": "wa2_bothbox_soft", "round": 2, "family": "thickness", "sub200_P1p": 0.15140637839231147, "b200_500_P1p": 0.13479295427403415, "ts": "2026-07-15T17:48:12"}
+{"track": "agent", "cid": "wa2_bbox_zsplit_tbox", "round": 2, "family": "split+thickness", "sub200_P1p": 0.17664531057119912, "b200_500_P1p": 0.13483266611361872, "ts": "2026-07-15T17:55:40"}
+{"track": "agent", "cid": "wa2_brackets_soft", "round": 2, "family": "thickness", "sub200_P1p": 0.17940546316783876, "b200_500_P1p": 0.18819583941709886, "ts": "2026-07-15T18:02:14"}
+{"track": "random", "cid": "wr2_rnd000", "round": 2, "family": "connect", "sub200_P1p": 0.14898342750841956, "b200_500_P1p": 0.06175922517853435, "ts": "2026-07-15T18:09:17", "seed": 20260716}
+{"track": "random", "cid": "wr2_rnd001", "round": 2, "family": "thickness", "sub200_P1p": 0.1656518292277053, "b200_500_P1p": 0.18444249318132355, "ts": "2026-07-15T18:15:57", "seed": 20260716}
+{"track": "random", "cid": "wr2_rnd002", "round": 2, "family": "split", "sub200_P1p": 0.1414402772165393, "b200_500_P1p": 0.16676858668424588, "ts": "2026-07-15T18:16:22", "seed": 20260716}
+{"track": "random", "cid": "wr2_rnd003", "round": 2, "family": "thickness", "sub200_P1p": 0.1611954982528721, "b200_500_P1p": 0.20428441193802915, "ts": "2026-07-15T18:23:43", "seed": 20260716}
+{"track": "agent", "cid": "wa3_brackets_xbeam", "round": 3, "family": "thickness+scale", "sub200_P1p": 0.1634351838715873, "b200_500_P1p": 0.1912330717040091, "ts": "2026-07-15T18:31:50"}
+{"track": "agent", "cid": "wa3_brackets_tbox", "round": 3, "family": "thickness", "sub200_P1p": 0.16979692072234662, "b200_500_P1p": 0.20491189253956482, "ts": "2026-07-15T18:39:01"}
+{"track": "agent", "cid": "wa3_brackets_plates", "round": 3, "family": "thickness", "sub200_P1p": 0.16465973059154382, "b200_500_P1p": 0.09679140250278269, "ts": "2026-07-15T18:49:11"}
+{"track": "agent", "cid": "wa3_brackets_bbox_split", "round": 3, "family": "thickness+split", "sub200_P1p": 0.14953180417873574, "b200_500_P1p": 0.2585466112206803, "ts": "2026-07-15T18:55:49"}
+{"track": "random", "cid": "wr3_rnd000", "round": 3, "family": "refine", "sub200_P1p": 0.14177627998814862, "b200_500_P1p": 0.25100804489276707, "ts": "2026-07-15T19:04:06", "seed": 20260717}
+{"track": "random", "cid": "wr3_rnd002", "round": 3, "family": "thickness", "sub200_P1p": 0.15143891973367227, "b200_500_P1p": 0.06230234947678315, "ts": "2026-07-15T19:10:38", "seed": 20260717}
+{"track": "random", "cid": "wr3_rnd003", "round": 3, "family": "scale", "sub200_P1p": 0.15380854926647042, "b200_500_P1p": 0.08832227803575057, "ts": "2026-07-15T19:10:53", "seed": 20260717}
+{"track": "random", "cid": "wr3_rnd004", "round": 3, "family": "combo", "sub200_P1p": 0.14894925230980696, "b200_500_P1p": 0.115935545642389, "ts": "2026-07-15T19:20:55", "seed": 20260717}

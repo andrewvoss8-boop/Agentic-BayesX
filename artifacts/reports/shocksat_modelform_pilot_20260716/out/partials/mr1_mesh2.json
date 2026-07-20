@@ -1,0 +1,10 @@
+{
+ "dud": true,
+ "cid": "mr1_mesh2",
+ "track": "random",
+ "round": 1,
+ "cls": "mesh_density",
+ "reason": "ValueError: mech gate: max mode shift 0.0014% < 0.05% (numerical no-op)",
+ "traceback": "Traceback (most recent call last):\n  File \"/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/code/pipeline.py\", line 226, in do_candidate\n    raise ValueError(f\"mech gate: {mech.get('why')}\")\nValueError: mech gate: max mode shift 0.0014% < 0.05% (numerical no-op)\n",
+ "ts": "2026-07-17T00:04:21"
+}

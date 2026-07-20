@@ -1,0 +1,36 @@
+{
+ "cid": "ma1_conn_rbe3tbox",
+ "cls": "connectivity",
+ "ops": [
+  {
+   "op": "rbe3_convert",
+   "eids": [
+    2033593,
+    2033594,
+    2033597,
+    2033598,
+    5000321,
+    5000322,
+    5000901,
+    5000902,
+    6001321,
+    6001322,
+    6001323,
+    6001324,
+    8000042,
+    8000058,
+    9000028,
+    9000029,
+    9000030,
+    9000031,
+    9000079,
+    9000080
+   ],
+   "name": "rbe3tbox"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r1.json: Top_Box carries 0.392 of survey-shape residual energy and its 168/172 Hz pairs are +7.4/+5.7% too stiff; rigid RBE2 patches at the upper wall joints (z>=45) overstiffen local wall bending -> replace 20 spiders with interpolation (RBE3) constraints",
+ "track": "agent",
+ "round": 1,
+ "rationale": "diagnosis_mf_r1.json: Top_Box carries 0.392 of survey-shape residual energy and its 168/172 Hz pairs are +7.4/+5.7% too "
+}

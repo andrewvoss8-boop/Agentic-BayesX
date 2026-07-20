@@ -1,0 +1,7 @@
+[    0.1s] nb=98 anchor=x1.0 n_calib=27 f_data range 52.2-234.2 Hz
+[    0.1s] base: starting NUTS 4x(1000+1000) depth 8
+[ 1503.7s] base: worst_rhat 5.0297 min_ess 2 div 0 gate_pass False (1504s)
+[ 1503.7s] gate FAILED on base run -> auto-remedy 2000+2000 depth 9 (D10)
+[ 1503.7s] remedy: starting NUTS 4x(2000+2000) depth 9
+[ 7508.3s] remedy: worst_rhat 9.7357 min_ess 2 div 0 gate_pass False (7508s)
+[ 7508.4s] final tag base; posterior summary written

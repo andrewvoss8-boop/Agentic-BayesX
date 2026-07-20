@@ -1,0 +1,37 @@
+{
+  "seed": 1,
+  "scores": {
+    "peak": {
+      "interval_score_mean": 3147.003058843065,
+      "crps_mean": 217.17138130719724,
+      "logpd_mean": -6.569739711230966,
+      "coverage_frac": 0.6451612903225806,
+      "mean_width_db": 23.00204138882064,
+      "pit_ks_dev": 0.5423225806451613,
+      "pit_mean": 0.19509677419354837,
+      "z_mean": -0.2959708379065388,
+      "z_std": 0.6791020482320735,
+      "n_channels": 31
+    },
+    "band": {
+      "interval_score_mean": 9559.7961223565,
+      "crps_mean": 627.3386128771833,
+      "logpd_mean": -7.623723591570824,
+      "coverage_frac": 0.6451612903225806,
+      "mean_width_db": 23.16356901512488,
+      "pit_ks_dev": 0.46180645161290323,
+      "pit_mean": 0.22877419354838707,
+      "z_mean": -0.24086083967278427,
+      "z_std": 0.5434707932900621,
+      "n_channels": 31
+    }
+  },
+  "converged": false,
+  "diag": {
+    "max_rhat": 68.76677439489097,
+    "min_ess": 2.0024267118089862,
+    "divergences": 0,
+    "div_frac": 0.0
+  },
+  "note": "whole-FRF Schneider field LIKELIHOOD; expected NON-converged (StatFEM D7/D10); QOI flagged"
+}

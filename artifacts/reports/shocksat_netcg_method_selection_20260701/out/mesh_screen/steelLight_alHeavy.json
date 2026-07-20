@@ -1,0 +1,24 @@
+{
+ "edit_id": "steelLight_alHeavy",
+ "n_matched": 29,
+ "global_MAC": 0.631,
+ "mac_shear_band": 0.677,
+ "freq_rms_shear_pct": 7.88,
+ "freq_rms_all_pct": 10.56,
+ "screen_score": 0.4401,
+ "drum_freqs_hz": [
+  230.6,
+  233.7,
+  233.7,
+  234.4,
+  246.1,
+  247.5,
+  249.4,
+  251.6,
+  253.9,
+  254.7,
+  258.3,
+  258.9
+ ],
+ "runtime_s": 308.7
+}

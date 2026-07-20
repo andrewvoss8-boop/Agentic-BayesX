@@ -1,0 +1,6 @@
+[build] c01_bb_maxsplit (split): OK n_modes=74 pairs=33
+[build] c02_boxes_maxsplit (split): OK n_modes=74 pairs=33
+[build] c03_a16_drive (split): OK n_modes=74 pairs=33
+[build] c04_boltstiff_a16 (connect+split): OK n_modes=74 pairs=33
+[build] c05_ctrl_allscale (parametric_only): OK n_modes=74 pairs=33
+[build] c06_tb_xface (split): OK n_modes=74 pairs=33

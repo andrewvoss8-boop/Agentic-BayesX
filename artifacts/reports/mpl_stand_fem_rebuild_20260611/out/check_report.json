@@ -1,0 +1,105 @@
+{
+ "overall": "yellow",
+ "counts": {
+  "green": 16,
+  "yellow": 5,
+  "red": 0
+ },
+ "gates": {
+  "parse_counts": {
+   "status": "green",
+   "detail": "counts {'GRID': 1415, 'CBEAM': 1288, 'PBEAM': 37, 'CQUAD4': 72, 'PSHELL': 1, 'CBUSH': 70, 'PBUSH': 1, 'RBE2': 39, 'MAT1': 1, 'SPC1': 4, 'FORCE_dropped': 91} vs expected {'GRID': 1415, 'CBEAM': 1288, 'PBEAM': 37, 'CQUAD4': 72, 'PSHELL': 1, 'CBUSH': 70, 'PBUSH': 1, 'RBE2': 39, 'MAT1': 1, 'SPC1': 4}"
+  },
+  "cord_frames_unreferenced": {
+   "status": "green",
+   "detail": "CORD2C/S defined but no GRID references them (CP=CD=0)"
+  },
+  "element_library_validation": {
+   "status": "green",
+   "detail": {
+    "beam_static": true,
+    "beam_static_stocky": true,
+    "beam_freq": true,
+    "plate_strip": true,
+    "plate_ss_f11": true,
+    "cbush_conm2": true,
+    "cbush_equilibrium": true,
+    "rbe2": true,
+    "free_free_6_rbm": true
+   }
+  },
+  "mass_closure": {
+   "status": "green",
+   "detail": "rel err 3.33e-15; model 591.4 lbm (deck frame 498 + plate 11.3 + shield 36.5 + 80/20 valve frame+contents 34.6 + boxes 11 estimated)"
+  },
+  "free_free_6_rbm": {
+   "status": "green",
+   "detail": "n_rbm=6, max rbm 0.0017 Hz, first elastic 13.87 Hz"
+  },
+  "no_negative_eigenvalues": {
+   "status": "green",
+   "detail": "n_neg=0"
+  },
+  "modes_reported": {
+   "status": "green",
+   "detail": "nominal 184 modes <=500 Hz; no-shield 72"
+  },
+  "shield_t_limiting_behavior": {
+   "status": "green",
+   "detail": "first shield mode ratios: x0.5 -> 0.4527 (ideal 0.5), x2 -> 1.857 (ideal 2.0; sub-linear because fixed screw springs dominate as the panel stiffens -- physical, documented)"
+  },
+  "strain_energy_decomposition": {
+   "status": "green",
+   "detail": "mean sum over groups = 1.00000000 (identifiability gate artifact out/strain_energy_nominal.json + fig_identifiability.png)"
+  },
+  "dual_mode_tables": {
+   "status": "green",
+   "detail": "TABLE A (with shield): 184 modes; TABLE B (deck as-given, no shield): 72 modes (replaces the card's dead 0.5-vs-16ga premise per D19/D23)"
+  },
+  "discretization_resolution": {
+   "status": "green",
+   "detail": "h-refine x2 spot-check: first-30 median |shift| 2.45%, max 7.04%; mode counts diverge above ~250 Hz (documented: upper band = modal-density-only). Coarse on purpose (Andrew)."
+  },
+  "interface_points": {
+   "status": "green",
+   "detail": "shield mount: shield grid 800071 / frame grid 652; beam mount: grid 1510 back wall at x=59.00"
+  },
+  "beam_mount_station_interpretation": {
+   "status": "yellow",
+   "detail": "beam mount = leftmost VERTICAL post (y=-48), top region, back wall (Andrew round 3); exact clamp height on the post still assumed z~47 -- ANDREW-CONFIRM-REQUIRED"
+  },
+  "figures_and_gifs_qa": {
+   "status": "green",
+   "detail": "10 figures ok, 15 GIFs animated"
+  },
+  "box_mass_prior_and_prior_predictive": {
+   "status": "green",
+   "detail": "box-mass prior LogNormal 95%=[2,4] lbm (Andrew); prior-predictive f1 13.6 Hz [12.97,14.06] via monotone interpolation (violation 0.0 Hz); NO sampler (forward push only); caveat: box mode CROSSES f1 near 2-2.5 lb + veers across 17-45 Hz, box mass weakly/confoundedly observable -> next-card lever = cluster + sensor on the box"
+  },
+  "mounted_mass_values": {
+   "status": "yellow",
+   "detail": "valve assembly = HIGHER-FIDELITY 80/20 aluminum frame (D38): 1515 series ASSUMED (dominant knob), ~18.6 lbm frame self-mass + 16 lbm tanks/valves lumped, bolted at 4 corners -> frame-flexure modes ~156/190 Hz (replaces the old spurious 14 Hz rigid rock). electronics box mass = PRIOR LogNormal 2-4 lbm; white box 8 lbm: extrusion series + cage dims + tank/valve masses + bolt locations ESTIMATED (Andrew authorized); ANDREW-CONFIRM/UPDATE-REQUIRED; exposed as parameters in priors.py"
+  },
+  "shield_material": {
+   "status": "yellow",
+   "detail": "shield thickness 1.7 mm CONFIRMED; material 'probably steel' (Andrew) + welded-to-steel-frame implies steel. NOTE rev 3: with the box ON the panel the old steel/aluminum frequency coincidence is broken (aluminum arm f1 -29%) -- material is now testable from data; ANDREW-CONFIRM"
+  },
+  "pseudo_frf_fem_vs_test": {
+   "status": "yellow",
+   "detail": "DIAGNOSTIC: 3x3 tap-TRANSFER matrix (apples-to-apples point force) + acoustic with MODELED uniform-shield-pressure forcing, uncalibrated FEM vs scrappy test, NO measured force -> pseudo-FRF (peak FREQUENCIES only; assumed 3% damping; NO sampler). Mid-band (>30 Hz) median |peak err| = 0.2% (several <1%: 55.6/66.1/78.4/88.9 Hz); low band ~5-10% = estimated box/shield masses+weld k (yellow knobs). SATURATION FIX (D40): tap windows capped before next event + near-rail windows rejected = True. fig_pseudo_frf_transfer.png + fig_pseudo_frf_acoustic.png"
+  },
+  "deterministic_model_updating": {
+   "status": "yellow",
+   "detail": "DETERMINISTIC tuning (NOT a posterior/NUTS) on box-foot tap-transfer ONLY: box-foot median |\u0394f| 6.13% -> 2.21% (matched 2/4 -> 3/4); held-out 8.0% -> 8.0% (no degradation = no overfit). D43 model-form split-box-mount added the ~27 Hz rocking peak. MEDIAN goal (<=3%) MET; full 4/4 NOT met = documented 11.4 Hz model-form floor (declined to overfit). tuning_changelog.md"
+  },
+  "sampler_decision": {
+   "status": "green",
+   "detail": "NO sampler run in this task (card scope); K(theta)=sum s_g K_g per-group structure built sampler-ready for the future NUTS task; no convergence claims made anywhere"
+  },
+  "required_artifacts": {
+   "status": "green",
+   "detail": "all present"
+  }
+ },
+ "note": "YELLOW entries are documented honesty findings (estimated values pending Andrew confirmation), not failures hidden as passes. Exit nonzero only on RED."
+}

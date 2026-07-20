@@ -1,0 +1,325 @@
+[
+ {
+  "cid": "c01_bb_maxsplit",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 8.0,
+     "side": "hi"
+    },
+    "name": "bb_xface"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 0.0,
+     "zhi": 4.0
+    },
+    "name": "bb_base"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 9.5,
+     "zhi": 13.5
+    },
+    "name": "bb_bulkband"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "near_points",
+     "points": [
+      [
+       9.0,
+       7.6,
+       0.6
+      ],
+      [
+       9.0,
+       -7.6,
+       0.6
+      ]
+     ],
+     "radius": 6.0
+    },
+    "name": "bb_drive"
+   }
+  ],
+  "rationale": "CEILING PROBE (bottom box): 5 independent stiffness sub-regions of the wall (face/base/bulkband/drive-corner/field) = the maximal distribution freedom any split family offers where all evidence concentrated. If this \u2248 parametric control, the split-family ceiling is established.",
+  "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+ },
+ {
+  "cid": "c02_boxes_maxsplit",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 0.0,
+     "zhi": 4.0
+    },
+    "name": "bb_base"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 9.5,
+     "zhi": 13.5
+    },
+    "name": "bb_bulkband"
+   },
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 18.4,
+     "zhi": 21.5
+    },
+    "name": "tb_nearjoint"
+   },
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "z_band",
+     "zlo": 27.4,
+     "zhi": 30.4
+    },
+    "name": "tb_nearbulk"
+   }
+  ],
+  "rationale": "CEILING PROBE (both boxes): distribution freedom in bottom AND top box simultaneously (7 box knobs total).",
+  "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+ },
+ {
+  "cid": "c03_a16_drive",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 8.0,
+     "side": "hi"
+    },
+    "name": "bb_xface"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 9.5,
+     "zhi": 13.5
+    },
+    "name": "bb_bulkband"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "near_points",
+     "points": [
+      [
+       9.0,
+       7.6,
+       0.6
+      ],
+      [
+       9.0,
+       -7.6,
+       0.6
+      ]
+     ],
+     "radius": 6.0
+    },
+    "name": "bb_drive"
+   }
+  ],
+  "rationale": "a16 (best r1) + b11 drive-corner (best r2 fold-3 fix), splits only, no welds (stacking welds hurt).",
+  "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+ },
+ {
+  "cid": "c04_boltstiff_a16",
+  "family": "combo",
+  "ops": [
+   {
+    "op": "rbe2_soften",
+    "eids": [
+     1024295,
+     1024296,
+     1024297,
+     1024298,
+     1024299,
+     1024300,
+     1024301,
+     1024302,
+     1024303,
+     1024304,
+     1024305,
+     1024306,
+     1024307,
+     1024308,
+     1024309,
+     1024310,
+     1024311,
+     1024312,
+     1024313,
+     1024314,
+     1024315,
+     1024316,
+     1024317,
+     1024318,
+     1024319,
+     1024320,
+     1024321,
+     1024322,
+     2032413,
+     2032414,
+     2032415,
+     2032416,
+     2032417,
+     2032418,
+     2032419,
+     2032420,
+     2032421,
+     2032422,
+     2032423,
+     2032424,
+     2032425,
+     2032426,
+     2032427,
+     2032428,
+     2032429,
+     2032430,
+     2032431,
+     2032432,
+     2032433,
+     2032434,
+     2032435,
+     2032436,
+     2032437,
+     2032438,
+     2032439,
+     2032440
+    ],
+    "k_trans": 10000000.0,
+    "k_rot": 1000000.0,
+    "name": "bolt_stiff"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 8.0,
+     "side": "hi"
+    },
+    "name": "bb_xface"
+   },
+   {
+    "op": "split",
+    "pid": 101,
+    "rule": {
+     "type": "z_band",
+     "zlo": 9.5,
+     "zhi": 13.5
+    },
+    "name": "bb_bulkband"
+   }
+  ],
+  "rationale": "Cross-family: bolt_stiff (only non-negative connect, +0.003) + a16 splits \u2014 the untested connect+split combination.",
+  "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+ },
+ {
+  "cid": "c05_ctrl_allscale",
+  "family": "scale",
+  "ops": [
+   {
+    "op": "scale",
+    "group": "bottom_box",
+    "factor": 0.93
+   },
+   {
+    "op": "scale",
+    "group": "top_box",
+    "factor": 0.93
+   },
+   {
+    "op": "scale",
+    "group": "plates",
+    "factor": 1.1
+   },
+   {
+    "op": "scale",
+    "group": "al_welds",
+    "factor": 1.15
+   },
+   {
+    "op": "scale",
+    "group": "steel_welds",
+    "factor": 1.05
+   },
+   {
+    "op": "scale",
+    "group": "joints",
+    "factor": 0.9
+   },
+   {
+    "op": "scale",
+    "group": "contact",
+    "factor": 0.9
+   },
+   {
+    "op": "scale",
+    "group": "cross_beam",
+    "factor": 1.0
+   },
+   {
+    "op": "scale",
+    "group": "angle_brackets",
+    "factor": 0.95
+   }
+  ],
+  "rationale": "MAXIMAL PARAMETRIC CONTROL: all 9 groups pre-scaled (\u03b8_MAP re-fits on top) \u2014 the parametric-family ceiling to compare c01/c02 against.",
+  "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+ },
+ {
+  "cid": "c06_tb_xface",
+  "family": "split",
+  "ops": [
+   {
+    "op": "split",
+    "pid": 201,
+    "rule": {
+     "type": "halfspace",
+     "axis": 0,
+     "cut": 8.0,
+     "side": "hi"
+    },
+    "name": "tb_xface"
+   }
+  ],
+  "rationale": "Top-box +X face split (the one untested face analog of a01; ch52/69 are +X-face channels).",
+  "evidence": "round_r2_summary.md: stacks interfere; b05 parametric control matches best shape edit; ceiling probe"
+ }
+]

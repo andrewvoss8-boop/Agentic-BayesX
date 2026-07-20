@@ -1,0 +1,13 @@
+{
+ "cid": "wr3_rnd003",
+ "family": "parametric_only",
+ "ops": [
+  {
+   "op": "scale",
+   "group": "cross_beam",
+   "factor": 1.1985943405461725
+  }
+ ],
+ "rationale": "uniform random draw (A2 comparator)",
+ "evidence": "none (random)"
+}

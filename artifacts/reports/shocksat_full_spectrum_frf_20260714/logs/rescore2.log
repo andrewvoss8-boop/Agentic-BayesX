@@ -1,0 +1,33 @@
+enriching bases at theta_MAP ...
+{
+ "A0": {
+  "screen_sub200": 0.131,
+  "exact_sub200": 0.112,
+  "exact_200_500": 0.05
+ },
+ "A1": {
+  "screen_sub200": 0.145,
+  "exact_sub200": 0.114,
+  "exact_200_500": 0.033
+ },
+ "B": {
+  "screen_sub200": 0.142,
+  "exact_sub200": 0.154,
+  "exact_200_500": 0.197
+ },
+ "C": {
+  "screen_sub200": 0.189,
+  "exact_sub200": 0.157,
+  "exact_200_500": 0.022
+ },
+ "D": {
+  "screen_sub200": 0.179,
+  "exact_sub200": 0.163,
+  "exact_200_500": 0.188
+ },
+ "R": {
+  "screen_sub200": 0.166,
+  "exact_sub200": 0.165,
+  "exact_200_500": 0.189
+ }
+}

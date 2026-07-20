@@ -1,0 +1,52 @@
+{
+ "fig1_geometry.png": {
+  "w": 1703,
+  "h": 1370,
+  "ink_frac": 0.1559,
+  "color_frac": 0.004,
+  "ok": true
+ },
+ "fig2_modes.png": {
+  "w": 2365,
+  "h": 1409,
+  "ink_frac": 0.1237,
+  "color_frac": 0.0525,
+  "ok": true
+ },
+ "fig3_buffet_field.png": {
+  "w": 2529,
+  "h": 941,
+  "ink_frac": 0.0476,
+  "color_frac": 0.012,
+  "ok": true
+ },
+ "fig4_qoi_psd.png": {
+  "w": 2260,
+  "h": 1526,
+  "ink_frac": 0.0443,
+  "color_frac": 0.0165,
+  "ok": true
+ },
+ "fig5_validity.png": {
+  "w": 1908,
+  "h": 863,
+  "ink_frac": 0.0537,
+  "color_frac": 0.0085,
+  "ok": true
+ },
+ "fig6_confidence.png": {
+  "w": 2006,
+  "h": 941,
+  "ink_frac": 0.1096,
+  "color_frac": 0.072,
+  "ok": true
+ },
+ "fig7_response_limit_proxy.png": {
+  "w": 2468,
+  "h": 863,
+  "ink_frac": 0.2518,
+  "color_frac": 0.0527,
+  "ok": true
+ },
+ "ALL_OK": true
+}

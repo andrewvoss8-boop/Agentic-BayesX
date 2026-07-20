@@ -1,0 +1,452 @@
+{
+  "deliverable": "Round-0 baseline (nominal + NUTS-calibrated M0) vs climatology, 5 LOLO splits",
+  "groups_calibrated": [
+    "K_shield_bend",
+    "K_shield_mem",
+    "K_beam_wall",
+    "K_beam_rest",
+    "K_plate_bend",
+    "K_bush_joints"
+  ],
+  "smoke": true,
+  "per_split": [
+    {
+      "held_out": "interface",
+      "train": [
+        "beam",
+        "valve",
+        "avi-L",
+        "avi-R"
+      ],
+      "nominal": {
+        "grms_truth": 174.87438943212848,
+        "grms_pred_median": 511.33046834375125,
+        "grms_rel_err": -0.4732356510123418,
+        "crps_grms": 271.72784416256314,
+        "clim_crps_grms": 126.42665563512139,
+        "crps_skill_vs_clim_grms": -1.1492923529259045,
+        "interval_grms": 4322.213896585754,
+        "coverage_grms": false,
+        "z_grms": -0.4368776567312978,
+        "whole_curve_interval": 70.4496100757712,
+        "clim_whole_curve_interval": 72.73135774379446,
+        "interval_skill_vs_clim_curve": 0.03137226828709849,
+        "peak_freq_err_hz": 32.958984375,
+        "centering_c": 1.9200548151040397,
+        "sigma_d": 1.5609334223458884,
+        "fem_point_grms_err_db": 5.525828301003663
+      },
+      "calibrated": {
+        "grms_truth": 174.87438943212848,
+        "grms_pred_median": 339.9716236331206,
+        "grms_rel_err": -0.3483424655205136,
+        "crps_grms": 109.6001746825556,
+        "clim_crps_grms": 126.42665563512139,
+        "crps_skill_vs_clim_grms": 0.133092826572337,
+        "interval_grms": 772.3720859193353,
+        "coverage_grms": false,
+        "z_grms": -1.0213659134782909,
+        "whole_curve_interval": 12.014475325604094,
+        "clim_whole_curve_interval": 72.73135774379446,
+        "interval_skill_vs_clim_curve": 0.8348102428126445,
+        "peak_freq_err_hz": 50.6591796875,
+        "theta_median": {
+          "K_shield_bend": 1.4220714569091797,
+          "K_shield_mem": 0.9787662029266357,
+          "K_beam_wall": 4.458566665649414,
+          "K_beam_rest": 0.9847760796546936,
+          "K_plate_bend": 0.9720039367675781,
+          "K_bush_joints": 0.7072148323059082
+        },
+        "zeta_median": 0.1771548092365265,
+        "convergence": {
+          "max_rhat": 20.600433705330065,
+          "min_ess": 1.0051178607155284,
+          "div_frac": 0.0,
+          "n_samples": 400,
+          "converged": false
+        }
+      }
+    },
+    {
+      "held_out": "beam",
+      "train": [
+        "interface",
+        "valve",
+        "avi-L",
+        "avi-R"
+      ],
+      "nominal": {
+        "grms_truth": 30.219116142213995,
+        "grms_pred_median": 458.00379084195015,
+        "grms_rel_err": 0.7561976959546344,
+        "crps_grms": 360.627265817708,
+        "clim_crps_grms": 21.902860191900864,
+        "crps_skill_vs_clim_grms": -15.464848090983981,
+        "interval_grms": 9323.493062762635,
+        "coverage_grms": false,
+        "z_grms": -0.5866681215778957,
+        "whole_curve_interval": 7.936714068111052,
+        "clim_whole_curve_interval": 5.12001879041723,
+        "interval_skill_vs_clim_curve": -0.5501337774317601,
+        "peak_freq_err_hz": 75.0732421875,
+        "centering_c": 2.086471580312475,
+        "sigma_d": 1.6999366180464675,
+        "fem_point_grms_err_db": 4.866805132428166
+      },
+      "calibrated": {
+        "grms_truth": 30.219116142213995,
+        "grms_pred_median": 304.7373855221084,
+        "grms_rel_err": 2.4371859719446487,
+        "crps_grms": 237.45666166969784,
+        "clim_crps_grms": 21.902860191900864,
+        "crps_skill_vs_clim_grms": -9.841354032725983,
+        "interval_grms": 6683.739531363264,
+        "coverage_grms": false,
+        "z_grms": -2.375605476736969,
+        "whole_curve_interval": 4.889994118274837,
+        "clim_whole_curve_interval": 5.12001879041723,
+        "interval_skill_vs_clim_curve": 0.04492652889729898,
+        "peak_freq_err_hz": 23.193359375,
+        "theta_median": {
+          "K_shield_bend": 1.916952133178711,
+          "K_shield_mem": 1.0226049423217773,
+          "K_beam_wall": 4.3365020751953125,
+          "K_beam_rest": 2.5686492919921875,
+          "K_plate_bend": 1.010599136352539,
+          "K_bush_joints": 1.0373599529266357
+        },
+        "zeta_median": 0.08714551478624344,
+        "convergence": {
+          "max_rhat": 96.18819293200782,
+          "min_ess": 1.0026245706867436,
+          "div_frac": 0.0,
+          "n_samples": 400,
+          "converged": false
+        }
+      }
+    },
+    {
+      "held_out": "valve",
+      "train": [
+        "interface",
+        "beam",
+        "avi-L",
+        "avi-R"
+      ],
+      "nominal": {
+        "grms_truth": 18.274347980178757,
+        "grms_pred_median": 160.33871438821805,
+        "grms_rel_err": 0.43902799906452383,
+        "crps_grms": 125.2823595513197,
+        "clim_crps_grms": 33.1010803438089,
+        "crps_skill_vs_clim_grms": -2.784842012709474,
+        "interval_grms": 3350.6720009620526,
+        "coverage_grms": false,
+        "z_grms": -0.5502814284041041,
+        "whole_curve_interval": 7.168666608964142,
+        "clim_whole_curve_interval": 8.3313692991021,
+        "interval_skill_vs_clim_curve": 0.13955721423407152,
+        "peak_freq_err_hz": 0.6103515625,
+        "centering_c": 2.07402664073786,
+        "sigma_d": 1.6526478084147114,
+        "fem_point_grms_err_db": 2.957238263667441
+      },
+      "calibrated": {
+        "grms_truth": 18.274347980178757,
+        "grms_pred_median": 40.84989815613909,
+        "grms_rel_err": -0.3096292540495853,
+        "crps_grms": 16.984501441577027,
+        "clim_crps_grms": 33.1010803438089,
+        "crps_skill_vs_clim_grms": 0.4868898155236875,
+        "interval_grms": 299.0789412701101,
+        "coverage_grms": false,
+        "z_grms": -1.47452547398334,
+        "whole_curve_interval": 6.532292722963397,
+        "clim_whole_curve_interval": 8.3313692991021,
+        "interval_skill_vs_clim_curve": 0.21594008278238197,
+        "peak_freq_err_hz": 17.7001953125,
+        "theta_median": {
+          "K_shield_bend": 1.259968876838684,
+          "K_shield_mem": 1.0316481590270996,
+          "K_beam_wall": 15.436569213867188,
+          "K_beam_rest": 0.6190541386604309,
+          "K_plate_bend": 0.9971630573272705,
+          "K_bush_joints": 0.8909457921981812
+        },
+        "zeta_median": 0.1646011620759964,
+        "convergence": {
+          "max_rhat": 42.30534514991167,
+          "min_ess": 1.003141352091673,
+          "div_frac": 0.0,
+          "n_samples": 400,
+          "converged": false
+        }
+      }
+    },
+    {
+      "held_out": "avi-L",
+      "train": [
+        "interface",
+        "beam",
+        "valve",
+        "avi-R"
+      ],
+      "nominal": {
+        "grms_truth": 57.6583483972791,
+        "grms_pred_median": 1439.6146321366155,
+        "grms_rel_err": 1.7100749832908217,
+        "crps_grms": 1191.2263810982895,
+        "clim_crps_grms": 16.536617164950115,
+        "crps_skill_vs_clim_grms": -71.03567508493403,
+        "interval_grms": 31237.624602437012,
+        "coverage_grms": false,
+        "z_grms": -0.6894808976837511,
+        "whole_curve_interval": 7.013915792940857,
+        "clim_whole_curve_interval": 15.514632915904954,
+        "interval_skill_vs_clim_curve": 0.5479160975990297,
+        "peak_freq_err_hz": 196.533203125,
+        "centering_c": 2.3321475546114714,
+        "sigma_d": 1.694605803027391,
+        "fem_point_grms_err_db": 8.307667612099337
+      },
+      "calibrated": {
+        "grms_truth": 57.6583483972791,
+        "grms_pred_median": 1217.3968442292642,
+        "grms_rel_err": 5.383469756013441,
+        "crps_grms": 1046.1901312915923,
+        "clim_crps_grms": 16.536617164950115,
+        "crps_skill_vs_clim_grms": -62.26506327479271,
+        "interval_grms": 32166.155673735026,
+        "coverage_grms": false,
+        "z_grms": -3.005996320433167,
+        "whole_curve_interval": 6.186311489467726,
+        "clim_whole_curve_interval": 15.514632915904954,
+        "interval_skill_vs_clim_curve": 0.6012595642449408,
+        "peak_freq_err_hz": 227.05078125,
+        "theta_median": {
+          "K_shield_bend": 1.9726465940475464,
+          "K_shield_mem": 1.0163116455078125,
+          "K_beam_wall": 4.433304786682129,
+          "K_beam_rest": 2.496999740600586,
+          "K_plate_bend": 1.0083719491958618,
+          "K_bush_joints": 1.2944915294647217
+        },
+        "zeta_median": 0.09507619589567184,
+        "convergence": {
+          "max_rhat": 50.61629779229386,
+          "min_ess": 1.0029389824239043,
+          "div_frac": 0.0025,
+          "n_samples": 400,
+          "converged": false
+        }
+      }
+    },
+    {
+      "held_out": "avi-R",
+      "train": [
+        "interface",
+        "beam",
+        "valve",
+        "avi-L"
+      ],
+      "nominal": {
+        "grms_truth": 52.524721112867745,
+        "grms_pred_median": 1957.633153141715,
+        "grms_rel_err": 4.496023889552913,
+        "crps_grms": 1700.7107122254488,
+        "clim_crps_grms": 14.932358638571564,
+        "crps_skill_vs_clim_grms": -112.89431190276713,
+        "interval_grms": 46236.3427757638,
+        "coverage_grms": false,
+        "z_grms": -0.3983800856068965,
+        "whole_curve_interval": 6.480559738918858,
+        "clim_whole_curve_interval": 6.54888785851487,
+        "interval_skill_vs_clim_curve": 0.010433545522874121,
+        "peak_freq_err_hz": 128.7841796875,
+        "centering_c": 2.4499392926103827,
+        "sigma_d": 1.626482896750555,
+        "fem_point_grms_err_db": 14.354671807105778
+      },
+      "calibrated": {
+        "grms_truth": 52.524721112867745,
+        "grms_pred_median": 904.5415009656078,
+        "grms_rel_err": 4.096123091266438,
+        "crps_grms": 788.3015874817954,
+        "clim_crps_grms": 14.932358638571564,
+        "crps_skill_vs_clim_grms": -51.791498420453465,
+        "interval_grms": 25896.530860288225,
+        "coverage_grms": false,
+        "z_grms": -3.402565807419894,
+        "whole_curve_interval": 5.457404323516129,
+        "clim_whole_curve_interval": 6.54888785851487,
+        "interval_skill_vs_clim_curve": 0.16666700645661436,
+        "peak_freq_err_hz": 56.7626953125,
+        "theta_median": {
+          "K_shield_bend": 1.907055139541626,
+          "K_shield_mem": 0.9991880059242249,
+          "K_beam_wall": 4.441043853759766,
+          "K_beam_rest": 2.5638911724090576,
+          "K_plate_bend": 1.0212233066558838,
+          "K_bush_joints": 1.1323151588439941
+        },
+        "zeta_median": 0.08999121934175491,
+        "convergence": {
+          "max_rhat": 55.83742009744519,
+          "min_ess": 1.0028544030670894,
+          "div_frac": 0.0,
+          "n_samples": 400,
+          "converged": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "crps_skill_vs_clim_grms": {
+      "nominal": {
+        "mean": -40.66579388886411,
+        "std": 44.20610043000662,
+        "per_split": [
+          -1.1493,
+          -15.4648,
+          -2.7848,
+          -71.0357,
+          -112.8943
+        ]
+      },
+      "calibrated": {
+        "mean": -24.655586617175224,
+        "std": 26.895779150844547,
+        "per_split": [
+          0.1331,
+          -9.8414,
+          0.4869,
+          -62.2651,
+          -51.7915
+        ]
+      }
+    },
+    "interval_grms": {
+      "nominal": {
+        "mean": 18894.069267702253,
+        "std": 17002.913722855286,
+        "per_split": [
+          4322.2139,
+          9323.4931,
+          3350.672,
+          31237.6246,
+          46236.3428
+        ]
+      },
+      "calibrated": {
+        "mean": 13163.575418515193,
+        "std": 13298.508738993676,
+        "per_split": [
+          772.3721,
+          6683.7395,
+          299.0789,
+          32166.1557,
+          25896.5309
+        ]
+      }
+    },
+    "coverage_grms": {
+      "nominal": {
+        "mean": 0.0,
+        "std": 0.0,
+        "per_split": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "calibrated": {
+        "mean": 0.0,
+        "std": 0.0,
+        "per_split": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "grms_rel_err": {
+      "nominal": {
+        "mean": 1.3856177833701104,
+        "std": 1.7045490064336017,
+        "per_split": [
+          -0.4732,
+          0.7562,
+          0.439,
+          1.7101,
+          4.496
+        ]
+      },
+      "calibrated": {
+        "mean": 2.2517614199308857,
+        "std": 2.3049907479798586,
+        "per_split": [
+          -0.3483,
+          2.4372,
+          -0.3096,
+          5.3835,
+          4.0961
+        ]
+      }
+    },
+    "interval_skill_vs_clim_curve": {
+      "nominal": {
+        "mean": 0.035829069642262755,
+        "std": 0.35128618135553413,
+        "per_split": [
+          0.0314,
+          -0.5501,
+          0.1396,
+          0.5479,
+          0.0104
+        ]
+      },
+      "calibrated": {
+        "mean": 0.3727206850387761,
+        "std": 0.29673020177059184,
+        "per_split": [
+          0.8348,
+          0.0449,
+          0.2159,
+          0.6013,
+          0.1667
+        ]
+      }
+    },
+    "peak_freq_err_hz": {
+      "nominal": {
+        "mean": 86.7919921875,
+        "std": 69.66932495953131,
+        "per_split": [
+          32.959,
+          75.0732,
+          0.6104,
+          196.5332,
+          128.7842
+        ]
+      },
+      "calibrated": {
+        "mean": 75.0732421875,
+        "std": 77.47474905086027,
+        "per_split": [
+          50.6592,
+          23.1934,
+          17.7002,
+          227.0508,
+          56.7627
+        ]
+      }
+    }
+  },
+  "all_splits_converged": false,
+  "runtime_s": 586.3
+}

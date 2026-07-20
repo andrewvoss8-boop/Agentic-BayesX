@@ -1,0 +1,6 @@
+
+=== code/fig_limit.py ===
+  [INFO] dB detected: state linear/dB explicitly and justify dB (project rule: avoid dB unless standard).
+  [INFO] Looks like a frequency-domain plot but no log x-axis found. Project rule: log frequency axis unless justified.
+
+2 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.

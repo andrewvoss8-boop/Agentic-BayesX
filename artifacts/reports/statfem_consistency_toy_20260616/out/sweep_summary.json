@@ -1,0 +1,481 @@
+{
+ "theta_true": 1.15,
+ "constructions": {
+  "M-lik": {
+   "physics_location": "likelihood",
+   "model_error_role": "sigma_r (fixed residual pseudo-noise)",
+   "knobs": {
+    "sigma_r": {
+     "eps": {
+      "0.0": {
+       "levels": [
+        0.005,
+        0.02,
+        0.05,
+        0.2,
+        0.5
+       ],
+       "theta_mean": [
+        1.1474554547483313,
+        1.1473470165312143,
+        1.146606417589692,
+        1.1346338188558855,
+        1.063894762413422
+       ],
+       "theta_lo": [
+        1.144219707493228,
+        1.1440738792409464,
+        1.1427375839665102,
+        1.1258060996042296,
+        1.0392185879103144
+       ],
+       "theta_hi": [
+        1.1507962768046753,
+        1.150765109832732,
+        1.150574670021392,
+        1.1435411980618777,
+        1.0878514617470794
+       ],
+       "c2_spread": 0.08356069233490926,
+       "coverage_heldout": 1.0,
+       "coverage_finest": 1.0,
+       "all_converged": true,
+       "worst_rhat": 1.0034977711615818
+      },
+      "0.3": {
+       "levels": [
+        0.005,
+        0.02,
+        0.05,
+        0.2,
+        0.5
+       ],
+       "theta_mean": [
+        1.2649841033370115,
+        1.2647739308321957,
+        1.2635263803867347,
+        1.247583930850344,
+        1.1808821919706396
+       ],
+       "theta_lo": [
+        1.2612454426290713,
+        1.260926278430722,
+        1.2592059844047705,
+        1.2375507189782968,
+        1.1549472540305417
+       ],
+       "theta_hi": [
+        1.2688619679728323,
+        1.2687493759884478,
+        1.2680544855674543,
+        1.2577248044045948,
+        1.2075421470366838
+       ],
+       "c2_spread": 0.0841019113663719,
+       "coverage_heldout": 0.8285714285714285,
+       "coverage_finest": 1.0,
+       "all_converged": true,
+       "worst_rhat": 1.00368542388182
+      }
+     }
+    },
+    "N_c": {
+     "eps": {
+      "0.0": {
+       "levels": [
+        8.0,
+        16.0,
+        32.0,
+        64.0,
+        128.0
+       ],
+       "theta_mean": [
+        1.150803939555708,
+        1.148006071385133,
+        1.1471585762248346,
+        1.146606417589692,
+        1.1457871614452197
+       ],
+       "theta_lo": [
+        1.1444433564897185,
+        1.1430086200208343,
+        1.142808850092398,
+        1.1427375839665102,
+        1.1422079366987383
+       ],
+       "theta_hi": [
+        1.157368111989529,
+        1.1532578914490634,
+        1.1515762989224043,
+        1.150574670021392,
+        1.1494065630612218
+       ],
+       "c2_spread": 0.005016778110488174,
+       "coverage_heldout": 1.0,
+       "coverage_finest": 1.0,
+       "all_converged": true,
+       "worst_rhat": 1.0046441632300585
+      },
+      "0.3": {
+       "levels": [
+        8.0,
+        16.0,
+        32.0,
+        64.0,
+        128.0
+       ],
+       "theta_mean": [
+        1.2647956237667923,
+        1.2633312963416778,
+        1.2635118416429774,
+        1.2635263803867347,
+        1.2629039906752273
+       ],
+       "theta_lo": [
+        1.257541669186283,
+        1.2573863404694081,
+        1.258626635294989,
+        1.2592059844047705,
+        1.258848139031504
+       ],
+       "theta_hi": [
+        1.27235697734592,
+        1.2693497915979772,
+        1.2685698717473657,
+        1.2680544855674543,
+        1.2670260845384234
+       ],
+       "c2_spread": 0.001891633091565037,
+       "coverage_heldout": 0.7904761904761906,
+       "coverage_finest": 0.7142857142857143,
+       "all_converged": true,
+       "worst_rhat": 1.0047725612210572
+      }
+     }
+    }
+   },
+   "concentration": {
+    "0.0": {
+     "n": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "theta_mean": [
+      1.1437618763027553,
+      1.1498771551285991,
+      1.1500679145680792,
+      1.1490154583866856
+     ],
+     "theta_sd": [
+      0.005524998951817824,
+      0.002831506459945683,
+      0.0013952756612685463,
+      0.0006986632752961741
+     ],
+     "final_mean": 1.1490154583866856,
+     "final_sd": 0.0006986632752961741,
+     "abs_bias_final": 0.0009845416133142937,
+     "sd_shrinks": true,
+     "all_converged": true
+    },
+    "0.3": {
+     "n": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "theta_mean": [
+      1.2625146566597765,
+      1.2668505874840907,
+      1.2675119562642412,
+      1.2689152297286797
+     ],
+     "theta_sd": [
+      0.006352112603259484,
+      0.003261827158177053,
+      0.001602606309184073,
+      0.0008031504182998418
+     ],
+     "final_mean": 1.2689152297286797,
+     "final_sd": 0.0008031504182998418,
+     "abs_bias_final": 0.11891522972867974,
+     "sd_shrinks": true,
+     "all_converged": true
+    }
+   }
+  },
+  "M-statfem": {
+   "physics_location": "likelihood (data = FE + discrepancy)",
+   "model_error_role": "sigma_d (learned additive discrepancy)",
+   "knobs": {
+    "h": {
+     "eps": {
+      "0.0": {
+       "levels": [
+        8.0,
+        16.0,
+        32.0,
+        64.0,
+        128.0
+       ],
+       "theta_mean": [
+        1.1453731325544463,
+        1.1475825211319206,
+        1.1481419011501364,
+        1.1483566275926087,
+        1.1483962272690873
+       ],
+       "theta_lo": [
+        1.142046577087402,
+        1.1442788057708708,
+        1.1448460250918133,
+        1.1450029380242808,
+        1.1451839313736014
+       ],
+       "theta_hi": [
+        1.1487941474361318,
+        1.1508749183840445,
+        1.1513729258662795,
+        1.15162030004949,
+        1.1516284959133731
+       ],
+       "c2_spread": 0.003023094714641017,
+       "coverage_heldout": 0.9904761904761905,
+       "coverage_finest": 1.0,
+       "all_converged": true,
+       "worst_rhat": 1.0017351002710704
+      },
+      "0.3": {
+       "levels": [
+        8.0,
+        16.0,
+        32.0,
+        64.0,
+        128.0
+       ],
+       "theta_mean": [
+        1.2665876829050853,
+        1.2684294762128139,
+        1.26888214873174,
+        1.2689492227342731,
+        1.2690045779577999
+       ],
+       "theta_lo": [
+        1.2617415948297528,
+        1.2636712885039394,
+        1.2643151807038833,
+        1.2642029610963526,
+        1.2642870800137584
+       ],
+       "theta_hi": [
+        1.2713845837917093,
+        1.2732863130538181,
+        1.2736010473979091,
+        1.2736925677425777,
+        1.2736750650864697
+       ],
+       "c2_spread": 0.002416895052714585,
+       "coverage_heldout": 0.980952380952381,
+       "coverage_finest": 1.0,
+       "all_converged": true,
+       "worst_rhat": 1.0018484099547529
+      }
+     }
+    }
+   },
+   "concentration": {
+    "0.0": {
+     "n": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "theta_mean": [
+      1.1526823163259112,
+      1.152428374826168,
+      1.1512521976861159,
+      1.1495138931781352
+     ],
+     "theta_sd": [
+      0.0051009376624994145,
+      0.002412628793659638,
+      0.0012344529818885416,
+      0.0006032200107560989
+     ],
+     "final_mean": 1.1495138931781352,
+     "final_sd": 0.0006032200107560989,
+     "abs_bias_final": 0.0004861068218646736,
+     "sd_shrinks": true,
+     "all_converged": true
+    },
+    "0.3": {
+     "n": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "theta_mean": [
+      1.2777308361536497,
+      1.2713925452630732,
+      1.2718418718596267,
+      1.2719753280496888
+     ],
+     "theta_sd": [
+      0.006832505206658893,
+      0.003191482969049139,
+      0.0016564843036507768,
+      0.0008218219567650708
+     ],
+     "final_mean": 1.2719753280496888,
+     "final_sd": 0.0008218219567650708,
+     "abs_bias_final": 0.12197532804968891,
+     "sd_shrinks": true,
+     "all_converged": true
+    }
+   }
+  },
+  "M-ift": {
+   "physics_location": "prior",
+   "model_error_role": "beta (learned inverse-temperature)",
+   "knobs": {
+    "N_c": {
+     "eps": {
+      "0.0": {
+       "levels": [
+        8.0,
+        16.0,
+        32.0,
+        64.0,
+        128.0
+       ],
+       "theta_mean": [
+        1.1516525910606048,
+        1.1491224122907029,
+        1.1485422816857553,
+        1.148361961105683,
+        1.1482887501890362
+       ],
+       "theta_lo": [
+        1.1482202766474967,
+        1.1456339589388747,
+        1.1451856731723895,
+        1.145067438479903,
+        1.144985387893667
+       ],
+       "theta_hi": [
+        1.1551003412013199,
+        1.1524573778477956,
+        1.1518589822370284,
+        1.1516675591487486,
+        1.1515825108594913
+       ],
+       "c2_spread": 0.003363840871568602,
+       "coverage_heldout": 0.9714285714285715,
+       "coverage_finest": 1.0,
+       "all_converged": true,
+       "worst_rhat": 1.004945033922738
+      },
+      "0.3": {
+       "levels": [
+        8.0,
+        16.0,
+        32.0,
+        64.0,
+        128.0
+       ],
+       "theta_mean": [
+        1.2662693898040984,
+        1.2627627739614642,
+        1.2618495160923004,
+        1.2618129274809593,
+        1.2618472108067904
+       ],
+       "theta_lo": [
+        1.2582820262774226,
+        1.2543030171719833,
+        1.25294176078267,
+        1.2529349228831501,
+        1.2532448009974684
+       ],
+       "theta_hi": [
+        1.273149059417478,
+        1.2703478848626366,
+        1.2696929287954593,
+        1.2695318803591178,
+        1.2694240130670096
+       ],
+       "c2_spread": 0.004456462323139121,
+       "coverage_heldout": 0.8952380952380953,
+       "coverage_finest": 0.8571428571428571,
+       "all_converged": true,
+       "worst_rhat": 1.0081739182802594
+      }
+     }
+    }
+   },
+   "concentration": {
+    "0.0": {
+     "n": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "theta_mean": [
+      1.153147719701235,
+      1.1527209574462305,
+      1.1511907071667402,
+      1.1496376138816602
+     ],
+     "theta_sd": [
+      0.005264349672981026,
+      0.002555932605974218,
+      0.0012960445605839203,
+      0.0006017209522509347
+     ],
+     "final_mean": 1.1496376138816602,
+     "final_sd": 0.0006017209522509347,
+     "abs_bias_final": 0.00036238611833971923,
+     "sd_shrinks": true,
+     "all_converged": true
+    },
+    "0.3": {
+     "n": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "theta_mean": [
+      1.2729894669814998,
+      1.2695772070468978,
+      1.2665144197510427,
+      1.2671690871114654
+     ],
+     "theta_sd": [
+      0.007867241695621332,
+      0.003776643443269554,
+      0.002490036410281997,
+      0.0012778364062179656
+     ],
+     "final_mean": 1.2671690871114654,
+     "final_sd": 0.0012778364062179656,
+     "abs_bias_final": 0.11716908711146545,
+     "sd_shrinks": true,
+     "all_converged": true
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "M-lik": "physics in likelihood; model-error knob = sigma_r (fixed residual pseudo-noise). eps=0 control: final |theta_mean - 1.15| = 0.001, final SD = 0.001 (concentrates on theta_true). DISCRETIZATION-INVARIANCE: ~invariant to the genuine mesh knob N_c (spread 0.005/0.002 for eps 0/0.3) BUT DRIFTS with the FICTITIOUS residual noise sigma_r (spread 0.084/0.084) with no principled way to set it. => the discretization-dependence charge is PARTIALLY supported and sharpened: the sensitivity is to sigma_r, not the mesh. under eps=0.3 (model-form error) theta is biased to 1.269 (truth 1.15); so the parameter is NOT recovered under model error -- a shared limit.",
+  "M-statfem": "physics in likelihood (data = FE + discrepancy); model-error knob = sigma_d (learned additive discrepancy). eps=0 control: final |theta_mean - 1.15| = 0.000, final SD = 0.001 (concentrates on theta_true). DISCRETIZATION-INVARIANCE: ~invariant to mesh h (spread 0.003/0.002); the learned discrepancy sigma_d stays small under eps=0.3, so theta ABSORBS the omitted foundation (discrepancy/parameter confounding) rather than the discrepancy flagging it. under eps=0.3 (model-form error) theta is biased to 1.272 (truth 1.15); so the parameter is NOT recovered under model error -- a shared limit.",
+  "M-ift": "physics in prior; model-error knob = beta (learned inverse-temperature). eps=0 control: final |theta_mean - 1.15| = 0.000, final SD = 0.001 (concentrates on theta_true). DISCRETIZATION-INVARIANCE: ~invariant to N_c (spread 0.003/0.004); the physics weight beta is LEARNED, so there is no fictitious sigma_r knob; in this toy beta is weakly identified above a threshold but theta is unaffected. under eps=0.3 (model-form error) theta is biased to 1.267 (truth 1.15); so the parameter is NOT recovered under model error -- a shared limit."
+ },
+ "n_cells": 64
+}

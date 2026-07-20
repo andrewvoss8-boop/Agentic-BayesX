@@ -1,0 +1,44 @@
+[ma1_conn_rbe3tbox] DUD: ValueError: rbe3_convert eid 9000028: singular master geometry (cond inf)
+19 pending
+[ma1_conn_softbbox] agent/connectivity: exact sub200 +0.1418 (spot 1.52e-07%, 953s)
+18 pending
+[ma1_conn_rbe3tbox2] agent/connectivity: exact sub200 +0.1256 (spot 1.22e-07%, 962s)
+18 pending
+[ma1_form_platesshear] agent/element_formulation: exact sub200 +0.1630 (spot 5.43e-08%, 933s)
+17 pending
+[ma1_form_tboxwalls] agent/element_formulation: exact sub200 +0.1557 (spot 6.55e-08%, 982s)
+16 pending
+[ma1_geo_jointbrkt] agent/geometry: exact sub200 +0.1464 (spot 7.29e-08%, 888s)
+15 pending
+[ma1_geo_warp202] agent/geometry: exact sub200 +0.1610 (spot 1.45e-07%, 899s)
+14 pending
+[ma1_mesh_brkt] agent/mesh_density: exact sub200 +0.1666 (spot 5.24e-08%, 823s)
+13 pending
+[ma1_mesh_plates] agent/mesh_density: exact sub200 +0.1692 (spot 9.69e-08%, 856s)
+12 pending
+[ma1_prop_bracketsoft] agent/property_control: exact sub200 +0.1634 (spot 6.66e-08%, 885s)
+11 pending
+[ma1_prop_tboxxbeam] agent/property_control: exact sub200 +0.1765 (spot 5.74e-08%, 940s)
+10 pending
+[mr1_conn0] random/connectivity: exact sub200 +0.1778 (spot 4.16e-08%, 857s)
+9 pending
+[mr1_conn1] random/connectivity: exact sub200 +0.0993 (spot 2.09e-07%, 852s)
+8 pending
+[mr1_elem4] random/element_formulation: exact sub200 +0.1225 (spot 6.07e-08%, 901s)
+7 pending
+[mr1_elem5] random/element_formulation: exact sub200 +0.1659 (spot 5.23e-08%, 814s)
+6 pending
+[mr1_geom6] random/geometry: exact sub200 +0.1553 (spot 5.88e-08%, 896s)
+5 pending
+[mr1_geom7] random/geometry: exact sub200 +0.1142 (spot 9.10e-08%, 861s)
+4 pending
+[mr1_mesh2] DUD: ValueError: mech gate: max mode shift 0.0014% < 0.05% (numerical no-op)
+3 pending
+[mr1_mesh3] DUD: ValueError: mech gate: max mode shift 0.0005% < 0.05% (numerical no-op)
+2 pending
+[mr1_prop8] random/property_control: exact sub200 +0.1512 (spot 5.13e-08%, 851s)
+1 pending
+[mr1_prop9] random/property_control: exact sub200 +0.1448 (spot 1.59e-07%, 806s)
+0 pending
+ALL DONE (no pending specs without partials)
+queue drained

@@ -1,0 +1,143 @@
+[orchestrator] waiting for running tier2 (Thu Jul  2 10:28:00 EDT 2026)
+[orchestrator] waiting for running tier2 (Thu Jul  2 10:40:25 EDT 2026)
+[orchestrator] tier2 process gone, n=11 (Thu Jul  2 10:40:26 EDT 2026)
+[orchestrator] resuming tier2 in-line
+[    0.6s] [baseline] done — skip
+[    0.6s] [shell202_hi] done — skip
+[    0.6s] [rand21] done — skip
+[    0.6s] [shell601_lo] done — skip
+[    0.6s] [bush801_transStiff] done — skip
+[    0.6s] [rand12] done — skip
+[    0.6s] [rand27] done — skip
+[    0.6s] [rand07] done — skip
+[    0.6s] [rand10] done — skip
+[    0.6s] [dishmass_hi] done — skip
+[    0.6s] [rand11] done — skip
+[    0.6s] [cablemass_double] assembling K,M ...
+[    2.2s] [cablemass_double] eigsh k=80 on n=399510 ...
+[  267.7s] [cablemass_double] full: n=23 MAC 0.6754 fRMS 5.494% score +0.5106
+[  267.7s] [cablemass_full] assembling K,M ...
+[  269.7s] [cablemass_full] eigsh k=80 on n=399510 ...
+[  519.2s] [cablemass_full] full: n=24 MAC 0.663 fRMS 5.078% score +0.5106
+[  519.2s] [weld204_stiff] assembling K,M ...
+[  521.3s] [weld204_stiff] eigsh k=80 on n=399510 ...
+[  818.5s] [weld204_stiff] full: n=24 MAC 0.6433 fRMS 5.935% score +0.4652
+[  818.5s] [mass_dish_hi] assembling K,M ...
+[  820.0s] [mass_dish_hi] eigsh k=80 on n=399510 ...
+[ 1074.4s] [mass_dish_hi] full: n=24 MAC 0.6522 fRMS 4.774% score +0.5090
+[ 1074.4s] [rand25] assembling K,M ...
+[ 1075.6s] [rand25] eigsh k=80 on n=399510 ...
+[ 1368.3s] [rand25] full: n=24 MAC 0.6436 fRMS 4.66% score +0.5038
+[ 1368.3s] [shell701_hi] assembling K,M ...
+[ 1369.2s] [shell701_hi] eigsh k=80 on n=399510 ...
+[ 1637.5s] [shell701_hi] full: n=26 MAC 0.6305 fRMS 4.641% score +0.4913
+[ 1637.5s] [bush805_rotStiff] assembling K,M ...
+[ 1638.7s] [bush805_rotStiff] eigsh k=80 on n=399510 ...
+[ 1903.1s] [bush805_rotStiff] full: n=25 MAC 0.6415 fRMS 6.017% score +0.4610
+[ 1903.1s] [bush805_transStiff] assembling K,M ...
+[ 1904.2s] [bush805_transStiff] eigsh k=80 on n=399510 ...
+[ 2158.7s] [bush805_transStiff] full: n=25 MAC 0.6414 fRMS 4.779% score +0.4980
+[ 2158.7s] [bush802_rotSoft] assembling K,M ...
+[ 2160.0s] [bush802_rotSoft] eigsh k=80 on n=399510 ...
+[ 2414.5s] [bush802_rotSoft] full: n=23 MAC 0.6824 fRMS 5.476% score +0.5182
+[ 2414.5s] [shell206_lo] assembling K,M ...
+[ 2415.8s] [shell206_lo] eigsh k=80 on n=399510 ...
+[ 2666.2s] [shell206_lo] full: n=24 MAC 0.656 fRMS 4.834% score +0.5110
+[ 2666.2s] [bush807_transSoft] assembling K,M ...
+[ 2667.5s] [bush807_transSoft] eigsh k=80 on n=399510 ...
+[ 2946.4s] [bush807_transSoft] full: n=25 MAC 0.6419 fRMS 6.015% score +0.4614
+[ 2946.4s] [bush807_rotStiff] assembling K,M ...
+[ 2947.3s] [bush807_rotStiff] eigsh k=80 on n=399510 ...
+[ 3208.1s] [bush807_rotStiff] full: n=25 MAC 0.6413 fRMS 6.016% score +0.4608
+[ 3208.1s] [bush802_allSoft] assembling K,M ...
+[ 3209.5s] [bush802_allSoft] eigsh k=80 on n=399510 ...
+[ 3468.5s] [bush802_allSoft] full: n=23 MAC 0.6849 fRMS 5.361% score +0.5241
+[ 3468.5s] [alwelds_stiff] assembling K,M ...
+[ 3469.6s] [alwelds_stiff] eigsh k=80 on n=399510 ...
+[ 3738.3s] [alwelds_stiff] full: n=24 MAC 0.6377 fRMS 5.912% score +0.4603
+[ 3738.3s] [mass_cross_hi] assembling K,M ...
+[ 3739.4s] [mass_cross_hi] eigsh k=80 on n=399510 ...
+[ 4012.3s] [mass_cross_hi] full: n=22 MAC 0.6849 fRMS 6.437% score +0.4918
+[ 4012.3s] [dishmass_lo] assembling K,M ...
+[ 4013.6s] [dishmass_lo] eigsh k=80 on n=399510 ...
+[ 4272.4s] [dishmass_lo] full: n=27 MAC 0.6164 fRMS 4.545% score +0.4801
+[ 4272.4s] [cablemass_half] assembling K,M ...
+[ 4274.1s] [cablemass_half] eigsh k=80 on n=399510 ...
+[ 4526.9s] [cablemass_half] full: n=26 MAC 0.6361 fRMS 4.882% score +0.4897
+[ 4526.9s] [cross_weld_k1e4] assembling K,M ...
+[ 4528.1s] [cross_weld_k1e4] eigsh k=80 on n=399510 ...
+[ 4804.1s] [cross_weld_k1e4] full: n=24 MAC 0.6229 fRMS 6.045% score +0.4415
+[ 4804.1s] TIER-2 ranking (baseline=0.4617): rand12(+0.539), shell202_hi(+0.533), dishmass_hi(+0.533), shell601_lo(+0.531), bush802_allSoft(+0.524), bush802_rotSoft(+0.518), rand10(+0.517), rand11(+0.517), rand07(+0.512), shell206_lo(+0.511), cablemass_full(+0.511), cablemass_double(+0.511)
+[orchestrator] tier3 evidence (Thu Jul  2 12:00:31 EDT 2026)
+[   0.8s] baseline: MAP done, nm=25, np=9, mac_mean 0.661
+[   1.6s] rand12: MAP done, nm=23, np=9, mac_mean 0.677
+[   2.8s] shell202_hi: MAP done, nm=22, np=9, mac_mean 0.706
+[   3.5s] dishmass_hi: MAP done, nm=23, np=9, mac_mean 0.685
+[   4.3s] shell601_lo: MAP done, nm=23, np=9, mac_mean 0.685
+[   5.3s] bush802_allSoft: MAP done, nm=23, np=9, mac_mean 0.686
+[   5.9s] bush802_rotSoft: MAP done, nm=23, np=9, mac_mean 0.690
+[   6.9s] rand10: MAP done, nm=22, np=9, mac_mean 0.683
+[   7.4s] rand11: MAP done, nm=26, np=9, mac_mean 0.661
+[   9.0s] rand07: MAP done, nm=23, np=9, mac_mean 0.677
+[   9.9s] shell206_lo: MAP done, nm=24, np=9, mac_mean 0.669
+HEADLINE (0.25): {"sigma_prior": 0.25, "ranking": ["rand10", "shell202_hi", "shell601_lo", "rand12", "bush802_rotSoft", "bush802_allSoft", "dishmass_hi", "rand07", "shell206_lo", "baseline", "rand11"], "winner": "rand10", "winner_beats_baseline": true, "logZ_winner_minus_baseline": 54.02}
+prior-robust top: True | freq-only would crown: rand10 (reference only)
+[orchestrator] arms NUTS (Thu Jul  2 12:00:42 EDT 2026)
+[    0.0s] [M0S0] NUTS (baseline, nm=25, np=9) ...
+[M0S0] converged=True R-hat 1.0009 ESS 1431.7 div 0
+[   97.5s] [M0S1] NUTS (baseline, nm=25, np=9) ...
+[M0S1] attempt 1 FAILED gate (R-hat 1.0858) -> uniform retune
+[orchestrator] waiting for running tier2 (Thu Jul  2 14:41:25 EDT 2026)
+[orchestrator] tier2 process gone, n=29 (Thu Jul  2 14:41:25 EDT 2026)
+[orchestrator] tier3 evidence (Thu Jul  2 14:41:25 EDT 2026)
+[   0.8s] baseline: MAP done, nm=25, np=9, mac_mean 0.661
+[   1.6s] rand12: MAP done, nm=23, np=9, mac_mean 0.677
+[   2.8s] shell202_hi: MAP done, nm=22, np=9, mac_mean 0.706
+[   3.4s] dishmass_hi: MAP done, nm=23, np=9, mac_mean 0.685
+[  19.2s] shell601_lo: MAP done, nm=23, np=9, mac_mean 0.685
+[  20.3s] bush802_allSoft: MAP done, nm=23, np=9, mac_mean 0.686
+[  21.0s] bush802_rotSoft: MAP done, nm=23, np=9, mac_mean 0.690
+[  22.0s] rand10: MAP done, nm=22, np=9, mac_mean 0.683
+[  22.4s] rand11: MAP done, nm=26, np=9, mac_mean 0.661
+[  24.0s] rand07: MAP done, nm=23, np=9, mac_mean 0.677
+[  25.0s] shell206_lo: MAP done, nm=24, np=9, mac_mean 0.669
+HEADLINE (0.25): {"sigma_prior": 0.25, "ranking": ["rand10", "shell202_hi", "shell601_lo", "rand12", "bush802_rotSoft", "bush802_allSoft", "dishmass_hi", "rand07", "shell206_lo", "baseline", "rand11"], "winner": "rand10", "winner_beats_baseline": true, "logZ_winner_minus_baseline": 54.02}
+prior-robust top: True | freq-only would crown: rand10 (reference only)
+[orchestrator] arms NUTS (Thu Jul  2 14:41:51 EDT 2026)
+[M0S0] done — skip
+[    0.0s] [M0S1] NUTS (baseline, nm=25, np=9) ...
+[M0S1] converged=True R-hat 1.0011 ESS 2964.0 div 0
+[   92.8s] [M0S2] NUTS (baseline, nm=25, np=9) ...
+[M0S2] converged=True R-hat 1.0004 ESS 5201.3 div 0
+[  133.9s] [M1S0] NUTS (rand10, nm=22, np=9) ...
+[M1S0] converged=True R-hat 1.0008 ESS 2660.0 div 0
+[  210.6s] [M1S1] NUTS (rand10, nm=22, np=9) ...
+[M1S1] converged=True R-hat 1.0008 ESS 3213.9 div 0
+[  293.7s] [M1S2] NUTS (rand10, nm=22, np=9) ...
+[M1S2] converged=True R-hat 1.0005 ESS 5708.7 div 0
+ALL ARMS DONE. {"M0S0": true, "M0S1": true, "M0S2": true, "M1S0": true, "M1S1": true, "M1S2": true}
+[orchestrator] score matrix (Thu Jul  2 14:47:21 EDT 2026)
+[    0.4s] common references built (fem6 bars, truth ensembles, 10 answer keys)
+[    2.8s] [M0S0] R1 cov 0.875 skill -0.784 sig 1.084 | shear_X:1.838x/1.0 shear_Y:1.982x/0.999 normal_Z:2.542x/1.0 | dq=True
+[    5.1s] [M0S1] R1 cov 0.883 skill -0.766 sig 1.082 | shear_X:1.716x/0.999 shear_Y:2.056x/1.0 normal_Z:2.343x/1.0 | dq=False
+[    7.9s] [M0S2] R1 cov 0.892 skill -0.34 sig 0.89 | shear_X:1.777x/0.696 shear_Y:2.245x/0.574 normal_Z:1.822x/0.318 | dq=False
+[   10.2s] [M1S0] R1 cov 0.867 skill -0.754 sig 1.098 | shear_X:1.94x/0.998 shear_Y:1.655x/0.998 normal_Z:2.421x/1.0 | dq=False
+[   12.5s] [M1S1] R1 cov 0.883 skill -0.708 sig 1.075 | shear_X:1.707x/0.999 shear_Y:1.513x/0.998 normal_Z:2.504x/0.999 | dq=False
+[   15.1s] [M1S2] R1 cov 0.883 skill -0.366 sig 0.913 | shear_X:1.604x/0.553 shear_Y:2.184x/0.575 normal_Z:1.573x/0.228 | dq=False
+[   15.1s] wrote matrix_scorecard.json
+[   15.1s] delivered: {"shear": {"arm": "M0S1", "mean_sharpness_vs_fem6db": 1.886, "best_of_N": 6, "n_passing_gate": 1}, "normal": {"arm": "M0S1", "mean_sharpness_vs_fem6db": 2.343, "best_of_N": 6, "n_passing_gate": 3}}
+[orchestrator] figures (Thu Jul  2 14:47:37 EDT 2026)
+figures written: ['fig_heldout_drives.png', 'fig_matrix_money.png', 'fig_funnel.png', 'fig_graphmodel.png', 'fig_evidence.png']
+wrote fig_graphmodel.png
+[orchestrator] locked checker (Thu Jul  2 14:47:39 EDT 2026)
+OVERALL RED  (53G/6Y/3R)
+  [YELLOW] R2:M0S2:shear_X: cov 0.696 exceed 0.571 dB sharpness 1.777 (bar 1.508) — DOES NOT COVER (cannot win this QOI)
+  [YELLOW] R2:M0S2:shear_Y: cov 0.574 exceed 2.696 dB sharpness 2.245 (bar 2.301) — DOES NOT COVER (cannot win this QOI)
+  [YELLOW] R2:M0S2:normal_Z: cov 0.318 exceed 4.471 dB sharpness 1.822 (bar 2.526) — DOES NOT COVER (cannot win this QOI)
+  [YELLOW] R2:M1S2:shear_X: cov 0.553 exceed 1.674 dB sharpness 1.604 (bar 1.508) — DOES NOT COVER (cannot win this QOI)
+  [YELLOW] R2:M1S2:shear_Y: cov 0.575 exceed 2.396 dB sharpness 2.184 (bar 2.301) — DOES NOT COVER (cannot win this QOI)
+  [YELLOW] R2:M1S2:normal_Z: cov 0.228 exceed 6.918 dB sharpness 1.573 (bar 2.526) — DOES NOT COVER (cannot win this QOI)
+  [RED] deliv:packet.md: pipeline_failure: missing
+  [RED] deliv:findings.md: pipeline_failure: missing
+  [RED] deliv:runtime.json: pipeline_failure: missing
+[orchestrator] DONE exit=1 (Thu Jul  2 14:47:39 EDT 2026)

@@ -1,0 +1,53 @@
+{
+ "cid": "ma3_geo_warp401",
+ "track": "agent",
+ "round": 3,
+ "cls": "geometry",
+ "ops": [
+  "warp_panel"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.14447791889803402,
+ "exact_b200_500": 0.23817620781623955,
+ "exact_folds": {
+  "m_xpos_990x": 0.2618967461770924,
+  "m_zpos_990z": 0.511324500656995,
+  "m_ypos_990y": 0.12638602900587836,
+  "m_zpos_900z": -0.32169560024782956
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.15225327353601573,
+  "m_zpos_990z": 0.24564902550703868,
+  "m_ypos_990y": 0.2063170591324024,
+  "m_zpos_900z": 0.34848547308950145
+ },
+ "theta_map": [
+  1.0082984572245401,
+  1.1386987682791332,
+  0.9482037436687393,
+  0.9994837730679141,
+  1.4954446397505874,
+  1.2245929967992404,
+  0.9992843521423818,
+  1.1226393871737075,
+  0.926503299024326
+ ],
+ "enriched_pkg": "ma3_geo_warp401__xenr",
+ "spot_max_pct": 6.589591095007563e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0003,
+  "max_mode_shift_pct": 2.0652,
+  "min_jac_ratio": 0.9999808981336806,
+  "max_edge_slope": 0.0002869180793724119,
+  "pass": true
+ },
+ "solve_s_theta1": 448.0,
+ "solve_s_enrich": 739.1,
+ "wall_s": 1240.6,
+ "ts": "2026-07-17T07:55:24",
+ "diagnosis_link": "diagnosis_mf_r3.json: cross_beam stiffening keeps winning in the control class (xbeam x1.4 alone +0.1628) and Cross_Beam carries 0.093 of shape defect -> test the GEOMETRY counterpart: warp the flat cross-beam plate (stiffens via membrane-bending coupling, V-gated)"
+}

@@ -1,0 +1,9 @@
+{
+ "NOTE": "POST-HOC mechanism ablation, not pre-registered; no NUTS (MC only).",
+ "L0_pretest_repro_sda080": 6.25,
+ "L1_pretest_floor_sda035": 3.05,
+ "L2_plus_theta_post": 4.93,
+ "L3_plus_tgt_freq_1pct": 4.79,
+ "L4_mixture_pinned_d0": 5.53,
+ "L5_plus_d_prior": 5.48
+}

@@ -1,0 +1,6 @@
+NOMINAL: mean|df%| 6.066  global MAC 0.726  hard-region MAC 0.712  (over 21 calib modes)
+
+JOINT scan (6000 samples, 21 calib modes, tracked pairing):
+  points improving hard-region SHAPE without a frequency penalty (and global not worse): 0 of 6000
+  NONE -> the shape-vs-frequency tradeoff holds even in the full joint space.
+-> out/joint_frontier.json

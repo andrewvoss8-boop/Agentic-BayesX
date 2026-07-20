@@ -1,0 +1,146 @@
+{
+  "basis": "flat modal drive; trust = measured-only RMS / all-mode RMS; band = MC over mode uncertainty (meas freq 0.01/amp 0.35, UNMEAS freq 0.06/amp 0.8)",
+  "trust": {
+    "tray_shear_X": {
+      "shape_only": {
+        "trust_pct": 96.0,
+        "band_pm_pct": 69.0,
+        "band_factor": 3.2,
+        "var_share_unmeasured_pct": 45.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 96.0,
+        "band_pm_pct": 67.0,
+        "band_factor": 3.1,
+        "var_share_unmeasured_pct": 42.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 96.0,
+        "band_pm_pct": 68.0,
+        "band_factor": 3.2,
+        "var_share_unmeasured_pct": 41.0
+      }
+    },
+    "tray_shear_Y": {
+      "shape_only": {
+        "trust_pct": 94.0,
+        "band_pm_pct": 75.0,
+        "band_factor": 3.7,
+        "var_share_unmeasured_pct": 69.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 94.0,
+        "band_pm_pct": 75.0,
+        "band_factor": 3.6,
+        "var_share_unmeasured_pct": 67.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 94.0,
+        "band_pm_pct": 77.0,
+        "band_factor": 3.7,
+        "var_share_unmeasured_pct": 67.0
+      }
+    },
+    "tray_normal_Z": {
+      "shape_only": {
+        "trust_pct": 45.0,
+        "band_pm_pct": 135.0,
+        "band_factor": 6.6,
+        "var_share_unmeasured_pct": 98.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 45.0,
+        "band_pm_pct": 120.0,
+        "band_factor": 5.7,
+        "var_share_unmeasured_pct": 97.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 45.0,
+        "band_pm_pct": 120.0,
+        "band_factor": 5.7,
+        "var_share_unmeasured_pct": 97.0
+      }
+    },
+    "base_shear_X": {
+      "shape_only": {
+        "trust_pct": 98.0,
+        "band_pm_pct": 52.0,
+        "band_factor": 2.7,
+        "var_share_unmeasured_pct": 9.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 98.0,
+        "band_pm_pct": 52.0,
+        "band_factor": 2.7,
+        "var_share_unmeasured_pct": 9.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 98.0,
+        "band_pm_pct": 52.0,
+        "band_factor": 2.7,
+        "var_share_unmeasured_pct": 9.0
+      }
+    },
+    "base_shear_Y": {
+      "shape_only": {
+        "trust_pct": 97.0,
+        "band_pm_pct": 85.0,
+        "band_factor": 4.1,
+        "var_share_unmeasured_pct": 62.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 97.0,
+        "band_pm_pct": 80.0,
+        "band_factor": 3.9,
+        "var_share_unmeasured_pct": 60.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 97.0,
+        "band_pm_pct": 80.0,
+        "band_factor": 3.9,
+        "var_share_unmeasured_pct": 60.0
+      }
+    },
+    "base_shear_Z": {
+      "shape_only": {
+        "trust_pct": 99.0,
+        "band_pm_pct": 62.0,
+        "band_factor": 3.2,
+        "var_share_unmeasured_pct": 7.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 99.0,
+        "band_pm_pct": 62.0,
+        "band_factor": 3.2,
+        "var_share_unmeasured_pct": 7.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 99.0,
+        "band_pm_pct": 62.0,
+        "band_factor": 3.2,
+        "var_share_unmeasured_pct": 7.0
+      }
+    },
+    "mount_response": {
+      "shape_only": {
+        "trust_pct": 13.0,
+        "band_pm_pct": 206.0,
+        "band_factor": 14.6,
+        "var_share_unmeasured_pct": 100.0
+      },
+      "freqobs_noY": {
+        "trust_pct": 13.0,
+        "band_pm_pct": 163.0,
+        "band_factor": 10.2,
+        "var_share_unmeasured_pct": 100.0
+      },
+      "freqobs_withY": {
+        "trust_pct": 13.0,
+        "band_pm_pct": 163.0,
+        "band_factor": 10.2,
+        "var_share_unmeasured_pct": 100.0
+      }
+    }
+  },
+  "note": "EXPLORATORY; YELLOW; NO NUTS."
+}

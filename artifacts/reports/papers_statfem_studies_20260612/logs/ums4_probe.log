@@ -1,0 +1,4 @@
+I_ratio {'tag': 'I_ratio', 'max_rhat': 61.3936, 'min_ess': 1.0022, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 80.2403}
+I_joint {'tag': 'I_joint', 'max_rhat': 128.4646, 'min_ess': 1.002, 'divergences': 11, 'div_frac': 0.022, 'runtime_s': 531.7657}
+I_ratio QOI 2/5 | I_joint QOI 0/5, logF coverage 0.00
+saved ums4_summary.json

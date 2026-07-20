@@ -1,0 +1,16 @@
+{
+  "n_sensor_dofs": 132,
+  "n_target": 40,
+  "n_measured_inband": 33,
+  "selfmac_max_offdiag": 0.9972,
+  "fisher_rank": 36,
+  "efi_min": 0.0037,
+  "efi_max": 0.9894,
+  "obs_resid_frac": 0.9287,
+  "unobs_resid_frac": 0.0713,
+  "captured_frac_median": 0.9842,
+  "captured_frac_min": 0.3173,
+  "shape_holes": 1,
+  "pass": true,
+  "note": "modal-domain observability bound at the delivered 132-DOF sensor set: 7% of measured in-band shape content is UNOBSERVABLE (orthogonal to the inherited-FEM target-mode subspace) => that residual is data-limited, NOT fixable by any theta/damping update. 1 measured modes are shape holes (best MAC<0.1)."
+}

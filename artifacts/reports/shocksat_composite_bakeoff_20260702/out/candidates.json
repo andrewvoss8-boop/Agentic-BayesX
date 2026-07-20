@@ -1,0 +1,5596 @@
+{
+ "n_candidates": 151,
+ "families_within_allowed": true,
+ "forbidden_check": "no candidate rebuilds geometry from scratch; all edits are scale/bush_k/couple/mass_scale/cable_mass on the inherited mesh",
+ "seed_rng": 20260702,
+ "candidates": [
+  {
+   "id": "bush801_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "801": [
+      200000.0,
+      200000.0,
+      1000000.0,
+      12240.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 801 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush801_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "801": [
+      5000000.0,
+      5000000.0,
+      25000000.0,
+      12240.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 801 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush801_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "801": [
+      1000000.0,
+      1000000.0,
+      5000000.0,
+      1224.0,
+      1000000.0,
+      1000000.0
+     ]
+    }
+   },
+   "rationale": "PID 801 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush801_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "801": [
+      1000000.0,
+      1000000.0,
+      5000000.0,
+      122400.0,
+      100000000.0,
+      100000000.0
+     ]
+    }
+   },
+   "rationale": "PID 801 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush801_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "801": [
+      300000.0,
+      300000.0,
+      1500000.0,
+      3672.0,
+      3000000.0,
+      3000000.0
+     ]
+    }
+   },
+   "rationale": "PID 801 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush802_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "802": [
+      162732.0,
+      162732.0,
+      3820000.0,
+      770000.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 802 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush802_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "802": [
+      4068300.0,
+      4068300.0,
+      95500000.0,
+      770000.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 802 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush802_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "802": [
+      813660.0,
+      813660.0,
+      19100000.0,
+      77000.0,
+      1000000.0,
+      1000000.0
+     ]
+    }
+   },
+   "rationale": "PID 802 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush802_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "802": [
+      813660.0,
+      813660.0,
+      19100000.0,
+      7700000.0,
+      100000000.0,
+      100000000.0
+     ]
+    }
+   },
+   "rationale": "PID 802 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush802_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "802": [
+      244098.0,
+      244098.0,
+      5730000.0,
+      231000.0,
+      3000000.0,
+      3000000.0
+     ]
+    }
+   },
+   "rationale": "PID 802 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush803_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "803": [
+      37200.0,
+      37200.0,
+      1000000.0,
+      1000000.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 803 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush803_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "803": [
+      930000.0,
+      930000.0,
+      25000000.0,
+      1000000.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 803 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush803_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "803": [
+      186000.0,
+      186000.0,
+      5000000.0,
+      100000.0,
+      1000000.0,
+      1000000.0
+     ]
+    }
+   },
+   "rationale": "PID 803 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush803_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "803": [
+      186000.0,
+      186000.0,
+      5000000.0,
+      10000000.0,
+      100000000.0,
+      100000000.0
+     ]
+    }
+   },
+   "rationale": "PID 803 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush803_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "803": [
+      55800.0,
+      55800.0,
+      1500000.0,
+      300000.0,
+      3000000.0,
+      3000000.0
+     ]
+    }
+   },
+   "rationale": "PID 803 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush804_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "804": [
+      138200.0,
+      1000000.0,
+      138200.0,
+      16660.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 804 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush804_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "804": [
+      3455000.0,
+      25000000.0,
+      3455000.0,
+      16660.0,
+      10000000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 804 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush804_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "804": [
+      691000.0,
+      5000000.0,
+      691000.0,
+      1666.0,
+      1000000.0,
+      1000000.0
+     ]
+    }
+   },
+   "rationale": "PID 804 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush804_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "804": [
+      691000.0,
+      5000000.0,
+      691000.0,
+      166600.0,
+      100000000.0,
+      100000000.0
+     ]
+    }
+   },
+   "rationale": "PID 804 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush804_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "804": [
+      207300.0,
+      1500000.0,
+      207300.0,
+      4998.0,
+      3000000.0,
+      3000000.0
+     ]
+    }
+   },
+   "rationale": "PID 804 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush805_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "805": [
+      179958.0,
+      1000000.0,
+      179958.0,
+      10000000.0,
+      10000000.0,
+      946000.0
+     ]
+    }
+   },
+   "rationale": "PID 805 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush805_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "805": [
+      4498950.0,
+      25000000.0,
+      4498950.0,
+      10000000.0,
+      10000000.0,
+      946000.0
+     ]
+    }
+   },
+   "rationale": "PID 805 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush805_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "805": [
+      899790.0,
+      5000000.0,
+      899790.0,
+      1000000.0,
+      1000000.0,
+      94600.0
+     ]
+    }
+   },
+   "rationale": "PID 805 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush805_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "805": [
+      899790.0,
+      5000000.0,
+      899790.0,
+      100000000.0,
+      100000000.0,
+      9460000.0
+     ]
+    }
+   },
+   "rationale": "PID 805 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush805_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "805": [
+      269937.0,
+      1500000.0,
+      269937.0,
+      3000000.0,
+      3000000.0,
+      283800.0
+     ]
+    }
+   },
+   "rationale": "PID 805 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush806_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "806": [
+      1000000.0,
+      20000.0,
+      20000.0,
+      10000000.0,
+      32000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 806 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush806_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "806": [
+      25000000.0,
+      500000.0,
+      500000.0,
+      10000000.0,
+      32000.0,
+      10000000.0
+     ]
+    }
+   },
+   "rationale": "PID 806 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush806_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "806": [
+      5000000.0,
+      100000.0,
+      100000.0,
+      1000000.0,
+      3200.0,
+      1000000.0
+     ]
+    }
+   },
+   "rationale": "PID 806 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush806_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "806": [
+      5000000.0,
+      100000.0,
+      100000.0,
+      100000000.0,
+      320000.0,
+      100000000.0
+     ]
+    }
+   },
+   "rationale": "PID 806 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush806_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "806": [
+      1500000.0,
+      30000.0,
+      30000.0,
+      3000000.0,
+      9600.0,
+      3000000.0
+     ]
+    }
+   },
+   "rationale": "PID 806 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush807_transSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "807": [
+      1000000.0,
+      64800.0,
+      64800.0,
+      10000000.0,
+      10000000.0,
+      869000.0
+     ]
+    }
+   },
+   "rationale": "PID 807 anisotropic transSoft (trans x0.2, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush807_transStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "807": [
+      25000000.0,
+      1620000.0,
+      1620000.0,
+      10000000.0,
+      10000000.0,
+      869000.0
+     ]
+    }
+   },
+   "rationale": "PID 807 anisotropic transStiff (trans x5.0, rot x1.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush807_rotSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "807": [
+      5000000.0,
+      324000.0,
+      324000.0,
+      1000000.0,
+      1000000.0,
+      86900.0
+     ]
+    }
+   },
+   "rationale": "PID 807 anisotropic rotSoft (trans x1.0, rot x0.1); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush807_rotStiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "807": [
+      5000000.0,
+      324000.0,
+      324000.0,
+      100000000.0,
+      100000000.0,
+      8690000.0
+     ]
+    }
+   },
+   "rationale": "PID 807 anisotropic rotStiff (trans x1.0, rot x10.0); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "bush807_allSoft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "807": [
+      1500000.0,
+      97200.0,
+      97200.0,
+      3000000.0,
+      3000000.0,
+      260700.0
+     ]
+    }
+   },
+   "rationale": "PID 807 anisotropic allSoft (trans x0.3, rot x0.3); joint stiffness re-representation at a bolted/bulkhead interface",
+   "seed": "diagnosis:joints"
+  },
+  {
+   "id": "contact902_soft",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "902": [
+      680.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "strut-base contact PID902 soft: add/scale contact terms (diagnosis: strut_base region MAC 0.48)",
+   "seed": "diagnosis:strut_base"
+  },
+  {
+   "id": "contact902_stiff",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "902": [
+      68000.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "strut-base contact PID902 stiff: add/scale contact terms (diagnosis: strut_base region MAC 0.48)",
+   "seed": "diagnosis:strut_base"
+  },
+  {
+   "id": "contact902_shear",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "902": [
+      6800.0,
+      3400.0,
+      3400.0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "rationale": "strut-base contact PID902 shear: add/scale contact terms (diagnosis: strut_base region MAC 0.48)",
+   "seed": "diagnosis:strut_base"
+  },
+  {
+   "id": "contact902_full",
+   "family": "joint_compliance",
+   "edit": {
+    "bush_k": {
+     "902": [
+      6800.0,
+      6800.0,
+      6800.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "strut-base contact PID902 full: add/scale contact terms (diagnosis: strut_base region MAC 0.48)",
+   "seed": "diagnosis:strut_base"
+  },
+  {
+   "id": "cross_bolt_k1e4",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      10000.0,
+      10000.0,
+      10000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt), spring k1e4; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_k1e5",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      100000.0,
+      100000.0,
+      100000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt), spring k1e5; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_k1e6",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt), spring k1e6; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_k1e5_rot",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt), spring k1e5_rot; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_weld_k1e4",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      10000.0,
+      10000.0,
+      10000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_weld), spring k1e4; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_weld_k1e5",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      100000.0,
+      100000.0,
+      100000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_weld), spring k1e5; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_weld_k1e6",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_weld), spring k1e6; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_weld_k1e5_rot",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_weld), spring k1e5_rot; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_trans_k1e4",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      10000.0,
+      10000.0,
+      10000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt_trans), spring k1e4; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_trans_k1e5",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      100000.0,
+      100000.0,
+      100000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt_trans), spring k1e5; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_trans_k1e6",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt_trans), spring k1e6; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cross_bolt_trans_k1e5_rot",
+   "family": "connectivity",
+   "edit": {
+    "couple": {
+     "pairs": [
+      [
+       4000074,
+       2003759
+      ],
+      [
+       4000079,
+       2003762
+      ],
+      [
+       4000156,
+       2002583
+      ],
+      [
+       4000171,
+       2002580
+      ],
+      [
+       4000174,
+       2001423
+      ],
+      [
+       4000179,
+       2001417
+      ],
+      [
+       4000221,
+       2001366
+      ],
+      [
+       4000236,
+       2001371
+      ],
+      [
+       4000239,
+       2002549
+      ],
+      [
+       4000244,
+       2002552
+      ],
+      [
+       4000312,
+       2003793
+      ],
+      [
+       4000323,
+       2003790
+      ],
+      [
+       4000325,
+       2005027
+      ],
+      [
+       4000330,
+       2005021
+      ],
+      [
+       4000372,
+       2004970
+      ],
+      [
+       4000387,
+       2004975
+      ],
+      [
+       4000390,
+       2018443
+      ],
+      [
+       4000403,
+       2018454
+      ],
+      [
+       4000647,
+       2014212
+      ],
+      [
+       4000655,
+       2014209
+      ],
+      [
+       4000702,
+       2014201
+      ],
+      [
+       4000710,
+       2014198
+      ],
+      [
+       4000713,
+       2009938
+      ],
+      [
+       4000726,
+       2009948
+      ],
+      [
+       4000870,
+       2009728
+      ],
+      [
+       4000878,
+       2009732
+      ],
+      [
+       4000925,
+       2009741
+      ],
+      [
+       4000933,
+       2009744
+      ],
+      [
+       4000936,
+       2014072
+      ],
+      [
+       4000949,
+       2014083
+      ],
+      [
+       4001180,
+       2018583
+      ],
+      [
+       4001188,
+       2018580
+      ],
+      [
+       4001227,
+       2018572
+      ],
+      [
+       4001234,
+       2018569
+      ],
+      [
+       4001236,
+       2022328
+      ],
+      [
+       4001249,
+       2022338
+      ],
+      [
+       4001393,
+       2022118
+      ],
+      [
+       4001401,
+       2022122
+      ],
+      [
+       4001448,
+       2022131
+      ],
+      [
+       4001456,
+       2022134
+      ],
+      [
+       4001459,
+       2018597
+      ],
+      [
+       4001462,
+       2018619
+      ],
+      [
+       4001501,
+       2009913
+      ],
+      [
+       4001504,
+       2009891
+      ],
+      [
+       4001528,
+       2014226
+      ],
+      [
+       4001531,
+       2014248
+      ],
+      [
+       4001570,
+       2022303
+      ],
+      [
+       4001573,
+       2022281
+      ],
+      [
+       4001597,
+       2027798
+      ],
+      [
+       4001598,
+       2027803
+      ],
+      [
+       4001599,
+       2027802
+      ],
+      [
+       4001600,
+       2027799
+      ],
+      [
+       4001601,
+       2027767
+      ],
+      [
+       4001602,
+       2027921
+      ],
+      [
+       4001603,
+       2027924
+      ],
+      [
+       4001604,
+       2027923
+      ],
+      [
+       4001605,
+       2027922
+      ],
+      [
+       4001606,
+       2027915
+      ],
+      [
+       4001607,
+       2028151
+      ],
+      [
+       4001608,
+       2028154
+      ],
+      [
+       4001609,
+       2028153
+      ],
+      [
+       4001610,
+       2028152
+      ],
+      [
+       4001611,
+       2028139
+      ],
+      [
+       4001696,
+       2029313
+      ],
+      [
+       4001697,
+       2029319
+      ],
+      [
+       4001698,
+       2029318
+      ],
+      [
+       4001707,
+       2029314
+      ],
+      [
+       4001708,
+       2029299
+      ]
+     ],
+     "k": [
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0,
+      100000.0
+     ]
+    }
+   },
+   "rationale": "cross-beam-to-wall coincident-node coupling (cross_bolt_trans), spring k1e5_rot; connectivity at the bulkhead interfaces driving the 150-210 Hz cluster",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "weld104_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_104": 0.3
+    }
+   },
+   "rationale": "weld shell PID 104 x0.3 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld104_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_104": 3.0
+    }
+   },
+   "rationale": "weld shell PID 104 x3.0 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld105_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_105": 0.3
+    }
+   },
+   "rationale": "weld shell PID 105 x0.3 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld105_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_105": 3.0
+    }
+   },
+   "rationale": "weld shell PID 105 x3.0 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld106_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_106": 0.3
+    }
+   },
+   "rationale": "weld shell PID 106 x0.3 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld106_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_106": 3.0
+    }
+   },
+   "rationale": "weld shell PID 106 x3.0 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld204_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_204": 0.3
+    }
+   },
+   "rationale": "weld shell PID 204 x0.3 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld204_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_204": 3.0
+    }
+   },
+   "rationale": "weld shell PID 204 x3.0 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld205_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_205": 0.3
+    }
+   },
+   "rationale": "weld shell PID 205 x0.3 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld205_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_205": 3.0
+    }
+   },
+   "rationale": "weld shell PID 205 x3.0 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld206_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_206": 0.3
+    }
+   },
+   "rationale": "weld shell PID 206 x0.3 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "weld206_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_206": 3.0
+    }
+   },
+   "rationale": "weld shell PID 206 x3.0 (steel-corner/aluminum weld representation; diagnosis: steel bottom corner + NASA weld knob)",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "steelwelds_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_104": 0.3,
+     "shell_105": 0.3,
+     "shell_106": 0.3
+    }
+   },
+   "rationale": "grouped weld representation variant",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "steelwelds_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_104": 3.0,
+     "shell_105": 3.0,
+     "shell_106": 3.0
+    }
+   },
+   "rationale": "grouped weld representation variant",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "alwelds_soft",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_204": 0.3,
+     "shell_205": 0.3,
+     "shell_206": 0.3
+    }
+   },
+   "rationale": "grouped weld representation variant",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "alwelds_stiff",
+   "family": "weld_contact",
+   "edit": {
+    "scale": {
+     "shell_204": 3.0,
+     "shell_205": 3.0,
+     "shell_206": 3.0
+    }
+   },
+   "rationale": "grouped weld representation variant",
+   "seed": "diagnosis:welds"
+  },
+  {
+   "id": "shell101_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_101": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 101 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell101_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_101": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 101 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell102_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_102": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 102 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell102_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_102": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 102 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell103_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_103": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 103 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell103_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_103": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 103 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell104_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_104": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 104 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell104_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_104": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 104 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell105_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_105": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 105 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell105_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_105": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 105 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell106_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_106": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 106 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell106_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_106": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 106 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell201_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_201": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 201 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell201_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_201": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 201 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell202_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_202": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 202 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell202_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_202": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 202 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell203_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_203": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 203 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell203_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_203": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 203 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell204_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_204": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 204 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell204_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_204": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 204 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell205_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_205": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 205 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell205_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_205": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 205 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell206_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_206": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 206 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell206_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_206": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 206 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell301_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_301": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 301 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell301_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_301": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 301 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell302_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_302": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 302 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell302_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_302": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 302 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell401_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_401": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 401 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell401_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_401": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 401 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell501_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_501": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 501 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell501_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_501": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 501 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell601_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_601": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 601 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell601_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_601": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 601 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell701_lo",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_701": 0.7
+    }
+   },
+   "rationale": "per-PID stiffness field x0.7 on shell 701 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "shell701_hi",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_701": 1.4
+    }
+   },
+   "rationale": "per-PID stiffness field x1.4 on shell 701 (finer granularity than the 9-group theta)",
+   "seed": "diagnosis:regions"
+  },
+  {
+   "id": "bottomcorner_soft",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_101": 0.7,
+     "shell_104": 0.5
+    }
+   },
+   "rationale": "steel bottom corner: panel+weld soft combo",
+   "seed": "diagnosis:steel_bottom_corner"
+  },
+  {
+   "id": "bottomcorner_stiff",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_101": 1.4,
+     "shell_104": 2.0
+    }
+   },
+   "rationale": "steel bottom corner: panel+weld stiff combo",
+   "seed": "diagnosis:steel_bottom_corner"
+  },
+  {
+   "id": "cluster_cross_plates",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_401": 1.3,
+     "shell_501": 0.8
+    }
+   },
+   "rationale": "150-210 Hz cluster: cross stiffer + plate softer",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "cluster_cross_plates2",
+   "family": "thickness_offset_proxy",
+   "edit": {
+    "scale": {
+     "shell_401": 0.75,
+     "shell_501": 1.25
+    }
+   },
+   "rationale": "150-210 Hz cluster: cross softer + plate stiffer",
+   "seed": "diagnosis:150-210Hz_cluster"
+  },
+  {
+   "id": "mass_steel_lo",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "steel": 0.85
+    }
+   },
+   "rationale": "region mass x0.85 (steel); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_steel_hi",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "steel": 1.15
+    }
+   },
+   "rationale": "region mass x1.15 (steel); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_aluminum_lo",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "aluminum": 0.85
+    }
+   },
+   "rationale": "region mass x0.85 (aluminum); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_aluminum_hi",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "aluminum": 1.15
+    }
+   },
+   "rationale": "region mass x1.15 (aluminum); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_dish_lo",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "dish": 0.85
+    }
+   },
+   "rationale": "region mass x0.85 (dish); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_dish_hi",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "dish": 1.15
+    }
+   },
+   "rationale": "region mass x1.15 (dish); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_cross_lo",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "cross": 0.85
+    }
+   },
+   "rationale": "region mass x0.85 (cross); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "mass_cross_hi",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "cross": 1.15
+    }
+   },
+   "rationale": "region mass x1.15 (cross); mass-distribution model form",
+   "seed": "diagnosis:mass"
+  },
+  {
+   "id": "cablemass_half",
+   "family": "mass_distribution",
+   "edit": {
+    "cable_mass_factor": 0.5
+   },
+   "rationale": "cable-harness mass at sensor nodes x0.5 of accel mass (known un-modeled mass)",
+   "seed": "diagnosis:cable"
+  },
+  {
+   "id": "cablemass_full",
+   "family": "mass_distribution",
+   "edit": {
+    "cable_mass_factor": 1.0
+   },
+   "rationale": "cable-harness mass at sensor nodes x1.0 of accel mass (known un-modeled mass)",
+   "seed": "diagnosis:cable"
+  },
+  {
+   "id": "cablemass_double",
+   "family": "mass_distribution",
+   "edit": {
+    "cable_mass_factor": 2.0
+   },
+   "rationale": "cable-harness mass at sensor nodes x2.0 of accel mass (known un-modeled mass)",
+   "seed": "diagnosis:cable"
+  },
+  {
+   "id": "dishmass_lo",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "dish": 0.8
+    }
+   },
+   "rationale": "dish mass low",
+   "seed": "diagnosis:dish"
+  },
+  {
+   "id": "dishmass_hi",
+   "family": "mass_distribution",
+   "edit": {
+    "mass_scale": {
+     "dish": 1.25
+    }
+   },
+   "rationale": "dish mass high",
+   "seed": "diagnosis:dish"
+  },
+  {
+   "id": "rand00",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_201": 1.482,
+     "shell_302": 0.516,
+     "shell_205": 0.734
+    }
+   },
+   "rationale": "random exploration: shell_201x1.61, shell_201x1.48, shell_302x0.52, shell_205x0.73",
+   "seed": "random"
+  },
+  {
+   "id": "rand01",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "805": [
+      119746.7,
+      665414.4,
+      119746.7,
+      1369232.6,
+      1369232.6,
+      129529.4
+     ],
+     "803": [
+      70928.9,
+      70928.9,
+      1906691.5,
+      321623.7,
+      3216237.1,
+      3216237.1
+     ]
+    }
+   },
+   "rationale": "random exploration: bush805(t0.13,r0.14), bush803(t0.38,r0.32)",
+   "seed": "random"
+  },
+  {
+   "id": "rand02",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_205": 0.528,
+     "shell_501": 0.522
+    }
+   },
+   "rationale": "random exploration: shell_205x0.53, shell_501x0.52",
+   "seed": "random"
+  },
+  {
+   "id": "rand03",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_106": 1.006,
+     "shell_701": 0.899
+    }
+   },
+   "rationale": "random exploration: shell_106x1.01, shell_701x0.90",
+   "seed": "random"
+  },
+  {
+   "id": "rand04",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "807": [
+      1661365.9,
+      107656.5,
+      107656.5,
+      14169465.9,
+      14169465.9,
+      1231326.6
+     ]
+    },
+    "scale": {
+     "shell_101": 1.558,
+     "shell_206": 0.637
+    }
+   },
+   "rationale": "random exploration: bush807(t0.33,r1.42), shell_101x1.56, shell_206x0.64",
+   "seed": "random"
+  },
+  {
+   "id": "rand05",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "802": [
+      2269452.2,
+      2269452.2,
+      53273526.3,
+      492360.3,
+      6394289.3,
+      6394289.3
+     ],
+     "805": [
+      231943.1,
+      1288873.4,
+      231943.1,
+      94594368.6,
+      94594368.6,
+      8948627.3
+     ]
+    },
+    "scale": {
+     "shell_105": 1.685,
+     "shell_601": 1.103
+    }
+   },
+   "rationale": "random exploration: bush802(t2.79,r0.64), shell_105x1.69, shell_601x1.10, bush805(t0.26,r9.46)",
+   "seed": "random"
+  },
+  {
+   "id": "rand06",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "807": [
+      31609694.0,
+      2048308.2,
+      2048308.2,
+      1445258.8,
+      1445258.8,
+      125593.0
+     ]
+    },
+    "scale": {
+     "shell_302": 1.803
+    }
+   },
+   "rationale": "random exploration: bush807(t6.32,r0.14), shell_302x0.77, shell_302x1.80",
+   "seed": "random"
+  },
+  {
+   "id": "rand07",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_701": 0.532
+    },
+    "mass_scale": {
+     "cross": 1.087
+    },
+    "bush_k": {
+     "803": [
+      764384.2,
+      764384.2,
+      20547962.8,
+      2654021.2,
+      26540212.3,
+      26540212.3
+     ]
+    }
+   },
+   "rationale": "random exploration: shell_701x1.86, m_crossx1.09, shell_701x0.53, bush803(t4.11,r2.65)",
+   "seed": "random"
+  },
+  {
+   "id": "rand08",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "806": [
+      6329131.3,
+      126582.6,
+      126582.6,
+      23372126.0,
+      74790.8,
+      23372126.0
+     ]
+    },
+    "scale": {
+     "shell_206": 1.094
+    }
+   },
+   "rationale": "random exploration: bush806(t1.27,r2.34), shell_206x1.09",
+   "seed": "random"
+  },
+  {
+   "id": "rand09",
+   "family": "random_tranche",
+   "edit": {
+    "mass_scale": {
+     "aluminum": 0.9
+    },
+    "scale": {
+     "shell_206": 1.011
+    },
+    "bush_k": {
+     "801": [
+      239264.9,
+      239264.9,
+      1196324.6,
+      1342.9,
+      1097170.1,
+      1097170.1
+     ]
+    }
+   },
+   "rationale": "random exploration: m_aluminumx0.90, shell_206x1.01, bush801(t0.24,r0.11)",
+   "seed": "random"
+  },
+  {
+   "id": "rand10",
+   "family": "random_tranche",
+   "edit": {
+    "mass_scale": {
+     "aluminum": 0.925,
+     "cross": 1.015
+    }
+   },
+   "rationale": "random exploration: m_aluminumx0.93, m_crossx1.01",
+   "seed": "random"
+  },
+  {
+   "id": "rand11",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "803": [
+      126513.0,
+      126513.0,
+      3400886.9,
+      1223327.6,
+      12233276.0,
+      12233276.0
+     ],
+     "805": [
+      3030240.0,
+      16838595.9,
+      3030240.0,
+      4384465.5,
+      4384465.5,
+      414770.4
+     ]
+    },
+    "scale": {
+     "shell_206": 0.599,
+     "shell_103": 0.643
+    }
+   },
+   "rationale": "random exploration: bush803(t0.68,r1.22), bush805(t3.37,r0.44), shell_206x0.60, shell_103x0.64",
+   "seed": "random"
+  },
+  {
+   "id": "rand12",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_103": 0.549,
+     "shell_203": 1.666
+    }
+   },
+   "rationale": "random exploration: shell_103x0.55, shell_203x1.67",
+   "seed": "random"
+  },
+  {
+   "id": "rand13",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "801": [
+      5111594.4,
+      5111594.4,
+      25557972.1,
+      25295.8,
+      20666511.4,
+      20666511.4
+     ],
+     "805": [
+      150488.8,
+      836244.2,
+      150488.8,
+      13756562.0,
+      13756562.0,
+      1301370.8
+     ]
+    },
+    "scale": {
+     "shell_301": 1.129
+    }
+   },
+   "rationale": "random exploration: bush801(t5.11,r2.07), bush805(t0.17,r1.38), shell_301x1.13",
+   "seed": "random"
+  },
+  {
+   "id": "rand14",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_103": 0.64,
+     "shell_302": 0.882
+    }
+   },
+   "rationale": "random exploration: shell_103x0.64, shell_302x0.88",
+   "seed": "random"
+  },
+  {
+   "id": "rand15",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "801": [
+      281219.9,
+      281219.9,
+      1406099.5,
+      1398.7,
+      1142701.5,
+      1142701.5
+     ]
+    },
+    "mass_scale": {
+     "cross": 0.946,
+     "aluminum": 1.103
+    }
+   },
+   "rationale": "random exploration: bush801(t0.28,r0.11), m_crossx1.06, m_crossx0.95, m_aluminumx1.10",
+   "seed": "random"
+  },
+  {
+   "id": "rand16",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_204": 1.076,
+     "shell_104": 0.625
+    }
+   },
+   "rationale": "random exploration: shell_204x1.08, shell_104x0.63",
+   "seed": "random"
+  },
+  {
+   "id": "rand17",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "803": [
+      231353.5,
+      231353.5,
+      6219181.1,
+      176363.5,
+      1763635.5,
+      1763635.5
+     ],
+     "802": [
+      112307.7,
+      112307.7,
+      2636329.9,
+      2149648.0,
+      27917506.4,
+      27917506.4
+     ],
+     "806": [
+      2870995.0,
+      57419.9,
+      57419.9,
+      1224560.5,
+      3918.6,
+      1224560.5
+     ]
+    }
+   },
+   "rationale": "random exploration: bush803(t1.24,r0.18), bush802(t0.14,r2.79), bush806(t0.57,r0.12)",
+   "seed": "random"
+  },
+  {
+   "id": "rand18",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "802": [
+      176714.3,
+      176714.3,
+      4148223.0,
+      174202.5,
+      2262370.1,
+      2262370.1
+     ]
+    },
+    "scale": {
+     "shell_401": 0.507
+    }
+   },
+   "rationale": "random exploration: bush802(t0.22,r0.23), shell_401x0.51",
+   "seed": "random"
+  },
+  {
+   "id": "rand19",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "804": [
+      84581.4,
+      612022.0,
+      84581.4,
+      80600.3,
+      48379512.0,
+      48379512.0
+     ],
+     "803": [
+      58527.5,
+      58527.5,
+      1573319.1,
+      531755.3,
+      5317552.8,
+      5317552.8
+     ]
+    },
+    "scale": {
+     "shell_103": 1.076
+    }
+   },
+   "rationale": "random exploration: bush804(t0.12,r4.84), shell_103x1.08, bush803(t0.31,r0.53)",
+   "seed": "random"
+  },
+  {
+   "id": "rand20",
+   "family": "random_tranche",
+   "edit": {
+    "bush_k": {
+     "801": [
+      2475210.2,
+      2475210.2,
+      12376051.0,
+      5615.0,
+      4587403.3,
+      4587403.3
+     ]
+    },
+    "scale": {
+     "shell_104": 1.169,
+     "shell_302": 0.577,
+     "shell_401": 0.903
+    }
+   },
+   "rationale": "random exploration: bush801(t2.48,r0.46), shell_104x1.17, shell_302x0.58, shell_401x0.90",
+   "seed": "random"
+  },
+  {
+   "id": "rand21",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_104": 0.866,
+     "shell_601": 0.819,
+     "shell_501": 1.038
+    }
+   },
+   "rationale": "random exploration: shell_104x0.87, shell_601x0.82, shell_501x1.04",
+   "seed": "random"
+  },
+  {
+   "id": "rand22",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_205": 1.746,
+     "shell_101": 0.661
+    },
+    "bush_k": {
+     "801": [
+      7663157.2,
+      7663157.2,
+      38315785.8,
+      71299.4,
+      58251113.3,
+      58251113.3
+     ]
+    }
+   },
+   "rationale": "random exploration: shell_205x1.75, shell_101x0.66, bush801(t7.66,r5.83)",
+   "seed": "random"
+  },
+  {
+   "id": "rand23",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_106": 1.566,
+     "shell_101": 1.104
+    },
+    "bush_k": {
+     "806": [
+      3964639.3,
+      79292.8,
+      79292.8,
+      1795039.5,
+      5744.1,
+      1795039.5
+     ]
+    }
+   },
+   "rationale": "random exploration: shell_106x1.57, shell_101x1.10, bush806(t0.79,r0.18)",
+   "seed": "random"
+  },
+  {
+   "id": "rand24",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_105": 0.514,
+     "shell_201": 0.61,
+     "shell_104": 0.613
+    }
+   },
+   "rationale": "random exploration: shell_105x0.51, shell_201x0.61, shell_104x0.61",
+   "seed": "random"
+  },
+  {
+   "id": "rand25",
+   "family": "random_tranche",
+   "edit": {
+    "mass_scale": {
+     "steel": 1.018
+    },
+    "scale": {
+     "shell_203": 0.85,
+     "shell_302": 1.255,
+     "shell_106": 0.809
+    }
+   },
+   "rationale": "random exploration: m_steelx1.02, shell_203x0.85, shell_302x1.25, shell_106x0.81",
+   "seed": "random"
+  },
+  {
+   "id": "rand26",
+   "family": "random_tranche",
+   "edit": {
+    "mass_scale": {
+     "aluminum": 1.111
+    },
+    "bush_k": {
+     "805": [
+      7932843.9,
+      44081640.9,
+      7932843.9,
+      10853547.5,
+      10853547.5,
+      1026745.6
+     ],
+     "801": [
+      3116574.0,
+      3116574.0,
+      15582870.2,
+      14236.6,
+      11631170.5,
+      11631170.5
+     ]
+    },
+    "scale": {
+     "shell_701": 0.572
+    }
+   },
+   "rationale": "random exploration: m_aluminumx1.11, bush805(t8.82,r1.09), bush801(t3.12,r1.16), shell_701x0.57",
+   "seed": "random"
+  },
+  {
+   "id": "rand27",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_103": 0.734
+    },
+    "bush_k": {
+     "803": [
+      60102.5,
+      60102.5,
+      1615658.2,
+      130904.3,
+      1309043.2,
+      1309043.2
+     ]
+    },
+    "mass_scale": {
+     "aluminum": 0.998
+    }
+   },
+   "rationale": "random exploration: shell_103x0.73, bush803(t0.32,r0.13), m_aluminumx1.00",
+   "seed": "random"
+  },
+  {
+   "id": "rand28",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_105": 0.726,
+     "shell_501": 1.407
+    },
+    "mass_scale": {
+     "steel": 1.177
+    }
+   },
+   "rationale": "random exploration: shell_105x0.73, shell_501x1.41, m_steelx1.18",
+   "seed": "random"
+  },
+  {
+   "id": "rand29",
+   "family": "random_tranche",
+   "edit": {
+    "scale": {
+     "shell_206": 1.045,
+     "shell_701": 1.568
+    }
+   },
+   "rationale": "random exploration: shell_206x1.04, shell_701x1.57",
+   "seed": "random"
+  },
+  {
+   "id": "baseline",
+   "family": "reference",
+   "edit": {},
+   "rationale": "inherited FEM unchanged (M0 anchor for the screen)",
+   "seed": "reference"
+  }
+ ]
+}

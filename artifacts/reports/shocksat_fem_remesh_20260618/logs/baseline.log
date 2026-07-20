@@ -1,0 +1,100 @@
+== assemble (per-PID K blocks + M + RBE2 T) ==
+shell pid 101: 17416 elems, nnz 5727744, t=4s
+shell pid 102: 4632 elems, nnz 1513332, t=5s
+shell pid 103: 1568 elems, nnz 553176, t=5s
+shell pid 104: 568 elems, nnz 212544, t=5s
+shell pid 105: 118 elems, nnz 51264, t=5s
+shell pid 106: 286 elems, nnz 121032, t=5s
+shell pid 201: 26430 elems, nnz 8662536, t=11s
+shell pid 202: 4830 elems, nnz 1579968, t=12s
+shell pid 203: 1832 elems, nnz 645840, t=12s
+shell pid 204: 572 elems, nnz 214056, t=12s
+shell pid 205: 182 elems, nnz 78912, t=12s
+shell pid 206: 292 elems, nnz 121608, t=12s
+shell pid 301: 576 elems, nnz 211392, t=12s
+shell pid 302: 192 elems, nnz 63504, t=12s
+shell pid 401: 1572 elems, nnz 524052, t=13s
+shell pid 501: 896 elems, nnz 303264, t=13s
+shell pid 601: 1440 elems, nnz 489600, t=13s
+shell pid 701: 4392 elems, nnz 1364292, t=14s
+bush pid 99: 76 elems
+bush pid 801: 28 elems
+bush pid 802: 8 elems
+bush pid 803: 8 elems
+bush pid 804: 4 elems
+bush pid 805: 4 elems
+bush pid 806: 4 elems
+bush pid 807: 4 elems
+bush pid 902: 30 elems
+{
+ "total_mass": 0.3309686213560343,
+ "total_weight_lb": 127.78301308210857,
+ "nasa_weight_lb": 127.89,
+ "weight_err_pct": -0.08365542098008882,
+ "cg": [
+  -0.000577658732122335,
+  -0.0008158341539318193,
+  28.01421806513708
+ ],
+ "nasa_cg": [
+  0.0,
+  0.0,
+  28.01
+ ],
+ "rigid_energy": [
+  -6.497470167232677e-06,
+  -9.976656656363048e-06,
+  1.1225253956581582e-05,
+  1216.7257112917694,
+  1216.819370133518,
+  1843.5878066693867
+ ],
+ "K_max": 9925256145.286724,
+ "rigid_energy_rel": [
+  -6.546400487929146e-16,
+  -1.005178759149781e-15,
+  1.1309787669220203e-15,
+  1.2258884742934966e-07,
+  1.2259828384493206e-07,
+  1.8574712628901414e-07
+ ],
+ "n_dep_dofs": 6588,
+ "n_keep_dofs": 399510
+}
+done in 16s
+== nominal eigensolve + obs_V + MAC vs .ash ==
+[    0.5s] loaded K (nnz 10806980), M, T (406098, 399510)
+[    0.6s] reduced: Kr nnz 10705561, Mr nnz 402184, n 399510
+[  287.8s] eigsh done: f[0:8] = [0.0000e+00 0.0000e+00 2.0000e-03 4.3100e-01 4.8100e-01 1.1330e+00
+ 5.4596e+01 7.3142e+01]
+[  287.8s] elastic f[6:31] = [ 54.6   73.14  73.74  88.05 104.74 113.8  117.35 122.23 124.38 124.59
+ 124.59 125.16 146.6  151.9  152.2  160.61 168.78 168.87 183.55 183.88
+ 185.18 190.36 191.56 192.59 192.9 ]
+[  288.1s] MAC pairing (test -> our elastic mode):
+[  288.1s]   test  1   54.19 Hz -> fem  1   54.60 Hz  MAC 0.970  df +0.75%
+[  288.1s]   test  2   69.98 Hz -> fem  3   73.74 Hz  MAC 0.497  df +5.37%
+[  288.1s]   test  3   74.99 Hz -> fem  2   73.14 Hz  MAC 0.512  df -2.46%
+[  288.1s]   test  4   85.78 Hz -> fem  4   88.05 Hz  MAC 0.883  df +2.65%
+[  288.1s]   test  5  107.03 Hz -> fem  5  104.74 Hz  MAC 0.975  df -2.14%
+[  288.1s]   test  6  117.63 Hz -> fem  8  122.23 Hz  MAC 0.899  df +3.91%
+[  288.1s]   test  7  118.53 Hz -> fem  6  113.80 Hz  MAC 0.958  df -3.99%
+[  288.1s]   test  8  125.03 Hz -> fem  7  117.35 Hz  MAC 0.704  df -6.15%
+[  288.1s]   test  9  137.25 Hz -> fem 14  151.90 Hz  MAC 0.692  df +10.68%
+[  288.1s]   test 10  142.44 Hz -> fem 14  151.90 Hz  MAC 0.559  df +6.64%
+[  288.1s]   test 11  151.19 Hz -> fem 15  152.20 Hz  MAC 0.610  df +0.67%
+[  288.1s]   test 12  158.17 Hz -> fem 13  146.60 Hz  MAC 0.581  df -7.32%
+[  288.1s]   test 13  165.88 Hz -> fem 16  160.61 Hz  MAC 0.755  df -3.18%
+[  288.1s]   test 14  167.99 Hz -> fem 20  183.88 Hz  MAC 0.703  df +9.46%
+[  288.1s]   test 15  172.26 Hz -> fem 21  185.18 Hz  MAC 0.737  df +7.50%
+[  288.1s]   test 16  174.77 Hz -> fem 18  168.87 Hz  MAC 0.639  df -3.38%
+[  288.1s]   test 17  184.36 Hz -> fem 19  183.55 Hz  MAC 0.889  df -0.44%
+[  288.1s]   test 18  188.64 Hz -> fem 22  190.36 Hz  MAC 0.690  df +0.91%
+[  288.1s]   test 19  190.22 Hz -> fem 26  193.66 Hz  MAC 0.340  df +1.81%
+[  288.1s]   test 20  195.72 Hz -> fem 24  192.59 Hz  MAC 0.391  df -1.60%
+[  288.1s]   test 21  197.82 Hz -> fem 27  196.90 Hz  MAC 0.661  df -0.46%
+[  288.1s]   test 22  198.86 Hz -> fem 25  192.90 Hz  MAC 0.387  df -2.99%
+[  288.1s]   test 23  203.01 Hz -> fem 23  191.56 Hz  MAC 0.282  df -5.64%
+[  288.1s]   test 24  213.91 Hz -> fem 19  183.55 Hz  MAC 0.612  df -14.19%
+[  288.1s]   test 25  222.17 Hz -> fem 28  211.70 Hz  MAC 0.620  df -4.71%
+[  288.1s] done
+== BASELINE DONE ==

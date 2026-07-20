@@ -1,0 +1,253 @@
+[
+ {
+  "cid": "c06_tb_xface",
+  "label": "s_c06_tb_xface",
+  "theta_scale": null,
+  "family": "shape",
+  "ablation": "shape_only",
+  "rationale": "reused genuine-shape edit c06_tb_xface (proven-null fam)",
+  "proxy_P1p": 0.2838625532096971,
+  "proxy_P2p": 0.6357458521355366,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_band_w3_lo",
+  "theta_scale": null,
+  "family": "damping_band",
+  "ablation": "damping_only",
+  "rationale": "band zeta perturb targeting band 3",
+  "proxy_P1p": 0.2805783421643089,
+  "proxy_P2p": 0.6342325301121972,
+  "damping": {
+   "kind": "band",
+   "zeta": [
+    0.022840753655781844,
+    0.014664269500534741,
+    0.024648487987449567,
+    0.01537540805341482
+   ]
+  }
+ },
+ {
+  "cid": "a11_ref_202",
+  "label": "s_a11_ref_202",
+  "theta_scale": null,
+  "family": "shape",
+  "ablation": "shape_only",
+  "rationale": "reused genuine-shape edit a11_ref_202 (proven-null fam)",
+  "proxy_P1p": 0.27934010592348174,
+  "proxy_P2p": 0.5998094267733695,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ },
+ {
+  "cid": "a03_welds_t130",
+  "label": "s_a03_welds_t130",
+  "theta_scale": null,
+  "family": "shape",
+  "ablation": "shape_only",
+  "rationale": "reused genuine-shape edit a03_welds_t130 (proven-null fam)",
+  "proxy_P1p": 0.26798907938998817,
+  "proxy_P2p": 0.5898083685747428,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_a0d",
+  "theta_scale": null,
+  "family": "damping_band",
+  "ablation": "damping_only",
+  "rationale": "A0d best-fit damping; worst train band 3",
+  "proxy_P1p": 0.26557305874978443,
+  "proxy_P2p": 0.5995973002346312,
+  "damping": {
+   "kind": "band",
+   "zeta": [
+    0.022840753655781844,
+    0.014664269500534741,
+    0.024648487987449567,
+    0.023296072808204272
+   ]
+  }
+ },
+ {
+  "cid": "a04_welds_t074",
+  "label": "s_a04_welds_t074",
+  "theta_scale": null,
+  "family": "shape",
+  "ablation": "shape_only",
+  "rationale": "reused genuine-shape edit a04_welds_t074 (proven-null fam)",
+  "proxy_P1p": 0.26293914796028717,
+  "proxy_P2p": 0.6061776363464797,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "p_ctrl0",
+  "theta_scale": [
+   0.8882314971338431,
+   0.7369805173072987,
+   1.0947163209058124,
+   1.1181149416176415,
+   0.9546094070856107,
+   1.056644378336662,
+   1.2924752053329778,
+   1.1724782558040485,
+   1.111984051023659
+  ],
+  "family": "parametric",
+  "ablation": "shape_only",
+  "rationale": "theta-scale parametric control (proven-dead fam)",
+  "proxy_P1p": 0.25609907879894234,
+  "proxy_P2p": 0.5948497694125925,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_band_w3_hi",
+  "theta_scale": null,
+  "family": "damping_band",
+  "ablation": "damping_only",
+  "rationale": "band zeta perturb targeting band 3",
+  "proxy_P1p": 0.2494515385338121,
+  "proxy_P2p": 0.611281107153409,
+  "damping": {
+   "kind": "band",
+   "zeta": [
+    0.022840753655781844,
+    0.014664269500534741,
+    0.024648487987449567,
+    0.03494410921230641
+   ]
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_eta_hi",
+  "theta_scale": null,
+  "family": "damping_joint_eta",
+  "ablation": "damping_only",
+  "rationale": "joint loss factor eta=0.08 on CBUSH groups",
+  "proxy_P1p": 0.24327339696063494,
+  "proxy_P2p": 0.6450339458678223,
+  "damping": {
+   "kind": "band",
+   "zeta": [
+    0.0032,
+    0.0032,
+    0.0032,
+    0.0032
+   ],
+   "eta": {
+    "joints": 0.08,
+    "contact": 0.08
+   }
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_eta_lo",
+  "theta_scale": null,
+  "family": "damping_joint_eta",
+  "ablation": "damping_only",
+  "rationale": "joint loss factor eta=0.03 on CBUSH groups",
+  "proxy_P1p": 0.24246268684331718,
+  "proxy_P2p": 0.642752347146031,
+  "damping": {
+   "kind": "band",
+   "zeta": [
+    0.0032,
+    0.0032,
+    0.0032,
+    0.0032
+   ],
+   "eta": {
+    "joints": 0.03,
+    "contact": 0.03
+   }
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_ray2",
+  "theta_scale": null,
+  "family": "damping_rayleigh",
+  "ablation": "damping_only",
+  "rationale": "Rayleigh proportional damping",
+  "proxy_P1p": 0.227983763397313,
+  "proxy_P2p": 0.6347629152383045,
+  "damping": {
+   "kind": "rayleigh",
+   "alpha": 1.5,
+   "beta": 5e-07
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "d_ray1",
+  "theta_scale": null,
+  "family": "damping_rayleigh",
+  "ablation": "damping_only",
+  "rationale": "Rayleigh proportional damping",
+  "proxy_P1p": 0.22771700584250376,
+  "proxy_P2p": 0.6514605682244832,
+  "damping": {
+   "kind": "rayleigh",
+   "alpha": 0.5,
+   "beta": 2e-06
+  }
+ },
+ {
+  "cid": "a16_bb_splits_combo",
+  "label": "s_a16_bb_splits_combo",
+  "theta_scale": null,
+  "family": "shape",
+  "ablation": "shape_only",
+  "rationale": "reused genuine-shape edit a16_bb_splits_combo (proven-null fam)",
+  "proxy_P1p": 0.22532248029013505,
+  "proxy_P2p": 0.6021801465423743,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ },
+ {
+  "cid": "A0",
+  "label": "p_ctrl1",
+  "theta_scale": [
+   1.1086714518743375,
+   0.8785037365250835,
+   1.1555801471255802,
+   0.7809302651174154,
+   0.9514065866303197,
+   0.9365109392809423,
+   0.7716086358523636,
+   0.9835853794748705,
+   1.2795625497295577
+  ],
+  "family": "parametric",
+  "ablation": "shape_only",
+  "rationale": "theta-scale parametric control (proven-dead fam)",
+  "proxy_P1p": 0.17328395963929566,
+  "proxy_P2p": 0.5832132961498098,
+  "damping": {
+   "kind": "fixed",
+   "zeta": 0.01
+  }
+ }
+]

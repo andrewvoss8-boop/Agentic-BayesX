@@ -1,0 +1,6 @@
+
+=== code/fig_spatial.py ===
+  [INFO] Legend present: prefer direct end-of-line labels to avoid eye ping-pong (Beautiful Evidence).
+  [INFO] Looks like a frequency-domain plot but no log x-axis found. Project rule: log frequency axis unless justified.
+
+2 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.

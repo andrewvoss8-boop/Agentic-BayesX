@@ -1,0 +1,72 @@
+[GREEN ] artifact:decisions_log.md: decisions_log.md
+[GREEN ] artifact:priority_deliverables.md: priority_deliverables.md
+[GREEN ] artifact:question_framing.md: question_framing.md
+[GREEN ] artifact:assumptions_ledger.md: assumptions_ledger.md
+[GREEN ] artifact:quantity_contracts.md: quantity_contracts.md
+[GREEN ] artifact:packet.md: packet.md
+[GREEN ] artifact:run_all.sh: run_all.sh
+[GREEN ] artifact:runtime.json: runtime.json
+[GREEN ] artifact:code/core.py: code/core.py
+[GREEN ] artifact:code/nuts_arms.py: code/nuts_arms.py
+[GREEN ] artifact:code/predict.py: code/predict.py
+[GREEN ] artifact:code/run_sweep.py: code/run_sweep.py
+[GREEN ] artifact:code/identifiability.py: code/identifiability.py
+[GREEN ] artifact:code/discretization.py: code/discretization.py
+[GREEN ] artifact:code/sensitivity.py: code/sensitivity.py
+[GREEN ] artifact:code/aggregate.py: code/aggregate.py
+[GREEN ] artifact:code/viz.py: code/viz.py
+[GREEN ] artifact:code/image_qa.py: code/image_qa.py
+[GREEN ] artifact:code/fig_schematic.py: code/fig_schematic.py
+[GREEN ] artifact:code/fig_coverage.py: code/fig_coverage.py
+[GREEN ] artifact:code/fig_arm_comparison.py: code/fig_arm_comparison.py
+[GREEN ] artifact:code/fig_theta_recovery.py: code/fig_theta_recovery.py
+[GREEN ] artifact:code/fig_heldout_frf.py: code/fig_heldout_frf.py
+[GREEN ] artifact:code/fig_identifiability.py: code/fig_identifiability.py
+[GREEN ] artifact:out/config.json: out/config.json
+[GREEN ] artifact:out/coverage_summary.json: out/coverage_summary.json
+[GREEN ] artifact:out/arm_comparison.json: out/arm_comparison.json
+[GREEN ] artifact:out/identifiability.json: out/identifiability.json
+[GREEN ] artifact:out/discretization.json: out/discretization.json
+[GREEN ] artifact:out/scorecard.json: out/scorecard.json
+[GREEN ] artifact:out/image_qa.json: out/image_qa.json
+[GREEN ] artifact:out/text_overlap.json: out/text_overlap.json
+[GREEN ] artifact:figures/fig_schematic.png: figures/fig_schematic.png
+[GREEN ] artifact:figures/figA_heldout_qoi_coverage.png: figures/figA_heldout_qoi_coverage.png
+[GREEN ] artifact:figures/figB_arm_comparison.png: figures/figB_arm_comparison.png
+[GREEN ] artifact:figures/figC_theta_recovery.png: figures/figC_theta_recovery.png
+[GREEN ] artifact:figures/figD_heldout_frf_bands.png: figures/figD_heldout_frf_bands.png
+[GREEN ] artifact:figures/figE_identifiability.png: figures/figE_identifiability.png
+[GREEN ] integrity:reduced_blocks_copied_unedited: data/reduced_blocks.npz SHA == modal-twin original (be9af90efd55...)
+[GREEN ] anti_cheat:no_coupled_tray_model: plain-ShockSat only; no coupled-tray reference in code; config provenance = plain_shocksat_9group
+[GREEN ] grid:5combos_x_4arms_present: 20/20 (combo,arm) cells present
+[YELLOW] convergence:4_M0: NOT converged (labeled): R-hat 7.770, ESS 2, div 0.000; intervals not-trustworthy
+[YELLOW] convergence:4_M3: NOT converged (labeled): R-hat 8.612, ESS 2, div 0.000; intervals not-trustworthy
+[YELLOW] convergence:summary: 18/20 NUTS cells converged; 2 labeled not-yet-converged
+[GREEN ] coverage:numbers_present_all_cells: held-out QOI coverage (peak + band) reported with numbers for every cell
+[GREEN ] money:coverage_distribution_over_5_combos: per-arm held-out-QOI coverage reported as a distribution over all 5 combos
+[GREEN ] malady:naive_confidently_wrong: naive (M0) mean held-out-QOI coverage over 5 combos = 0.10 (<= 0.8 ? True); injected model-form error is large enough to break naive coverage
+[GREEN ] cure:statfem_d_coverage_quantified: StatFEM-iid/Schneider/orthogonal held-out coverage quantified vs naive
+[GREEN ] comparison:iid_schneider_orthogonal_reported: iid vs Schneider vs orthogonal comparison reported with numbers
+[YELLOW] finding:does_d_restore_coverage: best StatFEM-arm mean coverage = 0.89 (does NOT fully restore held-out-QOI coverage); this is the science verdict, reported whichever way it falls
+[GREEN ] identifiability:strain_energy_and_fim_reported: per-group modal strain-energy table (9 groups) + FRF-FIM eigen-view (9 combos above prior precision) reported BEFORE θ claims
+[GREEN ] identifiability:theta_recovery_flags_present: every cell reports per-group θ covered + informed flags
+[RED   ] discretization:reduced_frf_validated: reduced 74-mode FRF vs full-order direct solve at QOI peaks: max rel err 0.0810 (<= 0.03 ? False)
+[YELLOW] discretization:grid_and_truncation_refine: grid/truncation refinement max QOI rel shift 0.03236996495943967
+[GREEN ] scorecard:present: StatFEM scorecard with 7 claim->evidence->verdict->improvement rows
+[GREEN ] tufte_lint:fig_schematic: clean
+[GREEN ] tufte_lint:fig_coverage: clean
+[GREEN ] tufte_lint:fig_arm_comparison: clean
+[GREEN ] tufte_lint:fig_theta_recovery: clean
+[GREEN ] tufte_lint:fig_heldout_frf: clean
+[GREEN ] tufte_lint:fig_identifiability: clean
+[GREEN ] image_qa:legibility: pixel legibility all pass
+[GREEN ] text_overlap:auditor: save-time bbox text-overlap auditor: 0 overlapping text pair(s)
+[GREEN ] doc:method_summary_present: packet has a method-summary section
+[GREEN ] doc:data_count_present: packet states the synthetic-realization / replicate count
+[GREEN ] doc:likelihood_choice_present: packet states the whole-log-FRF likelihood data-usage choice
+[YELLOW] scope:single_realization: one synthetic realization per combo (5 combos = 5 distinct truths); no flight/build/test variability
+[YELLOW] scope:surrogate_error_model: injected model-form error is a synthetic surrogate (parametric θ bias + Schneider correlated complex field), not a measured real-structure discrepancy
+[YELLOW] scope:no_universal_parameter_recovery: claim is held-out QOI coverage + error detection, NOT universal θ recovery; the unidentifiable groups (joints/contact/welds) are missed by design (modal-twin 4/9 finding)
+[GREEN ] sensitivity:combo_dependence: per-arm coverage std over 5 combos = {'M0': 0.083, 'M1': 0.146, 'M2': 0.069, 'M3': 0.083}; verdict stable across combos
+
+OVERALL RED  GREEN 61 / YELLOW 8 / RED 1

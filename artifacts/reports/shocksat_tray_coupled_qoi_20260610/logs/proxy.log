@@ -1,0 +1,8 @@
+[   9.7s] draw 0/32
+[  82.4s] draw 8/32
+[ 151.9s] draw 16/32
+[ 225.7s] draw 24/32
+[ 291.9s] done
+[ 291.9s] Fx: best tray_center_x rho_bp_worst=0.9999 alpha=3.132 N/(m/s^2)
+[ 291.9s] Fy: best tray_center_y rho_bp_worst=0.9999 alpha=3.135 N/(m/s^2)
+[ 291.9s] Fz: best tray_center_z rho_bp_worst=1.0 alpha=3.162 N/(m/s^2)

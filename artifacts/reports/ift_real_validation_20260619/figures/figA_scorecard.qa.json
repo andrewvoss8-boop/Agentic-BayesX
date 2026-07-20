@@ -1,0 +1,14 @@
+{
+  "figure": "figA_scorecard",
+  "tufte_pass": true,
+  "image_qa_pass": true,
+  "overlap_pass": true,
+  "overlaps": [],
+  "image": {
+    "w": 2100,
+    "h": 1000,
+    "ink_frac": 0.0513,
+    "ok": true
+  },
+  "tufte_summary": "1 heuristic flag(s). Advisory only \u2014 review each against intent and the Tufte checklist."
+}

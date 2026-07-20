@@ -1,0 +1,23 @@
+{
+ "cid": "mr2_conn1_a1",
+ "track": "random",
+ "round": 2,
+ "cls": "connectivity",
+ "seed": 20362717,
+ "ops": [
+  {
+   "op": "rbe2_soften",
+   "eids": [
+    2032435,
+    1024301,
+    9000085,
+    8000041
+   ],
+   "k_trans": 1088109.6155935705,
+   "k_rot": 1094.7711605422312,
+   "name": "rconn21a1"
+  }
+ ],
+ "rationale": "dud replacement draw",
+ "evidence": "none (random)"
+}

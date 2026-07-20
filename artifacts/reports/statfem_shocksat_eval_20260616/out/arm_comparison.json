@@ -1,0 +1,44 @@
+{
+ "arms": {
+  "M0": {
+   "label": "naive (no discrepancy)",
+   "mean_combined_coverage": 0.1,
+   "std_combined_coverage": 0.08268454930564446,
+   "mean_sigma_d": 0.0,
+   "mean_band_width_db": 0.2329771177181128,
+   "mean_theta_bias_identified": 0.01454269686779392,
+   "theta_cover_frac_identified_biased": 0.5555555555555556,
+   "theta_cover_frac_unidentified_biased": 0.6
+  },
+  "M1": {
+   "label": "StatFEM-iid",
+   "mean_combined_coverage": 0.5714285714285714,
+   "std_combined_coverage": 0.14638501094227999,
+   "mean_sigma_d": 0.07910080280579894,
+   "mean_band_width_db": 2.255659617674048,
+   "mean_theta_bias_identified": 0.012945850597568268,
+   "theta_cover_frac_identified_biased": 0.8888888888888888,
+   "theta_cover_frac_unidentified_biased": 0.8
+  },
+  "M2": {
+   "label": "StatFEM-Schneider",
+   "mean_combined_coverage": 0.8857142857142858,
+   "std_combined_coverage": 0.06925256939166186,
+   "mean_sigma_d": 0.08200365475756104,
+   "mean_band_width_db": 2.4778084160265648,
+   "mean_theta_bias_identified": 0.0026776032046099563,
+   "theta_cover_frac_identified_biased": 1.0,
+   "theta_cover_frac_unidentified_biased": 1.0
+  },
+  "M3": {
+   "label": "StatFEM-orthogonal",
+   "mean_combined_coverage": 0.8857142857142858,
+   "std_combined_coverage": 0.08268454930564448,
+   "mean_sigma_d": 0.08177109160727028,
+   "mean_band_width_db": 2.534875166334771,
+   "mean_theta_bias_identified": 0.009735533081812606,
+   "theta_cover_frac_identified_biased": 0.7777777777777778,
+   "theta_cover_frac_unidentified_biased": 0.4
+  }
+ }
+}

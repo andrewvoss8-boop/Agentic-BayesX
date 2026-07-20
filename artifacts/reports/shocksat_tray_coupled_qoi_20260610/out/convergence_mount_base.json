@@ -1,0 +1,35 @@
+{
+ "per_variable": {
+  "sigma_f": {
+   "r_hat_max": 1.4205351353365017,
+   "ess_min": 15.665509638387539
+  },
+  "theta_T": {
+   "r_hat_max": 1.803025734743685,
+   "ess_min": 4.461833852043815
+  },
+  "theta_m": {
+   "r_hat_max": 5.029741167382107,
+   "ess_min": 2.3853158769147287
+  }
+ },
+ "worst_rhat": 5.029741167382107,
+ "min_ess": 2.3853158769147287,
+ "divergences": 0,
+ "divergence_fraction": 0.0,
+ "gate_pass": false,
+ "thresholds": {
+  "rhat": 1.05,
+  "ess": 200,
+  "div_frac": 0.02
+ },
+ "tag": "base",
+ "settings": {
+  "nwarm": 1000,
+  "ndraw": 1000,
+  "max_tree_depth": 8,
+  "chains": 4,
+  "dense_mass": true,
+  "target_accept": 0.9
+ }
+}

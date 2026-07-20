@@ -1,0 +1,51 @@
+{
+ "cid": "ma1_mesh_brkt",
+ "track": "agent",
+ "round": 1,
+ "cls": "mesh_density",
+ "ops": [
+  "refine"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.16659990146642978,
+ "exact_b200_500": 0.19006690567621243,
+ "exact_folds": {
+  "m_xpos_990x": 0.3101168789804758,
+  "m_zpos_990z": 0.5235567902673227,
+  "m_ypos_990y": 0.09523066342710783,
+  "m_zpos_900z": -0.26250472680918724
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.13699872493281082,
+  "m_zpos_990z": 0.17978956574808724,
+  "m_ypos_990y": 0.18438013034671313,
+  "m_zpos_900z": 0.25909920167723843
+ },
+ "theta_map": [
+  1.102350334866608,
+  1.1446658983660156,
+  1.0026419516640301,
+  0.9009316040402575,
+  1.6507613358907827,
+  0.982794530906768,
+  1.1798660276907889,
+  1.059943250792394,
+  0.8079326434449291
+ ],
+ "enriched_pkg": "ma1_mesh_brkt__xenr",
+ "spot_max_pct": 5.2361459612626504e-08,
+ "n_dof": 414030,
+ "delta_dof_pct": 3.634,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 1.6603,
+  "pass": true
+ },
+ "solve_s_theta1": 404.5,
+ "solve_s_enrich": 388.9,
+ "wall_s": 823.3,
+ "ts": "2026-07-16T21:45:20",
+ "diagnosis_link": "diagnosis_mf_r1.json: residual-vs-mesh-size corr is ~0 (+0.05) so no global refinement signal; quota slot spent where local bending is coarsest per residual cells - Top_Brackets|Y 0.734 dex with only ~2 elements across each bracket leg (768 quads refined)"
+}

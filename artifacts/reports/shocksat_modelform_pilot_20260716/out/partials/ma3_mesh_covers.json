@@ -1,0 +1,51 @@
+{
+ "cid": "ma3_mesh_covers",
+ "track": "agent",
+ "round": 3,
+ "cls": "mesh_density",
+ "ops": [
+  "refine"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.17714406957215678,
+ "exact_b200_500": 0.2012560423540719,
+ "exact_folds": {
+  "m_xpos_990x": 0.3238243256445939,
+  "m_zpos_990z": 0.5077470134666635,
+  "m_ypos_990y": 0.1035208381659318,
+  "m_zpos_900z": -0.226515898988562
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.18550327384500143,
+  "m_zpos_990z": 0.17541976435209397,
+  "m_ypos_990y": 0.18764016518673132,
+  "m_zpos_900z": 0.256460966032461
+ },
+ "theta_map": [
+  0.9704697810009268,
+  1.1591496498180365,
+  1.0043980045530398,
+  0.890195865193504,
+  1.3200223259668369,
+  1.100052690795529,
+  0.9825044091155302,
+  1.0533116219157057,
+  0.8116087248333387
+ ],
+ "enriched_pkg": "ma3_mesh_covers__xenr",
+ "spot_max_pct": 1.6543908465393997e-07,
+ "n_dof": 529668,
+ "delta_dof_pct": 32.579,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 17.4749,
+  "pass": true
+ },
+ "solve_s_theta1": 1607.0,
+ "solve_s_enrich": 1229.6,
+ "wall_s": 2917.2,
+ "ts": "2026-07-17T08:44:02",
+ "diagnosis_link": "diagnosis_mf_r3.json: refine keeps helping in-track (r1 plates +0.1692, r2 plates3 +0.1710) though the global mesh-size corr is ~0; extend to the top cover 202 whose drumhead cluster carries the Top_Box|Z 0.716 dex cell (7166 quads <= cap)"
+}

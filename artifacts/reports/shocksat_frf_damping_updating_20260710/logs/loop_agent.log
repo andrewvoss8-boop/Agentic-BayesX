@@ -1,0 +1,53 @@
+diagnosis: {"band_edges": [45.0, 69.8, 108.2, 167.7, 260.0], "median_rho": 0.9937499999999999, "band_amp_mismatch": {"0": 0.2545535731417641, "1": 0.32173700946771683, "2": 0.4442699411758873, "3": 0.5067385936478812}, "worst_band": 3}
+/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_true_remodel_loop_20260706/code/femlib.py:490: RuntimeWarning: overflow encountered in square
+  return 0.5 * np.sum((tgt - lam[femk]) ** 2 / var) + 0.5 * np.sum(lt ** 2) / NSIG_THETA ** 2
+/Users/avoss/Library/Python/3.9/lib/python/site-packages/scipy/optimize/_numdiff.py:590: RuntimeWarning: invalid value encountered in subtract
+  df = fun(x) - f0
+  [agent 1/60] s_c06_tb_xface             P1'=0.25012527932853457 P3=0.247643996208817 P2'=0.8895439763755593
+  [agent 2/60] d_band_w3_lo               P1'=0.21505686332486296 P3=0.22697364372717788 P2'=0.8031346622508557
+  [agent 3/60] s_a11_ref_202              P1'=0.22182190027580156 P3=0.22423993801653558 P2'=0.8232771763188821
+  [agent 4/60] s_a03_welds_t130           P1'=0.24257809670509642 P3=0.2405999337381987 P2'=0.9632843409519102
+  [agent 5/60] d_a0d                      P1'=0.20761370129926035 P3=0.2263040536398905 P2'=0.7836542110081077
+  [agent 6/60] s_a04_welds_t074           P1'=0.24419893687237107 P3=0.24261571510146807 P2'=0.9796188991445216
+  [agent 7/60] p_ctrl0                    P1'=0.24228653801969094 P3=0.23056609272969952 P2'=0.8715124125254097
+  [agent 8/60] d_band_w3_hi               P1'=0.19844590899978953 P3=0.20868312775071468 P2'=0.7689072368582061
+  [agent 9/60] d_eta_hi                   P1'=0.2179563649639968 P3=0.2292227853232758 P2'=0.726604325202052
+  [agent 10/60] d_eta_lo                   P1'=0.21499620613365797 P3=0.2310657334822227 P2'=0.7281274298270708
+  [agent 11/60] d_ray2                     P1'=0.21778730829183326 P3=0.223104602536625 P2'=0.759148499626846
+  [agent 12/60] d_ray1                     P1'=0.209245688454989 P3=0.22593581643376795 P2'=0.7734187398817859
+  [agent 13/60] s_a16_bb_splits_combo      P1'=0.23246562935043996 P3=0.2259951039045855 P2'=0.9915027029169142
+  [agent 14/60] p_ctrl1                    P1'=0.21614928893385088 P3=0.21351141825523284 P2'=0.7968604481110975
+# Round 1 summary
+
+- s_c06_tb_xface             P1'=0.2501 P3=0.2476 P2'=0.8895 [shape_only/shape]
+- s_a04_welds_t074           P1'=0.2442 P3=0.2426 P2'=0.9796 [shape_only/shape]
+- s_a03_welds_t130           P1'=0.2426 P3=0.2406 P2'=0.9633 [shape_only/shape]
+- p_ctrl0                    P1'=0.2423 P3=0.2306 P2'=0.8715 [shape_only/parametric]
+- s_a16_bb_splits_combo      P1'=0.2325 P3=0.2260 P2'=0.9915 [shape_only/shape]
+- s_a11_ref_202              P1'=0.2218 P3=0.2242 P2'=0.8233 [shape_only/shape]
+- d_eta_hi                   P1'=0.2180 P3=0.2292 P2'=0.7266 [damping_only/damping_joint_eta]
+- d_ray2                     P1'=0.2178 P3=0.2231 P2'=0.7591 [damping_only/damping_rayleigh]
+- p_ctrl1                    P1'=0.2161 P3=0.2135 P2'=0.7969 [shape_only/parametric]
+- d_band_w3_lo               P1'=0.2151 P3=0.2270 P2'=0.8031 [damping_only/damping_band]
+- d_eta_lo                   P1'=0.2150 P3=0.2311 P2'=0.7281 [damping_only/damping_joint_eta]
+- d_ray1                     P1'=0.2092 P3=0.2259 P2'=0.7734 [damping_only/damping_rayleigh]
+- d_a0d                      P1'=0.2076 P3=0.2263 P2'=0.7837 [damping_only/damping_band]
+- d_band_w3_hi               P1'=0.1984 P3=0.2087 P2'=0.7689 [damping_only/damping_band]
+  [agent 15/60] b_c06_tb_xface             P1'=0.25437896864785686 P3=0.24645552888278424 P2'=0.9458500934573764
+  [agent 16/60] b_a04_welds_t074           P1'=0.2441506061257766 P3=0.24390853175605726 P2'=0.9938953391218022
+  [agent 17/60] b_a16_bb_splits_combo      P1'=0.21665857444053183 P3=0.230442706535694 P2'=0.9366640435873185
+  [agent 18/60] d_refine_1.25              P1'=0.20102450047783849 P3=0.2179292198416386 P2'=0.8241463501042314
+  [agent 19/60] d_refine_0.8               P1'=0.214918427544275 P3=0.23151788468551038 P2'=0.7522060070842591
+# Round 2 summary
+
+- b_c06_tb_xface             P1'=0.2544 P3=0.2465 P2'=0.9459 [both/shape_plus_damping]
+- b_a04_welds_t074           P1'=0.2442 P3=0.2439 P2'=0.9939 [both/shape_plus_damping]
+- b_a16_bb_splits_combo      P1'=0.2167 P3=0.2304 P2'=0.9367 [both/shape_plus_damping]
+- d_refine_0.8               P1'=0.2149 P3=0.2315 P2'=0.7522 [damping_only/damping_band]
+- d_refine_1.25              P1'=0.2010 P3=0.2179 P2'=0.8241 [damping_only/damping_band]
+  [agent 20/60] b_c06_tb_xface_eta         P1'=0.2543177070904614 P3=0.24871000518911895 P2'=0.949044251630522
+  [agent 21/60] d_band_eta                 P1'=0.20764841098125492 P3=0.22461748694868003 P2'=0.7869770298411825
+# Round 3 summary
+
+- b_c06_tb_xface_eta         P1'=0.2543 P3=0.2487 P2'=0.9490 [both/shape_plus_damping]
+- d_band_eta                 P1'=0.2076 P3=0.2246 P2'=0.7870 [damping_only/damping_combo]

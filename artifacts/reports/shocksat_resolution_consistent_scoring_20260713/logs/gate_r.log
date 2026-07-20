@@ -1,0 +1,18 @@
+scoring B0 (naive, flat 1%, A0_enr) ...
+scoring B1 (naive, survey per-mode zeta, A0_enr) ...
+{
+ "B0_P1p_mean": 0.1969491558695649,
+ "B0_ref": 0.196949,
+ "B0_abs_err": 1.5586956489399562e-07,
+ "B0_P1p_folds": {
+  "m_xpos_990x": 0.3413,
+  "m_zpos_990z": 0.4422,
+  "m_ypos_990y": 0.1593,
+  "m_zpos_900z": -0.155
+ },
+ "B1_P1p_mean": 0.18448882754780563,
+ "B1_lt_B0": true,
+ "pass": true,
+ "runtime_s": 6.0
+}
+GATE R: PASS

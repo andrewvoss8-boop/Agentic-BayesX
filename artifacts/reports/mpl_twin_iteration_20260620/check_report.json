@@ -1,0 +1,88 @@
+{
+  "task": "MPL twin iteration \u2014 FEM model-class search (master harness)",
+  "overall": "YELLOW",
+  "counts": {
+    "green": 13,
+    "yellow": 2,
+    "red": 0
+  },
+  "gates": [
+    {
+      "gate": "integrity.self",
+      "status": "GREEN",
+      "msg": "check.py unchanged"
+    },
+    {
+      "gate": "integrity.score",
+      "status": "GREEN",
+      "msg": "score.py byte-identical to L5 (sha c62c564d024e\u2026)"
+    },
+    {
+      "gate": "harness.observe",
+      "status": "GREEN",
+      "msg": "6 gain-free |T| curves, ref=shield, band [20.0, 260.0], unit tests pass"
+    },
+    {
+      "gate": "grms.gain_convention",
+      "status": "GREEN",
+      "msg": "GRMS on dimensionless |T| ratio (un-blurrable, one documented convention)"
+    },
+    {
+      "gate": "harness.splits",
+      "status": "GREEN",
+      "msg": "5 leave-one-location-out splits over ['avi-L', 'avi-R', 'beam', 'interface', 'valve'], shield ref, leakage-controlled"
+    },
+    {
+      "gate": "baseline.scores",
+      "status": "GREEN",
+      "msg": "baseline (nominal+calibrated) on 5 splits"
+    },
+    {
+      "gate": "baseline.climatology",
+      "status": "GREEN",
+      "msg": "climatology no-skill bar present"
+    },
+    {
+      "gate": "search.class_M0",
+      "status": "YELLOW",
+      "msg": "as-received fable rev-3 FEM, 6 major K-groups calibrated, un | converged=False (worst R\u0302=96.18819293200782)"
+    },
+    {
+      "gate": "search.registry",
+      "status": "GREEN",
+      "msg": "2 attempts logged; 0 converged, 1 yellow; 0 improve-verdicts"
+    },
+    {
+      "gate": "search.program_verdict",
+      "status": "YELLOW",
+      "msg": "YELLOW (frequency twin established as carry-forward; transmissibility-shape uncorrelated [D6]; richer-form search pending)"
+    },
+    {
+      "gate": "deliv.registry_fig",
+      "status": "GREEN",
+      "msg": "fig_registry.png present"
+    },
+    {
+      "gate": "deliv.image_qa",
+      "status": "GREEN",
+      "msg": "image-QA pass"
+    },
+    {
+      "gate": "deliv.packet",
+      "status": "GREEN",
+      "msg": "packet.md present"
+    },
+    {
+      "gate": "deliv.runtime",
+      "status": "GREEN",
+      "msg": "runtime.json present"
+    },
+    {
+      "gate": "deliv.run_all",
+      "status": "GREEN",
+      "msg": "run_all.sh present"
+    }
+  ],
+  "note": "Baseline RED is expected until Phase-0 harness + baseline + >=1 scored class exist. Honest negatives (simplest class wins / data can't distinguish) are YELLOW, not RED.",
+  "check_sha256": "fe9c1db668362701e1dc7839d7c2e152b06e2d3c8e61dcb2189a16cec9eb5d2e"
+}

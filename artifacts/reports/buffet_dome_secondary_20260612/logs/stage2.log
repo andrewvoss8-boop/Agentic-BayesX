@@ -1,0 +1,46 @@
+{
+ "V1_freefree_zero_modes": {
+  "n_zero": 6,
+  "expected": 6,
+  "f1_rigid_max_hz": 0.0009620983548337254,
+  "f7_elastic_hz": 149.28222882506788,
+  "ok": true
+ },
+ "V2_cantilever_bending": {
+  "fem_hz": 23.45993914334991,
+  "analytic_hz": 23.45993607694242,
+  "err_pct": 1.3070826282458007e-05,
+  "ok": true
+ },
+ "V3_cantilever_axial": {
+  "fem_hz": 1259.4025371520213,
+  "analytic_hz": 1258.896909429612,
+  "err_pct": 0.04016434694707961,
+  "ok": true
+ },
+ "V4_cantilever_torsion": {
+  "fem_hz": 772.1892397748899,
+  "analytic_hz": 771.879219527337,
+  "err_pct": 0.040164346922399646,
+  "ok": true
+ },
+ "V5_simply_supported_bending": {
+  "fem_hz": 65.85310625808977,
+  "analytic_hz": 65.8530383618014,
+  "err_pct": 0.0001031027421970864,
+  "ok": true
+ },
+ "V6_rigid_body_residual": {
+  "trans_resid": 0.0,
+  "rot_resid": 4.729886539003199e-18,
+  "ok": true
+ },
+ "V7_bar_axial": {
+  "fem_hz": 1259.40253715184,
+  "analytic_hz": 1258.896909429612,
+  "err_pct": 0.040164346932684725,
+  "ok": true
+ },
+ "ALL_OK": true,
+ "runtime_s": 0.12552618980407715
+}

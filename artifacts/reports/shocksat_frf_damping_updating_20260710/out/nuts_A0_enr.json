@@ -1,0 +1,37 @@
+{
+ "cid": "A0_enr",
+ "rhat_max": 24.798,
+ "ess_min": 2.0,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 2400,
+ "runtime_s": 799.9,
+ "zeta_bands_post_median": [
+  0.0491,
+  0.0402,
+  0.05,
+  0.05
+ ],
+ "zeta_bands_post_q05_q95": [
+  [
+   0.0408,
+   0.0499
+  ],
+  [
+   0.0298,
+   0.05
+  ],
+  [
+   0.0499,
+   0.05
+  ],
+  [
+   0.0499,
+   0.05
+  ]
+ ],
+ "sampler": "NUTS numpyro x64 4 chains; theta~modal-freq lik, band-zeta~FRF-amplitude lik @MAP shapes",
+ "damping_note": "wide/prior-influenced zeta posterior expected (D2: per-mode zeta unidentifiable at 2 Hz); the 5-95%% width quantifies non-identifiability.",
+ "converged": false
+}

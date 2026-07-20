@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "failures": [],
+  "n_figures": 1,
+  "figures": [
+    {
+      "file": "exp4_biased_reconstruction.png",
+      "w": 2125,
+      "h": 918,
+      "bytes": 214269,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[build] rnd000 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd001 (thickness): OK n_modes=74 pairs=33
+[build] rnd002 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd003 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd004: FAILED ValueError: rnd004: split rule selects no elements of pid 401
+[build] rnd005 (connect+split): OK n_modes=74 pairs=33
+[build] rnd000: exists, skip
+[build] rnd001: exists, skip
+[build] rnd002: exists, skip
+[build] rnd003: exists, skip
+[build] rnd004: FAILED ValueError: rnd004: split rule selects no elements of pid 401
+[build] rnd005: exists, skip
+[build] rnd000: exists, skip
+[build] rnd001: exists, skip
+[build] rnd002: exists, skip
+[build] rnd003: exists, skip
+[build] rnd004: FAILED ValueError: rnd004: split rule selects no elements of pid 401
+[build] rnd005: exists, skip
+[build] rnd006: FAILED ValueError: rnd006: refine selects 27986 quads > cap 8000 (pathological/oversized remodel; dud)
+[build] rnd007: FAILED ValueError: rnd007: split rule selects no elements of pid 202
+[build] rnd008 (split): OK n_modes=74 pairs=33
+[build] rnd009 (connect): OK n_modes=74 pairs=33
+[build] rnd010 (thickness): OK n_modes=74 pairs=33
+[build] rnd011 (thickness): OK n_modes=74 pairs=32
+[build] rnd012 (refine): OK n_modes=74 pairs=33
+[build] rnd013 (refine): OK n_modes=74 pairs=33
+[build] rnd014 (connect): OK n_modes=74 pairs=33
+[build] rnd015 (refine): OK n_modes=74 pairs=33
+[build] rnd016: FAILED ValueError: rnd016: split rule selects no elements of pid 701
+[build] rnd017 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd018 (connect): OK n_modes=74 pairs=33
+[build] rnd019 (refine): OK n_modes=74 pairs=33
+[build] rnd020 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd021 (connect): OK n_modes=74 pairs=33
+[build] rnd022 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd023 (parametric_only): OK n_modes=74 pairs=32
+[build] rnd024 (thickness): OK n_modes=74 pairs=33
+[build] rnd025 (connect): OK n_modes=74 pairs=33
+[build] rnd026 (thickness): OK n_modes=74 pairs=33
+[build] rnd027 (connect+refine): OK n_modes=74 pairs=33
+[build] rnd028 (split): OK n_modes=74 pairs=33
+[build] rnd029 (thickness): OK n_modes=74 pairs=33
+[build] rnd030 (connect): OK n_modes=74 pairs=33
+[build] rnd031 (connect+split): OK n_modes=74 pairs=33
+[build] rnd032 (connect+split): OK n_modes=74 pairs=33
+[build] rnd033: FAILED ValueError: rnd033: split rule selects no elements of pid 201
+[build] rnd034 (connect): OK n_modes=74 pairs=33
+[build] rnd035 (thickness): OK n_modes=74 pairs=33
+[build] rnd036 (refine+thickness): OK n_modes=74 pairs=33
+[build] rnd037 (split): OK n_modes=74 pairs=33
+[build] rnd038 (thickness): OK n_modes=74 pairs=33
+[build] rnd039 (connect): OK n_modes=74 pairs=33
+[build] rnd040 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd041 (connect): OK n_modes=74 pairs=33
+[build] rnd042 (connect): OK n_modes=74 pairs=33
+[build] rnd043 (thickness): OK n_modes=74 pairs=33
+[build] rnd044 (connect): OK n_modes=74 pairs=33
+[build] rnd045: FAILED ValueError: rnd045: split rule selects no elements of pid 401
+[build] rnd046 (thickness): OK n_modes=74 pairs=33
+[build] rnd047 (connect+scale): OK n_modes=74 pairs=33
+[build] rnd048 (parametric_only): OK n_modes=74 pairs=31
+[build] rnd049 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd050 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd051 (split): OK n_modes=74 pairs=33
+[build] rnd052 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd053 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd054 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd055 (split): OK n_modes=74 pairs=33
+[build] rnd056 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd057: FAILED ValueError: rnd057: split rule selects no elements of pid 103
+[build] rnd058 (parametric_only): OK n_modes=74 pairs=33
+[build] rnd059 (parametric_only): OK n_modes=74 pairs=32

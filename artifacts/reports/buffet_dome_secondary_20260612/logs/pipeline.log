@@ -1,0 +1,9 @@
+[pipeline] waiting for bcA modes meta...
+[pipeline] qoi bcA done
+[pipeline] waiting for bcB modes meta...
+[pipeline] qoi bcB done
+[pipeline] figures FAILED (non-fatal)
+[pipeline] ci bcA done
+[pipeline] ci bcB done
+[pipeline] variants INCOMPLETE
+[pipeline] ALL DONE

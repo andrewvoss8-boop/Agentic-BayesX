@@ -1,0 +1,14 @@
+{
+  "held_out_channel_daq": 108,
+  "split_seed": 0,
+  "n_frames": 14,
+  "n_modes_total": 23,
+  "n_observed_channels": 46,
+  "n_heldout_channels": 31,
+  "final_skill": 0.7697692964733067,
+  "final_coverage": 0.953757225433526,
+  "grms_measured": 128.93811514600168,
+  "grms_nominal_fem": 118.55796692006304,
+  "grms_posterior_median_final": 83.60672692105426,
+  "runtime_s": 576.681526184082
+}

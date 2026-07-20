@@ -1,0 +1,7 @@
+{
+  "active_runtime_s": 8.0,
+  "elapsed_wallclock_s": null,
+  "active_runtime_note": "Approximate local command/runtime only. Web reading and drafting time were not measured as compute runtime; no long compute job was run.",
+  "elapsed_wallclock_note": "Not measured for this literature-review task.",
+  "active_runtime_s_lte_elapsed_wallclock_s": null
+}

@@ -1,0 +1,24 @@
+{
+ "cid": "mr2_geom6",
+ "track": "random",
+ "round": 2,
+ "cls": "geometry",
+ "seed": 20262722,
+ "ops": [
+  {
+   "op": "joint_offset",
+   "eids": [
+    2032440,
+    9000084
+   ],
+   "vec": [
+    0.12133212152023515,
+    0.1769382770308474,
+    -0.16689491514823998
+   ],
+   "name": "rjoint26a0"
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

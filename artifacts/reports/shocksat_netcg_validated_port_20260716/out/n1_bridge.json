@@ -1,0 +1,159 @@
+{
+  "gate": "N1 \u2014 bridge (card B 3.1): theta POINT vs MODEL. DIAGNOSTIC, no pass/fail threshold.",
+  "theta_source": "REUSED L5 NUTS draws (netcg out/theta_post_L5.npz); study theta_MAP_wide read read-only from full_spectrum_frf_20260714/out/theta_map_wide.json. No sampler run.",
+  "group_order_bridge": {
+    "validated": true,
+    "names": [
+      "al_welds",
+      "angle_brackets",
+      "bottom_box",
+      "contact",
+      "cross_beam",
+      "joints",
+      "plates",
+      "steel_welds",
+      "top_box"
+    ],
+    "note": "realfrf.GNAMES == theta_map_wide free_names, asserted at runtime"
+  },
+  "mc_budget": "60 theta slots x 40 discrepancy draws = 2400 spectra for every case (A, B, C)",
+  "cases": {
+    "A_L5_posterior_delivered": {
+      "shear_X": {
+        "width_ratio_vs_fem6db": 1.508,
+        "weighted_coverage": 0.995,
+        "peak_coverage": 1.0
+      },
+      "shear_Y": {
+        "width_ratio_vs_fem6db": 2.301,
+        "weighted_coverage": 0.982,
+        "peak_coverage": 0.985
+      },
+      "normal_Z": {
+        "width_ratio_vs_fem6db": 2.526,
+        "weighted_coverage": 0.987,
+        "peak_coverage": 0.985
+      }
+    },
+    "B_L5_median_point": {
+      "shear_X": {
+        "width_ratio_vs_fem6db": 0.74,
+        "weighted_coverage": 0.824,
+        "peak_coverage": 0.874
+      },
+      "shear_Y": {
+        "width_ratio_vs_fem6db": 1.189,
+        "weighted_coverage": 0.73,
+        "peak_coverage": 0.759
+      },
+      "normal_Z": {
+        "width_ratio_vs_fem6db": 2.18,
+        "weighted_coverage": 0.82,
+        "peak_coverage": 0.821
+      }
+    },
+    "C_study_thetaMAPwide_point": {
+      "shear_X": {
+        "width_ratio_vs_fem6db": 1.72,
+        "weighted_coverage": 0.839,
+        "peak_coverage": 0.963
+      },
+      "shear_Y": {
+        "width_ratio_vs_fem6db": 0.744,
+        "weighted_coverage": 0.844,
+        "peak_coverage": 0.976
+      },
+      "normal_Z": {
+        "width_ratio_vs_fem6db": 1.727,
+        "weighted_coverage": 0.921,
+        "peak_coverage": 0.878
+      }
+    }
+  },
+  "decomposition": {
+    "shear_X": {
+      "A_L5_posterior_delivered": 1.508,
+      "B_L5_median_point": 0.74,
+      "C_study_thetaMAPwide_point": 1.72,
+      "theta_SPREAD_term_A_minus_B": 0.768,
+      "theta_POINT_term_C_minus_B": 0.98,
+      "study_published_width": 8.225,
+      "residual_NOT_explained_by_theta": 6.505,
+      "pct_of_study_gap_explained_by_theta_point": 3.2
+    },
+    "shear_Y": {
+      "A_L5_posterior_delivered": 2.301,
+      "B_L5_median_point": 1.189,
+      "C_study_thetaMAPwide_point": 0.744,
+      "theta_SPREAD_term_A_minus_B": 1.112,
+      "theta_POINT_term_C_minus_B": -0.445,
+      "study_published_width": 3.66,
+      "residual_NOT_explained_by_theta": 2.916,
+      "pct_of_study_gap_explained_by_theta_point": -114.6
+    },
+    "normal_Z": {
+      "A_L5_posterior_delivered": 2.526,
+      "B_L5_median_point": 2.18,
+      "C_study_thetaMAPwide_point": 1.727,
+      "theta_SPREAD_term_A_minus_B": 0.346,
+      "theta_POINT_term_C_minus_B": -0.453,
+      "study_published_width": 5.117,
+      "residual_NOT_explained_by_theta": 3.39,
+      "pct_of_study_gap_explained_by_theta_point": -30.8
+    }
+  },
+  "theta_points": {
+    "al_welds": {
+      "L5_median": 1.0065,
+      "study_theta_MAP_wide": 1.0707,
+      "ratio": 1.0638
+    },
+    "angle_brackets": {
+      "L5_median": 0.9213,
+      "study_theta_MAP_wide": 1.2981,
+      "ratio": 1.409
+    },
+    "bottom_box": {
+      "L5_median": 0.9,
+      "study_theta_MAP_wide": 1.0083,
+      "ratio": 1.1204
+    },
+    "contact": {
+      "L5_median": 1.0181,
+      "study_theta_MAP_wide": 0.9546,
+      "ratio": 0.9376
+    },
+    "cross_beam": {
+      "L5_median": 0.8126,
+      "study_theta_MAP_wide": 1.4603,
+      "ratio": 1.7972
+    },
+    "joints": {
+      "L5_median": 1.0123,
+      "study_theta_MAP_wide": 0.4674,
+      "ratio": 0.4617
+    },
+    "plates": {
+      "L5_median": 0.9755,
+      "study_theta_MAP_wide": 1.2908,
+      "ratio": 1.3233
+    },
+    "steel_welds": {
+      "L5_median": 1.0401,
+      "study_theta_MAP_wide": 1.0422,
+      "ratio": 1.002
+    },
+    "top_box": {
+      "L5_median": 1.068,
+      "study_theta_MAP_wide": 0.8341,
+      "ratio": 0.7811
+    }
+  },
+  "inband_mode_shift_from_theta_swap": {
+    "min": 0.9298,
+    "max": 1.1503,
+    "median": 0.9998,
+    "note": "f(theta_MAP_wide)/f(L5 median) over the 40 in-band netcg modes"
+  },
+  "active_s": 4.3
+}

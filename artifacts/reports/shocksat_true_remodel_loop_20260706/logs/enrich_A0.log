@@ -1,0 +1,4 @@
+full solve at old theta_MAP: 321s
+enriched basis r=128, M-orth resid 4.53e-07
+{"cid": "A0_enr", "basis_r": 128, "n_modes": 74, "max_rel_err": 5.781873217980404e-07, "median_rel_err": 7.95081223081695e-11, "pass_0p3pct": true}
+package A0_enr saved (basis 128)

@@ -1,0 +1,31 @@
+{
+  "deliverable": "Phase-D1 original-FEM held-out QOI baseline (beat-this) vs calibrated twin",
+  "split_seed": 0,
+  "n_observed": 46,
+  "n_heldout": 31,
+  "original_fem_point": {
+    "FEM_nominal_1pct": {
+      "gain_c": 6.437223628988916,
+      "median_abs_err_db": 6.7379775682002965,
+      "frac_off_gt3db": 0.7741935483870968,
+      "frac_off_gt6db": 0.5806451612903226,
+      "max_abs_err_db": 24.407154624602484,
+      "mean_signed_err_db": 6.808283040901017
+    },
+    "FEM_nominal_1pct_window": {
+      "gain_c": 6.464415383907765,
+      "median_abs_err_db": 5.3541050751680155,
+      "frac_off_gt3db": 0.6451612903225806,
+      "frac_off_gt6db": 0.45161290322580644,
+      "max_abs_err_db": 22.899720635737157,
+      "mean_signed_err_db": 4.506869933833472
+    }
+  },
+  "calibrated_twin_L5_window": {
+    "coverage_frac": 0.967741935483871,
+    "interval_score_mean": 1306.2576869360203,
+    "mean_width_db": 37.66016242047674,
+    "z_std": 0.4699555555293304
+  },
+  "runtime_s": 2.3491439819335938
+}

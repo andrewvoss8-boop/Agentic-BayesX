@@ -1,0 +1,28 @@
+{
+  "run": "shocksat_netcg_method_selection_20260701",
+  "note": "active_runtime_s = sum of foreground compute-command execution; the mesh screen ran DETACHED in the background (its wall time is reported separately and does not count toward active_runtime_s).",
+  "components_s": {
+    "build_ypos_cache": 7,
+    "stage0": 16,
+    "fig_stage0": 4,
+    "bakeoff_L5_NUTS": 73,
+    "bakeoff_ensemble_and_scoring": 20,
+    "bakeoff_5formulation_reruns": 45,
+    "heldout_drive_x2": 22,
+    "pretest_design_and_fig": 25,
+    "dd1_shearY_gap": 12,
+    "dd3_data_anchored_sigma": 18,
+    "dd2_learned_statfem_NUTS": 12,
+    "fig_delivery": 8,
+    "fig_graphmodel": 3,
+    "checker": 3,
+    "misc_probes_and_timings": 110
+  },
+  "active_runtime_s": 397,
+  "detached_background": {
+    "mesh_screen_per_edit_s_range": [329, 394],
+    "mesh_screen_wall_s_so_far": 2000,
+    "note": "full-order sparse eigensolve per edit; 12-edit subset; resumable; not counted in active_runtime_s"
+  },
+  "elapsed_wallclock_s": 5400
+}

@@ -1,0 +1,4 @@
+{
+  "active_runtime_s": 2559.0,
+  "note": "sum of per-command NUTS exec across the full study program incl. Study G UMS-FEM headline+frames; excludes the ~10 diagnostic probe runs (D14-D25) and human-review wait"
+}

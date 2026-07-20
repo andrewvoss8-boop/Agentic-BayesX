@@ -1,0 +1,151 @@
+{
+  "deliverable": "L5_mode_matching_sensitivity (matching x n_modes; apples-to-apples peak gain)",
+  "n_splits": 10,
+  "configs": {
+    "orig12_keepall": {
+      "matching": "orig",
+      "tol_pct": 12,
+      "keep": "all",
+      "n_modes_med": 26.5,
+      "mean_MAC_med": null,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1107.7894763443658,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 2968.63886291144,
+      "n_splits": 10
+    },
+    "freq12_keepall": {
+      "matching": "freq",
+      "tol_pct": 12,
+      "keep": "all",
+      "n_modes_med": 35.0,
+      "mean_MAC_med": null,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1255.574616554869,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3341.9826149952205,
+      "n_splits": 10
+    },
+    "freq5_keepall": {
+      "matching": "freq",
+      "tol_pct": 5,
+      "keep": "all",
+      "n_modes_med": 29.5,
+      "mean_MAC_med": null,
+      "converged_frac": 0.9,
+      "peak_IS_med": 1284.2488053233824,
+      "peak_cov_med": 0.9193548387096774,
+      "band_IS_med": 3394.754228771198,
+      "n_splits": 10
+    },
+    "mac15_keepall": {
+      "matching": "mac",
+      "tol_pct": 15,
+      "keep": "all",
+      "n_modes_med": 36.5,
+      "mean_MAC_med": 0.09781763390228082,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1166.0041487568935,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3133.2411391603464,
+      "n_splits": 10
+    },
+    "mac15_keep6": {
+      "matching": "mac",
+      "tol_pct": 15,
+      "keep": 6,
+      "n_modes_med": 6.0,
+      "mean_MAC_med": 0.25240157273347263,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1067.9245071193268,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3045.014126449338,
+      "n_splits": 10
+    },
+    "mac15_keep8": {
+      "matching": "mac",
+      "tol_pct": 15,
+      "keep": 8,
+      "n_modes_med": 8.0,
+      "mean_MAC_med": 0.2335331391052844,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1100.2723680834663,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3050.2868424131498,
+      "n_splits": 10
+    },
+    "mac15_keep12": {
+      "matching": "mac",
+      "tol_pct": 15,
+      "keep": 12,
+      "n_modes_med": 12.0,
+      "mean_MAC_med": 0.18846982632668047,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1127.456542710232,
+      "peak_cov_med": 0.9193548387096774,
+      "band_IS_med": 3137.9070765212155,
+      "n_splits": 10
+    },
+    "mac15_keep20": {
+      "matching": "mac",
+      "tol_pct": 15,
+      "keep": 20,
+      "n_modes_med": 20.0,
+      "mean_MAC_med": 0.14722401252549858,
+      "converged_frac": 0.9,
+      "peak_IS_med": 1088.1818481421917,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 2976.396322019754,
+      "n_splits": 10
+    },
+    "freq12_keep6": {
+      "matching": "freq",
+      "tol_pct": 12,
+      "keep": 6,
+      "n_modes_med": 6.0,
+      "mean_MAC_med": null,
+      "converged_frac": 0.7,
+      "peak_IS_med": 1129.257758181805,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3183.671076294906,
+      "n_splits": 10
+    },
+    "freq12_keep8": {
+      "matching": "freq",
+      "tol_pct": 12,
+      "keep": 8,
+      "n_modes_med": 8.0,
+      "mean_MAC_med": null,
+      "converged_frac": 0.7,
+      "peak_IS_med": 1161.7139108617303,
+      "peak_cov_med": 0.9193548387096774,
+      "band_IS_med": 3216.451964541392,
+      "n_splits": 10
+    },
+    "freq12_keep12": {
+      "matching": "freq",
+      "tol_pct": 12,
+      "keep": 12,
+      "n_modes_med": 12.0,
+      "mean_MAC_med": null,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1196.0057634306427,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3201.1050068622244,
+      "n_splits": 10
+    },
+    "freq12_keep20": {
+      "matching": "freq",
+      "tol_pct": 12,
+      "keep": 20,
+      "n_modes_med": 20.0,
+      "mean_MAC_med": null,
+      "converged_frac": 1.0,
+      "peak_IS_med": 1203.0974237925134,
+      "peak_cov_med": 0.9354838709677419,
+      "band_IS_med": 3236.024034767741,
+      "n_splits": 10
+    }
+  },
+  "runtime_s": 13807.87352180481
+}

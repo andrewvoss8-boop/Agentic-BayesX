@@ -1,0 +1,46 @@
+{
+ "tag": "zeta01",
+ "sensitivity": true,
+ "combo_idx": 3,
+ "arm": "M0",
+ "zeta": 0.01,
+ "len_logf": 0.3,
+ "len_z": 12.0,
+ "nuts": {
+  "max_rhat": 11.658324848494667,
+  "min_ess": 2.0153148721414325,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 2800
+ },
+ "converged": false,
+ "heldout_coverage": {
+  "peak": {
+   "covered": 4,
+   "n": 14,
+   "frac": 0.2857142857142857
+  },
+  "band": {
+   "covered": 5,
+   "n": 14,
+   "frac": 0.35714285714285715
+  },
+  "combined": {
+   "covered": 9,
+   "n": 28,
+   "frac": 0.32142857142857145
+  },
+  "peak_noisy_frac": 0.9285714285714286,
+  "band_noisy_frac": 0.5,
+  "nominal": 0.95
+ },
+ "sigma_d": {
+  "lo": 0.0,
+  "med": 0.0,
+  "hi": 0.0,
+  "fixed": true
+ },
+ "mean_band_width_db": 0.5059585810887722,
+ "runtime_s": 235.56
+}

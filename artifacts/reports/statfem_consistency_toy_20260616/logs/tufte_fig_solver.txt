@@ -1,0 +1,5 @@
+
+=== code/fig_solver.py ===
+  no heuristic flags (NOT a guarantee of quality — apply the SKILL.md checklist).
+
+0 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.

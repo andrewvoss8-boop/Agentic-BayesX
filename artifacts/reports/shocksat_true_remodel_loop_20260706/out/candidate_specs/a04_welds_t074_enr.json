@@ -1,0 +1,22 @@
+{
+ "cid": "a04_welds_t074_enr",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    104,
+    105,
+    106,
+    204,
+    205,
+    206
+   ],
+   "t_scale": 0.74,
+   "name": "welds_t074"
+  }
+ ],
+ "rationale": "Opposite hypothesis: effective weld section UNDER nominal (partial penetration/undercut) \u2014 bending softens 2.5x vs membrane 1.35x; tests the direction the data actually wants at the t\u00b3 level.",
+ "evidence": "diagnosis_r0.json + Card D region_diagnosis: same as a03, opposite branch",
+ "enriched_from": "a04_welds_t074"
+}

@@ -1,0 +1,20 @@
+{
+ "edit_id": "cross_bolt_trans",
+ "n_matched": 28,
+ "global_MAC": 0.585,
+ "mac_shear_band": 0.598,
+ "freq_rms_shear_pct": 7.91,
+ "freq_rms_all_pct": 10.76,
+ "screen_score": 0.3602,
+ "drum_freqs_hz": [
+  232.4,
+  234.6,
+  235.4,
+  239.3,
+  247.6,
+  252.0,
+  254.0,
+  255.7
+ ],
+ "runtime_s": 394.2
+}

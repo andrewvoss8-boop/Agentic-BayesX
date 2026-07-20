@@ -1,0 +1,164 @@
+{
+  "gate": "complex/structural-damping identifiability on INTERFACE CBUSHes (Andrew's idea)",
+  "observable_note": "damping is FREQUENCY-blind (Stage-1) and peak-HEIGHT is participation-confounded; the un-confounded observable is peak half-power BANDWIDTH Delta f = 2 zeta f.",
+  "n_matched_modes": 27,
+  "frf_df_hz": 1.25,
+  "zeta_typical": 0.00317,
+  "zeta_max": 0.01052,
+  "interface_cbush": {
+    "bush_801": {
+      "group": "joints",
+      "se_frac_peak": 0.15038597844924478,
+      "se_frac_typical": 0.0043198930128440895,
+      "peak_mode_hz": 151.25,
+      "peak_mode_idx_matched": 10,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 0.001503859784492448,
+        "eta_0.05": 0.0037596494612311196,
+        "eta_0.1": 0.007519298922462239
+      },
+      "zeta_floor_bw_at_peak": 0.008264462809917356,
+      "bandwidth_resolvable": false,
+      "verdict": "SE-DILUTED-WEAK"
+    },
+    "bush_802": {
+      "group": "joints",
+      "se_frac_peak": 0.08665426380506404,
+      "se_frac_typical": 0.0006150246079471087,
+      "peak_mode_hz": 165.0,
+      "peak_mode_idx_matched": 13,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 0.0008665426380506404,
+        "eta_0.05": 0.002166356595126601,
+        "eta_0.1": 0.004332713190253202
+      },
+      "zeta_floor_bw_at_peak": 0.007575757575757576,
+      "bandwidth_resolvable": false,
+      "verdict": "SE-DILUTED-WEAK"
+    },
+    "bush_803": {
+      "group": "joints",
+      "se_frac_peak": 0.009935848546437911,
+      "se_frac_typical": 0.0001768485510534508,
+      "peak_mode_hz": 227.5,
+      "peak_mode_idx_matched": 21,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 9.935848546437911e-05,
+        "eta_0.05": 0.0002483962136609478,
+        "eta_0.1": 0.0004967924273218956
+      },
+      "zeta_floor_bw_at_peak": 0.005494505494505495,
+      "bandwidth_resolvable": false,
+      "verdict": "BELOW-FLOOR"
+    },
+    "bush_804": {
+      "group": "joints",
+      "se_frac_peak": 0.051189908012819293,
+      "se_frac_typical": 0.00027261951136997635,
+      "peak_mode_hz": 97.5,
+      "peak_mode_idx_matched": 4,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 0.0005118990801281929,
+        "eta_0.05": 0.0012797477003204825,
+        "eta_0.1": 0.002559495400640965
+      },
+      "zeta_floor_bw_at_peak": 0.01282051282051282,
+      "bandwidth_resolvable": false,
+      "verdict": "SE-DILUTED-WEAK"
+    },
+    "bush_805": {
+      "group": "joints",
+      "se_frac_peak": 0.017973547837135548,
+      "se_frac_typical": 6.373719772232181e-05,
+      "peak_mode_hz": 165.0,
+      "peak_mode_idx_matched": 13,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 0.00017973547837135548,
+        "eta_0.05": 0.00044933869592838873,
+        "eta_0.1": 0.0008986773918567775
+      },
+      "zeta_floor_bw_at_peak": 0.007575757575757576,
+      "bandwidth_resolvable": false,
+      "verdict": "SE-DILUTED-WEAK"
+    },
+    "bush_806": {
+      "group": "joints",
+      "se_frac_peak": 0.02976080914884055,
+      "se_frac_typical": 0.000867649806109743,
+      "peak_mode_hz": 227.5,
+      "peak_mode_idx_matched": 21,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 0.0002976080914884055,
+        "eta_0.05": 0.0007440202287210138,
+        "eta_0.1": 0.0014880404574420276
+      },
+      "zeta_floor_bw_at_peak": 0.005494505494505495,
+      "bandwidth_resolvable": false,
+      "verdict": "SE-DILUTED-WEAK"
+    },
+    "bush_807": {
+      "group": "joints",
+      "se_frac_peak": 0.002374310974231109,
+      "se_frac_typical": 7.500251122556149e-05,
+      "peak_mode_hz": 120.0,
+      "peak_mode_idx_matched": 6,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 2.374310974231109e-05,
+        "eta_0.05": 5.935777435577773e-05,
+        "eta_0.1": 0.00011871554871155546
+      },
+      "zeta_floor_bw_at_peak": 0.010416666666666666,
+      "bandwidth_resolvable": false,
+      "verdict": "BELOW-FLOOR"
+    },
+    "bush_902": {
+      "group": "contact",
+      "se_frac_peak": 0.057948076126251725,
+      "se_frac_typical": 0.0003179704915886344,
+      "peak_mode_hz": 241.25,
+      "peak_mode_idx_matched": 23,
+      "modal_zeta_contrib_at_probe": {
+        "eta_0.02": 0.0005794807612625173,
+        "eta_0.05": 0.0014487019031562932,
+        "eta_0.1": 0.0028974038063125864
+      },
+      "zeta_floor_bw_at_peak": 0.0051813471502590676,
+      "bandwidth_resolvable": false,
+      "verdict": "SE-DILUTED-WEAK"
+    }
+  },
+  "group_context": {
+    "joints": {
+      "se_frac_peak": 0.19843080462479573,
+      "se_frac_typical": 0.01851646959688784,
+      "peak_mode_hz": 151.25
+    },
+    "contact": {
+      "se_frac_peak": 0.057948076126251725,
+      "se_frac_typical": 0.0003179704915886344,
+      "peak_mode_hz": 241.25
+    },
+    "top_box": {
+      "se_frac_peak": 0.8964564255644479,
+      "se_frac_typical": 0.1982838720723113,
+      "peak_mode_hz": 253.75
+    },
+    "plates": {
+      "se_frac_peak": 0.9977788572385181,
+      "se_frac_typical": 0.013047073629761598,
+      "peak_mode_hz": 123.75
+    },
+    "cross_beam": {
+      "se_frac_peak": 0.5306773047631638,
+      "se_frac_typical": 0.007223837135749693,
+      "peak_mode_hz": 97.5
+    },
+    "bottom_box": {
+      "se_frac_peak": 0.9878550705682406,
+      "se_frac_typical": 0.08637756014782712,
+      "peak_mode_hz": 177.5
+    }
+  },
+  "n_interface_cbush_identifiable": 0,
+  "verdict": "NO interface CBUSH clears the identifiability gate from this single-impact modal data: their loss factors are SE-diluted (joints store ~3%% SE; Card D). A complex CBUSH damping parameter is PHYSICALLY sound but the data cannot pin it per-CBUSH; the identifiable quantity is per-MODE modal damping (from bandwidth), which can still tighten the QOI but cannot be uniquely attributed to a specific interface bush."
+}

@@ -1,0 +1,5 @@
+
+=== code/fig_alpha.py ===
+  [INFO] Looks like a frequency-domain plot but no log x-axis found. Project rule: log frequency axis unless justified.
+
+1 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.

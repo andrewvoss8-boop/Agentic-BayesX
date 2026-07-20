@@ -1,0 +1,69 @@
+[1/4] Study A NUTS (V1 iid / V2 Schneider / V3 decimated; two holdout schemes)
+{
+  "primary": {
+    "v1": {
+      "max_rhat": 23.874821438667816,
+      "min_ess": 2.0048133654710045,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.8571428571428571,
+      "band_width": 6.3342119910737535,
+      "runtime_s": 36.31102633476257
+    },
+    "v2": {
+      "max_rhat": 1.0020703565433098,
+      "min_ess": 1327.8664774983267,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 1.0,
+      "band_width": 0.8573256976159783,
+      "runtime_s": 41.22202825546265
+    },
+    "v3": {
+      "max_rhat": 22.83701542967791,
+      "min_ess": 2.0047357929936696,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.9285714285714286,
+      "band_width": 2.1625253957745145,
+      "runtime_s": 11.081646919250488
+    }
+  },
+  "secondary": {
+    "v1": {
+      "max_rhat": 41.11919399378667,
+      "min_ess": 2.0024218779312903,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.6785714285714286,
+      "band_width": 11.756651517466254,
+      "runtime_s": 35.6374249458313
+    },
+    "v2": {
+      "max_rhat": 1.0016079808396863,
+      "min_ess": 1754.5813501450075,
+      "divergences": 0,
+      "div_frac": 0.0,
+      "coverage": 0.5714285714285714,
+      "band_width": 3.2071413694359157,
+      "runtime_s": 44.796972036361694
+    }
+  }
+}
+saved out/study_a_summary.json + arrays
+[2/4] figures + GIF (tufte)
+real-data figure skipped: FileNotFoundError(2, 'No such file or directory')
+figures written to /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/../figures
+REAL_OK False
+[3/4] slide deck
+saved /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/papers_statfem_studies_20260612/code/../slides/papers_statfem_studies.pptx slides: 13
+[4/4] checker
+OVERALL YELLOW  green=24 yellow=6 red=0
+  YELLOW DOCUMENTED: V1 iid did NOT converge (R-hat 23.9) -> its coverage not trustworthy
+  YELLOW DOCUMENTED: V3 decimated did NOT converge (R-hat 22.8)
+  YELLOW DOCUMENTED honest-negative: V2 extrapolation coverage 0.57 < 0.95 (OOD high band)
+  YELLOW DOCUMENTED: discrepancy hyperparams not recovered (sig_theta 2.8 vs injected 0.1) -> model-error sponge
+  YELLOW SCOPE: Study A is synthetic plumbing (not validated science); designed studies C-F are unrun (promise only)
+  YELLOW SCOPE: no durable project files (AGENTS.md/checkers/notes/project_log) edited; pending Andrew review
+(green items: 24 — see checker_report.json)
+done -> packet.md, slides/papers_statfem_studies.pptx, checker_report.json

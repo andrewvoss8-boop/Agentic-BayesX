@@ -1,0 +1,6 @@
+  nominal      conv True R-hat 1.000 | peak IS 1509 cov 0.90 | band IS 3700
+  ash_freq     conv True R-hat 1.002 | peak IS 1502 cov 0.94 | band IS 3680
+  ash_freqMAC  conv False R-hat 1.008 | peak IS 1501 cov 0.90 | band IS 3643
+  beck_infer   conv True R-hat 1.004 | peak IS 858 cov 0.94 | band IS 2381
+
+CROSS-DATASET DONE. L5 (impact-FRF) ref peak IS 1661.

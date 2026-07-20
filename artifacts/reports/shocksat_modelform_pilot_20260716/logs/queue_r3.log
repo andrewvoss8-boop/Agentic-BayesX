@@ -1,0 +1,45 @@
+[ma3_conn_rbe3_angle] agent/connectivity: exact sub200 +0.1361 (spot 1.56e-07%, 891s)
+20 pending
+[ma3_conn_soft_traypath] agent/connectivity: exact sub200 +0.1050 (spot 1.40e-07%, 805s)
+19 pending
+[ma3_form_brktshear] agent/element_formulation: exact sub200 +0.1594 (spot 6.05e-08%, 830s)
+18 pending
+[ma3_form_tboxstrong] agent/element_formulation: exact sub200 +0.0964 (spot 1.19e-07%, 857s)
+17 pending
+[ma3_geo_jointbbox2] agent/geometry: exact sub200 +0.1061 (spot 9.49e-08%, 883s)
+16 pending
+[ma3_geo_warp401] agent/geometry: exact sub200 +0.1445 (spot 6.59e-08%, 1241s)
+15 pending
+[ma3_mesh_covers] agent/mesh_density: exact sub200 +0.1771 (spot 1.65e-07%, 2917s)
+14 pending
+[51/64] ma3_mesh_welds
+[ma3_mesh_welds] agent/mesh_density: exact sub200 +0.1695 (spot 2.42e-07%, 1s)
+13 pending
+[ma3_prop_brktxbeam] agent/property_control: exact sub200 +0.1575 (spot 7.17e-08%, 2200s)
+12 pending
+[ma3_prop_xbeam16] agent/property_control: exact sub200 +0.1641 (spot 4.71e-08%, 1396s)
+11 pending
+[mr2_conn0_a1] DUD: ValueError: rbe3_convert eid 9000032: singular master geometry (cond 8.83e+17)
+10 pending
+[mr3_conn0] random/connectivity: exact sub200 +0.1706 (spot 5.01e-08%, 860s)
+9 pending
+[mr3_conn1] random/connectivity: exact sub200 +0.1702 (spot 8.75e-08%, 802s)
+8 pending
+[mr3_elem4] random/element_formulation: exact sub200 +0.1405 (spot 5.82e-08%, 815s)
+7 pending
+[mr3_elem5] random/element_formulation: exact sub200 +0.1174 (spot 1.35e-07%, 808s)
+6 pending
+[mr3_geom6] random/geometry: exact sub200 +0.1209 (spot 8.55e-08%, 827s)
+5 pending
+[mr3_geom7] random/geometry: exact sub200 +0.1125 (spot 6.67e-08%, 815s)
+4 pending
+[mr3_mesh2] random/mesh_density: exact sub200 +0.1662 (spot 1.60e-07%, 798s)
+3 pending
+[mr3_mesh3] random/mesh_density: exact sub200 +0.1766 (spot 9.56e-08%, 893s)
+2 pending
+[mr3_prop8] random/property_control: exact sub200 +0.1481 (spot 6.67e-08%, 785s)
+1 pending
+[mr3_prop9] random/property_control: exact sub200 +0.1683 (spot 3.56e-08%, 800s)
+0 pending
+ALL DONE (no pending specs without partials)
+queue drained

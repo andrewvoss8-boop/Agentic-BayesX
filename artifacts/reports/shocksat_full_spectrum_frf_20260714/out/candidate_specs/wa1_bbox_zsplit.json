@@ -1,0 +1,17 @@
+{
+ "cid": "wa1_bbox_zsplit",
+ "family": "split",
+ "ops": [
+  {
+   "op": "split",
+   "pid": 101,
+   "rule": {
+    "type": "z_band",
+    "zlo": 0.0,
+    "zhi": 22.0
+   },
+   "name": "bbox101_lowerhalf"
+  }
+ ],
+ "rationale": "Give the bottom-box LOWER half its own stiffness theta so amplitude updating can correct the Y sub-region without moving the upper box (targets the mis-paired cluster with a shape d.o.f.)."
+}

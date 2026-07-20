@@ -1,0 +1,17 @@
+[   39.8s] after-draw 16/128
+[   77.0s] after-draw 32/128
+[  114.2s] after-draw 48/128
+[  152.2s] after-draw 64/128
+[  189.4s] after-draw 80/128
+[  226.7s] after-draw 96/128
+[  263.9s] after-draw 112/128
+[  300.8s] after-draw 128/128
+[  300.8s] truth QOI (direct 6x6-mount evaluation) ...
+[  414.0s] truth QOI th_cpl = [479.8, 308.9, 622.4] N
+[  414.0s] voi_results.json written
+[  414.0s] th_unc Fx: width95 after/before = 0.781, truth covered before=True after=True
+[  414.0s] th_unc Fy: width95 after/before = 0.4229, truth covered before=True after=True
+[  414.0s] th_unc Fz: width95 after/before = 0.771, truth covered before=True after=True
+[  414.0s] th_cpl Fx: width95 after/before = 0.929, truth covered before=False after=False
+[  414.0s] th_cpl Fy: width95 after/before = 0.3839, truth covered before=True after=True
+[  414.0s] th_cpl Fz: width95 after/before = 0.9133, truth covered before=True after=True

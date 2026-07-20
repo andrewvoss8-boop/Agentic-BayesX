@@ -1,0 +1,429 @@
+{
+ "note": "NO-sampler train-side proxy (D9); not a posterior, not the metric",
+ "rank": [
+  {
+   "cid": "rnd005",
+   "family": "connect+split",
+   "proxy": 0.9986,
+   "mean_mac": 0.4342,
+   "mean_abs_df": 0.04777,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd001",
+   "family": "thickness",
+   "proxy": 0.9875,
+   "mean_mac": 0.4252,
+   "mean_abs_df": 0.04888,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd038",
+   "family": "thickness",
+   "proxy": 0.9873,
+   "mean_mac": 0.4259,
+   "mean_abs_df": 0.04929,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd022",
+   "family": "parametric_only",
+   "proxy": 0.9863,
+   "mean_mac": 0.4279,
+   "mean_abs_df": 0.05076,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd034",
+   "family": "connect",
+   "proxy": 0.9851,
+   "mean_mac": 0.4143,
+   "mean_abs_df": 0.04459,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd024",
+   "family": "thickness",
+   "proxy": 0.9849,
+   "mean_mac": 0.4262,
+   "mean_abs_df": 0.05063,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd008",
+   "family": "split",
+   "proxy": 0.9816,
+   "mean_mac": 0.4217,
+   "mean_abs_df": 0.05004,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd012",
+   "family": "refine",
+   "proxy": 0.9793,
+   "mean_mac": 0.4195,
+   "mean_abs_df": 0.05009,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd009",
+   "family": "connect",
+   "proxy": 0.9791,
+   "mean_mac": 0.4192,
+   "mean_abs_df": 0.05007,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd013",
+   "family": "refine",
+   "proxy": 0.9791,
+   "mean_mac": 0.4193,
+   "mean_abs_df": 0.05007,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd015",
+   "family": "refine",
+   "proxy": 0.979,
+   "mean_mac": 0.4191,
+   "mean_abs_df": 0.05006,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd035",
+   "family": "thickness",
+   "proxy": 0.9761,
+   "mean_mac": 0.4171,
+   "mean_abs_df": 0.05052,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd010",
+   "family": "thickness",
+   "proxy": 0.9722,
+   "mean_mac": 0.4038,
+   "mean_abs_df": 0.04581,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd014",
+   "family": "connect",
+   "proxy": 0.9681,
+   "mean_mac": 0.4026,
+   "mean_abs_df": 0.04725,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd031",
+   "family": "connect+split",
+   "proxy": 0.9675,
+   "mean_mac": 0.4063,
+   "mean_abs_df": 0.04942,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd044",
+   "family": "connect",
+   "proxy": 0.9655,
+   "mean_mac": 0.4057,
+   "mean_abs_df": 0.05014,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd037",
+   "family": "split",
+   "proxy": 0.946,
+   "mean_mac": 0.3863,
+   "mean_abs_df": 0.05015,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd041",
+   "family": "connect",
+   "proxy": 0.94,
+   "mean_mac": 0.3757,
+   "mean_abs_df": 0.04787,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd026",
+   "family": "thickness",
+   "proxy": 0.9077,
+   "mean_mac": 0.3436,
+   "mean_abs_df": 0.04791,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd050",
+   "family": "parametric_only",
+   "proxy": 0.9033,
+   "mean_mac": 0.3261,
+   "mean_abs_df": 0.04139,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd036",
+   "family": "refine+thickness",
+   "proxy": 0.8897,
+   "mean_mac": 0.3212,
+   "mean_abs_df": 0.04577,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd002",
+   "family": "parametric_only",
+   "proxy": 0.8848,
+   "mean_mac": 0.3255,
+   "mean_abs_df": 0.05036,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd047",
+   "family": "connect+scale",
+   "proxy": 0.8759,
+   "mean_mac": 0.3109,
+   "mean_abs_df": 0.04753,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd054",
+   "family": "parametric_only",
+   "proxy": 0.8641,
+   "mean_mac": 0.2999,
+   "mean_abs_df": 0.04789,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd027",
+   "family": "connect+refine",
+   "proxy": 0.846,
+   "mean_mac": 0.2814,
+   "mean_abs_df": 0.04767,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd053",
+   "family": "parametric_only",
+   "proxy": 0.8391,
+   "mean_mac": 0.2625,
+   "mean_abs_df": 0.0417,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd020",
+   "family": "parametric_only",
+   "proxy": 0.8343,
+   "mean_mac": 0.2757,
+   "mean_abs_df": 0.05073,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd019",
+   "family": "refine",
+   "proxy": 0.8011,
+   "mean_mac": 0.2414,
+   "mean_abs_df": 0.05016,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd052",
+   "family": "parametric_only",
+   "proxy": 0.7926,
+   "mean_mac": 0.228,
+   "mean_abs_df": 0.04766,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd018",
+   "family": "connect",
+   "proxy": 0.7886,
+   "mean_mac": 0.2349,
+   "mean_abs_df": 0.05312,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd000",
+   "family": "parametric_only",
+   "proxy": 0.7884,
+   "mean_mac": 0.2306,
+   "mean_abs_df": 0.0511,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd059",
+   "family": "parametric_only",
+   "proxy": 0.7869,
+   "mean_mac": 0.2405,
+   "mean_abs_df": 0.04681,
+   "n_matched": 32
+  },
+  {
+   "cid": "rnd043",
+   "family": "thickness",
+   "proxy": 0.786,
+   "mean_mac": 0.2203,
+   "mean_abs_df": 0.04713,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd028",
+   "family": "split",
+   "proxy": 0.7834,
+   "mean_mac": 0.224,
+   "mean_abs_df": 0.05032,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd025",
+   "family": "connect",
+   "proxy": 0.7821,
+   "mean_mac": 0.2238,
+   "mean_abs_df": 0.05081,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd032",
+   "family": "connect+split",
+   "proxy": 0.7814,
+   "mean_mac": 0.2237,
+   "mean_abs_df": 0.05118,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd011",
+   "family": "thickness",
+   "proxy": 0.777,
+   "mean_mac": 0.2337,
+   "mean_abs_df": 0.04837,
+   "n_matched": 32
+  },
+  {
+   "cid": "rnd046",
+   "family": "thickness",
+   "proxy": 0.7761,
+   "mean_mac": 0.2132,
+   "mean_abs_df": 0.04853,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd017",
+   "family": "parametric_only",
+   "proxy": 0.768,
+   "mean_mac": 0.1916,
+   "mean_abs_df": 0.04183,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd049",
+   "family": "parametric_only",
+   "proxy": 0.7618,
+   "mean_mac": 0.1844,
+   "mean_abs_df": 0.04133,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd040",
+   "family": "parametric_only",
+   "proxy": 0.7612,
+   "mean_mac": 0.1951,
+   "mean_abs_df": 0.04698,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd055",
+   "family": "split",
+   "proxy": 0.7584,
+   "mean_mac": 0.1999,
+   "mean_abs_df": 0.05073,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd021",
+   "family": "connect",
+   "proxy": 0.7581,
+   "mean_mac": 0.1972,
+   "mean_abs_df": 0.04954,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd030",
+   "family": "connect",
+   "proxy": 0.7581,
+   "mean_mac": 0.1991,
+   "mean_abs_df": 0.05048,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd042",
+   "family": "connect",
+   "proxy": 0.7465,
+   "mean_mac": 0.1867,
+   "mean_abs_df": 0.05011,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd058",
+   "family": "parametric_only",
+   "proxy": 0.7373,
+   "mean_mac": 0.1918,
+   "mean_abs_df": 0.05725,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd051",
+   "family": "split",
+   "proxy": 0.7333,
+   "mean_mac": 0.1688,
+   "mean_abs_df": 0.04778,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd056",
+   "family": "parametric_only",
+   "proxy": 0.729,
+   "mean_mac": 0.17,
+   "mean_abs_df": 0.05051,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd039",
+   "family": "connect",
+   "proxy": 0.7256,
+   "mean_mac": 0.1798,
+   "mean_abs_df": 0.05709,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd003",
+   "family": "parametric_only",
+   "proxy": 0.703,
+   "mean_mac": 0.1428,
+   "mean_abs_df": 0.04993,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd029",
+   "family": "thickness",
+   "proxy": 0.6813,
+   "mean_mac": 0.1693,
+   "mean_abs_df": 0.07398,
+   "n_matched": 33
+  },
+  {
+   "cid": "rnd048",
+   "family": "parametric_only",
+   "proxy": 0.6559,
+   "mean_mac": 0.2024,
+   "mean_abs_df": 0.08327,
+   "n_matched": 31
+  },
+  {
+   "cid": "rnd023",
+   "family": "parametric_only",
+   "proxy": 0.5838,
+   "mean_mac": 0.0701,
+   "mean_abs_df": 0.06316,
+   "n_matched": 32
+  }
+ ]
+}

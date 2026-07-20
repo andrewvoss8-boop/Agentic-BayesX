@@ -1,0 +1,6 @@
+{
+  "n_pids": 27,
+  "recon_group_max_abs_rel": 6.150729494161706e-12,
+  "nominal_recon_max_rel_eigval_err": 6.377994213970712e-10,
+  "note": "per-PID reduced blocks B_pid=W^T K_pid W reconstruct the 9 group blocks and nominal eigvals"
+}

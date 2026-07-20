@@ -1,0 +1,35 @@
+{
+ "op": "joint_offset",
+ "status": "PASS",
+ "checks": [
+  {
+   "name": "mass drift (%)",
+   "value": 0.0054,
+   "expect": "<=0.5%",
+   "pass": true
+  },
+  {
+   "name": "6 RBMs preserved (spiders [6001321, 6001322] offset [0.2,0,0.1] in)",
+   "value": 6,
+   "expect": 6,
+   "pass": true
+  },
+  {
+   "name": "liveness: max elastic mode shift vs baseline (%)",
+   "value": 1.4124,
+   "expect": ">=0.05",
+   "pass": true
+  },
+  {
+   "name": "quality on edited quads",
+   "value": {
+    "min_jac_ratio": 0.8997668608416667,
+    "max_edge_slope": 0.015147886512136177,
+    "n_edited_quads": 487
+   },
+   "expect": "recorded + within caps",
+   "pass": true
+  }
+ ],
+ "ts": "2026-07-16T19:41:11"
+}

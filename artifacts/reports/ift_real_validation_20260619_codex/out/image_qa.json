@@ -1,0 +1,45 @@
+{
+ "figA_scorecard.png": {
+  "w": 2297,
+  "h": 947,
+  "ink_frac": 0.0441,
+  "color_frac": 0.0037,
+  "ok": true
+ },
+ "figB_beta_thermometer.png": {
+  "w": 2078,
+  "h": 1197,
+  "ink_frac": 0.0479,
+  "color_frac": 0.0153,
+  "ok": true
+ },
+ "figC_heldout_frf_overlay.png": {
+  "w": 2187,
+  "h": 1065,
+  "ink_frac": 0.1891,
+  "color_frac": 0.1259,
+  "ok": true
+ },
+ "figD_convergence_table.png": {
+  "w": 2299,
+  "h": 718,
+  "ink_frac": 0.1836,
+  "color_frac": 0.0,
+  "ok": true
+ },
+ "figD_discretization_invariance.png": {
+  "w": 2270,
+  "h": 926,
+  "ink_frac": 0.0509,
+  "color_frac": 0.0097,
+  "ok": true
+ },
+ "figE_convergence_table.png": {
+  "w": 2299,
+  "h": 718,
+  "ink_frac": 0.1842,
+  "color_frac": 0.0,
+  "ok": true
+ },
+ "ALL_OK": true
+}

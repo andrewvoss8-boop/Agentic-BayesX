@@ -1,0 +1,44 @@
+[ma2_conn_rotfree_bbox] agent/connectivity: exact sub200 +0.1397 (spot 1.03e-07%, 877s)
+20 pending
+[ma2_form_bboxstiff] agent/element_formulation: exact sub200 +0.1529 (spot 6.60e-08%, 807s)
+19 pending
+[ma2_form_plateskirch] agent/element_formulation: exact sub200 +0.1480 (spot 5.20e-08%, 856s)
+18 pending
+[ma2_geo_jointbbox] agent/geometry: exact sub200 +0.1734 (spot 1.17e-07%, 876s)
+17 pending
+[ma2_geo_warp102] agent/geometry: exact sub200 +0.1431 (spot 1.26e-07%, 776s)
+16 pending
+[ma2_mesh_brktxbeam] agent/mesh_density: exact sub200 +0.1605 (spot 2.88e-07%, 797s)
+15 pending
+[ma2_mesh_plates3] agent/mesh_density: exact sub200 +0.1710 (spot 1.69e-07%, 1032s)
+14 pending
+[ma2_prop_tboxxbeam2] agent/property_control: exact sub200 +0.1080 (spot 7.78e-08%, 869s)
+13 pending
+[ma2_prop_xbeam] agent/property_control: exact sub200 +0.1628 (spot 5.84e-08%, 844s)
+12 pending
+[mr1_mesh2_a1] random/mesh_density: exact sub200 +0.1697 (spot 6.21e-08%, 845s)
+11 pending
+[mr1_mesh3_a1] random/mesh_density: exact sub200 +0.1730 (spot 3.62e-07%, 799s)
+10 pending
+[mr2_conn0] random/connectivity: exact sub200 +0.1621 (spot 1.10e-07%, 797s)
+9 pending
+[mr2_conn1] DUD: ValueError: rbe3_convert eid 9000033: singular master geometry (cond 4.23e+17)
+8 pending
+[mr2_elem4] random/element_formulation: exact sub200 +0.0941 (spot 7.13e-08%, 829s)
+7 pending
+[mr2_elem5] random/element_formulation: exact sub200 +0.1848 (spot 1.20e-07%, 796s)
+6 pending
+[mr2_geom6] random/geometry: exact sub200 +0.1629 (spot 9.27e-08%, 848s)
+5 pending
+[mr2_geom7] random/geometry: exact sub200 +0.1163 (spot 2.35e-07%, 900s)
+4 pending
+[mr2_mesh2] random/mesh_density: exact sub200 +0.1655 (spot 1.33e-07%, 980s)
+3 pending
+[mr2_mesh3] random/mesh_density: exact sub200 +0.1426 (spot 1.07e-07%, 1294s)
+2 pending
+[mr2_prop8] random/property_control: exact sub200 +0.1355 (spot 1.00e-07%, 877s)
+1 pending
+[mr2_prop9] random/property_control: exact sub200 +0.1490 (spot 7.84e-08%, 838s)
+0 pending
+ALL DONE (no pending specs without partials)
+queue drained

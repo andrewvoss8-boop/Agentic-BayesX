@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "failures": [],
+  "n_figures": 1,
+  "figures": [
+    {
+      "file": "exp2_baselines_sweep.png",
+      "w": 1530,
+      "h": 986,
+      "bytes": 143203,
+      "pass": true
+    }
+  ]
+}

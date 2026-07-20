@@ -1,0 +1,17 @@
+[    0.0s] [selfcheck] inherited-FEM honest 'updated' corr = 0.338 (expect ~0.338)
+[    1.1s] eigsh (al_rho_lo) ...
+[  286.5s] eigsh done; elastic f[0:6] = [ 54.6   73.32  73.92  88.06 105.93 116.17]
+[  286.7s] [remesh+oracle-cal, honest] corr = 0.267
+[  288.7s] [reduced blocks] nominal consistency max rel eigval err = 1.68e-09
+[  410.0s] [bayes on remesh] R-hat 1.0040 ESS 774 div 0 conv=True; held-out freq err 4.23% vs nominal 2.92%
+[  410.1s] [remesh+bayes-theta-cal, honest] corr = 0.183
+
+{
+  "inherited_FEM_no_cal (fig)": 0.269,
+  "inherited_FEM_calibrated_honest (selfcheck)": 0.338,
+  "best_remesh_calibrated_oracle_honest": 0.267,
+  "best_remesh_calibrated_BAYES_honest": 0.183,
+  "best_remesh_generous_LSQ_metric (modelform_sweep)": 0.379
+}
+
+DONE in 410s -> out/combine_best.json

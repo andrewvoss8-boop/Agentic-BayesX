@@ -1,0 +1,67 @@
+{
+ "mount_grid": [
+  0.05,
+  0.25,
+  1.0,
+  4.0,
+  20.0
+ ],
+ "f_basis": 350.0,
+ "f_valid": 300.0,
+ "nb": 98,
+ "union_cols": 400,
+ "anchors": {
+  "x0.05": {
+   "n_modes": 59,
+   "max_rel_err": 2.640322924988853e-09,
+   "median_rel_err": 1.2048381797842554e-12,
+   "min_match_overlap": 0.9999999987952894,
+   "n_spurious_in_band": 3
+  },
+  "x0.25": {
+   "n_modes": 59,
+   "max_rel_err": 3.3570433038529478e-09,
+   "median_rel_err": 3.1047544498296773e-13,
+   "min_match_overlap": 0.9999999785911363,
+   "n_spurious_in_band": 3
+  },
+  "x1.0": {
+   "n_modes": 59,
+   "max_rel_err": 4.823409939864601e-10,
+   "median_rel_err": 4.859511531636057e-13,
+   "min_match_overlap": 0.999999997592676,
+   "n_spurious_in_band": 3
+  },
+  "x4.0": {
+   "n_modes": 59,
+   "max_rel_err": 1.9004262387269648e-10,
+   "median_rel_err": 9.104853242440943e-13,
+   "min_match_overlap": 0.9999999910337534,
+   "n_spurious_in_band": 3
+  },
+  "x20.0": {
+   "n_modes": 58,
+   "max_rel_err": 2.5969503521804223e-10,
+   "median_rel_err": 6.035231301985117e-13,
+   "min_match_overlap": 0.9999999565260167,
+   "n_spurious_in_band": 3
+  }
+ },
+ "off_anchor_probe": {
+  "mount_mult": 0.6,
+  "tray_theta": {
+   "tray_E": 1.2,
+   "strut_EA": 0.8,
+   "strut_EI": 1.15,
+   "joint_axial": 0.7,
+   "joint_lateral": 1.3
+  },
+  "n_modes": 59,
+  "max_rel_err": 0.00036014708423739105,
+  "median_rel_err": 7.502181896437444e-08,
+  "min_match_overlap": 0.9999944870414185
+ },
+ "worst_rel_err": 0.00036014708423739105,
+ "gate": 0.005,
+ "gate_status": "green"
+}

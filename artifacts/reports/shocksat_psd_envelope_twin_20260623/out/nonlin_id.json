@@ -1,0 +1,239 @@
+{
+  "Test04_+XY": {
+    "folder": "Test04_ModalHammer_990xy",
+    "n_hits": 6,
+    "force_range_lbf": [
+      532,
+      1083
+    ],
+    "modes": [
+      {
+        "f_hz": 75.9,
+        "freq_shift_pct_over_range": 0.85,
+        "df_dlnForce_hz": 0.93,
+        "DR_dB": 4.4,
+        "dDR_dlnForce_dB": 1.48,
+        "corr_f_vs_force": 0.95,
+        "corr_DR_vs_force": 0.39
+      },
+      {
+        "f_hz": 99.3,
+        "freq_shift_pct_over_range": 0.68,
+        "df_dlnForce_hz": -0.24,
+        "DR_dB": 4.6,
+        "dDR_dlnForce_dB": 0.41,
+        "corr_f_vs_force": -0.26,
+        "corr_DR_vs_force": 0.21
+      },
+      {
+        "f_hz": 120.4,
+        "freq_shift_pct_over_range": 0.8,
+        "df_dlnForce_hz": -0.43,
+        "DR_dB": 6.0,
+        "dDR_dlnForce_dB": -0.76,
+        "corr_f_vs_force": -0.32,
+        "corr_DR_vs_force": -0.32
+      },
+      {
+        "f_hz": 135.5,
+        "freq_shift_pct_over_range": 0.88,
+        "df_dlnForce_hz": -0.83,
+        "DR_dB": 7.0,
+        "dDR_dlnForce_dB": 0.22,
+        "corr_f_vs_force": -0.48,
+        "corr_DR_vs_force": 0.45
+      },
+      {
+        "f_hz": 151.8,
+        "freq_shift_pct_over_range": 0.26,
+        "df_dlnForce_hz": 0.03,
+        "DR_dB": 2.4,
+        "dDR_dlnForce_dB": 2.74,
+        "corr_f_vs_force": 0.06,
+        "corr_DR_vs_force": 0.93
+      },
+      {
+        "f_hz": 188.9,
+        "freq_shift_pct_over_range": 0.08,
+        "df_dlnForce_hz": -0.22,
+        "DR_dB": 11.9,
+        "dDR_dlnForce_dB": -1.64,
+        "corr_f_vs_force": -0.97,
+        "corr_DR_vs_force": -0.53
+      },
+      {
+        "f_hz": 188.9,
+        "freq_shift_pct_over_range": 0.08,
+        "df_dlnForce_hz": -0.22,
+        "DR_dB": 11.2,
+        "dDR_dlnForce_dB": -0.94,
+        "corr_f_vs_force": -0.97,
+        "corr_DR_vs_force": -0.35
+      },
+      {
+        "f_hz": 233.3,
+        "freq_shift_pct_over_range": 0.13,
+        "df_dlnForce_hz": -0.4,
+        "DR_dB": 6.1,
+        "dDR_dlnForce_dB": 1.81,
+        "corr_f_vs_force": -0.79,
+        "corr_DR_vs_force": 0.84
+      },
+      {
+        "f_hz": 253.9,
+        "freq_shift_pct_over_range": 0.14,
+        "df_dlnForce_hz": -0.23,
+        "DR_dB": 14.4,
+        "dDR_dlnForce_dB": 0.29,
+        "corr_f_vs_force": -0.49,
+        "corr_DR_vs_force": 0.34
+      }
+    ]
+  },
+  "Test02_+Z": {
+    "folder": "Test02_ModalHammer_990z",
+    "n_hits": 6,
+    "force_range_lbf": [
+      518,
+      880
+    ],
+    "modes": [
+      {
+        "f_hz": 99.4,
+        "freq_shift_pct_over_range": 0.64,
+        "df_dlnForce_hz": -0.46,
+        "DR_dB": 5.5,
+        "dDR_dlnForce_dB": 1.21,
+        "corr_f_vs_force": -0.4,
+        "corr_DR_vs_force": 0.42
+      },
+      {
+        "f_hz": 127.2,
+        "freq_shift_pct_over_range": 17.05,
+        "df_dlnForce_hz": -27.9,
+        "DR_dB": 8.3,
+        "dDR_dlnForce_dB": -4.35,
+        "corr_f_vs_force": -0.73,
+        "corr_DR_vs_force": -0.71
+      },
+      {
+        "f_hz": 136.3,
+        "freq_shift_pct_over_range": 0.21,
+        "df_dlnForce_hz": 0.24,
+        "DR_dB": 8.2,
+        "dDR_dlnForce_dB": -7.77,
+        "corr_f_vs_force": 0.4,
+        "corr_DR_vs_force": -0.79
+      },
+      {
+        "f_hz": 172.3,
+        "freq_shift_pct_over_range": 0.23,
+        "df_dlnForce_hz": 0.5,
+        "DR_dB": 2.6,
+        "dDR_dlnForce_dB": -0.68,
+        "corr_f_vs_force": 0.71,
+        "corr_DR_vs_force": -0.25
+      },
+      {
+        "f_hz": 190.2,
+        "freq_shift_pct_over_range": 4.53,
+        "df_dlnForce_hz": -15.01,
+        "DR_dB": 8.7,
+        "dDR_dlnForce_dB": -1.02,
+        "corr_f_vs_force": -0.85,
+        "corr_DR_vs_force": -0.42
+      },
+      {
+        "f_hz": 190.2,
+        "freq_shift_pct_over_range": 4.53,
+        "df_dlnForce_hz": -15.01,
+        "DR_dB": 8.6,
+        "dDR_dlnForce_dB": -1.44,
+        "corr_f_vs_force": -0.85,
+        "corr_DR_vs_force": -0.55
+      },
+      {
+        "f_hz": 233.2,
+        "freq_shift_pct_over_range": 104.94,
+        "df_dlnForce_hz": 87.66,
+        "DR_dB": 5.0,
+        "dDR_dlnForce_dB": -5.5,
+        "corr_f_vs_force": 0.22,
+        "corr_DR_vs_force": -0.73
+      },
+      {
+        "f_hz": 254.8,
+        "freq_shift_pct_over_range": 0.25,
+        "df_dlnForce_hz": 0.99,
+        "DR_dB": 12.1,
+        "dDR_dlnForce_dB": 0.72,
+        "corr_f_vs_force": 0.9,
+        "corr_DR_vs_force": 0.43
+      }
+    ]
+  },
+  "Test01_+X": {
+    "folder": "Test01_ModalHammer_990x",
+    "n_hits": 6,
+    "force_range_lbf": [
+      516,
+      724
+    ],
+    "modes": [
+      {
+        "f_hz": 75.8,
+        "freq_shift_pct_over_range": 1.62,
+        "df_dlnForce_hz": 0.41,
+        "DR_dB": 6.3,
+        "dDR_dlnForce_dB": -2.97,
+        "corr_f_vs_force": 0.1,
+        "corr_DR_vs_force": -0.37
+      },
+      {
+        "f_hz": 137.9,
+        "freq_shift_pct_over_range": 0.16,
+        "df_dlnForce_hz": 0.12,
+        "DR_dB": 14.0,
+        "dDR_dlnForce_dB": 1.3,
+        "corr_f_vs_force": 0.17,
+        "corr_DR_vs_force": 0.15
+      },
+      {
+        "f_hz": 162.9,
+        "freq_shift_pct_over_range": 0.12,
+        "df_dlnForce_hz": 0.5,
+        "DR_dB": 12.2,
+        "dDR_dlnForce_dB": 2.93,
+        "corr_f_vs_force": 0.68,
+        "corr_DR_vs_force": 0.29
+      },
+      {
+        "f_hz": 188.8,
+        "freq_shift_pct_over_range": 0.12,
+        "df_dlnForce_hz": 0.07,
+        "DR_dB": 12.4,
+        "dDR_dlnForce_dB": 3.72,
+        "corr_f_vs_force": 0.08,
+        "corr_DR_vs_force": 0.44
+      },
+      {
+        "f_hz": 254.0,
+        "freq_shift_pct_over_range": 0.25,
+        "df_dlnForce_hz": -1.42,
+        "DR_dB": 11.8,
+        "dDR_dlnForce_dB": -1.87,
+        "corr_f_vs_force": -0.61,
+        "corr_DR_vs_force": -0.17
+      },
+      {
+        "f_hz": 253.7,
+        "freq_shift_pct_over_range": 0.07,
+        "df_dlnForce_hz": -0.08,
+        "DR_dB": 10.3,
+        "dDR_dlnForce_dB": -10.95,
+        "corr_f_vs_force": -0.13,
+        "corr_DR_vs_force": -0.37
+      }
+    ]
+  }
+}

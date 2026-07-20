@@ -1,0 +1,21 @@
+seed 1: obs 46 (hard 7) / ho 31 (hard 1); sig pool 1.10 hard 1.50 rest 0.92
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelclass_L5_20260619/code/heteroscedastic_qoi.py", line 120, in <module>
+    run(seed=seed)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelclass_L5_20260619/code/heteroscedastic_qoi.py", line 110, in run
+    o = s["overall"]["peak"]; rr = s["rest"]; hh = s["hard"]
+KeyError: 'peak'
+seed 2: obs 46 (hard 7) / ho 31 (hard 1); sig pool 1.06 hard 1.58 rest 0.84
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelclass_L5_20260619/code/heteroscedastic_qoi.py", line 120, in <module>
+    run(seed=seed)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelclass_L5_20260619/code/heteroscedastic_qoi.py", line 110, in run
+    o = s["overall"]["peak"]; rr = s["rest"]; hh = s["hard"]
+KeyError: 'peak'
+seed 3: obs 46 (hard 6) / ho 31 (hard 2); sig pool 1.06 hard 1.55 rest 0.90
+Traceback (most recent call last):
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelclass_L5_20260619/code/heteroscedastic_qoi.py", line 120, in <module>
+    run(seed=seed)
+  File "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelclass_L5_20260619/code/heteroscedastic_qoi.py", line 110, in run
+    o = s["overall"]["peak"]; rr = s["rest"]; hh = s["hard"]
+KeyError: 'peak'

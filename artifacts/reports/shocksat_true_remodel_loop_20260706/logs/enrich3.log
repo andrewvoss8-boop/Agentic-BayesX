@@ -1,0 +1,10 @@
+full solve at old theta_MAP: 724s
+enriched basis r=127, M-orth resid 2.73e-07
+{"cid": "b04_ctrl_bb_scale_enr", "basis_r": 127, "n_modes": 74, "max_rel_err": 9.338987871920779e-08, "median_rel_err": 1.1369055696874852e-10, "pass_0p3pct": true}
+package b04_ctrl_bb_scale_enr saved (basis 127)
+full solve at old theta_MAP: 567s
+enriched basis r=128, M-orth resid 4.44e-07
+{"cid": "rnd003_enr", "basis_r": 128, "n_modes": 74, "max_rel_err": 3.6751707188642513e-07, "median_rel_err": 1.3724166247897074e-10, "pass_0p3pct": true}
+package rnd003_enr saved (basis 128)
+{"cid": "a04_welds_t074_enr", "basis": "theta_MAP eigenbasis (74)", "n_modes": 60, "max_rel_err": 8.347904589811606e-10, "pass_0p3pct": true}
+package a04_welds_t074_enr saved

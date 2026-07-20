@@ -1,0 +1,39 @@
+{
+ "figures": [
+  {
+   "file": "figures/fig_bands_table.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/arms_bands_table.json"
+  },
+  {
+   "file": "figures/fig_identifiability.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/identifiability.json"
+  },
+  {
+   "file": "figures/fig_qoi_sensors.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/qoi_sensor_weights.json"
+  },
+  {
+   "file": "figures/fig_loop_trajectory.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/query_log.jsonl"
+  },
+  {
+   "file": "figures/fig_selection_scatter.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/arm_E.json"
+  },
+  {
+   "file": "figures/fig_netcg_bands.png",
+   "script": "code/make_figs.py",
+   "data_label": "out/netcg_results.json"
+  },
+  {
+   "file": "figures/fig_graphical_model.png",
+   "script": "code/make_figs.py",
+   "data_label": "run-specific schematic"
+  }
+ ]
+}

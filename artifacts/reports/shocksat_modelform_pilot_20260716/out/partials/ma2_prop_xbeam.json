@@ -1,0 +1,51 @@
+{
+ "cid": "ma2_prop_xbeam",
+ "track": "agent",
+ "round": 2,
+ "cls": "property_control",
+ "ops": [
+  "scale"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.16281826162835553,
+ "exact_b200_500": 0.20352749433329587,
+ "exact_folds": {
+  "m_xpos_990x": 0.29537188670751213,
+  "m_zpos_990z": 0.5012026453110819,
+  "m_ypos_990y": 0.13691440635173646,
+  "m_zpos_900z": -0.28221589185690843
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.14366969407350244,
+  "m_zpos_990z": 0.22899226187840185,
+  "m_ypos_990y": 0.15873173748649777,
+  "m_zpos_900z": 0.2827162838947815
+ },
+ "theta_map": [
+  1.0248672876160816,
+  1.0344827622219228,
+  1.0082376081644502,
+  0.9901966317933472,
+  1.116201807278185,
+  1.194246274438454,
+  1.0332334096903608,
+  1.00723127753499,
+  0.8433168000995518
+ ],
+ "enriched_pkg": "ma2_prop_xbeam__xenr",
+ "spot_max_pct": 5.839078109914908e-08,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0,
+  "max_mode_shift_pct": 6.074,
+  "pass": true
+ },
+ "solve_s_theta1": 382.5,
+ "solve_s_enrich": 436.7,
+ "wall_s": 844.1,
+ "ts": "2026-07-17T03:30:15",
+ "diagnosis_link": "CONTROL: isolate the cross-beam stiffening component of the r1 winner (thickness left at 1.0)"
+}

@@ -1,0 +1,104 @@
+{
+ "combo": 3,
+ "baseline_combined": {
+  "M0": 0.14285714285714285,
+  "M2": 0.9285714285714286
+ },
+ "arms_varied": [
+  "M0",
+  "M2"
+ ],
+ "rows": [
+  {
+   "tag": "altch",
+   "arm": "M0",
+   "zeta": 0.02,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.17857142857142858,
+   "converged": true,
+   "sigma_d_med": 0.0
+  },
+  {
+   "tag": "altch",
+   "arm": "M2",
+   "zeta": 0.02,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.9285714285714286,
+   "converged": true,
+   "sigma_d_med": 0.08645952058447466
+  },
+  {
+   "tag": "zeta01",
+   "arm": "M0",
+   "zeta": 0.01,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.32142857142857145,
+   "converged": false,
+   "sigma_d_med": 0.0
+  },
+  {
+   "tag": "zeta01",
+   "arm": "M2",
+   "zeta": 0.01,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.9285714285714286,
+   "converged": true,
+   "sigma_d_med": 0.082378318828347
+  },
+  {
+   "tag": "zeta03",
+   "arm": "M0",
+   "zeta": 0.03,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.21428571428571427,
+   "converged": true,
+   "sigma_d_med": 0.0
+  },
+  {
+   "tag": "zeta03",
+   "arm": "M2",
+   "zeta": 0.03,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.9285714285714286,
+   "converged": true,
+   "sigma_d_med": 0.08282590998424078
+  },
+  {
+   "tag": "bandnar",
+   "arm": "M0",
+   "zeta": 0.02,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.10714285714285714,
+   "converged": true,
+   "sigma_d_med": 0.0
+  },
+  {
+   "tag": "bandnar",
+   "arm": "M2",
+   "zeta": 0.02,
+   "len_logf": 0.3,
+   "len_z": 12.0,
+   "combined_coverage": 0.8928571428571429,
+   "converged": true,
+   "sigma_d_med": 0.06767384556936404
+  },
+  {
+   "tag": "lenmis",
+   "arm": "M2",
+   "zeta": 0.02,
+   "len_logf": 0.6,
+   "len_z": 24.0,
+   "combined_coverage": 1.0,
+   "converged": true,
+   "sigma_d_med": 0.3999330700417447
+  }
+ ],
+ "schneider_beats_naive_in_all_variations": true
+}

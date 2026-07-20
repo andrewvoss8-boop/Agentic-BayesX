@@ -1,0 +1,7 @@
+{
+ "active_runtime_s": 1301.1,
+ "elapsed_wallclock_s": 2589.2,
+ "nuts_only_active_s": 1288.1,
+ "note": "NUTS sweep (64 cells) ran detached in the background: nuts_only_active_s = sum of stored per-cell NUTS runtimes. active_runtime_s = full from-scratch cost (NUTS sweep + run_all overhead). A resumable bash run_all.sh replay with cached cells = replay_cached_active_s. Pinned float64, OMP/VECLIB threads=1. active_runtime_s <= elapsed_wallclock_s.",
+ "replay_cached_active_s": 13
+}

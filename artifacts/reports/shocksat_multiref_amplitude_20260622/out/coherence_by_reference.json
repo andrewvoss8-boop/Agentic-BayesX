@@ -1,0 +1,303 @@
+{
+  "deliverable": "per-reference coherence diagnostic (data quality), evaluated AT modal resonances",
+  "resonance_freqs_hz": [
+    48.8,
+    66.2,
+    75.0,
+    83.8,
+    97.5,
+    111.2,
+    120.0,
+    123.8,
+    127.5,
+    138.8,
+    151.2,
+    155.6,
+    158.8,
+    165.0,
+    172.5,
+    177.5,
+    187.5,
+    188.8,
+    193.8,
+    196.2,
+    206.2,
+    227.5,
+    232.5,
+    241.2,
+    247.5,
+    253.8,
+    258.1
+  ],
+  "hard_accels": [
+    4,
+    27,
+    38,
+    40,
+    52,
+    69,
+    92,
+    98
+  ],
+  "references": {
+    "xpos_990x": {
+      "label": "+X",
+      "axis": "X",
+      "instrument": "impact",
+      "drive_xyz": [
+        9.0,
+        8.0,
+        1.0
+      ],
+      "note": "Test07 hit-001 (the Card A +X reference); only hit-001 on disk",
+      "drivepoint_accel_daq": 26,
+      "drivepoint_snap_in": 1.2374368670764582,
+      "N200000": {
+        "n_hits_used": 1,
+        "n_hits_skipped": 0,
+        "coh_floor_uncorrelated": 1.0,
+        "df_hz": 1.25,
+        "coherence_median_inband": 1.0,
+        "coherence_at_resonance_median": 1.0,
+        "coherence_at_resonance_p90": 1.0000000000000004,
+        "drivepoint_at_resonance_median": 1.0,
+        "hard_accels_at_resonance_median": {
+          "4": 1.0000000000000002,
+          "27": 1.0,
+          "38": 1.0,
+          "40": 1.0,
+          "52": 1.0,
+          "69": 1.0,
+          "92": 1.0,
+          "98": 0.9999999999999999
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.027657203884920177,
+          "median_broadband_100_10k": 0.026412281982050364
+        }
+      },
+      "N65536": {
+        "n_hits_used": 1,
+        "n_hits_skipped": 0,
+        "coh_floor_uncorrelated": 1.0,
+        "df_hz": 3.815,
+        "coherence_median_inband": 1.0,
+        "coherence_at_resonance_median": 1.0,
+        "coherence_at_resonance_p90": 1.0000000000000004,
+        "drivepoint_at_resonance_median": 1.0,
+        "hard_accels_at_resonance_median": {
+          "4": 1.0,
+          "27": 1.0,
+          "38": 1.0,
+          "40": 1.0,
+          "52": 1.0000000000000002,
+          "69": 1.0,
+          "92": 1.0000000000000002,
+          "98": 1.0
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.027657203884920177,
+          "median_broadband_100_10k": 0.026412281982050364
+        }
+      },
+      "coherence_median_band": 1.0,
+      "at_resonance_p90_primary": 1.0000000000000004,
+      "frf_cache": "data/multiref/xpos_990x.npz"
+    },
+    "zpos_990z": {
+      "label": "+Z",
+      "axis": "Z",
+      "instrument": "impact",
+      "drive_xyz": [
+        9.0,
+        8.0,
+        0.0
+      ],
+      "note": "Test08; 5 hits on disk; small double-hit noted in TestLog",
+      "drivepoint_accel_daq": 26,
+      "drivepoint_snap_in": 2.069118169655856,
+      "N200000": {
+        "n_hits_used": 2,
+        "n_hits_skipped": 3,
+        "coh_floor_uncorrelated": 0.5,
+        "df_hz": 1.25,
+        "coherence_median_inband": 0.6582823902621501,
+        "coherence_at_resonance_median": 0.6394239713995806,
+        "coherence_at_resonance_p90": 0.9567668089739944,
+        "drivepoint_at_resonance_median": 0.5710262778413108,
+        "hard_accels_at_resonance_median": {
+          "4": 0.7546810027745593,
+          "27": 0.5446272592651662,
+          "38": 0.5056306968687343,
+          "40": 0.5837936842016338,
+          "52": 0.5056595439673923,
+          "69": 0.7341545978932786,
+          "92": 0.5866309242582625,
+          "98": 0.3752400548864237
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.02797959231889509,
+          "median_broadband_100_10k": 0.025528272050600848
+        }
+      },
+      "N65536": {
+        "n_hits_used": 4,
+        "n_hits_skipped": 1,
+        "coh_floor_uncorrelated": 0.25,
+        "df_hz": 3.815,
+        "coherence_median_inband": 0.3103377360802765,
+        "coherence_at_resonance_median": 0.27725682585331257,
+        "coherence_at_resonance_p90": 0.7487453352526038,
+        "drivepoint_at_resonance_median": 0.2319487341377956,
+        "hard_accels_at_resonance_median": {
+          "4": 0.6769837484194419,
+          "27": 0.26530108953191306,
+          "38": 0.2975425150376079,
+          "40": 0.3352145269692545,
+          "52": 0.1804751282868921,
+          "69": 0.2563960245088525,
+          "92": 0.2729280093973189,
+          "98": 0.13638401114662585
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.028388681512827883,
+          "median_broadband_100_10k": 0.02674145579288337
+        }
+      },
+      "coherence_median_band": 0.3103377360802765,
+      "at_resonance_p90_primary": 0.7487453352526038,
+      "frf_cache": "data/multiref/zpos_990z.npz"
+    },
+    "ypos_990y": {
+      "label": "+Y",
+      "axis": "Y",
+      "instrument": "modal",
+      "drive_xyz": [
+        8.5,
+        9.0,
+        1.0
+      ],
+      "note": "Test03 MODAL hammer (different tip/force spectrum \u2192 per-test gain)",
+      "drivepoint_accel_daq": 26,
+      "drivepoint_snap_in": 2.1286732957408003,
+      "N200000": {
+        "n_hits_used": 0,
+        "n_hits_skipped": 4
+      },
+      "N65536": {
+        "n_hits_used": 4,
+        "n_hits_skipped": 0,
+        "coh_floor_uncorrelated": 0.25,
+        "df_hz": 3.815,
+        "coherence_median_inband": 0.8855519073617673,
+        "coherence_at_resonance_median": 0.9164479716439117,
+        "coherence_at_resonance_p90": 0.98804419058892,
+        "drivepoint_at_resonance_median": 0.9621722231814137,
+        "hard_accels_at_resonance_median": {
+          "4": 0.8768353204394995,
+          "27": 0.9291735820956698,
+          "38": 0.9252951291582667,
+          "40": 0.936461424207286,
+          "52": 0.963717039499703,
+          "69": 0.9256052112448996,
+          "92": 0.7590389738784016,
+          "98": 0.9235721504897739
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.04825857185694353,
+          "median_broadband_100_10k": 0.581311929797022
+        }
+      },
+      "coherence_median_band": 0.8855519073617673,
+      "at_resonance_p90_primary": 0.98804419058892
+    },
+    "z_900z": {
+      "label": "900z",
+      "axis": "Z",
+      "instrument": "impact",
+      "drive_xyz": [
+        9.0,
+        0.5,
+        0.0
+      ],
+      "note": "Test10; different drive LOCATION (largest phi_d contrast)",
+      "drivepoint_accel_daq": 23,
+      "drivepoint_snap_in": 2.0963137289060527,
+      "N200000": {
+        "n_hits_used": 1,
+        "n_hits_skipped": 5,
+        "coh_floor_uncorrelated": 1.0,
+        "df_hz": 1.25,
+        "coherence_median_inband": 1.0,
+        "coherence_at_resonance_median": 1.0,
+        "coherence_at_resonance_p90": 1.0000000000000004,
+        "drivepoint_at_resonance_median": 1.0,
+        "hard_accels_at_resonance_median": {
+          "4": 1.0,
+          "27": 1.0,
+          "38": 1.0,
+          "40": 1.0,
+          "52": 0.9999999999999999,
+          "69": 1.0000000000000002,
+          "92": 0.9999999999999999,
+          "98": 1.0
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.024805243407648753,
+          "median_broadband_100_10k": 0.025519561554804664
+        }
+      },
+      "N65536": {
+        "n_hits_used": 4,
+        "n_hits_skipped": 2,
+        "coh_floor_uncorrelated": 0.25,
+        "df_hz": 3.815,
+        "coherence_median_inband": 0.421476892204832,
+        "coherence_at_resonance_median": 0.3866146833880234,
+        "coherence_at_resonance_p90": 0.75033388004898,
+        "drivepoint_at_resonance_median": 0.299053592904882,
+        "hard_accels_at_resonance_median": {
+          "4": 0.5508783824191292,
+          "27": 0.5486104227324752,
+          "38": 0.2759999937001492,
+          "40": 0.40662856868532965,
+          "52": 0.3327182203725945,
+          "69": 0.3290530310538506,
+          "92": 0.42424893899046817,
+          "98": 0.36037587040579305
+        },
+        "welch": {
+          "nperseg": 16384,
+          "df_hz": 15.2587890625,
+          "median_inband_45_260": 0.033733515450241953,
+          "median_broadband_100_10k": 0.025248217053494927
+        }
+      },
+      "coherence_median_band": 0.421476892204832,
+      "at_resonance_p90_primary": 0.75033388004898,
+      "frf_cache": "data/multiref/z_900z.npz"
+    }
+  },
+  "xplus_manifest_note": {
+    "source": "hammer_frf_subset_manifest.json (Test07 +X, 4 hits, Welch)",
+    "processing": [
+      100.0,
+      10000.0
+    ],
+    "acceptance_note": "Low coherence keeps this out of the StatFEM likelihood; it is a diagnostic transfer estimate."
+  },
+  "interpretation": "Broadband/Welch coherence is low (the documented +X ~0.07 is a 100-10 kHz number, dominated by bands with no hammer energy). The relevant metric for the modal-amplitude QOI is coherence AT the resonances: read the at_resonance_p90 / drivepoint values against the few-hit floor (1/n_hits). High at-resonance coherence \u21d2 the confound-break has signal; near-floor \u21d2 data-quality ceiling (verdict ii).",
+  "runtime_s": 9.407005310058594
+}

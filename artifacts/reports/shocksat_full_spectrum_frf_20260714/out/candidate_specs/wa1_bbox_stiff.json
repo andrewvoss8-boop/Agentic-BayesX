@@ -1,0 +1,17 @@
+{
+ "cid": "wa1_bbox_stiff",
+ "family": "thickness",
+ "ops": [
+  {
+   "op": "thickness",
+   "pids": [
+    101,
+    102,
+    103
+   ],
+   "t_scale": 1.15,
+   "name": "bottombox_t115"
+  }
+ ],
+ "rationale": "Bottom_Box|Y is the worst high-n residual (corr -0.14, 72 ch) AND the 150-180 Hz cluster (box-dominated Y modes) is mis-paired by up to 10%; stiffen bottom-box panels to raise/re-order those Y modes."
+}

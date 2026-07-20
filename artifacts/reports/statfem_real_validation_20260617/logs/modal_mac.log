@@ -1,0 +1,6 @@
+L6 freq+MAC vs L5 (split 0, 24 modes, obs 48/ho 32):
+  L5 freq : conv True R-hat 1.001 | held-out peak cover 0.88 IS 1422 z-std 0.88 width 33.7dB sig 1.00
+  L6 +MAC : conv True R-hat 1.003 div 2 | held-out peak cover 0.91 IS 1386 z-std 0.84 width 33.3dB sig 0.99
+  -> MAC SHARPER (IS 1386 vs 1422); sigma_mac 0.8416479165578357
+  runtime 1035s
+L6 DONE

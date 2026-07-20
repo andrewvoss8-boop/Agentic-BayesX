@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "failures": [],
+  "n_figures": 2,
+  "figures": [
+    {
+      "file": "exp3_softening_trend.png",
+      "w": 1955,
+      "h": 884,
+      "bytes": 159865,
+      "pass": true
+    },
+    {
+      "file": "exp3_identifiability.png",
+      "w": 1530,
+      "h": 918,
+      "bytes": 73767,
+      "pass": true
+    }
+  ]
+}

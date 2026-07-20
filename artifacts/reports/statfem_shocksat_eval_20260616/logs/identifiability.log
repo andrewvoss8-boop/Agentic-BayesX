@@ -1,0 +1,13 @@
+strain energy (mean%/peak%):
+  al_welds        mean   0.5  peak   2.1 @ 152Hz  id=False
+  angle_brackets  mean   1.3  peak  14.3 @ 105Hz  id=False
+  bottom_box      mean  38.5  peak  99.4 @ 185Hz  id=True
+  contact         mean   0.6  peak   6.0 @ 234Hz  id=False
+  cross_beam      mean   5.2  peak  49.8 @ 105Hz  id=True
+  joints          mean   3.7  peak  19.2 @ 193Hz  id=False
+  plates          mean  16.5  peak 100.0 @ 125Hz  id=True
+  steel_welds     mean   0.5  peak   2.2 @ 194Hz  id=False
+  top_box         mean  33.3  peak  86.9 @ 248Hz  id=True
+FIM combos above prior (precision 16): noise-floor 9, realized-floor 9
+informed (SE): ['bottom_box', 'cross_beam', 'plates', 'top_box']
+informed (FIM, realized floor): ['al_welds', 'angle_brackets', 'bottom_box', 'contact', 'cross_beam', 'joints', 'plates', 'steel_welds', 'top_box']

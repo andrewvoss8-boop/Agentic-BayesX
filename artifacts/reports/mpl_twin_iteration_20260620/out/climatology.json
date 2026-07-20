@@ -1,0 +1,30 @@
+{
+  "deliverable": "climatology no-skill bar (predict held-out |T|/GRMS from observed-location population)",
+  "per_split": [
+    {
+      "held_out": "interface",
+      "clim_crps_grms": 126.42665563512139,
+      "clim_whole_curve_interval": 72.73135774379446
+    },
+    {
+      "held_out": "beam",
+      "clim_crps_grms": 21.902860191900864,
+      "clim_whole_curve_interval": 5.12001879041723
+    },
+    {
+      "held_out": "valve",
+      "clim_crps_grms": 33.1010803438089,
+      "clim_whole_curve_interval": 8.3313692991021
+    },
+    {
+      "held_out": "avi-L",
+      "clim_crps_grms": 16.536617164950115,
+      "clim_whole_curve_interval": 15.514632915904954
+    },
+    {
+      "held_out": "avi-R",
+      "clim_crps_grms": 14.932358638571564,
+      "clim_whole_curve_interval": 6.54888785851487
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+ "deck": "../../../MPL test stand/FEM/Test Stand FEA.dat",
+ "line_endings": {
+  "crlf": 3209,
+  "bare_cr": 0
+ },
+ "counts": {
+  "GRID": 1415,
+  "CBEAM": 1288,
+  "PBEAM": 37,
+  "CQUAD4": 72,
+  "PSHELL": 1,
+  "CBUSH": 70,
+  "PBUSH": 1,
+  "RBE2": 39,
+  "MAT1": 1,
+  "SPC1": 4,
+  "FORCE_dropped": 91
+ },
+ "expected": {
+  "GRID": 1415,
+  "CBEAM": 1288,
+  "PBEAM": 37,
+  "CQUAD4": 72,
+  "PSHELL": 1,
+  "CBUSH": 70,
+  "PBUSH": 1,
+  "RBE2": 39,
+  "MAT1": 1,
+  "SPC1": 4
+ },
+ "grid_cp_values": [
+  0
+ ],
+ "grid_cd_values": [
+  0
+ ],
+ "cord_ids_defined": [
+  1,
+  2
+ ],
+ "cords_referenced_by_grids": false,
+ "distinct_beam_sections": {
+  "(1.353627, 0.450829, 1.045408, 1.003687)": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "(3.899984, 0.116999, 13.73114, 0.442069)": [
+   38
+  ]
+ },
+ "n_distinct_beam_sections": 2,
+ "rbe2_duplicate_dependents": [],
+ "spc_grids": [
+  1,
+  164,
+  692,
+  1212
+ ],
+ "bbox": {
+  "x": [
+   -4.99999,
+   83.99983
+  ],
+  "y": [
+   -47.9999,
+   0.0
+  ],
+  "z": [
+   -1.25,
+   50.2499
+  ]
+ },
+ "params": {
+  "PRGPST": "NO",
+  "POST": "-1",
+  "OGEOM": "NO",
+  "AUTOSPC": "YES",
+  "K6ROT": "100.",
+  "GRDPNT": "0"
+ },
+ "mat1": {
+  "1": {
+   "E": 29000000.0,
+   "G": 11240310.07751938,
+   "nu": 0.29,
+   "rho": 0.0007324
+  }
+ },
+ "pshell": {
+  "39": {
+   "mid1": 1,
+   "t": 0.5,
+   "mid2": 1,
+   "bend_ratio": 1.0,
+   "mid3": 1,
+   "ts_t": 0.833333,
+   "nsm": 0.0
+  }
+ },
+ "pbush": {
+  "37": [
+   10000000.0,
+   10000000.0,
+   10000000.0,
+   10000000.0,
+   10000000.0,
+   10000000.0
+  ]
+ },
+ "units": "inch-lbf-second (E psi, rho lbf*s^2/in^4, lengths in)"
+}

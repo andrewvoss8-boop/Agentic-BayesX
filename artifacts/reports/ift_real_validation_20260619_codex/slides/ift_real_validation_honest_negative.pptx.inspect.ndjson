@@ -1,0 +1,188 @@
+{"kind":"deck","id":"pr/gvhwyw","name":"Deck"}
+{"kind":"layout","layoutId":"4ae3034d-48f8-49da-a071-135553e5f623","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"45f055e6-5fff-4c61-8455-e3bae972b79a","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/eo5j67","slide":1,"title":"REAL SHOCKSAT VALIDATION","textShapes":21}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":1,"text":"REAL SHOCKSAT VALIDATION","textPreview":"REAL SHOCKSAT VALIDATION","textChars":24,"textLines":1,"bbox":[64,52,620,26]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":1,"text":"IFT vs StatFEM on held-out sensors","textPreview":"IFT vs StatFEM on held-out sensors","textChars":34,"textLines":1,"bbox":[64,102,820,116]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":1,"text":"Physics in the prior was tested on the same real FRF data, forward model, channel split, and proper scores as the StatFEM twin.","textPreview":"Physics in the prior was tested on the same real FRF data, forward model, channel split, and proper scores as the StatFEM twin.","textChars":127,"textLines":1,"bbox":[66,226,780,66]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":1,"bbox":[850,74,340,128]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":1,"text":"GENERATED VERDICT","textPreview":"GENERATED VERDICT","textChars":17,"textLines":1,"bbox":[874,96,292,20]}
+{"kind":"textbox","id":"sh/tovahoza","slide":1,"text":"HONEST NEGATIVE","textPreview":"HONEST NEGATIVE","textChars":15,"textLines":1,"bbox":[874,122,292,40]}
+{"kind":"textbox","id":"sh/032lszqt","slide":1,"text":"Scorecard YELLOW; checker gate in checker_report.json","textPreview":"Scorecard YELLOW; checker gate in checker_report.json","textChars":53,"textLines":1,"bbox":[874,168,292,24]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":1,"bbox":[64,382,260,106]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":1,"text":"IFT splits","textPreview":"IFT splits","textChars":10,"textLines":1,"bbox":[82,396,224,24]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":1,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[82,420,224,38]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":1,"text":"same channel split protocol","textPreview":"same channel split protocol","textChars":27,"textLines":1,"bbox":[82,460,224,20]}
+{"kind":"shape","id":"sh/6tovahoz","slide":1,"bbox":[346,382,260,106]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":1,"text":"Converged","textPreview":"Converged","textChars":9,"textLines":1,"bbox":[364,396,224,24]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":1,"text":"0.0%","textPreview":"0.0%","textChars":4,"textLines":1,"bbox":[364,420,224,38]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":1,"text":"R-hat/ESS gate failed","textPreview":"R-hat/ESS gate failed","textChars":21,"textLines":1,"bbox":[364,460,224,20]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":1,"bbox":[628,382,260,106]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":1,"text":"Weak beta","textPreview":"Weak beta","textChars":9,"textLines":1,"bbox":[646,396,224,24]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":1,"text":"76%","textPreview":"76%","textChars":3,"textLines":1,"bbox":[646,420,224,38]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":1,"text":"posterior trust thermometer","textPreview":"posterior trust thermometer","textChars":27,"textLines":1,"bbox":[646,460,224,20]}
+{"kind":"shape","id":"sh/hwfyxobm","slide":1,"bbox":[910,382,260,106]}
+{"kind":"textbox","id":"sh/obm58z25","slide":1,"text":"Peak interval","textPreview":"Peak interval","textChars":13,"textLines":1,"bbox":[928,396,224,24]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":1,"text":"4.05e+6","textPreview":"4.05e+6","textChars":7,"textLines":1,"bbox":[928,420,224,38]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":1,"text":"median IFT score","textPreview":"median IFT score","textChars":16,"textLines":1,"bbox":[928,460,224,20]}
+{"kind":"shape","id":"sh/hk3q5o7q","slide":1,"bbox":[64,538,1104,86]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":1,"bbox":[64,538,7,86]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":1,"text":"Bottom line: the IFT arm is a useful honest negative here. It does not earn WIN, TIE, or ROBUSTNESS-WIN because beta and theta do not pass the convergence gate.","textPreview":"Bottom line: the IFT arm is a useful honest negative here. It does not earn WIN, TIE, or ROBUSTNESS-WIN because beta and theta do not pas...","textChars":160,"textLines":1,"bbox":[86,552,1066,64]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":1,"text":"Sources: scorecard.json, checker_report.json, ift_mc_headline.json","textPreview":"Sources: scorecard.json, checker_report.json, ift_mc_headline.json","textChars":66,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"notes","id":"nt/eo5j67","slide":1,"text":""}
+{"kind":"slide","id":"sl/e68415","slide":2,"title":"APPLES-TO-APPLES CONTRACT","textShapes":14}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":2,"text":"APPLES-TO-APPLES CONTRACT","textPreview":"APPLES-TO-APPLES CONTRACT","textChars":25,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":2,"text":"Only the location of physics trust changes","textPreview":"Only the location of physics trust changes","textChars":42,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":2,"text":"Everything else is copied or reused from the StatFEM real-validation workspace.","textPreview":"Everything else is copied or reused from the StatFEM real-validation workspace.","textChars":79,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/orytsvu9","slide":2,"bbox":[78,260,500,112]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":2,"text":"Same data","textPreview":"Same data","textChars":9,"textLines":1,"bbox":[100,280,150,28]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":2,"text":"Real single-impact |H1|, 45-260 Hz, bad-channel exclusions, copied data files byte-identical.","textPreview":"Real single-impact |H1|, 45-260 Hz, bad-channel exclusions, copied data files byte-identical.","textChars":93,"textLines":1,"bbox":[100,314,440,42]}
+{"kind":"shape","id":"sh/z61032ls","slide":2,"bbox":[638,260,500,112]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":2,"text":"Same model","textPreview":"Same model","textChars":10,"textLines":1,"bbox":[660,280,150,28]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":2,"text":"Reduced dynamic-stiffness accelerance with copied core.py and realfrf.py conventions.","textPreview":"Reduced dynamic-stiffness accelerance with copied core.py and realfrf.py conventions.","textChars":85,"textLines":1,"bbox":[660,314,440,42]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":2,"bbox":[78,408,500,112]}
+{"kind":"textbox","id":"sh/svu9knih","slide":2,"text":"Same split","textPreview":"Same split","textChars":10,"textLines":1,"bbox":[100,428,150,28]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":2,"text":"Observed/held-out channel split, obs_frac 0.6, channel-split-only validation.","textPreview":"Observed/held-out channel split, obs_frac 0.6, channel-split-only validation.","textChars":77,"textLines":1,"bbox":[100,462,440,42]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":2,"bbox":[638,408,500,112]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":2,"text":"Same scorer","textPreview":"Same scorer","textChars":11,"textLines":1,"bbox":[660,428,150,28]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":2,"text":"score.py proper scores: interval score, CRPS, and log predictive density.","textPreview":"score.py proper scores: interval score, CRPS, and log predictive density.","textChars":73,"textLines":1,"bbox":[660,462,440,42]}
+{"kind":"shape","id":"sh/zidonyd0","slide":2,"bbox":[88,572,1048,74]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":2,"bbox":[88,572,7,74]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":2,"text":"Caveat carried as YELLOW: the copied StatFEM data/code path gives 77 dynamic-range-eligible channels after exclusions, not the 80 stated in the draft prompt.","textPreview":"Caveat carried as YELLOW: the copied StatFEM data/code path gives 77 dynamic-range-eligible channels after exclusions, not the 80 stated ...","textChars":157,"textLines":1,"bbox":[110,586,1010,52]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":2,"text":"Sources: manifest_sha256.txt, scorecard.json, decisions_log.md","textPreview":"Sources: manifest_sha256.txt, scorecard.json, decisions_log.md","textChars":62,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"notes","id":"nt/e68415","slide":2,"text":""}
+{"kind":"slide","id":"sl/k2ie4f","slide":3,"title":"IFT CONSTRUCTION","textShapes":11}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":3,"text":"IFT CONSTRUCTION","textPreview":"IFT CONSTRUCTION","textChars":16,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":3,"text":"Physics enters the field prior through learned beta","textPreview":"Physics enters the field prior through learned beta","textChars":51,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":3,"text":"The field is the complex reduced response u(omega); beta is the inverse-temperature trust parameter.","textPreview":"The field is the complex reduced response u(omega); beta is the inverse-temperature trust parameter.","textChars":100,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/8v6psfil","slide":3,"bbox":[76,250,502,280]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":3,"text":"Prior over field","textPreview":"Prior over field","textChars":16,"textLines":1,"bbox":[104,278,430,28]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":3,"text":"u | theta, beta proportional to exp[- beta / 2 * || A(theta, omega) u - f ||^2]\n\nLarge beta means the FEM residual is trusted. Small beta means the prior widens around the physics.","textPreview":"u | theta, beta proportional to exp[- beta / 2 * || A(theta, omega) u - f ||^2] |  | Large beta means the FEM residual is trusted. Small ...","textChars":180,"textLines":3,"bbox":[104,322,430,126]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":3,"text":"Adaptation: field marginalization is exact for linear complex observations; the inherited observable is log|H|, so this run uses a documented first-order log-magnitude moment approximation.","textPreview":"Adaptation: field marginalization is exact for linear complex observations; the inherited observable is log|H|, so this run uses a docume...","textChars":189,"textLines":1,"bbox":[104,462,430,48]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":3,"bbox":[650,250,486,280]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":3,"text":"Sampled variables","textPreview":"Sampled variables","textChars":17,"textLines":1,"bbox":[678,278,400,28]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":3,"text":"theta: 4 identifiable stiffness groups\nbeta: physics trust thermometer\ngain c: global units gain\n\nNUTS default, 4 chains, beta included in all-variable R-hat/ESS/divergence gate.","textPreview":"theta: 4 identifiable stiffness groups | beta: physics trust thermometer | gain c: global units gain |  | NUTS default, 4 chains, beta in...","textChars":178,"textLines":5,"bbox":[678,322,400,142]}
+{"kind":"shape","id":"sh/wval87ed","slide":3,"bbox":[650,556,486,66]}
+{"kind":"shape","id":"sh/7adsji5s","slide":3,"bbox":[650,556,7,66]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":3,"text":"This is faithful to the IFT/PIFT idea for a linear field, but not a hidden exact log-Rician solution. The approximation is visible in method_ift.md and the checker.","textPreview":"This is faithful to the IFT/PIFT idea for a linear field, but not a hidden exact log-Rician solution. The approximation is visible in met...","textChars":164,"textLines":1,"bbox":[672,570,448,44]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":3,"text":"Sources: method_ift.md; Hao and Bilionis arXiv:2306.02150; Alberts and Bilionis arXiv:2301.07609","textPreview":"Sources: method_ift.md; Hao and Bilionis arXiv:2306.02150; Alberts and Bilionis arXiv:2301.07609","textChars":96,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"notes","id":"nt/k2ie4f","slide":3,"text":""}
+{"kind":"slide","id":"sl/k9vyq7","slide":4,"title":"SCORECARD","textShapes":12}
+{"kind":"textbox","id":"sh/dsji5sne","slide":4,"text":"SCORECARD","textPreview":"SCORECARD","textChars":9,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/61032lsz","slide":4,"text":"L5 remains the working bar; IFT is not a scored win","textPreview":"L5 remains the working bar; IFT is not a scored win","textChars":51,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":4,"text":"Proper scores reward calibration and sharpness, so a method cannot win by simply widening the band.","textPreview":"Proper scores reward calibration and sharpness, so a method cannot win by simply widening the band.","textChars":99,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":4,"bbox":[884,246,276,106]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":4,"text":"IFT peak interval","textPreview":"IFT peak interval","textChars":17,"textLines":1,"bbox":[902,260,240,24]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":4,"text":"4.05e+6","textPreview":"4.05e+6","textChars":7,"textLines":1,"bbox":[902,284,240,38]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":4,"text":"median over 25 splits","textPreview":"median over 25 splits","textChars":21,"textLines":1,"bbox":[902,324,240,20]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":4,"bbox":[884,370,276,106]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":4,"text":"L5 peak interval","textPreview":"L5 peak interval","textChars":16,"textLines":1,"bbox":[902,384,240,24]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":4,"text":"2.03e+3","textPreview":"2.03e+3","textChars":7,"textLines":1,"bbox":[902,408,240,38]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":4,"text":"copied StatFEM bar","textPreview":"copied StatFEM bar","textChars":18,"textLines":1,"bbox":[902,448,240,20]}
+{"kind":"shape","id":"sh/m58z25kb","slide":4,"bbox":[884,506,276,92]}
+{"kind":"shape","id":"sh/t83itgfm","slide":4,"bbox":[884,506,7,92]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":4,"text":"Generated verdict is HONEST_NEGATIVE because convergence failed before any proper-score win could be claimed.","textPreview":"Generated verdict is HONEST_NEGATIVE because convergence failed before any proper-score win could be claimed.","textChars":109,"textLines":1,"bbox":[906,520,238,70]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":4,"text":"Sources: figA_scorecard.png, out/scorecard.json","textPreview":"Sources: figA_scorecard.png, out/scorecard.json","textChars":47,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"image","id":"im/pkzupwb2","slide":4,"name":"","alt":"Held-out QOI scorecard","bbox":[64,230,780,390]}
+{"kind":"notes","id":"nt/k9vyq7","slide":4,"text":""}
+{"kind":"slide","id":"sl/nex97k","slide":5,"title":"BETA THERMOMETER","textShapes":12}
+{"kind":"textbox","id":"sh/q1orytsv","slide":5,"text":"BETA THERMOMETER","textPreview":"BETA THERMOMETER","textChars":16,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":5,"text":"Beta does not pin down a stable trust temperature","textPreview":"Beta does not pin down a stable trust temperature","textChars":49,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":5,"text":"The idea is useful; this real coarse-FEM likelihood does not identify it cleanly.","textPreview":"The idea is useful; this real coarse-FEM likelihood does not identify it cleanly.","textChars":81,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":5,"bbox":[910,246,260,106]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":5,"text":"Beta range","textPreview":"Beta range","textChars":10,"textLines":1,"bbox":[928,260,224,24]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":5,"text":"0.155 to 1.26e+3","textPreview":"0.155 to 1.26e+3","textChars":16,"textLines":1,"bbox":[928,284,224,38]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":5,"text":"median by split","textPreview":"median by split","textChars":15,"textLines":1,"bbox":[928,324,224,20]}
+{"kind":"shape","id":"sh/qpg3ex0n","slide":5,"bbox":[910,370,260,106]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":5,"text":"Weak-beta splits","textPreview":"Weak-beta splits","textChars":16,"textLines":1,"bbox":[928,384,224,24]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":5,"text":"76%","textPreview":"76%","textChars":3,"textLines":1,"bbox":[928,408,224,38]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":5,"text":"posterior width test","textPreview":"posterior width test","textChars":20,"textLines":1,"bbox":[928,448,224,20]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":5,"bbox":[910,506,260,92]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":5,"bbox":[910,506,7,92]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":5,"text":"Interpretation: beta collapse or spread is evidence of model-form stress, but here the sampler also fails the all-variable convergence gate.","textPreview":"Interpretation: beta collapse or spread is evidence of model-form stress, but here the sampler also fails the all-variable convergence gate.","textChars":140,"textLines":1,"bbox":[932,520,222,70]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":5,"text":"Sources: figB_beta_thermometer.png, out/ift_mc_headline.json","textPreview":"Sources: figB_beta_thermometer.png, out/ift_mc_headline.json","textChars":60,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"image","id":"im/a1gvy90j","slide":5,"name":"","alt":"Beta thermometer and R-hat by split","bbox":[70,230,810,370]}
+{"kind":"notes","id":"nt/nex97k","slide":5,"text":""}
+{"kind":"slide","id":"sl/fige3i","slide":6,"title":"HELD-OUT FRF OVERLAY","textShapes":7}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":6,"text":"HELD-OUT FRF OVERLAY","textPreview":"HELD-OUT FRF OVERLAY","textChars":20,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":6,"text":"The field-prior arm widens, but does not become trustworthy","textPreview":"The field-prior arm widens, but does not become trustworthy","textChars":59,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":6,"text":"The overlay is a quick visual audit, not a substitute for the proper scores.","textPreview":"The overlay is a quick visual audit, not a substitute for the proper scores.","textChars":76,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/94fu18jq","slide":6,"bbox":[920,252,250,104]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":6,"bbox":[920,252,7,104]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":6,"text":"Figure C uses a log frequency axis and a log magnitude axis for readability because the non-converged IFT band spans orders of magnitude.","textPreview":"Figure C uses a log frequency axis and a log magnitude axis for readability because the non-converged IFT band spans orders of magnitude.","textChars":137,"textLines":1,"bbox":[942,266,212,82]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":6,"bbox":[920,386,250,116]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":6,"bbox":[920,386,7,116]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":6,"text":"M2 is intentionally not drawn as a curve: the inherited whole-FRF baseline is a non-converged failure, not a calibrated posterior band.","textPreview":"M2 is intentionally not drawn as a curve: the inherited whole-FRF baseline is a non-converged failure, not a calibrated posterior band.","textChars":135,"textLines":1,"bbox":[942,400,212,94]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":6,"text":"Sources: figC_heldout_frf_overlay.png, out/figure_manifest.json","textPreview":"Sources: figC_heldout_frf_overlay.png, out/figure_manifest.json","textChars":63,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"image","id":"im/lwval87e","slide":6,"name":"","alt":"Held-out FRF overlay","bbox":[70,214,820,410]}
+{"kind":"notes","id":"nt/fige3i","slide":6,"text":""}
+{"kind":"slide","id":"sl/w6vmks","slide":7,"title":"DISCRETIZATION DIAGNOSTIC","textShapes":12}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":7,"text":"DISCRETIZATION DIAGNOSTIC","textPreview":"DISCRETIZATION DIAGNOSTIC","textChars":25,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/7u54zido","slide":7,"text":"Post-hoc grid sweep is informative, not a certification","textPreview":"Post-hoc grid sweep is informative, not a certification","textChars":55,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":7,"text":"Because the headline posterior is non-converged, this cannot prove the IFT invariance promise.","textPreview":"Because the headline posterior is non-converged, this cannot prove the IFT invariance promise.","textChars":94,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/wra5gbq1","slide":7,"bbox":[902,242,250,106]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":7,"text":"IFT peak shift","textPreview":"IFT peak shift","textChars":14,"textLines":1,"bbox":[920,256,214,24]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":7,"text":"-0.892","textPreview":"-0.892","textChars":6,"textLines":1,"bbox":[920,280,214,38]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":7,"text":"every-4th vs full","textPreview":"every-4th vs full","textChars":17,"textLines":1,"bbox":[920,320,214,20]}
+{"kind":"shape","id":"sh/wval87ed","slide":7,"bbox":[902,366,250,106]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":7,"text":"L5 peak shift","textPreview":"L5 peak shift","textChars":13,"textLines":1,"bbox":[920,380,214,24]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":7,"text":"-0.420","textPreview":"-0.420","textChars":6,"textLines":1,"bbox":[920,404,214,38]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":7,"text":"every-4th vs full","textPreview":"every-4th vs full","textChars":17,"textLines":1,"bbox":[920,444,214,20]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":7,"bbox":[902,502,250,86]}
+{"kind":"shape","id":"sh/6tovahoz","slide":7,"bbox":[902,502,7,86]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":7,"text":"Checker carries this as YELLOW: one split, same posterior samples, no sampler rerun on each grid.","textPreview":"Checker carries this as YELLOW: one split, same posterior samples, no sampler rerun on each grid.","textChars":97,"textLines":1,"bbox":[924,516,212,64]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":7,"text":"Sources: figD_discretization_invariance.png, out/discretization_sensitivity.json","textPreview":"Sources: figD_discretization_invariance.png, out/discretization_sensitivity.json","textChars":80,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"image","id":"im/0je9cvix","slide":7,"name":"","alt":"Discretization diagnostic","bbox":[64,222,800,392]}
+{"kind":"notes","id":"nt/w6vmks","slide":7,"text":""}
+{"kind":"slide","id":"sl/irb158","slide":8,"title":"CONVERGENCE GATE","textShapes":12}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":8,"text":"CONVERGENCE GATE","textPreview":"CONVERGENCE GATE","textChars":16,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":8,"text":"The NUTS run is sampled, but not converged","textPreview":"The NUTS run is sampled, but not converged","textChars":42,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":8,"text":"The rule is all variables, beta included: R-hat <= 1.05, ESS >= 200, divergence fraction < 2%.","textPreview":"The rule is all variables, beta included: R-hat <= 1.05, ESS >= 200, divergence fraction < 2%.","textChars":94,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/32lszqtc","slide":8,"bbox":[890,244,260,106]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":8,"text":"Worst IFT R-hat","textPreview":"Worst IFT R-hat","textChars":15,"textLines":1,"bbox":[908,258,224,24]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":8,"text":"78.0","textPreview":"78.0","textChars":4,"textLines":1,"bbox":[908,282,224,38]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":8,"text":"gate <= 1.05","textPreview":"gate <= 1.05","textChars":12,"textLines":1,"bbox":[908,322,224,20]}
+{"kind":"shape","id":"sh/3q5o7qpg","slide":8,"bbox":[890,368,260,106]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":8,"text":"Min IFT ESS","textPreview":"Min IFT ESS","textChars":11,"textLines":1,"bbox":[908,382,224,24]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":8,"text":"2.02","textPreview":"2.02","textChars":4,"textLines":1,"bbox":[908,406,224,38]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":8,"text":"gate >= 200","textPreview":"gate >= 200","textChars":11,"textLines":1,"bbox":[908,446,224,20]}
+{"kind":"shape","id":"sh/czed8v6p","slide":8,"bbox":[890,492,260,116]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":8,"bbox":[890,492,7,116]}
+{"kind":"textbox","id":"sh/u54zidon","slide":8,"text":"That is why the deck says HONEST_NEGATIVE, not NUTS active, converged, or successful.","textPreview":"That is why the deck says HONEST_NEGATIVE, not NUTS active, converged, or successful.","textChars":85,"textLines":1,"bbox":[912,506,222,94]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":8,"text":"Sources: figE_convergence_table.png, out/convergence_table.json","textPreview":"Sources: figE_convergence_table.png, out/convergence_table.json","textChars":63,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/cbulwval","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"image","id":"im/7ed8bat4","slide":8,"name":"","alt":"Convergence table","bbox":[80,234,760,300]}
+{"kind":"notes","id":"nt/irb158","slide":8,"text":""}
+{"kind":"slide","id":"sl/lzcdqx","slide":9,"title":"VERDICT AND SCOPE","textShapes":18}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":9,"text":"VERDICT AND SCOPE","textPreview":"VERDICT AND SCOPE","textChars":17,"textLines":1,"bbox":[64,46,720,24]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":9,"text":"Honest negative: physics-in-prior did not rescue this coarse-FEM wall","textPreview":"Honest negative: physics-in-prior did not rescue this coarse-FEM wall","textChars":69,"textLines":1,"bbox":[64,82,790,84]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":9,"text":"That is still valuable: it keeps the Bilionis-style claim tied to real held-out data.","textPreview":"That is still valuable: it keeps the Bilionis-style claim tied to real held-out data.","textChars":85,"textLines":1,"bbox":[64,170,820,56]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":9,"bbox":[84,232,1040,54]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":9,"text":"WIN","textPreview":"WIN","textChars":3,"textLines":1,"bbox":[110,246,230,24]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":9,"text":"No","textPreview":"No","textChars":2,"textLines":1,"bbox":[372,246,70,24]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":9,"text":"requires convergence and better proper scores than L5","textPreview":"requires convergence and better proper scores than L5","textChars":53,"textLines":1,"bbox":[470,246,600,24]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":9,"bbox":[84,306,1040,54]}
+{"kind":"textbox","id":"sh/u54zidon","slide":9,"text":"ROBUSTNESS-WIN","textPreview":"ROBUSTNESS-WIN","textChars":14,"textLines":1,"bbox":[110,320,230,24]}
+{"kind":"textbox","id":"sh/cbulwval","slide":9,"text":"No","textPreview":"No","textChars":2,"textLines":1,"bbox":[372,320,70,24]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":9,"text":"requires convergence while avoiding M2 failure","textPreview":"requires convergence while avoiding M2 failure","textChars":46,"textLines":1,"bbox":[470,320,600,24]}
+{"kind":"shape","id":"sh/u54zidon","slide":9,"bbox":[84,380,1040,54]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":9,"text":"TIE","textPreview":"TIE","textChars":3,"textLines":1,"bbox":[110,394,230,24]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":9,"text":"No","textPreview":"No","textChars":2,"textLines":1,"bbox":[372,394,70,24]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":9,"text":"requires comparable scores and calibration","textPreview":"requires comparable scores and calibration","textChars":42,"textLines":1,"bbox":[470,394,600,24]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":9,"bbox":[84,454,1040,54]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":9,"text":"HONEST NEGATIVE","textPreview":"HONEST NEGATIVE","textChars":15,"textLines":1,"bbox":[110,468,230,24]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":9,"text":"Yes","textPreview":"Yes","textChars":3,"textLines":1,"bbox":[372,468,70,24]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":9,"text":"IFT also fails the convergence/trust gate","textPreview":"IFT also fails the convergence/trust gate","textChars":41,"textLines":1,"bbox":[470,468,600,24]}
+{"kind":"shape","id":"sh/tcj6tova","slide":9,"bbox":[84,554,1040,70]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":9,"bbox":[84,554,7,70]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":9,"text":"Proposed durable-note row should copy the checker status verbatim: YELLOW, zero RED, generated verdict HONEST_NEGATIVE. Do not strengthen it.","textPreview":"Proposed durable-note row should copy the checker status verbatim: YELLOW, zero RED, generated verdict HONEST_NEGATIVE. Do not strengthen...","textChars":141,"textLines":1,"bbox":[106,568,1002,48]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":9,"text":"Sources: checker_report.json, packet.md, scorecard.json","textPreview":"Sources: checker_report.json, packet.md, scorecard.json","textChars":55,"textLines":1,"bbox":[64,682,930,22]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,678,48,28]}
+{"kind":"notes","id":"nt/lzcdqx","slide":9,"text":""}

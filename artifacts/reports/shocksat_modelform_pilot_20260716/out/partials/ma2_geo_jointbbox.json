@@ -1,0 +1,53 @@
+{
+ "cid": "ma2_geo_jointbbox",
+ "track": "agent",
+ "round": 2,
+ "cls": "geometry",
+ "ops": [
+  "joint_offset"
+ ],
+ "basis": "exact_at_thetaMAP",
+ "exact_sub200": 0.1733633701518949,
+ "exact_b200_500": 0.16412808832201356,
+ "exact_folds": {
+  "m_xpos_990x": 0.3164227072248985,
+  "m_zpos_990z": 0.5352040936059492,
+  "m_ypos_990y": 0.08083530362550716,
+  "m_zpos_900z": -0.23900862384877525
+ },
+ "exact_folds_b200_500": {
+  "m_xpos_990x": 0.15419606411510775,
+  "m_zpos_990z": 0.13707727459573468,
+  "m_ypos_990y": 0.14959568893767405,
+  "m_zpos_900z": 0.21564332563953775
+ },
+ "theta_map": [
+  1.093329274750798,
+  1.168998455167992,
+  1.0077575586484273,
+  0.9350879840516869,
+  1.0940660371696094,
+  0.9457313370353101,
+  1.159060609278446,
+  1.083542569177854,
+  0.8362838387496683
+ ],
+ "enriched_pkg": "ma2_geo_jointbbox__xenr",
+ "spot_max_pct": 1.1742247174595377e-07,
+ "n_dof": 399510,
+ "delta_dof_pct": 0.0,
+ "n_params": 9,
+ "mech": {
+  "n_rbm": 6,
+  "mass_delta_pct": 0.0242,
+  "max_mode_shift_pct": 0.6954,
+  "min_jac_ratio": 0.7207012040315748,
+  "max_edge_slope": 0.018028319201014335,
+  "pass": true
+ },
+ "solve_s_theta1": 407.0,
+ "solve_s_enrich": 414.7,
+ "wall_s": 875.8,
+ "ts": "2026-07-17T02:18:13",
+ "diagnosis_link": "diagnosis_mf_r2.json: bottom-box joint interface offset along Y (the worst axis: Bottom_Box|Y 0.763 dex) within build tolerance (|d|=0.255 in)"
+}

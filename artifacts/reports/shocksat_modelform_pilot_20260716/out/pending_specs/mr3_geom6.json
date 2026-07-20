@@ -1,0 +1,17 @@
+{
+ "cid": "mr3_geom6",
+ "track": "random",
+ "round": 3,
+ "cls": "geometry",
+ "seed": 20263722,
+ "ops": [
+  {
+   "op": "warp_panel",
+   "pid": 401,
+   "amp": 0.14159006559710066,
+   "name": "rwarp36a0"
+  }
+ ],
+ "rationale": "stratified seeded uniform draw (control track)",
+ "evidence": "none (random)"
+}

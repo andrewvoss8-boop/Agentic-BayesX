@@ -1,0 +1,44 @@
+{
+ "NOTE": "POST-HOC diagnostic (not pre-registered); prior-level mechanism decomposition, no NUTS.",
+ "kappa": 0.1062,
+ "d_share_of_target_net_perturbation_variance": [
+  0.568,
+  0.571,
+  0.559,
+  0.567
+ ],
+ "arms": {
+  "P_full (no sensors: c=prior, d=prior)": {
+   "band_factor_97p5_over_2p5": 5.23,
+   "upper_edge_97p5_over_median": 2.66,
+   "band_factor_range_over_truths": [
+    4.76,
+    5.58
+   ]
+  },
+  "P_cfix (c tight 0.10 on truth, d prior)": {
+   "band_factor_97p5_over_2p5": 5.37,
+   "upper_edge_97p5_over_median": 2.69,
+   "band_factor_range_over_truths": [
+    4.71,
+    6.5
+   ]
+  },
+  "P_dzero (c=prior, d=0)": {
+   "band_factor_97p5_over_2p5": 5.04,
+   "upper_edge_97p5_over_median": 2.42,
+   "band_factor_range_over_truths": [
+    4.54,
+    5.9
+   ]
+  },
+  "P_both (c tight on truth, d=0)": {
+   "band_factor_97p5_over_2p5": 5.47,
+   "upper_edge_97p5_over_median": 2.67,
+   "band_factor_range_over_truths": [
+    3.88,
+    5.87
+   ]
+  }
+ }
+}

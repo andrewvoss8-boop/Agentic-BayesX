@@ -1,0 +1,331 @@
+{
+ "anchor_mult": 1.0,
+ "pairs": [
+  {
+   "data_mode": 0,
+   "f_data": 52.16047719455148,
+   "anchor_mode": 3,
+   "f_anchor": 53.61108800376803,
+   "mac": 0.987,
+   "df_pct": 2.71,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 1,
+   "f_data": 61.816461191043686,
+   "anchor_mode": 10,
+   "f_anchor": 86.50319239349177,
+   "mac": 0.987,
+   "df_pct": 28.54,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 2,
+   "f_data": 68.62860749180037,
+   "anchor_mode": 4,
+   "f_anchor": 71.16501624215465,
+   "mac": 0.754,
+   "df_pct": 3.56,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 3,
+   "f_data": 70.16746401824557,
+   "anchor_mode": 5,
+   "f_anchor": 71.79855697816083,
+   "mac": 0.738,
+   "df_pct": 2.27,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 4,
+   "f_data": 74.68471806320325,
+   "anchor_mode": 8,
+   "f_anchor": 86.43109379951785,
+   "mac": 0.804,
+   "df_pct": 13.59,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 5,
+   "f_data": 83.9100943287882,
+   "anchor_mode": 9,
+   "f_anchor": 86.44871234126707,
+   "mac": 0.378,
+   "df_pct": 2.94,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 6,
+   "f_data": 87.69919637584755,
+   "anchor_mode": 11,
+   "f_anchor": 87.08063226561642,
+   "mac": 0.974,
+   "df_pct": 0.71,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 7,
+   "f_data": 96.63478847506276,
+   "anchor_mode": 7,
+   "f_anchor": 80.60952846588891,
+   "mac": 0.377,
+   "df_pct": 19.88,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 8,
+   "f_data": 97.00005038054435,
+   "anchor_mode": 6,
+   "f_anchor": 80.5704702543705,
+   "mac": 0.532,
+   "df_pct": 20.39,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 9,
+   "f_data": 107.24250401464256,
+   "anchor_mode": 12,
+   "f_anchor": 106.7100442398248,
+   "mac": 0.981,
+   "df_pct": 0.5,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 10,
+   "f_data": 110.33047596055776,
+   "anchor_mode": 13,
+   "f_anchor": 111.89081174609134,
+   "mac": 0.946,
+   "df_pct": 1.39,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 11,
+   "f_data": 119.33054951275865,
+   "anchor_mode": 14,
+   "f_anchor": 115.98059945549095,
+   "mac": 0.945,
+   "df_pct": 2.89,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 12,
+   "f_data": 131.7557360039542,
+   "anchor_mode": 16,
+   "f_anchor": 122.76123991582114,
+   "mac": 0.895,
+   "df_pct": 7.33,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 13,
+   "f_data": 133.90207496240757,
+   "anchor_mode": 17,
+   "f_anchor": 122.93600085588746,
+   "mac": 0.645,
+   "df_pct": 8.92,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 14,
+   "f_data": 133.97241767791417,
+   "anchor_mode": 19,
+   "f_anchor": 123.10395751620112,
+   "mac": 0.917,
+   "df_pct": 8.83,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 15,
+   "f_data": 133.85108135219122,
+   "anchor_mode": 18,
+   "f_anchor": 123.09830228454352,
+   "mac": 0.22,
+   "df_pct": 8.74,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 16,
+   "f_data": 134.34220777536115,
+   "anchor_mode": 20,
+   "f_anchor": 127.02449426829682,
+   "mac": 0.909,
+   "df_pct": 5.76,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 17,
+   "f_data": 142.0353589871082,
+   "anchor_mode": 15,
+   "f_anchor": 121.61448628321438,
+   "mac": 0.985,
+   "df_pct": 16.79,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 18,
+   "f_data": 145.96471465242607,
+   "anchor_mode": 22,
+   "f_anchor": 149.74576890772434,
+   "mac": 0.83,
+   "df_pct": 2.52,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 19,
+   "f_data": 155.4044058307054,
+   "anchor_mode": 21,
+   "f_anchor": 149.53595194216973,
+   "mac": 0.958,
+   "df_pct": 3.92,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 20,
+   "f_data": 157.4497849832112,
+   "anchor_mode": 23,
+   "f_anchor": 155.53095781983052,
+   "mac": 0.968,
+   "df_pct": 1.23,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 21,
+   "f_data": 165.19048957533437,
+   "anchor_mode": 24,
+   "f_anchor": 163.6357326077921,
+   "mac": 0.894,
+   "df_pct": 0.95,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 22,
+   "f_data": 176.3519212258135,
+   "anchor_mode": 27,
+   "f_anchor": 180.5415353605074,
+   "mac": 0.073,
+   "df_pct": 2.32,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 23,
+   "f_data": 177.15159896063136,
+   "anchor_mode": 25,
+   "f_anchor": 171.43575813113645,
+   "mac": 0.89,
+   "df_pct": 3.33,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 24,
+   "f_data": 178.4806324564565,
+   "anchor_mode": 28,
+   "f_anchor": 181.81318942012317,
+   "mac": 0.532,
+   "df_pct": 1.83,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 25,
+   "f_data": 182.3106471991682,
+   "anchor_mode": 26,
+   "f_anchor": 173.75880488380136,
+   "mac": 0.887,
+   "df_pct": 4.92,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 26,
+   "f_data": 183.04820241448755,
+   "anchor_mode": 29,
+   "f_anchor": 187.2624212834403,
+   "mac": 0.059,
+   "df_pct": 2.25,
+   "calib_ok": false
+  },
+  {
+   "data_mode": 27,
+   "f_data": 184.42877369047523,
+   "anchor_mode": 31,
+   "f_anchor": 189.25052388781302,
+   "mac": 0.958,
+   "df_pct": 2.55,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 28,
+   "f_data": 185.66863257629726,
+   "anchor_mode": 32,
+   "f_anchor": 190.3706466443176,
+   "mac": 0.929,
+   "df_pct": 2.47,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 29,
+   "f_data": 189.53862503134127,
+   "anchor_mode": 30,
+   "f_anchor": 188.15399697467396,
+   "mac": 0.914,
+   "df_pct": 0.74,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 30,
+   "f_data": 193.01756992764345,
+   "anchor_mode": 33,
+   "f_anchor": 193.45815350548676,
+   "mac": 0.985,
+   "df_pct": 0.23,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 31,
+   "f_data": 197.0484273882937,
+   "anchor_mode": 34,
+   "f_anchor": 194.80055599329324,
+   "mac": 0.932,
+   "df_pct": 1.15,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 32,
+   "f_data": 204.00336046383313,
+   "anchor_mode": 36,
+   "f_anchor": 207.95241609679852,
+   "mac": 0.827,
+   "df_pct": 1.9,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 33,
+   "f_data": 202.66672067417122,
+   "anchor_mode": 35,
+   "f_anchor": 200.63361945260215,
+   "mac": 0.987,
+   "df_pct": 1.01,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 34,
+   "f_data": 233.65026988770063,
+   "anchor_mode": 37,
+   "f_anchor": 233.91253547300462,
+   "mac": 0.898,
+   "df_pct": 0.11,
+   "calib_ok": true
+  },
+  {
+   "data_mode": 35,
+   "f_data": 234.17584680886128,
+   "anchor_mode": 38,
+   "f_anchor": 236.22803164911912,
+   "mac": 0.587,
+   "df_pct": 0.87,
+   "calib_ok": true
+  }
+ ],
+ "n_calib": 27,
+ "rule": "MAC>=0.5 & |df|<=12% & Hungarian-unique (A27)"
+}

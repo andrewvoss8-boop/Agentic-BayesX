@@ -1,0 +1,940 @@
+{
+ "per_drive": {
+  "m_xpos_990x": [
+   {
+    "hz": 254.3,
+    "prom_dex": 0.495,
+    "med_coh": 0.98,
+    "amp_med_log10": -0.712
+   },
+   {
+    "hz": 274.7,
+    "prom_dex": 1.178,
+    "med_coh": 0.976,
+    "amp_med_log10": -0.361
+   },
+   {
+    "hz": 295.0,
+    "prom_dex": 0.158,
+    "med_coh": 0.939,
+    "amp_med_log10": -0.684
+   },
+   {
+    "hz": 303.1,
+    "prom_dex": 0.417,
+    "med_coh": 0.987,
+    "amp_med_log10": -0.566
+   },
+   {
+    "hz": 341.8,
+    "prom_dex": 0.362,
+    "med_coh": 0.928,
+    "amp_med_log10": -1.086
+   },
+   {
+    "hz": 366.2,
+    "prom_dex": 0.783,
+    "med_coh": 0.989,
+    "amp_med_log10": -0.617
+   },
+   {
+    "hz": 437.4,
+    "prom_dex": 0.643,
+    "med_coh": 0.985,
+    "amp_med_log10": -0.448
+   },
+   {
+    "hz": 463.9,
+    "prom_dex": 0.448,
+    "med_coh": 0.964,
+    "amp_med_log10": -0.584
+   },
+   {
+    "hz": 490.3,
+    "prom_dex": 0.527,
+    "med_coh": 0.965,
+    "amp_med_log10": -0.446
+   },
+   {
+    "hz": 512.7,
+    "prom_dex": 0.806,
+    "med_coh": 0.972,
+    "amp_med_log10": -0.435
+   },
+   {
+    "hz": 545.2,
+    "prom_dex": 0.362,
+    "med_coh": 0.959,
+    "amp_med_log10": -0.86
+   },
+   {
+    "hz": 598.1,
+    "prom_dex": 0.393,
+    "med_coh": 0.974,
+    "amp_med_log10": -0.637
+   },
+   {
+    "hz": 610.4,
+    "prom_dex": 0.261,
+    "med_coh": 0.969,
+    "amp_med_log10": -0.642
+   },
+   {
+    "hz": 642.9,
+    "prom_dex": 0.275,
+    "med_coh": 0.942,
+    "amp_med_log10": -0.733
+   },
+   {
+    "hz": 669.4,
+    "prom_dex": 0.661,
+    "med_coh": 0.963,
+    "amp_med_log10": -0.269
+   },
+   {
+    "hz": 728.4,
+    "prom_dex": 0.923,
+    "med_coh": 0.959,
+    "amp_med_log10": -0.102
+   },
+   {
+    "hz": 781.2,
+    "prom_dex": 0.408,
+    "med_coh": 0.974,
+    "amp_med_log10": -0.358
+   },
+   {
+    "hz": 860.6,
+    "prom_dex": 0.218,
+    "med_coh": 0.966,
+    "amp_med_log10": -0.649
+   },
+   {
+    "hz": 883.0,
+    "prom_dex": 0.295,
+    "med_coh": 0.951,
+    "amp_med_log10": -0.415
+   },
+   {
+    "hz": 915.5,
+    "prom_dex": 0.419,
+    "med_coh": 0.984,
+    "amp_med_log10": -0.247
+   },
+   {
+    "hz": 960.3,
+    "prom_dex": 0.732,
+    "med_coh": 0.978,
+    "amp_med_log10": -0.021
+   }
+  ],
+  "m_zpos_990z": [
+   {
+    "hz": 234.0,
+    "prom_dex": 0.208,
+    "med_coh": 0.924,
+    "amp_med_log10": -1.333
+   },
+   {
+    "hz": 254.3,
+    "prom_dex": 0.952,
+    "med_coh": 0.994,
+    "amp_med_log10": -0.77
+   },
+   {
+    "hz": 274.7,
+    "prom_dex": 0.417,
+    "med_coh": 0.967,
+    "amp_med_log10": -0.896
+   },
+   {
+    "hz": 297.0,
+    "prom_dex": 0.622,
+    "med_coh": 0.987,
+    "amp_med_log10": -0.824
+   },
+   {
+    "hz": 309.2,
+    "prom_dex": 0.333,
+    "med_coh": 0.989,
+    "amp_med_log10": -0.839
+   },
+   {
+    "hz": 317.4,
+    "prom_dex": 0.274,
+    "med_coh": 0.99,
+    "amp_med_log10": -0.916
+   },
+   {
+    "hz": 341.8,
+    "prom_dex": 0.339,
+    "med_coh": 0.968,
+    "amp_med_log10": -1.071
+   },
+   {
+    "hz": 354.0,
+    "prom_dex": 0.289,
+    "med_coh": 0.99,
+    "amp_med_log10": -1.081
+   },
+   {
+    "hz": 368.2,
+    "prom_dex": 0.51,
+    "med_coh": 0.96,
+    "amp_med_log10": -1.039
+   },
+   {
+    "hz": 384.5,
+    "prom_dex": 0.35,
+    "med_coh": 0.987,
+    "amp_med_log10": -1.051
+   },
+   {
+    "hz": 394.7,
+    "prom_dex": 0.169,
+    "med_coh": 0.991,
+    "amp_med_log10": -1.088
+   },
+   {
+    "hz": 480.1,
+    "prom_dex": 0.4,
+    "med_coh": 0.972,
+    "amp_med_log10": -1.144
+   },
+   {
+    "hz": 547.3,
+    "prom_dex": 0.176,
+    "med_coh": 0.933,
+    "amp_med_log10": -1.455
+   },
+   {
+    "hz": 598.1,
+    "prom_dex": 0.25,
+    "med_coh": 0.733,
+    "amp_med_log10": -1.432
+   },
+   {
+    "hz": 683.6,
+    "prom_dex": 0.549,
+    "med_coh": 0.897,
+    "amp_med_log10": -1.166
+   },
+   {
+    "hz": 785.3,
+    "prom_dex": 0.565,
+    "med_coh": 0.713,
+    "amp_med_log10": -1.141
+   },
+   {
+    "hz": 976.6,
+    "prom_dex": 0.342,
+    "med_coh": 0.835,
+    "amp_med_log10": -1.172
+   }
+  ],
+  "m_ypos_990y": [
+   {
+    "hz": 231.9,
+    "prom_dex": 0.439,
+    "med_coh": 0.982,
+    "amp_med_log10": -0.971
+   },
+   {
+    "hz": 254.3,
+    "prom_dex": 0.757,
+    "med_coh": 0.986,
+    "amp_med_log10": -0.652
+   },
+   {
+    "hz": 274.7,
+    "prom_dex": 0.982,
+    "med_coh": 0.95,
+    "amp_med_log10": -0.596
+   },
+   {
+    "hz": 297.0,
+    "prom_dex": 0.693,
+    "med_coh": 0.981,
+    "amp_med_log10": -0.667
+   },
+   {
+    "hz": 309.2,
+    "prom_dex": 0.244,
+    "med_coh": 0.957,
+    "amp_med_log10": -0.685
+   },
+   {
+    "hz": 317.4,
+    "prom_dex": 0.275,
+    "med_coh": 0.98,
+    "amp_med_log10": -0.902
+   },
+   {
+    "hz": 341.8,
+    "prom_dex": 0.284,
+    "med_coh": 0.95,
+    "amp_med_log10": -1.081
+   },
+   {
+    "hz": 354.0,
+    "prom_dex": 0.18,
+    "med_coh": 0.953,
+    "amp_med_log10": -1.078
+   },
+   {
+    "hz": 366.2,
+    "prom_dex": 0.63,
+    "med_coh": 0.848,
+    "amp_med_log10": -0.763
+   },
+   {
+    "hz": 394.7,
+    "prom_dex": 0.256,
+    "med_coh": 0.913,
+    "amp_med_log10": -1.245
+   },
+   {
+    "hz": 406.9,
+    "prom_dex": 0.212,
+    "med_coh": 0.828,
+    "amp_med_log10": -1.26
+   },
+   {
+    "hz": 437.4,
+    "prom_dex": 0.433,
+    "med_coh": 0.963,
+    "amp_med_log10": -0.789
+   },
+   {
+    "hz": 449.6,
+    "prom_dex": 0.198,
+    "med_coh": 0.955,
+    "amp_med_log10": -0.928
+   },
+   {
+    "hz": 463.9,
+    "prom_dex": 0.269,
+    "med_coh": 0.972,
+    "amp_med_log10": -0.867
+   },
+   {
+    "hz": 478.1,
+    "prom_dex": 0.356,
+    "med_coh": 0.975,
+    "amp_med_log10": -0.719
+   },
+   {
+    "hz": 514.7,
+    "prom_dex": 0.737,
+    "med_coh": 0.937,
+    "amp_med_log10": -0.67
+   },
+   {
+    "hz": 524.9,
+    "prom_dex": 0.161,
+    "med_coh": 0.907,
+    "amp_med_log10": -0.904
+   },
+   {
+    "hz": 545.2,
+    "prom_dex": 0.517,
+    "med_coh": 0.906,
+    "amp_med_log10": -0.767
+   },
+   {
+    "hz": 561.5,
+    "prom_dex": 0.157,
+    "med_coh": 0.914,
+    "amp_med_log10": -1.125
+   },
+   {
+    "hz": 583.9,
+    "prom_dex": 0.204,
+    "med_coh": 0.948,
+    "amp_med_log10": -0.939
+   },
+   {
+    "hz": 598.1,
+    "prom_dex": 0.718,
+    "med_coh": 0.929,
+    "amp_med_log10": -0.661
+   },
+   {
+    "hz": 671.4,
+    "prom_dex": 0.722,
+    "med_coh": 0.941,
+    "amp_med_log10": -0.534
+   },
+   {
+    "hz": 679.5,
+    "prom_dex": 0.202,
+    "med_coh": 0.921,
+    "amp_med_log10": -0.602
+   },
+   {
+    "hz": 728.4,
+    "prom_dex": 0.752,
+    "med_coh": 0.963,
+    "amp_med_log10": -0.426
+   },
+   {
+    "hz": 767.0,
+    "prom_dex": 0.382,
+    "med_coh": 0.951,
+    "amp_med_log10": -0.718
+   },
+   {
+    "hz": 799.6,
+    "prom_dex": 0.224,
+    "med_coh": 0.901,
+    "amp_med_log10": -0.72
+   },
+   {
+    "hz": 846.4,
+    "prom_dex": 0.214,
+    "med_coh": 0.917,
+    "amp_med_log10": -0.904
+   },
+   {
+    "hz": 860.6,
+    "prom_dex": 0.186,
+    "med_coh": 0.948,
+    "amp_med_log10": -0.841
+   },
+   {
+    "hz": 887.0,
+    "prom_dex": 0.154,
+    "med_coh": 0.947,
+    "amp_med_log10": -0.811
+   },
+   {
+    "hz": 915.5,
+    "prom_dex": 0.51,
+    "med_coh": 0.94,
+    "amp_med_log10": -0.387
+   },
+   {
+    "hz": 962.3,
+    "prom_dex": 0.355,
+    "med_coh": 0.961,
+    "amp_med_log10": -0.368
+   },
+   {
+    "hz": 974.5,
+    "prom_dex": 0.22,
+    "med_coh": 0.94,
+    "amp_med_log10": -0.445
+   }
+  ],
+  "m_zpos_900z": [
+   {
+    "hz": 244.1,
+    "prom_dex": 0.283,
+    "med_coh": 0.972,
+    "amp_med_log10": -1.244
+   },
+   {
+    "hz": 258.4,
+    "prom_dex": 0.327,
+    "med_coh": 0.964,
+    "amp_med_log10": -1.161
+   },
+   {
+    "hz": 274.7,
+    "prom_dex": 0.609,
+    "med_coh": 0.985,
+    "amp_med_log10": -0.982
+   },
+   {
+    "hz": 297.0,
+    "prom_dex": 0.384,
+    "med_coh": 0.969,
+    "amp_med_log10": -1.086
+   },
+   {
+    "hz": 323.5,
+    "prom_dex": 0.237,
+    "med_coh": 0.955,
+    "amp_med_log10": -1.281
+   },
+   {
+    "hz": 343.8,
+    "prom_dex": 0.338,
+    "med_coh": 0.966,
+    "amp_med_log10": -1.035
+   },
+   {
+    "hz": 354.0,
+    "prom_dex": 0.186,
+    "med_coh": 0.927,
+    "amp_med_log10": -1.097
+   },
+   {
+    "hz": 374.3,
+    "prom_dex": 1.033,
+    "med_coh": 0.991,
+    "amp_med_log10": -0.794
+   },
+   {
+    "hz": 463.9,
+    "prom_dex": 0.167,
+    "med_coh": 0.71,
+    "amp_med_log10": -1.486
+   },
+   {
+    "hz": 504.6,
+    "prom_dex": 0.355,
+    "med_coh": 0.796,
+    "amp_med_log10": -1.454
+   },
+   {
+    "hz": 612.4,
+    "prom_dex": 0.26,
+    "med_coh": 0.876,
+    "amp_med_log10": -1.559
+   },
+   {
+    "hz": 651.0,
+    "prom_dex": 0.201,
+    "med_coh": 0.883,
+    "amp_med_log10": -1.494
+   },
+   {
+    "hz": 701.9,
+    "prom_dex": 0.346,
+    "med_coh": 0.917,
+    "amp_med_log10": -1.467
+   },
+   {
+    "hz": 880.9,
+    "prom_dex": 0.173,
+    "med_coh": 0.707,
+    "amp_med_log10": -1.513
+   },
+   {
+    "hz": 927.7,
+    "prom_dex": 0.307,
+    "med_coh": 0.619,
+    "amp_med_log10": -1.456
+   },
+   {
+    "hz": 976.6,
+    "prom_dex": 0.319,
+    "med_coh": 0.836,
+    "amp_med_log10": -1.346
+   }
+  ]
+ },
+ "clusters": [
+  {
+   "hz_mean": 232.9,
+   "n_drives": 2,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 244.1,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 254.3,
+   "n_drives": 3,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 258.4,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 274.7,
+   "n_drives": 4,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_900z",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 296.5,
+   "n_drives": 4,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_900z",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 303.1,
+   "n_drives": 1,
+   "drives": [
+    "m_xpos_990x"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 309.2,
+   "n_drives": 2,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 317.4,
+   "n_drives": 2,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 323.5,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 342.3,
+   "n_drives": 4,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_900z",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 354.0,
+   "n_drives": 3,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_900z",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 366.9,
+   "n_drives": 3,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 374.3,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 384.5,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 394.7,
+   "n_drives": 2,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 406.9,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 437.4,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 449.6,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 463.9,
+   "n_drives": 3,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_900z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 479.1,
+   "n_drives": 2,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 490.3,
+   "n_drives": 1,
+   "drives": [
+    "m_xpos_990x"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 504.6,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 513.7,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 524.9,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 545.9,
+   "n_drives": 3,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 561.5,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 583.9,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 598.1,
+   "n_drives": 3,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 611.4,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 642.9,
+   "n_drives": 1,
+   "drives": [
+    "m_xpos_990x"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 651.0,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 670.4,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 681.5,
+   "n_drives": 2,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 701.9,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 728.4,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 767.0,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 783.2,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 799.6,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 846.4,
+   "n_drives": 1,
+   "drives": [
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 860.6,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 883.6,
+   "n_drives": 3,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y",
+    "m_zpos_900z"
+   ],
+   "measured_3plus": true
+  },
+  {
+   "hz_mean": 915.5,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 927.7,
+   "n_drives": 1,
+   "drives": [
+    "m_zpos_900z"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 961.3,
+   "n_drives": 2,
+   "drives": [
+    "m_xpos_990x",
+    "m_ypos_990y"
+   ],
+   "measured_3plus": false
+  },
+  {
+   "hz_mean": 975.9,
+   "n_drives": 3,
+   "drives": [
+    "m_ypos_990y",
+    "m_zpos_900z",
+    "m_zpos_990z"
+   ],
+   "measured_3plus": true
+  }
+ ],
+ "n_clusters_measured_3plus": 11,
+ "note": "dev drives only (vault untouched); peaks 200-1000 Hz; coherence-gated"
+}

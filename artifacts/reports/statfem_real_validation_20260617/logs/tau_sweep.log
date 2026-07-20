@@ -1,0 +1,6 @@
+  tau full20      (20 modes, MAC>=0.34): conv True | peak IS 797 cov 0.97 | band IS 2173
+  tau mac_ge_0.5  (17 modes, MAC>=0.51): conv True | peak IS 809 cov 0.97 | band IS 2059
+  tau mac_ge_0.7  (10 modes, MAC>=0.70): conv True | peak IS 842 cov 0.97 | band IS 2207
+  tau top6        ( 6 modes, MAC>=0.88): conv True | peak IS 1021 cov 0.97 | band IS 2830
+
+TAU SWEEP DONE. Best held-out PEAK IS: tau=full20 (797); best BAND IS: tau=mac_ge_0.5 (2059).

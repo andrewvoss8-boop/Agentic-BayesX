@@ -1,0 +1,18 @@
+  [D/full] shear_X 2.176x (deliv 1.508) | shear_Y 37.685x (deliv 2.301) | normal_Z 6.122x (deliv 2.526)
+  [D/freq_only] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.594 over 4 drives
+  [D/freq_only] shear_X 1.495x (deliv 1.508) | shear_Y 2.285x (deliv 2.301) | normal_Z 2.544x (deliv 2.526)
+  [D/cluster_amp] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.712 over 4 drives
+  [D/cluster_amp] shear_X 1.213x (deliv 1.508) | shear_Y 2.475x (deliv 2.301) | normal_Z 6.08x (deliv 2.526)
+  [R/full] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.612 over 4 drives
+  [R/full] shear_X 9.241x (deliv 1.508) | shear_Y 2.671x (deliv 2.301) | normal_Z 7.792x (deliv 2.526)
+  [R/freq_only] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.592 over 4 drives
+  [R/freq_only] shear_X 1.489x (deliv 1.508) | shear_Y 2.303x (deliv 2.301) | normal_Z 2.52x (deliv 2.526)
+  [R/cluster_amp] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.586 over 4 drives
+  [R/cluster_amp] shear_X 1.339x (deliv 1.508) | shear_Y 2.238x (deliv 2.301) | normal_Z 53.567x (deliv 2.526)
+
+  baseline held-out DEV coverage (the delivered twin, for reference):
+  [DELIVERED] held-out DEV coverage: shear_X: min 1.0 over 4 drives | shear_Y: min 0.596 over 4 drives
+
+S3: YELLOW (met=None)   S4: YELLOW (met=False)
+vault: 0 +XY reads (must be 0)
+wrote out/verdicts_S3S4.json, out/s3_mapping.json, out/vault_guard.json, out/band_curves.npz

@@ -1,0 +1,10 @@
+[V2] free-free RBM on REFINED dish submodel
+[V2] pass=True |lam_rbm|/lam_el 2.85e-12, f7 474.6 Hz
+[V3] refinement null test (dish 2x, full model, own-space solve)
+[V3] pass=False max|df| 40.1322%, dMAC +0.0024
+[V4] thickness physics strip test (nu=0)
+[V4] pass=True t x2: membrane x2.000 (want 2), bending x7.992 (want 8)
+[V5] frozen-pairing churn test
+[V5] pass=True re-pairing churns 16 (hung) / 10 (greedy) pairs on +10% shift; frozen pairing untouched=True
+
+ALL GATES: FAIL  total 466s

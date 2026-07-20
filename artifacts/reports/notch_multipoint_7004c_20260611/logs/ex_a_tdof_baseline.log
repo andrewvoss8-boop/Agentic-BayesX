@@ -1,0 +1,13 @@
+wrote results/ex_a_results.json
+EX-A done. anchors:
+  As_at_1                  ours=  50.0100 handbook=  50.010 rel_err=  0.00%
+  Ms_at_1                  ours=   0.0200 handbook=   0.020 rel_err=  0.00%
+  Ml_at_0p62               ours=   1.6242 handbook=   1.620 rel_err=  0.26%
+  Ml_at_1                  ours=  50.0100 handbook=  50.010 rel_err=  0.00%
+  sum_at_1                 ours=  50.0300 handbook=  50.030 rel_err=  0.00%
+  A_at_0p62                ours=  51.7640 handbook=  51.760 rel_err=  0.01%
+  A_at_1_notch             ours=   0.0200 handbook=   0.020 rel_err=  0.04%
+  F_at_0p62                ours=  84.0764 handbook=  84.080 rel_err=  0.00%
+  F_at_1p62                ours=   5.2479 handbook=   5.250 rel_err=  0.04%
+  fig8_ordinate_mr1_Q50    ours=   2.6174 handbook=   2.640 rel_err=  0.86%
+  impedance==direct: A 1.19e-14, F 1.22e-14

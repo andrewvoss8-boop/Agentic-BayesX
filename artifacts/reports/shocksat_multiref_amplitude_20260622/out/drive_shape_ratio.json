@@ -1,0 +1,111 @@
+{
+  "deliverable": "drive-shape-ratio mechanism: does |H(d1)|/|H(d2)| recover phi_d ratio (sensor- & zeta-free)?",
+  "common_N": 65536,
+  "coh_min": 0.5,
+  "n_matched_modes": 27,
+  "references": {
+    "xpos_990x": {
+      "label": "+X",
+      "instrument": "impact",
+      "n_hits": 1
+    },
+    "zpos_990z": {
+      "label": "+Z",
+      "instrument": "impact",
+      "n_hits": 4
+    },
+    "ypos_990y": {
+      "label": "+Y",
+      "instrument": "modal",
+      "n_hits": 4
+    },
+    "z_900z": {
+      "label": "900z",
+      "instrument": "impact",
+      "n_hits": 4
+    }
+  },
+  "pairs": {
+    "xpos_990x__zpos_990z": {
+      "label_pair": "+X/+Z",
+      "instrument_pair": "impact/impact",
+      "n_modes_excited_both": 27,
+      "median_sensor_spread_log": 0.6618795653049976,
+      "median_n_sensors_per_mode": 25.0,
+      "pearson_logratio_meas_vs_fem": 0.321342634874944,
+      "spearman_logratio_meas_vs_fem": 0.28205128205128205,
+      "fem_logratio_range": 9.51939026716284
+    },
+    "xpos_990x__ypos_990y": {
+      "label_pair": "+X/+Y",
+      "instrument_pair": "impact/modal",
+      "n_modes_excited_both": 27,
+      "median_sensor_spread_log": 0.9474573916819192,
+      "median_n_sensors_per_mode": 82.0,
+      "pearson_logratio_meas_vs_fem": 0.026762155875993992,
+      "spearman_logratio_meas_vs_fem": 0.04700854700854701,
+      "fem_logratio_range": 4.4410408443548395
+    },
+    "xpos_990x__z_900z": {
+      "label_pair": "+X/900z",
+      "instrument_pair": "impact/impact",
+      "n_modes_excited_both": 27,
+      "median_sensor_spread_log": 0.7026010560210593,
+      "median_n_sensors_per_mode": 40.0,
+      "pearson_logratio_meas_vs_fem": 0.08848983925743543,
+      "spearman_logratio_meas_vs_fem": 0.06959706959706959,
+      "fem_logratio_range": 11.11246823421668
+    },
+    "zpos_990z__ypos_990y": {
+      "label_pair": "+Z/+Y",
+      "instrument_pair": "impact/modal",
+      "n_modes_excited_both": 27,
+      "median_sensor_spread_log": 0.583480369708681,
+      "median_n_sensors_per_mode": 24.0,
+      "pearson_logratio_meas_vs_fem": -0.23790671731264063,
+      "spearman_logratio_meas_vs_fem": -0.3520073312267878,
+      "fem_logratio_range": 10.1656125653683
+    },
+    "zpos_990z__z_900z": {
+      "label_pair": "+Z/900z",
+      "instrument_pair": "impact/impact",
+      "n_modes_excited_both": 26,
+      "median_sensor_spread_log": 0.34038867317254523,
+      "median_n_sensors_per_mode": 16.5,
+      "pearson_logratio_meas_vs_fem": 0.3243226944819732,
+      "spearman_logratio_meas_vs_fem": 0.14940170940170938,
+      "fem_logratio_range": 9.715060970699437
+    },
+    "ypos_990y__z_900z": {
+      "label_pair": "+Y/900z",
+      "instrument_pair": "modal/impact",
+      "n_modes_excited_both": 27,
+      "median_sensor_spread_log": 0.6336712918593569,
+      "median_n_sensors_per_mode": 34.0,
+      "pearson_logratio_meas_vs_fem": -0.488030706514389,
+      "spearman_logratio_meas_vs_fem": -0.4536019536019536,
+      "fem_logratio_range": 11.758690532422136
+    }
+  },
+  "corr_meas_vs_fem_ratio": 0.057625997566714715,
+  "best_pair_corr": 0.3243226944819732,
+  "impact_impact_pairs_corr": [
+    [
+      "impact/impact",
+      0.321342634874944,
+      27
+    ],
+    [
+      "impact/impact",
+      0.08848983925743543,
+      27
+    ],
+    [
+      "impact/impact",
+      0.3243226944819732,
+      26
+    ]
+  ],
+  "interpretation": "High corr + small sensor-spread \u21d2 the cross-reference peak ratio recovers the FEM drive-participation ratio independent of sensor and damping = the confound is breakable from this data. Near-zero corr / large sensor-spread (expected where at-resonance coherence is near the noise floor) \u21d2 the impact data cannot break it; only clean (modal-hammer-involving) pairs can.",
+  "runtime_s": 0.9106388092041016
+}

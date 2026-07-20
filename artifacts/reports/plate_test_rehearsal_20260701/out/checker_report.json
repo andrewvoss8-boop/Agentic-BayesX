@@ -1,0 +1,168 @@
+{
+ "overall": "RED",
+ "green": 28,
+ "yellow": 3,
+ "red": 1,
+ "gates": [
+  {
+   "gate": "checker_lock",
+   "status": "GREEN",
+   "msg": "sha 1a913d806a52 vs locked 1a913d806a52"
+  },
+  {
+   "gate": "file_priority_deliverables.md",
+   "status": "GREEN",
+   "msg": "priority_deliverables.md"
+  },
+  {
+   "gate": "file_question_framing.md",
+   "status": "GREEN",
+   "msg": "question_framing.md"
+  },
+  {
+   "gate": "file_quantity_contracts.md",
+   "status": "GREEN",
+   "msg": "quantity_contracts.md"
+  },
+  {
+   "gate": "file_assumptions_ledger.md",
+   "status": "GREEN",
+   "msg": "assumptions_ledger.md"
+  },
+  {
+   "gate": "file_decisions_log.md",
+   "status": "GREEN",
+   "msg": "decisions_log.md"
+  },
+  {
+   "gate": "file_run_all.sh",
+   "status": "GREEN",
+   "msg": "run_all.sh"
+  },
+  {
+   "gate": "runs_A0_1sensor",
+   "status": "GREEN",
+   "msg": "8/8 runs"
+  },
+  {
+   "gate": "runs_A1_12sensor",
+   "status": "GREEN",
+   "msg": "8/8 runs"
+  },
+  {
+   "gate": "runs_A2_20sensor",
+   "status": "GREEN",
+   "msg": "8/8 runs"
+  },
+  {
+   "gate": "runs_A3_12jitter",
+   "status": "GREEN",
+   "msg": "8/8 runs"
+  },
+  {
+   "gate": "runs_S_sd04",
+   "status": "GREEN",
+   "msg": "2/2 runs"
+  },
+  {
+   "gate": "runs_S_sd16",
+   "status": "GREEN",
+   "msg": "2/2 runs"
+  },
+  {
+   "gate": "S3_convergence_A0_1sensor",
+   "status": "YELLOW",
+   "msg": "7/8 converged (worst rhat 1.1388, min ess 22.9)"
+  },
+  {
+   "gate": "S3_convergence_A1_12sensor",
+   "status": "GREEN",
+   "msg": "8/8 converged (worst rhat 1.0028, min ess 1493.3)"
+  },
+  {
+   "gate": "S3_convergence_A2_20sensor",
+   "status": "GREEN",
+   "msg": "8/8 converged (worst rhat 1.0026, min ess 1311.0)"
+  },
+  {
+   "gate": "S3_convergence_A3_12jitter",
+   "status": "GREEN",
+   "msg": "8/8 converged (worst rhat 1.0052, min ess 1613.0)"
+  },
+  {
+   "gate": "S3_convergence_S_sd04",
+   "status": "GREEN",
+   "msg": "2/2 converged (worst rhat 1.0033, min ess 1713.3)"
+  },
+  {
+   "gate": "S3_convergence_S_sd16",
+   "status": "GREEN",
+   "msg": "2/2 converged (worst rhat 1.0015, min ess 2502.8)"
+  },
+  {
+   "gate": "S1_buydown",
+   "status": "RED",
+   "msg": "A1 6.2x >= A0 6.17x \u2014 no buy-down"
+  },
+  {
+   "gate": "S2_coverage",
+   "status": "GREEN",
+   "msg": "mean 0.998, 8/8 seeds >= 0.85"
+  },
+  {
+   "gate": "S4_integrity",
+   "status": "GREEN",
+   "msg": "A0 median 6.17x >= 4.5x (no false sharpening)"
+  },
+  {
+   "gate": "S5_jitter",
+   "status": "YELLOW",
+   "msg": "degraded (band 6.54x, cov 1.0) \u2014 document mechanism"
+  },
+  {
+   "gate": "S6_pooling",
+   "status": "YELLOW",
+   "msg": "0.579 in (0.40,0.60] \u2014 partially constrained"
+  },
+  {
+   "gate": "artifact_fig_buydown_rehearsed.png",
+   "status": "GREEN",
+   "msg": "figures/fig_buydown_rehearsed.png"
+  },
+  {
+   "gate": "artifact_fig_bands_vs_truth.png",
+   "status": "GREEN",
+   "msg": "figures/fig_bands_vs_truth.png"
+  },
+  {
+   "gate": "artifact_fig_amp_recovery.png",
+   "status": "GREEN",
+   "msg": "figures/fig_amp_recovery.png"
+  },
+  {
+   "gate": "artifact_fig_sensor_data.png",
+   "status": "GREEN",
+   "msg": "figures/fig_sensor_data.png"
+  },
+  {
+   "gate": "artifact_fig_graphical_model.png",
+   "status": "GREEN",
+   "msg": "figures/fig_graphical_model.png"
+  },
+  {
+   "gate": "artifact_packet.md",
+   "status": "GREEN",
+   "msg": "packet.md"
+  },
+  {
+   "gate": "artifact_findings.md",
+   "status": "GREEN",
+   "msg": "findings.md"
+  },
+  {
+   "gate": "artifact_runtime.json",
+   "status": "GREEN",
+   "msg": "runtime.json"
+  }
+ ]
+}

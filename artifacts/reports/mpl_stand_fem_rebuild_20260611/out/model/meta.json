@@ -1,0 +1,340 @@
+{
+ "n_grids": 1554,
+ "ndof_full": 9324,
+ "ndof_master": 8778,
+ "n_rbe2_dep_grids": 91,
+ "n_spc_dofs": 24,
+ "n_zero_diag_after_assembly": 0,
+ "n_beam_wall": 406,
+ "n_beam_rest": 882,
+ "n_shield_quads": 90,
+ "n_shield_grids": 121,
+ "oop_max_plate": 0.0,
+ "oop_max_shield": 0.0,
+ "thrust_plate_t": 0.5,
+ "shield_t": 0.06692913385826771,
+ "screw_log": [
+  {
+   "panel": "upper",
+   "shield_grid": 800067,
+   "frame_grid": 633,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800071,
+   "frame_grid": 652,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800075,
+   "frame_grid": 671,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800001,
+   "frame_grid": 121,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800005,
+   "frame_grid": 140,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800009,
+   "frame_grid": 159,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800033,
+   "frame_grid": 1043,
+   "gap_in": 1.301
+  },
+  {
+   "panel": "upper",
+   "shield_grid": 800043,
+   "frame_grid": 1499,
+   "gap_in": 1.296
+  },
+  {
+   "panel": "lower",
+   "shield_grid": 800111,
+   "frame_grid": 458,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "lower",
+   "shield_grid": 800115,
+   "frame_grid": 477,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "lower",
+   "shield_grid": 800119,
+   "frame_grid": 496,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "lower",
+   "shield_grid": 800078,
+   "frame_grid": 191,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "lower",
+   "shield_grid": 800082,
+   "frame_grid": 882,
+   "gap_in": 0.75
+  },
+  {
+   "panel": "lower",
+   "shield_grid": 800086,
+   "frame_grid": 842,
+   "gap_in": 0.75
+  }
+ ],
+ "mount_log": {
+  "electronics_box": {
+   "cg_grid": 900002,
+   "mass_lbm": 3.0,
+   "attach_grids": [
+    800034,
+    800036,
+    800024
+   ],
+   "attach_dist_in": [
+    6.91,
+    5.52,
+    3.63
+   ],
+   "attached_to": "shield",
+   "inertia_diag": [
+    0.06475190953381216,
+    0.08806259696598452,
+    0.10619313163545192
+   ]
+  },
+  "white_box_upper": {
+   "cg_grid": 900003,
+   "mass_lbm": 8.0,
+   "attach_grids": [
+    577,
+    578
+   ],
+   "attach_dist_in": [
+    10.92,
+    10.96
+   ],
+   "attached_to": "frame",
+   "inertia_diag": [
+    0.15367786529358085,
+    0.21583969844604053,
+    0.28318168436120517
+   ]
+  }
+ },
+ "valve_frame": {
+  "series": "1515 (1.5 in, ASSUMED)",
+  "material": "6105-T5 aluminum",
+  "n_nodes": 16,
+  "n_beams": 28,
+  "beams": [
+   [
+    910000,
+    910008
+   ],
+   [
+    910004,
+    910012
+   ],
+   [
+    910001,
+    910009
+   ],
+   [
+    910005,
+    910013
+   ],
+   [
+    910002,
+    910010
+   ],
+   [
+    910006,
+    910014
+   ],
+   [
+    910003,
+    910011
+   ],
+   [
+    910007,
+    910015
+   ],
+   [
+    910000,
+    910001
+   ],
+   [
+    910001,
+    910002
+   ],
+   [
+    910002,
+    910003
+   ],
+   [
+    910008,
+    910009
+   ],
+   [
+    910009,
+    910010
+   ],
+   [
+    910010,
+    910011
+   ],
+   [
+    910004,
+    910005
+   ],
+   [
+    910005,
+    910006
+   ],
+   [
+    910006,
+    910007
+   ],
+   [
+    910012,
+    910013
+   ],
+   [
+    910013,
+    910014
+   ],
+   [
+    910014,
+    910015
+   ],
+   [
+    910000,
+    910004
+   ],
+   [
+    910008,
+    910012
+   ],
+   [
+    910001,
+    910005
+   ],
+   [
+    910009,
+    910013
+   ],
+   [
+    910002,
+    910006
+   ],
+   [
+    910010,
+    910014
+   ],
+   [
+    910003,
+    910007
+   ],
+   [
+    910011,
+    910015
+   ]
+  ],
+  "mount": [
+   {
+    "frame_node": 910000,
+    "stand_grid": 302,
+    "gap_in": 2.45
+   },
+   {
+    "frame_node": 910003,
+    "stand_grid": 1437,
+    "gap_in": 2.02
+   },
+   {
+    "frame_node": 910004,
+    "stand_grid": 1105,
+    "gap_in": 5.62
+   },
+   {
+    "frame_node": 910007,
+    "stand_grid": 193,
+    "gap_in": 2.66
+   }
+  ],
+  "frame_self_mass_lbm": 18.57,
+  "tank_valve_lumped_lbm": 16.0,
+  "total_valve_assembly_lbm": 34.57
+ },
+ "K_groups": [
+  "beam_wall",
+  "beam_rest",
+  "plate_mem",
+  "plate_bend",
+  "shield_mem",
+  "shield_bend",
+  "bush_joints",
+  "shield_att",
+  "valveframe",
+  "valve_mount",
+  "att_ebox",
+  "att_ebox_rot",
+  "att_wbox",
+  "feet_springs"
+ ],
+ "M_groups": [
+  "m_beam_wall",
+  "m_beam_rest",
+  "m_plate",
+  "m_shield",
+  "m_valveframe",
+  "m_valvemass",
+  "m_ebox",
+  "m_wbox"
+ ],
+ "nominal_scalars": {
+  "K_beam_wall": 1.0,
+  "K_beam_rest": 1.0,
+  "K_plate_mem": 1.0,
+  "K_plate_bend": 1.0,
+  "K_shield_mem": 1.0,
+  "K_shield_bend": 1.0,
+  "K_bush_joints": 1.0,
+  "K_shield_att": 1.0,
+  "K_valveframe": 1.0,
+  "K_valve_mount": 1.0,
+  "K_att_ebox": 1.0,
+  "K_att_ebox_rot": 1.0,
+  "K_att_wbox": 1.0,
+  "K_feet_springs": 0.0,
+  "M_m_beam_wall": 1.0,
+  "M_m_beam_rest": 1.0,
+  "M_m_plate": 1.0,
+  "M_m_shield": 1.0,
+  "M_m_valveframe": 1.0,
+  "M_m_valvemass": 1.0,
+  "M_m_ebox": 1.0,
+  "M_m_wbox": 1.0
+ },
+ "note_feet": "nominal model: feet SPC-fixed, K_feet_springs scalar 0; variant: no SPC + K_feet_springs scalar 1",
+ "units": "inch-lbf-second",
+ "elapsed_s": 0.42
+}

@@ -1,0 +1,258 @@
+{
+ "baseline": {
+  "global_mac": 0.6308,
+  "global_calib_mac": 0.726,
+  "mean_abs_df_pct": 6.0659,
+  "f_mode1": 54.596,
+  "region_macs": {
+   "source_face": 0.4664,
+   "box_column": 0.6587,
+   "strut_base": 0.4573,
+   "dish": null
+  }
+ },
+ "n_edits": 10,
+ "n_improved": 0,
+ "edits": [
+  {
+   "edit_id": "e01_calibrated_theta",
+   "note": "modal-twin NUTS posterior median theta (the data-driven FEM update)",
+   "global_mac": 0.6114,
+   "d_global_mac": -0.0193,
+   "global_calib_mac": 0.7215,
+   "d_calib": -0.0045,
+   "mean_abs_df_pct": 5.7454,
+   "d_df_pct": -0.3205,
+   "f_mode1": 53.609,
+   "region_macs": {
+    "source_face": 0.5342,
+    "box_column": 0.6624,
+    "strut_base": 0.4619,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.0678,
+    "box_column": 0.0037,
+    "strut_base": 0.0045,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e02_joints_soft",
+   "note": "soften all bolted/contact joints x0.5",
+   "global_mac": 0.6263,
+   "d_global_mac": -0.0044,
+   "global_calib_mac": 0.7109,
+   "d_calib": -0.0151,
+   "mean_abs_df_pct": 6.6903,
+   "d_df_pct": 0.6244,
+   "f_mode1": 54.595,
+   "region_macs": {
+    "source_face": 0.576,
+    "box_column": 0.7767,
+    "strut_base": 0.4789,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.1096,
+    "box_column": 0.118,
+    "strut_base": 0.0216,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e03_joints_stiff",
+   "note": "stiffen all joints x2",
+   "global_mac": 0.6118,
+   "d_global_mac": -0.019,
+   "global_calib_mac": 0.7522,
+   "d_calib": 0.0262,
+   "mean_abs_df_pct": 6.4824,
+   "d_df_pct": 0.4165,
+   "f_mode1": 54.596,
+   "region_macs": {
+    "source_face": 0.46,
+    "box_column": 0.6715,
+    "strut_base": 0.3994,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": -0.0064,
+    "box_column": 0.0128,
+    "strut_base": -0.0579,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e04_bottombox_soft",
+   "note": "bottom_box x0.9",
+   "global_mac": 0.6007,
+   "d_global_mac": -0.0301,
+   "global_calib_mac": 0.7253,
+   "d_calib": -0.0007,
+   "mean_abs_df_pct": 5.5848,
+   "d_df_pct": -0.4811,
+   "f_mode1": 51.827,
+   "region_macs": {
+    "source_face": 0.5219,
+    "box_column": 0.6875,
+    "strut_base": 0.4345,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.0555,
+    "box_column": 0.0288,
+    "strut_base": -0.0228,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e05_bottombox_stiff",
+   "note": "bottom_box x1.1",
+   "global_mac": 0.631,
+   "d_global_mac": 0.0002,
+   "global_calib_mac": 0.7384,
+   "d_calib": 0.0124,
+   "mean_abs_df_pct": 6.9883,
+   "d_df_pct": 0.9224,
+   "f_mode1": 57.228,
+   "region_macs": {
+    "source_face": 0.4898,
+    "box_column": 0.7479,
+    "strut_base": 0.4577,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.0234,
+    "box_column": 0.0891,
+    "strut_base": 0.0004,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e06_topbox_stiff",
+   "note": "top_box x1.1",
+   "global_mac": 0.6245,
+   "d_global_mac": -0.0062,
+   "global_calib_mac": 0.7089,
+   "d_calib": -0.0171,
+   "mean_abs_df_pct": 6.3811,
+   "d_df_pct": 0.3152,
+   "f_mode1": 54.598,
+   "region_macs": {
+    "source_face": 0.5772,
+    "box_column": 0.6717,
+    "strut_base": 0.4651,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.1107,
+    "box_column": 0.0129,
+    "strut_base": 0.0078,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e07_topbox_soft",
+   "note": "top_box x0.9",
+   "global_mac": 0.6412,
+   "d_global_mac": 0.0104,
+   "global_calib_mac": 0.7021,
+   "d_calib": -0.0239,
+   "mean_abs_df_pct": 6.9959,
+   "d_df_pct": 0.93,
+   "f_mode1": 54.594,
+   "region_macs": {
+    "source_face": 0.5333,
+    "box_column": 0.7506,
+    "strut_base": 0.4981,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.0668,
+    "box_column": 0.0918,
+    "strut_base": 0.0408,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e08_joint801_soft",
+   "note": "bolted joint PID801 x0.3 (ch52)",
+   "global_mac": 0.6085,
+   "d_global_mac": -0.0223,
+   "global_calib_mac": 0.7065,
+   "d_calib": -0.0195,
+   "mean_abs_df_pct": 6.8243,
+   "d_df_pct": 0.7584,
+   "f_mode1": 54.595,
+   "region_macs": {
+    "source_face": 0.5227,
+    "box_column": 0.7423,
+    "strut_base": 0.4584,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.0562,
+    "box_column": 0.0836,
+    "strut_base": 0.0011,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e09_strut807_soft",
+   "note": "strut base PID807 x0.3 (ch92)",
+   "global_mac": 0.6313,
+   "d_global_mac": 0.0005,
+   "global_calib_mac": 0.7265,
+   "d_calib": 0.0005,
+   "mean_abs_df_pct": 6.0707,
+   "d_df_pct": 0.0048,
+   "f_mode1": 54.596,
+   "region_macs": {
+    "source_face": 0.4666,
+    "box_column": 0.6546,
+    "strut_base": 0.458,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.0002,
+    "box_column": -0.0041,
+    "strut_base": 0.0007,
+    "dish": null
+   },
+   "IMPROVED": false
+  },
+  {
+   "edit_id": "e10_contact902_stiff",
+   "note": "plate contact PID902 x20 (ch92)",
+   "global_mac": 0.627,
+   "d_global_mac": -0.0038,
+   "global_calib_mac": 0.7259,
+   "d_calib": -0.0001,
+   "mean_abs_df_pct": 6.052,
+   "d_df_pct": -0.0139,
+   "f_mode1": 54.596,
+   "region_macs": {
+    "source_face": 0.5534,
+    "box_column": 0.6786,
+    "strut_base": 0.4625,
+    "dish": null
+   },
+   "d_region_macs": {
+    "source_face": 0.087,
+    "box_column": 0.0199,
+    "strut_base": 0.0052,
+    "dish": null
+   },
+   "IMPROVED": false
+  }
+ ]
+}

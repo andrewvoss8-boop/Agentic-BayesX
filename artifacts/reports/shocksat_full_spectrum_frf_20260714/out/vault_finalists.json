@@ -1,0 +1,92 @@
+{
+ "set": [
+  {
+   "arm": "A0",
+   "cid": "A0_wide__enr",
+   "theta": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "windowed": false,
+   "flat_zeta": 0.01,
+   "note": "historical convention (exact-at-thetaMAP enriched basis, D22)"
+  },
+  {
+   "arm": "A1",
+   "cid": "A0_wide__enr",
+   "theta": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "windowed": true,
+   "note": "window-matched + survey zeta baseline (enriched)"
+  },
+  {
+   "arm": "B",
+   "cid": "B__enr",
+   "theta": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "windowed": true,
+   "note": "amplitude-trained theta amp-MAP (enriched); NUTS multimodal YELLOW"
+  },
+  {
+   "arm": "D",
+   "cid": "D__enr",
+   "theta": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "windowed": true,
+   "note": "best agent remodel wa2_brackets_soft (enriched)"
+  },
+  {
+   "arm": "R",
+   "cid": "R__enr",
+   "theta": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "windowed": true,
+   "note": "best random control wr2_rnd001 (enriched)"
+  }
+ ]
+}

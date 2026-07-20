@@ -1,0 +1,241 @@
+{
+  "deliverable": "STEP 1: full-field modal energy localization (box/strut/plate) -> substructuring premise",
+  "region_cuts_in": {
+    "box_z_lt": 45.0,
+    "plate_z_ge": 55.0,
+    "strut_between": [
+      45.0,
+      55.0
+    ]
+  },
+  "n_kept_dofs": 399510,
+  "n_inband_modes": 40,
+  "dof_counts_translational": {
+    "box": 169557,
+    "strut": 13392,
+    "plate": 13746
+  },
+  "modes_by_edge_mount_residue": [
+    {
+      "fem_mode": 35,
+      "freq_hz": 251.6,
+      "edge_mount_pct": 38.8,
+      "energy_box_pct": 50.0,
+      "energy_strut_pct": 49.0,
+      "energy_plate_pct": 2.0,
+      "plate_plus_strut_pct": 50.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 6,
+      "freq_hz": 117.3,
+      "edge_mount_pct": 29.4,
+      "energy_box_pct": 99.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 1.0,
+      "measured": [
+        125.0,
+        0.7
+      ]
+    },
+    {
+      "fem_mode": 30,
+      "freq_hz": 233.7,
+      "edge_mount_pct": 11.4,
+      "energy_box_pct": 96.0,
+      "energy_strut_pct": 4.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 4.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 21,
+      "freq_hz": 190.4,
+      "edge_mount_pct": 8.4,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": [
+        188.6,
+        0.69
+      ]
+    },
+    {
+      "fem_mode": 18,
+      "freq_hz": 183.6,
+      "edge_mount_pct": 4.4,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": [
+        184.4,
+        0.89
+      ]
+    },
+    {
+      "fem_mode": 27,
+      "freq_hz": 211.7,
+      "edge_mount_pct": 1.9,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 36,
+      "freq_hz": 253.9,
+      "edge_mount_pct": 1.8,
+      "energy_box_pct": 68.0,
+      "energy_strut_pct": 32.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 32.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 22,
+      "freq_hz": 191.6,
+      "edge_mount_pct": 1.7,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 3,
+      "freq_hz": 88.0,
+      "edge_mount_pct": 0.8,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": [
+        85.8,
+        0.88
+      ]
+    },
+    {
+      "fem_mode": 24,
+      "freq_hz": 192.9,
+      "edge_mount_pct": 0.5,
+      "energy_box_pct": 96.0,
+      "energy_strut_pct": 4.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 4.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 5,
+      "freq_hz": 113.8,
+      "edge_mount_pct": 0.4,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": [
+        118.5,
+        0.96
+      ]
+    },
+    {
+      "fem_mode": 33,
+      "freq_hz": 247.5,
+      "edge_mount_pct": 0.4,
+      "energy_box_pct": 79.0,
+      "energy_strut_pct": 21.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 21.0,
+      "measured": null
+    },
+    {
+      "fem_mode": 15,
+      "freq_hz": 160.6,
+      "edge_mount_pct": 0.0,
+      "energy_box_pct": 100.0,
+      "energy_strut_pct": 0.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 0.0,
+      "measured": [
+        165.9,
+        0.76
+      ]
+    },
+    {
+      "fem_mode": 29,
+      "freq_hz": 233.7,
+      "edge_mount_pct": 0.0,
+      "energy_box_pct": 96.0,
+      "energy_strut_pct": 3.0,
+      "energy_plate_pct": 0.0,
+      "plate_plus_strut_pct": 4.0,
+      "measured": null
+    }
+  ],
+  "edge_mount_weighted_plate_plus_strut_energy_frac": 0.211,
+  "strut_base_interface_top_modes": [
+    {
+      "freq_hz": 117.3,
+      "iface_residue_pct": 15.4,
+      "plate_plus_strut_pct": 1.0,
+      "measured": [
+        125.0,
+        0.7
+      ]
+    },
+    {
+      "freq_hz": 230.6,
+      "iface_residue_pct": 12.3,
+      "plate_plus_strut_pct": 3.0,
+      "measured": null
+    },
+    {
+      "freq_hz": 234.4,
+      "iface_residue_pct": 8.1,
+      "plate_plus_strut_pct": 4.0,
+      "measured": null
+    },
+    {
+      "freq_hz": 253.9,
+      "iface_residue_pct": 7.6,
+      "plate_plus_strut_pct": 32.0,
+      "measured": null
+    },
+    {
+      "freq_hz": 192.9,
+      "iface_residue_pct": 7.5,
+      "plate_plus_strut_pct": 4.0,
+      "measured": null
+    },
+    {
+      "freq_hz": 122.2,
+      "iface_residue_pct": 7.3,
+      "plate_plus_strut_pct": 18.0,
+      "measured": [
+        117.6,
+        0.9
+      ]
+    },
+    {
+      "freq_hz": 196.9,
+      "iface_residue_pct": 6.7,
+      "plate_plus_strut_pct": 4.0,
+      "measured": [
+        197.8,
+        0.66
+      ]
+    },
+    {
+      "freq_hz": 251.6,
+      "iface_residue_pct": 6.1,
+      "plate_plus_strut_pct": 50.0,
+      "measured": null
+    }
+  ],
+  "premise": "If the high edge-mount, UNMEASURED ~233-254 Hz modes show high plate+strut energy AND the measured modes show high box energy, the substructuring split is valid: secondary=plate+struts captures the hard modes; source=box at the strut base is global/well-correlated.",
+  "caveat": "displacement-energy (no per-DOF mass); indicative. True fixed-interface CB modes need partitioned physical M/K (FE re-solve).",
+  "note": "EXPLORATORY; YELLOW; no success claim; NO NUTS."
+}

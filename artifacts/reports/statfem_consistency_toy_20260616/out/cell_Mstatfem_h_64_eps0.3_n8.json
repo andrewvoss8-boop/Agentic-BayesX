@@ -1,0 +1,37 @@
+{
+ "construction": "M-statfem",
+ "knob": "h",
+ "level": 64.0,
+ "eps": 0.3,
+ "n": 8,
+ "N_c": 64,
+ "n_el": 64,
+ "sigma_d_med": 0.004041279644702854,
+ "nuts": {
+  "max_rhat": 1.0002726744399122,
+  "min_ess": 1633.0552390047524,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 4000
+ },
+ "converged": true,
+ "runtime_s": 24.74,
+ "theta": {
+  "mean": 1.2689492227342731,
+  "sd": 0.0024427735886018744,
+  "lo": 1.2642029610963526,
+  "med": 1.2689013083783676,
+  "hi": 1.2736925677425777
+ },
+ "coverage_heldout": 1.0,
+ "coverage_detail": {
+  "covered": 21,
+  "n": 21,
+  "held_freqs": [
+   0.6,
+   2.8,
+   6.3
+  ]
+ }
+}

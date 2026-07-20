@@ -1,0 +1,24 @@
+{
+  "reference": "+X (Test01)",
+  "n_channels": 84,
+  "S_F0": "1 lbf^2/Hz flat",
+  "GRMS_measured_envelope": 22.8921,
+  "GRMS_FEM_plus6dB": 96.9147,
+  "GRMS_correlatedTwin_plus_margin": 113.7141,
+  "twin_margin_to_cover_dB": 32.0,
+  "GRMS_freqDampCorrected_noFit_plus_margin": 72.8507,
+  "corr_margin_to_cover_dB": 1.2,
+  "FAIR_each_at_margin_to_just_cover": {
+    "FEM_margin_dB": 1.7,
+    "FEM_GRMS_at_cover": 59.2483,
+    "corrected_margin_dB": 1.2,
+    "corrected_GRMS_at_cover": 72.8507,
+    "ratio_corrected_over_FEM": 1.23
+  },
+  "GRMS_ratio_corrected_over_FEM6": 0.752,
+  "GRMS_ratio_twin_over_FEM6": 1.173,
+  "FEM6_covers (exceed-energy)": 0.0,
+  "twin_covers (exceed-energy)": 0.0,
+  "verdict": "no clear win",
+  "honest_note": "twin participations FIT to this data (no held-out); demonstrates value of CORRELATION, not blind prediction"
+}

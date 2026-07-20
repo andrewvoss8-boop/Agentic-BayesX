@@ -1,0 +1,7 @@
+{
+ "cid": "a16_bb_splits_combo_enr",
+ "rel_err": 6.83088947628363e-08,
+ "n_modes": 74,
+ "pass_0p3pct": true,
+ "provenance": "exact-basis reduction validated in shocksat_true_remodel_loop_20260706 (identical package); reused here read-only"
+}

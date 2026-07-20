@@ -1,0 +1,5 @@
+{
+  "active_runtime_s": 966,
+  "elapsed_wallclock_s": 966,
+  "note": "active = sum of per-step seconds; replays analysis from saved caches (cache_builder.py is the one-time raw-.mat data prep, not in this replay)"
+}

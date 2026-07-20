@@ -1,0 +1,68 @@
+seed 0: obs 16 / held-out 11 modes; calib conv True
+  FREQUENCY twin vs climatology: CRPS-skill +0.93 (twin 2.1 Hz / clim 30.2 Hz), coverage 0.82
+  value of UPDATING: nominal-FEM freq err 2.10% -> calibrated 1.07%
+  runtime 51s
+[done] freq seed0 skill +0.931
+seed 0: held out 31 (2 hard); QOI-disc sigma 1.11
+  NON-HARD (n29): twin coverage 1.00  CRPS-skill vs climatology -0.76  (twin CRPS 69 vs clim 39); FEM point miss median 4.6 dB (41% >6dB)
+  HARD     (n2): twin coverage 0.50  CRPS-skill -2.79; FEM point miss median 20.2 dB
+  by snap (non-hard): 0-1in skill -0.76 (n29)
+  runtime 70s
+[done] value_eval seed0 non-hard skill -0.759
+seed 1: held out 31 (1 hard); QOI-disc sigma 1.10
+  NON-HARD (n30): twin coverage 1.00  CRPS-skill vs climatology -0.84  (twin CRPS 91 vs clim 50); FEM point miss median 3.7 dB (33% >6dB)
+  HARD     (n1): twin coverage 1.00  CRPS-skill -2.11; FEM point miss median 15.7 dB
+  by snap (non-hard): 0-1in skill -0.84 (n30)
+  runtime 62s
+[done] value_eval seed1 non-hard skill -0.841
+seed 2: held out 31 (1 hard); QOI-disc sigma 1.06
+  NON-HARD (n30): twin coverage 1.00  CRPS-skill vs climatology -1.40  (twin CRPS 106 vs clim 44); FEM point miss median 7.8 dB (60% >6dB)
+  HARD     (n1): twin coverage 1.00  CRPS-skill -1.51; FEM point miss median 17.0 dB
+  by snap (non-hard): 0-1in skill -1.40 (n30)
+  runtime 60s
+[done] value_eval seed2 non-hard skill -1.399
+L8b Beck-on-.ash (split 0, 12 modes, MAC 0.75): conv True R-hat 1.004 ESS 2385 div 0 | 20s
+  held-out peak  FEM-shapes : cover 0.90 IS 671 sig 0.92
+  held-out peak  INFERRED   : cover 0.97 IS 545 sig 0.86
+  -> inferring the shape field SHARPENS (IS 545 vs 671); sigma_phi 0.68
+[done] beck seed0 FEM -0.182 INF -0.157 conv True
+L8b Beck-on-.ash (split 1, 12 modes, MAC 0.75): conv True R-hat 1.004 ESS 2385 div 0 | 19s
+  held-out peak  FEM-shapes : cover 0.94 IS 1052 sig 0.88
+  held-out peak  INFERRED   : cover 0.97 IS 570 sig 0.84
+  -> inferring the shape field SHARPENS (IS 570 vs 1052); sigma_phi 0.68
+[done] beck seed1 FEM -0.689 INF -0.202 conv True
+L8b Beck-on-.ash (split 2, 12 modes, MAC 0.75): conv True R-hat 1.004 ESS 2385 div 0 | 20s
+  held-out peak  FEM-shapes : cover 0.94 IS 1558 sig 1.11
+  held-out peak  INFERRED   : cover 0.94 IS 741 sig 0.88
+  -> inferring the shape field SHARPENS (IS 741 vs 1558); sigma_phi 0.68
+[done] beck seed2 FEM -1.168 INF -0.396 conv True
+
+=== PART A SUMMARY ===
+{
+  "deliverable": "Part A reproduction vs Card F documented headline (+X single-reference)",
+  "frequency": {
+    "reproduced_crps_skill": 0.9306578407721781,
+    "cardF_crps_skill": 0.9306578407721781,
+    "reproduced_freq_err_pct": [
+      2.1019692014386604,
+      1.0667620729129084
+    ]
+  },
+  "amplitude": {
+    "reproduced_nonhard_skill_per_seed": [
+      -0.7587735012783043,
+      -0.8412694965265117,
+      -1.399245199473869
+    ],
+    "reproduced_nonhard_skill_mean": -0.9997627324262283,
+    "cardF_mean": -1.0
+  },
+  "beck_shapefield": {
+    "reproduced_fem_skill": -0.6796203004290423,
+    "reproduced_inf_skill": -0.251943656567879,
+    "cardF_fem": -0.68,
+    "cardF_inf": -0.25
+  }
+}
+
+Part A total runtime 302s

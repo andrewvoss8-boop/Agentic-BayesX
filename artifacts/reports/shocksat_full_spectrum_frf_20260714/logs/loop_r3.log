@@ -1,0 +1,17 @@
+wa3_brackets_xbeam: own-space r=194, top 617 Hz, 389s
+[agent r3] wa3_brackets_xbeam: sub200 0.1634  200-500 0.1912330717040091
+wa3_brackets_tbox: own-space r=194, top 587 Hz, 396s
+[agent r3] wa3_brackets_tbox: sub200 0.1698  200-500 0.20491189253956482
+wa3_brackets_plates: own-space r=194, top 557 Hz, 587s
+[agent r3] wa3_brackets_plates: sub200 0.1647  200-500 0.09679140250278269
+wa3_brackets_bbox_split: own-space r=194, top 613 Hz, 368s
+[agent r3] wa3_brackets_bbox_split: sub200 0.1495  200-500 0.2585466112206803
+wr3_rnd000: own-space r=194, top 614 Hz, 474s
+[random r3] wr3_rnd000: sub200 0.1418  200-500 0.25100804489276707
+wr3_rnd002: own-space r=194, top 614 Hz, 371s
+[random r3] wr3_rnd002: sub200 0.1514  200-500 0.06230234947678315
+wr3_rnd003: projected (r=209)
+[random r3] wr3_rnd003: sub200 0.1538  200-500 0.08832227803575057
+wr3_rnd004: own-space r=194, top 614 Hz, 577s
+[random r3] wr3_rnd004: sub200 0.1489  200-500 0.115935545642389
+ROUND3_DONE 3353s

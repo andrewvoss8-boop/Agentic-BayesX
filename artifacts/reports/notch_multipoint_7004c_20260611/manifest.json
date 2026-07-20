@@ -1,0 +1,316 @@
+{
+ "generated": "2026-06-12 12:40:28",
+ "n_files": 62,
+ "files": [
+  {
+   "path": ".DS_Store",
+   "bytes": 6148,
+   "sha256_16": "9edb8738cf28810e"
+  },
+  {
+   "path": "7004c_multipoint_notch_summary.pptx",
+   "bytes": 6487435,
+   "sha256_16": "51bd986c8376aa3c"
+  },
+  {
+   "path": "assumptions_ledger.md",
+   "bytes": 5890,
+   "sha256_16": "dfe8ea3a629ba3b8"
+  },
+  {
+   "path": "check.py",
+   "bytes": 12118,
+   "sha256_16": "9b2df7d3c0b313b7"
+  },
+  {
+   "path": "checker_report.json",
+   "bytes": 4453,
+   "sha256_16": "0e229a14f6faefcc"
+  },
+  {
+   "path": "decisions_log.md",
+   "bytes": 6466,
+   "sha256_16": "d05df2da22c24f5d"
+  },
+  {
+   "path": "files_changed.md",
+   "bytes": 1634,
+   "sha256_16": "74ed15b93cae9d12"
+  },
+  {
+   "path": "lit_review_prompt.md",
+   "bytes": 6864,
+   "sha256_16": "6d1ce7e45cedcfb5"
+  },
+  {
+   "path": "notching_findings_for_future_agents.md",
+   "bytes": 20828,
+   "sha256_16": "e3d2419bb18ca3e2"
+  },
+  {
+   "path": "packet.md",
+   "bytes": 15028,
+   "sha256_16": "f44b417a85ba2e79"
+  },
+  {
+   "path": "priority_deliverables.md",
+   "bytes": 2193,
+   "sha256_16": "aa3eb25bf7e11edb"
+  },
+  {
+   "path": "quantity_contracts.md",
+   "bytes": 6582,
+   "sha256_16": "4f5e6cb19b805590"
+  },
+  {
+   "path": "question_framing.md",
+   "bytes": 2649,
+   "sha256_16": "775f0bdc4f5fe33c"
+  },
+  {
+   "path": "run_all.sh",
+   "bytes": 1117,
+   "sha256_16": "94ef7f4d1493b1fd"
+  },
+  {
+   "path": "runtime.json",
+   "bytes": 508,
+   "sha256_16": "03ced17bab5e2ddf"
+  },
+  {
+   "path": "code/common.py",
+   "bytes": 15127,
+   "sha256_16": "b5d98a71122ca113"
+  },
+  {
+   "path": "code/ex_a_tdof_baseline.py",
+   "bytes": 11768,
+   "sha256_16": "3c88633d8f0b8bdc"
+  },
+  {
+   "path": "code/ex_b_sixdof.py",
+   "bytes": 12940,
+   "sha256_16": "df252fc8c760cbc0"
+  },
+  {
+   "path": "code/ex_c_notch_distance.py",
+   "bytes": 22799,
+   "sha256_16": "fd083a82a32fecd3"
+  },
+  {
+   "path": "code/ex_d_force_limits.py",
+   "bytes": 13855,
+   "sha256_16": "3febf96335bcf16c"
+  },
+  {
+   "path": "code/ex_e_empirical_reconstruction.py",
+   "bytes": 18339,
+   "sha256_16": "9b1acba4bae4dc39"
+  },
+  {
+   "path": "code/make_gifs.py",
+   "bytes": 11635,
+   "sha256_16": "9e11f187cfce0c50"
+  },
+  {
+   "path": "code/make_pptx.py",
+   "bytes": 20014,
+   "sha256_16": "553ba918a97975ff"
+  },
+  {
+   "path": "results/ex_a_results.json",
+   "bytes": 1822,
+   "sha256_16": "f5e0b27c902ba24f"
+  },
+  {
+   "path": "results/ex_b_results.json",
+   "bytes": 2333,
+   "sha256_16": "8d9e9795b6477e41"
+  },
+  {
+   "path": "results/ex_c_fields.npz",
+   "bytes": 737981,
+   "sha256_16": "1ebf57667a541813"
+  },
+  {
+   "path": "results/ex_c_results.json",
+   "bytes": 50233,
+   "sha256_16": "69b2aef5e0d5be70"
+  },
+  {
+   "path": "results/ex_d_results.json",
+   "bytes": 1820,
+   "sha256_16": "6531e7090da5896c"
+  },
+  {
+   "path": "results/ex_e_results.json",
+   "bytes": 23889,
+   "sha256_16": "8b85aa3580ef48a2"
+  },
+  {
+   "path": "logs/check.log",
+   "bytes": 3193,
+   "sha256_16": "e2f623a74211dca5"
+  },
+  {
+   "path": "logs/ex_a_tdof_baseline.log",
+   "bytes": 856,
+   "sha256_16": "f40c71193adad154"
+  },
+  {
+   "path": "logs/ex_b_sixdof.log",
+   "bytes": 285,
+   "sha256_16": "e45dddb4aca1a8bf"
+  },
+  {
+   "path": "logs/ex_c_notch_distance.log",
+   "bytes": 2435,
+   "sha256_16": "3727031d9b21dc68"
+  },
+  {
+   "path": "logs/ex_d_force_limits.log",
+   "bytes": 536,
+   "sha256_16": "fcd724e96c534e82"
+  },
+  {
+   "path": "logs/ex_e_empirical_reconstruction.log",
+   "bytes": 1875,
+   "sha256_16": "842ea4663a6addbc"
+  },
+  {
+   "path": "logs/make_gifs.log",
+   "bytes": 96,
+   "sha256_16": "41764b080e53d48f"
+  },
+  {
+   "path": "logs/make_pptx.log",
+   "bytes": 54,
+   "sha256_16": "3b220bfc4a642089"
+  },
+  {
+   "path": "logs/run_all.log",
+   "bytes": 5050,
+   "sha256_16": "f820fa25396ae47e"
+  },
+  {
+   "path": "logs/session_start_epoch.txt",
+   "bytes": 11,
+   "sha256_16": "33495f55291752e8"
+  },
+  {
+   "path": "logs/step_times.txt",
+   "bytes": 184,
+   "sha256_16": "90beeca3d50f6302"
+  },
+  {
+   "path": "figures/fig_a1_fig9_replication.png",
+   "bytes": 211970,
+   "sha256_16": "88cb9b7fc0659e93"
+  },
+  {
+   "path": "figures/fig_a2_fig8_replication.png",
+   "bytes": 101079,
+   "sha256_16": "40efe79589462bc2"
+  },
+  {
+   "path": "figures/fig_a3_notch_overtest.png",
+   "bytes": 203545,
+   "sha256_16": "a45319e88d6c5ff5"
+  },
+  {
+   "path": "figures/fig_b1_apparent_mass_matrix.png",
+   "bytes": 160762,
+   "sha256_16": "8bf6804502161226"
+  },
+  {
+   "path": "figures/fig_b2_effective_masses.png",
+   "bytes": 72132,
+   "sha256_16": "0d446254e4cef3e2"
+  },
+  {
+   "path": "figures/fig_b3_resultant_trap.png",
+   "bytes": 169200,
+   "sha256_16": "d3bd7167f33ae681"
+  },
+  {
+   "path": "figures/fig_c1_interface_spectra.png",
+   "bytes": 306242,
+   "sha256_16": "d9b8cde5bab335ec"
+  },
+  {
+   "path": "figures/fig_c2_notch_maps_bounce.png",
+   "bytes": 271653,
+   "sha256_16": "9e96e23fde368c51"
+  },
+  {
+   "path": "figures/fig_c2b_notch_maps_rocking.png",
+   "bytes": 94163,
+   "sha256_16": "6b2c08b76fa43655"
+  },
+  {
+   "path": "figures/fig_c3_depth_vs_distance.png",
+   "bytes": 1068473,
+   "sha256_16": "7c2dac37baac1c3b"
+  },
+  {
+   "path": "figures/fig_c4_rvis_vs_lambda.png",
+   "bytes": 144391,
+   "sha256_16": "b26923e01d17c5a0"
+  },
+  {
+   "path": "figures/fig_d1_test_vs_flight.png",
+   "bytes": 392251,
+   "sha256_16": "c35dfeefd6c8f939"
+  },
+  {
+   "path": "figures/fig_d2_overtest_bars.png",
+   "bytes": 161053,
+   "sha256_16": "07103cbaf2a2e89f"
+  },
+  {
+   "path": "figures/fig_e1_reconstruction_channels.png",
+   "bytes": 321786,
+   "sha256_16": "fda34af98af754d6"
+  },
+  {
+   "path": "figures/fig_e2_error_by_regime.png",
+   "bytes": 96808,
+   "sha256_16": "0ec7a8813b134084"
+  },
+  {
+   "path": "figures/fig_e3_remote_proxy.png",
+   "bytes": 191723,
+   "sha256_16": "79a64bf95c70f1a9"
+  },
+  {
+   "path": "figures/gif_a_still.png",
+   "bytes": 80653,
+   "sha256_16": "e360d2efc561e25a"
+  },
+  {
+   "path": "figures/gif_a_tdof_notch_sweep.gif",
+   "bytes": 561164,
+   "sha256_16": "0801acccab6a597a"
+  },
+  {
+   "path": "figures/gif_b_rocking_trap.gif",
+   "bytes": 385568,
+   "sha256_16": "ef647d5722587c13"
+  },
+  {
+   "path": "figures/gif_b_still.png",
+   "bytes": 49493,
+   "sha256_16": "da5199278e9ef712"
+  },
+  {
+   "path": "figures/gif_c_notch_field_sweep.gif",
+   "bytes": 2284597,
+   "sha256_16": "1f235fb79edb528f"
+  },
+  {
+   "path": "figures/gif_c_still.png",
+   "bytes": 96483,
+   "sha256_16": "091f919144239e93"
+  }
+ ]
+}

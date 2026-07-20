@@ -1,0 +1,32 @@
+{
+  "deliverable": "fixed_single_units_gain_no_free_knob",
+  "n_splits": 25,
+  "units_gain_per_method_natlog": {
+    "L5": 6.09803026630237,
+    "FEM": 6.213903369263166,
+    "Beck": 7.292918683942644
+  },
+  "note": "ONE broadband units constant per method, calibrated once on split-0 observed channels; NO per-target/per-split/per-draw gain fitting. Residual peak BIAS reported (model-form, not hidden).",
+  "methods": {
+    "L5": {
+      "peak_IS_med": 1668.4579495486307,
+      "peak_cov_med": 0.9032258064516129,
+      "band_IS_med": 5138.774846938066,
+      "peak_bias_x_med": 1.8334183934953412
+    },
+    "FEM": {
+      "peak_IS_med": 2031.4577798459952,
+      "peak_cov_med": 0.8387096774193549,
+      "band_IS_med": 5777.96315414348,
+      "peak_bias_x_med": 2.0737154229573025
+    },
+    "Beck": {
+      "peak_IS_med": 2495.599909512603,
+      "peak_cov_med": 0.8709677419354839,
+      "band_IS_med": 6421.522999946918,
+      "peak_bias_x_med": 2.6298815758484646
+    }
+  },
+  "beck_peakIS_lt_L5_/N": 0,
+  "runtime_s": 52.50494313240051
+}

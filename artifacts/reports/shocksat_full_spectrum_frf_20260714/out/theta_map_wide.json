@@ -1,0 +1,37 @@
+{
+ "theta_map": {
+  "al_welds": 1.0707,
+  "angle_brackets": 1.2981,
+  "bottom_box": 1.0083,
+  "contact": 0.9546,
+  "cross_beam": 1.4603,
+  "joints": 0.4674,
+  "plates": 1.2908,
+  "steel_welds": 1.0422,
+  "top_box": 0.8341
+ },
+ "theta_map_vec": [
+  1.070681682159351,
+  1.2980668899282624,
+  1.008346876198701,
+  0.9545773493614375,
+  1.4603164965720978,
+  0.46739893522982445,
+  1.2908319773221217,
+  1.0421941580170435,
+  0.8341352162823156
+ ],
+ "free_names": [
+  "al_welds",
+  "angle_brackets",
+  "bottom_box",
+  "contact",
+  "cross_beam",
+  "joints",
+  "plates",
+  "steel_welds",
+  "top_box"
+ ],
+ "nlp": 47.607110863480656,
+ "multistart_ok": true
+}

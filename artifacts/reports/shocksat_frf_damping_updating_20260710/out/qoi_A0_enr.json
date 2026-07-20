@@ -1,0 +1,99 @@
+{
+ "cid": "A0_enr",
+ "axes": {
+  "shear_X": {
+   "per_drive": [
+    {
+     "drive": "m_xpos_990x",
+     "coverage": 0.999,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_990z",
+     "coverage": 0.908,
+     "exceed_dB": 0.016,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_ypos_990y",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_900z",
+     "coverage": 0.997,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    }
+   ],
+   "min_coverage": 0.908,
+   "max_exceed_dB": 0.016,
+   "band_over_fem6db": 1.614
+  },
+  "shear_Y": {
+   "per_drive": [
+    {
+     "drive": "m_xpos_990x",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_990z",
+     "coverage": 0.945,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_ypos_990y",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_900z",
+     "coverage": 0.806,
+     "exceed_dB": 0.412,
+     "n_ch": 104
+    }
+   ],
+   "min_coverage": 0.806,
+   "max_exceed_dB": 0.412,
+   "band_over_fem6db": 1.492
+  },
+  "normal_Z": {
+   "per_drive": [
+    {
+     "drive": "m_xpos_990x",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_990z",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_ypos_990y",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    },
+    {
+     "drive": "m_zpos_900z",
+     "coverage": 1.0,
+     "exceed_dB": 0.0,
+     "n_ch": 104
+    }
+   ],
+   "min_coverage": 1.0,
+   "max_exceed_dB": 0.0,
+   "band_over_fem6db": 1.862
+  }
+ },
+ "convention": "netcg statFEM F(k); coverage hard gate >=0.95 wtd, <=0.5 dB energy-wtd exceedance; per-drive answer keys"
+}

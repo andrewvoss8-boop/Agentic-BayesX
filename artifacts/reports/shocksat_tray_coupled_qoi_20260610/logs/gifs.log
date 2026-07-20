@@ -1,0 +1,8 @@
+wrote force_limiting_sweep.gif (30 frames 810x597)
+wrote mode_walk_qoi.gif (18 frames 945x444)
+{
+ "verdict": "Multimodality is GENUINE under-identification of the 6-axis mount decomposition at the realized model-form discrepancy floor (~3.7 %), not a sampler bug: chains agree in data space (0.06 % median predicted-frequency spread) and disagree in parameter space. Only 2 stiffness COMBINATIONS are identified (k_ry-dominated rocking, k_tz bounce); at the 0.3 % injected-noise floor 5/6 would be -> the binding constraint is model-form discrepancy (cross-confirms the predecessor's joints finding). The packet-7 gate statement (overall mount level identifiable) HOLDS for those combinations; the per-axis claim does not. Pre-test lever refined: add observables that break the lateral/rocking symmetry (mode shapes, FRF amplitudes, interface force gauges) or reduce discrepancy; frequencies alone cannot split the axes."
+}
+written out/multimodality_diagnosis.json
+wrote multimodality.gif (20 frames 1008x464)
+gifs done

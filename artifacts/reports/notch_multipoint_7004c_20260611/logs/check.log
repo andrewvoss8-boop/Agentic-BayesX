@@ -1,0 +1,29 @@
+[GREEN ] ex_a_handbook_anchors: 10 anchors vs 7004C Fig8/9+AppB, worst rel err 0.86% (threshold 2%; incl. handbook's own rounding)
+[GREEN ] ex_a_impedance_equals_direct: Eq3/4 vs direct coupled solve max rel dev 1.22e-14 (<1e-10)
+[GREEN ] ex_b_modes_match_closed_form: numeric vs analytic 6 modes, max rel err 2.37e-16
+[GREEN ] ex_b_static_limit_rigid_mass: M(w->0) vs rigid-body matrix rel err 4.73e-07 (<1e-4; quasi-static at 0.05 Hz)
+[GREEN ] ex_b_effective_mass_sums: sum over modes = rigid totals per direction, rel err 2.96e-16 (7004C p.56)
+[GREEN ] ex_b_resultant_trap: net/(4*foot) = 0.00e+00 at 147.8 Hz rocking (foot 9.8 N, My 3.5 N*m)
+[GREEN ] ex_c_lowf_ride_along: payload rides feet rigidly at 22 Hz: ratios ['1.035', '1.004', '1.035', '1.004', '1.004', '1.004', '1.035'] (within 6%; finite 22-Hz dynamic amplification expected)
+[GREEN ] ex_c_main_notches_detected: all 3 notch channels detected on both main variants (ratio-based, anchored interior minima)
+[GREEN ] ex_c_truncation_convergence_robust_metrics: 2x modal refinement: worst f_notch shift 0.41% (<1%), worst area-frac shift 0.061 (<0.07)
+[YELLOW] ex_c_rvis_threshold_sensitivity: DOCUMENTED caveat (decisions_log D8): r_vis is a 3-dB threshold metric; flips under refinement: ['stiff_t5_Q25/bounce: r_vis shift 0.45 m']. Use f_notch/area-frac as converged metrics; r_vis is descriptive.
+[GREEN ] ex_c_interface_suppression_deep: interface-channel suppression at notches ['33', '40', '36'] dB (>10)
+[GREEN ] ex_d_newton_checks: netF=m*a_cg and My_cg=Iyy*thdd to 1.50e-14
+[GREEN ] ex_d_lowf_apparent_mass: net F/a_b at 20 Hz = 6.192 vs M0=6.0 (3.2% — finite 20-Hz amplification expected)
+[GREEN ] ex_d_limits_respected: max(limited response / limit) = 1.000000 (<=1)
+[GREEN ] ex_d_overtest_structure: bounce 204x->5.2x (netF works); pitch stays 221x under netF, ->32x with moment limit
+[GREEN ] ex_d_thx_undertest: test roll accel 1.4e-13 (exact 0) vs flight peak 16.73 rad/s^2/N
+[GREEN ] ex_d_flight_labeled_hypothetical: HYPOTHETICAL coupled plate simulation (not flight data)
+[GREEN ] ex_e_full_impedance_exact: full matrix impedance reconstruction == coupled FEM truth, max rel err 1.81e-12 (<1e-9): a measurement CAN replace the coupled solve
+[GREEN ] ex_e_scalar_blind_to_rocking: single-point: moment err ['100%', '100%', '100%'] (~100% = predicts 0), per-foot err ['76%', '84%', '84%'] (>50%)
+[GREEN ] ex_e_rigid3_recovers_rocking: rigid-3 (>=3 feet) per-foot err ['5%', '3%', '3%'] (<25% in the soft/low-overlap regime) = rocking recovered without coupled FEM
+[GREEN ] ex_e_remote_proxy_config_mismatch: bare-config transmissibility proxy err ['110%', '102%', '96%'] (large = must calibrate in the integrated config; in-config is exact)
+[GREEN ] figures_exist: 16/16 figures present & >30kB
+[GREEN ] gifs_animate: 3 GIFs with >=30 frames each: [True, True, True]
+[GREEN ] pptx_built: 16 slides (>=12)
+[GREEN ] harness_docs: all harness + handoff docs present
+[YELLOW] complex_tdof_tables: 7004C Appendix C complex-TDOF tables NOT replicated (image-only PDF; documented decisions_log D3) — methods used are equation-anchored instead
+
+OVERALL: YELLOW  (24 green / 2 yellow / 0 red)
+wrote checker_report.json

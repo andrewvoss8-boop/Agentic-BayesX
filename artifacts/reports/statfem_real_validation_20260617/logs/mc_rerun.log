@@ -1,0 +1,60 @@
+  split  0: calib R-hat 1.002 conv True | +disc PEAK cov 0.94 IS 1.7e+03
+  split  1: calib R-hat 1.001 conv True | +disc PEAK cov 1.00 IS 2.14e+03
+  split  2: calib R-hat 1.009 conv True | +disc PEAK cov 0.97 IS 2.03e+03
+  split  3: calib R-hat 1.002 conv True | +disc PEAK cov 0.94 IS 2.84e+03
+  split  4: calib R-hat 1.001 conv True | +disc PEAK cov 0.94 IS 1.32e+03
+  split  5: calib R-hat 1.002 conv True | +disc PEAK cov 0.74 IS 2.96e+03
+  split  6: calib R-hat 1.004 conv True | +disc PEAK cov 0.84 IS 1.97e+03
+  split  7: calib R-hat 1.002 conv True | +disc PEAK cov 0.81 IS 1.92e+03
+  split  8: calib R-hat 1.001 conv True | +disc PEAK cov 0.87 IS 1.79e+03
+  split  9: calib R-hat 1.001 conv True | +disc PEAK cov 0.94 IS 2.46e+03
+  split 10: calib R-hat 1.001 conv True | +disc PEAK cov 0.68 IS 2.41e+03
+  split 11: calib R-hat 1.002 conv True | +disc PEAK cov 0.87 IS 2.6e+03
+  split 12: calib R-hat 1.002 conv True | +disc PEAK cov 0.94 IS 2.78e+03
+  split 13: calib R-hat 1.001 conv True | +disc PEAK cov 0.90 IS 1.38e+03
+  split 14: calib R-hat 1.001 conv True | +disc PEAK cov 0.87 IS 2.51e+03
+  split 15: calib R-hat 1.007 conv True | +disc PEAK cov 0.84 IS 2.3e+03
+  split 16: calib R-hat 1.003 conv True | +disc PEAK cov 0.84 IS 1.79e+03
+  split 17: calib R-hat 1.003 conv True | +disc PEAK cov 0.97 IS 1.66e+03
+  split 18: calib R-hat 1.003 conv True | +disc PEAK cov 0.84 IS 2.52e+03
+  split 19: calib R-hat 1.002 conv True | +disc PEAK cov 0.84 IS 1.81e+03
+  split 20: calib R-hat 1.002 conv True | +disc PEAK cov 0.84 IS 1.74e+03
+  split 21: calib R-hat 1.002 conv True | +disc PEAK cov 0.81 IS 2.18e+03
+  split 22: calib R-hat 1.001 conv True | +disc PEAK cov 0.97 IS 1.93e+03
+  split 23: calib R-hat 1.004 conv True | +disc PEAK cov 0.90 IS 2.62e+03
+  split 24: calib R-hat 1.006 conv True | +disc PEAK cov 0.90 IS 1.92e+03
+
+MC DONE: 25 splits | L5 calib converged 100% of splits
+  +disc PEAK coverage med 0.87 [0.75,0.97] | interval med 2.03e+03 | z-std med 0.68
+  runtime 4485s -> /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/mc_summary.json
+  split  0: R-hat 1.002 | median IS 1429 | pass 94%  (29/31)
+  split  1: R-hat 1.001 | median IS 1112 | pass 100%  (31/31)
+  split  2: R-hat 1.009 | median IS 1164 | pass 100%  (31/31)
+  split  3: R-hat 1.002 | median IS 1711 | pass 87%  (27/31)
+  split  4: R-hat 1.001 | median IS 1096 | pass 90%  (28/31)
+  split  5: R-hat 1.002 | median IS 1896 | pass 65%  (20/31)
+  split  6: R-hat 1.004 | median IS 1334 | pass 81%  (25/31)
+  split  7: R-hat 1.002 | median IS 1073 | pass 77%  (24/31)
+  split  8: R-hat 1.001 | median IS 1178 | pass 90%  (28/31)
+  split  9: R-hat 1.001 | median IS 1087 | pass 94%  (29/31)
+  split 10: R-hat 1.001 | median IS 1477 | pass 55%  (17/31)
+  split 11: R-hat 1.002 | median IS 1256 | pass 87%  (27/31)
+  split 12: R-hat 1.002 | median IS 1510 | pass 87%  (27/31)
+  split 13: R-hat 1.001 | median IS 833 | pass 90%  (28/31)
+  split 14: R-hat 1.001 | median IS 1421 | pass 84%  (26/31)
+  split 15: R-hat 1.007 | median IS 1642 | pass 87%  (27/31)
+  split 16: R-hat 1.003 | median IS 1215 | pass 87%  (27/31)
+  split 17: R-hat 1.003 | median IS 935 | pass 87%  (27/31)
+  split 18: R-hat 1.003 | median IS 1934 | pass 87%  (27/31)
+  split 19: R-hat 1.002 | median IS 1615 | pass 84%  (26/31)
+  split 20: R-hat 1.002 | median IS 1108 | pass 87%  (27/31)
+  split 21: R-hat 1.002 | median IS 1279 | pass 71%  (22/31)
+  split 22: R-hat 1.001 | median IS 1728 | pass 90%  (28/31)
+  split 23: R-hat 1.004 | median IS 1464 | pass 90%  (28/31)
+  split 24: R-hat 1.006 | median IS 1139 | pass 87%  (27/31)
+
+wrote out/mc_report.pdf + out/mc_pattern_summary.json
+  consistently FAIL (pass<=0.34): [4, 27, 38, 40, 52, 69, 98]
+  consistently PASS (pass>=0.95): 52 channels
+  pass-rate corr: log10 DR +0.04, z-height -0.05
+MC RERUN DONE

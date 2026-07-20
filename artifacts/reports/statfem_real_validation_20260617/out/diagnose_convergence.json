@@ -1,0 +1,127 @@
+{
+  "split": 0,
+  "nobs": 8,
+  "zeta": 0.01,
+  "realized_floor": 1.726,
+  "ident4_groups": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "ident4_names": [
+    "bottom_box",
+    "cross_beam",
+    "plates",
+    "top_box"
+  ],
+  "configs": [
+    {
+      "label": "M3_full9_sigmad_fixedFloor",
+      "arm": "M3",
+      "free_groups": null,
+      "fixed_sigma_d": 1.726,
+      "converged": false,
+      "diag": {
+        "max_rhat": 101.60539680727207,
+        "min_ess": 2.0026805542745962,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 1600
+      },
+      "gain_med": 6.22075662429257,
+      "runtime_s": 205.89808797836304
+    },
+    {
+      "label": "M3_ident4_sigmad_sampled",
+      "arm": "M3",
+      "free_groups": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "fixed_sigma_d": null,
+      "converged": false,
+      "diag": {
+        "max_rhat": 152.24254029804393,
+        "min_ess": 2.0025858458978076,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 1600
+      },
+      "gain_med": 5.286033455244732,
+      "runtime_s": 116.689453125,
+      "sigma_d_med": 9.975567189763272
+    },
+    {
+      "label": "M3_ident4_sigmad_fixedFloor",
+      "arm": "M3",
+      "free_groups": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "fixed_sigma_d": 1.726,
+      "converged": false,
+      "diag": {
+        "max_rhat": 232.87614922554985,
+        "min_ess": 2.002537607835044,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 1600
+      },
+      "gain_med": 5.804581728926745,
+      "runtime_s": 134.03578901290894
+    },
+    {
+      "label": "M0_ident4",
+      "arm": "M0",
+      "free_groups": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "fixed_sigma_d": null,
+      "converged": false,
+      "diag": {
+        "max_rhat": 474.75640006543244,
+        "min_ess": 2.002511167131208,
+        "divergences": 0,
+        "div_frac": 0.0,
+        "n_chains": 4,
+        "draws": 1600
+      },
+      "gain_med": 5.518716156517001,
+      "runtime_s": 57.99189496040344
+    },
+    {
+      "label": "M1_ident4_sigmad_sampled",
+      "arm": "M1",
+      "free_groups": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "fixed_sigma_d": null,
+      "converged": false,
+      "diag": {
+        "max_rhat": 34.79107431759267,
+        "min_ess": 2.0041365802432516,
+        "divergences": 1,
+        "div_frac": 0.000625,
+        "n_chains": 4,
+        "draws": 1600
+      },
+      "gain_med": 5.490376779588804,
+      "runtime_s": 97.9019730091095,
+      "sigma_d_med": 1.4850940576743277
+    }
+  ]
+}

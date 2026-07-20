@@ -1,0 +1,52 @@
+{
+ "cid": "A0",
+ "rhat_max": 1.001,
+ "ess_min": 1800.0,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 1527.0,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}
+{
+ "cid": "a16_bb_splits_combo",
+ "rhat_max": 1.0013,
+ "ess_min": 2663.9,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 2522.7,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}
+{
+ "cid": "c06_tb_xface",
+ "rhat_max": 1.0038,
+ "ess_min": 701.4,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 9015.1,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}
+{
+ "cid": "a04_welds_t074",
+ "rhat_max": 1.0013,
+ "ess_min": 1656.9,
+ "div_frac": 0.0,
+ "divergences": 0,
+ "chains": 4,
+ "draws": 4000,
+ "runtime_s": 7872.3,
+ "likelihood": "S0 modal-frequency (paired eigenvalues, sd 5%), lognormal theta prior 0.25",
+ "sampler": "NUTS numpyro x64, 4 chains sequential, dense mass",
+ "converged": true
+}

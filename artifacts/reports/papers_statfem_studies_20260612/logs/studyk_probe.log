@@ -1,0 +1,5 @@
+global {'max_rhat': 1.0132, 'min_ess': 231.264, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 24.5565}
+  K_global: QOI 2/5  cover [False, True, False, False, True]
+permode {'max_rhat': 3.7484, 'min_ess': 1.1192, 'divergences': 0, 'div_frac': 0.0, 'runtime_s': 6.8057}
+  K_permode: QOI 0/5  cover [False, False, False, False, False]
+saved studyk_summary.json

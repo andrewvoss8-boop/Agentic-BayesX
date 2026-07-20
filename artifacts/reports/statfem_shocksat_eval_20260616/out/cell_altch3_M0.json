@@ -1,0 +1,46 @@
+{
+ "tag": "altch",
+ "sensitivity": true,
+ "combo_idx": 3,
+ "arm": "M0",
+ "zeta": 0.02,
+ "len_logf": 0.3,
+ "len_z": 12.0,
+ "nuts": {
+  "max_rhat": 1.0055748768254278,
+  "min_ess": 1402.5727880786826,
+  "divergences": 0,
+  "div_frac": 0.0,
+  "n_chains": 4,
+  "draws": 2800
+ },
+ "converged": true,
+ "heldout_coverage": {
+  "peak": {
+   "covered": 3,
+   "n": 14,
+   "frac": 0.21428571428571427
+  },
+  "band": {
+   "covered": 2,
+   "n": 14,
+   "frac": 0.14285714285714285
+  },
+  "combined": {
+   "covered": 5,
+   "n": 28,
+   "frac": 0.17857142857142858
+  },
+  "peak_noisy_frac": 0.5714285714285714,
+  "band_noisy_frac": 0.2857142857142857,
+  "nominal": 0.95
+ },
+ "sigma_d": {
+  "lo": 0.0,
+  "med": 0.0,
+  "hi": 0.0,
+  "fixed": true
+ },
+ "mean_band_width_db": 0.4228093056033223,
+ "runtime_s": 245.93
+}

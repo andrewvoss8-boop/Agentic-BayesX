@@ -1,0 +1,25 @@
+{
+  "deliverable": "frequency skill preserved under multi-reference (reference-invariant)",
+  "before_xonly": {
+    "crps_skill": 0.9306578407721781,
+    "freq_err_pct": [
+      2.1019692014386604,
+      1.0667620729129084
+    ]
+  },
+  "after_multiref": {
+    "crps_skill": 0.9306578407721781,
+    "reason": "modal frequencies are reference-INVARIANT; the held-out modal-frequency skill is identical regardless of drive. Multi-reference changes EXCITATION COVERAGE, not the frequency values."
+  },
+  "excitation_coverage": {
+    "single_ref_+X_excited_modes": 17,
+    "multi_ref_union_excited_modes": 23,
+    "by_drive": {
+      "xpos_990x": 17,
+      "zpos_990z": 13,
+      "ypos_990y": 17,
+      "z_900z": 6
+    }
+  },
+  "verdict": "+0.93 frequency skill carries over unharmed; multi-reference's frequency contribution is modal COVERAGE (more modes excited across drives), but stiffness identifiability is discrepancy-floor-limited (see multiref_identifiability.json), so the coverage gain does not add held-out frequency value beyond the already-saturated +0.93."
+}

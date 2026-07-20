@@ -1,0 +1,7 @@
+{
+ "cid": "c06_tb_xface_enr",
+ "rel_err": 4.524286691953705e-07,
+ "n_modes": 67,
+ "pass_0p3pct": true,
+ "provenance": "exact-basis reduction validated in shocksat_true_remodel_loop_20260706 (identical package); reused here read-only"
+}

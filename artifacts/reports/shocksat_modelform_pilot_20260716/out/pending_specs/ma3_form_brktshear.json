@@ -1,0 +1,19 @@
+{
+ "cid": "ma3_form_brktshear",
+ "cls": "element_formulation",
+ "ops": [
+  {
+   "op": "formulation",
+   "pids": [
+    301,
+    302
+   ],
+   "ts_t": 0.35,
+   "name": "brktshear"
+  }
+ ],
+ "diagnosis_link": "diagnosis_mf_r3.json: Top_Brackets|Y 0.702 dex; the bracket shells carry the tray load path -> shear-soften their formulation (ts 5/6 -> 0.35), the same knob that gave the agent's r1 formulation best (+0.1630 on plates)",
+ "track": "agent",
+ "round": 3,
+ "rationale": "diagnosis_mf_r3.json: Top_Brackets|Y 0.702 dex; the bracket shells carry the tray load path -> shear-soften their formul"
+}
