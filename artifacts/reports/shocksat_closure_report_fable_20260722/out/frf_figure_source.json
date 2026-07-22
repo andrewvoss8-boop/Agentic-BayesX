@@ -1,0 +1,35 @@
+{
+  "split_seed": 10,
+  "rhat": 1.0011525943125785,
+  "sigma": 0.8103041848443749,
+  "source_sha256": "58326e02f9ada1308feccaec42b27ced9322e0fb9014a27469d139cf7e0d4da1",
+  "selection_rule": "Rank the 31 held-out channels of frozen split seed 10 by the median of |log10(updated median / measured)| over 45-260 Hz, ascending; show ranks 1, 7, 13, 19, 25, 31. Rule fixed before plotting (decisions_log.md F2).",
+  "ranks": [
+    1,
+    7,
+    13,
+    19,
+    25,
+    31
+  ],
+  "daqs": [
+    28,
+    79,
+    9,
+    56,
+    2,
+    24
+  ],
+  "miss_stat_by_daq": {
+    "28": 0.2966,
+    "79": 0.4297,
+    "9": 0.4645,
+    "56": 0.5754,
+    "2": 0.6453,
+    "24": 1.1062
+  },
+  "band_hz": [
+    45,
+    260
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "purpose": "presentation-only simplification for the ShockSat advisor summary",
+  "science_recomputed": false,
+  "figures": [
+    {
+      "file": "figures_revised/fig1_load_bands.png",
+      "story": "Load uncertainty differs by direction because modal observation differs.",
+      "status": "YELLOW: shear has held-out response checks; normal has no direct net-CG force answer key.",
+      "metrics": {
+        "panels": [
+          {
+            "direction": "Shear X",
+            "band_median_grms_proxy": 64858.82710778286,
+            "plausible_truth_median_grms_proxy": 69677.0398344597
+          },
+          {
+            "direction": "Shear Y",
+            "band_median_grms_proxy": 50851.825426066855,
+            "plausible_truth_median_grms_proxy": 51139.867760425805
+          },
+          {
+            "direction": "Normal Z",
+            "band_median_grms_proxy": 53060.700208711525,
+            "plausible_truth_median_grms_proxy": 41769.24252800525
+          }
+        ],
+        "selection": "all three load directions"
+      }
+    },
+    {
+      "file": "figures_revised/fig2_frf_examples.png",
+      "story": "Frequency and damping updates improve peak alignment but leave channel-specific FRF shape error.",
+      "status": "GREEN deterministic comparison; no posterior or delivery-validation claim.",
+      "metrics": {
+        "reference_direction": "+X",
+        "n_channels": 84,
+        "median_log_magnitude_correlation_original": 0.2686989971195355,
+        "median_log_magnitude_correlation_updated": 0.33824166281263285,
+        "fraction_channels_improved": 0.7023809523809523,
+        "panels": [
+          {
+            "agreement_quantile": 0.1,
+            "daq_channel": 24,
+            "original_log_magnitude_correlation": -0.1386859124420105,
+            "updated_log_magnitude_correlation": -0.11206287131106252
+          },
+          {
+            "agreement_quantile": 0.4,
+            "daq_channel": 54,
+            "original_log_magnitude_correlation": 0.24715049760710892,
+            "updated_log_magnitude_correlation": 0.26639676628190573
+          },
+          {
+            "agreement_quantile": 0.6,
+            "daq_channel": 106,
+            "original_log_magnitude_correlation": 0.3374275840597898,
+            "updated_log_magnitude_correlation": 0.36629885275135626
+          },
+          {
+            "agreement_quantile": 0.9,
+            "daq_channel": 92,
+            "original_log_magnitude_correlation": 0.652108339792409,
+            "updated_log_magnitude_correlation": 0.5970740059006784
+          }
+        ],
+        "selection": "fixed quantiles of updated per-channel log-magnitude correlation"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_method_selection_20260701/code/netcg_qoi.py",
+      "sha256": "67065ca55589222ce2f9c56278f49042c3ba04cee96f4d27051765cc3c4a6ead"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_method_selection_20260701/out/theta_post_L5.npz",
+      "sha256": "6541872129762888ccc46661e36d6f2382f84cb54c880056396cba830f9e000a"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_method_selection_20260701/out/bakeoff_scorecard.json",
+      "sha256": "e9bcf5ee5c14d00d37dc32196a816d120759267d2e9c89160c89c98f6b187518"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_method_selection_20260701/out/heldout_drive.json",
+      "sha256": "68e73d7aa4d4b011854bc0636140a580a366b1b5c18f4cf55c7279f30bd9f98c"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_method_selection_20260701/out/stage0_trust.json",
+      "sha256": "1af3cebb482addff675c7e251be30f97887908aba7902ea9b283f8baf83afd9a"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_psd_envelope_twin_20260623/code/fig_frf_comparison.py",
+      "sha256": "7a5ac9f541f7a782e8f4bab3631dc48dd83273cae17d072c86910310fb4533d4"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_psd_envelope_twin_20260623/out/edits/baseline/modes.npz",
+      "sha256": "164264a2ca216d6d05c7da31951b802ee40ed748a22a3c706f1c1a06ba2de1c5"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_psd_envelope_twin_20260623/data/measured_modes.npz",
+      "sha256": "16ab8fc256484d99afedd0a4e81ff8b5e58b4f4db86a1d9be163722caad74fbf"
+    }
+  ]
+}

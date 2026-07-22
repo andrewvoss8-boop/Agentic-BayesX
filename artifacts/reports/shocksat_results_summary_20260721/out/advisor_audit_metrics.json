@@ -1,0 +1,197 @@
+{
+  "purpose": "source-backed audit tables for the advisor progress report",
+  "science_recomputed": false,
+  "modal_posterior_contraction": {
+    "n_draws": 4000,
+    "prior": "LogNormal(log-median=0, log-sd=0.25)",
+    "prior_sd_on_theta_scale": 0.26201907210920117,
+    "rows": [
+      {
+        "group": "al_welds",
+        "posterior_median": 1.0186102117454414,
+        "posterior_sd": 0.27193709183770187,
+        "posterior_sd_over_prior_sd": 1.0378522817009566,
+        "strongest_abs_correlation_partner": "top_box",
+        "correlation": -0.10073680697764693
+      },
+      {
+        "group": "angle_brackets",
+        "posterior_median": 1.0103926717143712,
+        "posterior_sd": 0.2602734085604201,
+        "posterior_sd_over_prior_sd": 0.9933376470089416,
+        "strongest_abs_correlation_partner": "cross_beam",
+        "correlation": -0.2817504952787579
+      },
+      {
+        "group": "bottom_box",
+        "posterior_median": 0.9636487728795795,
+        "posterior_sd": 0.03362272876555361,
+        "posterior_sd_over_prior_sd": 0.12832168473423466,
+        "strongest_abs_correlation_partner": "top_box",
+        "correlation": -0.09471932595025619
+      },
+      {
+        "group": "contact",
+        "posterior_median": 0.9835958291841594,
+        "posterior_sd": 0.2619378871212841,
+        "posterior_sd_over_prior_sd": 0.9996901561887707,
+        "strongest_abs_correlation_partner": "bottom_box",
+        "correlation": 0.04423027032908434
+      },
+      {
+        "group": "cross_beam",
+        "posterior_median": 1.0382965686736267,
+        "posterior_sd": 0.1674406048252375,
+        "posterior_sd_over_prior_sd": 0.6390397595006123,
+        "strongest_abs_correlation_partner": "top_box",
+        "correlation": -0.291170311176519
+      },
+      {
+        "group": "joints",
+        "posterior_median": 1.0927947407908676,
+        "posterior_sd": 0.2627104753937479,
+        "posterior_sd_over_prior_sd": 1.0026387517480353,
+        "strongest_abs_correlation_partner": "plates",
+        "correlation": -0.34002427077040953
+      },
+      {
+        "group": "plates",
+        "posterior_median": 0.976140545353818,
+        "posterior_sd": 0.13716689818978078,
+        "posterior_sd_over_prior_sd": 0.5234996715529701,
+        "strongest_abs_correlation_partner": "joints",
+        "correlation": -0.34002427077040953
+      },
+      {
+        "group": "steel_welds",
+        "posterior_median": 1.01198937494314,
+        "posterior_sd": 0.28129363610921115,
+        "posterior_sd_over_prior_sd": 1.0735616832960044,
+        "strongest_abs_correlation_partner": "top_box",
+        "correlation": -0.06151568656697449
+      },
+      {
+        "group": "top_box",
+        "posterior_median": 1.0475404749463761,
+        "posterior_sd": 0.04991512113577671,
+        "posterior_sd_over_prior_sd": 0.19050186207427558,
+        "strongest_abs_correlation_partner": "cross_beam",
+        "correlation": -0.291170311176519
+      }
+    ],
+    "interpretation_limit": "Posterior contraction measures learning under this likelihood and prior. It is not a per-parameter identifiability certificate.",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_modal_twin_20260609/nuts_full_samples.npz",
+    "source_sha256": "faf35c882c2662c1ff39715f359f9aaf1e7d587d3f16d83bef4cf1b06a5a725e"
+  },
+  "model_form_selection": {
+    "rows": [
+      {
+        "class": "connectivity",
+        "n_pooled": 12,
+        "selected_best_candidate": "mr1_conn0",
+        "selected_best_delta_mean": 0.06412069847227284,
+        "selected_best_delta_se": 0.02726969541965144,
+        "class_mean_delta_mean": 0.027978057975768165,
+        "class_mean_delta_se": 0.0175793757472411,
+        "selection_note": "best-of-12 carries selection noise; class mean is the control"
+      },
+      {
+        "class": "mesh_density",
+        "n_pooled": 12,
+        "selected_best_candidate": "ma3_mesh_covers",
+        "selected_best_delta_mean": 0.06345941990795408,
+        "selected_best_delta_se": 0.021395268927642503,
+        "class_mean_delta_mean": 0.05360165674775595,
+        "class_mean_delta_se": 0.018634276803388257,
+        "selection_note": "best-of-12 carries selection noise; class mean is the control"
+      },
+      {
+        "class": "element_formulation",
+        "n_pooled": 12,
+        "selected_best_candidate": "mr2_elem5",
+        "selected_best_delta_mean": 0.07111545328014318,
+        "selected_best_delta_se": 0.011984168327258012,
+        "class_mean_delta_mean": 0.028037815209825807,
+        "class_mean_delta_se": 0.009603144114257188,
+        "selection_note": "best-of-12 carries selection noise; class mean is the control"
+      },
+      {
+        "class": "geometry",
+        "n_pooled": 12,
+        "selected_best_candidate": "ma2_geo_jointbbox",
+        "selected_best_delta_mean": 0.05967872048769218,
+        "selected_best_delta_se": 0.011603634273693186,
+        "class_mean_delta_mean": 0.024360047087976792,
+        "class_mean_delta_se": 0.011830652719632469,
+        "selection_note": "best-of-12 carries selection noise; class mean is the control"
+      }
+    ],
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/verdicts.json",
+    "source_sha256": "9d198be9e0be90a2d41e29febbf394611c7e5c926d9a74835b3534bc375d5f7c"
+  },
+  "runtime_summary": [
+    {
+      "study": "Modal FEM + NUTS evaluation",
+      "active_runtime_s": 38099.0,
+      "elapsed_wallclock_s": 63791.0,
+      "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fem_modal_twin_20260609/runtime.json",
+      "source_sha256": "e28b58e72ba2c6082951ac32f30b28f03e99ee6de9e098bfa527b9333f6d273f"
+    },
+    {
+      "study": "Exact 28-candidate rerank",
+      "active_runtime_s": 26941.7,
+      "elapsed_wallclock_s": 27784.8,
+      "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_fullspec_exact_completion_20260716/runtime.json",
+      "source_sha256": "04ee59294d72bbbaa9938b63e0cbd9987438bed4956152e49d249b7d2e74de27"
+    },
+    {
+      "study": "Model-form pilot",
+      "active_runtime_s": 211938.6,
+      "elapsed_wallclock_s": 211938.6,
+      "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/runtime.json",
+      "source_sha256": "b764d186ee067c57cd1bab03c4ed0ac1961247e939dda5d0d60e315a8194c18a"
+    },
+    {
+      "study": "Validated net-CG port",
+      "active_runtime_s": 96.79,
+      "elapsed_wallclock_s": 97.46,
+      "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_validated_port_20260716/runtime.json",
+      "source_sha256": "6bdd73e59c2ea672fdbab72ac32da1840d2467dcb47f47f87f637f3de9aeab38"
+    }
+  ],
+  "posterior_bookkeeping": [
+    {
+      "run": "Modal frequency, all 18 modes",
+      "target": "9 stiffness scales + fractional modal residual scale",
+      "sampler": "NUTS, 4 chains",
+      "diagnostic": "R-hat 1.022; ESS 232; 0 divergences",
+      "finding": "Converged for the modal-frequency target only.",
+      "raw_draws_retained": true
+    },
+    {
+      "run": "Whole-FRF +X held-out fold",
+      "target": "stiffness, gain, and correlated output-error/noise scales",
+      "sampler": "NUTS, 4 chains",
+      "diagnostic": "R-hat 48.8; ESS 2.0 for the displayed fold (study worst R-hat 360.6)",
+      "finding": "Chains occupied separated solutions; predictive interval is not trustworthy.",
+      "raw_draws_retained": true
+    },
+    {
+      "run": "Free-discrepancy M2 whole-FRF comparator",
+      "target": "stiffness + free discrepancy amplitude sigma_d",
+      "sampler": "NUTS and TMCMC escalation",
+      "diagnostic": "cross-run R-hat 129; sigma_d approached 7.4; reported interval scale was about 1e17",
+      "finding": "The discrepancy scale was boundary-seeking and not stably identified.",
+      "raw_draws_retained": false
+    },
+    {
+      "run": "IFT whole-FRF comparator",
+      "target": "4 stiffness scales + bounded physics-trust beta + gain",
+      "sampler": "TMCMC, 4 independent populations per split",
+      "diagnostic": "cross-run R-hat 1.0004\u20131.0011; beta reduced 245.7x from its forward-model nominal value",
+      "finding": "Computationally reproducible for this bounded target; learned low physics trust and over-wide band-GRMS.",
+      "raw_draws_retained": false
+    }
+  ],
+  "trace_plot_limit": "Raw modal and whole-FRF NUTS draws are retained. The reportable IFT/M2 TMCMC artifact set retains run summaries but not raw populations; no IFT/M2 trace or pair plot is reconstructed."
+}

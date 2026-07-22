@@ -1,0 +1,170 @@
+{
+  "measured_vs_synthetic": {
+    "measured_drive_caches": 5,
+    "synthetic_cases": 4,
+    "synthetic_seeds_per_case": 20
+  },
+  "eligible_common_response_channels": 84,
+  "selected_response_channels": 15,
+  "selected_daq": [
+    24,
+    25,
+    23,
+    53,
+    54,
+    52,
+    91,
+    92,
+    90,
+    98,
+    95,
+    94,
+    50,
+    51,
+    49
+  ],
+  "selected_axis_counts": {
+    "X": 5,
+    "Y": 5,
+    "Z": 5
+  },
+  "selected_region_counts": {
+    "bolted_joint": 3,
+    "bulkhead": 3,
+    "dish": 3,
+    "impact": 3,
+    "strut": 3
+  },
+  "analysis_frequency_lines": 87,
+  "analysis_range_hz": [
+    45.0,
+    260.0
+  ],
+  "analysis_spacing_hz": 2.5,
+  "drives": [
+    {
+      "id": "m_xpos_990x",
+      "source": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_xpos_990x_wide.npz",
+      "drive_xyz_in": [
+        9.0,
+        7.6,
+        0.6
+      ],
+      "drive_axis": "X",
+      "label": "+X (990)",
+      "instrument": "modal",
+      "native_frequency_count": 1452,
+      "native_frequency_min_hz": 46.79361979166667,
+      "native_frequency_max_hz": 2998.8606770833335,
+      "native_frequency_spacing_median_hz": 2.034505208333343,
+      "response_channel_count": 111,
+      "n_hits_used": 6,
+      "independent_realizations": "retained impact hits averaged inside source cache",
+      "window": "inherited source cache; exact window metadata not stored in NPZ",
+      "frame_length": 122880,
+      "overlap": "not stored",
+      "detrending": "not stored",
+      "averaging_axis": "impact hits"
+    },
+    {
+      "id": "m_xy_990xy",
+      "source": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_xy_990xy_wide.npz",
+      "drive_xyz_in": [
+        9.0,
+        9.0,
+        1.1
+      ],
+      "drive_axis": "XY",
+      "label": "+XY (990)",
+      "instrument": "modal",
+      "native_frequency_count": 1452,
+      "native_frequency_min_hz": 46.79361979166667,
+      "native_frequency_max_hz": 2998.8606770833335,
+      "native_frequency_spacing_median_hz": 2.034505208333343,
+      "response_channel_count": 111,
+      "n_hits_used": 6,
+      "independent_realizations": "retained impact hits averaged inside source cache",
+      "window": "inherited source cache; exact window metadata not stored in NPZ",
+      "frame_length": 122880,
+      "overlap": "not stored",
+      "detrending": "not stored",
+      "averaging_axis": "impact hits"
+    },
+    {
+      "id": "m_ypos_990y",
+      "source": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_ypos_990y_wide.npz",
+      "drive_xyz_in": [
+        8.5,
+        9.0,
+        1.0
+      ],
+      "drive_axis": "Y",
+      "label": "+Y",
+      "instrument": "modal",
+      "native_frequency_count": 1452,
+      "native_frequency_min_hz": 46.79361979166667,
+      "native_frequency_max_hz": 2998.8606770833335,
+      "native_frequency_spacing_median_hz": 2.034505208333343,
+      "response_channel_count": 111,
+      "n_hits_used": 4,
+      "independent_realizations": "retained impact hits averaged inside source cache",
+      "window": "inherited source cache; exact window metadata not stored in NPZ",
+      "frame_length": 122880,
+      "overlap": "not stored",
+      "detrending": "not stored",
+      "averaging_axis": "impact hits"
+    },
+    {
+      "id": "m_zpos_900z",
+      "source": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_zpos_900z_wide.npz",
+      "drive_xyz_in": [
+        9.0,
+        0.0,
+        0.0
+      ],
+      "drive_axis": "Z",
+      "label": "+Z (900)",
+      "instrument": "modal",
+      "native_frequency_count": 1452,
+      "native_frequency_min_hz": 46.79361979166667,
+      "native_frequency_max_hz": 2998.8606770833335,
+      "native_frequency_spacing_median_hz": 2.034505208333343,
+      "response_channel_count": 111,
+      "n_hits_used": 6,
+      "independent_realizations": "retained impact hits averaged inside source cache",
+      "window": "inherited source cache; exact window metadata not stored in NPZ",
+      "frame_length": 122880,
+      "overlap": "not stored",
+      "detrending": "not stored",
+      "averaging_axis": "impact hits"
+    },
+    {
+      "id": "m_zpos_990z",
+      "source": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_zpos_990z_wide.npz",
+      "drive_xyz_in": [
+        9.0,
+        7.8,
+        0.0
+      ],
+      "drive_axis": "Z",
+      "label": "+Z (990)",
+      "instrument": "modal",
+      "native_frequency_count": 1452,
+      "native_frequency_min_hz": 46.79361979166667,
+      "native_frequency_max_hz": 2998.8606770833335,
+      "native_frequency_spacing_median_hz": 2.034505208333343,
+      "response_channel_count": 111,
+      "n_hits_used": 6,
+      "independent_realizations": "retained impact hits averaged inside source cache",
+      "window": "inherited source cache; exact window metadata not stored in NPZ",
+      "frame_length": 122880,
+      "overlap": "not stored",
+      "detrending": "not stored",
+      "averaging_axis": "impact hits"
+    }
+  ],
+  "response_labels_present": true,
+  "coordinates_present": true,
+  "repeat_variability_modeled": false,
+  "repeat_note": "source H1 averages retained impacts; this study has no separate repeat-level likelihood"
+}

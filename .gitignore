@@ -42,3 +42,9 @@ Test07_ImpactHammer_990x.zip
 data/zips/
 artifacts/reports/*/data/measured_frf_cache.npz
 artifacts/reports/statfem_shocksat_eval_20260616/data/V_keep.npy
+
+# Word lock/temp files
+~$*
+# Large regenerable page-render QA image sets (deliverable docx/pdf + build script are the provenance)
+artifacts/reports/shocksat_results_summary_20260721/qa/
+docs/agents/structured_discrepancy_codex_review_20260722/qa/

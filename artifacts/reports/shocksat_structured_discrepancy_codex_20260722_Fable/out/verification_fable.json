@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "id": "V1",
+      "what": "Kronecker solve and logdet vs dense",
+      "max_abs_dev_solve": 1.0547118733938987e-15,
+      "abs_dev_logdet": 0.0,
+      "tol": 1e-09,
+      "pass": true
+    },
+    {
+      "id": "V2",
+      "what": "universal-kriging conditional mean/variance/coefficients vs dense brute force, both cross-covariance kinds",
+      "detail": {
+        "spatial": {
+          "max_abs_dev_mean": 3.3306690738754696e-16,
+          "max_abs_dev_var": 4.440892098500626e-16,
+          "max_abs_dev_beta": 5.551115123125783e-17
+        },
+        "frequency": {
+          "max_abs_dev_mean": 5.551115123125783e-16,
+          "max_abs_dev_var": 4.440892098500626e-16,
+          "max_abs_dev_beta": 1.8735013540549517e-16
+        }
+      },
+      "tol": 1e-08,
+      "pass": true
+    },
+    {
+      "id": "V3",
+      "what": "E0 and E1 identical training fit (same hyperparameters and coefficient posterior); only the train-to-test cross-covariance K_*T is toggled",
+      "identical_c_hat": true,
+      "identical_c_post_sd": true,
+      "median_abs_err_db_E0": 10.799951977070602,
+      "median_abs_err_db_E1": 9.546568380502563,
+      "prediction_differs": true,
+      "pass": true
+    },
+    {
+      "id": "V7",
+      "what": "basis centering + interaction margin residuals on a real training fold (weighted ANOVA constraints)",
+      "residuals": {
+        "frequency_grand_mean_abs": 1.2600757875548576e-16,
+        "location_grand_mean_abs": 4.0936055858715747e-16,
+        "axis_grand_mean_abs": 1.626139471207947e-17,
+        "interaction_grand_mean_abs": 7.178166107490236e-19,
+        "interaction_freq_margin_abs": 3.9719185794779306e-16,
+        "interaction_loc_margin_abs": 1.1604473995486756e-16,
+        "max_constraint_residual": 4.0936055858715747e-16,
+        "max_constraint_residual_normalized": 4.264411320756751e-16
+      },
+      "tol": 1e-10,
+      "pass": true
+    },
+    {
+      "id": "V4",
+      "what": "analytic Normal(0, Lambda_beta) main-effect prior density vs a 400000-sample Monte-Carlo histogram (200 bins)",
+      "mc_samples": 400000,
+      "bins": 200,
+      "relative_L1_error": 0.012506197251722482,
+      "tol": 0.02,
+      "prior_sd_dimensionless": 0.6907755278982138,
+      "prior_sd_db": 6.0,
+      "pass": true
+    },
+    {
+      "id": "V5",
+      "what": "closed-form Gaussian CRPS vs 200k-sample Monte-Carlo CRPS",
+      "max_abs_dev": 0.006245243382493548,
+      "tol": 0.01,
+      "analytic": [
+        0.8532563292805191,
+        0.3525203141619338,
+        0.30380347043164185,
+        1.165167380415828
+      ],
+      "monte_carlo": [
+        0.8555785965622486,
+        0.3528873605085189,
+        0.3032688477909181,
+        1.1589221370333345
+      ],
+      "pass": true
+    },
+    {
+      "id": "V6",
+      "what": "the production response Jacobian d q_fem / d log(theta) is jax forward-mode autodiff in float64; a central-difference Jacobian is reported alongside as an independent cross-check",
+      "production_vs_autodiff_max_rel_dev": 0.0,
+      "fd_vs_autodiff_max_rel_dev": 0.1293646402631462,
+      "fd_vs_autodiff_median_rel_dev": 2.665294180008858e-07,
+      "fd_step_log_theta": 0.001,
+      "tol_production": 1e-12,
+      "note": "the finite-difference route disagrees at the worst grid point because ln|H| is strongly nonlinear in theta near a resonance; the median agreement is good. Production uses autodiff, so this is a diagnostic.",
+      "pass": true
+    }
+  ],
+  "orthogonality_example": {
+    "normalized_residual": 1.3574456640955397e-14,
+    "abs_residual": 3.2840497489673343e-12,
+    "JtWH_norm": 241.92863374428197,
+    "pinv_rcond": 1e-10,
+    "JtWJ_cond": 16759.946537539578,
+    "definition": "P_perp = I - J (J^T W J)^+ J^T W at the modal-posterior median theta_0 on the TRAINING grid, W = Sigma_train^{-1} (realized covariance metric)"
+  },
+  "all_pass": true,
+  "runtime_s": 3.22
+}

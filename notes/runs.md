@@ -8,6 +8,47 @@
 - Key metrics:
 - Lessons:
 
+## 2026-07-21 — MPL existing-data-only conditional ensemble (successor to Stage-0 YELLOW stop)
+- Trial: with only the 13 frozen response-only records, which of B0/B1/B2 and a bounded source-supported
+  model-form menu remain predictively plausible under complete response-family holdouts, the empirical
+  discrepancy floor (0.7172% hard minimum), and 6 dB acoustic forcing-color stress? YELLOW ceiling by
+  construction; no vault, no adaptive search.
+- Command: `bash artifacts/reports/mpl_existing_data_conditional_20260720/run_all.sh`
+- Checker result: **OVERALL YELLOW {GREEN:16, YELLOW:2, RED:0}, exit 0** (SHA-locked pre-science,
+  RED-on-empty proven, verified unmodified; paired arithmetic independently recomputed by checker).
+- Key metrics: held-out equal-family feature losses 4.5-10% vs 0.72% repeat floor (model discrepancy
+  dominates; inter-model gaps <=0.4%). Plausibility set = {B2} by the 2-paired-SE rule, but NOT conditionally
+  preferred (2/5 folds vs B1; coverage 0.04-0.36 vs 0.90; acoustic 6 dB reverses 2 families; tau x2 collapses
+  and x4 reverses the weights; TMCMC not numerically established under the 3-seed rule — prior ensemble
+  retained). B1 adds NO value over B0 (B0 beats B1 by 2SE in 3/5 folds). Negative control N1
+  (half shield thickness) posts the BEST raw mean loss (6.41%) => low loss != physical truth here.
+  Identifiability: 3/6 FIM combinations clear prior precision; shield_bend dominates (mean SE fraction 0.71);
+  shield_mem/plate_bend below floor. 50/120 eigensolves; 126 TMCMC runs; active 6581 s.
+- Lessons: (1) the known-answer gate caught a real TMCMC underdispersion (1 move/level) before any real
+  interval was reported — mixing fix D6, criteria unchanged; (2) raw-parameter recovery is an identifiability
+  test, not a sampler test — revise known-answer criteria to informed directions with strain-energy evidence
+  (D5); (3) tempered-sampler acceptance bands must be specified per tempering level (D7); (4) validity-only
+  negative controls are the cheapest defense against reading feature-loss rankings as physics.
+
+## 2026-07-20 — MPL Stage-0 observable-validity gate for the agentic remodel + Bayes campaign
+- Trial: can any legally supported observable from the 13 sequential single-response MPL CSVs discriminate
+  B0, the human D43 B2 control, and four genuine model perturbations beyond measured/matching uncertainty?
+  Calibrated FRF and simultaneous transmissibility were acquisition-illegal; frozen alternatives were
+  repeated-source acoustic pseudo-transmissibility and response-only location features. No sampler, search,
+  DEV query, or vault access occurred because this was the pre-registered first gate.
+- Command: `bash artifacts/reports/mpl_agentic_remodel_bayes_20260720/run_all.sh`
+- Checker result: **Stage-0 precheck OVERALL YELLOW; science YELLOW; 7 GREEN conduct/integrity gates, 0 RED;
+  exit 0.** All 20 candidate/condition/run-state schema objects and figure QA are GREEN. A full science
+  checker was intentionally not created after the stop.
+- Key metrics: acoustic recovery 0.814 (Wilson lower 0.798 vs chance-null q95 0.25), but B0-B2
+  signal/uncertainty 0.270 and qualifying-pair fraction 0.333 (required 2.0 and 0.80). Response-only features
+  recover 0.947 (lower 0.937), but B0-B2 is 1.521 and pair fraction 0.600. Therefore no observable was admitted.
+- Lessons: gross six-class recovery can look excellent while the actual engineering contrast remains below
+  uncertainty; admission must gate on the decision pair and broad pairwise separability, not headline accuracy.
+  The technically preferred next test is synchronized hammer force plus simultaneous responses, but Andrew's
+  D5 decision rules out new data. The actionable successor is an existing-data-only YELLOW-ceiling ensemble,
+  not a forced winner or an unmeasured-regime prediction.
+
 ## 2026-07-16/18 — MODEL-FORM PILOT (Card C): stratified agent-vs-random over GENUINE geometry/element/connectivity/mesh edits, all-exact scoring
 - Trial: HQ1 = stratified amplitude-compass agent beats seeded random on held-out sub-200 P1′ (exact
   bases, ≥1×paired-fold-SE)? HQ2 = ANY genuine model-form class beats the A1 baseline ≥1×SE? 3 rounds ×
@@ -864,6 +905,90 @@ evidence classes → 1 M1 (`rand10`).
   degeneracy-aware transport (MAC pairing on a common DOF space / subspace-level QOI); normal-Z needs
   SENSORS (the >200 Hz plate test), not more re-modelling.
 
+## 2026-07-21 — ShockSat advisor results-summary revision
+
+- Workspace: `artifacts/reports/shocksat_results_summary_20260721/`
+- Deliverable: `ShockSat_results_summary_revised.docx` (original preserved unchanged).
+- Replay: `bash run_revised.sh`.
+- Checker: **OVERALL YELLOW 6G/1Y/0R, exit 0**. All six artifact/layout/reference gates GREEN; the YELLOW is
+  the inherited science ceiling: no direct normal-force answer key, full-spectrum NUTS worst R-hat 360.6/min
+  ESS about 2, and the evidence winner did not earn held-out delivery.
+- Communication result: 15 pages/9 figures became 6 pages/2 single-story plots; exact comparisons are tables;
+  decision/recommendation appears on page 1; nine references verified against NASA/publisher/DOI/ASME sources.
+- QA: Tufte lint 0 heuristic flags; DOCX a11y 0 findings; exactly two embedded images with meaningful alt text;
+  all six rendered pages manually GREEN. No inference, sampler, FEM fit, or scientific metric was recomputed.
+
+## 2026-07-21 — ShockSat advisor progress-and-closure rewrite (supersedes the decision-memo framing)
+
+- Workspace: `artifacts/reports/shocksat_results_summary_20260721/`.
+- Current deliverable: `ShockSat_StatFEM_progress_and_closure_update.docx`; original and rejected six-page
+  intermediate memo preserved. Replay: `bash run_advisor_progress.sh`.
+- Checker: **OVERALL YELLOW 10G/1Y/0R, exit 0**. Ten document/context/method/agentic-remodeling/literature/
+  figure/render gates GREEN. YELLOW is the science ceiling: no direct net-CG answer key; held-out modal and
+  whole-FRF posterior families non-converged; agent did not beat equal-budget random.
+- Audience correction: assumes Ilias knows only Bayesian FEM updating/statFEM and his prior evaluation objective.
+  Removed `Decision requested`, traffic-light research tables, and undefined “honest shear-load” shorthand.
+- Technical content: ShockSat testbed/data counts; intended statFEM equations; actual 9-stiffness modal likelihood,
+  priors, inferred/fixed quantities; NUTS chain settings and diagnostics; explicit TMCMC non-result boundary;
+  modal, sequential response, net-CG, FRF/damping, evidence, and model-form results.
+- Closure content: explains why industry use was not earned, why model-form work followed, agent-vs-random result,
+  candidate contributions and personal lessons, four advisor questions, and a proposed three-week closeout.
+- Agentic-remodeling clarification: remeshing is one discrete operator family; continuous Bayesian parameters
+  stay inside each model class. Section 7 now distinguishes existing candidate schemas/operators/builders,
+  verifier gates, split/budget/hash discipline, controls, and exact scoring from the proposed `remodelctl` CLI.
+  It separates hard verifier, TRAIN coach, restricted DEV grader, and one-time vault roles and pre-registers a
+  no-feedback/pass-fail/structured-diagnostics comparison. The MPL scaffold is labeled infrastructure only,
+  not an MPL posterior or remodeling result.
+- References: 14 in-report references, 16-source verified ledger using NASA/publisher/DOI/primary pages. QA:
+  a11y 0 findings; three inline figures with alt text; 13 rendered pages manually inspected; no traffic-light
+  fills. One-command replay passed. Delivered SHA-256
+  `a42cb103a791acac80656ea44d986953a5b77dfcaf97ed9063ff64c5375e24af`
+  (DOCX package metadata means a rebuild can change the byte hash without changing rendered content).
+
+## 2026-07-21 — ShockSat advisor Bayesian-method audit and comment resolution
+
+- Workspace: `artifacts/reports/shocksat_results_summary_20260721/`.
+- Current deliverable: `ShockSat_StatFEM_progress_and_closure_update_bayesian_audit.docx`; replay:
+  `bash run_advisor_progress_bayesian_audit.sh`.
+- Checker: **OVERALL YELLOW 11G/1Y/0R, exit 0**. Eleven artifact/content/assumption/figure/reference/render
+  gates GREEN. YELLOW is the inherited science ceiling: no measured net-CG load; whole-FRF and Beck NUTS
+  posteriors non-converged; their shown curves are leakage-safe deterministic MAP points.
+- Input audit: preserved the four-comment Word file at SHA-256 `988833dc7034f1a11ebf84459e820d0171b9ad812a0ab383dc0fc1e3a13524da`;
+  inspected/rendered the sole `experiment_catalog.xlsx` sheet, input SHA-256
+  `e2d631ee54b3f587ea5f69413b058f660f8cccf6b4293c17af494d82f945199b`; reconciled it with later
+  modal, whole-FRF, IFT, Schneider/Das, evidence, and model-form workspaces.
+- New Bayesian-method table separates ten tested families by observables/likelihood, prior/discrepancy,
+  computation/diagnostics, result, and claim limit. It highlights the converged modal-frequency NUTS result,
+  converged ShockSat IFT TMCMC result, and the leakage-safe Beck shape reachability point fit without claiming
+  that the failed Beck NUTS posterior is trustworthy.
+- New held-out +X comparison uses a precommitted rule over 104 coherence-qualified channels. GOOD = DAQ 106:
+  mean absolute log10-magnitude error 0.8165 to 0.6256. BAD = DAQ 24: best error 1.1925, about 16x in amplitude.
+  Same data/grid and one-model-per-panel small multiples; plot Tufte lint 0 flags.
+- Bayesian assumption audit explicitly checks prior scale, local Fisher information, feature information loss,
+  iid versus correlated FRF covariance, parameter-discrepancy confounding, sampler geometry, spectral/damping
+  resolution, parameter-span adequacy, and population variability before assigning model-form limitation.
+- All four comments resolved: evaluation and validation defined, “real evaluation” explained, equations use
+  true Word sub/superscripts, and band median versus separate plausible-truth median defined. Final DOCX has
+  no comment markup, 17 numbered references/14 DOI entries, three described images, a11y 0 findings, and 14
+  visually inspected pages. Delivered SHA-256 `145556925cce68c112b229843e3604124b0e0597064b584bf190ee047a804f30`.
+
+## 2026-07-21 — ShockSat advisor prose recovery and FRF predictive-band revision
+
+- Recovered every substantive direct Word edit by extracting the two editing-session revision IDs from the
+  preserved draft. Restored the shorter opening and summary language, evaluation-versus-validation conclusion,
+  Net-CG aggregation explanation, and agentic remeshing/remodeling wording. Replaced the user's ShockSat image
+  placeholder with a sourced NASA NESC photograph and link.
+- Rebuilt Section 5.4 from stored posterior artifacts. The modal column uses a 120-draw parameter-propagation
+  envelope from the converged modal NUTS posterior (R-hat 1.022, ESS 232), explicitly not an FRF-calibrated
+  predictive interval. The whole-FRF column uses a 120-draw pointwise posterior-predictive band including its
+  fitted discrepancy/noise marginal variance, printed NOT TRUSTWORTHY because the +X posterior did not converge
+  (R-hat 48.8, ESS 2.0). No Beck band was reconstructed because draws were not retained and its NUTS posterior
+  failed (R-hat 13.95, ESS about 2).
+- Replay: `bash artifacts/reports/shocksat_results_summary_20260721/run_advisor_progress_bayesian_audit.sh`.
+  Tufte lint 0 flags; a11y 0 findings; all 15 rendered pages manually inspected. Checker **OVERALL YELLOW
+  12G/1Y/0R, exit 0**. The YELLOW remains the scientific ceiling, not a document defect. Delivered DOCX
+  SHA-256 `632362daf581e84d1c6e38da4df9cee0a9af4b184a129485415f1aed1ff3b535`.
+
 ## 2026-07-16 — EXACT-EVIDENCE COMPLETION for the full-spectrum FRF study (runner card A)
 Workspace: `artifacts/reports/shocksat_fullspec_exact_completion_20260716/` · replay `bash run_all.sh`
 **Checker OVERALL GREEN 12G/0Y/0R, exit 0.** SHA-locked (`4a01067c921e`) BEFORE any science, proven RED
@@ -903,3 +1028,219 @@ with the locked gate and attached `superseded_by_card_B` to every S3/S4 block ra
 checker. (D4) **T2 thrashed** the 16 GB box to 10.8/12.3 GB swap in one long-lived process — one eigensolve
 took 11,187 s vs a 506 s median (22×); killed, restarted with ONE candidate per process (428 s), zero
 corruption, science unaffected (the affected candidate reproduces the study to 1e-5).
+
+## 2026-07-21 — ShockSat advisor report consolidated reviewer revision
+
+Implemented the criticisms from the initial review through the later reviewer correction that remain valid
+against the repaired project artifacts. The report now separates whole-FRF nonconvergence (R-hat 48.8,
+ESS 2.0), the boundary-seeking free-discrepancy fit, and IFT band inflation instead of assigning them one
+generic pathology. It adds the nine-group modal posterior-contraction table, prior motivations, exact evidence
+target, local-versus-global information limit, runtime accounting, and explicit definitions for +6 dB and the
+sequential/Net-CG GRMS ratios.
+
+Corrected model-form reporting now distinguishes selected-best gains from preregistered class-mean controls and
+labels the +0.0817 finalist gain as selection-biased. A defect/repair/current-claim ledger records the repaired
+arm-C leakage/basis issue, exact reranking of all 28 candidates, the validated Net-CG port, and the locked-checker
+scope miss. The model-form section de-emphasizes “agentic” branding: the agent is one bounded proposer inside a
+controlled search. Contributions and lessons were narrowed to artifact-backed claims, and the weekly plan was
+replaced with a concrete closeout acceptance bar for Ilias to approve or change.
+
+No new inference was run. No Beck band or TMCMC trace was invented where retained draws do not exist. Replay:
+`bash artifacts/reports/shocksat_results_summary_20260721/run_advisor_progress_bayesian_audit.sh`.
+Tufte lint: 0 flags. Checker: **OVERALL YELLOW 13G/1Y/0R, exit 0**. A11y: 0 findings. All 16 rendered pages
+were inspected. Final DOCX SHA-256: `dd4851fa7d957352fefbe7778600be917e79032dce149f9786ba0639a8d25a6a`.
+
+## 2026-07-22 — ShockSat advisor working-twin FRF correction
+
+- Recovered the retained L5 working-twin result omitted from Section 5.4: a converged modal-frequency NUTS
+  parameter stage plus a marginal log-amplitude discrepancy estimated on observed channels and transferred to
+  held-out channels. The report labels this a two-stage modular predictive construction, not a jointly
+  converged whole-FRF StatFEM posterior.
+- Replaced the eight-panel method wall with two held-out FRFs from frozen split seed 10. DAQ 20 improves
+  (mean absolute log10 error 0.684 to 0.587); DAQ 24 remains far from the data (1.070 to 1.076). Each panel now
+  shows only measured data, original FEM, updated median, parameter 5th–95th envelope, and total 5th–95th
+  envelope. Removed the hit-quality shading/axis and all failed-method curves.
+- Corrected the modal likelihood direction to `log f_meas ~ Normal(log f_pred(theta), sigma_f)`. Separated the
+  later converged hardened Beck modal-shape calibration from the older failed exact-basis whole-FRF target.
+- New artifact preserved all prior DOCX files:
+  `artifacts/reports/shocksat_results_summary_20260721/ShockSat_Bayesian_FEM_and_StatFEM_progress_update_working_twin_revision.docx`.
+  Replay: `bash artifacts/reports/shocksat_results_summary_20260721/run_advisor_progress_bayesian_audit.sh`.
+  Tufte lint 0 flags; a11y 0 findings; all 16 pages inspected. Checker **OVERALL YELLOW 13G/1Y/0R, exit 0**.
+  SHA-256 `4c387e21af74b9cdfa591a83f6bae35added892f628c83f503c29cdf5a376b23`.
+
+## 2026-07-22 — shocksat_closure_analyses_20260722 (Task Card A: four Bayesian audit calcs + phase recovery)
+
+Checker verbatim: **OVERALL YELLOW {GREEN: 14, YELLOW: 1, RED: 0}, exit 0** (immutable check.py
+SHA fe77b00b…, RED-on-empty proven exit 1, verified unmodified; 57 frozen inputs hash-verified
+unchanged end-to-end). Replay: `bash artifacts/reports/shocksat_closure_analyses_20260722/run_all.sh`
+(A2 resume-skips retained draws; full recompute ~75 min). Active runtime 4314 s (< 4 h cap).
+
+- **A1 GREEN (known-answer PASS):** prior-whitened log-θ subspace eigenvalues 0.019/0.029/0.259/0.355
+  + five prior-like 0.872–1.166, all within block-bootstrap CI (block 40, 1000 resamples) of Andrew's
+  adjudicated values. Contracted directions ≈ pure bottom_box/top_box/plates/cross_beam. Subspace
+  claim only.
+- **A2 YELLOW (the honest tier):** reference HalfNormal(0.05) rerun reproduces the stored posterior
+  (σ_f 0.0460 vs 0.0463; θ per-parameter tolerances all pass; converged R-hat 1.009/ESS 464).
+  Floor stable 4.2–4.8% across all 5 priors incl. converged HalfNormal(0.15) ⇒ 4.6% floor is
+  DATA-driven. 3/5 variants non-converged (R-hat 1.13–1.42, ESS 4–17) — documented with worst-case
+  numbers on figure and table, intervals labeled not trustworthy. Per-chain draws retained
+  (out/a2_draws/). Prior predictive 18/18 under all priors; reference PIT ~uniform.
+- **A3 GREEN (known-answer PASS, max|dev|=0.000 over 28 numbers):** incumbent FEM+6 dB undercoverage
+  0.865/0.706/0.738 + statFEM 2.301×/0.982 + per-drive heldout all reproduced from frozen modules
+  read-only. NEW CRPS: statFEM beats FEM+6 dB on MEASURED shear evidence 8/10 drive-axis cells under
+  all 3 envelope conventions (losses = 2 cross-axis weakly-excited cells). normal_Z labeled
+  self-consistency NOT validation; 2.526 vs 2.958 stated adjacently. Load narrative CONFIRMED (stop
+  condition not triggered).
+- **A4 GREEN:** iid whole-FRF profile likelihood (bottom_box, top_box; nuisances profiled closed-form,
+  gradient-verified at all 82 pts) is severely multimodal (~10 local maxima each); stored separated
+  chains (R-hat 44.7) sit in different local modes ⇒ separation is diagnosed likelihood geometry.
+- **A5 GREEN (FOUND, not re-derived):** statfem_real_validation_20260617/out/phase_likelihood.json,
+  circ var 0.8536, slice contrast complex 0.000127 vs magnitude 0.009355; hashed, scope caveat
+  (single-hit dataset) documented.
+
+Inherited ceiling unchanged and restated in packet (no net-CG answer key for normal-Z; one article;
+no build/test variability). Incidents: decisions_log D5 (bootstrap block length corrected pre-run),
+D6 (checker GREEN message juxtaposes max-dev with min-tol; per-parameter rule verified passing).
+NEXT: Task Card B (report rebuild) in a FRESH session per next_prompt.md.
+
+## 2026-07-22 — shocksat_closure_report_20260722 (Task Card B: advisor report rebuild)
+
+Checker verbatim: **OVERALL YELLOW {GREEN: 10, YELLOW: 1, RED: 0}, exit 0**. The single YELLOW is inherited
+from Task Card A: 3/5 sigma_f sensitivity variants are non-converged (worst R-hat 1.418, minimum ESS 4.4), so
+their intervals remain not trustworthy. Checker SHA `b727a824…`; RED-on-empty proven **11 RED, exit 1**.
+Replay: `bash artifacts/reports/shocksat_closure_report_20260722/run_all.sh`.
+
+- Rebuilt the 16-page draft as an exactly 9-page advisor brief and Markdown mirror. The thesis now distinguishes
+  converged modal-frequency Bayesian FEM updating from response-level StatFEM attempts that did not converge.
+- A1/A2 replace nine marginal contraction claims with four prior-whitened log-theta combinations and an honest
+  4.2–4.8% residual-floor prior sensitivity; the loose HalfNormal(0.15) variant converges.
+- A4 profile likelihood, the found A5 phase artifact, and the recovered time-domain damping result now support
+  one response-level diagnosis. The +54.02 evidence number is demoted for the correct type-II-ML/local-linear/
+  conditional-target reasons, not an FRF-bin argument.
+- Section 5.4 is a two-channel modular FRF figure with exactly five encodings and no hit-quality shading. It
+  separates parameter uncertainty from the observed-channel-estimated model-discrepancy band and labels the
+  construction as modular rather than a joint whole-FRF posterior.
+- A3 is reported as a measured-shear calibration/width tradeoff: coverage and mean CRPS improve relative to
+  FEM + 6 dB, while widths increase to 1.508/2.301. Normal-Z stays synthetic-only; 2.526 and 2.958 are reconciled
+  adjacently as delivered-reference versus tier-updated configurations.
+- Agentic remodeling is defined as a bounded propose/build/verify/fit/score/diagnose/revise loop. The primary
+  best-exact comparison (-0.0077 +/- 0.0177; MDE 0.0177) and secondary track mean (+0.0028 +/- 0.0056) both
+  failed to demonstrate an agent advantage.
+
+Verification: 34 numeric source checks; prior six DOCX files byte-identical; four figure alt texts; a11y 0;
+all nine pages inspected via contact sheet; active build/render/check runtime 7 s. Final DOCX SHA-256
+`1b040b4920dd25801c7d2ede44287cc440293afcde889ca8723e0564b82aeb68`.
+
+## 2026-07-22 — shocksat_closure_report_20260722 advisor-context revision
+
+Andrew rejected the adjudication-style opening because Ilias's last context is only the “Stress Testing
+StatFEM” proposal. The final nine-page brief now uses page 1 to restate that proposal, Ilias's build/evaluate/
+identify-gaps guidance, the ShockSat choice, and the five-step research chronology. Page 2 explains the data,
+modal likelihood, sampler terms, and research sequence before the first results on page 3. The advisor-facing
+DOCX, Markdown, and figures contain no traffic-light shorthand, “claims I will defend” section, or unused
+S1/S3/S4 labels. Convergence failures, worst diagnostics, and evidence limits remain explicit in ordinary
+technical language.
+
+Checker verbatim remains **OVERALL YELLOW {GREEN: 10, YELLOW: 1, RED: 0}, exit 0** because 3/5 sigma_f
+sensitivity variants did not converge (worst R-hat 1.418, minimum ESS 4.4); those intervals are labeled not
+trustworthy. Checker SHA `224d33ff…`; RED-on-empty exit 1 reproven. Numeric trace 34/34 source-backed; page
+count 9; a11y high/medium/low 0/0/0; all nine pages and four figures inspected. Final DOCX SHA-256
+`b4327f78728add7859b68889dd22f455229ba91ed197772d6b8b2ff7ed5ac91d`.
+
+## 2026-07-22 — shocksat_closure_report_20260722 isolated `_sol` user-comment rebuild
+
+Andrew approved the ten-comment revision but requested an isolated copy because another agent is editing the
+source DOCX. The source remains byte-identical at SHA-256
+`e8e04f40bcc69c03634e5c6d94eb5beee64f5ebdcbe13f7882ab09f16ee01a8f`. Replay:
+`bash artifacts/reports/shocksat_closure_report_20260722/run_all_sol.sh`.
+
+Checker verbatim: **OVERALL YELLOW {GREEN: 11, YELLOW: 1, RED: 0}, exit 0**. The one YELLOW is the unchanged
+science caveat: 3/5 sigma_f sensitivity variants did not converge (worst R-hat 1.418, minimum ESS 4.4), and
+their intervals remain labeled not trustworthy. Checker SHA `3d4c36e3…`; RED-on-empty exit 1.
+
+- Replaced the single-likelihood lead with a ten-method chronology before any results.
+- Made the Bayesian mechanism explicit: the retained zero-centered discrepancy cannot move the predictive
+  center; it adds covariance. A structured nonzero discrepancy mean could move the center but was not
+  implemented. The report does not claim the residual is orthogonal to all parameter effects.
+- Replaced the two hand-selected FRFs with four frozen-rule small multiples plus all 775 channel/split cases:
+  595 improve, median error 0.562→0.541, total interval coverage 0.855.
+- Moved modal contraction/prior sensitivity to Appendix A and supplied prior variance 1.0 as the comparator.
+- Removed the whole-FRF profile graph and all normal-direction load reporting. Shear X/Y definitions now cover
+  FEM + 6 dB, coverage, width, CRPS, and all three envelope probability conventions.
+- Expanded conditional modal evidence versus held-out engineering prediction, added section references to the
+  work-products table, and retained Andrew's single personal closure question.
+
+Verification: 44 source-backed numeric checks; nine pages; two figures/two alt texts; a11y high/medium/low
+0/0/0; every page visually inspected. Final `_sol` DOCX SHA-256
+`ea5d30f8b1a5b75b48fbdbfde4bb0b06fe93441495dfaffb7e3fc3a742b3f948`.
+
+## 2026-07-22 — `_sol` comparison against independent Fable brief
+
+Compared both Markdown sources and rendered documents. The Fable version supplied four useful explanatory
+details: a concrete location-by-frequency example for a structured discrepancy mean; a full-distribution,
+proper-score definition of CRPS with model-internal force units; a distinction between integrated marginal
+likelihood and the local-linear/type-II-ML evidence calculation; and a short literature-positioning paragraph.
+All four were added to `_sol`.
+
+The Fable result-first opening was rejected because Ilias needs project context and method chronology before
+findings. The deleted “I treated that as the research question” sentence, six-channel FRF figure, normal-Z
+appendix, and tenth page were also rejected. The `_sol` report remains context-first, measured-shear-only,
+four-panel, and nine pages.
+
+Replay/checker: `bash artifacts/reports/shocksat_closure_report_20260722/run_all_sol.sh`; **OVERALL YELLOW
+{GREEN: 11, YELLOW: 1, RED: 0}, exit 0**. The inherited 3/5 non-converged sigma_f variants remain the only
+caveat. All nine pages inspected after render; a11y 0/0/0. Source DOCX remains SHA-256 `e8e04f40…`; revised
+`_sol` SHA-256 `9adce4cf09a52cabe751c29286a98eef6a6fe20860caf05095409e7e677181df`.
+
+## 2026-07-22 — Advisor brief `_fable` revision (comments C0–C9 applied; lead as runner)
+
+Workspace `artifacts/reports/shocksat_closure_report_fable_20260722/`; replay `bash run_all.sh` (PDF render
+via Microsoft Word automation; LibreOffice absent). v1 workspace untouched; its commented docx/md are
+hash-locked immutable inputs verified by G7. Editorial revision only — no new inference, sampling, or
+scoring; all 34 numeric-trace checks resolve to the frozen Task Card A / study artifacts.
+
+Checker verbatim: **OVERALL YELLOW {GREEN: 10, YELLOW: 1, RED: 0}, exit 0**. The one YELLOW is the unchanged
+science caveat: 3/5 sigma_f sensitivity variants did not converge (worst R-hat 1.418, minimum ESS 4.4);
+their intervals remain labeled not trustworthy. Checker SHA `99c004b0…`.
+
+- Added the CENTRAL FINDING callout with the two required fill-in-the-blank sentences: mean cannot move
+  (frequency-only converged likelihood + zero-mean discrepancy, structured-mean discrepancy untested per C3)
+  and bands stay wide (zero-mean single-scale discrepancy buys coverage only with width).
+- C0: modal likelihood labeled one of eight implemented formulations, inventory enumerated + ledger.
+- C1: subspace/σf figure demoted to Appendix A; C2: Q&A answers open with direct No/unresolved-scope answers.
+- C4: whole-FRF profile figure deleted (diagnosis kept as text). C5: new six-panel held-out FRF figure with
+  preregistered rank rule (decisions_log F2) → DAQs 28, 79, 9, 56, 2, 24; DAQ 24 worst, consistent with v1.
+- C6: load table shear-only, normal-Z to Appendix B; C7: CRPS defined; C8: evidence comparison expanded;
+  C9: work-products table gained "Where explained" pointers. Closing kept verbatim as Andrew wrote it.
+
+Verification: 34 source-backed numeric checks; ten pages (one section per page, text-extraction verified);
+three figures with alt text; figure QA in `out/figure_qa.json`. Final `_fable` DOCX SHA-256
+`c908c70a7aa117c2ab127cf115b1609f63a8690d8060197b0ccd405080f02bd0`.
+
+## 2026-07-22 — Independent structured-discrepancy card review (Codex; no science run)
+
+Workspace: `docs/agents/structured_discrepancy_codex_review_20260722/`. Replay:
+`python3 docs/agents/structured_discrepancy_codex_review_20260722/check_card.py`.
+
+Checker verbatim: **OVERALL GREEN — static runner-card audit**. This GREEN covers the authored review/card
+artifact only; it is not a StatFEM result and no card was dispatched. The supplied Task Card D is reviewed as
+**RED as a dispatch artifact, GREEN as a research direction** because it contains four blocking specification
+issues: Febrianto propagation attribution, conditional-mean versus marginalized-covariance semantics, a
+dimensional logarithm, and underspecified correlated holdout/equal-coverage/orthogonality rules.
+
+Direct sources checked: original 9-page closure brief (all pages rendered and inspected), Febrianto et al. 2022
+PDF pp. 7–9 and 18, Schneider et al. 2022 PDF p. 5, frozen Schneider M0–M3 code/JSON, spatial reanalysis, and
+discrepancy diagnostic. The independent Card E uses a Stage-1 exact modular E0–E3 comparison with shared
+covariance and, after the revision below, an automatic decision gate before any joint Stage-2 NUTS update. Supplied card and predecessor workspaces were
+not modified.
+
+### Autonomous revision requested by Andrew
+
+Removed the pre-start and Stage-1 human approval requirements. Checker remains **OVERALL GREEN — static
+runner-card audit**; science remains not run. The card now evaluates immutable decision rules in order:
+`STOP_SYNTHETIC`, `STOP_CONFOUNDED`, `PROCEED_JOINT`, `STOP_PARTIAL_MEAN`, `STOP_PROPAGATION_ONLY`, then
+`STOP_NEGATIVE`. Synthetic thresholds are numerical (S0 ≤1/20 false successes; S1 ≥16/20 recoveries plus
+≥85% held-out mean-band coverage; S2 bounded worsening; S3 ≥50% θ-bias reduction, ≥80% empirical θ coverage,
+normalized orthogonality residual ≤1e-8). Joint Stage 2 is automatically permitted only when protected E3
+transfers across both spatial and frequency folds and fits the remaining runtime; it compares J1 with protected
+J3 only. The original Task Card D and its separate run remain untouched.

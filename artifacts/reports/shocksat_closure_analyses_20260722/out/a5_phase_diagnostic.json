@@ -1,0 +1,17 @@
+{
+ "provenance": "found",
+ "provenance_note": "Located by repo search BEFORE the card's 30-min re-derivation branch was needed (search terms: circular/circ_var/phase_resid). This is the ORIGINAL artifact, not a re-derivation. Scope caveat: computed in statfem_real_validation_20260617 on the SINGLE-HIT measured dataset (46 obs channels, 12 matched modes), predating the multiref H1 caches; the negative phase conclusion is documented for that dataset.",
+ "source_path": "artifacts/reports/statfem_real_validation_20260617/out/phase_likelihood.json",
+ "source_code_path": "artifacts/reports/statfem_real_validation_20260617/code/phase_likelihood.py",
+ "sha256": "75ef89c3ab1212f350559279b5b3c55f5afe1b450186419d6458d45bf87eab38",
+ "sha256_code": "bfdbfadc7f79a37e3d3ff30f5653b77b368d385982045eb3ac40ae9bffd05058",
+ "circular_variance": 0.8536364364877632,
+ "theta_slice_rel_contrast": {
+  "magnitude": 0.009354773354431413,
+  "complex": 0.00012696626713511031
+ },
+ "original_verdict": "phase adds NOTHING over magnitude: single-hit measured-vs-model phase is incoherent across channels (circular variance 0.85, ~1=uniform), and the complex theta-slice minimum is NOT sharper than magnitude (rel-contrast complex 0.00 vs magnitude 0.01). Magnitude/modal likelihoods retained.",
+ "n_obs_channels": 46,
+ "n_matched_modes": 12,
+ "runtime_s": 0.0
+}

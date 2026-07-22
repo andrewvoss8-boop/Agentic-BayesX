@@ -1,0 +1,70 @@
+{
+  "overall": "RED",
+  "counts": {
+    "GREEN": 0,
+    "YELLOW": 0,
+    "RED": 12
+  },
+  "gates": [
+    {
+      "gate": "G1 isolated artifacts",
+      "status": "RED",
+      "evidence": "missing=['priority_deliverables.md', 'decisions_log.md', 'code/build_report_sol.py', 'check_sol.py', 'run_all_sol.sh', 'runtime_sol.json', 'sol_source_docx_sha256.json', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief.docx', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief_sol.docx', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief_sol.md', 'out/sol/source_manifest.json', 'out/sol/numeric_trace.json', 'out/sol/frf_figure_source.json', 'qa/sol/a11y_audit.json', 'qa/sol/style_lint.json', 'qa/sol/tufte_lint.txt', 'figures_sol/fig1_frf_small_multiples.png', 'figures_sol/fig2_modal_appendix.png']"
+    },
+    {
+      "gate": "G2 source DOCX preservation",
+      "status": "RED",
+      "evidence": "source lock missing"
+    },
+    {
+      "gate": "G3 direct edits and comment resolution",
+      "status": "RED",
+      "evidence": "comment_parts=[]; direct edit check failed"
+    },
+    {
+      "gate": "G4 context-first method narrative",
+      "status": "RED",
+      "evidence": "context_ok=False; forbidden=[]"
+    },
+    {
+      "gate": "G5 Bayesian center and width mechanism",
+      "status": "RED",
+      "evidence": "one or more causal statements missing"
+    },
+    {
+      "gate": "G6 numeric trace and non-cherry-picked FRFs",
+      "status": "RED",
+      "evidence": "trace_errors=['trace missing']; displayed summary incomplete"
+    },
+    {
+      "gate": "G7 measured shear and probability conventions",
+      "status": "RED",
+      "evidence": "shear scope or probability definitions incomplete"
+    },
+    {
+      "gate": "G8 evidence versus held-out target",
+      "status": "RED",
+      "evidence": "evidence comparator incomplete"
+    },
+    {
+      "gate": "G9 contribution map and closure request",
+      "status": "RED",
+      "evidence": "work-product map or closure request missing"
+    },
+    {
+      "gate": "G10 render, figure, and accessibility QA",
+      "status": "RED",
+      "evidence": "pages=None; figs=0; alt=0; fig_errors=[]; a11y_ok=False"
+    },
+    {
+      "gate": "G11 verified literature",
+      "status": "RED",
+      "evidence": "required verified references missing"
+    },
+    {
+      "gate": "Y1 inherited sampler caveat",
+      "status": "RED",
+      "evidence": "A2 source missing"
+    }
+  ]
+}

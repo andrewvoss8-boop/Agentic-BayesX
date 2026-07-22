@@ -1,0 +1,70 @@
+{
+ "overall": "YELLOW",
+ "counts": {
+  "GREEN": 14,
+  "YELLOW": 1,
+  "RED": 0
+ },
+ "gates": {
+  "hashes": {
+   "tier": "GREEN",
+   "msg": "57 frozen inputs unchanged"
+  },
+  "a1_known_answer": {
+   "tier": "GREEN",
+   "msg": "9/9 adjudicated eigenvalues inside bootstrap CI (contracted [0.019, 0.029, 0.259, 0.355])"
+  },
+  "a1_bootstrap": {
+   "tier": "GREEN",
+   "msg": "block bootstrap n=1000 block_len=40"
+  },
+  "a1_scope": {
+   "tier": "GREEN",
+   "msg": "claim scoped to subspace (no per-parameter identifiability)"
+  },
+  "a2_reference": {
+   "tier": "GREEN",
+   "msg": "HalfNormal(0.05) rerun reproduces stored posterior (sigma_f 0.0460 vs stored 0.0463; theta max|dev| 0.0066 <= tol 0.0060)"
+  },
+  "a2_variants": {
+   "tier": "YELLOW",
+   "msg": "5 variants complete; NON-CONVERGED (documented, intervals not trustworthy): ['hn002 (rhat 1.125 ess 17)', 'hc005 (rhat 1.418 ess 6)', 'exp005 (rhat 1.338 ess 4)']"
+  },
+  "a3_known_answer": {
+   "tier": "GREEN",
+   "msg": "stored coverage/width reproduced (max|dev| 0.0)"
+  },
+  "a3_labels_table": {
+   "tier": "GREEN",
+   "msg": "normal-Z synthetic label present in table JSON"
+  },
+  "a3_z_widths": {
+   "tier": "GREEN",
+   "msg": "2.526 (reference) and 2.958 (tier-updated) stated adjacently"
+  },
+  "a3_crps_convention": {
+   "tier": "GREEN",
+   "msg": "3 envelope scoring conventions reported"
+  },
+  "a4_inner_opt": {
+   "tier": "GREEN",
+   "msg": "inner-opt converged and recorded at every grid point ([41, 41] pts)"
+  },
+  "a4_form": {
+   "tier": "GREEN",
+   "msg": "likelihood form + parameter choice rule documented"
+  },
+  "a5_provenance": {
+   "tier": "GREEN",
+   "msg": "provenance=found circ_var=0.8536364364877632"
+  },
+  "figures": {
+   "tier": "GREEN",
+   "msg": "6 figures exist, captions name sources, lint+QA artifacts present"
+  },
+  "runtime": {
+   "tier": "GREEN",
+   "msg": "active 4314s <= 14400s (wallclock 4904.4)"
+  }
+ }
+}

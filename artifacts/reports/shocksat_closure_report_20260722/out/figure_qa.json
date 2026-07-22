@@ -1,0 +1,64 @@
+{
+  "reviewed": "2026-07-22",
+  "method": "Original-resolution image inspection plus nine-page rendered-DOCX contact sheet inspection",
+  "overall": "PASS",
+  "figures": [
+    {
+      "file": "figures/fig1_method_map.png",
+      "story": "Show why the work moved from a real test case through modal updating, response evaluation, and model-form edits",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "no_overlap": true,
+        "source_and_scope_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "The figure presents study chronology rather than results. Final arrows and labels do not collide."
+    },
+    {
+      "file": "figures/fig2_modal_identification.png",
+      "story": "The modal data learn four combinations and retain a 4.2-4.8% residual floor",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "uncertainty_visible": true,
+        "nonconvergence_on_figure": true,
+        "source_and_scope_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "Non-converged variants use hollow markers and print worst R-hat/ESS; no interval is presented as trustworthy."
+    },
+    {
+      "file": "figures/fig3_wholefrf_profile.png",
+      "story": "The iid whole-FRF target has many separated local modes",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "source_and_scope_on_figure": true,
+        "nonconvergence_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "Both parameter slices use the same relative-log-posterior scale; local maxima and stored chain means are distinct."
+    },
+    {
+      "file": "figures/fig4_modular_frf.png",
+      "story": "One held-out channel improves and one remains wrong; discrepancy widens both predictions",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "five_encodings_only": true,
+        "parameter_and_total_bands_distinct": true,
+        "hit_quality_shading_absent": true,
+        "log_frequency_axis": true,
+        "units_present": true,
+        "source_and_scope_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "Only measured data, original FEM, updated median, parameter 5-95%, and parameter-plus-discrepancy 5-95% are shown."
+    }
+  ],
+  "tufte_lint_advisories": {
+    "background_fill": "Retained because the fills encode nested uncertainty intervals.",
+    "dB_string": "FEM + 6 dB names the engineering baseline; plotted FRF axes are linear magnitude on log scales, not dB."
+  }
+}

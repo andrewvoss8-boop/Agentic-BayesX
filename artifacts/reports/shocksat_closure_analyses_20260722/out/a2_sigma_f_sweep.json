@@ -1,0 +1,287 @@
+{
+ "source_run": "shocksat_fem_modal_twin_20260609 frozen modal twin (run_nuts.py likelihood, 18 paired log-frequencies, no MAC); sampler NUTS, 4 chains x 1000 draws, per-chain draws retained in out/a2_draws/",
+ "reference_reproduction": {
+  "pass": true,
+  "sigma_f_median": 0.046024907755116265,
+  "stored_sigma_f_median": 0.046264696389052784,
+  "sigma_f_abs_dev": 0.00023978863393651906,
+  "sigma_f_tol": 0.005,
+  "theta_max_abs_dev": 0.006560049997423545,
+  "theta_tol": 0.005971299443909185,
+  "theta_tols_per_param": [
+   0.0478,
+   0.0448,
+   0.006,
+   0.0437,
+   0.0288,
+   0.0457,
+   0.0231,
+   0.049,
+   0.0091
+  ],
+  "note": "same frozen forward/likelihood/settings/seed as the stored run; tolerance = N4 (sigma_f +-0.005 abs; theta medians within 3x MC SE of the median)"
+ },
+ "variants": {
+  "hn002": {
+   "prior": "HalfNormal(0.02)",
+   "seed": 101,
+   "nuts_runtime_s": 868.1,
+   "sigma_f_median": 0.04162545533712764,
+   "sigma_f_ci95": [
+    0.03196003649769939,
+    0.056455266208654584
+   ],
+   "theta_median": {
+    "al_welds": 1.0349244520494008,
+    "angle_brackets": 0.9968915979739772,
+    "bottom_box": 0.9593181857438722,
+    "contact": 1.0290781015224546,
+    "cross_beam": 1.027863722774994,
+    "joints": 1.0898153519986273,
+    "plates": 0.9917894081534346,
+    "steel_welds": 1.021997013675444,
+    "top_box": 1.0420854404397013
+   },
+   "convergence": {
+    "per_variable": {
+     "sigma_f": {
+      "r_hat_max": 1.0469066402930296,
+      "ess_min": 130.3874064643478
+     },
+     "theta": {
+      "r_hat_max": 1.1251520840825555,
+      "ess_min": 16.535512890619625
+     }
+    },
+    "worst_rhat": 1.1251520840825555,
+    "min_ess": 16.535512890619625,
+    "divergences": 0,
+    "divergence_fraction": 0.0,
+    "gate_pass": false,
+    "thresholds": {
+     "rhat": 1.05,
+     "ess": 200,
+     "div_frac": 0.02
+    }
+   },
+   "status": "YELLOW (non-converged; intervals not trustworthy)",
+   "prior_predictive_covered": "18/18",
+   "prior_predictive_frac": 1.0
+  },
+  "hn005_reference": {
+   "prior": "HalfNormal(0.05) [frozen reference]",
+   "seed": 42,
+   "nuts_runtime_s": 867.0,
+   "sigma_f_median": 0.046024907755116265,
+   "sigma_f_ci95": [
+    0.033617558974645516,
+    0.06766316519241125
+   ],
+   "theta_median": {
+    "al_welds": 1.0149368098048694,
+    "angle_brackets": 1.0146082616822716,
+    "bottom_box": 0.9625876871711154,
+    "contact": 0.9770357791867359,
+    "cross_beam": 1.0379542279304221,
+    "joints": 1.0983331079487209,
+    "plates": 0.9756081629653791,
+    "steel_welds": 1.0124559508210935,
+    "top_box": 1.0448081962257287
+   },
+   "convergence": {
+    "per_variable": {
+     "sigma_f": {
+      "r_hat_max": 1.003003291767863,
+      "ess_min": 803.6202348863674
+     },
+     "theta": {
+      "r_hat_max": 1.0087049511320176,
+      "ess_min": 463.6493760841175
+     }
+    },
+    "worst_rhat": 1.0087049511320176,
+    "min_ess": 463.6493760841175,
+    "divergences": 0,
+    "divergence_fraction": 0.0,
+    "gate_pass": true,
+    "thresholds": {
+     "rhat": 1.05,
+     "ess": 200,
+     "div_frac": 0.02
+    }
+   },
+   "status": "GREEN",
+   "prior_predictive_covered": "18/18",
+   "prior_predictive_frac": 1.0
+  },
+  "hn015": {
+   "prior": "HalfNormal(0.15)",
+   "seed": 102,
+   "nuts_runtime_s": 822.2,
+   "sigma_f_median": 0.04802172785526972,
+   "sigma_f_ci95": [
+    0.03435979532961864,
+    0.07331812690025716
+   ],
+   "theta_median": {
+    "al_welds": 1.0050621136940985,
+    "angle_brackets": 1.03206494400054,
+    "bottom_box": 0.9609915601486909,
+    "contact": 0.9860443084011545,
+    "cross_beam": 1.0376568052742625,
+    "joints": 1.0700282673316828,
+    "plates": 0.9919049078351388,
+    "steel_welds": 1.0290866245428705,
+    "top_box": 1.0474015239906591
+   },
+   "convergence": {
+    "per_variable": {
+     "sigma_f": {
+      "r_hat_max": 1.0129572120721368,
+      "ess_min": 360.141779048511
+     },
+     "theta": {
+      "r_hat_max": 1.0098382929943546,
+      "ess_min": 375.0142500268884
+     }
+    },
+    "worst_rhat": 1.0129572120721368,
+    "min_ess": 360.141779048511,
+    "divergences": 0,
+    "divergence_fraction": 0.0,
+    "gate_pass": true,
+    "thresholds": {
+     "rhat": 1.05,
+     "ess": 200,
+     "div_frac": 0.02
+    }
+   },
+   "status": "GREEN",
+   "prior_predictive_covered": "18/18",
+   "prior_predictive_frac": 1.0
+  },
+  "hc005": {
+   "prior": "HalfCauchy(0.05)",
+   "seed": 103,
+   "nuts_runtime_s": 838.8,
+   "sigma_f_median": 0.048161164707154785,
+   "sigma_f_ci95": [
+    0.03461073690987792,
+    0.06866356770710642
+   ],
+   "theta_median": {
+    "al_welds": 0.9806550086538462,
+    "angle_brackets": 1.1347071349849436,
+    "bottom_box": 0.9477362878454928,
+    "contact": 1.0462245246671444,
+    "cross_beam": 1.0033426217105303,
+    "joints": 1.1101480122158915,
+    "plates": 0.9827922284209818,
+    "steel_welds": 0.9170681301931027,
+    "top_box": 1.0436340229877081
+   },
+   "convergence": {
+    "per_variable": {
+     "sigma_f": {
+      "r_hat_max": 1.0610026373252508,
+      "ess_min": 115.57996023380626
+     },
+     "theta": {
+      "r_hat_max": 1.41768734129588,
+      "ess_min": 6.063571034487174
+     }
+    },
+    "worst_rhat": 1.41768734129588,
+    "min_ess": 6.063571034487174,
+    "divergences": 0,
+    "divergence_fraction": 0.0,
+    "gate_pass": false,
+    "thresholds": {
+     "rhat": 1.05,
+     "ess": 200,
+     "div_frac": 0.02
+    }
+   },
+   "status": "YELLOW (non-converged; intervals not trustworthy)",
+   "prior_predictive_covered": "18/18",
+   "prior_predictive_frac": 1.0
+  },
+  "exp005": {
+   "prior": "Exponential(mean 0.05)",
+   "seed": 104,
+   "nuts_runtime_s": 838.0,
+   "sigma_f_median": 0.042720641403634324,
+   "sigma_f_ci95": [
+    0.03420870379122269,
+    0.06746063602653177
+   ],
+   "theta_median": {
+    "al_welds": 1.016433602434011,
+    "angle_brackets": 0.9593812565761163,
+    "bottom_box": 0.9483080984509945,
+    "contact": 0.9169788558845025,
+    "cross_beam": 1.027820677366237,
+    "joints": 1.0980141991565247,
+    "plates": 0.9293762108294303,
+    "steel_welds": 1.149411310815149,
+    "top_box": 1.0664461556610703
+   },
+   "convergence": {
+    "per_variable": {
+     "sigma_f": {
+      "r_hat_max": 1.1906757433947268,
+      "ess_min": 6.933712729311212
+     },
+     "theta": {
+      "r_hat_max": 1.3381523520821468,
+      "ess_min": 4.354702425457663
+     }
+    },
+    "worst_rhat": 1.3381523520821468,
+    "min_ess": 4.354702425457663,
+    "divergences": 0,
+    "divergence_fraction": 0.0,
+    "gate_pass": false,
+    "thresholds": {
+     "rhat": 1.05,
+     "ess": 200,
+     "div_frac": 0.02
+    }
+   },
+   "status": "YELLOW (non-converged; intervals not trustworthy)",
+   "prior_predictive_covered": "18/18",
+   "prior_predictive_frac": 1.0
+  }
+ },
+ "floor_conclusion_per_variant": {
+  "hn002": "HalfNormal(0.02): sigma_f median 4.2% [3.2, 5.6]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE [NON-CONVERGED variant: worst R-hat 1.125, min ESS 17 \u2014 interval not trustworthy]",
+  "hn005_reference": "HalfNormal(0.05) [frozen reference]: sigma_f median 4.6% [3.4, 6.8]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE",
+  "hn015": "HalfNormal(0.15): sigma_f median 4.8% [3.4, 7.3]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE",
+  "hc005": "HalfCauchy(0.05): sigma_f median 4.8% [3.5, 6.9]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE [NON-CONVERGED variant: worst R-hat 1.418, min ESS 6 \u2014 interval not trustworthy]",
+  "exp005": "Exponential(mean 0.05): sigma_f median 4.3% [3.4, 6.7]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE [NON-CONVERGED variant: worst R-hat 1.338, min ESS 4 \u2014 interval not trustworthy]"
+ },
+ "posterior_predictive_PIT_reference": {
+  "per_mode": {
+   "1": 0.591,
+   "3": 0.806,
+   "4": 0.441,
+   "5": 0.514,
+   "6": 0.216,
+   "7": 0.8,
+   "8": 0.842,
+   "10": 0.183,
+   "11": 0.292,
+   "12": 0.894,
+   "13": 0.612,
+   "14": 0.079,
+   "15": 0.143,
+   "16": 0.654,
+   "17": 0.379,
+   "18": 0.268,
+   "21": 0.393,
+   "25": 0.906
+  },
+  "note": "PIT = posterior-predictive CDF at the measured value; calibrated => ~uniform(0,1)"
+ },
+ "runtime_s": 4238.0
+}

@@ -1,0 +1,170 @@
+{
+  "input": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_report_20260722/ShockSat_Bayesian_FEM_StatFEM_closure_brief.docx",
+  "fonts_by_char_count": {
+    "Arial": 9405
+  },
+  "direct_run_formatting_runs": 204,
+  "direct_paragraph_formatting_paragraphs": 200,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 2,
+      "text": "Evaluating StatFEM on ShockSat",
+      "style": "Normal"
+    },
+    {
+      "para_index": 87,
+      "text": "SHOCKSAT  |  ADVISOR CLOSURE BRIEF",
+      "style": "Normal"
+    },
+    {
+      "para_index": 88,
+      "text": "22 JULY 2026",
+      "style": "Normal"
+    },
+    {
+      "para_index": 89,
+      "text": "STARTING POINT",
+      "style": "Normal"
+    },
+    {
+      "para_index": 91,
+      "text": "Step",
+      "style": "Normal"
+    },
+    {
+      "para_index": 92,
+      "text": "Why",
+      "style": "Normal"
+    },
+    {
+      "para_index": 93,
+      "text": "What I tried",
+      "style": "Normal"
+    },
+    {
+      "para_index": 109,
+      "text": "Term",
+      "style": "Normal"
+    },
+    {
+      "para_index": 110,
+      "text": "Definition used here",
+      "style": "Normal"
+    },
+    {
+      "para_index": 123,
+      "text": "Bayesian question",
+      "style": "Normal"
+    },
+    {
+      "para_index": 124,
+      "text": "What the analyses showed",
+      "style": "Normal"
+    },
+    {
+      "para_index": 133,
+      "text": "INTERPRETATION",
+      "style": "Normal"
+    },
+    {
+      "para_index": 135,
+      "text": "Recovered diagnostic",
+      "style": "Normal"
+    },
+    {
+      "para_index": 136,
+      "text": "Result",
+      "style": "Normal"
+    },
+    {
+      "para_index": 137,
+      "text": "Meaning",
+      "style": "Normal"
+    },
+    {
+      "para_index": 147,
+      "text": "LIMIT",
+      "style": "Normal"
+    },
+    {
+      "para_index": 149,
+      "text": "Method",
+      "style": "Normal"
+    },
+    {
+      "para_index": 150,
+      "text": "Data / target",
+      "style": "Normal"
+    },
+    {
+      "para_index": 151,
+      "text": "Result and limitation",
+      "style": "Normal"
+    },
+    {
+      "para_index": 176,
+      "text": "Axis / evidence",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "text": "Evaluating StatFEM on ShockSat",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "What I tried, why the work changed direction, and guidance I need for the final month",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "Andrew Voss  |  for Ilias Bilionis",
+        "style": "Normal"
+      },
+      {
+        "para_index": 6,
+        "text": "The proposal aimed to update an aerospace finite-element model from vibration data, represent the difference between the",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 2,
+        "run_text": "Evaluating StatFEM on ShockSat",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "What I tried, why the work changed direction, and guidance I need for the final ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Andrew Voss  |  for Ilias Bilionis",
+        "style": "Normal"
+      },
+      {
+        "para_index": 6,
+        "run_text": "The proposal aimed to update an aerospace finite-element model from vibration da",
+        "style": "Normal"
+      },
+      {
+        "para_index": 11,
+        "run_text": "The modal update came first; response likelihoods and discrepancy models followe",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

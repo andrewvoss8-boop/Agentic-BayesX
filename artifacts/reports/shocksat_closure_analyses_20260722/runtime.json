@@ -1,0 +1,13 @@
+{
+ "active_runtime_s": 4314.0,
+ "elapsed_wallclock_s": 4904.4,
+ "per_step_s": {
+  "a1_subspace": 0.2,
+  "a2_sweep_incl_nuts": 4238.0,
+  "a3_calibration": 13.3,
+  "a4_profile": 2.5,
+  "a5_phase": 0.0,
+  "figures_hashing_checker_overhead_est": 60.0
+ },
+ "note": "active = summed per-step execution (A2 includes all NUTS variant runtimes; resume-skipped replays report the ORIGINAL nuts runtimes inside a2_sigma_f_sweep.json variants); wallclock from logs/session_start_epoch.txt"
+}

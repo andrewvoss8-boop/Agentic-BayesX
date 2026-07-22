@@ -1,0 +1,12 @@
+{
+  "root": "artifacts/reports/shocksat_results_summary_20260721",
+  "files": {
+    "ShockSat_Bayesian_FEM_and_StatFEM_progress_update_working_twin_revision.docx": "4c387e21af74b9cdfa591a83f6bae35added892f628c83f503c29cdf5a376b23",
+    "ShockSat_StatFEM_progress_and_closure_update.docx": "988833dc7034f1a11ebf84459e820d0171b9ad812a0ab383dc0fc1e3a13524da",
+    "ShockSat_StatFEM_progress_and_closure_update_bayesian_audit.docx": "dd4851fa7d957352fefbe7778600be917e79032dce149f9786ba0639a8d25a6a",
+    "ShockSat_results_summary.docx": "8650c8e6634d06421d57c478b2ed4dae0c0a301bf8112f6b2793c15cd31c77cf",
+    "ShockSat_results_summary_revised.docx": "18b5c4ba15e4b907770a0fc64a85c40428d68dff532c6081accc07048205b7a5",
+    "archives/ShockSat_StatFEM_progress_and_closure_update_user_comments_20260721.docx": "988833dc7034f1a11ebf84459e820d0171b9ad812a0ab383dc0fc1e3a13524da"
+  },
+  "frozen_before_task_b": "2026-07-22"
+}

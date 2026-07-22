@@ -1,0 +1,6 @@
+
+=== /Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_report_20260722/code/build_report.py ===
+  [INFO] Background fill: ensure it carries information; otherwise it is non-data ink.
+  [INFO] dB detected: state linear/dB explicitly and justify dB (project rule: avoid dB unless standard).
+
+2 heuristic flag(s). Advisory only — review each against intent and the Tufte checklist.

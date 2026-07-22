@@ -1,0 +1,240 @@
+[
+  {
+    "label": "A1 contracted count",
+    "display": "four learned combinations",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "n_contracted_below_half",
+    "expected": 4
+  },
+  {
+    "label": "A1 eig 1",
+    "display": "0.0187",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "eigenvalues_ascending.0",
+    "expected": 0.0187
+  },
+  {
+    "label": "A1 eig 2",
+    "display": "0.0286",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "eigenvalues_ascending.1",
+    "expected": 0.0286
+  },
+  {
+    "label": "A1 eig 3",
+    "display": "0.2593",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "eigenvalues_ascending.2",
+    "expected": 0.2593
+  },
+  {
+    "label": "A1 eig 4",
+    "display": "0.3546",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "eigenvalues_ascending.3",
+    "expected": 0.3546
+  },
+  {
+    "label": "A1 prior-like low",
+    "display": "0.8718",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "eigenvalues_ascending.4",
+    "expected": 0.8718
+  },
+  {
+    "label": "A1 prior-like high",
+    "display": "1.1657",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+    "path": "eigenvalues_ascending.8",
+    "expected": 1.1657
+  },
+  {
+    "label": "A2 ref sigma",
+    "display": "4.60%",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+    "path": "variants.hn005_reference.sigma_f_median",
+    "expected": 0.046024907755116265
+  },
+  {
+    "label": "A2 stored sigma",
+    "display": "4.63%",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+    "path": "reference_reproduction.stored_sigma_f_median",
+    "expected": 0.046264696389052784
+  },
+  {
+    "label": "A2 ref rhat",
+    "display": "1.009",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+    "path": "variants.hn005_reference.convergence.worst_rhat",
+    "expected": 1.0087049511320176
+  },
+  {
+    "label": "A2 ref ess",
+    "display": "464",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+    "path": "variants.hn005_reference.convergence.min_ess",
+    "expected": 463.6493760841175
+  },
+  {
+    "label": "A2 loose sigma",
+    "display": "4.80%",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+    "path": "variants.hn015.sigma_f_median",
+    "expected": 0.04802172785526972
+  },
+  {
+    "label": "A2 prior predictive",
+    "display": "18/18",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+    "path": "variants.hn015.prior_predictive_covered",
+    "expected": "18/18"
+  },
+  {
+    "label": "A3 X baseline cov",
+    "display": "0.865",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "known_answer_gate.recomputed_scorecard.shear_X.baseline_fem+6dB.weighted_coverage",
+    "expected": 0.865
+  },
+  {
+    "label": "A3 Y baseline cov",
+    "display": "0.706",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "known_answer_gate.recomputed_scorecard.shear_Y.baseline_fem+6dB.weighted_coverage",
+    "expected": 0.706
+  },
+  {
+    "label": "A3 X stat cov",
+    "display": "0.995",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "known_answer_gate.recomputed_scorecard.shear_X.statfem_Fk.weighted_coverage",
+    "expected": 0.995
+  },
+  {
+    "label": "A3 X width",
+    "display": "1.508",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "known_answer_gate.recomputed_scorecard.shear_X.statfem_Fk.sharpness_band_grms_ratio_vs_fem6db",
+    "expected": 1.508
+  },
+  {
+    "label": "A3 Y stat cov",
+    "display": "0.982",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "known_answer_gate.recomputed_scorecard.shear_Y.statfem_Fk.weighted_coverage",
+    "expected": 0.982
+  },
+  {
+    "label": "A3 Y width",
+    "display": "2.301",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "known_answer_gate.recomputed_scorecard.shear_Y.statfem_Fk.sharpness_band_grms_ratio_vs_fem6db",
+    "expected": 2.301
+  },
+  {
+    "label": "A3 X CRPS baseline",
+    "display": "1.252",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "crps.measured_aggregate_strong_drives.shear_X.fem6db_log_uniform_primary",
+    "expected": 1.2516
+  },
+  {
+    "label": "A3 X CRPS stat",
+    "display": "1.137",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "crps.measured_aggregate_strong_drives.shear_X.statfem_Fk",
+    "expected": 1.1369
+  },
+  {
+    "label": "A3 Y CRPS baseline",
+    "display": "0.771",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "crps.measured_aggregate_strong_drives.shear_Y.fem6db_log_uniform_primary",
+    "expected": 0.7711
+  },
+  {
+    "label": "A3 Y CRPS stat",
+    "display": "0.709",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "crps.measured_aggregate_strong_drives.shear_Y.statfem_Fk",
+    "expected": 0.709
+  },
+  {
+    "label": "A3 normal reference",
+    "display": "2.526",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "normal_z_widths.delivered_reference",
+    "expected": 2.526
+  },
+  {
+    "label": "A3 normal tier",
+    "display": "2.958",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+    "path": "normal_z_widths.tier_updated",
+    "expected": 2.958
+  },
+  {
+    "label": "A4 points",
+    "display": "6,525",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a4_profile_likelihood.json",
+    "path": "likelihood_form_documented",
+    "expected": "N=6525"
+  },
+  {
+    "label": "A4 bottom maxima",
+    "display": "10 local maxima",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a4_profile_likelihood.json",
+    "path": "profiles.bottom_box.n_local_maxima",
+    "expected": 10
+  },
+  {
+    "label": "A4 top maxima",
+    "display": "10 local maxima",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a4_profile_likelihood.json",
+    "path": "profiles.top_box.n_local_maxima",
+    "expected": 10
+  },
+  {
+    "label": "A5 phase variance",
+    "display": "0.854",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a5_phase_diagnostic.json",
+    "path": "circular_variance",
+    "expected": 0.8536364364877632
+  },
+  {
+    "label": "pilot primary delta",
+    "display": "-0.0077",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/verdicts.json",
+    "path": "HQ1.primary.delta_mean",
+    "expected": -0.007656033372189102
+  },
+  {
+    "label": "pilot primary se",
+    "display": "0.0177",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/verdicts.json",
+    "path": "HQ1.primary.delta_se",
+    "expected": 0.017729278569034886
+  },
+  {
+    "label": "pilot secondary delta",
+    "display": "+0.0028",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/verdicts.json",
+    "path": "HQ1.secondary.delta_mean",
+    "expected": 0.002799626851847495
+  },
+  {
+    "label": "pilot secondary se",
+    "display": "0.0056",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/verdicts.json",
+    "path": "HQ1.secondary.delta_se",
+    "expected": 0.005558059112433576
+  },
+  {
+    "label": "evidence gain",
+    "display": "+54.02",
+    "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_composite_bakeoff_20260702/out/tier3_evidence.json",
+    "path": "headline.logZ_winner_minus_baseline",
+    "expected": 54.02
+  }
+]

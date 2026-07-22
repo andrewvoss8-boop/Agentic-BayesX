@@ -1,5 +1,15 @@
 # Lessons Learned
 
+## 2026-07-20 Gross classification can hide failure on the engineering decision pair (MPL)
+The existing response-only MPL records classified six deliberately broad model variants well (balanced recovery
+0.814 acoustic and 0.947 tap features), yet they could not separate the decision-relevant untouched B0 model from
+the human D43 B2 model at the frozen 2x-uncertainty threshold (0.270x and 1.521x). Pairwise coverage also failed
+(0.333 and 0.600 versus 0.80 required). A high multiclass headline can be carried by easy, physically extreme
+variants while the models one actually needs to choose between remain indistinguishable. Observable-admission
+gates must therefore require both the named decision contrast and broad pairwise separation. For sequential
+single-accelerometer data without measured input, more flexible likelihoods do not repair the experiment; the
+minimum lever is synchronized force, simultaneous fixed-reference responses, independent re-mounts, and force-level repeats.
+
 ## 2026-06-22 Audit the raw delivery before declaring a data/model ceiling (ShockSat)
 The 4-card ShockSat amplitude twin (statfem_real_validation / fem_remesh / richmodel_L5 / modelclass_L5) was
 reported as hitting an *intrinsic* limit ("single impact / NOT a data-quantity gap"). A raw-delivery audit

@@ -1,0 +1,5 @@
+{
+  "locked_utc": "2026-07-22T17:43:57Z",
+  "check_fable.py": "1f58e6cf5abea38645b517c9757932b2791d0b0d5824177afe29a380f6bfb0af",
+  "rule": "the checker is immutable for the rest of this run; any edit invalidates the results"
+}

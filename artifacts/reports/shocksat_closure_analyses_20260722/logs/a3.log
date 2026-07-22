@@ -1,0 +1,40 @@
+KNOWN-ANSWER GATE: reproduced=True max|dev|=0.00000 over 28 numbers
+{
+ "crps_agg_measured": {
+  "shear_X": {
+   "fem6db_log_uniform_primary": 1.2516,
+   "statfem_Fk": 1.1369,
+   "L5_theta_only_param_only": 1.4649,
+   "n_strong_drives": 5,
+   "evidence": "MEASURED held-out drives (strong-observability mean)"
+  },
+  "shear_Y": {
+   "fem6db_log_uniform_primary": 0.7711,
+   "statfem_Fk": 0.709,
+   "L5_theta_only_param_only": 0.8204,
+   "n_strong_drives": 5,
+   "evidence": "MEASURED held-out drives (strong-observability mean)"
+  }
+ },
+ "crps_scorecard": {
+  "shear_X_scorecard_grid": {
+   "fem6db_log_uniform_primary": 10210.1925,
+   "statfem_Fk": 10452.726,
+   "L5_theta_only_param_only": 10843.7268,
+   "evidence": "synthetic truth ensemble (scorecard grid); measured per-drive evidence below"
+  },
+  "shear_Y_scorecard_grid": {
+   "fem6db_log_uniform_primary": 10971.9349,
+   "statfem_Fk": 8589.2351,
+   "L5_theta_only_param_only": 8794.7861,
+   "evidence": "synthetic truth ensemble (scorecard grid); measured per-drive evidence below"
+  },
+  "normal_Z_scorecard_grid": {
+   "fem6db_log_uniform_primary": 13460.429,
+   "statfem_Fk": 11120.6661,
+   "L5_theta_only_param_only": 11290.0864,
+   "evidence": "synthetic truth ensemble \u2014 self-consistency, NOT validation"
+  }
+ }
+}
+A3 done in 13.3s

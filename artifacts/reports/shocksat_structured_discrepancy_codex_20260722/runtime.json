@@ -1,0 +1,13 @@
+{
+  "active_runtime_s": 0.5057978630065918,
+  "elapsed_wallclock_s": 0.5057988166809082,
+  "stage1_cap_s": 7200,
+  "stage2_additional_cap_s": 21600,
+  "total_cap_s": 28800,
+  "commands": [
+    {
+      "name": "freeze",
+      "active_s": 0.5057988166809082
+    }
+  ]
+}

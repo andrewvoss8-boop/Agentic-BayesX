@@ -1,0 +1,12 @@
+OVERALL RED {GREEN: 0, YELLOW: 0, RED: 11}
+[RED] G1 required artifacts: missing=['priority_deliverables.md', 'decisions_log.md', 'code/build_report.py', 'check.py', 'run_all.sh', 'runtime.json', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief.docx', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief.md', 'packet.md', 'out/source_manifest.json', 'out/numeric_trace.json', 'out/figure_qa.json', 'figures/fig1_method_map.png', 'figures/fig2_modal_identification.png', 'figures/fig3_wholefrf_profile.png', 'figures/fig4_modular_frf.png']
+[RED] G2 numeric traceability: numeric trace missing
+[RED] G3 definitions/data contract: bad counts: ['| IFT / β |', '| Model-form score |', '| Counts and bands |']
+[RED] G4 likelihood direction: likelihood equation absent or reversed
+[RED] G5 evidence labels: normal-Z synthetic-only label incomplete
+[RED] G6 compression and future-work scope: pages=None; scope check failed
+[RED] G7 prior DOCX preservation: hash failures=['prior hash manifest absent']
+[RED] G8 figure legibility and alt text: figure errors=['alt_count=0']
+[RED] G9 advisor context and narrative: context_ok=False; markdown_forbidden=[]; docx_forbidden=[]
+[RED] G10 references and closure request: reference or closure section missing
+[RED] Y1 inherited science ceiling: A2 source missing

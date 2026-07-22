@@ -1,0 +1,42 @@
+{
+ "overall": "RED",
+ "counts": {
+  "GREEN": 0,
+  "YELLOW": 0,
+  "RED": 8
+ },
+ "gates": {
+  "hashes": {
+   "tier": "RED",
+   "msg": "out/end_hash_verify.json missing (end-of-run hash verify not done)"
+  },
+  "a1_known_answer": {
+   "tier": "RED",
+   "msg": "out/a1_subspace.json missing"
+  },
+  "a2_reference": {
+   "tier": "RED",
+   "msg": "out/a2_sigma_f_sweep.json missing"
+  },
+  "a3_known_answer": {
+   "tier": "RED",
+   "msg": "out/a3_calibration_table.json missing"
+  },
+  "a4_inner_opt": {
+   "tier": "RED",
+   "msg": "out/a4_profile_likelihood.json missing"
+  },
+  "a5_provenance": {
+   "tier": "RED",
+   "msg": "out/a5_phase_diagnostic.json missing"
+  },
+  "figures": {
+   "tier": "RED",
+   "msg": "out/fig_manifest.json missing/empty"
+  },
+  "runtime": {
+   "tier": "RED",
+   "msg": "runtime.json missing active_runtime_s"
+  }
+ }
+}

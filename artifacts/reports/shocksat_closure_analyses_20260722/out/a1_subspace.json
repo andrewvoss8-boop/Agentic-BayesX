@@ -1,0 +1,423 @@
+{
+ "source_run": "shocksat_fem_modal_twin_20260609/nuts_full_samples.npz (4000 pooled NUTS draws, converged full-calibration run: worst R-hat 1.022, min ESS 232)",
+ "coordinates": "log theta, whitened by prior sd 0.25 (prior cov = 0.25^2 I)",
+ "claim_scope": "subspace_only",
+ "eigenvalues_ascending": [
+  0.0187,
+  0.0286,
+  0.2593,
+  0.3546,
+  0.8718,
+  0.9884,
+  1.045,
+  1.0739,
+  1.1657
+ ],
+ "eigenvalues_ci95": [
+  [
+   0.0169,
+   0.02
+  ],
+  [
+   0.0259,
+   0.0312
+  ],
+  [
+   0.2311,
+   0.2817
+  ],
+  [
+   0.3275,
+   0.3782
+  ],
+  [
+   0.7853,
+   0.9076
+  ],
+  [
+   0.8962,
+   1.014
+  ],
+  [
+   0.9613,
+   1.0822
+  ],
+  [
+   1.0331,
+   1.1755
+  ],
+  [
+   1.1203,
+   1.3246
+  ]
+ ],
+ "n_contracted_below_half": 4,
+ "bootstrap": {
+  "method": "circular block bootstrap within 1000-draw chain segments",
+  "block_len": 40,
+  "n_boot": 1000,
+  "seed": 0,
+  "rationale": "min ESS 232 => tau_hat ~ 17 draws; block 40 ~ 2x tau_hat"
+ },
+ "known_answer_gate": {
+  "adjudicated_contracted": [
+   0.019,
+   0.029,
+   0.259,
+   0.355
+  ],
+  "adjudicated_priorlike_range": [
+   0.872,
+   1.166
+  ],
+  "within_ci": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "pass": true
+ },
+ "directions": [
+  {
+   "rank_ascending": 0,
+   "eigenvalue_post_over_prior_var": 0.0187,
+   "ci95": [
+    0.0169,
+    0.02
+   ],
+   "top_components_logtheta": [
+    [
+     "bottom_box",
+     0.965
+    ],
+    [
+     "top_box",
+     0.258
+    ]
+   ],
+   "all_components": {
+    "al_welds": 0.0016,
+    "angle_brackets": 0.0046,
+    "bottom_box": 0.9653,
+    "contact": -0.0037,
+    "cross_beam": 0.0348,
+    "joints": 0.0157,
+    "plates": 0.0178,
+    "steel_welds": 0.0014,
+    "top_box": 0.2576
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "bottom_box": 46.76,
+    "top_box": 34.93
+   }
+  },
+  {
+   "rank_ascending": 1,
+   "eigenvalue_post_over_prior_var": 0.0286,
+   "ci95": [
+    0.0259,
+    0.0312
+   ],
+   "top_components_logtheta": [
+    [
+     "top_box",
+     -0.952
+    ],
+    [
+     "bottom_box",
+     0.261
+    ]
+   ],
+   "all_components": {
+    "al_welds": -0.0202,
+    "angle_brackets": -0.0197,
+    "bottom_box": 0.2608,
+    "contact": -0.0035,
+    "cross_beam": -0.106,
+    "joints": -0.0718,
+    "plates": -0.0967,
+    "steel_welds": -0.0088,
+    "top_box": -0.9515
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "top_box": 34.93,
+    "bottom_box": 46.76
+   }
+  },
+  {
+   "rank_ascending": 2,
+   "eigenvalue_post_over_prior_var": 0.2593,
+   "ci95": [
+    0.2311,
+    0.2817
+   ],
+   "top_components_logtheta": [
+    [
+     "plates",
+     0.948
+    ],
+    [
+     "joints",
+     0.273
+    ]
+   ],
+   "all_components": {
+    "al_welds": 0.012,
+    "angle_brackets": 0.0684,
+    "bottom_box": 0.0082,
+    "contact": -0.0169,
+    "cross_beam": 0.0731,
+    "joints": 0.2726,
+    "plates": 0.9484,
+    "steel_welds": -0.019,
+    "top_box": -0.1242
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "plates": 7.12,
+    "joints": 3.11
+   }
+  },
+  {
+   "rank_ascending": 3,
+   "eigenvalue_post_over_prior_var": 0.3546,
+   "ci95": [
+    0.3275,
+    0.3782
+   ],
+   "top_components_logtheta": [
+    [
+     "cross_beam",
+     -0.947
+    ],
+    [
+     "angle_brackets",
+     -0.263
+    ]
+   ],
+   "all_components": {
+    "al_welds": 0.001,
+    "angle_brackets": -0.2633,
+    "bottom_box": 0.006,
+    "contact": -0.041,
+    "cross_beam": -0.947,
+    "joints": -0.0703,
+    "plates": 0.1255,
+    "steel_welds": 0.0204,
+    "top_box": 0.1051
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "cross_beam": 5.5,
+    "angle_brackets": 1.18
+   }
+  },
+  {
+   "rank_ascending": 4,
+   "eigenvalue_post_over_prior_var": 0.8718,
+   "ci95": [
+    0.7853,
+    0.9076
+   ],
+   "top_components_logtheta": [
+    [
+     "joints",
+     -0.779
+    ],
+    [
+     "angle_brackets",
+     0.521
+    ],
+    [
+     "al_welds",
+     0.256
+    ]
+   ],
+   "all_components": {
+    "al_welds": 0.256,
+    "angle_brackets": 0.5207,
+    "bottom_box": -0.0002,
+    "contact": -0.1225,
+    "cross_beam": -0.0539,
+    "joints": -0.7794,
+    "plates": 0.1883,
+    "steel_welds": -0.0398,
+    "top_box": 0.0302
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "joints": 3.11,
+    "angle_brackets": 1.18,
+    "al_welds": 0.7
+   }
+  },
+  {
+   "rank_ascending": 5,
+   "eigenvalue_post_over_prior_var": 0.9884,
+   "ci95": [
+    0.8962,
+    1.014
+   ],
+   "top_components_logtheta": [
+    [
+     "al_welds",
+     -0.758
+    ],
+    [
+     "contact",
+     0.435
+    ],
+    [
+     "joints",
+     -0.395
+    ]
+   ],
+   "all_components": {
+    "al_welds": -0.7576,
+    "angle_brackets": -0.1482,
+    "bottom_box": -0.0016,
+    "contact": 0.4355,
+    "cross_beam": 0.0761,
+    "joints": -0.3954,
+    "plates": 0.1424,
+    "steel_welds": 0.1776,
+    "top_box": 0.0224
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "al_welds": 0.7,
+    "contact": 0.21,
+    "joints": 3.11
+   }
+  },
+  {
+   "rank_ascending": 6,
+   "eigenvalue_post_over_prior_var": 1.045,
+   "ci95": [
+    0.9613,
+    1.0822
+   ],
+   "top_components_logtheta": [
+    [
+     "steel_welds",
+     -0.756
+    ],
+    [
+     "angle_brackets",
+     0.425
+    ],
+    [
+     "al_welds",
+     -0.423
+    ]
+   ],
+   "all_components": {
+    "al_welds": -0.4231,
+    "angle_brackets": 0.4248,
+    "bottom_box": -0.0013,
+    "contact": -0.0625,
+    "cross_beam": -0.1545,
+    "joints": 0.1853,
+    "plates": -0.0805,
+    "steel_welds": -0.756,
+    "top_box": 0.0185
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "steel_welds": 0.5,
+    "angle_brackets": 1.18,
+    "al_welds": 0.7
+   }
+  },
+  {
+   "rank_ascending": 7,
+   "eigenvalue_post_over_prior_var": 1.0739,
+   "ci95": [
+    1.0331,
+    1.1755
+   ],
+   "top_components_logtheta": [
+    [
+     "contact",
+     -0.816
+    ],
+    [
+     "angle_brackets",
+     -0.408
+    ],
+    [
+     "al_welds",
+     -0.269
+    ]
+   ],
+   "all_components": {
+    "al_welds": -0.2687,
+    "angle_brackets": -0.4076,
+    "bottom_box": -0.0064,
+    "contact": -0.8164,
+    "cross_beam": 0.1723,
+    "joints": -0.222,
+    "plates": 0.0676,
+    "steel_welds": -0.1078,
+    "top_box": 0.0071
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "contact": 0.21,
+    "angle_brackets": 1.18,
+    "al_welds": 0.7
+   }
+  },
+  {
+   "rank_ascending": 8,
+   "eigenvalue_post_over_prior_var": 1.1657,
+   "ci95": [
+    1.1203,
+    1.3246
+   ],
+   "top_components_logtheta": [
+    [
+     "steel_welds",
+     0.619
+    ],
+    [
+     "angle_brackets",
+     0.535
+    ],
+    [
+     "contact",
+     -0.351
+    ],
+    [
+     "al_welds",
+     -0.33
+    ]
+   ],
+   "all_components": {
+    "al_welds": -0.3298,
+    "angle_brackets": 0.5347,
+    "bottom_box": -0.0008,
+    "contact": -0.3507,
+    "cross_beam": -0.1522,
+    "joints": 0.2607,
+    "plates": -0.0918,
+    "steel_welds": 0.6187,
+    "top_box": -0.0021
+   },
+   "strain_energy_mean_pct_of_top_groups": {
+    "steel_welds": 0.5,
+    "angle_brackets": 1.18,
+    "contact": 0.21,
+    "al_welds": 0.7
+   }
+  }
+ ],
+ "contracted_direction_names": [
+  "bottom_box + top_box mix",
+  "top_box + bottom_box mix",
+  "plates + joints mix",
+  "cross_beam + angle_brackets mix"
+ ],
+ "interpretation_note": "The 18 modal frequencies pin down 4 stiffness COMBINATIONS (posterior/prior variance 0.02-0.36), not 9 individual parameters; the remaining 5 directions return the prior. Physics tie-in via frozen joint_strain_energy.json (subspace-level claim only).",
+ "runtime_s": 0.2
+}

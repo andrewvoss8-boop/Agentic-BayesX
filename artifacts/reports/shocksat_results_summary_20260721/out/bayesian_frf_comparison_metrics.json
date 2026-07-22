@@ -1,0 +1,58 @@
+{
+  "selection_precommitted_in_code": {
+    "good": "largest A0-to-best-update reduction in mean absolute log10 magnitude error",
+    "bad": "largest remaining error after the best eligible method",
+    "eligibility": "same +X drive, 45-500 Hz, median coherence >= 0.6, present in each package"
+  },
+  "n_eligible_channels": 104,
+  "fold": "m_xpos_990x",
+  "train_drives": [
+    "m_zpos_990z",
+    "m_ypos_990y",
+    "m_zpos_900z"
+  ],
+  "panels": [
+    {
+      "label": "GOOD",
+      "daq_channel": 106,
+      "original_error_log10": 0.8165094329769329,
+      "best_update_error_log10": 0.6255784136390882,
+      "improvement_log10": 0.19093101933784473,
+      "method_errors_log10": {
+        "Original FEM": 0.8165094329769329,
+        "Modal-frequency MAP": 0.8256606377566006,
+        "Correlated whole-FRF MAP": 0.7893750830880405,
+        "Beck-style shape MAP": 0.6255784136390882,
+        "Modal NUTS displayed median": 0.7136620368581851,
+        "Whole-FRF NUTS displayed predictive median": 0.7231136142248586
+      }
+    },
+    {
+      "label": "BAD",
+      "daq_channel": 24,
+      "original_error_log10": 1.377069928842289,
+      "best_update_error_log10": 1.1924517448376266,
+      "improvement_log10": 0.18461818400466234,
+      "method_errors_log10": {
+        "Original FEM": 1.377069928842289,
+        "Modal-frequency MAP": 1.3646270033259795,
+        "Correlated whole-FRF MAP": 1.3675181784739376,
+        "Beck-style shape MAP": 1.1924517448376266,
+        "Modal NUTS displayed median": 1.3739816582241466,
+        "Whole-FRF NUTS displayed predictive median": 1.3671521140916298
+      }
+    }
+  ],
+  "uncertainty_objects": {
+    "modal": "120-draw converged NUTS parameter-propagation envelope; not calibrated for FRF discrepancy",
+    "whole_frf": "120-draw pointwise posterior-predictive interval including fitted GP+noise marginal variance; NOT TRUSTWORTHY because the +X-fold posterior did not converge (R-hat 48.78, ESS 2.00)",
+    "beck": "no band: posterior draws were not retained and NUTS did not converge (R-hat 13.95, ESS about 2)"
+  },
+  "fold_specific_whole_frf_rhat": 48.779646846796034,
+  "fold_specific_whole_frf_ess": 2.0027743107061564,
+  "input_sha256": {
+    "shocksat_fullspec_exact_completion_20260716/out/armC_exact_maps/shapes_map_m_xpos_990x.npz": "723f55fd39df7116384e2d8fcc31e5f61bc58740a507c6bbab7c0a0783f26ff3",
+    "shocksat_full_spectrum_frf_20260714/out/armB_summary.json": "c7e636bee058e48236dd5660c1f0201b1374088d586407c170708d3c3cda5d3b",
+    "shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_xpos_990x_wide.npz": "8f29a3c0df4e5d825c43810633f9fb481f7f473f29e7995cb07fe2f197c071c3"
+  }
+}

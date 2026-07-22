@@ -1,0 +1,148 @@
+{
+  "frozen_before_any_residual_was_inspected": true,
+  "frequency_main_effect": {
+    "form": "cubic B-spline in log(f)",
+    "df": 6,
+    "degree": 3,
+    "boundary_knots_log_f": [
+      3.845746864392034,
+      5.554439734921476
+    ],
+    "boundary_knots_hz": [
+      46.79361979166667,
+      258.38216145833337
+    ],
+    "interior_knots_log_f": [
+      4.415311154568514,
+      4.984875444744995
+    ],
+    "interior_knots_hz": [
+      82.70757174156525,
+      146.18536573664207
+    ],
+    "spacing_rule": "interior knots equally spaced in log f"
+  },
+  "location_main_effect": {
+    "region_indicators": [
+      "source_face",
+      "bolted_joint",
+      "strut",
+      "dish",
+      "bulkhead"
+    ],
+    "region_assignment": "nearest frozen physical feature (decisions_log F4)",
+    "n_rbf": 5,
+    "rbf_center_method": "deterministic k-medoids on standardized sensor coordinates (per-axis mean 0 / sd 1); coordinates only",
+    "rbf_center_daq": [
+      10,
+      17,
+      49,
+      85,
+      111
+    ],
+    "rbf_center_xyz_in": [
+      [
+        -7.5,
+        9.0,
+        2.0
+      ],
+      [
+        -6.875,
+        -9.0,
+        2.125
+      ],
+      [
+        9.0,
+        -0.3125,
+        16.625
+      ],
+      [
+        0.3125,
+        9.0,
+        41.9375
+      ],
+      [
+        2.4375,
+        9.0,
+        16.8125
+      ]
+    ],
+    "rbf_center_standardized": [
+      [
+        -2.5208273665911007,
+        1.4863868458582874,
+        -1.0710836656495157
+      ],
+      [
+        -2.4024532583576925,
+        -2.008301980734565,
+        -1.0635584876707134
+      ],
+      [
+        0.6042490907708777,
+        -0.32162924845537594,
+        -0.19063784212965623
+      ],
+      [
+        -1.0411510136734972,
+        1.4863868458582874,
+        1.3332106985777927
+      ],
+      [
+        -0.6386790456799091,
+        1.4863868458582874,
+        -0.1793500751614529
+      ]
+    ],
+    "rbf_scale_standardized": 3.188695861291229,
+    "rbf_scale_rule": "median nonzero pairwise distance between centers",
+    "coord_mean_in": [
+      5.809642857142857,
+      1.344107142857143,
+      19.791666666666668
+    ],
+    "coord_sd_in": [
+      5.2798708208017455,
+      5.150673176687122,
+      16.610902805503645
+    ]
+  },
+  "response_axis_main_effect": {
+    "labels": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "form": "frozen one-hot",
+    "counts": {
+      "X": 25,
+      "Y": 28,
+      "Z": 31
+    }
+  },
+  "interaction": {
+    "form": "tensor product of the frequency basis with the location basis",
+    "n_columns": 60,
+    "explicitly_excluded": "channel identity \u2014 a per-channel random effect has ZERO predictive mean at an unseen channel and may not be credited as spatial transfer"
+  },
+  "column_counts": {
+    "frequency": 6,
+    "location": 10,
+    "axis": 3,
+    "interaction": 60,
+    "total_before_constraints": 79
+  },
+  "constraints": {
+    "main_effects": "weighted mean zero within each training drive, per main-effect block",
+    "interaction": "zero weighted frequency margin AND zero weighted location margin",
+    "rank_deficiency": "deterministic SVD tolerance 1e-08 on column-normalised blocks, columns kept left-to-right",
+    "note": "a single grand sum-to-zero constraint is explicitly NOT sufficient and is not used"
+  },
+  "coefficient_prior": {
+    "form": "beta ~ Normal(0, Lambda_beta)",
+    "Lambda_beta_rule": "per-block variance = (target dB scale / 20*log10(e))^2 with target 6 dB for main effects and 3 dB for interactions; frozen here, never tuned on held-out responses",
+    "target_db_main": 6.0,
+    "target_db_interaction": 3.0
+  },
+  "channel_variation": "handled by a per-channel nugget in the covariance, never by a mean column"
+}

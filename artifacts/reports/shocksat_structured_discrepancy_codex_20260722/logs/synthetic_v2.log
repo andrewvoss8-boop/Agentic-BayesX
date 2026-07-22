@@ -1,0 +1,31 @@
+SYNTHETIC STOP {
+  "S0": {
+    "threshold": "false positives <=1/20",
+    "observed_false_positives": 0,
+    "pass": true
+  },
+  "S1": {
+    "threshold": "success >=16/20 and learned-mean coverage >=0.85",
+    "observed_successes": 0,
+    "observed_learned_mean_coverage": 0.9371136653895273,
+    "pass": false
+  },
+  "S2": {
+    "threshold": "median favorable and <=2 seeds worsen >2 dB",
+    "observed_median_error_reduction_db": -0.9160931631138134,
+    "observed_worse_than_minus2db_count": 0,
+    "pass": false
+  },
+  "S3": {
+    "threshold": "theta bias reduction >=0.50, every coverage >=0.80, orthogonality <=1e-8",
+    "observed_bias_reduction_fraction": 0.0026070026556511694,
+    "observed_theta_coverage": [
+      0.85,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "observed_orthogonality": 4.1668247949254833e-17,
+    "pass": false
+  }
+}

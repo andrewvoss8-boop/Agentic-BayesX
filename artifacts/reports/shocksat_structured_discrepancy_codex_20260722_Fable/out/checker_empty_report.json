@@ -1,0 +1,110 @@
+{
+  "run": "shocksat_structured_discrepancy_codex_20260722_Fable",
+  "workspace": "/private/var/folders/2q/0dzchbr15wj7j5rzcktjj1w8_w1qxk/T/tmpxv8shihc/empty_ws",
+  "checks": [
+    {
+      "gate": "G01",
+      "status": "RED",
+      "what": "source_manifest.json missing \u2014 the immutable source gate never ran",
+      "detail": null
+    },
+    {
+      "gate": "G02",
+      "status": "RED",
+      "what": "FROZEN.sha256 missing \u2014 preregistration and registries were never locked",
+      "detail": null
+    },
+    {
+      "gate": "G03",
+      "status": "RED",
+      "what": "no RED-on-empty proof (out/checker_empty_report.json)",
+      "detail": null
+    },
+    {
+      "gate": "G04",
+      "status": "RED",
+      "what": "quantity_contracts.md missing",
+      "detail": null
+    },
+    {
+      "gate": "G05",
+      "status": "RED",
+      "what": "verification_fable.json missing (E0/E1 identity never demonstrated)",
+      "detail": null
+    },
+    {
+      "gate": "G06",
+      "status": "RED",
+      "what": "stage1_measured_fable.json missing \u2014 no measured arm results",
+      "detail": null
+    },
+    {
+      "gate": "G07",
+      "status": "RED",
+      "what": "no Stage-1 output to check basis constraints",
+      "detail": null
+    },
+    {
+      "gate": "G08",
+      "status": "RED",
+      "what": "split_registry.json missing",
+      "detail": null
+    },
+    {
+      "gate": "G09",
+      "status": "RED",
+      "what": "synthetic_fable.json missing \u2014 S0-S3 gates never ran",
+      "detail": null
+    },
+    {
+      "gate": "G10",
+      "status": "RED",
+      "what": "identifiability_fable.json missing (modal strain energy + realized-floor FIM)",
+      "detail": null
+    },
+    {
+      "gate": "G11",
+      "status": "RED",
+      "what": "automatic_decision.json missing",
+      "detail": null
+    },
+    {
+      "gate": "G12",
+      "status": "GREEN",
+      "what": "Stage 2 did not run; no NUTS convergence claim is made anywhere",
+      "detail": null
+    },
+    {
+      "gate": "G13",
+      "status": "RED",
+      "what": "figure / legibility / runtime accounting incomplete",
+      "detail": {
+        "problems": [
+          "only 0 figures (card requires >=6 minimum figures)",
+          "no tufte_lint result",
+          "no image legibility QA report",
+          "runtime.json missing"
+        ]
+      }
+    },
+    {
+      "gate": "G14",
+      "status": "RED",
+      "what": "PREDECESSOR_GUARD.json missing \u2014 cannot prove predecessor workspaces are intact",
+      "detail": null
+    },
+    {
+      "gate": "G15",
+      "status": "RED",
+      "what": "packet.md missing",
+      "detail": null
+    }
+  ],
+  "counts": {
+    "GREEN": 1,
+    "YELLOW": 0,
+    "RED": 14
+  },
+  "overall": "RED",
+  "status_rule": "any RED -> RED; else any YELLOW -> YELLOW; else GREEN. Exit non-zero only on RED."
+}

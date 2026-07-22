@@ -1,0 +1,258 @@
+{
+ "source_runs": [
+  "shocksat_netcg_method_selection_20260701 (frozen bake-off + heldout machinery, theta_post_L5.npz NUTS draws)",
+  "shocksat_netcg_validated_port_20260716 (2.526 reference / 2.958 tier-updated context)"
+ ],
+ "known_answer_gate": {
+  "reproduced": true,
+  "max_abs_dev": 0.0,
+  "n_numbers_checked": 28,
+  "stored_targets": {
+   "fem6db_weighted_coverage": {
+    "shear_X": 0.865,
+    "shear_Y": 0.706,
+    "normal_Z": 0.738
+   },
+   "statfem_Fk_shear_Y": {
+    "ratio": 2.301,
+    "coverage": 0.982
+   }
+  },
+  "recomputed_scorecard": {
+   "shear_X": {
+    "baseline_fem+6dB": {
+     "weighted_coverage": 0.865,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.0
+    },
+    "L5_theta_only": {
+     "weighted_coverage": 0.984,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.068
+    },
+    "statfem_Fk": {
+     "weighted_coverage": 0.995,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.508
+    }
+   },
+   "shear_Y": {
+    "baseline_fem+6dB": {
+     "weighted_coverage": 0.706,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.0
+    },
+    "L5_theta_only": {
+     "weighted_coverage": 0.947,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.215
+    },
+    "statfem_Fk": {
+     "weighted_coverage": 0.982,
+     "sharpness_band_grms_ratio_vs_fem6db": 2.301
+    }
+   },
+   "normal_Z": {
+    "baseline_fem+6dB": {
+     "weighted_coverage": 0.738,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.0
+    },
+    "L5_theta_only": {
+     "weighted_coverage": 0.969,
+     "sharpness_band_grms_ratio_vs_fem6db": 1.016
+    },
+    "statfem_Fk": {
+     "weighted_coverage": 0.987,
+     "sharpness_band_grms_ratio_vs_fem6db": 2.526
+    }
+   }
+  },
+  "recomputed_heldout_covered_frac": {
+   "+X": {
+    "shear_X": 1.0,
+    "shear_Y": 1.0
+   },
+   "+Z(990)": {
+    "shear_X": 1.0,
+    "shear_Y": 1.0
+   },
+   "+XY": {
+    "shear_X": 1.0,
+    "shear_Y": 1.0
+   },
+   "+Z(900)": {
+    "shear_X": 1.0,
+    "shear_Y": 0.596
+   },
+   "+Y": {
+    "shear_X": 1.0,
+    "shear_Y": 1.0
+   }
+  }
+ },
+ "crps": {
+  "definition": "fair ensemble CRPS on the 1-octave-smoothed net-CG force spectrum, energy-weighted over FGRID (same weights as weighted_coverage); model-internal force units; lower is better",
+  "scorecard_grid": {
+   "shear_X_scorecard_grid": {
+    "fem6db_log_uniform_primary": 10210.1925,
+    "statfem_Fk": 10452.726,
+    "L5_theta_only_param_only": 10843.7268,
+    "evidence": "synthetic truth ensemble (scorecard grid); measured per-drive evidence below"
+   },
+   "shear_Y_scorecard_grid": {
+    "fem6db_log_uniform_primary": 10971.9349,
+    "statfem_Fk": 8589.2351,
+    "L5_theta_only_param_only": 8794.7861,
+    "evidence": "synthetic truth ensemble (scorecard grid); measured per-drive evidence below"
+   },
+   "normal_Z_scorecard_grid": {
+    "fem6db_log_uniform_primary": 13460.429,
+    "statfem_Fk": 11120.6661,
+    "L5_theta_only_param_only": 11290.0864,
+    "evidence": "synthetic truth ensemble \u2014 self-consistency, NOT validation"
+   }
+  },
+  "measured_per_drive": {
+   "shear_X@+X": {
+    "statfem_Fk": 0.9223,
+    "L5_theta_only_param_only": 1.0492,
+    "fem6db_log_uniform_primary": 1.0319,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_Y@+X": {
+    "statfem_Fk": 0.6138,
+    "L5_theta_only_param_only": 0.6273,
+    "fem6db_log_uniform_primary": 0.7446,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_X@+XY": {
+    "statfem_Fk": 0.2494,
+    "L5_theta_only_param_only": 0.303,
+    "fem6db_log_uniform_primary": 0.4478,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_Y@+XY": {
+    "statfem_Fk": 0.3594,
+    "L5_theta_only_param_only": 0.4574,
+    "fem6db_log_uniform_primary": 0.4185,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_X@+Y": {
+    "statfem_Fk": 1.9919,
+    "L5_theta_only_param_only": 2.6645,
+    "fem6db_log_uniform_primary": 1.8493,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_Y@+Y": {
+    "statfem_Fk": 0.6195,
+    "L5_theta_only_param_only": 0.8997,
+    "fem6db_log_uniform_primary": 0.6643,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_X@+Z(900)": {
+    "statfem_Fk": 2.079,
+    "L5_theta_only_param_only": 2.7431,
+    "fem6db_log_uniform_primary": 2.496,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_Y@+Z(900)": {
+    "statfem_Fk": 1.728,
+    "L5_theta_only_param_only": 1.807,
+    "fem6db_log_uniform_primary": 1.7777,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_X@+Z(990)": {
+    "statfem_Fk": 0.442,
+    "L5_theta_only_param_only": 0.5646,
+    "fem6db_log_uniform_primary": 0.4331,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   },
+   "shear_Y@+Z(990)": {
+    "statfem_Fk": 0.2242,
+    "L5_theta_only_param_only": 0.3108,
+    "fem6db_log_uniform_primary": 0.2502,
+    "evidence": "MEASURED held-out drive answer key (LSQ modal participation to this drive's H1)",
+    "low_observability": false
+   }
+  },
+  "measured_aggregate_strong_drives": {
+   "shear_X": {
+    "fem6db_log_uniform_primary": 1.2516,
+    "statfem_Fk": 1.1369,
+    "L5_theta_only_param_only": 1.4649,
+    "n_strong_drives": 5,
+    "evidence": "MEASURED held-out drives (strong-observability mean)"
+   },
+   "shear_Y": {
+    "fem6db_log_uniform_primary": 0.7711,
+    "statfem_Fk": 0.709,
+    "L5_theta_only_param_only": 0.8204,
+    "n_strong_drives": 5,
+    "evidence": "MEASURED held-out drives (strong-observability mean)"
+   }
+  },
+  "envelope_convention_sensitivity": {
+   "log_uniform": {
+    "shear_X": 10210.1925,
+    "shear_Y": 10971.9349,
+    "normal_Z": 13460.429,
+    "shear_X@+X": 1.0319,
+    "shear_Y@+X": 0.7446,
+    "shear_X@+XY": 0.4478,
+    "shear_Y@+XY": 0.4185,
+    "shear_X@+Y": 1.8493,
+    "shear_Y@+Y": 0.6643,
+    "shear_X@+Z(900)": 2.496,
+    "shear_Y@+Z(900)": 1.7777,
+    "shear_X@+Z(990)": 0.4331,
+    "shear_Y@+Z(990)": 0.2502
+   },
+   "linear_uniform": {
+    "shear_X": 10305.6306,
+    "shear_Y": 10219.9298,
+    "normal_Z": 12279.1692,
+    "shear_X@+X": 1.1575,
+    "shear_Y@+X": 0.8229,
+    "shear_X@+XY": 0.5766,
+    "shear_Y@+XY": 0.5462,
+    "shear_X@+Y": 1.7102,
+    "shear_Y@+Y": 0.6592,
+    "shear_X@+Z(900)": 2.6687,
+    "shear_Y@+Z(900)": 1.8978,
+    "shear_X@+Z(990)": 0.4048,
+    "shear_Y@+Z(990)": 0.3139
+   },
+   "gaussian_95": {
+    "shear_X": 10338.9726,
+    "shear_Y": 11174.9948,
+    "normal_Z": 13817.3253,
+    "shear_X@+X": 0.957,
+    "shear_Y@+X": 0.6215,
+    "shear_X@+XY": 0.3561,
+    "shear_Y@+XY": 0.3672,
+    "shear_X@+Y": 1.7946,
+    "shear_Y@+Y": 0.6924,
+    "shear_X@+Z(900)": 2.3051,
+    "shear_Y@+Z(900)": 1.7667,
+    "shear_X@+Z(990)": 0.4189,
+    "shear_Y@+Z(990)": 0.2331
+   }
+  },
+  "envelope_convention_note": "FEM+6dB is an envelope, not a distribution; primary scoring reads it as log-uniform between edges; linear-uniform and Gaussian-95% reported as convention sensitivity"
+ },
+ "normal_z_widths": {
+  "delivered_reference": 2.526,
+  "tier_updated": 2.958,
+  "note": "2.526x is the delivered reference configuration; 2.958x is the tier-updated configuration after the one matched extended-band mode's OBSERVED cross-drive ln-amplitude scatter (1.393) exceeded the assumed unmeasured-tier 0.80, honestly widening the band (H4 falsified)."
+ },
+ "evidence_separation": {
+  "shear_X": "measured held-out evidence",
+  "shear_Y": "measured held-out evidence",
+  "normal_Z": "self-consistency, NOT validation (synthetic truth ensemble only)"
+ },
+ "runtime_s": 13.3
+}

@@ -1,0 +1,159 @@
+{
+  "run": "shocksat_structured_discrepancy_codex_20260722_Fable",
+  "card": "docs/agents/structured_discrepancy_codex_review_20260722/task_card_codex_structured_discrepancy.md",
+  "generated_utc": "2026-07-22T17:27:59Z",
+  "n_sources": 25,
+  "missing": [],
+  "sources": [
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/realfrf.py",
+      "sha256": "9654fdf1b2cc6ff21cfa54fe3caae4da12ccffd9a7f72046c6001956bcfc723e",
+      "bytes": 12937,
+      "role": "forward model: reduced accelerance ln|H|/H_ref, channel map, drive placement"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/core.py",
+      "sha256": "e73579698707fd2c02514042a3f29cd8c069234c907a8226353830a62d657218",
+      "bytes": 14000,
+      "role": "helper imported by realfrf (group names, correlation helpers)"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/schneider_faithful.py",
+      "sha256": "6c2c7def5a4f6c42a29ead2e7d918386f121833c0420c6362463c2f03a80ed05",
+      "bytes": 11693,
+      "role": "frozen Schneider-style additive kernel reference implementation"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/spatial_reanalysis.py",
+      "sha256": "44a63beeb8825607fbf9dad751b3db79d2875a23abe54c3a3d9c976c7c28b5ee",
+      "bytes": 6413,
+      "role": "frozen physical-feature coordinates used for the 5 region labels"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/reduced_blocks.npz",
+      "sha256": "be9af90efd555ab7f326b07f410f0fe46540e37038caef830bb84ca4a9b46c78",
+      "bytes": 489978,
+      "role": "reduced stiffness blocks A_fix + 9 group blocks, obs_V"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/obs_dofs.npy",
+      "sha256": "3a8d1d6920f8b1ade99b9b69ec38932e71334c246ef52fa093eb02530ebf1527",
+      "bytes": 1952,
+      "role": "observed DOF index for the reduced-basis placement map T"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/keep_dofs.npy",
+      "sha256": "e6a4aa832ce1b0a6675ac48db1814cc5cc766562023965035be22e0a6bb11d83",
+      "bytes": 3196208,
+      "role": "kept FEM DOF list"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/channel_map.csv",
+      "sha256": "44f66d98ac3a182355547a3395b7b90138e8cc7f65a576ca707d70c800b0e3bc",
+      "bytes": 57724,
+      "role": "DAQ channel -> coordinates (in), structural axis, FEM grid"
+    },
+    {
+      "path": "artifacts/reports/statfem_shocksat_eval_20260616/data/V_keep.npy",
+      "sha256": "f0a4587b610fa0f1fede6b7b6cde4cd8af73524ff2fc2785236db4b3eb0d2baa",
+      "bytes": 255686528,
+      "role": "kept-DOF eigenvector block"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/fem_model.npz",
+      "sha256": "3a72b83d2834655b5d4d0415998bc929fd500f2ebac50ace505c663ba14c0520",
+      "bytes": 1084916,
+      "role": "FEM node coordinates (in) for nearest-node placement"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/nuts_full_samples.npz",
+      "sha256": "faf35c882c2662c1ff39715f359f9aaf1e7d587d3f16d83bef4cf1b06a5a725e",
+      "bytes": 300083,
+      "role": "converged modal-frequency posterior draws (theta, sigma_f)"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/theta_full.json",
+      "sha256": "5042a998a14915ed51b7919102a67ad705d07fdf9b1029a30205ef2c8a6008ba",
+      "bytes": 8683,
+      "role": "stored modal posterior summary \u2014 known-answer target"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/joint_strain_energy.json",
+      "sha256": "ccfe617d6991f73c76bf648a17a4e2ae32566deb4af6754e98674c1c11c247d8",
+      "bytes": 4887,
+      "role": "modal strain-energy fractions \u2014 identifiability gate input"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/measured_modes.npz",
+      "sha256": "16ab8fc256484d99afedd0a4e81ff8b5e58b4f4db86a1d9be163722caad74fbf",
+      "bytes": 62794,
+      "role": "measured survey modes"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/pairing.json",
+      "sha256": "4ef49c253cd4959159770766983c8ba72bc9aff0b319e298e7222bdfdb8e74ca",
+      "bytes": 6785,
+      "role": "measured/predicted mode pairing"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M0_ident4_n8.json",
+      "sha256": "0efcab2c3c67857a712af02284aa94254e7918b2b2efd831571c5f63bb56e8cf",
+      "bytes": 1630,
+      "role": "frozen legacy M0 summary (prototype TMCMC)"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M1_ident4_n8.json",
+      "sha256": "b7084f687acfcb9e425d766603080f528789bcfe715c79606159fe675f77bf75",
+      "bytes": 1745,
+      "role": "frozen legacy M1 summary (prototype TMCMC)"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M2_ident4_n8.json",
+      "sha256": "47dc0e1d9ac4ddd883e3f4b44f7cb677388f5aefc1a9dfc0da1185c1a5df7cbf",
+      "bytes": 1746,
+      "role": "frozen legacy M2 summary (prototype TMCMC, NOT converged)"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M3_ident4_n8.json",
+      "sha256": "23e0ab2381ae540a07a7cdb5e0c6608d9eadbabc431a9d24a06d747cff7a1c96",
+      "bytes": 1751,
+      "role": "frozen legacy M3 summary (prototype TMCMC, NOT converged)"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/identifiability.json",
+      "sha256": "548f84713bc9dcf2bd356870bdbe0f01ad3d892704f04c75ba1042b0f2da14da",
+      "bytes": 5479,
+      "role": "FIM-realized discrepancy floor sigma_d0"
+    },
+    {
+      "path": "artifacts/reports/shocksat_netcg_method_selection_20260701/data/multiref_modal/m_xpos_990x.npz",
+      "sha256": "9169c3f609f082c7e579ad8f51aafff68ddd094dc882d740edd1b36dbbff8b72",
+      "bytes": 268839,
+      "role": "measured multi-hit H1 + coherence, drive m_xpos_990x"
+    },
+    {
+      "path": "artifacts/reports/shocksat_netcg_method_selection_20260701/data/multiref_modal/m_ypos_990y.npz",
+      "sha256": "30b1760c4bcbb04c63235c0bfb7647171aa0e6fcac3414f6d6c28d224f666870",
+      "bytes": 269226,
+      "role": "measured multi-hit H1 + coherence, drive m_ypos_990y"
+    },
+    {
+      "path": "artifacts/reports/shocksat_netcg_method_selection_20260701/data/multiref_modal/m_zpos_990z.npz",
+      "sha256": "e765f20366dae93b41403fbfae7bb6f268dcc2dc19705da755cf0efae6a0873b",
+      "bytes": 269625,
+      "role": "measured multi-hit H1 + coherence, drive m_zpos_990z"
+    },
+    {
+      "path": "artifacts/reports/shocksat_netcg_method_selection_20260701/data/multiref_modal/m_zpos_900z.npz",
+      "sha256": "d84085e3bc283a5a78dc71d82d3bf58ea0692b7d0630e74f3da8ad759db70965",
+      "bytes": 269364,
+      "role": "measured multi-hit H1 + coherence, drive m_zpos_900z"
+    },
+    {
+      "path": "artifacts/reports/shocksat_netcg_method_selection_20260701/data/multiref_modal/m_xy_990xy.npz",
+      "sha256": "154b04b0dc27faf679c49318f2c16278391078434b02ce445b056b7e323b6373",
+      "bytes": 269416,
+      "role": "measured multi-hit H1 + coherence, drive m_xy_990xy"
+    }
+  ]
+}

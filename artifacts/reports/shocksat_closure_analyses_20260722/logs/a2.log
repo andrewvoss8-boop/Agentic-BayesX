@@ -1,0 +1,19 @@
+--- hn002 (HalfNormal(0.02)) seed 101 ---
+  sigma_f 0.0416 [0.0320,0.0565] rhat 1.1252 ess 17 div 0 pass False ppc 18/18 (868.1s)
+--- hn005_reference (HalfNormal(0.05) [frozen reference]) seed 42 ---
+  sigma_f 0.0460 [0.0336,0.0677] rhat 1.0087 ess 464 div 0 pass True ppc 18/18 (867.0s)
+  REFERENCE REPRODUCTION: pass=True sigma_f dev 0.00024, theta max dev 0.00656
+--- hn015 (HalfNormal(0.15)) seed 102 ---
+  sigma_f 0.0480 [0.0344,0.0733] rhat 1.0130 ess 360 div 0 pass True ppc 18/18 (822.2s)
+--- hc005 (HalfCauchy(0.05)) seed 103 ---
+  sigma_f 0.0482 [0.0346,0.0687] rhat 1.4177 ess 6 div 0 pass False ppc 18/18 (838.8s)
+--- exp005 (Exponential(mean 0.05)) seed 104 ---
+  sigma_f 0.0427 [0.0342,0.0675] rhat 1.3382 ess 4 div 0 pass False ppc 18/18 (838.0s)
+{
+ "hn002": "HalfNormal(0.02): sigma_f median 4.2% [3.2, 5.6]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE [NON-CONVERGED variant: worst R-hat 1.125, min ESS 17 \u2014 interval not trustworthy]",
+ "hn005_reference": "HalfNormal(0.05) [frozen reference]: sigma_f median 4.6% [3.4, 6.8]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE",
+ "hn015": "HalfNormal(0.15): sigma_f median 4.8% [3.4, 7.3]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE",
+ "hc005": "HalfCauchy(0.05): sigma_f median 4.8% [3.5, 6.9]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE [NON-CONVERGED variant: worst R-hat 1.418, min ESS 6 \u2014 interval not trustworthy]",
+ "exp005": "Exponential(mean 0.05): sigma_f median 4.3% [3.4, 6.7]% \u2014 the ~4.6% floor and the model-form conclusion SURVIVE [NON-CONVERGED variant: worst R-hat 1.338, min ESS 4 \u2014 interval not trustworthy]"
+}
+A2 done 4238.0s

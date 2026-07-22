@@ -1,0 +1,124 @@
+{
+  "overall_status": "RED",
+  "counts": {
+    "GREEN": 8,
+    "YELLOW": 0,
+    "RED": 9
+  },
+  "gates": [
+    {
+      "name": "freeze_artifacts",
+      "status": "GREEN",
+      "evidence": {
+        "missing": []
+      }
+    },
+    {
+      "name": "source_and_predecessor_hashes",
+      "status": "GREEN",
+      "evidence": {
+        "mismatches": []
+      }
+    },
+    {
+      "name": "red_on_empty_canary",
+      "status": "GREEN",
+      "evidence": {
+        "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_structured_discrepancy_codex_20260722/qa/checker_empty_report.json"
+      }
+    },
+    {
+      "name": "quantity_contract_and_db",
+      "status": "GREEN",
+      "evidence": {}
+    },
+    {
+      "name": "split_registry_and_guards",
+      "status": "GREEN",
+      "evidence": {}
+    },
+    {
+      "name": "known_answers_and_modal_identifiability",
+      "status": "RED",
+      "evidence": {}
+    },
+    {
+      "name": "synthetic_s0_s3_20_seeds",
+      "status": "RED",
+      "evidence": {}
+    },
+    {
+      "name": "e0_e1_identical_training_fit",
+      "status": "RED",
+      "evidence": {}
+    },
+    {
+      "name": "mean_gp_contributions_separate",
+      "status": "RED",
+      "evidence": {}
+    },
+    {
+      "name": "basis_constraints_and_orthogonality",
+      "status": "RED",
+      "evidence": {}
+    },
+    {
+      "name": "automatic_decision_complete",
+      "status": "RED",
+      "evidence": {
+        "path": null
+      }
+    },
+    {
+      "name": "measured_stage1_when_permitted",
+      "status": "GREEN",
+      "evidence": {
+        "required": false
+      }
+    },
+    {
+      "name": "stage2_nuts_diagnostics_if_run",
+      "status": "GREEN",
+      "evidence": {
+        "required": false
+      }
+    },
+    {
+      "name": "figures_lint_legibility_and_labels",
+      "status": "RED",
+      "evidence": {
+        "missing": [
+          "fig_graphical_model.png",
+          "fig_synthetic_recovery.png",
+          "fig_fold_effects.png",
+          "fig_identifiability.png",
+          "fig_beta_prior_check.png"
+        ]
+      }
+    },
+    {
+      "name": "completion_packet",
+      "status": "RED",
+      "evidence": {
+        "missing": [
+          "packet.md",
+          "stage1_checkpoint.md",
+          "automatic_decision.json"
+        ]
+      }
+    },
+    {
+      "name": "runtime_accounting",
+      "status": "GREEN",
+      "evidence": {}
+    },
+    {
+      "name": "scientific_result",
+      "status": "RED",
+      "evidence": {
+        "caveat": "no valid terminal decision"
+      }
+    }
+  ],
+  "canary": true
+}

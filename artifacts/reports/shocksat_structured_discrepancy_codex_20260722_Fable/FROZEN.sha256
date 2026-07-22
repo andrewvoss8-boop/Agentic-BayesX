@@ -1,0 +1,17 @@
+{
+  "locked_utc": "2026-07-22T17:43:54Z",
+  "what": "preregistration, framing, registries and the immutable source-gate artifacts; the checker verifies these hashes are unchanged at report time",
+  "files": {
+    "preregistration.md": "b76508c4ad472d6219acdfa4d6cf4235e65ff82cb86fd2d7d6f00c0be94f7753",
+    "quantity_contracts.md": "ad11bc3680ef0cc5d02033dea9f4d2409936a7939a8d366cc7b731b9b69a0acd",
+    "assumptions_ledger.md": "37d3221b0066ea22ff961fcb39a746afa083828ebc1851ca2a83012f9655fc54",
+    "question_framing.md": "86d6e9e4b487aba3949215db415ce5e315f3aa8ece77120479753f9c8e1cf430",
+    "priority_deliverables.md": "e60f5a5016dd0286f5b93c49161ccb3aa0c48b81ea38924c4784ad92237073e1",
+    "out/split_registry.json": "ecd79b1b181196d02f937f485a64042f045d23163a9191e3daf28e8d86fad69a",
+    "out/mean_basis_registry.json": "46feff05dbdbd46d1cfa39ed9c257ecc63afd4106ebce4c8b91a596712ba48b7",
+    "out/basis_fable.npz": "1113b67a014454d843754bbaccf42fa9ceaf306429bbaf350ac97405613981ea",
+    "out/source_manifest.json": "5d46e59505ea38670c1ded9b45b90b812193f66b9ed6b2b61f1928824cb446f2",
+    "out/data_inventory.json": "cd3166824ea92dfe34e0ecf938ffab3586042626e075e69b8d83b1530b83e22a",
+    "out/known_answer_fable.json": "e0191db4e8a5bf0112510b7c7d33ae2fddb41acaf955659c84affc15bc815885"
+  }
+}

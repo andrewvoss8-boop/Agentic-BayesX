@@ -1,0 +1,160 @@
+{
+  "note": "Deterministic recomputations only. Stochastic R-hat/ESS of the legacy non-converged TMCMC runs are NOT re-run (card forbids it); their stored hyperparameters are parsed and matched.",
+  "checks": [
+    {
+      "id": "KA1",
+      "what": "posterior median theta recomputed from retained draws vs stored theta_median",
+      "max_abs_dev": 0.0,
+      "tol": 1e-09,
+      "pass": true
+    },
+    {
+      "id": "KA2",
+      "what": "74 stored nominal reduced eigenvalues reproduced by eigh(A_fix + sum_g A_g)",
+      "n_values": 74,
+      "max_rel_dev": 6.377987455823985e-10,
+      "tol_rel": 1e-08,
+      "pass": true,
+      "three_smallest_stored": [
+        117673.47231380442,
+        211197.4288963172,
+        214673.8814041859
+      ],
+      "three_smallest_recomputed": [
+        117673.47226012949,
+        211197.4289284591,
+        214673.88127759536
+      ]
+    },
+    {
+      "id": "KA6",
+      "what": "sigma_f posterior median and 95% CI recomputed from the 4000 retained draws",
+      "stored": [
+        0.046264696389052784,
+        0.033867292694841684,
+        0.06742817590355518
+      ],
+      "recomputed": [
+        0.046264696389052784,
+        0.033867292694841684,
+        0.06742817590355518
+      ],
+      "max_abs_dev": 0.0,
+      "tol": 1e-12,
+      "pass": true
+    },
+    {
+      "id": "KA3",
+      "what": "this study's kern_f/kern_x vs frozen schneider_faithful.corr_freq_linear/corr_space",
+      "max_abs_dev_freq": 0.0,
+      "max_abs_dev_space": 0.0,
+      "tol": 1e-12,
+      "pass": true,
+      "frozen_hyper": {
+        "l_f_hz": 10.0,
+        "l_z_in": 2000.0,
+        "r_split": 0.82,
+        "zeta": 0.01
+      }
+    },
+    {
+      "id": "KA4",
+      "what": "additive-kernel eigenvalues: dense kron construction vs product-eigenbasis sum",
+      "max_abs_dev": 2.4868995751603507e-14,
+      "tol": 1e-10,
+      "pass": true,
+      "three_largest_dense": [
+        8.450838089908052,
+        8.454145391269346,
+        10.59360041899792
+      ],
+      "three_smallest_dense": [
+        -8.249271222085771e-16,
+        -7.389776894813146e-16,
+        -5.642537463703887e-16
+      ]
+    },
+    {
+      "id": "KA5",
+      "what": "frozen legacy M0-M3 summaries parsed; stored l_f/l_x/r/zeta match the card's frozen values (no stochastic diagnostic re-run)",
+      "pass": true,
+      "legacy": {
+        "M0": {
+          "converged": true,
+          "max_rhat": 1.0001740560416237,
+          "min_ess": 4716.189286380408,
+          "sigma_w_med": null,
+          "log_evidence_mean": -105484.85550531678,
+          "fixed_hyper": {
+            "l_f_hz": 10.0,
+            "l_z_in": 2000.0,
+            "r_split": 0.82,
+            "sigma_meas": 0.15,
+            "zeta": 0.01,
+            "sigma_w_prior_logN_center": 1.726,
+            "sigma_w_prior_logsd": 0.6
+          }
+        },
+        "M1": {
+          "converged": false,
+          "max_rhat": 1.0413275806963551,
+          "min_ess": 47.13472134444741,
+          "sigma_w_med": 1.864858922227092,
+          "log_evidence_mean": -2859.419249460014,
+          "fixed_hyper": {
+            "l_f_hz": 10.0,
+            "l_z_in": 2000.0,
+            "r_split": 0.82,
+            "sigma_meas": 0.15,
+            "zeta": 0.01,
+            "sigma_w_prior_logN_center": 1.726,
+            "sigma_w_prior_logsd": 0.6
+          }
+        },
+        "M2": {
+          "converged": false,
+          "max_rhat": 2.576851908501521,
+          "min_ess": 0.7091361501220279,
+          "sigma_w_med": 12.374862353468146,
+          "log_evidence_mean": -2717.524535405688,
+          "fixed_hyper": {
+            "l_f_hz": 10.0,
+            "l_z_in": 2000.0,
+            "r_split": 0.82,
+            "sigma_meas": 0.15,
+            "zeta": 0.01,
+            "sigma_w_prior_logN_center": 1.726,
+            "sigma_w_prior_logsd": 0.6
+          }
+        },
+        "M3": {
+          "converged": false,
+          "max_rhat": 1.1115389438280825,
+          "min_ess": 16.947800765213163,
+          "sigma_w_med": 12.597528699848802,
+          "log_evidence_mean": -2822.0680946188477,
+          "fixed_hyper": {
+            "l_f_hz": 10.0,
+            "l_z_in": 2000.0,
+            "r_split": 0.82,
+            "sigma_meas": 0.15,
+            "zeta": 0.01,
+            "sigma_w_prior_logN_center": 1.726,
+            "sigma_w_prior_logsd": 0.6
+          }
+        }
+      },
+      "prototype_label": "M0-M3 are PROTOTYPE/LEGACY random-scan TMCMC results; M2 (R-hat 2.58) and M3 (R-hat 1.11) are NOT converged and are used here only as frozen hyperparameters."
+    }
+  ],
+  "diagnostic_f_pred_median": {
+    "gating": false,
+    "why_not_gated": "the stored value used per-draw MAC re-tracking and a 2000-of-4000 draw subsample; a fixed-index recomputation is a different estimator, so an exact match is not expected",
+    "n_modes": 18,
+    "median_rel_dev": 0.005507460733217639,
+    "max_rel_dev": 0.0372926722117351,
+    "n_modes_within_0p5pct": 9
+  },
+  "all_pass": true,
+  "runtime_s": 1.31
+}

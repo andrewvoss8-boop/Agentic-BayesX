@@ -1,0 +1,7 @@
+{
+  "task_started_at": "2026-07-21T19:22:00-04:00",
+  "task_completed_at": "2026-07-21T19:50:00-04:00",
+  "active_runtime_s": 95.0,
+  "elapsed_wallclock_s": 1680.0,
+  "accounting_note": "Active runtime sums the two report replays and short audit commands for the consolidated-review revision; elapsed wall clock includes source review, editing, and manual inspection. Active runtime is less than elapsed wall clock as required. Major underlying science runtimes are reported separately in Appendix B and out/advisor_audit_metrics.json."
+}

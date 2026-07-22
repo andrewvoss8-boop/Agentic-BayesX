@@ -1,0 +1,61 @@
+{
+ "all_pass": true,
+ "flags": [],
+ "figures": {
+  "figures/a1_subspace.png": {
+   "w": 2100,
+   "h": 880,
+   "frac_nonlight": 0.0901,
+   "min_size_ok": true,
+   "has_content": true,
+   "human_inspected_in_session": true,
+   "pass": true
+  },
+  "figures/a3_table.png": {
+   "w": 2676,
+   "h": 899,
+   "frac_nonlight": 0.057,
+   "min_size_ok": true,
+   "has_content": true,
+   "human_inspected_in_session": true,
+   "pass": true
+  },
+  "figures/a3_coverage_width.png": {
+   "w": 2300,
+   "h": 780,
+   "frac_nonlight": 0.0354,
+   "min_size_ok": true,
+   "has_content": true,
+   "human_inspected_in_session": true,
+   "pass": true
+  },
+  "figures/a4_profile.png": {
+   "w": 2200,
+   "h": 800,
+   "frac_nonlight": 0.0382,
+   "min_size_ok": true,
+   "has_content": true,
+   "human_inspected_in_session": true,
+   "pass": true
+  },
+  "figures/a2_sigma_f_sweep.png": {
+   "w": 2500,
+   "h": 680,
+   "frac_nonlight": 0.0622,
+   "min_size_ok": true,
+   "has_content": true,
+   "human_inspected_in_session": true,
+   "pass": true
+  },
+  "figures/a2_predictive_checks.png": {
+   "w": 2100,
+   "h": 720,
+   "frac_nonlight": 0.1999,
+   "min_size_ok": true,
+   "has_content": true,
+   "human_inspected_in_session": true,
+   "pass": true
+  }
+ },
+ "note": "automated: min pixel size (>=1200x500 @200dpi), non-blank content fraction; manual: every PNG was rendered and visually inspected in-session for clipped/overlapping text (a3_table first version FAILED and was fixed: clipped row label + header overflow; a4_profile minor-tick overlap fixed)."
+}

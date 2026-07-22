@@ -1,0 +1,65 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 10,
+    "YELLOW": 1,
+    "RED": 0
+  },
+  "gates": [
+    {
+      "gate": "G1 required artifacts",
+      "status": "GREEN",
+      "evidence": "all required artifacts present"
+    },
+    {
+      "gate": "G2 numeric traceability",
+      "status": "GREEN",
+      "evidence": "34 spot checks; all source-backed"
+    },
+    {
+      "gate": "G3 definitions/data contract",
+      "status": "GREEN",
+      "evidence": "terms used later, score units, counts, and bands defined once; unused internal labels omitted"
+    },
+    {
+      "gate": "G4 likelihood direction",
+      "status": "GREEN",
+      "evidence": "measured log frequency is modeled around predicted log frequency"
+    },
+    {
+      "gate": "G5 evidence labels",
+      "status": "GREEN",
+      "evidence": "normal-Z is repeatedly and adjacently labeled synthetic-only"
+    },
+    {
+      "gate": "G6 compression and future-work scope",
+      "status": "GREEN",
+      "evidence": "pages=10; remodelctl only in future work; PSIS-LOO absent"
+    },
+    {
+      "gate": "G7 prior DOCX preservation",
+      "status": "GREEN",
+      "evidence": "six prior DOCX files and the commented v1 brief byte-identical"
+    },
+    {
+      "gate": "G8 figure legibility and alt text",
+      "status": "GREEN",
+      "evidence": "3 high-resolution figures; 3+ descriptive alt texts; visual QA recorded"
+    },
+    {
+      "gate": "G9 advisor context and narrative",
+      "status": "GREEN",
+      "evidence": "proposal context and chronological method explanation precede results; advisor-facing status shorthand absent"
+    },
+    {
+      "gate": "G10 references and closure request",
+      "status": "GREEN",
+      "evidence": "primary/official references present and four closure questions retained"
+    },
+    {
+      "gate": "Y1 inherited science ceiling",
+      "status": "YELLOW",
+      "evidence": "3/5 variants non-converged; worst R-hat=1.418; min ESS=4.4; intervals labeled not trustworthy"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+eigenvalues (asc): [0.019, 0.029, 0.259, 0.355, 0.872, 0.988, 1.045, 1.074, 1.166]
+known-answer gate: PASS within_ci=[True, True, True, True, True, True, True, True, True]
+contracted directions: ['bottom_box + top_box mix', 'top_box + bottom_box mix', 'plates + joints mix', 'cross_beam + angle_brackets mix']
+runtime 0.2s

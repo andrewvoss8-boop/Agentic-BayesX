@@ -1,5 +1,218 @@
 # Todo
 
+## 2026-07-22 ShockSat advisor report — WORKING-TWIN FRF CORRECTION IN PROGRESS
+
+Human priority: while Task Card A finishes its A2 sweep, correct Section 5.4 using the retained converged
+working-twin result. Replace the eight-panel method wall with a two-panel held-out comparison containing only
+measured data, original FEM, updated posterior median, parameter uncertainty, and total predictive uncertainty
+after the separately calibrated model-form term. Remove hit-quality shading. State that the modal parameter
+posterior converged but the discrepancy was estimated modularly rather than jointly sampled with the parameters.
+
+- [x] Record the corrected method classification and Figure 5.4 contract in the predecessor decisions log and Task Card B.
+- [x] Generate the simplified two-channel figure from the frozen `mc_cache.npz` arrays only; run Tufte lint and image QA.
+- [x] Correct the modal likelihood direction and distinguish the modular working twin from the failed joint whole-FRF target.
+- [x] Build a new DOCX without overwriting any prior report, run the checker, render it, and inspect every page.
+- [x] Carry the correction into the post-A2 Task Card B rebuild.
+
+Completed 2026-07-22. New interim deliverable:
+`ShockSat_Bayesian_FEM_and_StatFEM_progress_update_working_twin_revision.docx`. Checker **OVERALL YELLOW
+13G/1Y/0R, exit 0**; Tufte lint 0 flags; accessibility 0 findings; all 16 pages inspected. The YELLOW is the
+scientific ceiling. Task Card B remains blocked only on the A2 completion packet and still owns final compression.
+
+## 2026-07-21 ShockSat advisor report — REVIEW CONSOLIDATION COMPLETE
+
+Human priority: starting with the initial external review and the later reviewer correction, implement every
+criticism that still survives the repaired project artifacts. Treat later checker-backed repairs—not either
+reviewer's prose—as the current source of truth.
+
+- [x] Separate the whole-FRF, free-discrepancy, and IFT posterior pathologies by exact run and diagnostic.
+- [x] Correct model-form best-selected results versus preregistered class-mean controls and label selection bias.
+- [x] Add a defect/repair/current-claim ledger for leakage, exact reranking, net-CG porting, and checker scope.
+- [x] Clarify mass normalization, priors, local-versus-global information, evidence target, LODO scope, +6 dB,
+      and the residual-GRMS quantity contract.
+- [x] Add artifact-derived modal posterior contraction and compact runtime accounting; do not invent trace plots
+      where raw TMCMC draws were not retained.
+- [x] De-emphasize agentic branding, tighten contributions/lessons, and replace the generic calendar with a
+      concrete closeout acceptance bar for Ilias to approve or change.
+- [x] Rebuild, Tufte-lint, check, render, inspect every page, and update the report ledger and central project log.
+
+Completed 2026-07-21. The consolidated revision implements the criticisms that survive the repaired artifacts
+and explicitly rejects superseded claims. It distinguishes the three posterior pathologies, separates selected
+best candidates from class-mean controls, adds a defect/repair/current-claim ledger, and defines the disputed
+quantities and Bayesian assumptions. No new inference was run and no missing TMCMC trace was fabricated.
+Tufte lint: 0 flags. Checker: **OVERALL YELLOW 13G/1Y/0R, exit 0**. All 16 pages inspected.
+
+## 2026-07-21 ShockSat advisor report — RECOVER USER PROSE AND ADD FRF PREDICTIVE BANDS
+
+Human correction: the Bayesian-audit rebuild recovered the four comments but lost other prose edits Andrew
+made directly in the previous Word draft. Treat the preserved edited DOCX as the text authority. Recover every
+user-authored text change before revising Section 5.4. Add predictive FRF bands only from stored posterior or
+posterior-predictive draws; do not manufacture bands around deterministic MAP curves, and print convergence/
+validity limits on the figure and caption.
+
+- [x] Extract all Word paragraphs/runs carrying the user-edit revision IDs and compare them with the current report.
+- [x] Reinsert each substantive user prose edit in the report builder, preserving later Bayesian-audit additions.
+- [x] Inventory whole-FRF/modal/Beck stored draws and identify which methods have valid predictive ensembles.
+- [x] Revise the Section 5.4 plot and caption with honest predictive bands and explicit non-convergence labeling.
+- [x] Tufte-lint, rebuild, structurally check, render and inspect every page, rerun the one-command replay, and update records.
+
+Completed 2026-07-21. The extraction found two user editing-session revision IDs and restored every substantive
+prose change, including the shorter opening, evaluation-versus-validation conclusion, Net-CG explanation, and
+remeshing/remodeling wording. Section 5.4 now shows a 120-draw modal parameter-propagation envelope and a
+120-draw whole-FRF pointwise predictive interval. The latter is printed as NOT TRUSTWORTHY because the fold
+posterior has R-hat 48.8 and ESS 2.0. No Beck band was invented: its run retained no posterior draws and did
+not converge. Tufte lint: 0 flags. Checker: **OVERALL YELLOW 12G/1Y/0R, exit 0**. All 15 pages inspected.
+
+## 2026-07-21 ShockSat advisor report — BAYESIAN METHOD AUDIT AND COMMENT RESOLUTION COMPLETE
+
+Human priority: address the four Word comments and make the Bayesian evaluation comprehensive enough for
+Ilias Bilionis. Use `experiment_catalog.xlsx` as a starting index, then incorporate later checker-backed work.
+Add a method/likelihood/discrepancy table; select 2–3 strongest methods; compare them with a baseline/failed
+method on one genuinely improved FRF channel and one persistent-failure channel; and state, with evidence,
+why the posterior mean did not move enough and why the predictive bands remained too wide. Audit prior
+strength, likelihood/covariance assumptions, discrepancy confounding, convergence, and data resolution before
+attributing failure to model form.
+
+- [x] Preserve and inventory the user-commented DOCX and extract all comments/anchors.
+- [x] Inspect and render every sheet of `experiment_catalog.xlsx`; reconcile it against later report workspaces.
+- [x] Build a source-backed Bayesian method matrix with likelihood, priors, discrepancy, sampler, diagnostics,
+      data usage, held-out result, and claim limit for each relevant technique.
+- [x] Locate reproducible same-channel FRF arrays for a good and bad channel; pre-register selection and method
+      eligibility before plotting.
+- [x] Create a source-controlled two-channel comparison figure, run Tufte lint, and record legibility/provenance.
+- [x] Revise the advisor DOCX, repair equation subscripts, clarify the two commented phrases and band medians,
+      add the method matrix/figure, and state the two causal conclusions with Bayesian alternatives ruled in/out.
+- [x] Rebuild, structurally audit, render every page, inspect all pages, run the checker, and update records.
+
+Completed 2026-07-21. Deliverable: `ShockSat_StatFEM_progress_and_closure_update_bayesian_audit.docx`.
+Checker: **OVERALL YELLOW 11G/1Y/0R, exit 0**. All document, context, method, assumption-audit,
+good/bad-FRF, remodeling, literature, equation/comment, and render gates are GREEN. The one YELLOW is the
+scientific claim ceiling: no direct net-CG answer key; whole-FRF and Beck NUTS posteriors did not converge;
+the comparison curves are held-out deterministic MAP points, not Bayesian intervals. All 14 pages inspected.
+
+
+## 2026-07-21 ShockSat advisor report — AGENTIC-REMODELING CLI EXPLANATION COMPLETE
+
+Human priority: incorporate the separate advisor through-line on training the remodeling skill/harness. Make
+clear that agentic remodeling is the outer discrete model-form loop (not just mesh refinement and not Bayesian
+property scaling), distinguish existing candidate/build/V-gate/split/exact-score components from the proposed
+`remodelctl` wrapper, and use a flowchart to show the controlled feedback cycle.
+
+- [x] Read the pasted guidance and re-ground in the current MPL harness and completed ShockSat pilot.
+- [x] Record the current-versus-proposed distinction and the agent's allowed/forbidden modification boundary.
+- [x] Build a source-controlled agentic-remodeling/CLI flowchart and visually inspect it.
+- [x] Add concise current-method, planned-CLI, feedback-role, and blind-training details to Section 7.
+- [x] Rebuild the DOCX, update the appendix/checker, render every page, and record visual QA.
+- [x] Update the report README, run log, and central project log with the new delivered artifact/hash.
+
+Completed 2026-07-21. Current checker: **OVERALL YELLOW 10G/1Y/0R, exit 0**. Ten artifact/context/method/
+agentic-remodeling/literature/render gates are GREEN. The one YELLOW remains the inherited scientific claim
+ceiling, not a document defect. Final DOCX has 13 inspected pages and three figures with alt text.
+
+## 2026-07-21 ShockSat advisor update — CONTEXT/TECHNICAL/CLOSURE REWRITE COMPLETE
+
+Human correction: replace the decision-memo framing with a self-contained technical progress report for Ilias,
+who last saw the original statFEM proposal and has no ShockSat or agentic-remodeling context. Remove color-coded
+research status, define local terms, show the Bayesian model and NUTS details, explain the unmet industry-use
+goal and model-form pivot, and end with the requested final-month closure discussion.
+
+- [x] Re-read Ilias's last-reviewed proposal and his controlling evaluation objective.
+- [x] Audit the checker-backed ShockSat modal, sequential statFEM, net-CG, damping, FRF, and model-form results.
+- [x] Record the corrected audience, purpose, and acceptance criteria in the report workspace.
+- [x] Verify and expand the StatFEM, calibration-discrepancy, NUTS, diagnostics, TMCMC, and model-updating literature.
+- [x] Build a new self-contained DOCX; preserve the original and rejected intermediate memo.
+- [x] Run automated content/structure/a11y checks, render every page, and record page-by-page visual QA.
+- [x] Update the report README and central project log with the final artifact-backed result.
+
+Completed 2026-07-21. Current deliverable: `ShockSat_StatFEM_progress_and_closure_update.docx`. Checker:
+**OVERALL YELLOW 9G/1Y/0R**, exit 0. Nine document/context/method/reference/render gates are GREEN; the single
+YELLOW is the inherited scientific ceiling (unmeasured net-CG load, non-converged held-out/full-FRF posterior
+families, and no agent-over-random advantage), all stated in the report.
+
+## 2026-07-21 ShockSat advisor results summary — FIGURE/NARRATIVE REVISION IN PROGRESS
+
+Human priority: make the advisor packet easy for Bilionis to interpret and use to decide the next research
+step. Preserve the strong FRF plots, reduce their annotations, require every remaining graphic to tell one
+story that supports the overall message, prefer tables when exact comparisons matter, define any term a
+reader could reasonably ask about, and add only verified literature references from the repository or web.
+
+- [x] Audit each current figure against a one-sentence claim and the report's main decision narrative.
+- [x] Replace overloaded comparison graphics with advisor-readable tables where appropriate.
+- [x] Rebuild retained plots from source artifacts with fewer series, fewer annotations, and explicit provenance.
+- [x] Add a short, verified literature frame and reference list; do not infer bibliographic details.
+- [x] Rebuild a separate revised DOCX, preserving the original packet.
+- [x] Run Tufte lint, structural/a11y checks, render every page, and inspect all page images before delivery.
+
+Completed 2026-07-21. Revised checker: **OVERALL YELLOW 6G/1Y/0R**, exit 0. Artifact and layout gates are
+GREEN; YELLOW is the honest science ceiling (normal force lacks a direct answer key; full-spectrum NUTS did
+not converge; evidence winner did not earn held-out delivery).
+
+## 2026-07-20 MPL EXISTING-DATA-ONLY CONDITIONAL CAMPAIGN — COMPLETE 2026-07-21, checker OVERALL YELLOW {16G/2Y/0R} exit 0, pending Andrew review of packet.md
+
+Andrew decision: no additional MPL test data can be acquired; make the strongest defensible use of the 13
+existing sequential single-response records. Preserve the completed Stage-0 YELLOW result and start a separate
+workspace with an explicit YELLOW claim ceiling.
+
+- [x] Record the human constraint and its consequences in the completed campaign `decisions_log.md` D5 and
+      the lead CURRENT STATE.
+- [x] Write the dispatch-ready successor card at
+      `docs/lab/mpl_existing_data_conditional_runner_prompt.md`; it freezes the YELLOW ceiling, bounded model
+      menu, five-family cross-validation, exact feature-loss generalized Bayes, and no A/R or vault claim.
+- [x] Create an isolated successor workspace and `priority_deliverables.md`: model plausibility and
+      condition-scoped uncertainty, not validated winner selection.
+      (`artifacts/reports/mpl_existing_data_conditional_20260720/`; INIT verified all 13 raw + predecessor locks
+      + frozen model by hash; all pre-registration gate files written.)
+- [x] Freeze an existing-data-only likelihood/evaluation contract and fail-closed checker before fitting:
+      primary response-only tap transfer features; acoustic centered spectral shapes as a 6 dB robustness arm;
+      leave-one-response-family-out checks; empirical hit/block uncertainty; no true vault.
+      (`check.py`+`check_config.json` SHA-locked in `CHECKER.sha256`; RED-on-empty proven exit 1,
+      `out/checker_empty_report.json`. Menu frozen in `model_menu.json` + `candidates/`. Five folds in
+      `data_split_manifest.json`. FEATURES observed side done: observed counts reproduce predecessor EXACTLY
+      15/15 paths; fresh global q95 0.7117% ~ inherited floor 0.7172%; per-fold tau floors written.)
+- [x] MENU V-gate battery (all GREEN after D4) (identity/no-op, RBM, positive mass/stiffness,
+      finite eig, finite perturbation directional, mesh/resolution) for B0/B1/B2/M1/M2 + negative controls;
+      then modeled-side features per class/fold.
+- [x] UPDATE = known-answer-validated TMCMC generalized-Bayes over the 6
+      stiffness multipliers, per updatable class x 5 folds x 3 seeds; EXACT candidate-own confirmation + reduced
+      gap; ROBUSTNESS acoustic 1.5/3/6 dB + full sensitivity axes. Do not smooth the observable to claim NUTS.
+- [x] Model averaging/plausibility-set path taken (headline = plausibility_set {B2}, NOT preferred); YELLOW ceiling held.
+- [x] Packet, findings, 10 QA-fixed figures, sensitivity/identifiability, runtime, manifest, replay; runs.md + project_log rows appended with verbatim checker status.
+
+## 2026-07-20 MPL ONE-DISPATCH AGENTIC REMODEL + BAYES HARNESS — COMPLETE, checked Stage-0 YELLOW stop, pending Andrew review
+
+Purpose: extend the ShockSat lessons to a long-running, restart-safe MPL campaign that separates genuine
+model-form search from continuous Bayesian property updating and scores both on admissible held-out dynamic
+observables. Campaign workspace: `artifacts/reports/mpl_agentic_remodel_bayes_20260720/`. No MPL science
+result or posterior was produced because Stage 0 did not earn an admissible discriminating observable. The
+precheck is OVERALL YELLOW with 7 GREEN conduct/integrity gates and 0 RED; schema and figure QA are GREEN.
+
+- [x] Bootstrap isolated workspace and re-ground from the card/repository continuity files.
+- [x] Record priority deliverables and D0/D1, including exclusion of the still-incomplete ShockSat
+      formulation-calibration study and the 7.9 GiB disk constraint.
+- [x] Audit all 13 raw MPL records into `condition_registry.json`, including acquisition legality,
+      independent-realization count, clipping/SNR, grid/window/detrend, usable bands, and split eligibility.
+- [x] Freeze `data_admissibility_contract.md`, `precheck_config.json`, and `precheck.py`; prove RED on empty
+      outputs and write `PRECHECK.sha256` before the first validity perturbation.
+- [x] Run the frozen B0/B2/four-perturbation discriminating-validity test and independently checked null.
+- [x] Stage 0 is YELLOW: package the honest stop and minimum new-test request. The GREEN-only full
+      science harness—baselines, operators, fair A/R search, finalists, held-out evaluation, and science
+      checker—was intentionally not run. One-command Stage-0 replay exits 0.
+
+- [x] New autonomous runner card: `docs/lab/mpl_agentic_remodel_bayes_runner_prompt.md`.
+- [x] Correct the old MPL prompt's no-force assumption: sequential single-accelerometer records default to
+      repeated-source pseudo-transmissibility or response-only features; input cancellation must be proven.
+- [x] Pre-register B0 untouched prior / B1 property-only Bayes / B2 human D43 / equal-budget random / agent
+      arms; genuine connectivity, geometry, element-formulation, mesh, and missing-hardware families.
+- [x] Encode three-round default budgets, exact candidate-own reporting, NUTS/TMCMC labeling, FIM at the
+      realized discrepancy floor, train/dev/one-time-vault discipline, a locked Stage-0 admissibility
+      precheck, and science-status propagation.
+- [x] Add reusable scaffold under `docs/lab/mpl_agentic_remodel_bayes_harness/`: bootstrap, state machine,
+      fail-closed templates, candidate/run-state/evaluation/condition JSON schemas, examples, and validator.
+- [x] Validation: Python compilation GREEN; `validate_harness.py` GREEN; isolated bootstrap smoke test GREEN
+      (`SCIENCE_NOT_RUN`, INIT state, schema bundle; test workspace moved outside the repo afterward).
+- [x] Andrew dispatch received through the attached successor card; Stage 0 data/observable validity runs
+      before the immutable science checker and before any remodeling search.
+
 ## 2026-07-16/18 MODEL-FORM PILOT (runner card C) — COMPLETE, checker GREEN 12G/0Y/0R, pending Andrew review
 Workspace `artifacts/reports/shocksat_modelform_pilot_20260716/` · replay `bash run_all.sh`.
 **SCIENCE (pre-registered): HQ1 FALSIFIED (stratified agent still ties random: −0.0077±0.0177 best,
@@ -308,3 +521,135 @@ Plan (card = docs/lab/shocksat_true_remodel_loop_runner_prompt.md; checker LOCKE
    freeze VAULT_FREEZE.sha256 -> vault = Test04 (+XY) once -> S1/S2/S3 verdicts.
 8. Figures (tufte skill + lint + legibility QA), packet.md, findings.md, runtime.json, run_all.sh,
    runs.md entry + project_log row (status verbatim from checker).
+
+## 2026-07-22 Task Card A — ShockSat closure analyses (EXECUTING, lead as runner)
+
+Workspace: artifacts/reports/shocksat_closure_analyses_20260722/ · hard cap 4 h active.
+Recon done: all frozen inputs exist; A5 artifact FOUND (statfem_real_validation_20260617/out/
+phase_likelihood.json, circ var 0.8536); A4 iid likelihood = armB_theta_only (per-chain draws retained).
+
+- [x] INIT: source_manifest.json (SHA-256 all frozen inputs), verify loads
+- [x] FREEZE: priority_deliverables / question_framing / assumptions_ledger / quantity_contracts /
+      decisions_log; check.py + CHECKER.sha256 + RED-on-empty proof; run_all.sh skeleton
+- [x] A1 subspace (known answer 0.019/0.029/0.259/0.355; block bootstrap; fig)
+- [x] A5 phase recovery (hash + cite; provenance json)
+- [x] A3 coverage+CRPS (known-answer reproduce 0.706-0.865/2.30x/0.98 FIRST; STOP if arrays missing)
+- [x] A4 2-param profiled-nuisance whole-FRF profile (iid log10|H1|; inner-opt convergence at every point)
+- [x] A2 sigma_f 5-prior NUTS sweep (reference reproduction gate; per-chain draws; predictive checks)
+- [x] Verify input hashes unchanged; runtime.json; checker GREEN/YELLOW; packet.md; runs.md entry;
+      next_prompt.md -> Task Card B (do NOT start B)
+
+## 2026-07-22 Task Card B — ShockSat advisor closure report (COMPLETE)
+
+Workspace: `artifacts/reports/shocksat_closure_report_20260722/`. Editorial synthesis only; Task Card A is the
+checker-backed analytic source and prior report DOCX files are immutable inputs.
+
+- [x] Re-ground from Task Cards A/B, A packet/results, predecessor report decisions, and project rules.
+- [x] Freeze priority interpretations, human decisions, source inventory, and prior-DOCX hashes.
+- [x] Build concise report figures: modal subspace/residual diagnosis, simple two-channel FRF comparison, and
+      whole-FRF profile-likelihood diagnosis; lint and visually inspect each.
+- [x] Build Markdown mirror and ≤9-page DOCX with one definitions table, one work-products-and-limits table, corrected
+      likelihood direction, and explicit modal-update versus response-level StatFEM distinction.
+- [x] Add checker with ≥25 numeric trace checks, SHA lock, RED-on-empty proof, page/definition/alt-text checks,
+      one-command replay, runtime, before/after packet, and figure QA.
+- [x] Run replay/checker, render every page, correct layout/content failures, then update runs log and project log.
+- [x] Rebuild the opening from Bilionis's actual context: the stress-testing StatFEM proposal and his instruction
+      to build/evaluate the method, identify gaps, and suggest improvements.
+- [x] Remove advisor-facing GREEN/YELLOW/RED language and the “claims I will defend” posture; preserve all
+      convergence and evidence limitations in ordinary technical language.
+- [x] Explain the work chronologically before presenting results: why ShockSat, modal update, response-level
+      likelihoods/discrepancy, held-out/load evaluation, then the model-form-remodeling pivot.
+- [x] Re-render all pages, inspect at 100%, update checker/report packet/logs, and return the revised DOCX.
+
+Completed 2026-07-22. The nine-page advisor brief now starts from Ilias's last-reviewed proposal and guidance,
+uses pages 1–2 for chronology and method before presenting results, and contains no traffic-light shorthand or
+defense-of-claims framing. Unused S1/S3/S4 labels were removed. All scientific convergence failures and limits
+remain in ordinary technical language. Replay/checker, 34 numeric trace checks, a11y, and nine-page visual QA
+were rerun; final DOCX SHA-256 `b4327f78728add7859b68889dd22f455229ba91ed197772d6b8b2ff7ed5ac91d`.
+
+## 2026-07-22 ShockSat advisor brief — user-comment rebuild (COMPLETE; isolated `_sol` copy)
+
+Planning authority is the user-edited `ShockSat_Bayesian_FEM_StatFEM_closure_brief.docx`, SHA-256
+`e8e04f40bcc69c03634e5c6d94eb5beee64f5ebdcbe13f7882ab09f16ee01a8f`. It contains 10 unresolved Word
+comments and two direct text edits; no tracked insertions/deletions. Andrew approved execution on 22 July. The
+user-edited source DOCX remains untouched; all edits go to the isolated `_sol` DOCX, builder, figures, and checks.
+
+- [x] Preserve the direct edits: remove “I treated that as the research question” and use Andrew's single
+      final-month closure request in place of the prescriptive four-question/three-deliverable closeout.
+- [x] Replace the early single-likelihood presentation with a chronological Bayesian-method matrix covering
+      modal frequency, frequency+MAC, Beck shape, whole-FRF magnitude/phase, damping, modular discrepancy,
+      M2/IFT, evidence ranking, and unimplemented Schneider-style correlated discrepancy. State data,
+      likelihood/discrepancy, sampler, diagnostics, why tried, comparator, and result for each.
+- [x] Move the modal subspace/prior-sensitivity graphic out of the main narrative. In the main text use an
+      explicit prior comparator: prior-whitened variance = 1.0, four directions = 0.019–0.355, five directions
+      = 0.872–1.166. Put full eigen/prior-sensitivity diagnostics in an appendix.
+- [x] Make the two causal conclusions the report spine. Mean: the modal likelihood omits channel amplitudes and
+      the implemented modular discrepancy is zero-centered, so it does not learn a channel/frequency bias mean;
+      it is not yet proven that the FRF residual is orthogonal to every available parameter effect. Width: the
+      observed residual scatter is large and structured, while the marginal discrepancy scale is transferred
+      broadly to held-out channels, so calibration is obtained mainly by widening.
+- [x] Add the log-amplitude predictive equation and an explicit mean/variance comparator showing that the
+      implemented zero-mean discrepancy leaves the parameter-updated mean unchanged but increases covariance.
+      State that a structured nonzero discrepancy mean could move predictions and was not implemented.
+- [x] Delete the whole-FRF profile-likelihood graph from the main report; retain only a compact diagnostic table
+      or appendix note if needed to support the nonconvergence explanation.
+- [x] Expand held-out FRF evidence without cherry-picking: summarize all held-out channels, define a frozen
+      selection rule, then show 4–6 small-multiple FRFs spanning improved, typical, and persistent-miss cases.
+      Keep only data, original FEM, updated mean, parameter interval, and total interval.
+- [x] Restrict the advisor-facing load section to measured shear X/Y. Remove normal-Z and its reconciliation.
+      Define coverage, CRPS, FEM+6 dB, and the three envelope-to-distribution conventions (log-uniform,
+      linear-uniform, Gaussian-95%) before reporting 8/10.
+- [x] Expand the +54.02 evidence comparison into an explicit “modal evidence target versus held-out engineering
+      target” result, or delete it if the exact held-out comparator cannot be stated plainly. Do not leave it as
+      an unexplained diagnostic.
+- [x] Change the work-products table to plain-language titles plus a “Where explained” column with section/page
+      references. Answers in the Bayesian question table must begin Yes/No/Partly; broaden “what remains
+      unresolved” to the full project rather than only the modal sensitivity run.
+- [x] Rebuild the main narrative before the appendix, update source tracing/checker expectations, render every
+      page, inspect at 100%, and resolve Word comments only after each mapped change is verified.
+
+Completed 2026-07-22 in `ShockSat_Bayesian_FEM_StatFEM_closure_brief_sol.docx`; the user-edited source remained
+byte-identical. Isolated checker: **OVERALL YELLOW {GREEN: 11, YELLOW: 1, RED: 0}, exit 0**. The inherited
+sampler caveat is unchanged: 3/5 sigma_f sensitivity variants did not converge. Nine pages, two figures, 44
+numeric source checks, a11y 0/0/0, RED-on-empty exit 1, final DOCX SHA-256
+`ea5d30f8b1a5b75b48fbdbfde4bb0b06fe93441495dfaffb7e3fc3a742b3f948`.
+
+## 2026-07-22 `_sol` versus Fable comparison (COMPLETE)
+
+- [x] Compare both Markdown sources and rendered layouts, including opening order, Bayesian explanation,
+      evidence/CRPS definitions, FRF density, literature positioning, and closure request.
+- [x] Carry over only concise improvements that preserve the approved context-first narrative, measured-shear
+      scope, four-panel FRF evidence, nine-page limit, and source-backed claims.
+- [x] Rebuild `_sol`, rerun the isolated checker and render audits, and inspect every changed page.
+
+Retained four Fable-inspired improvements: a concrete structured-mean example, a proper-score/units definition
+of CRPS, a fully integrated marginal-likelihood versus local-linear/type-II-ML distinction, and a short
+literature-positioning paragraph. Rejected the result-first opening, restored deleted sentence, six-panel FRF,
+normal-Z appendix, and tenth page. Final `_sol` remains nine pages; checker **OVERALL YELLOW {GREEN: 11,
+YELLOW: 1, RED: 0}, exit 0**; final SHA-256
+`9adce4cf09a52cabe751c29286a98eef6a6fe20860caf05095409e7e677181df`.
+# 2026-07-22 — Codex independent review of structured-discrepancy Task Card D
+
+- [x] Inspect the supplied card, original closure brief, Febrianto et al., Schneider et al., and frozen in-project evidence.
+- [x] Write an artifact-backed review identifying scientific, statistical, and execution risks.
+- [x] Write and audit a separate dispatch-ready runner card without modifying or dispatching Task Card D.
+
+Completed 2026-07-22. Static card audit: **OVERALL GREEN**. The supplied card and all predecessor workspaces remain untouched.
+
+## 2026-07-22 — Make independent structured-discrepancy Card E autonomous
+
+- [x] Remove all pre-start and between-stage human approval requirements from Card E.
+- [x] Freeze numerical synthetic and measured-data rules that automatically choose stop, Stage 1-only closure, or joint Stage 2 NUTS.
+- [x] Update and rerun the static card checker; preserve Task Card D and its running workspace.
+
+Completed 2026-07-22. Revised Card E is autonomously dispatch-ready; static audit **OVERALL GREEN**. No science was launched.
+
+## 2026-07-22 — Execute structured-discrepancy Card E
+
+- [x] Re-ground from Card E, continuity logs, direct paper equations, and frozen project artifacts; restate priorities and claim ceiling.
+- [ ] Freeze the isolated workspace: priorities, question, assumptions, quantity contract, inventories/registries, preregistration, hashes, checker canary, replay, and runtime accounting.
+- [ ] Reproduce deterministic frozen known answers and run the S0–S3 exact-Gaussian synthetic gates on the actual split geometry.
+- [ ] Follow `automatic_decision.json`: stop with a complete packet on any synthetic miss, otherwise run measured Stage 1 and only run joint Stage 2 when every frozen transition criterion permits it.
+- [ ] Generate saved-script figures, Tufte lint, legibility QA, checker report, closure-brief correction, and narrow continuity-log updates copied from checker status.
+
+Execution is autonomous within the 2 h Stage 1 / 8 h total active-runtime caps. No predecessor workspace or Card D directory will be modified.

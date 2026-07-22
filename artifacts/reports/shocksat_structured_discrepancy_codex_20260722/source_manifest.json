@@ -1,0 +1,287 @@
+{
+  "created_unix": 1784742409.107838,
+  "files": [
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/fem_model.npz",
+      "sha256": "3a72b83d2834655b5d4d0415998bc929fd500f2ebac50ace505c663ba14c0520",
+      "size": 1084916,
+      "role": "FEM coordinates"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/joint_strain_energy.json",
+      "sha256": "ccfe617d6991f73c76bf648a17a4e2ae32566deb4af6754e98674c1c11c247d8",
+      "size": 4887,
+      "role": "modal strain-energy evidence"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/matrices/reduced_blocks.npz",
+      "sha256": "be9af90efd555ab7f326b07f410f0fe46540e37038caef830bb84ca4a9b46c78",
+      "size": 489978,
+      "role": "modal stiffness blocks for independent strain-energy reproduction"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/nuts_full_samples.npz",
+      "sha256": "faf35c882c2662c1ff39715f359f9aaf1e7d587d3f16d83bef4cf1b06a5a725e",
+      "size": 300083,
+      "role": "converged modal posterior draws"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/pairing.json",
+      "sha256": "4ef49c253cd4959159770766983c8ba72bc9aff0b319e298e7222bdfdb8e74ca",
+      "size": 6785,
+      "role": "calibration-mode pairing for strain-energy reproduction"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/reduction_report.json",
+      "sha256": "695898f6f5c712d623fa942c5ba9ab57b74205188eab49480c97793636a256e6",
+      "size": 5313,
+      "role": "finite-perturbation reference"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/sensitivity.json",
+      "sha256": "e242b92f9a330f2fb0c15b45ec87ec31491b09d88352b0412df555b4b7383174",
+      "size": 3238,
+      "role": "modal sensitivity evidence"
+    },
+    {
+      "path": "artifacts/reports/shocksat_fem_modal_twin_20260609/theta_full.json",
+      "sha256": "5042a998a14915ed51b7919102a67ad705d07fdf9b1029a30205ef2c8a6008ba",
+      "size": 8683,
+      "role": "modal posterior summary"
+    },
+    {
+      "path": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_xpos_990x_wide.npz",
+      "sha256": "8f29a3c0df4e5d825c43810633f9fb481f7f473f29e7995cb07fe2f197c071c3",
+      "size": 3699825,
+      "role": "measured multireference H1 cache"
+    },
+    {
+      "path": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_xy_990xy_wide.npz",
+      "sha256": "2ee1d4809d3cafcb60c976449df90cd2fb873c90458d0942896ff2ac90451ceb",
+      "size": 3696424,
+      "role": "measured multireference H1 cache"
+    },
+    {
+      "path": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_ypos_990y_wide.npz",
+      "sha256": "1c7352634d5495bdc3748a8c1748253697b66368f50528bf2ef5394f014238fe",
+      "size": 3689388,
+      "role": "measured multireference H1 cache"
+    },
+    {
+      "path": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_zpos_900z_wide.npz",
+      "sha256": "8a9f54a538467f99a4b54ca0b35dfe21d27bed93b22772a13dbc4def997ee180",
+      "size": 3700097,
+      "role": "measured multireference H1 cache"
+    },
+    {
+      "path": "artifacts/reports/shocksat_full_spectrum_frf_20260714/data/multiref_wide/m_zpos_990z_wide.npz",
+      "sha256": "9b0674b8a43c2ecbe58bb541467ceccd5c8a5ac9318cd37f660d1def504b912a",
+      "size": 3703753,
+      "role": "measured multireference H1 cache"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/core.py",
+      "sha256": "e73579698707fd2c02514042a3f29cd8c069234c907a8226353830a62d657218",
+      "size": 14000,
+      "role": "transitive reduced-model helpers"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/realfrf.py",
+      "sha256": "9654fdf1b2cc6ff21cfa54fe3caae4da12ccffd9a7f72046c6001956bcfc723e",
+      "size": 12937,
+      "role": "frozen reduced FRF forward and channel map loader"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/code/schneider_faithful.py",
+      "sha256": "6c2c7def5a4f6c42a29ead2e7d918386f121833c0420c6362463c2f03a80ed05",
+      "size": 11693,
+      "role": "frozen M0-M3 likelihood implementation"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/channel_map.csv",
+      "sha256": "44f66d98ac3a182355547a3395b7b90138e8cc7f65a576ca707d70c800b0e3bc",
+      "size": 57724,
+      "role": "response coordinates and axes"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/keep_dofs.npy",
+      "sha256": "e6a4aa832ce1b0a6675ac48db1814cc5cc766562023965035be22e0a6bb11d83",
+      "size": 3196208,
+      "role": "reduced model retained DOFs"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/obs_dofs.npy",
+      "sha256": "3a8d1d6920f8b1ade99b9b69ec38932e71334c246ef52fa093eb02530ebf1527",
+      "size": 1952,
+      "role": "reduced model observation mapping"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/data/reduced_blocks.npz",
+      "sha256": "be9af90efd555ab7f326b07f410f0fe46540e37038caef830bb84ca4a9b46c78",
+      "size": 489978,
+      "role": "reduced stiffness blocks"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/out/discrepancy_diagnostic.json",
+      "sha256": "7fd85f5b3372a827275fd8c191717c93ceb1dd59cf141ab3fd674ab612784f5d",
+      "size": 842,
+      "role": "frozen residual known answer"
+    },
+    {
+      "path": "artifacts/reports/shocksat_modelclass_L5_20260619/out/spatial_reanalysis.json",
+      "sha256": "649c75e72294978e7075ba48e418cbb828f83ce2a3a2385e37a5e94816abe7c1",
+      "size": 1207,
+      "role": "frozen spatial known answer"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/CHECKER.sha256",
+      "sha256": "bfa48f2022d846c5bc73a4736f71e99f210a07eb2316018b8afc4ef127c1490c",
+      "size": 75,
+      "role": "checker lock record"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/check.py",
+      "sha256": "8b020ec6587bbfaa489417c903a7f1f56b2dd37d711befab51aa84addd1f9152",
+      "size": 8759,
+      "role": "immutable checker"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/common.py",
+      "sha256": "9572873c054c65c52f9d21c686d45f0c2365e8393f600e6e4ab734304c92b291",
+      "size": 12794,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/decide.py",
+      "sha256": "0b0a7a30fef6a5da7f1043679e2b21367e5a580b3ced4c56d387ecf0b1803c5e",
+      "size": 3973,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/fig_qa.py",
+      "sha256": "53fcb36e35c9d091825cc969f4279780416c200064294e0fcf71a3dfd5c0da12",
+      "size": 1179,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/figures.py",
+      "sha256": "3b0cb2ffda2bddf19c12e37913d32fa9718d4fe266c91050a0aa2cb1c02635ae",
+      "size": 10165,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/finalize.py",
+      "sha256": "35f674969e82d8abdffeccc24f7f107442d92be0f8f95b4f9d1be02d3a2b5411",
+      "size": 10117,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/freeze.py",
+      "sha256": "4bd7a1f66d0899abdef9a64dd1ccba2c2261498ed48338861d2b4abd5b7fc2ec",
+      "size": 12047,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/known_answers.py",
+      "sha256": "db56746f66b7d265e69ef287e5d946afa7f1c28912d3b3e2b822f617f4c98501",
+      "size": 8921,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/measured.py",
+      "sha256": "68bd8b39f0f0238b400fecd509581afef3f286321d23ad4e0c78b1fa6b9dee84",
+      "size": 13075,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/code/synthetic.py",
+      "sha256": "7ae411e77101b80d2393efc321a51088bd140b07444b4b2c2902773955e412fd",
+      "size": 17035,
+      "role": "runner source code"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/mean_basis_registry.json",
+      "sha256": "52b4d88997af7f590c0a7c159c5134813ccf02b525f9b63024e5cc7ce9f219a3",
+      "size": 3192,
+      "role": "mean basis registry"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/preregistration.md",
+      "sha256": "5fd38fd7fa49f08e20cbd6030f6903cd4c13e5d4d04112f8b76492c06d4532dc",
+      "size": 2740,
+      "role": "preregistration"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/quantity_contracts.md",
+      "sha256": "9ebe74216e715937aca3b605a04fd382450d558aee265d0b64cfa77249b5d235",
+      "size": 2767,
+      "role": "quantity contract"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/run_all.sh",
+      "sha256": "cb4214096dda9d97e33122ac501cc7de956c9facf180da48b7ee300c09bde628",
+      "size": 654,
+      "role": "one-command replay"
+    },
+    {
+      "path": "artifacts/reports/shocksat_structured_discrepancy_codex_20260722/split_registry.json",
+      "sha256": "d2f84daf349e239d4ee91b1a818bb6845938e3d8c30343ebd5f37f87a87bbe52",
+      "size": 12573,
+      "role": "split registry"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/data/measured_frf_cache.npz",
+      "sha256": "c1b0f8e45cd7ed6f8c749c81578a7cb5607de2b349a5ee34f4166fde71f1dcb8",
+      "size": 263736746,
+      "role": "legacy eight-channel selection quality data"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M0_ident4_n8.json",
+      "sha256": "0efcab2c3c67857a712af02284aa94254e7918b2b2efd831571c5f63bb56e8cf",
+      "size": 1630,
+      "role": "frozen legacy M0 summary"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M1_ident4_n8.json",
+      "sha256": "b7084f687acfcb9e425d766603080f528789bcfe715c79606159fe675f77bf75",
+      "size": 1745,
+      "role": "frozen legacy M1 summary"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M2_ident4_n8.json",
+      "sha256": "47dc0e1d9ac4ddd883e3f4b44f7cb677388f5aefc1a9dfc0da1185c1a5df7cbf",
+      "size": 1746,
+      "role": "frozen legacy M2 summary"
+    },
+    {
+      "path": "artifacts/reports/statfem_real_validation_20260617/out/tmcmc_faithful_M3_ident4_n8.json",
+      "sha256": "23e0ab2381ae540a07a7cdb5e0c6608d9eadbabc431a9d24a06d747cff7a1c96",
+      "size": 1751,
+      "role": "frozen legacy M3 summary"
+    },
+    {
+      "path": "artifacts/reports/statfem_shocksat_eval_20260616/data/V_keep.npy",
+      "sha256": "f0a4587b610fa0f1fede6b7b6cde4cd8af73524ff2fc2785236db4b3eb0d2baa",
+      "size": 255686528,
+      "role": "reduced basis"
+    },
+    {
+      "path": "docs/agents/structured_discrepancy_codex_review_20260722/task_card_codex_structured_discrepancy.md",
+      "sha256": "7c9e0cb5a85a6597046122f6126056df1f2139ef9914822e801d71c519a59af7",
+      "size": 21897,
+      "role": "controlling task card"
+    },
+    {
+      "path": "references/pdfs/Bayesian parameter updating in linear structural dynamics with frequency transformed data using rational surrogate models.pdf",
+      "sha256": "489db7013e0ba1829230c2c6c848ccac23d7a0611faa5178032542e5826f33be",
+      "size": 3616551,
+      "role": "direct literature and covariance reference"
+    },
+    {
+      "path": "references/pdfs/digital-twinning-of-self-sensing-structures-using-the-statistical-finite-element-method.pdf",
+      "sha256": "fc003df472259a7c4db04f3014ed8404d37c57d0b54e128f796a9eba8f8e7498",
+      "size": 2044485,
+      "role": "direct literature check"
+    }
+  ]
+}

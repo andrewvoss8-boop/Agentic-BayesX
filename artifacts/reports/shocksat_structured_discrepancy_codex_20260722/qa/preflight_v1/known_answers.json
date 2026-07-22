@@ -1,0 +1,374 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "parse_M0",
+      "pass": true
+    },
+    {
+      "name": "parse_M1",
+      "pass": true
+    },
+    {
+      "name": "parse_M2",
+      "pass": true
+    },
+    {
+      "name": "parse_M3",
+      "pass": true
+    },
+    {
+      "name": "discrepancy_diagnostic",
+      "pass": true
+    },
+    {
+      "name": "spatial_reanalysis",
+      "pass": true
+    },
+    {
+      "name": "three_covariance_eigenvalues",
+      "pass": true
+    },
+    {
+      "name": "modal_strain_energy_reproduction",
+      "pass": true
+    },
+    {
+      "name": "realized_floor_fim",
+      "pass": true
+    }
+  ],
+  "legacy_M0_M3": {
+    "M0": {
+      "converged": true,
+      "max_rhat": 1.0001740560416237,
+      "min_ess": 4716.189286380408,
+      "gain_c_median": 5.915704023183557,
+      "sigma_w_median": null,
+      "log_evidence_mean_legacy_tmcmc": -105484.85550531678
+    },
+    "M1": {
+      "converged": false,
+      "max_rhat": 1.0413275806963551,
+      "min_ess": 47.13472134444741,
+      "gain_c_median": 5.9155664355024244,
+      "sigma_w_median": 1.864858922227092,
+      "log_evidence_mean_legacy_tmcmc": -2859.419249460014
+    },
+    "M2": {
+      "converged": false,
+      "max_rhat": 2.576851908501521,
+      "min_ess": 0.7091361501220279,
+      "gain_c_median": 6.044700417108461,
+      "sigma_w_median": 12.374862353468146,
+      "log_evidence_mean_legacy_tmcmc": -2717.524535405688
+    },
+    "M3": {
+      "converged": false,
+      "max_rhat": 1.1115389438280825,
+      "min_ess": 16.947800765213163,
+      "gain_c_median": 6.680415782580342,
+      "sigma_w_median": 12.597528699848802,
+      "log_evidence_mean_legacy_tmcmc": -2822.0680946188477
+    }
+  },
+  "legacy_status_note": "M0 converged; M1-M3 are legacy TMCMC and non-converged, so their intervals remain not trustworthy",
+  "frozen_residual_known_answers": {
+    "discrepancy": {
+      "n_eligible": 77,
+      "gain_c": 6.350241699172241,
+      "residual_db": {
+        "median_abs": 6.596152094410286,
+        "p90_abs": 15.562180677207765,
+        "max_abs": 22.64346633170834,
+        "frac_gt3": 0.7532467532467533,
+        "frac_gt6": 0.5324675324675324
+      },
+      "spearman_absres_vs": {
+        "log_dynamic_range": -0.047636573952363426,
+        "snap_distance_in": -0.024712129975287867,
+        "abs_z_in": 0.14482885535517112
+      },
+      "hard_accels": {
+        "n_present": 8,
+        "present_daqs": [
+          4,
+          27,
+          38,
+          40,
+          52,
+          69,
+          92,
+          98
+        ],
+        "mean_abs_res_hard_db": 17.452205490645362,
+        "mean_abs_res_rest_db": 6.535379707426281
+      },
+      "note": "if |residual| correlates with a feature (|rho|>~0.3) OR hard>>rest, a feature-keyed heteroscedastic discrepancy can tighten the easy-channel CI while keeping coverage."
+    },
+    "spatial": {
+      "n": 77,
+      "spearman_absres_vs_feature_distance": {
+        "impact": 0.087,
+        "bolted_joint": -0.093,
+        "strut": -0.208,
+        "dish": -0.193,
+        "bulkhead": -0.072,
+        "nearest_feature": -0.094
+      },
+      "region_categorical_R2_(nearest_feature)": 0.036,
+      "linear_R2_nearest_feature_distance": 0.006,
+      "linear_R2_axial_z": 0.023,
+      "region_mean_abs_res_db": {
+        "bolted_joint": 12.3,
+        "bulkhead": 7.3,
+        "dish": 9.0,
+        "impact": 8.0,
+        "strut": 7.5
+      },
+      "verdict": "MIXED / mostly confirms the weak-spatial finding. There is a MILD regional concentration \u2014 the bolted-joint region is worst (mean 12.3 dB) and the dish/strut appendages are mildly elevated, which is physically sensible (interface + free-boundary model-form error). BUT spatial location explains only R\u00b2=0.04 of the residual: co-located channels vary hugely and proximity to a feature does NOT predict hardness (many near-feature channels are easy). So a region/physical discrepancy prior is JUSTIFIED but captures only a small fraction; the dominant variation is a channel-specific near-field nugget. Andrew's intuition is partly right (joint/appendage concentration) but the spatial signal is weak, not strong."
+    }
+  },
+  "deterministic_recomputations": {
+    "count": 3,
+    "covariance_eigenvalues": [
+      {
+        "label": "minimum",
+        "direct_eigh": -7.397050468297015e-15,
+        "independent_kronecker_formula": -4.3239576390851e-15,
+        "abs_difference": 3.0730928292119144e-15,
+        "pass": true
+      },
+      {
+        "label": "median_order",
+        "direct_eigh": 0.0014388382397201899,
+        "independent_kronecker_formula": 0.001438838239720558,
+        "abs_difference": 3.681950577760773e-16,
+        "pass": true
+      },
+      {
+        "label": "maximum",
+        "direct_eigh": 17.713679068564176,
+        "independent_kronecker_formula": 17.71367906856418,
+        "abs_difference": 3.552713678800501e-15,
+        "pass": true
+      }
+    ],
+    "geometry": {
+      "n_frequency": 173,
+      "n_location": 8
+    }
+  },
+  "modal_identifiability": {
+    "strain_energy_present": true,
+    "closure_mean": 0.9999999999774702,
+    "max_mean_fraction_deviation_vs_stored": 0.0,
+    "group_summary": {
+      "al_welds": {
+        "mean_se_pct": 0.700022484920802,
+        "max_se_pct": 2.1358678203751236,
+        "n_modes_gt1pct": 6,
+        "n_modes_gt5pct": 0
+      },
+      "angle_brackets": {
+        "mean_se_pct": 1.1785872274363596,
+        "max_se_pct": 14.338619990324016,
+        "n_modes_gt1pct": 4,
+        "n_modes_gt5pct": 1
+      },
+      "bottom_box": {
+        "mean_se_pct": 46.75611257762188,
+        "max_se_pct": 99.37595448468376,
+        "n_modes_gt1pct": 17,
+        "n_modes_gt5pct": 13
+      },
+      "contact": {
+        "mean_se_pct": 0.20675273159711588,
+        "max_se_pct": 1.4552549844500344,
+        "n_modes_gt1pct": 1,
+        "n_modes_gt5pct": 0
+      },
+      "cross_beam": {
+        "mean_se_pct": 5.498471412902677,
+        "max_se_pct": 49.79115470457444,
+        "n_modes_gt1pct": 11,
+        "n_modes_gt5pct": 5
+      },
+      "joints": {
+        "mean_se_pct": 3.109657502008155,
+        "max_se_pct": 18.960811174216,
+        "n_modes_gt1pct": 8,
+        "n_modes_gt5pct": 4
+      },
+      "plates": {
+        "mean_se_pct": 7.1211877548702445,
+        "max_se_pct": 57.74834623250712,
+        "n_modes_gt1pct": 6,
+        "n_modes_gt5pct": 5
+      },
+      "steel_welds": {
+        "mean_se_pct": 0.49870686848692675,
+        "max_se_pct": 1.8702865466859822,
+        "n_modes_gt1pct": 3,
+        "n_modes_gt5pct": 0
+      },
+      "top_box": {
+        "mean_se_pct": 34.930400940541865,
+        "max_se_pct": 85.53585601297655,
+        "n_modes_gt1pct": 12,
+        "n_modes_gt5pct": 11
+      }
+    },
+    "realized_floor_fim_present": true,
+    "sigma_f_floor": 0.046264696389052784,
+    "n_parameter_combinations_clearing_prior_precision": 1,
+    "fim_eigenvalues_vs_prior_precision": [
+      1.057043838391535,
+      0.9010779356306543,
+      0.7898330005792671,
+      0.645725267855027,
+      0.10479405854143807,
+      0.007146191037199924,
+      0.002448327356737636,
+      0.0015139033870743268,
+      0.000962387984052034
+    ],
+    "strong_weak_parameter_mixes": [
+      {
+        "eigenvalue_vs_prior_precision": 1.057043838391535,
+        "raw_parameter_mix": {
+          "al_welds": -0.08603461974161275,
+          "angle_brackets": 0.14066258222964315,
+          "bottom_box": -0.5720587862024359,
+          "contact": -0.26894566625969224,
+          "cross_beam": 0.3352755694626698,
+          "joints": -0.004790270041983562,
+          "plates": -1.0,
+          "steel_welds": -0.26726434702232066,
+          "top_box": -0.14847592582219393
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.9010779356306543,
+        "raw_parameter_mix": {
+          "al_welds": -0.08651555884681227,
+          "angle_brackets": -0.20081044040785484,
+          "bottom_box": -0.21129709116404163,
+          "contact": 0.07025458424674934,
+          "cross_beam": -0.04489581649330314,
+          "joints": -0.0817732713710333,
+          "plates": 1.0,
+          "steel_welds": -0.16941319761223186,
+          "top_box": 0.2346834806624631
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.7898330005792671,
+        "raw_parameter_mix": {
+          "al_welds": -0.06821635877225463,
+          "angle_brackets": -0.3139280327644452,
+          "bottom_box": -0.0038198687411621765,
+          "contact": 0.055792839951133905,
+          "cross_beam": -0.7008120604546593,
+          "joints": 0.26191487362246,
+          "plates": 1.0,
+          "steel_welds": 0.08000954333296066,
+          "top_box": -0.4399570932967852
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.645725267855027,
+        "raw_parameter_mix": {
+          "al_welds": 0.03733094770706148,
+          "angle_brackets": -0.2377467540692423,
+          "bottom_box": -0.013390878874311332,
+          "contact": 0.06650470652912248,
+          "cross_beam": -1.0,
+          "joints": -0.12013649234495563,
+          "plates": -0.2722257889503386,
+          "steel_welds": -0.08158118031648394,
+          "top_box": 0.20626419353851885
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.10479405854143807,
+        "raw_parameter_mix": {
+          "al_welds": 0.020765385562445223,
+          "angle_brackets": -0.06213777034051515,
+          "bottom_box": 0.0005565118453736043,
+          "contact": 0.04725720095084478,
+          "cross_beam": 0.11492787325838859,
+          "joints": -1.0,
+          "plates": 0.23364636902005909,
+          "steel_welds": -0.014773439869456381,
+          "top_box": 0.02058686555681234
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.007146191037199924,
+        "raw_parameter_mix": {
+          "al_welds": 0.2945838541034108,
+          "angle_brackets": 1.0,
+          "bottom_box": -0.0025414102469305346,
+          "contact": 0.2499631034202505,
+          "cross_beam": -0.281375507663148,
+          "joints": 0.017024116825777428,
+          "plates": -0.004121392212012635,
+          "steel_welds": 0.19424589786724816,
+          "top_box": 0.003302451125505376
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.002448327356737636,
+        "raw_parameter_mix": {
+          "al_welds": -0.6265006875371617,
+          "angle_brackets": 0.2608006198914378,
+          "bottom_box": 0.00954187520434667,
+          "contact": 0.36182012505656813,
+          "cross_beam": -0.07350284459794625,
+          "joints": -0.008728668372350168,
+          "plates": -0.006355904286287912,
+          "steel_welds": -1.0,
+          "top_box": 0.016722502245848123
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.0015139033870743268,
+        "raw_parameter_mix": {
+          "al_welds": 1.0,
+          "angle_brackets": -0.3852201080676858,
+          "bottom_box": 0.004815451230742146,
+          "contact": 0.6971879658655835,
+          "cross_beam": 0.10586125507234881,
+          "joints": 0.03986086758634366,
+          "plates": -0.006019945993789074,
+          "steel_welds": -0.5386510446442344,
+          "top_box": -0.02888801485778694
+        }
+      },
+      {
+        "eigenvalue_vs_prior_precision": 0.000962387984052034,
+        "raw_parameter_mix": {
+          "al_welds": -0.4189196610762193,
+          "angle_brackets": -0.1584915691484012,
+          "bottom_box": -0.005110511484750527,
+          "contact": 1.0,
+          "cross_beam": 0.04095755345712655,
+          "joints": 0.021447630818117,
+          "plates": -0.008694538224513625,
+          "steel_welds": 0.5984661573885827,
+          "top_box": -0.0004541108376504908
+        }
+      }
+    ],
+    "finite_perturbation": {
+      "parameter": "contact",
+      "theta_from": 1.0,
+      "theta_to": 0.5,
+      "median_abs_frequency_shift_fraction": 6.89734167008682e-05,
+      "max_abs_frequency_shift_fraction": 0.015167481389368631,
+      "cause": "in load path but low sensitivity"
+    }
+  },
+  "runtime_s": 1.1344361305236816
+}

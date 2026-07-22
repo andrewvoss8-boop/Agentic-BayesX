@@ -1,0 +1,65 @@
+{
+  "overall": "RED",
+  "counts": {
+    "GREEN": 0,
+    "YELLOW": 0,
+    "RED": 11
+  },
+  "gates": [
+    {
+      "gate": "G1 required artifacts",
+      "status": "RED",
+      "evidence": "missing=['priority_deliverables.md', 'decisions_log.md', 'code/build_report.py', 'check.py', 'run_all.sh', 'runtime.json', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief.docx', 'ShockSat_Bayesian_FEM_StatFEM_closure_brief.md', 'packet.md', 'out/source_manifest.json', 'out/numeric_trace.json', 'out/figure_qa.json', 'figures/fig1_method_map.png', 'figures/fig2_modal_identification.png', 'figures/fig3_wholefrf_profile.png', 'figures/fig4_modular_frf.png']"
+    },
+    {
+      "gate": "G2 numeric traceability",
+      "status": "RED",
+      "evidence": "numeric trace missing"
+    },
+    {
+      "gate": "G3 definitions/data contract",
+      "status": "RED",
+      "evidence": "bad counts: ['| IFT / \u03b2 |', '| Model-form score |', '| Counts and bands |']"
+    },
+    {
+      "gate": "G4 likelihood direction",
+      "status": "RED",
+      "evidence": "likelihood equation absent or reversed"
+    },
+    {
+      "gate": "G5 evidence labels",
+      "status": "RED",
+      "evidence": "normal-Z synthetic-only label incomplete"
+    },
+    {
+      "gate": "G6 compression and future-work scope",
+      "status": "RED",
+      "evidence": "pages=None; scope check failed"
+    },
+    {
+      "gate": "G7 prior DOCX preservation",
+      "status": "RED",
+      "evidence": "hash failures=['prior hash manifest absent']"
+    },
+    {
+      "gate": "G8 figure legibility and alt text",
+      "status": "RED",
+      "evidence": "figure errors=['alt_count=0']"
+    },
+    {
+      "gate": "G9 advisor context and narrative",
+      "status": "RED",
+      "evidence": "context_ok=False; markdown_forbidden=[]; docx_forbidden=[]"
+    },
+    {
+      "gate": "G10 references and closure request",
+      "status": "RED",
+      "evidence": "reference or closure section missing"
+    },
+    {
+      "gate": "Y1 inherited science ceiling",
+      "status": "RED",
+      "evidence": "A2 source missing"
+    }
+  ]
+}

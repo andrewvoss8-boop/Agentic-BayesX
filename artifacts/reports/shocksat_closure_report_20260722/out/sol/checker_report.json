@@ -1,0 +1,70 @@
+{
+  "overall": "YELLOW",
+  "counts": {
+    "GREEN": 11,
+    "YELLOW": 1,
+    "RED": 0
+  },
+  "gates": [
+    {
+      "gate": "G1 isolated artifacts",
+      "status": "GREEN",
+      "evidence": "all isolated build and QA artifacts present"
+    },
+    {
+      "gate": "G2 source DOCX preservation",
+      "status": "GREEN",
+      "evidence": "user-edited source remains byte-identical"
+    },
+    {
+      "gate": "G3 direct edits and comment resolution",
+      "status": "GREEN",
+      "evidence": "both direct edits preserved; rebuilt `_sol` has no unresolved Word comments"
+    },
+    {
+      "gate": "G4 context-first method narrative",
+      "status": "GREEN",
+      "evidence": "proposal context and ten-method chronology precede findings; reviewer shorthand absent"
+    },
+    {
+      "gate": "G5 Bayesian center and width mechanism",
+      "status": "GREEN",
+      "evidence": "zero-centered mean effect, covariance effect, missing likelihood mechanisms, and width comparator are explicit"
+    },
+    {
+      "gate": "G6 numeric trace and non-cherry-picked FRFs",
+      "status": "GREEN",
+      "evidence": "44 source checks; 25\u00d731 summary and four frozen-rule channels shown"
+    },
+    {
+      "gate": "G7 measured shear and probability conventions",
+      "status": "GREEN",
+      "evidence": "shear X/Y only; coverage, width, CRPS, FEM + 6 dB, and all three conventions defined"
+    },
+    {
+      "gate": "G8 evidence versus held-out target",
+      "status": "GREEN",
+      "evidence": "conditional modal evidence and downstream held-out prediction are explicitly separated"
+    },
+    {
+      "gate": "G9 contribution map and closure request",
+      "status": "GREEN",
+      "evidence": "work products point to sections and retain the single personal closure request"
+    },
+    {
+      "gate": "G10 render, figure, and accessibility QA",
+      "status": "GREEN",
+      "evidence": "9 pages; 2 high-resolution figures; 2 alt texts; no high/medium accessibility findings"
+    },
+    {
+      "gate": "G11 verified literature",
+      "status": "GREEN",
+      "evidence": "NASA, FEM updating, StatFEM, discrepancy, evidence, NUTS, and Schneider references retained"
+    },
+    {
+      "gate": "Y1 inherited sampler caveat",
+      "status": "YELLOW",
+      "evidence": "3/5 sigma_f variants non-converged; worst R-hat=1.418; min ESS=4.4; caveat retained"
+    }
+  ]
+}

@@ -1,6 +1,283 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
+- 2026-07-22 **CARD E (`_Fable`) DISPATCHED BY ANDREW — LEAD IS RUNNER. IN PROGRESS.**
+  CURRENT STATE: executing `docs/agents/structured_discrepancy_codex_review_20260722/task_card_codex_structured_discrepancy.md`
+  (Codex's autonomously-dispatch-ready Card E). LAST DECISION (human, 2026-07-22): "execute … labeling
+  everything _Fable to differentiate from the work being done by another agent." ⇒ workspace =
+  `artifacts/reports/shocksat_structured_discrepancy_codex_20260722_Fable/`; every new artifact carries a
+  `_Fable` marker. Card D's directory and the card's own proposed (un-suffixed) workspace are IMMUTABLE and
+  must not be created or touched by me. NEXT ACTION: INIT (source_manifest + data inventory) → FREEZE
+  (preregistration, split/mean-basis registries, quantity contract, SHA-locked checker + RED-on-empty) →
+  synthetic gates S0–S3 → measured Stage 1 arms E0–E3 → automatic_decision.json → conditional Stage 2.
+  Card is self-executing: checker-backed gates, not agent preference, pick the terminal path; NO approval pause.
+  OPEN AMBIGUITIES (assumed, flagged in the workspace decisions_log for Andrew to overrule): (i) `_Fable`
+  suffix on the workspace name, not a separate directory tree; (ii) forward model = frozen in-project
+  `realfrf.fem_logmag` at ζ=0.01 (≈ the 0.49 s exponential-window added damping at 100 Hz) with a
+  preregistered frequency-dependent-ζ sensitivity; (iii) residual GP realizations independent per drive
+  (ρ_cross-drive = 0) as the conservative primary, with measured cross-drive correlation reported as the
+  card's "does the (f,x) framing hold" diagnostic.
+- 2026-07-22 **CARD D DRAFTED (structured non-zero-mean discrepancy m(f,x)) — AWAITING ANDREW, DO NOT START.**
+  Card: `docs/agents/structured_mean_discrepancy_20260722/task_card_D_structured_mean_discrepancy.md`.
+  LITERATURE ANSWER (read-only check, no files changed): (1) Febrianto/Butler/Girolami/Cirak 2022
+  self-sensing statFEM = **zero-mean** discrepancy `d ~ N(0,C_d)` (Eq. 11), squared-exponential in **space
+  only** (Eq. 12), quasi-static strain — **no frequency dimension**; per-instant load scale γ_k (Eq. 24a) is a
+  variance scale, not a mean. (2) Schneider 2022 [ref 11] = **zero-mean** log-magnitude/phase error (Eq. 18)
+  with additive **space+frequency** correlation (Eqs. 19–21, r=0.82 split) — Andrew's recollection confirmed.
+  (3) Girolami 2021 statFEM, Duffin, latent-force paper: all zero mean. (4) Kennedy–O'Hagan `h(x)ᵀβ` is the
+  precedent for a structured MEAN; Plumlee 2017 orthogonality is the fix for the θ–discrepancy confounding.
+  ⇒ **non-zero-mean discrepancy in BOTH frequency and location is a genuine gap.**
+  IN-PROJECT PRIOR ART FOUND (matters for the card): `shocksat_modelclass_L5_20260619/code/schneider_faithful.py`
+  ALREADY implements the Schneider zero-mean freq×space arm; results in `statfem_real_validation_20260617/out/
+  tmcmc_faithful_M{0,1,2,3}_ident4_n8.json` — M0 converged (R̂1.0002); M1 R̂1.041; **M2 R̂2.577/ESS0.71, σ_w
+  runaway 1.73→12.37**; M3 (Plumlee-orthogonal) R̂1.112, σ_w 12.60. Also frozen: spatial R²=0.036, channel
+  nugget (hard 17.45 vs rest 6.54 dB) ⇒ honest expectation is frequency transfers, location does not.
+  TECHNICAL CORRECTION recorded in the card: a zero-mean GP *prior* still has a non-zero *posterior* mean;
+  ShockSat's mean did not move because the discrepancy was a MARGINAL variance never propagated to held-out
+  points — so the card separates (a) explicit structured mean m(f,x) from (b) correct kernel propagation.
+  **HUMAN DECISIONS 2026-07-22 (recorded in the card's "Human decisions recorded" table): (2) SUCCESS BAR =
+  2 dB median-|error| reduction OR 20 % band narrowing at equal coverage — frozen into preregistration at
+  FREEZE, four-fold noise floor reported BESIDE every effect size but not used as the bar; (3) D6
+  (Plumlee-orthogonal) IS IN SCOPE — arms D0–D6 all stand, D5-vs-D6 θ-bias stays mandatory inside synthetic
+  gate 4; (4) DEFER the closure-brief Schneider correction — do NOT rebuild the fable docx now; Card D's
+  report must deliver the corrected wording, so CARD D NOW OWNS THAT DELIVERABLE. Defect + accepted
+  consequence (brief may ship understating implemented work and omitting the M2/M3 non-convergence) logged
+  as F5 in `shocksat_closure_report_fable_20260722/decisions_log.md`; no delivered artifact modified,
+  SHA-locked check.py untouched. ⚠️ Decision 4 is my reading of a one-letter reply "b" — awaiting confirm.**
+  STILL OPEN, card stays NOT APPROVED: **(1) scope vs calendar** — full card ≈8 h compute + write-up (A) vs
+  feasibility-only gate 4 + D3 ~1 day (B) vs lead-recommended STAGED (C): known-answer gates 1–3 + synthetic
+  gate 4 incl. D5/D6 θ-bias → human checkpoint → measured arms only if θ is recoverable. NEXT: none — no
+  workspace, no fitting, until decision 1 is answered.
+- 2026-07-22 **FABLE REVISION COMPLETE — checker OVERALL YELLOW {10G, 1Y, 0R}, exit 0.** Workspace
+  `artifacts/reports/shocksat_closure_report_fable_20260722/`; deliverable
+  `ShockSat_Bayesian_FEM_StatFEM_closure_brief_fable.docx` (sha c908c70a…), 10 pages, 34 numeric-trace
+  checks, 3 figures. All comments C0–C9 applied; closing kept verbatim; CENTRAL FINDING callout carries
+  the two required "because" sentences; 6-panel FRF figure used preregistered rank rule (F2) → DAQs
+  28/79/9/56/2/24, DAQ 24 worst (consistent with v1). v1 workspace untouched + hash-locked. Single
+  YELLOW = inherited 3/5 non-converged sigma_f variants. runs.md entry appended. NOTE: a parallel `_sol`
+  revision exists from another runner (see runs.md). NEXT: Andrew reviews the `_fable` docx.
+- 2026-07-22 **TASK CARD C (FABLE REVISION) STARTED — HUMAN DECISIONS RECORDED.** Andrew reviewed the
+  advisor-brief docx and left comments C0–C9 plus a rewritten closing paragraph. Decisions: (1) copy the
+  doc into a NEW workspace with `_fable` suffix and edit that copy — v1 workspace stays untouched;
+  (2) KEEP his closing paragraph verbatim (heading retained for checker G10); (3) figure-expansion choice
+  delegated to lead → 6-panel held-out FRF grid from frozen mc_cache split seed 10 with a PRE-REGISTERED
+  rank rule (see workspace decisions_log.md) — no new inference; (4) EXPAND (not delete) the +54.02
+  evidence-comparison section; (5) format = easiest for lead → adapted copy of build_report.py so styling
+  and frozen number sources are preserved. Also required: brief must state plainly WHY the posterior mean
+  cannot move (modal-frequency likelihood has no channel/amplitude mechanism AND the discrepancy was
+  zero-mean by construction — a structured-mean discrepancy was never tested, so failure of that route is
+  NOT established) and WHY bands stay wide (zero-mean marginal discrepancy buys coverage only with width).
+  Workspace: `artifacts/reports/shocksat_closure_report_fable_20260722/`. Checker adapted (documented in
+  its decisions_log): renamed deliverables, 3 figures, page cap re-verified; substantive gates unchanged.
+- 2026-07-22 **TASK CARD A COMPLETE — checker OVERALL YELLOW {14G, 1Y, 0R}, exit 0.** Workspace
+  `artifacts/reports/shocksat_closure_analyses_20260722/`; replay `bash run_all.sh`; runs.md entry
+  appended (status verbatim). All known-answer gates PASS (A1 eigenvalues exact; A2 reference σ_f
+  0.0460 vs stored 0.0463 converged; A3 max|dev|=0.000 over 28 numbers). HEADLINES: 4.6% floor is
+  DATA-driven (4.2–4.8% across 5 priors; 3 variants honestly non-converged = the single YELLOW);
+  statFEM beats FEM+6dB on measured shear CRPS 8/10 cells under all 3 envelope conventions (load
+  narrative CONFIRMED); whole-FRF separation = diagnosed multimodal likelihood (~10 local maxima per
+  slice); phase artifact FOUND (0.8536). OPEN QUESTION FOR ANDREW: (a) review packet.md; (b) card A
+  stop point says no durable-note writes beyond the standard runs entry — the AGENTS done criteria
+  also wants a `docs/report/project_log.md` row; awaiting approval to add it. NEXT: Andrew reviews →
+  Task Card B in a FRESH session (next_prompt.md written; do not start B in this session).
+- 2026-07-22 **TASK CARD A: A1/A3/A4/A5 DONE, A2 NUTS SWEEP RUNNING DETACHED (superseded above).** FREEZE complete (57
+  frozen inputs hashed; checker SHA-locked fe77b00b…, RED-on-empty proven exit 1). RESULTS SO FAR:
+  A1 known-answer PASS (eigenvalues 0.019/0.029/0.259/0.355 + five prior-like, all within block-bootstrap
+  CI; contracted dirs ≈ pure bottom_box/top_box/plates/cross_beam — claim kept subspace-only). A3
+  known-answer PASS (28 stored numbers reproduced max|dev|=0.000 incl. per-drive heldout; NEW CRPS:
+  statFEM beats FEM+6dB on measured shear evidence 8/10 drive-axis cells under ALL 3 envelope
+  conventions — load narrative CONFIRMED, not flipped). A4: iid whole-FRF profile likelihood has ~10
+  local maxima per slice (bottom_box, top_box; nuisances profiled closed-form, gradient-verified);
+  separated chains sit in different local modes ⇒ diagnosis established. A5 FOUND artifact hashed
+  (circ var 0.8536). A2 running: 5 σ_f priors, per-chain draws to out/a2_draws/, reference seed 42 must
+  reproduce stored σ_f 0.0463. NEXT: A2 finishes → fig_a2 → fig_qa → runtime → hash verify → checker →
+  packet.md → runs.md entry → next_prompt (B). NO durable-notes writes beyond standard runs entry.
+- 2026-07-22 **TASK CARD A EXECUTION STARTED (lead as runner).** Workspace
+  `artifacts/reports/shocksat_closure_analyses_20260722/`. Recon complete, all frozen inputs verified present:
+  modal twin (nuts_full_samples/reduced_blocks/measured_modes/pairing/theta_full/joint_strain_energy), netcg
+  caches+out (bakeoff_scorecard holds known-answer 0.706/0.865/0.738, statFEM 2.301x/0.982), wide caches,
+  armB per-chain NUTS draws retained (`shocksat_full_spectrum_frf_20260714/out/armB/theta_only_*.npz`, R-hat
+  44–75) ⇒ A4 iid likelihood = arm_b_nuts.py --theta-only form. **A5 artifact FOUND — no re-derivation
+  needed:** `statfem_real_validation_20260617/out/phase_likelihood.json` (circ var 0.8536, complex slice
+  contrast 0.0001 vs magnitude 0.009). Env OK (numpyro 0.19.0/jax 0.4.30), disk 25 GiB. Order: INIT/FREEZE →
+  A1 → A5 → A3 → A4 → A2. NEXT: INIT hashing + FREEZE gate files + checker RED-on-empty.
+- 2026-07-22 **BILIONIS-STYLE CRITIQUE DELIVERED; ANDREW APPROVED FEASIBILITY PROBES.** Lead reviewed
+  `ShockSat_StatFEM_progress_and_closure_update_bayesian_audit.docx` in advisor voice; four cheap closure
+  analyses proposed (all on stored artifacts, no new physics): (1) identified-subspace eigendecomposition of
+  modal posterior covariance vs prior from `nuts_full_samples.npz`; (2) sigma_f prior-sensitivity sweep (4
+  HalfNormal/heavy-tail variants, rerun modal NUTS, same convergence gate); (3) coverage + CRPS of FEM+6dB vs
+  statFEM bands on held-out channels (risk: grid/channel reconciliation across sequential-statFEM + net-CG +
+  baseline packets); (4) 1-D whole-FRF likelihood profile along one stiffness scale. Estimate ~5-6 working
+  days total. HUMAN DECISION 2026-07-22: run two READ-ONLY feasibility probes now — (a) inspect held-out
+  arrays/baseline grids in sequential-statFEM and net-CG packets, (b) smoke-test that the frozen modal twin
+  reduced pipeline reruns under current env. No report changes, no new claims until probes reported back.
+- 2026-07-22 **PROBES COMPLETE — GO on all four analyses.** (a) Measured complex H1 FRFs + coherence + DAQ ids
+  found for all 5 drives on common grids: `shocksat_netcg_method_selection_20260701/data/multiref_modal/*.npz`
+  (111 ch × 105 pts, 45–260 Hz) and `shocksat_full_spectrum_frf_20260714/data/multiref_wide` (45–500). NOTE:
+  original raw_root `shocksat_multiref_explore_20260623/data/extracted` NO LONGER EXISTS — processed caches are
+  now the data of record; hash them before use. heldout_drive.json stores only summary scalars ⇒ item-3 curves
+  must be recomputed from caches + stored draws (feasible). (b) Frozen modal twin reruns: reduced_blocks.npz
+  (A_fix + 9×74×74 A, obs_V 228×74) loads; eigensolve 8 ms; nuts_full_samples.npz (4000×9 + sigma_f) medians
+  match theta_full.json exactly; numpyro 0.19.0/jax 0.4.30 OK ⇒ sigma_f prior sweep is minutes per variant.
+  CAVEAT: pooled 4000 draws have no chain dim ⇒ fresh sweep runs must keep per-chain draws for R-hat.
+  Firm estimate ~4–5 working days. NEXT: await Andrew go-ahead to open a task card/workspace for the four
+  analyses (subspace eig, sigma_f sweep, FEM+6dB coverage+CRPS, 1-D whole-FRF likelihood profile).
+- 2026-07-22 **HUMAN ADJUDICATION OF THE BILIONIS-STYLE REVIEW (controlling decision for the closure plan).**
+  Andrew accepts the central diagnosis but corrects the reviewer: several "missing analyses" are REPORT
+  OMISSIONS of work already done. Accepted criticisms: modal result mislabeled as statFEM (retitle/reframe);
+  sigma_f prior sensitivity is highest-value new calc; contraction table → prior-whitened LOG-theta subspace
+  (Andrew's read-only calc: 4 contracted directions ~0.019/0.029/0.259/0.355, five prior-like 0.872–1.166;
+  method spec = log θ, whiten by prior cov, bootstrap eigenvalues, keep strain-energy/Fisher for physics);
+  load conclusion must add matched coverage+proper-score vs FEM+6dB (repo already shows FEM+6dB UNDERCOVERS
+  0.71–0.87 — VERIFIED verbatim in shocksat_netcg_method_selection_20260701 packet/findings — shear evidence
+  measured, normal-Z synthetic-only); aggressive compression (remodelctl → future work, drop runtime table,
+  define S1/S3/S4/IFT/beta/score/counts once); likelihood equation direction fixed in prose; agent result =
+  "failed to demonstrate," preregistered primary was best-exact vs best-exact. PUSHBACKS accepted by lead:
+  +54.02 critique used wrong likelihood (evidence target was modal freq+MAC, not FRF bins — demote for the
+  right reasons); PHASE WAS TESTED (circular variance ~0.854, no sharper slice — artifact NOT YET LOCATED,
+  need pointer); TIME-DOMAIN DAMPING WAS DONE — VERIFIED in shocksat_latent_force_damping_20260623/packet.md
+  (14/16 modes, R-hat 1.020, ESS 250, ζ 0.33–0.76%, didn't fix envelope decision); coherence variance =
+  noise baseline/sensitivity only, not full covariance; PSIS-LOO not required (holdouts match task; fix [15]
+  citation use); 2.526 vs 2.958 = different configurations (reference vs tier-updated), state adjacently;
+  TMCMC WAS attempted on free M2 and failed (reviewer wrong). PLAN: no formulation-calibration study; run the
+  four analyses (subspace w/ bootstrap; sigma_f sweep + prior/posterior predictive checks; coverage/proper-
+  score table shear-vs-synthetic-Z separated; 1-D whole-FRF profile WITH PROFILED nuisances) then REBUILD the
+  report around them + recover phase/time-domain-damping/undercoverage findings. Thesis: what Bayesian modal
+  updating and response-level statFEM can and cannot establish on ShockSat; model-form pilot supports, does
+  not carry. NEXT: draft task card for Andrew approval.
+- 2026-07-22 **TASK CARDS WRITTEN (per Andrew: efficient, ≤3–4 h combined compute).**
+  `docs/agents/closure_analyses_20260722/task_card_A_closure_analyses.md` — one workspace
+  (`artifacts/reports/shocksat_closure_analyses_20260722/`), five items with soft budgets: A1 subspace
+  (known-answer gate = Andrew's eigenvalues 0.019/0.029/0.259/0.355), A2 σ_f 5-prior NUTS sweep w/ per-chain
+  draws + known-answer reproduction of stored posterior + prior/posterior predictive checks, A3 coverage+CRPS
+  vs FEM+6dB (known-answer gate = stored 0.71–0.87/2.30×/0.98; STOP if arrays missing), A4 2-param profiled-
+  nuisance whole-FRF likelihood profile, A5 phase-diagnostic recovery-or-rederivation. Hard cap 4 h active.
+  `task_card_B_report_rebuild.md` — blocked on A; rebuild report ≤9 pages around A results + recovered
+  damping/phase/undercoverage findings; 10 adjudication-mapped required changes; human stop before finalizing
+  if A3 flips the load narrative. NEXT: Andrew approves cards → dispatch A.
+- 2026-07-21 **SHOCKSAT ADVISOR PROGRESS-AND-CLOSURE REPORT — QA-COMPLETE, pending Andrew review. Checker
+  OVERALL YELLOW 10G/1Y/0R, exit 0.** Current deliverable:
+  `artifacts/reports/shocksat_results_summary_20260721/ShockSat_StatFEM_progress_and_closure_update.docx`;
+  original and rejected intermediate DOCX files preserved. Thirteen-page self-contained Bilionis update starts
+  from his “build, evaluate, identify gaps, suggest improvements” objective; documents ShockSat/data, statFEM
+  math, implemented likelihood/priors, NUTS settings/diagnostics, results, industry-use gap, pivot, contributions,
+  closure questions, and three-week plan. Section 7 now defines agentic remodeling as the outer discrete model-
+  class loop, with Bayesian continuous updating inside each class; remeshing is one operator family. It shows
+  existing schemas/operators/builders/verifiers/splits/hashes/budgets/controls/exact scoring versus the proposed
+  `remodelctl`, stable diagnostics, and blind feedback ablation; MPL is labeled scaffold-only, not science.
+  Three images with alt text; all 13 pages inspected; a11y 0; replay passed. YELLOW is the inherited science
+  ceiling: no direct net-CG answer key, non-converged held-out/whole-FRF posteriors, and no agent-over-random win.
+  Replay `bash artifacts/reports/shocksat_results_summary_20260721/run_advisor_progress.sh`.
+- 2026-07-21 **MPL EXISTING-DATA-ONLY CONDITIONAL CAMPAIGN — COMPLETE. Checker verbatim: OVERALL YELLOW
+  {GREEN:16, YELLOW:2, RED:0}, exit 0** (SHA-locked pre-science `d029f143…`, RED-on-empty proven, verified
+  unmodified; paired arithmetic independently recomputed by checker). Workspace
+  `artifacts/reports/mpl_existing_data_conditional_20260720/` · replay `bash run_all.sh` (checkpoint-reusing;
+  delete checkpoints/ for full ~2-3 h recompute). YELLOWs = honest scientific tier + TMCMC not numerically
+  established (prior ensemble retained). **RESULT: plausibility set {B2} by the 2-paired-SE rule but NOT
+  conditionally preferred** — fails 5/6 pre-reg conditions (2/5 folds vs B1; coverage 0.04-0.36 vs 0.90;
+  acoustic 6 dB reverses 2 families; τ×2 collapses / τ×4 reverses weights; sampler unestablished). Held-out
+  losses 4.5-10% vs 0.72% floor ⇒ MODEL-FORM discrepancy dominates; B1 update adds NO value (B0 beats B1 by
+  2SE in 3/5 folds); B2 not distinguishable from B1. **Negative control N1 (half shield t) posts the BEST raw
+  mean loss (6.41%)** ⇒ loss rankings ≠ physics — the validity controls earned their place. Identifiability:
+  3/6 FIM combos clear prior; shield_bend dominates (SE fraction 0.71); shield_mem/plate_bend below floor
+  (in load path, floor-limited). Valve path: ensemble misses ~10/11 observed features (model-form target).
+  Incidents all disclosed in decisions_log: D4 V-gate criterion fix (pre-score), D5 known-answer criteria
+  revision (strain-energy evidence; attempts preserved), D6 TMCMC mixing fix (gate caught real
+  underdispersion), D7 acceptance-band per-level interpretation (post-first-print, dual-reported), 2 script
+  bugs fixed mid-run (no frozen artifact touched). 50/120 eigensolves; 126 TMCMC runs; active 6581 s.
+  Continuity: runs.md entry + project_log row appended (status verbatim). NEXT: Andrew reviews packet.md
+  (§6 = the four human calls: use {B2} as bookkeeping only; drop the 6-multiplier update; model-form at the
+  valve/low-freq shield is the real gap; instrumented test remains the technically preferred remedy).
+- 2026-07-20 **MPL EXISTING-DATA-ONLY CONDITIONAL CAMPAIGN — EXECUTION STARTED (lead as runner; card dispatched).**
+  Workspace `artifacts/reports/mpl_existing_data_conditional_20260720/`. Re-grounded from AGENTS.md, predecessor
+  `mpl_agentic_remodel_bayes_20260720` (condition_registry, precheck_config, quantity_contracts, stage0.py code,
+  decisions D0–D5). Env OK: py3.9, jax 0.4.30, numpyro 0.19.0, numpy 1.26.4. DISK TIGHT 9.1 GiB free (card floor
+  2 GiB — monitor). Reusable machinery understood: `solve_candidate` (static-condensation + generalized eigh),
+  `modal_curve` (ζ transfer accelerance), 15 tap paths / 5 families (interface, shield_mid, top_left, box[L+R],
+  valve), exact `feature_distance`/`aggregate_by_family` loss, frozen tap/acoustic processing config. Six common
+  stiffness multipliers all present as model groups. STATE MACHINE: doing INIT→FREEZE this session (hash+verify
+  inputs, all pre-reg gate files, model menu, checker RED-on-empty + SHA-lock, observed features) then hand off
+  heavy detached UPDATE/EXACT/ROBUSTNESS (TMCMC over eigensolves). YELLOW ceiling by construction; no vault, no
+  A/R search, generalized-Bayes (not NUTS) for the non-differentiable feature loss.
+  **PROGRESS (this session): INIT + FREEZE + FEATURES-observed DONE and verified.** INIT GREEN: 13 raw records +
+  predecessor PRECHECK/config/registry + frozen model meta/arrays all hash-verified; `source_manifest.json`,
+  `REUSED_code.sha256`, condition_registry copied unchanged; no raw copied, no source modified. FREEZE: all
+  pre-reg gate files written (priority_deliverables, question_framing, decisions_log D0–D2, assumptions_ledger,
+  quantity_contracts, inference_contract, data_split_manifest 5 folds, model_menu 5 physical {B0,B1,B2,M1 feet-
+  boundary,M2 shield-connectivity} + 3 negative controls, 8 candidate specs). Checker `check.py`+`check_config`
+  SHA-locked in CHECKER.sha256 (`d029f143…`/`86d4119a…`), RED-on-empty proven exit 1 (7 integrity GREEN / 10
+  science RED), `out/checker_empty_report.json`. FEATURES observed: `code/features.py` reproduces predecessor
+  observed feature counts EXACTLY (15/15 paths), fresh global q95 0.7117% ~ inherited hard floor 0.7172%; per-fold
+  tau written (interface .876 / shield .785 / top_left .807 / box .717 / valve .717 %). RUN_STATE.json + partial
+  run_all.sh in place. **NEXT ACTION (heavy, detached, multi-hour — NOT started):** MENU V-gates (FEM eigensolves
+  per class), UPDATE TMCMC generalized-Bayes (known-answer first, 3 seeds), EXACT confirmation, ROBUSTNESS +
+  sensitivity, REPORT (10 figs+packet+findings). Do NOT append runs.md/project_log until COMPLETE (card §12).
+  Honest status: campaign NOT complete; setup + observed features are the verifiable deliverable so far.
+  **SESSION 2 (Andrew "proceed"): heavy compute running.** D3 pre-registrations (TMCMC settings, coverage rule,
+  known-answer criteria, peak-sensitivity settings, widening rule) written BEFORE first score. MENU V-gates
+  all-GREEN after D4 tolerance/criterion fix (identity 1e-6; crossing-robust trace check) — 7 nominal solves
+  ~25 s each, budget fine. Known-answer FAILED twice honestly → D5 criteria revision (informed-direction
+  coverage; strain-energy evidence: K_plate_bend ≤0.22% SE in band) + D6 mixing fix (5 MH moves/level vs 1;
+  underdispersion caught by the gate) → PASSED (loss 0.47%<τ, informed z≤1.99); attempts preserved. D7:
+  acceptance band applies at FINAL tempering level (disclosed deviation). 126 TMCMC runs (~25 s each) +
+  post-queue (diagnostics→scores w/ 35 exact solves→FIM→robustness→figures) running DETACHED
+  (logs/tmcmc3.log, logs/queue.log). All pipeline code written incl. finalize.py + full run_all.sh;
+  tufte_lint 3 advisory INFOs (documented). REMAINING: manual figure QA (Read PNGs), packet.md, findings.md,
+  finalize, checker run, then notes/runs.md + project_log (only after COMPLETE).
+- 2026-07-20 **MPL EXISTING-DATA-ONLY DECISION (Andrew):** "we have to make do with only this data, no more."
+  The completed Stage-0 workspace remains immutable YELLOW (tap B0-B2 1.521x uncertainty; acoustic 0.270x;
+  neither clears 2x). New acquisition is not an actionable fallback. Next action is a separate, YELLOW-ceiling
+  successor campaign using response-only tap transfer features as the primary conditional observable and
+  acoustic centered shapes with 6 dB forcing-color uncertainty as robustness. It may report model plausibility,
+  model averaging, and condition-scoped bounds; it may not claim decisive B0/B2 selection, external validation,
+  or unmeasured-regime prediction. Runner card is now written at
+  `docs/lab/mpl_existing_data_conditional_runner_prompt.md`: exact response-feature generalized Bayes,
+  bounded frozen menu, five-family holdouts, no A/R search, and no vault. Freeze its checker before fitting.
+- 2026-07-20 **FORMULATION-CALIBRATION CARD — PRE-DISPATCH. Andrew decisions so far:** (1) CLEAR DISK
+  SPACE — approved; deleting only re-fetchable/recomputable caches: root `Test07_ImpactHammer_990x.zip`
+  (566M, gitignored, mediaex re-fetch documented; resolution-scoring replay needs re-download first),
+  `scratch_test07/*.mat` (245M, extractable from that zip), and from
+  `shocksat_full_spectrum_frf_20260714/out/`: `raw_full_eig_V.npy` (1.7G, pre-filter dump, NO readers),
+  `dryrun_V.npy` (634M, no replay reference), `eig_slices/` (870M, resume intermediates; final
+  `full_eig_V.npy` KEPT so `run_all.sh` skip-loads — replay intact). Verified: no checker/run_all
+  references any deleted file. (2) Andrew is RE-DOWNLOADING `FEM_and_CAD.zip` (1.89 GB, SHA
+  `c917ce2f…` in statfem_runner source_manifest) — when it lands, pull SELECTIVE files for the F0
+  construction check (drawings for PIDs 601/401/302), record SHAs of extracted files, then DELETE the
+  rest. (2b) DONE: zip landed at root, SHA verified `c917ce2f…` (byte-identical to June fetch),
+  61 files (~164 MB) extracted to `references/shocksat_hardware/` (README + EXTRACTED_MANIFEST.sha256:
+  ShockSat1 part drawings PDFs, 28 hardware photos, FEM_20211021 NASTRAN .blk deck — PSHELL 601 t=1.0 /
+  401 t=.125 / 302 t=.13 with 12I/T³ + TS/T at NASTRAN defaults — correlation pptx, weights/instr
+  xlsx, assembly STEP), zip deleted; ~18 Gi free. F0 §2.2 CAD evidence now LOCAL — the card's
+  "re-download if needed" contingency is resolved. (3) **DISPATCH DECISIONS FIXED (Andrew 2026-07-20: "use all defaults/recommendations and
+  proceed")**: (a) VAULT NOT TICKED — +XY is never read, no vault leg, packet must say so; (b) pilot
+  D0 conventions CONFIRMED (per-fold amplitude-refit robustness convention; paired SE = std/√4);
+  (c) LEAD-AS-RUNNER (me); (d) §3 NUTS fix APPROVED — NUTS runs on a PROJECTED differentiable forward
+  (per-region ΔK blocks in a frozen modal basis, small dense eigh in JAX), reported scores come ONLY
+  from exact-basis eigensolves at calibrated parameters; reduced→exact gap measured and reported;
+  checker grep gate distinguishes search/posterior path (reduced OK) from score path (exact only).
+  RUNNING NOW as runner. Workspace: `artifacts/reports/shocksat_formulation_calibration_20260720/`.
+  **PROGRESS 2026-07-20 ~12:15:** checker SHA-locked `b0a4e04c…` RED-on-empty proven (exit 1). All 5
+  pre-reg gate files written. V1 affine PASS 6.8e-16, V2 menu-identity PASS 0.0, mr2_elem5 identity
+  re-score |Δ|=0.00e+00 vs pilot +0.1848. **F0 VERDICT = EFFECTIVE-PROXY** (12:12:10, pre-calib):
+  control-region check (a) on PID 203 reproduced 57% of winner's gain (≥50% rule ⇒ generic side);
+  (b) construction PASS; (c) graded-not-localized. Region set fixed {601,401,302,501,301,701}, 12
+  params, NO warp. Delivery rec: labeled calibration device only, NOT physical correction.
+  601=four 1-in gussets (pilot's "center box" label was WRONG), 401=bolted cross plate, 302=angle
+  brackets (deliverer already hand-tuned t=0.13 for corner radius — pptx s58). Queue A (baseline,
+  f0ctrl, identity, A1 refits: first 2 folds +0.3322/+0.4739) → Queue B detached (basis→project→V3→
+  MAP→NUTS fold1→calib exact scores→refits→rprior 6×→identgate→collect), ~9-10 h serial. NEXT after
+  compute: figures (READ tufte skill first), packet.md, findings.md, run_all.sh, runtime.json,
+  checker run, notes/runs.md + project_log row.
+  **INCIDENTS (all logged as D1–D3 in workspace decisions_log, all pre-scoring):** D1 V4 raised
+  before saving (wasted solve); D2 V4/V3 redefined after full diagnosis — 2.3e-5 basis offset vs
+  A0_wide__enr cause undetermined (T identical, θ identical, self-consistency 2e-9; flagged as
+  provenance note), V3 = port identity PASS 6.3e-11, V4 = sanity 1e-4 PASS; D3 unbounded MAP hit
+  br≈5-21 → L-BFGS-B box [ln0.7,ln1.4] + truncated-lognormal NUTS prior; contaminated phi purged
+  (a pkill leak let a stray python write 2 folds — kill children explicitly next time). Bounded
+  MAPs done: per-fold optima DISAGREE + pin at box edges (601 stiff, 401 SOFT) — overfit/weak-ID
+  signal; the stray unbounded optimum wanting br(601)≈5-21 reinforces EFFECTIVE-PROXY. All figure
+  scripts + run_all.sh + finalize_runtime written. Queue B (b6) detached: nuts → calib_score ×4 →
+  calib_refit ×4 → rprior 6+4 → identgate → collect. Then: make_figs, packet, findings, checker.
 - 2026-07-18 **RUNNER CARD C (MODEL-FORM PILOT) — COMPLETE. Checker OVERALL GREEN 12G/0Y/0R, exit 0**
   (`c26489ae771e`, SHA-locked pre-science, RED-on-empty proven, verified unmodified). Workspace
   `artifacts/reports/shocksat_modelform_pilot_20260716/` · replay `bash run_all.sh`. NO SAMPLER, NO

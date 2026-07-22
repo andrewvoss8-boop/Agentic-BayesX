@@ -1,0 +1,54 @@
+{
+  "reviewed": "2026-07-22",
+  "method": "Original-resolution image inspection of all three figures plus per-page text extraction of the ten-page Word-rendered PDF. Limitation: no page-image contact sheet in this environment (LibreOffice renderer unavailable; PDF produced via Microsoft Word automation).",
+  "overall": "PASS",
+  "figures": [
+    {
+      "file": "figures/fig1_method_map.png",
+      "story": "Show why the work moved from a real test case through modal updating, response evaluation, and model-form edits",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "no_overlap": true,
+        "source_and_scope_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "Unchanged design from the v1 brief, regenerated from the same code path."
+    },
+    {
+      "file": "figures/fig2_modular_frf_panels.png",
+      "story": "Six held-out channels ranked best to worst by a preregistered rule: the update is calibrated by widening, not by repairing every FRF",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "five_encodings_only": true,
+        "parameter_and_total_bands_distinct": true,
+        "hit_quality_shading_absent": true,
+        "log_frequency_axis": true,
+        "units_present": true,
+        "selection_rule_on_figure": true,
+        "source_and_scope_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "Selected DAQs 28, 79, 9, 56, 2, 24 at preregistered ranks 1, 7, 13, 19, 25, 31 (rule fixed in decisions_log.md F2 before plotting). First render had caption overlapping x-axis labels; margins fixed and re-inspected clean. DAQ 24 falls out as worst-ranked, consistent with the v1 two-panel figure."
+    },
+    {
+      "file": "figures/figA1_modal_identification.png",
+      "story": "The modal data learn four combinations and retain a 4.2-4.8% residual floor (appendix detail)",
+      "checks": {
+        "readable_text": true,
+        "no_clipping": true,
+        "uncertainty_visible": true,
+        "nonconvergence_on_figure": true,
+        "source_and_scope_on_figure": true,
+        "single_story": true
+      },
+      "manual_note": "Same design as the v1 fig2, now placed in Appendix A. The 'prior-like' label sits close to the direction-8 marker, as in v1; still legible. Non-converged variants use hollow markers with worst R-hat/ESS printed."
+    }
+  ],
+  "pagination_check": "Per-page text extraction confirms one section per page across 10 pages: masthead/overview, definitions+likelihood inventory, modal answers, response experiments ledger, working-twin figure, load comparison + expanded evidence, remodeling, closing + guidance, appendix A/B, references.",
+  "tufte_lint_advisories": {
+    "background_fill": "Retained because the fills encode nested uncertainty intervals.",
+    "dB_string": "FEM + 6 dB names the engineering baseline; plotted FRF axes are linear magnitude on log scales, not dB."
+  }
+}

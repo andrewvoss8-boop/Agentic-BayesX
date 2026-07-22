@@ -1,0 +1,61 @@
+{
+  "split_seed": 10,
+  "rhat": 1.0011525943125785,
+  "sigma": 0.8103041848443749,
+  "source_sha256": "58326e02f9ada1308feccaec42b27ced9322e0fb9014a27469d139cf7e0d4da1",
+  "daqs": [
+    20,
+    53,
+    24,
+    107
+  ],
+  "band_hz": [
+    45,
+    260
+  ],
+  "selection_rule": "within frozen split 10: largest reduction, median reduction, largest updated error, largest deterioration",
+  "selected": [
+    {
+      "daq": 20,
+      "selection": "largest improvement",
+      "original_mean_abs_log10_error": 0.6835765109967993,
+      "updated_mean_abs_log10_error": 0.5868694614116544,
+      "change_mean_abs_log10_error": -0.09670704958514487,
+      "total_interval_covered": true
+    },
+    {
+      "daq": 53,
+      "selection": "median improvement",
+      "original_mean_abs_log10_error": 0.581572183417059,
+      "updated_mean_abs_log10_error": 0.5547414391252331,
+      "change_mean_abs_log10_error": -0.02683074429182586,
+      "total_interval_covered": true
+    },
+    {
+      "daq": 24,
+      "selection": "largest remaining error",
+      "original_mean_abs_log10_error": 1.069927995016541,
+      "updated_mean_abs_log10_error": 1.0764885585675992,
+      "change_mean_abs_log10_error": 0.006560563551058163,
+      "total_interval_covered": false
+    },
+    {
+      "daq": 107,
+      "selection": "largest deterioration",
+      "original_mean_abs_log10_error": 0.5806363647469306,
+      "updated_mean_abs_log10_error": 0.6613541802251169,
+      "change_mean_abs_log10_error": 0.08071781547818635,
+      "total_interval_covered": false
+    }
+  ],
+  "all_split_summary": {
+    "n_splits": 25,
+    "n_channel_split_cases": 775,
+    "improved": 595,
+    "worsened_or_unchanged": 180,
+    "median_original_error": 0.5620620552005052,
+    "median_updated_error": 0.5414282931911577,
+    "median_change": -0.02109707599976518,
+    "total_interval_coverage": 0.8554838709677419
+  }
+}

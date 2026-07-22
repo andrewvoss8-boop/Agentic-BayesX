@@ -1,0 +1,53 @@
+{
+  "generated_by": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_report_fable_20260722/code/build_report_fable.py",
+  "sources": [
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a1_subspace.json",
+      "sha256": "6d1dfdd3baf6059e550349a1635d3da870433183b44c39b9f5a532057ca99f2b"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a2_sigma_f_sweep.json",
+      "sha256": "46fa2e3e1e43ce8d5ff7e631e77c1897c2f8180b1d2d81f2dc913e4ff62e4c3f"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a3_calibration_table.json",
+      "sha256": "924d414999b18f39e96fe93fa7ea0bef72d368c7f3594a06297b27cee57daaf6"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a4_profile_likelihood.json",
+      "sha256": "7c272c7b8650698deeddb4a7b3bee01746b92ebb0623889d616d3b77fe486d73"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_closure_analyses_20260722/out/a5_phase_diagnostic.json",
+      "sha256": "20d7e7c48dd1eda549d29be5d3060419a31bc502c2435d3a4d2397bedacfaeda"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_latent_force_damping_20260623/out/layer1_nuts.json",
+      "sha256": "9b54ab615f9545277679a4c0ec3902a9e666c1c1dbba587d637bbf464f582e4c"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_latent_force_damping_20260623/packet.md",
+      "sha256": "693c6c7ecbb104390da9880de6157d34ce3f7acf6c0dbb3577605069aac65c7a"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/mc_cache.npz",
+      "sha256": "58326e02f9ada1308feccaec42b27ced9322e0fb9014a27469d139cf7e0d4da1"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_modelform_pilot_20260716/out/verdicts.json",
+      "sha256": "9d198be9e0be90a2d41e29febbf394611c7e5c926d9a74835b3534bc375d5f7c"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_composite_bakeoff_20260702/out/tier3_evidence.json",
+      "sha256": "86b9eac4d15bc07069a5a96e20fd2f76c70f86f8f5e0e2cc9e46e9fe2a246354"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_netcg_validated_port_20260716/out/verdicts_S3S4.json",
+      "sha256": "0cfe595dd85a9c69818dbac180a1064c20a99dd50cf319481ceb064b4b5c58aa"
+    },
+    {
+      "path": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_results_summary_20260721/references_verified.md",
+      "sha256": "22694f77cabc9e93edf955d3c39603e19ce68fb3d59d1376e54fd63f6b24d018"
+    }
+  ]
+}

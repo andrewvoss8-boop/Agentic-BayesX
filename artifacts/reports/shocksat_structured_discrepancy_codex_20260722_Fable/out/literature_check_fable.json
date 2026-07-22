@@ -1,0 +1,110 @@
+{
+  "method": "text extracted with PyMuPDF from the PDFs in references/pdfs/; excerpts are verbatim with whitespace collapsed, and carry the PDF page number",
+  "papers": {
+    "febrianto": {
+      "file": "references/pdfs/digital-twinning-of-self-sensing-structures-using-the-statistical-finite-element-method.pdf",
+      "sha256": "fc003df472259a7c4db04f3014ed8404d37c57d0b54e128f796a9eba8f8e7498",
+      "n_pages": 22,
+      "findings": {
+        "zero_prior_mean_discrepancy": [
+          {
+            "pdf_page": 7,
+            "excerpt": "the measured strain data y and the random FE solution u in (8). The probability density of the mismatch error is assumed to be a multivariate Gaussian d \u0006 p\u00f0d\u00de \u00bc N \u00f00,Cd\u00de, (11) and the covariance matrix Cd is obtained from the squared-exponential kernel Data-Centric Engineering e31-7 https://doi.org/10.1017/dce.2022.28 Published online by Cambridge University Press"
+          }
+        ],
+        "zero_mean_gp_prior_general": [
+          {
+            "pdf_page": 6,
+            "excerpt": "\u00f0 \u00de and r x \u00f0 \u00de have only a nonzero vertical component. The random distributed train loading r x \u00f0 \u00de is a Gaussian process with a zero mean and prescribed covariance, that is, r x \u00f0 \u00de \u00bc 0 0 GP 0, cr x, x0 \u00f0 \u00de \u00f0 \u00de 0 B @ 1 C A: (3) Without loss of generality, the squared-exponential kernel is chosen as the covariance function cr x, x0 \u00f0 \u00de \u00bc \u03c32 r exp \u0002\u2225x\u0002x0\u22252 2\u21132 r"
+          }
+        ],
+        "squared_exponential_space_only": [
+          {
+            "pdf_page": 6,
+            "excerpt": "ro mean and prescribed covariance, that is, r x \u00f0 \u00de \u00bc 0 0 GP 0, cr x, x0 \u00f0 \u00de \u00f0 \u00de 0 B @ 1 C A: (3) Without loss of generality, the squared-exponential kernel is chosen as the covariance function cr x, x0 \u00f0 \u00de \u00bc \u03c32 r exp \u0002\u2225x\u0002x0\u22252 2\u21132 r ! , (4) where \u03c3r is a scaling factor and \u2113r is a length scale parameter. Although the Euclidean squared-distance \u2225x\u0002x0\u22252"
+          },
+          {
+            "pdf_page": 7,
+            "excerpt": "smatch error is assumed to be a multivariate Gaussian d \u0006 p\u00f0d\u00de \u00bc N \u00f00,Cd\u00de, (11) and the covariance matrix Cd is obtained from the squared-exponential kernel Data-Centric Engineering e31-7 https://doi.org/10.1017/dce.2022.28 Published online by Cambridge University Press"
+          }
+        ],
+        "load_scaled_variance_not_mean": [
+          {
+            "pdf_page": 9,
+            "excerpt": ". To this end, the mismatch error covariance kernel (12) is replaced with the scaled squared-exponential kernel cd x, x0, k \u00f0 \u00de \u00bc \u03b3k\u03c3d \u00f0 \u00de2 exp \u0002\u2225x\u0002x0\u22252 2\u21132 d ! (24a) with \u03b3k \u00bc \u2225 fk\u2225 maxk\u2225fk\u2225, (24b) where the index k corresponds to the time instant tk and \u2225\u0005\u2225denotes L2 norm. The scale factor \u03b3k is necessary because the number of"
+          },
+          {
+            "pdf_page": 9,
+            "excerpt": "kernel (12) is replaced with the scaled squared-exponential kernel cd x, x0, k \u00f0 \u00de \u00bc \u03b3k\u03c3d \u00f0 \u00de2 exp \u0002\u2225x\u0002x0\u22252 2\u21132 d ! (24a) with \u03b3k \u00bc \u2225 fk\u2225 maxk\u2225fk\u2225, (24b) where the index k corresponds to the time instant tk and \u2225\u0005\u2225denotes L2 norm. The scale factor \u03b3k is necessary because the number of axles on the bridge, hence the loading fk a"
+          }
+        ],
+        "frequency_only_as_sampling_rate": [
+          {
+            "pdf_page": 4,
+            "excerpt": "he passage of a train. In particular, it is shown that the inference results are largely insensitive to the number of sensors and sampling frequency confirming the utility of a statFEM model as an integral part of a digital twin. Section 5 concludes the paper and discusses several promising directions for future research. 2. Self-sensing Railway"
+          }
+        ]
+      }
+    },
+    "schneider": {
+      "file": "references/pdfs/Bayesian parameter updating in linear structural dynamics with frequency transformed data using rational surrogate models.pdf",
+      "sha256": "489db7013e0ba1829230c2c6c848ccac23d7a0611faa5178032542e5826f33be",
+      "n_pages": 18,
+      "findings": {
+        "zero_mean_log_magnitude_and_phase": [
+          {
+            "pdf_page": 15,
+            "excerpt": "\ud835\udf43 (\ud835\udc13\u22121(\ud835\udc33)) |||det (\ud835\udc09\ud835\udf43,\ud835\udc33 )||| . (A.1) Here, \ud835\udc53\ud835\udf43(\ud835\udf43) denotes the joint PDF of \ud835\udc30and \ud835\udf3d. Recall that we assume this distribution to be a zero-mean Gaussian distribution, i.e.: \ud835\udc53\ud835\udf43(\ud835\udf43) = 1 (2\ud835\udf0b) \ud835\udc5b\ue23b 2 \u221a det \ud835\udc11\ud835\udc30\ud835\udc30 exp { \u22121 2\ud835\udc30\ud835\udc47\ud835\udc45\u22121 \ud835\udc30\ud835\udc30\ud835\udc30 } \u00d7 1 (2\ud835\udf0b) \ud835\udc5b\ue23b 2 \u221a det \ud835\udc11\ud835\udf3d\ud835\udf3d exp { \u22121 2 \ud835\udf3d\ud835\udc47\ud835\udc45\u22121 \ud835\udf3d\ud835\udf3d\ud835\udf3d } . (A.2) The transformation \ud835\udc13\u2236R2\ud835\udc5b\ue23b\u2192R2\ud835\udc5b\ue23bis defined as \ud835\udc33= (\ud835\udc2e \ud835\udc2f ) = \ud835\udc13(\ud835\udf43) = (exp{\ud835\udc30} cos(\ud835\udf3d) exp{\ud835\udc30}"
+          }
+        ],
+        "additive_correlation_eq19": [
+          {
+            "pdf_page": 5,
+            "excerpt": "model the dependency between spatial observation points and frequency domain points: \ud835\udf0c(\ud835\udee5\ud835\udc67, \ud835\udee5\ud835\udc53 ) = \ud835\udc5f\u22c5\ud835\udf0c\ud835\udc53 (\ud835\udee5\ud835\udc53 ) + (1 \u2212\ud835\udc5f) \u22c5\ud835\udf0c\ud835\udc67 (\ud835\udee5\ud835\udc67 ) , (19) with \ud835\udf0c\ud835\udc67 (\ud835\udee5\ud835\udc67 ) = exp ( \u2212\ud835\udee5\ud835\udc67 \ud835\udc59co,\ud835\udc67 ) , (20) \ud835\udf0c\ud835\udc53 (\ud835\udee5\ud835\udc53 ) = exp ( \u2212 \ud835\udee5\ud835\udc53 \ud835\udc59co,\ud835\udc53 ) , (21) and \ud835\udee5\ud835\udc67= \u2016\u2016\u2016\ud835\udc33\ud835\udc56\u2212\ud835\udc33\ud835\udc57\u2016\u2016\u20162 being the euclidean distances between the accelerometer locations \ud835\udc33\ud835\udc56and \ud835\udc33\ud835\udc57, \ud835\udc59co,\ud835\udc67the corresponding s"
+          }
+        ],
+        "rho_z_exponential_eq20": [
+          {
+            "pdf_page": 5,
+            "excerpt": "rvation points and frequency domain points: \ud835\udf0c(\ud835\udee5\ud835\udc67, \ud835\udee5\ud835\udc53 ) = \ud835\udc5f\u22c5\ud835\udf0c\ud835\udc53 (\ud835\udee5\ud835\udc53 ) + (1 \u2212\ud835\udc5f) \u22c5\ud835\udf0c\ud835\udc67 (\ud835\udee5\ud835\udc67 ) , (19) with \ud835\udf0c\ud835\udc67 (\ud835\udee5\ud835\udc67 ) = exp ( \u2212\ud835\udee5\ud835\udc67 \ud835\udc59co,\ud835\udc67 ) , (20) \ud835\udf0c\ud835\udc53 (\ud835\udee5\ud835\udc53 ) = exp ( \u2212 \ud835\udee5\ud835\udc53 \ud835\udc59co,\ud835\udc53 ) , (21) and \ud835\udee5\ud835\udc67= \u2016\u2016\u2016\ud835\udc33\ud835\udc56\u2212\ud835\udc33\ud835\udc57\u2016\u2016\u20162 being the euclidean distances between the accelerometer locations \ud835\udc33\ud835\udc56and \ud835\udc33\ud835\udc57, \ud835\udc59co,\ud835\udc67the corresponding spatial correlation length, \ud835\udee5\ud835\udc53= |||\ud835\udc53\ud835\udc56\u2212\ud835\udc53\ud835\udc57||"
+          },
+          {
+            "pdf_page": 5,
+            "excerpt": "\ud835\udc11\ud835\udc53\ud835\udc53\u2297\ud835\udc08\ud835\udc5bmp ) + (1 \u2212\ud835\udc5f) ( \ud835\udc08\ud835\udc5b\ud835\udc53\u2297\ud835\udc11\ud835\udc67\ud835\udc67 ) , (25) with \ud835\udc08\ud835\udc5bthe \ud835\udc5b\u00d7 \ud835\udc5b-identity matrix, \ud835\udc11\ud835\udc67\ud835\udc67the \ud835\udc5bmp \u00d7 \ud835\udc5bmp spatial correlation matrix based on Eq. (20), \ud835\udc11\ud835\udc53\ud835\udc53the \ud835\udc5b\ud835\udc53\u00d7 \ud835\udc5b\ud835\udc53frequency domain correlation matrix based on Eq. (21), and \u2297the Kronecker-product. Thus, \ud835\udf41\ud835\udf3aand \ud835\udf2e\ud835\udf3ahave size 2\ud835\udc5b\ue23b\u00d7 1 and 2\ud835\udc5b\ue23b\u00d7 2\ud835\udc5b\ue23b, respectively. In total, the model error is now described"
+          }
+        ],
+        "rho_f_exponential_eq21": [
+          {
+            "pdf_page": 5,
+            "excerpt": "oints: \ud835\udf0c(\ud835\udee5\ud835\udc67, \ud835\udee5\ud835\udc53 ) = \ud835\udc5f\u22c5\ud835\udf0c\ud835\udc53 (\ud835\udee5\ud835\udc53 ) + (1 \u2212\ud835\udc5f) \u22c5\ud835\udf0c\ud835\udc67 (\ud835\udee5\ud835\udc67 ) , (19) with \ud835\udf0c\ud835\udc67 (\ud835\udee5\ud835\udc67 ) = exp ( \u2212\ud835\udee5\ud835\udc67 \ud835\udc59co,\ud835\udc67 ) , (20) \ud835\udf0c\ud835\udc53 (\ud835\udee5\ud835\udc53 ) = exp ( \u2212 \ud835\udee5\ud835\udc53 \ud835\udc59co,\ud835\udc53 ) , (21) and \ud835\udee5\ud835\udc67= \u2016\u2016\u2016\ud835\udc33\ud835\udc56\u2212\ud835\udc33\ud835\udc57\u2016\u2016\u20162 being the euclidean distances between the accelerometer locations \ud835\udc33\ud835\udc56and \ud835\udc33\ud835\udc57, \ud835\udc59co,\ud835\udc67the corresponding spatial correlation length, \ud835\udee5\ud835\udc53= |||\ud835\udc53\ud835\udc56\u2212\ud835\udc53\ud835\udc57||| the absolute difference between two"
+          },
+          {
+            "pdf_page": 5,
+            "excerpt": "rix, \ud835\udc11\ud835\udc67\ud835\udc67the \ud835\udc5bmp \u00d7 \ud835\udc5bmp spatial correlation matrix based on Eq. (20), \ud835\udc11\ud835\udc53\ud835\udc53the \ud835\udc5b\ud835\udc53\u00d7 \ud835\udc5b\ud835\udc53frequency domain correlation matrix based on Eq. (21), and \u2297the Kronecker-product. Thus, \ud835\udf41\ud835\udf3aand \ud835\udf2e\ud835\udf3ahave size 2\ud835\udc5b\ue23b\u00d7 1 and 2\ud835\udc5b\ue23b\u00d7 2\ud835\udc5b\ue23b, respectively. In total, the model error is now described by five hyper-parameters: model error standard deviations \ud835\udf0e\ud835\udc64and \ud835\udf0e\ud835\udf03,"
+          }
+        ],
+        "posterior_r_0p82": [
+          {
+            "pdf_page": 10,
+            "excerpt": "5.5% 4.8% \ud835\udf0e\ud835\udf03 0.31 0.33 0.31 0.34 5.4% 4.6% \ud835\udc59co,\ud835\udc67in m 49.8 49.6 47.5 50.8 17.8% 15.2% \ud835\udc59co,\ud835\udc53in Hz 10.1 11.5 9.9 11.6 13.5% 10.7% \ud835\udc5f 0.82 0.82 0.83 0.83 3.2% 2.7% Fig. 4. Posterior distribution for the shell model, described in terms of histograms of the posterior samples on the main diagonal (\u275a), bivariate scatter plots below the main"
+          },
+          {
+            "pdf_page": 10,
+            "excerpt": "4.8% \ud835\udf0e\ud835\udf03 0.31 0.33 0.31 0.34 5.4% 4.6% \ud835\udc59co,\ud835\udc67in m 49.8 49.6 47.5 50.8 17.8% 15.2% \ud835\udc59co,\ud835\udc53in Hz 10.1 11.5 9.9 11.6 13.5% 10.7% \ud835\udc5f 0.82 0.82 0.83 0.83 3.2% 2.7% Fig. 4. Posterior distribution for the shell model, described in terms of histograms of the posterior samples on the main diagonal (\u275a), bivariate scatter plots below the main diag"
+          }
+        ]
+      }
+    }
+  },
+  "conclusions": {
+    "febrianto": "Zero-mean discrepancy prior d ~ N(0, C_d); squared-exponential kernel in SPACE ONLY; quasi-static strain; gamma_k scales the discrepancy VARIANCE with load magnitude, it is not a mean function. Non-sensor predictive mean moves through the conditioned FE state. A non-zero frequency x location discrepancy MEAN is NOT in this paper.",
+    "schneider": "Zero-mean Gaussian in log-magnitude and phase (Eq. 18); additive frequency + accelerometer-location CORRELATION (Eqs. 19-21) with posterior l_co,z ~ 49.8 m, l_co,f ~ 10.1 Hz, r = 0.82. Transformed-space zero mean, NOT a structured mean. Nuance: the multiplicative amplitude error is lognormal, so its arithmetic mean in the original amplitude space need not be 1.",
+    "allowed_claim": "The requested learned frequency x location MEAN is absent from these two papers.",
+    "forbidden_claim": "No literature-wide novelty gap is claimed; that needs a systematic review this run did not perform.",
+    "kernel_form_deviation": {
+      "schneider_published": "rho(dz,df) = r exp(-df/l_co,f) + (1-r) exp(-dz/l_co,z), i.e. r K_f (x) ones + (1-r) ones (x) K_z",
+      "frozen_in_project_and_card": "sigma_u^2 [ r K_f (x) I_x + (1-r) I_f (x) K_x ] with K_f SQUARED-exponential in frequency",
+      "why_it_matters": "under the published form two different sensors at the same frequency line correlate >= r = 0.82, so a zero-mean GP transfers strongly to a held-out channel; under the (x) I form the same pair correlates only ~0.18. Primary arms follow the card; SENS-4 tests the published form."
+    }
+  }
+}

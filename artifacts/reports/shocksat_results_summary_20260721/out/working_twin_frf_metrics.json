@@ -1,0 +1,43 @@
+{
+  "figure": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/shocksat_results_summary_20260721/figures_revised/fig2_working_twin_good_bad_frf.png",
+  "source": "/Users/avoss/Downloads/bayesX/Agentic BayesX/artifacts/reports/statfem_real_validation_20260617/out/mc_cache.npz",
+  "source_sha256": "58326e02f9ada1308feccaec42b27ced9322e0fb9014a27469d139cf7e0d4da1",
+  "split_seed": 10,
+  "selection": {
+    "good": "DAQ 20: strongest original-to-updated reduction among channels paired with DAQ 24 in one retained held-out split",
+    "bad": "DAQ 24: largest remaining updated error in the same retained held-out split"
+  },
+  "quantity": "accelerance magnitude |a_response/F_drive| [g/lbf]",
+  "frequency_hz": [
+    45.0,
+    260.0
+  ],
+  "interval_probability": 0.9,
+  "parameter_interval": "5th/50th/95th percentiles from the converged modal-frequency posterior",
+  "total_interval": "5th/95th percentiles after the observed-channel-estimated marginal log-amplitude discrepancy",
+  "model_classification": "two-stage modular predictive construction; not a jointly sampled whole-FRF StatFEM posterior",
+  "calibration": {
+    "max_rhat": 1.0011525943125785,
+    "sigma_log_amplitude": 0.8103041848443749
+  },
+  "panels": [
+    {
+      "daq": 20,
+      "story": "Improves after updating",
+      "original_mean_abs_log10_error": 0.6835765109967993,
+      "updated_mean_abs_log10_error": 0.5868694614116544,
+      "change_mean_abs_log10_error": -0.09670704958514487,
+      "total_interval_contains_parameter_interval": true,
+      "heldout_qoi_covered": true
+    },
+    {
+      "daq": 24,
+      "story": "Persistent model-to-test miss",
+      "original_mean_abs_log10_error": 1.069927995016541,
+      "updated_mean_abs_log10_error": 1.0764885585675992,
+      "change_mean_abs_log10_error": 0.006560563551058163,
+      "total_interval_contains_parameter_interval": true,
+      "heldout_qoi_covered": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+ "figures": [
+  {
+   "path": "figures/a1_subspace.png",
+   "caption": "Prior-whitened identified subspace of the modal posterior. Left: eigenvalues of the prior-whitened log-\u03b8 posterior covariance (posterior/prior variance ratio, dimensionless; 1 = prior returned) with 95% block-bootstrap CIs (block 40, 1000 resamples). Four combinations are contracted (0.019/0.029/0.259/0.355 \u2014 matches the adjudicated known answer); five are prior-like (0.87\u20131.17). Right: eigenvector loadings; labeled cells |loading| \u2265 0.25. Claim is subspace-level only \u2014 no per-parameter identifiability is asserted. Source run: shocksat_fem_modal_twin_20260609/nuts_full_samples.npz (converged full-calibration NUTS, worst R-hat 1.022, min ESS 232); this study out/a1_subspace.json."
+  },
+  {
+   "path": "figures/a3_table.png",
+   "caption": "Calibration table: energy-weighted coverage / band-width ratio (both reproduced exactly from the frozen bake-off, max|dev|=0.000) plus fair-ensemble CRPS (lower better; log-uniform envelope convention, conclusion stable under all 3 conventions: statFEM wins 8/10 measured drive-axis cells). Shear CRPS = MEASURED held-out drives; normal_Z = synthetic self-consistency, NOT validation; normal-Z widths 2.526 (delivered reference) vs 2.958 (tier-updated). Source run: shocksat_netcg_method_selection_20260701 + out/a3_calibration_table.json."
+  },
+  {
+   "path": "figures/a3_coverage_width.png",
+   "caption": "Coverage vs width per axis. FEM+6 dB undercovers (0.865/0.706/0.738 vs 0.95 target); the delivered statFEM band covers (0.98\u20130.99) at 1.508\u20132.526x width; parameter-only propagation is sharp but undercovers shear_Y. normal_Z panel is synthetic self-consistency, NOT validation (label on panel). Source run: shocksat_netcg_method_selection_20260701, reproduced in out/a3_calibration_table.json."
+  },
+  {
+   "path": "figures/a4_profile.png",
+   "caption": "1-D profile log-likelihood (drive gains + sigma_n PROFILED at every point, closed-form MLE, gradient-verified) of the iid log-magnitude whole-FRF likelihood, along the two most FRF-sensitive stiffness multipliers (bottom_box, top_box), 41 log-spaced points over the prior 95% range; y = log-likelihood relative to max, nats. Both slices show ~10 local maxima; red dotted lines mark the 4 separated NUTS chain means of the stored non-converged run (R-hat 44.7, min ESS 2.0 \u2014 intervals from that run are not trustworthy). Source runs: shocksat_full_spectrum_frf_20260714 (arm_b_nuts theta-only, fold m_xpos_990x) + this study out/a4_profile_likelihood.json."
+  },
+  {
+   "path": "figures/a2_sigma_f_sweep.png",
+   "caption": "\u03c3_f posterior (pooled per-chain draws, histogram) vs analytic prior density under 5 priors; red = posterior median, dashed gray = stored 4.6% reference. Reference run reproduces the stored posterior (worst R-hat 1.009, min ESS 464); any non-converged variant is labeled IN RED on its panel with worst R-hat/ESS. Source runs: frozen twin shocksat_fem_modal_twin_20260609 likelihood; this study out/a2_sigma_f_sweep.json + out/a2_draws/."
+  },
+  {
+   "path": "figures/a2_predictive_checks.png",
+   "caption": "Left: prior predictive check \u2014 fraction of the 18 measured modal frequencies inside each variant's per-mode central 95% prior predictive envelope (800 prior draws). Right: posterior-predictive PIT for the reference HalfNormal(0.05) run (500 posterior draws); calibrated \u21d2 near the diagonal. Source run: out/a2_sigma_f_sweep.json."
+  }
+ ]
+}

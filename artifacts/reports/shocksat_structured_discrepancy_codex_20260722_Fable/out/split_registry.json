@@ -1,0 +1,597 @@
+{
+  "frozen_before_any_residual_was_inspected": true,
+  "built_from": "sensor coordinates (in), response-axis labels, frequency grid \u2014 no response data",
+  "family_1_drive": {
+    "folds": [
+      {
+        "fold": 0,
+        "held_out_drive": "m_xpos_990x",
+        "label": "+X (990)"
+      },
+      {
+        "fold": 1,
+        "held_out_drive": "m_ypos_990y",
+        "label": "+Y (990)"
+      },
+      {
+        "fold": 2,
+        "held_out_drive": "m_zpos_990z",
+        "label": "+Z (990)"
+      },
+      {
+        "fold": 3,
+        "held_out_drive": "m_zpos_900z",
+        "label": "+Z (900)"
+      },
+      {
+        "fold": 4,
+        "held_out_drive": "m_xy_990xy",
+        "label": "+XY (990)"
+      }
+    ],
+    "note": "leave-one-drive-out; the held-out drive's log-gain c_d is integrated over its prior-predictive N(c_bar, tau_c^2) fitted on training drives only. Because the residual GP is an independent realisation per drive (decisions_log F2), K_*T = 0 here and arm E1 is identical to E0 by construction in this family."
+  },
+  "family_2_spatial": {
+    "method": "deterministic k-medoids on RAW physical coordinates (inches); ties broken by lowest index; farthest-point init from the point nearest the centroid",
+    "n_clusters": 5,
+    "clusters": [
+      {
+        "cluster": 0,
+        "medoid_daq": 4,
+        "medoid_xyz_in": [
+          9.0,
+          -1.5,
+          2.3125
+        ],
+        "n_channels": 26,
+        "daq": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          17,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          36,
+          38,
+          39,
+          40,
+          41,
+          103,
+          104,
+          105
+        ],
+        "axis_counts": {
+          "X": 10,
+          "Y": 7,
+          "Z": 9
+        },
+        "region_counts": {
+          "source_face": 13,
+          "bulkhead": 13
+        },
+        "n_unique_locations": 10
+      },
+      {
+        "cluster": 1,
+        "medoid_daq": 10,
+        "medoid_xyz_in": [
+          -7.5,
+          9.0,
+          2.0
+        ],
+        "n_channels": 5,
+        "daq": [
+          10,
+          11,
+          12,
+          15,
+          35
+        ],
+        "axis_counts": {
+          "X": 1,
+          "Y": 2,
+          "Z": 2
+        },
+        "region_counts": {
+          "bulkhead": 5
+        },
+        "n_unique_locations": 3
+      },
+      {
+        "cluster": 2,
+        "medoid_daq": 52,
+        "medoid_xyz_in": [
+          9.0,
+          -0.4375,
+          19.125
+        ],
+        "n_channels": 31,
+        "daq": [
+          42,
+          43,
+          44,
+          46,
+          47,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          62,
+          63,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          75,
+          76,
+          111,
+          115
+        ],
+        "axis_counts": {
+          "X": 9,
+          "Y": 11,
+          "Z": 11
+        },
+        "region_counts": {
+          "bolted_joint": 3,
+          "bulkhead": 28
+        },
+        "n_unique_locations": 13
+      },
+      {
+        "cluster": 3,
+        "medoid_daq": 85,
+        "medoid_xyz_in": [
+          0.3125,
+          9.0,
+          41.9375
+        ],
+        "n_channels": 9,
+        "daq": [
+          82,
+          83,
+          85,
+          86,
+          87,
+          88,
+          89,
+          94,
+          95
+        ],
+        "axis_counts": {
+          "X": 1,
+          "Y": 4,
+          "Z": 4
+        },
+        "region_counts": {
+          "dish": 2,
+          "bulkhead": 7
+        },
+        "n_unique_locations": 4
+      },
+      {
+        "cluster": 4,
+        "medoid_daq": 100,
+        "medoid_xyz_in": [
+          9.75,
+          -0.25,
+          43.1875
+        ],
+        "n_channels": 13,
+        "daq": [
+          77,
+          78,
+          79,
+          90,
+          91,
+          92,
+          98,
+          99,
+          100,
+          102,
+          106,
+          107,
+          108
+        ],
+        "axis_counts": {
+          "X": 4,
+          "Y": 4,
+          "Z": 5
+        },
+        "region_counts": {
+          "strut": 5,
+          "dish": 2,
+          "bulkhead": 6
+        },
+        "n_unique_locations": 5
+      }
+    ],
+    "impossible_strata": [
+      "spatial cluster 1 spans only region(s) ['bulkhead'] \u2014 region/axis balance not achievable"
+    ]
+  },
+  "family_3_frequency": {
+    "method": "5 contiguous cores spanning the analysis band; a 10 Hz guard on both sides of each core is removed from TRAINING; scoring uses core lines only",
+    "cores": [
+      {
+        "core": 0,
+        "core_line_idx": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "core_hz": [
+          46.79361979166667,
+          87.48372395833334
+        ],
+        "n_core_lines": 21,
+        "guard_hz": 10.0,
+        "excluded_from_training_line_idx": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "n_excluded": 25,
+        "n_train_lines": 80,
+        "min_gap_to_nearest_training_line_hz": 10.172526041666657
+      },
+      {
+        "core": 1,
+        "core_line_idx": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "core_hz": [
+          89.51822916666667,
+          130.20833333333334
+        ],
+        "n_core_lines": 21,
+        "guard_hz": 10.0,
+        "excluded_from_training_line_idx": [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "n_excluded": 29,
+        "n_train_lines": 76,
+        "min_gap_to_nearest_training_line_hz": 10.172526041666657
+      },
+      {
+        "core": 2,
+        "core_line_idx": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62
+        ],
+        "core_hz": [
+          132.24283854166669,
+          172.93294270833334
+        ],
+        "n_core_lines": 21,
+        "guard_hz": 10.0,
+        "excluded_from_training_line_idx": [
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66
+        ],
+        "n_excluded": 29,
+        "n_train_lines": 76,
+        "min_gap_to_nearest_training_line_hz": 10.172526041666657
+      },
+      {
+        "core": 3,
+        "core_line_idx": [
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83
+        ],
+        "core_hz": [
+          174.96744791666669,
+          215.65755208333334
+        ],
+        "n_core_lines": 21,
+        "guard_hz": 10.0,
+        "excluded_from_training_line_idx": [
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "n_excluded": 29,
+        "n_train_lines": 76,
+        "min_gap_to_nearest_training_line_hz": 10.172526041666686
+      },
+      {
+        "core": 4,
+        "core_line_idx": [
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "core_hz": [
+          217.69205729166669,
+          258.38216145833337
+        ],
+        "n_core_lines": 21,
+        "guard_hz": 10.0,
+        "excluded_from_training_line_idx": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "n_excluded": 25,
+        "n_train_lines": 80,
+        "min_gap_to_nearest_training_line_hz": 10.172526041666657
+      }
+    ]
+  },
+  "family_4_joint": {
+    "method": "spatial cluster x frequency core, pairing = permutation derived from SHA-256('shocksat_structured_discrepancy_codex_20260722_Fable/joint_transfer/v1')",
+    "sha256_seed_hex": "ff740b12fcc35d98df6dfbf4068124e2aa080dd26592b1664f2414e29db356a3",
+    "pairs": [
+      {
+        "pair": 0,
+        "spatial_cluster": 0,
+        "frequency_core": 2
+      },
+      {
+        "pair": 1,
+        "spatial_cluster": 1,
+        "frequency_core": 3
+      },
+      {
+        "pair": 2,
+        "spatial_cluster": 2,
+        "frequency_core": 1
+      },
+      {
+        "pair": 3,
+        "spatial_cluster": 3,
+        "frequency_core": 4
+      },
+      {
+        "pair": 4,
+        "spatial_cluster": 4,
+        "frequency_core": 0
+      }
+    ],
+    "stage": "Stage 1 only; Stage 2 may not expand this budget"
+  },
+  "no_outer_test_tuning": "All covariance and mean hyperparameters are either fixed a priori (l_f, l_x, r) or fitted INSIDE the training portion of each fold. No held-out response is used to choose knots, length scales, shrinkage, interval width or calibration."
+}
