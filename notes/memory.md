@@ -1,8 +1,23 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
-- 2026-07-22 **CLOSURE-REPORT MATERIAL COMMITTED + PUSHED.** Commit `338a60b` on branch
-  `exp/modeling-freedom-experiment` → origin (github.com/andrewvoss8-boop/Agentic-BayesX), 288 files / ~37 MB.
+- 2026-07-22 **CARD E CODEX UN-SUFFIXED EXECUTION COMPLETE — STOP_SYNTHETIC, CHECKER YELLOW.**
+  Workspace `artifacts/reports/shocksat_structured_discrepancy_codex_20260722/`; replay `bash run_all.sh`.
+  Immutable checker: **OVERALL YELLOW {GREEN:16, YELLOW:1, RED:0}**. S0 false positives 0/20;
+  S1 accepted recoveries 0/20 despite learned-mean 90% coverage 0.937; S2 median E3-vs-E1 error
+  reduction −0.916 dB; S3 modal-parameter bias reduction 0.26%, coverage [0.85,0,0,0]. Constraint
+  and normalized orthogonality residuals were ~1e−16, so the miss is predictive/confounding, not failed
+  basis protection. Card automatically prohibited measured fitting and Stage 2. This run is independent
+  of the concurrently recorded `_Fable` workspace and does not establish a measured negative-transfer result.
+- 2026-07-22 **BRANCHING: `main` IS THE TRUNK AGAIN (human decision, option 1).** `main` was 10 commits stale
+  and `exp/modeling-freedom-experiment` had silently become the trunk (branch name predated the ShockSat arc).
+  Fast-forwarded `origin/main` 269685f→62839a6, moved local `main`, switched to it; `main`,
+  `exp/modeling-freedom-experiment` and `origin/main` are all `62839a6`, zero divergence. Nothing rebased,
+  squashed or deleted; the old branch still exists as a pointer to the same commit. **NEW WORK GOES ON `main`
+  (or a fresh topic branch off it) — do NOT keep committing to `exp/modeling-freedom-experiment`.**
+  Uncommitted Card E work (`shocksat_structured_discrepancy_codex_20260722{,_Fable}`) was untouched by the
+  switch and is still dirty in the working tree.
+- 2026-07-22 **CLOSURE-REPORT MATERIAL COMMITTED + PUSHED.** Commit `338a60b` (now on `main`), 288 files / ~37 MB.
   Scope: closure brief v1 + `_sol` + `_fable` workspaces, closure analyses A1–A5, results-summary workspace,
   structured-discrepancy Card D/E cards and workspaces, notes/, docs/report/project_log.md. No files were
   regenerated, re-run, or edited for the commit; no SHA-locked checker touched. `.gitignore` additions
