@@ -1,6 +1,16 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
+- 2026-07-22 **CLOSURE-REPORT MATERIAL COMMITTED + PUSHED.** Commit `338a60b` on branch
+  `exp/modeling-freedom-experiment` → origin (github.com/andrewvoss8-boop/Agentic-BayesX), 288 files / ~37 MB.
+  Scope: closure brief v1 + `_sol` + `_fable` workspaces, closure analyses A1–A5, results-summary workspace,
+  structured-discrepancy Card D/E cards and workspaces, notes/, docs/report/project_log.md. No files were
+  regenerated, re-run, or edited for the commit; no SHA-locked checker touched. `.gitignore` additions
+  (my call, overrule if unwanted): Word `~$` lock files, plus two regenerable page-render QA image sets
+  (`shocksat_results_summary_20260721/qa/` 106 MB, `structured_discrepancy_codex_review_20260722/qa/` 5.3 MB)
+  — deliverable docx/pdf + build scripts stay committed. NOT committed (large/unrelated, ask before adding):
+  `shocksat_formulation_calibration_20260720/` (727 MB), MPL/suspended-panel data, loose reference PDFs.
+  Push warned about pre-existing >50 MB `.npz` files from commit 9cad98c (not introduced here).
 - 2026-07-22 **CARD E (`_Fable`) DISPATCHED BY ANDREW — LEAD IS RUNNER. IN PROGRESS.**
   CURRENT STATE: executing `docs/agents/structured_discrepancy_codex_review_20260722/task_card_codex_structured_discrepancy.md`
   (Codex's autonomously-dispatch-ready Card E). LAST DECISION (human, 2026-07-22): "execute … labeling
