@@ -1,0 +1,282 @@
+{
+ "settings": {
+  "fs_hz": 2048.0,
+  "inputs_stand_in": [
+   [
+    5201,
+    "Z"
+   ],
+   [
+    8102,
+    "X"
+   ],
+   [
+    9201,
+    "Z"
+   ]
+  ],
+  "outputs": [
+   [
+    5201,
+    "Z"
+   ],
+   [
+    8102,
+    "X"
+   ],
+   [
+    9201,
+    "Z"
+   ],
+   [
+    1101,
+    "Z"
+   ],
+   [
+    11101,
+    "X"
+   ],
+   [
+    11110,
+    "Y"
+   ],
+   [
+    2101,
+    "X"
+   ],
+   [
+    4101,
+    "X"
+   ],
+   [
+    6102,
+    "Y"
+   ],
+   [
+    10101,
+    "X"
+   ],
+   [
+    3201,
+    "Z"
+   ],
+   [
+    7102,
+    "Y"
+   ]
+  ],
+  "n_frames": 16,
+  "burst_fraction": 0.5,
+  "noise": {
+   "output_rms_fraction": 0.01,
+   "input_rms_fraction": 0.005
+  },
+  "seed": 20261117,
+  "zeta_range": [
+   0.0011572081922283134,
+   0.008850209876510548
+  ]
+ },
+ "modes_in_band": 27,
+ "isolated_modes_in_band": 2,
+ "scenarios": {
+  "T2s": {
+   "line_spacing_hz": 0.5,
+   "median_abs_err_db": 0.44611548971309,
+   "p95_abs_err_db": 12.54729255836778,
+   "peak_err_db_median": 0.0683142894664143,
+   "peak_err_db_min": -0.5531670832406035,
+   "coherence_median": 0.9925458737865244,
+   "coherence_p05": 0.7837721051722872,
+   "cond_gxx_median": 2.727392614836566,
+   "tail_to_burst_rms_median": 0.045919712169359556,
+   "tail_to_burst_rms_max": 0.4889307069526998,
+   "damping_recovered_fraction": 0.0,
+   "n_isolated_modes": 2,
+   "damping_details": [
+    {
+     "f_hz": 54.595822857978796,
+     "zeta_true": 0.0025207156596017393,
+     "zeta_est": null,
+     "lines_across_half_power": null,
+     "recovered_within_25pct": false
+    },
+    {
+     "f_hz": 88.04974634009335,
+     "zeta_true": 0.0034714573827548537,
+     "zeta_est": 0.004414689072341508,
+     "lines_across_half_power": 1,
+     "recovered_within_25pct": false
+    }
+   ]
+  },
+  "T4s": {
+   "line_spacing_hz": 0.25,
+   "median_abs_err_db": 0.20095239926949102,
+   "p95_abs_err_db": 9.840715012705045,
+   "peak_err_db_median": 0.017622879650250313,
+   "peak_err_db_min": -0.09317345502935238,
+   "coherence_median": 0.9988362419902646,
+   "coherence_p05": 0.8396973056116886,
+   "cond_gxx_median": 2.63537135812686,
+   "tail_to_burst_rms_median": 0.012317123132524772,
+   "tail_to_burst_rms_max": 0.09177802402829403,
+   "damping_recovered_fraction": 0.5,
+   "n_isolated_modes": 2,
+   "damping_details": [
+    {
+     "f_hz": 54.595822857978796,
+     "zeta_true": 0.0025207156596017393,
+     "zeta_est": null,
+     "lines_across_half_power": null,
+     "recovered_within_25pct": false
+    },
+    {
+     "f_hz": 88.04974634009335,
+     "zeta_true": 0.0034714573827548537,
+     "zeta_est": 0.0039649096965929005,
+     "lines_across_half_power": 3,
+     "recovered_within_25pct": true
+    }
+   ]
+  },
+  "T8s": {
+   "line_spacing_hz": 0.125,
+   "median_abs_err_db": 0.17495661632975623,
+   "p95_abs_err_db": 9.799018382691012,
+   "peak_err_db_median": 0.004318317800272961,
+   "peak_err_db_min": -0.02027625683457051,
+   "coherence_median": 0.999057818397977,
+   "coherence_p05": 0.8577484586523975,
+   "cond_gxx_median": 2.6568900490597915,
+   "tail_to_burst_rms_median": 0.007387964924881538,
+   "tail_to_burst_rms_max": 0.010599461068457343,
+   "damping_recovered_fraction": 0.5,
+   "n_isolated_modes": 2,
+   "damping_details": [
+    {
+     "f_hz": 54.595822857978796,
+     "zeta_true": 0.0025207156596017393,
+     "zeta_est": null,
+     "lines_across_half_power": null,
+     "recovered_within_25pct": false
+    },
+    {
+     "f_hz": 88.04974634009335,
+     "zeta_true": 0.0034714573827548537,
+     "zeta_est": 0.0038550328054535884,
+     "lines_across_half_power": 5,
+     "recovered_within_25pct": true
+    }
+   ]
+  },
+  "cache_2p03hz_from_T8s": {
+   "line_spacing_hz": 2.0345,
+   "damping_recovered_fraction": 0.0,
+   "n_isolated_modes": 2
+  },
+  "T16s": {
+   "line_spacing_hz": 0.0625,
+   "median_abs_err_db": 0.1745890656557926,
+   "p95_abs_err_db": 9.847657302441375,
+   "peak_err_db_median": 0.007371371591065438,
+   "peak_err_db_min": -0.033172743575840144,
+   "coherence_median": 0.9990588989686278,
+   "coherence_p05": 0.8554780175776149,
+   "cond_gxx_median": 2.6966803559292147,
+   "tail_to_burst_rms_median": 0.007117466193172481,
+   "tail_to_burst_rms_max": 0.008097647511787737,
+   "damping_recovered_fraction": 0.5,
+   "n_isolated_modes": 2,
+   "damping_details": [
+    {
+     "f_hz": 54.595822857978796,
+     "zeta_true": 0.0025207156596017393,
+     "zeta_est": null,
+     "lines_across_half_power": null,
+     "recovered_within_25pct": false
+    },
+    {
+     "f_hz": 88.04974634009335,
+     "zeta_true": 0.0034714573827548537,
+     "zeta_est": 0.003828336868786021,
+     "lines_across_half_power": 10,
+     "recovered_within_25pct": true
+    }
+   ]
+  }
+ },
+ "lines_across_half_power": {
+  "0.0625Hz": {
+   "fem_modes_45_200": {
+    "n": 27,
+    "min": 4.403857460062391,
+    "median": 15.399846203503177,
+    "n_ge_3": 27
+   },
+   "nasa_test_modes_45_200": {
+    "n": 22,
+    "min": 3.1806451731006384,
+    "median": 12.929563873879669,
+    "n_ge_3": 22
+   }
+  },
+  "0.125Hz": {
+   "fem_modes_45_200": {
+    "n": 27,
+    "min": 2.2019287300311956,
+    "median": 7.699923101751589,
+    "n_ge_3": 26
+   },
+   "nasa_test_modes_45_200": {
+    "n": 22,
+    "min": 1.5903225865503192,
+    "median": 6.4647819369398345,
+    "n_ge_3": 19
+   }
+  },
+  "0.25Hz": {
+   "fem_modes_45_200": {
+    "n": 27,
+    "min": 1.1009643650155978,
+    "median": 3.8499615508757943,
+    "n_ge_3": 16
+   },
+   "nasa_test_modes_45_200": {
+    "n": 22,
+    "min": 0.7951612932751596,
+    "median": 3.2323909684699172,
+    "n_ge_3": 12
+   }
+  },
+  "0.5Hz": {
+   "fem_modes_45_200": {
+    "n": 27,
+    "min": 0.5504821825077989,
+    "median": 1.9249807754378971,
+    "n_ge_3": 9
+   },
+   "nasa_test_modes_45_200": {
+    "n": 22,
+    "min": 0.3975806466375798,
+    "median": 1.6161954842349586,
+    "n_ge_3": 7
+   }
+  },
+  "2.0345Hz": {
+   "fem_modes_45_200": {
+    "n": 27,
+    "min": 0.13528684750744627,
+    "median": 0.47308448646790296,
+    "n_ge_3": 0
+   },
+   "nasa_test_modes_45_200": {
+    "n": 22,
+    "min": 0.09770966985440645,
+    "median": 0.3971972190304642,
+    "n_ge_3": 0
+   }
+  }
+ },
+ "runtime_s": 4.63665246963501
+}

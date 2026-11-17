@@ -1,0 +1,8 @@
+tier0_documents_and_shapes           27 files     3.53 MB compressed     5.03 MB unpacked  runs=13
+tier1_plans_and_reduced_models        7 files     9.76 MB compressed    22.19 MB unpacked  runs=7
+tier2_burst_frf_file                  1 files    53.33 MB compressed    59.02 MB unpacked  runs=1
+tier3_burst_time_histories            3 files   588.69 MB compressed   849.15 MB unpacked  runs=1
+tier4_frf_verification_plots        268 files    71.02 MB compressed   200.23 MB unpacked  runs=2
+tier5_shape_animations_optional      16 files    32.36 MB compressed    32.38 MB unpacked  runs=3
+planned total {'n_members': 322, 'compressed_bytes': 758677986, 'uncompressed_bytes': 1168004069} | Correlation folder {'n_members': 594, 'compressed_bytes': 1963287246, 'uncompressed_bytes': 2392697475} | unaccounted 0
+torque levels {'25': (4, [1, 2, 3, 4]), '50': (4, [1, 2, 3, 6]), '75': (4, [1, 2, 3, 4]), '100': (4, [1, 2, 3, 4]), '125': (4, [1, 2, 3, 4])}

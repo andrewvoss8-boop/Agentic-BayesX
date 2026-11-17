@@ -1,0 +1,94 @@
+{
+ "overall": "YELLOW",
+ "summary": "12G/4Y/0R",
+ "claim_ceiling": "GREEN gates certify tooling, provenance and pre-registration. They do not answer the foundation question, which stays open until NASA's files are fetched (A13, A14).",
+ "gates": [
+  {
+   "gate": "A0_required_artifacts",
+   "status": "GREEN",
+   "detail": "31 present"
+  },
+  {
+   "gate": "A1_zip_tools_known_answer",
+   "status": "GREEN",
+   "detail": "20 tests, 0 failed; live PyPI ranged-download test included"
+  },
+  {
+   "gate": "A2_archive_listings",
+   "status": "GREEN",
+   "detail": "6 archives: layout, size, June tail hashes and June member sample all consistent"
+  },
+  {
+   "gate": "A3_fetch_plan",
+   "status": "GREEN",
+   "detail": "322 members, 758.7 MB compressed planned; 0 Correlation members unaccounted"
+  },
+  {
+   "gate": "A4_nasa_deck_evidence",
+   "status": "GREEN",
+   "detail": "extraction hashes ok; 8/8 quotes verbatim; recomputed frequency differences within 0.050 percentage points of NASA's printed values"
+  },
+  {
+   "gate": "A5_digitizer_known_answer",
+   "status": "YELLOW",
+   "detail": "metric errors: median |dB| 0.053 dB (limit 0.5), corr 0.0049 (limit 0.03); calibration 0.90 px. Curve-level: median 0.66 dB (pre-set limit 0.5), p95 2.31 dB -> curve-level limit missed, metric-level met"
+  },
+  {
+   "gate": "A6_pilot_frequency_calibration",
+   "status": "GREEN",
+   "detail": "digitised peaks within 0.073 Hz of NASA's listed frequencies (pixel = 0.36 Hz). Pilot is exploratory (2 curves, post hoc)"
+  },
+  {
+   "gate": "A7_binary_probe_known_answer",
+   "status": "GREEN",
+   "detail": {
+    "size_reported": true,
+    "metadata_string_found_at_offset_100": true,
+    "channel_names_found": true,
+    "all_12_signatures_found_at_record_starts": true,
+    "record_period_is_top_distance": true,
+    "little_endian_floats_favoured": true
+   }
+  },
+  {
+   "gate": "A8_tier4_pipeline_dry_run",
+   "status": "GREEN",
+   "detail": "12 synthetic plots, max M1 error 0.093 dB, QA pass 1.00"
+  },
+  {
+   "gate": "A9_preregistration_frozen",
+   "status": "GREEN",
+   "detail": "264 frozen curves; file hash matches; array hash quoted in prereg_gated_analysis.md"
+  },
+  {
+   "gate": "A10_burst_estimator_rehearsal",
+   "status": "GREEN",
+   "detail": "H1 median error 0.17 dB, worst peak -0.02 dB at 8 s frames; 2 s frames leak (tail/burst up to 0.49, worst peak -0.55 dB)"
+  },
+  {
+   "gate": "A11_damping_estimator_coverage",
+   "status": "YELLOW",
+   "detail": "half-power damping demonstrated on 2 isolated modes only; 25 of 27 FEM modes in 45-200 Hz are clustered and need a polyreference estimator (not built). Estimator-free resolvability reported instead (lines across half-power width)"
+  },
+  {
+   "gate": "A12_figures_lint_and_legibility",
+   "status": "GREEN",
+   "detail": "tufte_lint: no WARN; legibility review recorded"
+  },
+  {
+   "gate": "A13_nasa_data_gate",
+   "status": "YELLOW",
+   "detail": "BLOCKED at 2026-11-17T11:51:16Z: burst files not yet fetched or parsed"
+  },
+  {
+   "gate": "A14_foundation_question",
+   "status": "YELLOW",
+   "detail": "OPEN: pre-registered tier-4 test and burst-file parse are staged but not run (network gate)"
+  },
+  {
+   "gate": "A15_runtime_and_replay",
+   "status": "GREEN",
+   "detail": "active 23.0 s <= elapsed 23.1 s; non-zero exits ['digitizer_test', 'nasa_gate'] (expected: ['digitizer_test', 'nasa_gate']); unexpected []"
+  }
+ ]
+}

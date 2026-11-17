@@ -91,6 +91,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.004618937644341801,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       45.0,
+       200.0
+      ],
+      "n_points": 431,
+      "median_abs_db": 1.0361613675984565,
+      "mean_signed_db": 1.1058404965846262,
+      "p90_abs_db": 5.127037105986737,
+      "corr_log": 0.933128490013695
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       45.0,
+       200.0
+      ],
+      "n_points": 433,
+      "median_abs_db": 3.553725055413734,
+      "mean_signed_db": 0.1879082003921009,
+      "p90_abs_db": 16.4488004965953,
+      "corr_log": 0.4221492566035888
      }
     },
     "card_h_band_46p8_258p4": {
@@ -121,6 +143,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.00338409475465313,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       46.79,
+       258.38
+      ],
+      "n_points": 589,
+      "median_abs_db": 2.1983923102109637,
+      "mean_signed_db": 2.6735276566090564,
+      "p90_abs_db": 9.385795874134162,
+      "corr_log": 0.8833577731130083
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       46.79,
+       258.38
+      ],
+      "n_points": 591,
+      "median_abs_db": 3.717934035427055,
+      "mean_signed_db": 0.3181821856208231,
+      "p90_abs_db": 15.661977267004161,
+      "corr_log": 0.3692878156408922
      }
     },
     "below_150": {
@@ -151,6 +195,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.006825938566552901,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       45.0,
+       150.0
+      ],
+      "n_points": 291,
+      "median_abs_db": 0.5239472062592176,
+      "mean_signed_db": 0.4943231245753411,
+      "p90_abs_db": 2.467588014498844,
+      "corr_log": 0.9865154679999758
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       45.0,
+       150.0
+      ],
+      "n_points": 293,
+      "median_abs_db": 3.022102354704106,
+      "mean_signed_db": -0.41002026649698314,
+      "p90_abs_db": 10.520873309675778,
+      "corr_log": 0.7054178884666021
      }
     },
     "from_150_to_200": {
@@ -181,6 +247,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.0,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       150.0,
+       200.0
+      ],
+      "n_points": 140,
+      "median_abs_db": 3.333872767914426,
+      "mean_signed_db": 2.376923034118212,
+      "p90_abs_db": 9.762245779017592,
+      "corr_log": 0.8479409764459723
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       150.0,
+       200.0
+      ],
+      "n_points": 140,
+      "median_abs_db": 7.355226624772362,
+      "mean_signed_db": 1.439287063238541,
+      "p90_abs_db": 21.860229491947006,
+      "corr_log": -0.2936784543657651
      }
     },
     "from_200_to_400": {
@@ -211,6 +299,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.0,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       200.0,
+       400.0
+      ],
+      "n_points": 558,
+      "median_abs_db": 7.349601104777606,
+      "mean_signed_db": 1.4115893654506237,
+      "p90_abs_db": 19.23667803139137,
+      "corr_log": 0.4681561244935995
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       200.0,
+       400.0
+      ],
+      "n_points": 558,
+      "median_abs_db": 5.5561872200270805,
+      "mean_signed_db": 1.7354079471184123,
+      "p90_abs_db": 13.199182678183819,
+      "corr_log": 0.49943579348807926
      }
     }
    }
@@ -299,6 +409,28 @@
       "test_clipped": 0.004618937644341801,
       "fem_clipped": 0.006928406466512702,
       "unresolved_gap": 0.009237875288683603
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       45.0,
+       200.0
+      ],
+      "n_points": 430,
+      "median_abs_db": 1.5495226506998738,
+      "mean_signed_db": 1.1747476663417116,
+      "p90_abs_db": 4.8878020992429825,
+      "corr_log": 0.9405477948668793
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       45.0,
+       200.0
+      ],
+      "n_points": 427,
+      "median_abs_db": 4.5052025176791375,
+      "mean_signed_db": -2.7451269814577293,
+      "p90_abs_db": 15.595299473976148,
+      "corr_log": 0.5633456125755255
      }
     },
     "card_h_band_46p8_258p4": {
@@ -329,6 +461,28 @@
       "test_clipped": 0.00338409475465313,
       "fem_clipped": 0.005076142131979695,
       "unresolved_gap": 0.00676818950930626
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       46.79,
+       258.38
+      ],
+      "n_points": 588,
+      "median_abs_db": 2.2403614543622665,
+      "mean_signed_db": 3.310766498485197,
+      "p90_abs_db": 10.214695693218994,
+      "corr_log": 0.8481273804364531
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       46.79,
+       258.38
+      ],
+      "n_points": 585,
+      "median_abs_db": 5.198442961137204,
+      "mean_signed_db": -3.8612454200349084,
+      "p90_abs_db": 13.8471582468691,
+      "corr_log": 0.5721486490185786
      }
     },
     "below_150": {
@@ -359,6 +513,28 @@
       "test_clipped": 0.006825938566552901,
       "fem_clipped": 0.010238907849829351,
       "unresolved_gap": 0.013651877133105802
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       45.0,
+       150.0
+      ],
+      "n_points": 290,
+      "median_abs_db": 0.9236249631752596,
+      "mean_signed_db": 0.5183668566162515,
+      "p90_abs_db": 2.0822366735549687,
+      "corr_log": 0.9879219785451216
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       45.0,
+       150.0
+      ],
+      "n_points": 287,
+      "median_abs_db": 3.625204459021684,
+      "mean_signed_db": -3.2924528492695226,
+      "p90_abs_db": 9.309357609112206,
+      "corr_log": 0.819950658202376
      }
     },
     "from_150_to_200": {
@@ -389,6 +565,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.0,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       150.0,
+       200.0
+      ],
+      "n_points": 140,
+      "median_abs_db": 3.3806200199975476,
+      "mean_signed_db": 2.5343936293444496,
+      "p90_abs_db": 8.513584433110514,
+      "corr_log": 0.8591941698554897
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       150.0,
+       200.0
+      ],
+      "n_points": 140,
+      "median_abs_db": 8.07595450981095,
+      "mean_signed_db": -1.6231089524435511,
+      "p90_abs_db": 19.059982796502517,
+      "corr_log": -0.01713485299964341
      }
     },
     "from_200_to_400": {
@@ -419,6 +617,28 @@
       "test_clipped": 0.0,
       "fem_clipped": 0.0,
       "unresolved_gap": 0.0
+     },
+     "project_fem_vs_nasa_fem": {
+      "band_hz": [
+       200.0,
+       400.0
+      ],
+      "n_points": 558,
+      "median_abs_db": 7.6618233690001745,
+      "mean_signed_db": 1.1716576210485015,
+      "p90_abs_db": 20.583619600135556,
+      "corr_log": 0.4780110147298134
+     },
+     "nasa_test_vs_project_fem": {
+      "band_hz": [
+       200.0,
+       400.0
+      ],
+      "n_points": 558,
+      "median_abs_db": 9.035524442058996,
+      "mean_signed_db": -5.881371550552087,
+      "p90_abs_db": 19.58903146859133,
+      "corr_log": 0.32691413314312157
      }
     }
    }
@@ -477,7 +697,15 @@
     0.4887861686022176
    ],
    "median_abs_db_mean_of_two": 3.4595823303697473,
-   "corr_log_mean_of_two": 0.40891252444234016
+   "corr_log_mean_of_two": 0.40891252444234016,
+   "project_fem_vs_nasa_fem_db_each": [
+    1.0361613675984565,
+    1.5495226506998738
+   ],
+   "nasa_test_vs_project_fem_db_each": [
+    3.553725055413734,
+    4.5052025176791375
+   ]
   },
   "card_h_band_46p8_258p4": {
    "median_abs_db_each": [
@@ -489,7 +717,15 @@
     0.5879469723540438
    ],
    "median_abs_db_mean_of_two": 4.439518048449167,
-   "corr_log_mean_of_two": 0.43090846635194546
+   "corr_log_mean_of_two": 0.43090846635194546,
+   "project_fem_vs_nasa_fem_db_each": [
+    2.1983923102109637,
+    2.2403614543622665
+   ],
+   "nasa_test_vs_project_fem_db_each": [
+    3.717934035427055,
+    5.198442961137204
+   ]
   },
   "below_150": {
    "median_abs_db_each": [
@@ -501,7 +737,15 @@
     0.8177494552845994
    ],
    "median_abs_db_mean_of_two": 2.904171570696631,
-   "corr_log_mean_of_two": 0.7703045348402586
+   "corr_log_mean_of_two": 0.7703045348402586,
+   "project_fem_vs_nasa_fem_db_each": [
+    0.5239472062592176,
+    0.9236249631752596
+   ],
+   "nasa_test_vs_project_fem_db_each": [
+    3.022102354704106,
+    3.625204459021684
+   ]
   },
   "from_150_to_200": {
    "median_abs_db_each": [
@@ -513,7 +757,15 @@
     -0.06697622282048608
    ],
    "median_abs_db_mean_of_two": 8.228058579814192,
-   "corr_log_mean_of_two": -0.25384582072376566
+   "corr_log_mean_of_two": -0.25384582072376566,
+   "project_fem_vs_nasa_fem_db_each": [
+    3.333872767914426,
+    3.3806200199975476
+   ],
+   "nasa_test_vs_project_fem_db_each": [
+    7.355226624772362,
+    8.07595450981095
+   ]
   },
   "from_200_to_400": {
    "median_abs_db_each": [
@@ -525,7 +777,15 @@
     0.628623572788339
    ],
    "median_abs_db_mean_of_two": 7.095825391687218,
-   "corr_log_mean_of_two": 0.6101935778240593
+   "corr_log_mean_of_two": 0.6101935778240593,
+   "project_fem_vs_nasa_fem_db_each": [
+    7.349601104777606,
+    7.6618233690001745
+   ],
+   "nasa_test_vs_project_fem_db_each": [
+    5.5561872200270805,
+    9.035524442058996
+   ]
   }
  }
 }

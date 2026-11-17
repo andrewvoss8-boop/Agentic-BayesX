@@ -28,6 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WS = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import digitize_frf as dg  # noqa: E402
+import fem_frf  # noqa: E402
 
 DD = os.path.join(WS, "data", "nasa_deck")
 FIGS = {
@@ -94,6 +95,10 @@ def digitise_pair(key, meta):
     fc["max_abs_err_hz"] = float(np.nanmax(fc["test_abs_err_hz_vs_nasa_table"] + fc["fem_abs_err_hz_vs_nasa_table"]))
     t, m = cv["test"]["log10_centre"], cv["fem"]["log10_centre"]
     ts, ms = dg.band_smooth_power(f, t, 2.03), dg.band_smooth_power(f, m, 2.03)
+    fem = fem_frf.FEM()
+    dof = (int(meta["dof"].split()[0]), meta["dof"].split()[1][0])
+    proj = fem.column_mean_log10(f, cal.hz_per_px, dof, dof, fem.zeta("measured_interp"))
+    proj = np.where(np.isnan(t) & np.isnan(m), np.nan, proj)
     for name, (lo, hi) in BANDS.items():
         b = (f >= lo) & (f <= hi)
         res["bands"][name] = {
@@ -102,7 +107,9 @@ def digitise_pair(key, meta):
             "fraction_columns": {"test_hidden_under_fem": float(flags_test["hidden"][b].mean()),
                                  "test_clipped": float(flags_test["clipped"][b].mean()),
                                  "fem_clipped": float(flags_fem["clipped"][b].mean()),
-                                 "unresolved_gap": float((flags_test["gap"] | flags_fem["gap"])[b].mean())}}
+                                 "unresolved_gap": float((flags_test["gap"] | flags_fem["gap"])[b].mean())},
+            "project_fem_vs_nasa_fem": dg.compare(f, proj, m, lo, hi),
+            "nasa_test_vs_project_fem": dg.compare(f, t, proj, lo, hi)}
     return res
 
 
@@ -145,7 +152,9 @@ def main():
             "median_abs_db_each": [v["median_abs_db"] for v in vals],
             "corr_log_each": [v["corr_log"] for v in vals],
             "median_abs_db_mean_of_two": float(np.mean([v["median_abs_db"] for v in vals])),
-            "corr_log_mean_of_two": float(np.mean([v["corr_log"] for v in vals]))}
+            "corr_log_mean_of_two": float(np.mean([v["corr_log"] for v in vals])),
+            "project_fem_vs_nasa_fem_db_each": [out["figures"][k]["bands"][band]["project_fem_vs_nasa_fem"]["median_abs_db"] for k in FIGS],
+            "nasa_test_vs_project_fem_db_each": [out["figures"][k]["bands"][band]["nasa_test_vs_project_fem"]["median_abs_db"] for k in FIGS]}
     json.dump(out, open(os.path.join(WS, "out", "frf_wall_pilot.json"), "w"), indent=1)
     for k, r in out["figures"].items():
         print(k, "freq check max err Hz", round(r["frequency_check"]["max_abs_err_hz"], 3),
@@ -154,7 +163,8 @@ def main():
         for b, v in r["bands"].items():
             p, s = v["pixel_grid"], v["smoothed_2p03hz"]
             print(f"   {b:26} median|dB| {p['median_abs_db']:.2f} corr {p['corr_log']:+.3f} (n={p['n_points']})"
-                  f" | 2.03 Hz smoothed {s['median_abs_db']:.2f} {s['corr_log']:+.3f} | clipped test/fem "
+                  f" | 2.03 Hz smoothed {s['median_abs_db']:.2f} {s['corr_log']:+.3f} | projFEM-NASAFEM {v['project_fem_vs_nasa_fem']['median_abs_db']:.2f}"
+                  f" test-projFEM {v['nasa_test_vs_project_fem']['median_abs_db']:.2f} | clipped test/fem "
                   f"{v['fraction_columns']['test_clipped']:.3f}/{v['fraction_columns']['fem_clipped']:.3f} hidden {v['fraction_columns']['test_hidden_under_fem']:.3f}")
     print("repeatability", json.dumps(out["single_impact_repeatability_slide19"]["bands"]))
     print("resolution floor dB", out["single_impact_repeatability_slide19"]["resolution_floor_db"])

@@ -1,0 +1,1 @@
+{"active_runtime_s": 23.0, "elapsed_wallclock_s": 23.1, "note": "offline replay; excludes human wait and the network-gated fetch", "failed_steps": 2, "failed_step_names": ["digitizer_test","nasa_gate"]}

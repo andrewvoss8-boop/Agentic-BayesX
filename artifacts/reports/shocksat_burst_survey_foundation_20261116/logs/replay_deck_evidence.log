@@ -1,0 +1,49 @@
+{
+ "source": {
+  "deck_member": "FEM/Correlation/Final_Summary_Documentation_101521_rev1.pptx",
+  "deck_bytes": 74518670,
+  "deck_crc32": "6a9a1c7f",
+  "deck_sha256": "04efa1660b9db0d0aa06d5d0b908f9ff85a3dbc254fe67c0eef241d8b2d4cae9"
+ },
+ "final_correlation": {
+  "n_test_modes": 25,
+  "f_test_range_hz": [
+   54.19,
+   222.17
+  ],
+  "abs_pct_diff_median": 4.3,
+  "abs_pct_diff_max": 14.6,
+  "n_within_5pct": 16,
+  "xo_best_median_pct": 83,
+  "n_xo_ge_90": 7,
+  "n_xo_ge_80": 15,
+  "below_150hz": {
+   "n": 10,
+   "abs_pct_diff_median": 4.4,
+   "xo_best_median_pct": 93.5
+  },
+  "from_150hz": {
+   "n": 15,
+   "abs_pct_diff_median": 4.0,
+   "xo_best_median_pct": 79
+  },
+  "max_abs_gap_nasa_vs_recomputed_pct_diff": 0.04999999999999982
+ },
+ "pretest_sensor_set": {
+  "n_fem_modes": 24,
+  "pseudo_orthogonality_diag_median_below_150hz": 94.0,
+  "pseudo_orthogonality_diag_median_from_150hz": 59.5,
+  "pseudo_orthogonality_diag_min": 48,
+  "tam_freq_error_median_below_150hz": 1.62,
+  "tam_freq_error_median_from_150hz": 12.72,
+  "tam_freq_error_max": 18.04,
+  "fem_freqs_hz_header_check": []
+ },
+ "test_self_orthogonality": {
+  "n_modes": 33,
+  "offdiag_median_pct": 3.0,
+  "offdiag_max_pct": 69,
+  "n_offdiag_gt_10pct_pairs": 77
+ }
+}
+quotes found verbatim: [(1, 'configuration_used', True), (1, 'shaker_data_excluded', True), (12, 'sensor_set_limit', True), (16, 'modal_bandwidth', True), (18, 'impact_location_sensitivity', True), (19, 'impact_averaging', True), (46, 'modes_from_two_runs', True), (9, 'bottom_box_unresolved', True)]

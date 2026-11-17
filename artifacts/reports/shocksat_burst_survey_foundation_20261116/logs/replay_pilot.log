@@ -1,0 +1,14 @@
+slide16_drive_point_11101X freq check max err Hz 0.073 | test peaks [54.26, 70.0, 85.74] | fem peaks [54.62, 73.93, 87.88]
+   p1_band_45_200             median|dB| 3.32 corr +0.329 (n=431) | 2.03 Hz smoothed 3.38 +0.344 | projFEM-NASAFEM 1.04 test-projFEM 3.55 | clipped test/fem 0.000/0.005 hidden 0.062
+   card_h_band_46p8_258p4     median|dB| 5.22 corr +0.274 (n=589) | 2.03 Hz smoothed 4.98 +0.297 | projFEM-NASAFEM 2.20 test-projFEM 3.72 | clipped test/fem 0.000/0.003 hidden 0.061
+   below_150                  median|dB| 2.75 corr +0.723 (n=291) | 2.03 Hz smoothed 2.56 +0.735 | projFEM-NASAFEM 0.52 test-projFEM 3.02 | clipped test/fem 0.000/0.007 hidden 0.075
+   from_150_to_200            median|dB| 8.18 corr -0.441 (n=140) | 2.03 Hz smoothed 7.43 -0.447 | projFEM-NASAFEM 3.33 test-projFEM 7.36 | clipped test/fem 0.000/0.000 hidden 0.036
+   from_200_to_400            median|dB| 7.06 corr +0.592 (n=558) | 2.03 Hz smoothed 6.98 +0.607 | projFEM-NASAFEM 7.35 test-projFEM 5.56 | clipped test/fem 0.000/0.000 hidden 0.039
+slide17_drive_point_11110Y freq check max err Hz 0.073 | test peaks [54.26, 70.0, 74.65, 85.74] | fem peaks [54.62, 72.5, 87.88]
+   p1_band_45_200             median|dB| 3.60 corr +0.489 (n=424) | 2.03 Hz smoothed 3.43 +0.509 | projFEM-NASAFEM 1.55 test-projFEM 4.51 | clipped test/fem 0.005/0.007 hidden 0.014
+   card_h_band_46p8_258p4     median|dB| 3.66 corr +0.588 (n=582) | 2.03 Hz smoothed 3.53 +0.607 | projFEM-NASAFEM 2.24 test-projFEM 5.20 | clipped test/fem 0.003/0.005 hidden 0.034
+   below_150                  median|dB| 3.06 corr +0.818 (n=284) | 2.03 Hz smoothed 3.01 +0.829 | projFEM-NASAFEM 0.92 test-projFEM 3.63 | clipped test/fem 0.007/0.010 hidden 0.007
+   from_150_to_200            median|dB| 8.27 corr -0.067 (n=140) | 2.03 Hz smoothed 8.36 -0.116 | projFEM-NASAFEM 3.38 test-projFEM 8.08 | clipped test/fem 0.000/0.000 hidden 0.029
+   from_200_to_400            median|dB| 7.14 corr +0.629 (n=558) | 2.03 Hz smoothed 7.01 +0.661 | projFEM-NASAFEM 7.66 test-projFEM 9.04 | clipped test/fem 0.000/0.000 hidden 0.039
+repeatability {"45_200": {"n_columns": 696, "median_spread_db": 0.4284448246585887, "p90_spread_db": 2.1026659782407506, "max_spread_db": 9.066659544920451, "fraction_columns_one_curve_visible": 0.10632183908045977}, "45_150": {"n_columns": 471, "median_spread_db": 0.32842439963182213, "p90_spread_db": 1.3574949301708605, "max_spread_db": 7.71708422909398, "fraction_columns_one_curve_visible": 0.1337579617834395}, "150_200": {"n_columns": 225, "median_spread_db": 0.8810369389434036, "p90_spread_db": 3.072384436686969, "max_spread_db": 9.066659544920451, "fraction_columns_one_curve_visible": 0.04888888888888889}, "200_400": {"n_columns": 896, "median_spread_db": 1.1404307344551046, "p90_spread_db": 3.2480086588060333, "max_spread_db": 8.439656361772021, "fraction_columns_one_curve_visible": 0.030133928571428572}}
+resolution floor dB 0.40540540540540515

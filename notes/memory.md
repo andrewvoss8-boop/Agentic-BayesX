@@ -1,7 +1,16 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
-- 2026-11-16 **CLOUD SESSION RESTART — HUMAN DIRECTION RECORDED; BURST-SURVEY FOUNDATION CHECK IN PROGRESS.**
+- 2026-11-17 **BURST-SURVEY FOUNDATION CHECK STAGED TO THE NETWORK GATE — CHECKER OVERALL YELLOW 12G/4Y/0R.**
+  Workspace `artifacts/reports/shocksat_burst_survey_foundation_20261116/` (`packet.md`; replay `bash run_all.sh`).
+  BLOCKER: `mediaex-server.larc.nasa.gov` refused by this cloud environment's network policy (retried 2026-11-17 11:31Z on
+  Andrew's 'try again'; still 403). Session environment env_01JWZ89si4Ge3sKLzeqVSNKR. NEXT ACTION once allowed: `bash gated_run.sh`
+  (fetches tiers 0,1,2,4 = 138 MB to ~/.cache, scores the 262 unseen NASA plots per `prereg_gated_analysis.md`), then
+  `WITH_TIME_HISTORIES=1` for the 589 MB burst time histories and gates F1-F5. Do NOT change prereg rules after seeing plots.
+  KEY FACTS: NASA excluded shaker runs from correlation (attachment blocks mass-load modes); NASA sensor set weak above 150 Hz;
+  exploratory pilot (2 NASA drive points) NASA FEM vs NASA modal test 2.8-3.1 dB below 150 Hz vs project's 10.0 dB median on shock
+  sensors; 0/22 NASA modes resolvable for damping at 2.03 Hz lines, 19/22 at 0.125 Hz. Correction logged (D10): June work DID use the
+  burst-run frequency tables; raw .ati/.afu never used.
   CONTINUITY GAP (read first): this branch's notes stop at 2026-07-22. The local working copy was deleted on
   2026-10-02 after a private backup. Work from 2026-07-23 to 2026-08-12 (Cards G, H, I, J, master direction
   review, shape-field transfer, modal-test standards memo, failure-attribution handoff) was never pushed here.
@@ -24,10 +33,6 @@
   survey (time histories for runs 78, 99, 139 and one FRF file), the fixed-base run 139, and the bolt-torque
   sweep as the higher-quality campaign the August handoff asked for. (b) Recovered private material stays in
   the private repo; only new work and summary-level pointers are committed to this public repo.
-  NEXT ACTION: workspace `artifacts/reports/shocksat_burst_survey_foundation_20261116/` — verify from evidence
-  already in hand (June zip listings, NASA's correlation summary deck, test log) what the burst files are;
-  stage the byte-range fetch, parser and FRF estimator; pre-register the analysis; then stop at the host gate.
-  OPEN AMBIGUITIES: binary layout of `.ati`/`.afu` is unverified until bytes are in hand.
 - 2026-07-22 **CARD E CODEX UN-SUFFIXED EXECUTION COMPLETE — STOP_SYNTHETIC, CHECKER YELLOW.**
   Workspace `artifacts/reports/shocksat_structured_discrepancy_codex_20260722/`; replay `bash run_all.sh`.
   Immutable checker: **OVERALL YELLOW {GREEN:16, YELLOW:1, RED:0}**. S0 false positives 0/20;

@@ -1,5 +1,8 @@
 # Lessons Learned
 
+## 2026-11-17 Check the cheapest data that can falsify the expensive plan first
+Before downloading 0.6 GB of undocumented binary burst files, NASA's own correlation deck (already in hand) carried two decisive facts: NASA excluded the shaker runs because the attachment blocks mass-loaded the modes, and NASA's two drive-point FRFs sit 3 to 5 dB from its FEM where the project's shock-sensor curves sit at 10 dB. The 71 MB of NASA comparison plots can decide the larger question with a frozen, pre-registered digitisation before any raw file is parsed. Also: a dry run on synthetic data caught a content-dependent QA rule (peak near 54.19 Hz) that would have silently excluded node-line responses; fix QA rules before the deciding data are seen.
+
 ## 2026-07-20 Gross classification can hide failure on the engineering decision pair (MPL)
 The existing response-only MPL records classified six deliberately broad model variants well (balanced recovery
 0.814 acoustic and 0.947 tap features), yet they could not separate the decision-relevant untouched B0 model from

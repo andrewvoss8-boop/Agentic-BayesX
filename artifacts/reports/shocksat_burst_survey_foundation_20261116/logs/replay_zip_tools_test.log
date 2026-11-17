@@ -1,0 +1,22 @@
+PASS short tail asks for a specific number of bytes
+PASS directory parsed from the minimum tail
+PASS names, CRC, sizes, offsets and methods match zipfile for all entries
+PASS non-ASCII name decoded
+PASS layout consistency has no violations
+PASS archive size inferred from the tail equals the true size
+PASS member spans tile [0, directory offset) exactly
+PASS probe reports size and range support
+PASS remote directory equals local directory
+PASS all members fetched by byte range are byte-identical to the originals
+PASS plan merges adjacent members into one contiguous run
+PASS server that ignores Range is refused
+PASS corrupted bytes fail the CRC check
+PASS streamed archive sets the data-descriptor flag on every member
+PASS data-descriptor surplus is 12 to 24 bytes per member
+PASS members of a data-descriptor archive fetch byte-identically
+UNREACHABLE: ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=9): Max retries exceeded with url: /none.zip (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [Errno 111] Connection refused"))
+PASS unreachable host returns exit code 2
+PASS PyPI: sha256 of the full wheel matches the index
+PASS PyPI: directory read by Range equals zipfile on the full download
+PASS PyPI: largest member fetched by Range is byte-identical
+20 tests, 0 failed -> qa/zip_tools_unit.json

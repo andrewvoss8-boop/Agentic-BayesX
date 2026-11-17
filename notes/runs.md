@@ -1244,3 +1244,10 @@ runner-card audit**; science remains not run. The card now evaluates immutable d
 normalized orthogonality residual ≤1e-8). Joint Stage 2 is automatically permitted only when protected E3
 transfers across both spatial and frequency folds and fits the remaining runtime; it compares J1 with protected
 J3 only. The original Task Card D and its separate run remain untouched.
+
+## 2026-11-17 — NASA burst-survey foundation check (lead, cloud session)
+- Trial: can NASA's burst-random modal survey (runs 78, 99 free-free; 139 fixed base), its FRF file and its 264 test-vs-FEM plots serve as the higher-quality data the 2026-08-10 handoff asked for? NASA host blocked, so: exact listings from June directory tails, NASA deck evidence, exploratory two-curve pilot, frozen 264-curve pre-registration, burst rehearsal.
+- Command: `bash artifacts/reports/shocksat_burst_survey_foundation_20261116/run_all.sh` (offline; NETWORK=1 adds PyPI ranged-download test and the NASA gate); `bash artifacts/reports/shocksat_burst_survey_foundation_20261116/gated_run.sh` to continue.
+- Checker result: OVERALL YELLOW 12G/4Y/0R (Y: digitiser curve-level limit 0.66 vs 0.5 dB with metric-level limits met; damping estimator only for 2 isolated modes; NASA host BLOCKED; foundation question OPEN).
+- Key metrics: Correlation folder 594 members 1.96 GB compressed, plan needs 0.73 GB; NASA final correlation median |df| 4.3 %, median cross-orthogonality 83 % (93.5 % <150 Hz, 79 % >=150 Hz); pilot drive points NASA test vs NASA FEM 2.75/3.06 dB <150 Hz, 8.18/8.27 dB 150-200 Hz, 4.98/3.53 dB in Card H band at 2.03 Hz vs Card H median 10.02 dB (min 4.77); project FEM vs NASA FEM 0.52/0.92 dB <150 Hz; NASA modes with >=3 lines across half-power width: 0/22 at 2.03 Hz, 19/22 at 0.125 Hz.
+- Lessons: see lessons-learned 2026-11-17.

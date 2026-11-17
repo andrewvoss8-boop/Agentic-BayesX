@@ -1,0 +1,35 @@
+{
+ "frozen_utc": "2026-11-17",
+ "purpose": "pre-registered predictions for NASA's 264 FRF verification plots; computed before any plot was seen (the two drive-point plots on deck slides 16 and 17 HAD been seen and are excluded from the confirmatory set)",
+ "n_curves": 264,
+ "n_responses_per_drive": 132,
+ "drives": {
+  "11101X": [
+   11101,
+   "X"
+  ],
+  "11110Y": [
+   11110,
+   "Y"
+  ]
+ },
+ "grid_hz": [
+  10.0,
+  400.0,
+  0.25
+ ],
+ "damping_rule": "measured_interp (see fem_frf.py)",
+ "zeta_elastic_range": [
+  0.0011572081922283134,
+  0.008850209876510548
+ ],
+ "inputs_sha256": {
+  "obs_V.npy": "c6853a10fc555aec9a8728a12d6dedc27607f9655c3591b9aec48cbdc718105a",
+  "eigvals.npy": "98cd2ed87e69f1eaa9b46d5064f0935dd457a00626780058150f68c7f580c335",
+  "measured_modes.npz": "16ab8fc256484d99afedd0a4e81ff8b5e58b4f4db86a1d9be163722caad74fbf",
+  "fem_frf.py": "0ddcc3bf86478515d07e915a1f29ec14cbbc7b7570b2679b77c836c204f31a2f",
+  "freeze_predictions.py": "1aeb948579e73e05f4d2722d8d3fb8c3870e778808b1236ccd22b79956f49ccb"
+ },
+ "output_sha256": "34919ba94142ab5b11266245cc16072e74ead77e701d72489059e84cdb27bed2",
+ "array_sha256": "a6f3bdec1c4c25b00ef84ce9086a946d4645321d782d982b04e88f13001ed484"
+}

@@ -1,5 +1,14 @@
 # Todo
 
+## 2026-11-17 NASA burst-survey foundation check
+
+- [x] Save the recovered extract (zip sent; private repo branch claude/ecstatic-carson-c3e4f9).
+- [x] Headers-only request to NASA: BLOCKED by the cloud environment's network policy (proxy 403).
+- [x] Exact fetch plan, tested ranged fetcher, binary probe, NASA deck evidence, exploratory pilot, frozen 264-curve pre-registration, burst rehearsal.
+- [ ] Andrew: allow `mediaex-server.larc.nasa.gov` in the cloud environment (Network access, Limited, Allowed domains).
+- [ ] Then `bash artifacts/reports/shocksat_burst_survey_foundation_20261116/gated_run.sh`; score the 262 unseen plots (Test 1); then `WITH_TIME_HISTORIES=1` and foundation gates F1-F5.
+- [ ] If SUPPORTED: write a decoder for .ati/.afu and a polyreference damping estimator; model the shaker blocks (masses from the test plan).
+
 ## 2026-07-22 ShockSat advisor report — WORKING-TWIN FRF CORRECTION IN PROGRESS
 
 Human priority: while Task Card A finishes its A2 sweep, correct Section 5.4 using the retained converged

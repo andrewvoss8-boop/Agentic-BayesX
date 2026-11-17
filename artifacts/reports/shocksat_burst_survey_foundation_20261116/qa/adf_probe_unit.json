@@ -1,0 +1,21 @@
+{
+ "checks": {
+  "size_reported": true,
+  "metadata_string_found_at_offset_100": true,
+  "channel_names_found": true,
+  "all_12_signatures_found_at_record_starts": true,
+  "record_period_is_top_distance": true,
+  "little_endian_floats_favoured": true
+ },
+ "all_pass": true,
+ "top_periods": [
+  {
+   "period_bytes": 17408,
+   "count": 54
+  },
+  {
+   "period_bytes": 17392,
+   "count": 1
+  }
+ ]
+}
