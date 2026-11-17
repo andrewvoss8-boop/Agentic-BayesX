@@ -14,9 +14,10 @@ Per plot (file Acceleration_<node><axis><sign>.png):
     not read); the test-minus-FEM metric does not depend on the y anchor;
  3. M1 per curve: median over 46.79-258.38 Hz of |20 log10(test/NASA FEM)| after both
     curves are power-averaged over 2.03 Hz (the line spacing of the project's shock caches);
- 4. M2 per curve: same against the frozen project FEM, after the plot's absolute level is
-    fixed by rounding to a whole decade the median offset between the project FEM and the
-    digitised NASA FEM over 12-40 Hz (mass-controlled region below the first mode);
+ 4. M2 per curve: same against the frozen project FEM. The plot's absolute level comes from
+    NASA's own numeric FEM FRF (SOL 111 punch files, nasa_pch.py): unit factor c fixed once
+    from the two seen drive-point plots; per plot, decade k = round(median(log10(c|pch|) - red));
+    the fractional residual is the per-plot digitiser check (<= 0.1 decade to enter M2);
  5. QA gate (content-free): gridline-fit residual <= 1 px, panel edges at 10 and 400 Hz
     within 1 Hz, clipped fraction in band <= 0.10. M2 additionally needs an anchor residual
     <= 0.1 decade. Diagnostic only: distance of the nearest test peak to 54.19 Hz.
@@ -50,7 +51,7 @@ NAME = re.compile(r"Acceleration_(\d+)([XYZ])([+-])\.png$")
 THRESH = {"supported_m1_db": 6.0, "not_supported_m1_db": 8.0, "ci_upper_for_supported_db": 8.0}
 
 
-def score_plot(path, fem, drive_key, zeta, legend_frac=(0.13, 0.25)):
+def score_plot(path, fem, drive_key, zeta, pch=None, c_unit=None, legend_frac=(0.13, 0.25)):
     m = NAME.search(os.path.basename(path))
     node, axis = int(m.group(1)), m.group(2)
     im = dg.load_rgb(path)
@@ -63,6 +64,7 @@ def score_plot(path, fem, drive_key, zeta, legend_frac=(0.13, 0.25)):
     cal = dg.calibrate(im, 50.0, 50.0, 0.0, anchor_row)
     leg = (int(cal.r1 - legend_frac[0] * (cal.r1 - cal.r0)), cal.r1, int(cal.c1 - legend_frac[1] * (cal.c1 - cal.c0)), cal.c1)
     cv = dg.extract(im, cal, {"test": "black", "fem": "red"}, exclude_boxes=[leg])
+    raw_t = cv["test"]["log10_centre"].copy()
     ft = dg.classify_gaps(cv, "test", "fem")
     ff = dg.classify_gaps(cv, "fem", "test")
     f = cv["test"]["f_hz"]
@@ -74,30 +76,37 @@ def score_plot(path, fem, drive_key, zeta, legend_frac=(0.13, 0.25)):
            "calib_resid_px": max(cal.x_fit_resid_px, cal.y_fit_resid_px)}
     b = (f >= BAND[0]) & (f <= BAND[1])
     out["clipped_frac"] = float((ft["clipped"] | ff["clipped"])[b].mean())
+    # sensitivity: clipped test columns imputed at the nearest drawn value (the panel edge)
+    idx = np.where(~np.isnan(raw_t))[0]
+    t_imp = t.copy()
+    if len(idx):
+        miss = np.where(np.isnan(t_imp))[0]
+        t_imp[miss] = raw_t[idx[np.clip(np.searchsorted(idx, miss), 0, len(idx) - 1)]]
+    out["m1_imputed_median_abs_db"] = dg.compare(f, dg.band_smooth_power(f, t_imp, SMOOTH_HZ), ns, *BAND)["median_abs_db"]
     pk = [float(f[i]) for i in range(5, len(f) - 5)
           if 50 < f[i] < 60 and not np.isnan(cv["test"]["log10_top"][i])
           and cv["test"]["log10_top"][i] >= np.nanmax(cv["test"]["log10_top"][i - 5:i + 6])]
     out["freq_check_err_hz"] = float(min(abs(p - 54.19) for p in pk)) if pk else float("nan")
-    # M2: absolute level from the project FEM in the mass-controlled band
     drv = DRIVES[drive_key]
-    if fem.is_measured(node, axis):
-        proj = fem.column_mean_log10(f, cal.hz_per_px, (node, axis), drv, zeta)
-        a = (f >= ANCHOR_BAND[0]) & (f <= ANCHOR_BAND[1]) & ~np.isnan(n)
-        off = float(np.median(proj[a] - n[a])) if a.sum() > 10 else float("nan")
-        k = round(off) if np.isfinite(off) else 0
+    out["in_frozen_set"] = bool(node in fem.nodes and fem.is_measured(node, axis))
+    if pch is not None and c_unit is not None and node in pch and out["in_frozen_set"]:
+        pf, pm, _ = pch[node]
+        ref = np.log10(np.interp(f, pf, pm[:, "XYZ".index(axis)])) + c_unit
+        a = ~np.isnan(n) & (f >= 12) & (f <= 395)
+        off = float(np.median(ref[a] - n[a]))
+        k = round(off)
         out["anchor_offset_decades"] = off
-        out["anchor_residual_decades"] = off - k if np.isfinite(off) else float("nan")
+        out["anchor_residual_decades"] = off - k
+        out["digitised_red_vs_nasa_numeric_db"] = float(np.median(np.abs(20 * (n[a] + k - ref[a]))))
+        proj = fem.column_mean_log10(f, cal.hz_per_px, (node, axis), drv, zeta)
         m2 = dg.compare(f, dg.band_smooth_power(f, t + k, SMOOTH_HZ), dg.band_smooth_power(f, proj, SMOOTH_HZ), *BAND)
         out["m2_median_abs_db"] = m2["median_abs_db"]
         out["m2_corr_log"] = m2["corr_log"]
-        nasa_vs_proj = dg.compare(f, dg.band_smooth_power(f, n + k, SMOOTH_HZ), dg.band_smooth_power(f, proj, SMOOTH_HZ), *BAND)
-        out["nasa_fem_vs_project_fem_median_abs_db"] = nasa_vs_proj["median_abs_db"]
     out["axis_edges_hz"] = [float(cal.col_to_hz(cal.c0)), float(cal.col_to_hz(cal.c1))]
     # QA gate is content-free: gridline fit, axis extent 10-400 Hz, clipping. The 54.19 Hz
     # peak check is a reported diagnostic only (a response on a node line of mode 1 has no peak).
     out["qa_pass"] = bool(out["calib_resid_px"] <= 1.0 and out["clipped_frac"] <= 0.10
                           and abs(out["axis_edges_hz"][0] - 10.0) <= 1.0 and abs(out["axis_edges_hz"][1] - 400.0) <= 1.0)
-    out["anchor_pass"] = bool(np.isfinite(out.get("anchor_residual_decades", np.nan)) and abs(out["anchor_residual_decades"]) <= 0.1)
     return out
 
 
@@ -113,37 +122,95 @@ def boot_median(vals, groups, n=2000, seed=20261117):
     return [float(np.percentile(meds, 2.5)), float(np.percentile(meds, 97.5))]
 
 
+EXCLUSION_CAP = 0.15
+M2_COVERAGE_MIN = 0.85
+
+
+def verdict_of(m1, ci_up, m2):
+    if m1 >= THRESH["not_supported_m1_db"] or (m2 is not None and m2 >= THRESH["not_supported_m1_db"]):
+        return "NOT_SUPPORTED"
+    if m1 <= THRESH["supported_m1_db"] and ci_up < THRESH["ci_upper_for_supported_db"] and m2 is not None and m2 <= THRESH["supported_m1_db"]:
+        return "SUPPORTED"
+    return "INCONCLUSIVE"
+
+
 def aggregate(rows):
-    conf = [r for r in rows if (r["drive"], r["node"], r["axis"]) not in SEEN and r["qa_pass"]]
-    res = {"n_plots": len(rows), "n_confirmatory_after_qa": len(conf),
-           "n_excluded_qa": sum(1 for r in rows if not r["qa_pass"]),
-           "n_excluded_seen": sum(1 for r in rows if (r["drive"], r["node"], r["axis"]) in SEEN)}
+    unseen = [r for r in rows if (r.get("drive"), r.get("node"), r.get("axis")) not in SEEN]
+    errors = [r for r in unseen if "error" in r]
+    conf = [r for r in unseen if "error" not in r and r["qa_pass"]]
+    res = {"n_plots": len(rows), "n_unseen": len(unseen), "n_errors": len(errors), "n_confirmatory_after_qa": len(conf),
+           "n_excluded_qa": sum(1 for r in unseen if "error" not in r and not r["qa_pass"]),
+           "n_excluded_seen": len(rows) - len(unseen)}
+    res["exclusion_fraction"] = 1 - len(conf) / max(len(unseen), 1)
     if not conf:
         res["verdict"] = "NO_DATA"
         return res
-    v = [r["m1_median_abs_db"] for r in conf]
-    g = [r["node"] for r in conf]
-    m1 = float(np.median(v))
-    ci = boot_median(v, g)
-    res["M1_median_db"] = m1
-    res["M1_ci95_db"] = ci
-    res["M1_corr_median"] = float(np.median([r["m1_corr_log"] for r in conf]))
-    c2 = [r for r in conf if r.get("anchor_pass")]
-    if c2:
-        res["M2_median_db"] = float(np.median([r["m2_median_abs_db"] for r in c2]))
-        res["M2_ci95_db"] = boot_median([r["m2_median_abs_db"] for r in c2], [r["node"] for r in c2])
-        res["M2_n"] = len(c2)
-        res["nasa_fem_vs_project_fem_median_db"] = float(np.median([r["nasa_fem_vs_project_fem_median_abs_db"] for r in c2]))
-    if m1 <= THRESH["supported_m1_db"] and ci[1] < THRESH["ci_upper_for_supported_db"]:
-        res["verdict"] = "SUPPORTED"
-    elif m1 >= THRESH["not_supported_m1_db"]:
-        res["verdict"] = "NOT_SUPPORTED"
+    v, g = [r["m1_median_abs_db"] for r in conf], [r["node"] for r in conf]
+    m1, ci = float(np.median(v)), boot_median(v, g)
+    res.update({"M1_median_db": m1, "M1_ci95_db": ci, "M1_corr_median": float(np.median([r["m1_corr_log"] for r in conf]))})
+    c2 = [r for r in conf if r.get("in_frozen_set") and abs(r.get("anchor_residual_decades", 9)) <= 0.1]
+    n_m2_possible = sum(1 for r in conf if r.get("in_frozen_set"))
+    m2 = float(np.median([r["m2_median_abs_db"] for r in c2])) if c2 and len(c2) >= M2_COVERAGE_MIN * max(n_m2_possible, 1) else None
+    res.update({"M2_median_db": m2, "M2_n": len(c2), "M2_possible": n_m2_possible,
+                "M2_ci95_db": boot_median([r["m2_median_abs_db"] for r in c2], [r["node"] for r in c2]) if c2 else None})
+    res["verdict_primary"] = verdict_of(m1, ci[1], m2)
+    # sensitivities: clipped columns imputed at the panel edge; no QA exclusion at all
+    m1_imp = float(np.median([r["m1_imputed_median_abs_db"] for r in conf]))
+    allr = [r for r in unseen if "error" not in r]
+    m1_all = float(np.median([r["m1_median_abs_db"] for r in allr]))
+    res["M1_sensitivity"] = {"clipped_imputed_db": m1_imp, "no_qa_exclusion_db": m1_all}
+    flips = {verdict_of(x, x + (ci[1] - m1), m2) for x in (m1_imp, m1_all)} - {res["verdict_primary"]}
+    if res["exclusion_fraction"] > EXCLUSION_CAP:
+        res["verdict"], res["verdict_reason"] = "INCONCLUSIVE", f"exclusions {res['exclusion_fraction']:.2f} > cap {EXCLUSION_CAP}"
+    elif flips:
+        res["verdict"], res["verdict_reason"] = "INCONCLUSIVE", f"sensitivity changes the verdict to {sorted(flips)}"
     else:
-        res["verdict"] = "INCONCLUSIVE"
+        res["verdict"], res["verdict_reason"] = res["verdict_primary"], "primary rule"
     return res
 
 
-def run(plots_dir, zeta_rule="measured_interp"):
+def lock_ok():
+    lk = json.load(open(os.path.join(WS, "prereg_lock.json")))
+    import hashlib
+    bad = [p for p, h in lk["sha256"].items() if hashlib.sha256(open(os.path.join(WS, p), "rb").read()).hexdigest() != h]
+    return not bad, bad
+
+
+def unit_factor(pch):
+    """c (decades) mapping NASA's punch magnitudes to the plotted g/lbf, from the two seen
+    drive-point plots digitised in the pilot (absolute decades read from their tick labels)."""
+    import csv
+    cs = {}
+    for key, (node, ax) in {"slide16_drive_point_11101X": (11101, "X"), "slide17_drive_point_11110Y": (11110, "Y")}.items():
+        rows = list(csv.DictReader(open(os.path.join(WS, "out", f"pilot_digitized_{key}.csv"))))
+        f = np.array([float(r["f_hz"]) for r in rows])
+        red = np.array([float(r["fem_log10_g_per_lbf"]) for r in rows])
+        pf, pm, _ = pch[node]
+        ref = np.log10(np.interp(f, pf, pm[:, "XYZ".index(ax)]))
+        a = ~np.isnan(red) & (f >= 12) & (f <= 395)
+        cs[key] = float(np.median(red[a] - ref[a]))
+    vals = list(cs.values())
+    return float(np.mean(vals)), cs, abs(vals[0] - vals[1]) <= 0.05
+
+
+def run(plots_dir, zeta_rule="measured_interp", exploratory=False):
+    import subprocess
+    ok, bad = lock_ok()
+    if not ok and not exploratory:
+        raise SystemExit(f"pre-registration lock mismatch for {bad}; rerun with --exploratory to score as exploratory")
+    if subprocess.call([sys.executable, os.path.join(HERE, "freeze_predictions.py"), "--verify"]) != 0:
+        raise SystemExit("frozen project-FEM predictions do not reproduce; refusing to score")
+    import nasa_pch
+    pch, c_unit, c_info = {}, None, None
+    for dk in DRIVES:
+        p = os.path.join(plots_dir, f"SOL_111_Free_Free_Force_{dk}.pch")
+        pch[dk] = nasa_pch.parse(p) if os.path.exists(p) else None
+    if all(pch.values()):
+        cvals = [unit_factor(pch[dk]) for dk in DRIVES]
+        # the same NASA run units apply to both decks; use the 11101X deck for the slide-16 point etc.
+        c_unit, c_info = cvals[0][0], {"per_deck": [cv[1] for cv in cvals], "consistent": all(cv[2] for cv in cvals)}
+        if not c_info["consistent"]:
+            c_unit = None
     fem = fem_frf.FEM()
     zeta = fem.zeta(zeta_rule)
     rows = []
@@ -152,10 +219,14 @@ def run(plots_dir, zeta_rule="measured_interp"):
         for fn in sorted(os.listdir(d)):
             if NAME.search(fn):
                 try:
-                    rows.append(score_plot(os.path.join(d, fn), fem, dk, zeta))
-                except Exception as exc:  # recorded, never silently dropped
-                    rows.append({"drive": dk, "file": fn, "error": repr(exc), "qa_pass": False, "node": -1, "axis": "?"})
-    return rows, aggregate([r for r in rows if "error" not in r])
+                    rows.append(score_plot(os.path.join(d, fn), fem, dk, zeta, pch[dk], c_unit))
+                except Exception as exc:  # recorded and counted, never silently dropped
+                    m = NAME.search(fn)
+                    rows.append({"drive": dk, "file": fn, "error": repr(exc), "qa_pass": False, "node": int(m.group(1)), "axis": m.group(2)})
+    agg = aggregate(rows)
+    agg["exploratory"] = bool(exploratory or not ok)
+    agg["unit_factor"] = {"c_decades": c_unit, "info": c_info}
+    return rows, agg
 
 
 def dry_run(n_per_drive=6, seed=7):
@@ -194,6 +265,7 @@ def dry_run(n_per_drive=6, seed=7):
             ax_.grid(True, which="major", color=(226 / 255,) * 3, lw=0.8); ax_.set_axisbelow(True)
             ax_.legend(loc="lower right", frameon=True, edgecolor="black", fancybox=False)
             fn = f"Acceleration_{node}{ax}+.png"
+            DRY_PCH.setdefault(dk, {})[node] = (f, np.repeat(hf[:, None], 3, axis=1), np.zeros((len(f), 3)))
             fig.savefig(os.path.join(tmp, f"{dk}_Impact_Comparison", fn), dpi=100, facecolor=fig.get_facecolor())
             plt.close(fig)
             # truth on a fine grid: smooth |H|^2 over 2.03 Hz then median |dB| in band
@@ -210,9 +282,13 @@ def dry_run(n_per_drive=6, seed=7):
     return {"n_plots": len(rows), "n_errors": sum(1 for r in rows if "error" in r),
             "max_abs_err_m1_db": float(max(errs)), "median_abs_err_m1_db": float(np.median(errs)),
             "truth_m1_values_db": sorted(truth.values()), "qa_pass_fraction": float(np.mean([r["qa_pass"] for r in rows])),
-            "anchor_pass_fraction": float(np.mean([r.get("anchor_pass", False) for r in rows])),
+            "anchor_pass_fraction": float(np.mean([abs(r.get("anchor_residual_decades", 9)) <= 0.1 for r in rows])),
+            "max_digitised_red_vs_numeric_db": float(max(r.get("digitised_red_vs_nasa_numeric_db", np.nan) for r in rows)),
             "m2_vs_truth_note": "M2 here compares the synthetic test with the frozen FEM at measured damping; reported, not gated",
             "rows": rows, "aggregate": agg}
+
+
+DRY_PCH = {}
 
 
 def run_dry(tmp, fem):
@@ -221,7 +297,7 @@ def run_dry(tmp, fem):
     for dk in DRIVES:
         d = os.path.join(tmp, f"{dk}_Impact_Comparison")
         for fn in sorted(os.listdir(d)):
-            rows.append(score_plot(os.path.join(d, fn), fem, dk, zeta))
+            rows.append(score_plot(os.path.join(d, fn), fem, dk, zeta, DRY_PCH.get(dk), 0.0))
     return rows, aggregate(rows)
 
 
@@ -229,13 +305,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--plots")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--exploratory", action="store_true")
     a = ap.parse_args()
     if a.dry_run:
         res = dry_run()
         json.dump(res, open(os.path.join(WS, "qa", "tier4_dry_run.json"), "w"), indent=1, default=float)
         print(json.dumps({k: v for k, v in res.items() if k not in ("rows",)}, default=float, indent=1)[:1500])
-        return 0 if res["max_abs_err_m1_db"] <= 0.5 and res["n_errors"] == 0 else 1
-    rows, agg = run(a.plots)
+        return 0 if (res["max_abs_err_m1_db"] <= 0.5 and res["n_errors"] == 0 and res["anchor_pass_fraction"] == 1.0) else 1
+    rows, agg = run(a.plots, exploratory=a.exploratory)
     json.dump({"rows": rows, "aggregate": agg}, open(os.path.join(WS, "out", "tier4_results.json"), "w"), indent=1, default=float)
     print(json.dumps(agg, indent=1, default=float))
     return 0

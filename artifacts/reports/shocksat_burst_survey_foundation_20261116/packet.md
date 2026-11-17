@@ -1,28 +1,27 @@
 # Burst-survey foundation check (2026-11-16 to 2026-11-17)
 
-Status: see `checker_report.json` (expected overall YELLOW). Tooling, provenance and the pre-registration are checker-backed; the foundation question itself is open because NASA's server is blocked from this cloud environment.
+Status: `checker_report.json`, overall YELLOW. Tooling, provenance and the pre-registration are checker-backed and were independently reviewed (decisions_log D11). The foundation question is open: NASA's server is refused by this cloud environment's network policy.
 
 ## Method summary
-- No inference, no likelihood, no sampler. Everything here is measurement and bookkeeping: archive tables of contents, NASA's own documents, curves digitised from NASA's figures, and modal-superposition FRFs of the project's frozen nominal FEM.
-- Data: NASA ShockSat archives (directory tails captured 2026-06-09); NASA's correlation deck (76 slides); the project's 2026-07-23 Card H statistics (420 shock-sensor curves, in-sample). One test article; no repeat builds.
-- FEM FRF: H_rd(f) = sum over 80 modes of phi_r phi_d (-w^2)/(w_m^2 - w^2 + 2i zeta_m w_m w), in g/lbf; zeta interpolated from NASA's impact-survey fits (0.12 % to 0.89 %).
+No inference, likelihood or sampler. Inputs: NASA archive directory tails (captured 2026-06-09); NASA's correlation deck; the project's Card H statistics (420 shock-sensor curves, in-sample). FEM FRFs by modal superposition of the frozen nominal model (80 modes to 321.7 Hz, damping interpolated from NASA's impact survey, 0.12 % to 0.89 %). One test article.
 
 ## Findings
-1. The files exist and are exactly locatable. `Correlation/` is 594 members, 1.96 GB compressed (not about 1 GB). What the plan needs is 0.73 GB: run 78 and 99 free-free burst time histories (263 MB each compressed), run 139 fixed-base (62 MB), the run 78 FRF file (53 MB), 27 documents and shape files (3.5 MB), and NASA's 264 test-versus-FEM plots (71 MB). Byte offsets and CRCs: `out/fetch_plan.json`.
-2. NASA's own documents set two limits on the plan. NASA did not use the shaker runs for correlation because the attachment blocks mass-loaded the modes (slide 1), so any use of runs 78, 99, 139 must model the blocks. NASA's sensor set separates FEM modes well below 150 Hz but not above (pseudo-orthogonality diagonal median 94 % versus 60 %; NASA: "Correlation will struggle above 150 Hz").
-3. NASA's correlation quality, recomputed from its tables: 25 test modes 54 to 222 Hz, median frequency difference 4.3 %, median cross-orthogonality 83 % (93.5 % below 150 Hz, 79 % above).
-4. Exploratory pilot (two curves, `figures/fig1_pilot_frf_wall.png`). At NASA's two drive points, NASA's FEM is 2.8 to 3.1 dB from NASA's modal test below 150 Hz and 8.2 to 8.3 dB at 150 to 200 Hz. Over Card H's band and resolution the values are 5.0 and 3.5 dB, against 10.0 dB median (minimum 4.8 dB) for the project FEM on 420 shock-sensor curves. Frequency smoothing to 2.03 Hz changes the NASA values by less than 0.3 dB, so resolution does not explain the gap. The project FEM matches NASA's FEM to 0.5 to 0.9 dB below 150 Hz, so the models are not the difference. Shock sensors within 4 in of the drive still score 9.2 dB median. Caveat: two curves, chosen by NASA, drive points (which usually agree best).
-5. NASA's single-impact repeatability (slide 19): median spread 0.4 dB at 45 to 200 Hz, close to the 0.4 dB stroke-width floor of the digitisation.
-6. What burst data could resolve (`figures/fig2_burst_resolution.png`, no simulation needed): at the shock caches' 2.03 Hz lines, 0 of NASA's 22 test modes in 45 to 200 Hz have 3 lines across their half-power width (median 0.4); with 8 s frames, 19 of 22 would. The rehearsal on the project FEM shows the multiple-input estimator recovers peaks within 0.02 dB with 8 s frames, while 2 s frames leak (worst peak -0.55 dB). Frame length of NASA's records is unknown until parsed.
-7. Torque sweep confirmed: 20 hits, 4 at each of 25, 50, 75, 100, 125 (NASA's log: "Name shows bolted joint torque"), impact at 990X, dated 2022-02-28, the day before the first frangible-joint firing. The configuration (probably with the separation joint and extension box, which the project FEM lacks) is to be confirmed from the files.
+1. Files located exactly. `Correlation/` is 594 members, 1.96 GB compressed (not about 1 GB). The plan needs 0.73 GB: burst time histories for runs 78 and 99 (263 MB each) and fixed-base run 139 (62 MB), the run-78 FRF file (53 MB), 27 documents and shape files (3.5 MB), and tier 4 (71 MB: 264 comparison plots plus NASA's two numeric FEM FRF files). Offsets and CRCs: `out/fetch_plan.json`.
+2. NASA's documents limit the plan. NASA left the shaker runs out of its correlation because the attachment blocks mass-loaded the modes (slide 1), so runs 78, 99 and 139 need the blocks modelled. NASA's sensor set separates FEM modes below 150 Hz but not above (pseudo-orthogonality diagonal median 94 % versus 60 %).
+3. NASA's correlation, recomputed: 25 test modes, 54 to 222 Hz; median frequency difference 4.3 %; median cross-orthogonality 83 % (93.5 % below 150 Hz, 79 % above).
+4. Exploratory pilot, two curves (`figures/fig1_pilot_frf_wall.png`). At NASA's two drive points NASA's FEM is 2.7 to 3.1 dB from NASA's modal test below 150 Hz and 8.2 to 8.3 dB at 150 to 200 Hz. The project FEM is 3.0 to 3.6 dB from the same test below 150 Hz and 3.7 to 5.2 dB over Card H's band. Card H's median for the project FEM on shock sensors is 10.0 dB (minimum 4.8). This is not like-for-like: shock versus modal accelerometers, 0.49 s windowed hammer records with a fitted gain versus NASA's ~10-hit averages, transfer FRFs (median 18.5 in from the drive) versus drive points, which usually agree best, and NASA's FEM was tuned to NASA's data. The pilot motivates the pre-registered test; it attributes nothing.
+5. NASA's single-impact repeatability (slide 19): median spread 0.4 dB at 45 to 200 Hz, near the 0.4 dB digitisation floor.
+6. Damping resolvability (`figures/fig2_burst_resolution.png`, from NASA's measured frequencies and damping): at the shock caches' 2.03 Hz lines, 0 of 22 test modes in 45 to 200 Hz have 3 lines across their half-power width; with 8 s frames, 19 of 22 would. Rehearsal on the project FEM with stand-in shaker locations and 50 % bursts: median FRF error 0.45 dB with 2 s frames versus 0.17 dB with 8 s; median peak error 0.01 dB at 8 s (range -0.02 to +0.72 dB over 27 modes). Clustered modes (25 of 27) need a polyreference estimator that is not built. NASA's frame length is unknown until the files are parsed.
+7. Torque sweep: 20 hits, 4 at each of 25, 50, 75, 100, 125 ("Name shows bolted joint torque"), impact at 990X, 2022-02-28, the day before the first frangible-joint firing; configuration to be confirmed.
+8. Correction to my 2026-11-14 report: June work did use NASA's burst-run frequency tables (noise floor) and extracted the fixed-base model files; the raw burst files (.ati, .afu) were never used.
 
-## Pre-registered next test
-`prereg_gated_analysis.md`: score the 262 unseen NASA plots. SUPPORTED if the median curve is within 6 dB (and its interval below 8 dB), meaning the 10 dB wall is mainly a data or sensor property; NOT SUPPORTED at 8 dB or more. Project-FEM predictions are frozen (hash in the prereg). Then foundation gates F1 to F5 on the burst files.
+## Pre-registered next test (`prereg_gated_analysis.md`, hash-locked)
+Score NASA's 262 unseen plots. SUPPORTED if NASA's FEM and the project FEM are both within 6 dB of NASA's test at the median curve; NOT SUPPORTED at 8 dB or more; exclusion cap and sensitivities can force INCONCLUSIVE. Then foundation gates F1 to F5 on the burst files.
 
-## How to continue
+## To continue
 1. Allow `mediaex-server.larc.nasa.gov` in the cloud environment's network settings.
-2. `bash gated_run.sh` (adds `WITH_TIME_HISTORIES=1` for the 589 MB time histories). Data stay outside the repository.
+2. `bash gated_run.sh` (138 MB; add `WITH_TIME_HISTORIES=1` for the 589 MB time histories). Data stay outside the repository.
 3. `bash run_all.sh` replays everything offline and runs the checker.
 
 ## Not done
-A polyreference damping estimator (needed for 25 of 27 clustered modes); a decoder for the `.ati`/`.afu` layout (only a structure probe exists, tested on synthetic files); any fitting to NASA data.
+Decoder for `.ati`/`.afu` (a structure probe exists, tested on synthetic files); polyreference damping estimator; any fitting to NASA data.

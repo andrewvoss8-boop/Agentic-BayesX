@@ -31,7 +31,7 @@ REQUIRED = ["packet.md", "question_framing.md", "priority_deliverables.md", "dec
             "out/nasa_final_correlation.csv", "out/nasa_pretest_sensor_set.csv", "out/frf_wall_pilot.json",
             "out/frozen_project_fem_predictions.npz", "out/rehearsal_burst.json", "qa/zip_tools_unit.json",
             "qa/digitizer_known_answer.json", "qa/adf_probe_unit.json", "qa/tier4_dry_run.json", "qa/tufte_lint.txt",
-            "qa/image_legibility.md", "figures/fig1_pilot_frf_wall.png", "figures/fig2_burst_resolution.png",
+            "qa/image_legibility.md", "qa/nasa_pch_unit.json", "prereg_lock.json", "figures/fig1_pilot_frf_wall.png", "figures/fig2_burst_resolution.png",
             "data/project_reference_numbers.json", "data/nasa_deck/PROVENANCE.json", "data/zip_tails/PROVENANCE.json"]
 miss = [p for p in REQUIRED if not exists(p)]
 gate("A0_required_artifacts", R if miss else G, f"missing: {miss}" if miss else f"{len(REQUIRED)} present")
@@ -85,7 +85,8 @@ gate("A5_digitizer_known_answer", (G if curve_ok else Y) if metric_ok else R,
 pl = J("out/frf_wall_pilot.json")
 ferr = max(v["frequency_check"]["max_abs_err_hz"] for v in pl["figures"].values())
 gate("A6_pilot_frequency_calibration", G if ferr <= 0.2 else R,
-     f"digitised peaks within {ferr:.3f} Hz of NASA's listed frequencies (pixel = 0.36 Hz). Pilot is exploratory (2 curves, post hoc)")
+     f"digitised peaks of the three well-separated modes (54, 70, 86 Hz) within {ferr:.3f} Hz of NASA's listed frequencies (pixel = 0.36 Hz); "
+     "the 70/75 Hz test pair and 73/74 Hz FEM pair are not resolved as separate peaks (0.3-0.6 Hz offsets). Pilot is exploratory (2 curves, post hoc)")
 
 a = J("qa/adf_probe_unit.json")
 gate("A7_binary_probe_known_answer", G if a["all_pass"] else R, a["checks"])
@@ -103,12 +104,14 @@ gate("A9_preregistration_frozen", G if (fok and fz["array_sha256"] in pr) else R
 
 rb = J("out/rehearsal_burst.json")
 sc = rb["scenarios"]
-est_ok = all(sc[k]["median_abs_err_db"] <= 0.5 and sc[k]["peak_err_db_min"] >= -0.25 for k in ("T4s", "T8s", "T16s"))
+est_ok = all(sc[k]["median_abs_err_db"] <= 0.5 and sc[k]["peak_abs_err_db_median"] <= 0.25 for k in ("T4s", "T8s", "T16s"))
 gate("A10_burst_estimator_rehearsal", G if est_ok else R,
-     f"H1 median error {sc['T8s']['median_abs_err_db']:.2f} dB, worst peak {sc['T8s']['peak_err_db_min']:.2f} dB at 8 s frames; "
-     f"2 s frames leak (tail/burst up to {sc['T2s']['tail_to_burst_rms_max']:.2f}, worst peak {sc['T2s']['peak_err_db_min']:.2f} dB)")
+     f"H1 median error {sc['T2s']['median_abs_err_db']:.2f} dB (2 s frames) vs {sc['T8s']['median_abs_err_db']:.2f} dB (8 s); "
+     f"median |peak error| {sc['T8s']['peak_abs_err_db_median']:.2f} dB at 8 s, range {sc['T8s']['peak_err_db_min']:+.2f} to {sc['T8s']['peak_err_db_max']:+.2f} dB "
+     f"over {sc['T8s']['n_peaks_scored']} modes; tail/burst ratio up to {sc['T2s']['tail_to_burst_rms_max']:.2f} at 2 s vs {sc['T8s']['tail_to_burst_rms_max']:.3f} at 8 s. "
+     "Stand-in shakers, 50 % burst, drive-point peaks only")
 gate("A11_damping_estimator_coverage", Y,
-     f"half-power damping demonstrated on {sc['T8s']['n_isolated_modes']} isolated modes only; {rb['modes_in_band'] - rb['isolated_modes_in_band']} of "
+     f"half-power damping attempted on the {sc['T8s']['n_isolated_modes']} isolated modes; only 88 Hz gives an estimate (54.6 Hz never does at the stand-in drive points); {rb['modes_in_band'] - rb['isolated_modes_in_band']} of "
      f"{rb['modes_in_band']} FEM modes in 45-200 Hz are clustered and need a polyreference estimator (not built). "
      f"Estimator-free resolvability reported instead (lines across half-power width)")
 
@@ -117,12 +120,20 @@ leg = open(os.path.join(WS, "qa/image_legibility.md")).read()
 gate("A12_figures_lint_and_legibility", G if ("WARN" not in lint and "PASS" in leg) else Y,
      "tufte_lint: no WARN; legibility review recorded" if "WARN" not in lint else "lint WARN present")
 
+pu = J("qa/nasa_pch_unit.json")
+gate("A7b_nasa_punch_parser_known_answer", G if pu["all_pass"] else R, f"{pu['checks']} (synthetic file in the June parser's layout; real files not yet in hand)")
+lk = J("prereg_lock.json")
+lbad = [p for p, h in lk["sha256"].items() if hashlib.sha256(open(os.path.join(WS, p), "rb").read()).hexdigest() != h]
+gate("A16_preregistration_lock", R if lbad else G, f"{len(lk['sha256'])} locked files unchanged" if not lbad else f"changed after lock: {lbad}")
 gs = J("logs/gate_status.json") if exists("logs/gate_status.json") else {"status": "NOT_RUN"}
 gate("A13_nasa_data_gate", Y if gs["status"] != "FETCHED" else G,
      f"{gs['status']} at {gs.get('checked_utc', '?')}: burst files not yet fetched or parsed" if gs["status"] != "FETCHED" else "fetched")
-t4r = exists("out/tier4_results.json")
-gate("A14_foundation_question", Y if not t4r else G,
-     "OPEN: pre-registered tier-4 test and burst-file parse are staged but not run (network gate)" if not t4r else "tier-4 results present; see verdict")
+t4 = J("out/tier4_results.json")["aggregate"] if exists("out/tier4_results.json") else None
+bg = exists("out/burst_gates.json")
+done = t4 is not None and not t4.get("exploratory", True) and t4.get("verdict") in ("SUPPORTED", "NOT_SUPPORTED", "INCONCLUSIVE") and bg
+gate("A14_foundation_question", G if done else Y,
+     "OPEN: pre-registered tier-4 test and burst-file gates F1-F5 are staged but not run (network gate)" if t4 is None else
+     f"tier-4 verdict {t4.get('verdict')} ({t4.get('verdict_reason')}); burst gates {'evaluated' if bg else 'NOT yet evaluated'}")
 
 rt = J("runtime.json")
 # Expected non-zero exits: digitizer_test (curve-level limit missed, surfaced as A5 YELLOW)

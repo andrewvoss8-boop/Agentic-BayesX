@@ -87,10 +87,11 @@ def fig1():
     ax.set_xticks([1.0, 2.4])
     ax.set_xticklabels(["project FEM\nvs shock\nsensors\n(420 curves)", "NASA FEM\nvs NASA\nmodal test\n(2 curves)"], fontsize=8)
     ax.set_ylabel("per-curve median |20 log10(test/FEM)| (dB)\n46.8-258.4 Hz, 2.03 Hz averaged")
-    ax.set_title("(c) same metric, both datasets", fontsize=9.5, loc="left")
+    ax.set_title("(c) same metric, different data (see caveats)", fontsize=9.5, loc="left")
     fig.text(0.01, -0.05, "Source: NASA ShockSat correlation deck (Final_Summary_Documentation_101521_rev1.pptx) slides 16-17, digitised from raster images "
-             "(known-answer error <= 0.05 dB on this metric). Project FEM: frozen nominal model, damping interpolated from NASA's impact survey. "
-             "Card H: project study 2026-07-23 (in-sample, one fitted gain per drive). EXPLORATORY: two curves, chosen by NASA, post hoc.",
+             "(known-answer error 0.05 dB on the pixel-grid metric, 0.32 dB after 2.03 Hz averaging as in panel c). Project FEM: frozen nominal model, damping interpolated from NASA's impact survey. "
+             "Card H: project study 2026-07-23 (shock accelerometers, transfer FRFs, 0.49 s windowed hammer records, zeta 0.01, one fitted gain per drive, in-sample). "
+             "NASA's FEM was tuned to NASA's modal data. EXPLORATORY: two drive-point curves chosen by NASA, post hoc; not a like-for-like comparison.",
              fontsize=7, wrap=True, color="0.25")
     fig.savefig(os.path.join(WS, "figures", "fig1_pilot_frf_wall.png"), dpi=150, bbox_inches="tight")
     plt.close(fig)

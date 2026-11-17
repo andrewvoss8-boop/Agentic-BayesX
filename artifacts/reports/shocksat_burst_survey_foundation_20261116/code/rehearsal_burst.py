@@ -166,6 +166,8 @@ def main():
         res["scenarios"][f"T{T:g}s"] = {
             "line_spacing_hz": 1 / T, "median_abs_err_db": float(np.median(np.abs(err))), "p95_abs_err_db": float(np.percentile(np.abs(err), 95)),
             "peak_err_db_median": float(np.median(peak_err)), "peak_err_db_min": float(np.min(peak_err)),
+            "peak_err_db_max": float(np.max(peak_err)), "peak_abs_err_db_median": float(np.median(np.abs(peak_err))),
+            "n_peaks_scored": len(peak_err), "peak_note": "drive point of the best-exciting stand-in shaker, +-0.6 Hz window; weakly excited modes give the large errors",
             "coherence_median": float(np.nanmedian(coh[:, b])), "coherence_p05": float(np.nanpercentile(coh[:, b], 5)),
             "cond_gxx_median": float(np.median(cond[b])),
             "tail_to_burst_rms_median": float(np.median(tail)), "tail_to_burst_rms_max": float(np.max(tail)),

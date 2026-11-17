@@ -27,6 +27,7 @@ ok = d["content_length"] == 2025227962
 print("archive bytes", d["content_length"], "etag", d["etag"], "unchanged since 2026-06-09" if ok else "CHANGED: rebuild the listing before fetching")
 sys.exit(0 if ok else 3)
 P
+"$PY" -I "$WS/code/freeze_predictions.py" --verify || { echo "frozen predictions do not reproduce; stopping"; exit 3; }
 TIERS="tier0_documents_and_shapes tier1_plans_and_reduced_models tier2_burst_frf_file tier4_frf_verification_plots"
 [ "${WITH_TIME_HISTORIES:-0}" = 1 ] && TIERS="$TIERS tier3_burst_time_histories"
 for t in $TIERS; do
@@ -35,11 +36,13 @@ for t in $TIERS; do
 done
 C="$DATA/FEM/Correlation"
 "$PY" -I "$WS/code/tier4_study.py" --plots "$C/FRF_Verification" > "$WS/logs/tier4_stdout.txt" 2>&1
+T4=$?
 for f in "$C"/Modal_Test_Data_Use_in_Correlation2021/FINAL_FF/*.afu "$C"/Modal_Test_Data_Use_in_Correlation2021/TH/*.ati; do
   [ -f "$f" ] && "$PY" -I "$WS/code/adf_probe.py" "$f" --json "$WS/out/adf_probe_$(basename "$f" | tr ' ' '_').json" > /dev/null
 done
 find "$C" -name '*.xlsx' -print0 | while IFS= read -r -d '' x; do
   "$PY" -I "$WS/code/xlsx_dump.py" "$x" --out "$WS/out/xlsx_$(basename "$x" .xlsx | tr ' ' '_').json" > /dev/null
 done
-printf '{"status": "FETCHED", "checked_utc": "%s", "tiers": "%s", "data_dir": "%s"}\n' "$(now)" "$TIERS" "$DATA" > "$WS/logs/gate_status.json"
+ST=FETCHED; [ $T4 -ne 0 ] && ST=FETCHED_SCORING_FAILED
+printf '{"status": "%s", "checked_utc": "%s", "tiers": "%s", "data_dir": "%s", "tier4_exit": %d}\n' "$ST" "$(now)" "$TIERS" "$DATA" "$T4" > "$WS/logs/gate_status.json"
 cat "$WS/logs/gate_status.json"

@@ -40,7 +40,7 @@
   {
    "test": "probe reports size and range support",
    "pass": true,
-   "detail": "{'url': 'http://127.0.0.1:42425/t.zip', 'final_url': 'http://127.0.0.1:42425/t.zip', 'status': 200, 'content_length': 496935, 'accept_ranges': 'bytes', 'etag': None, 'last_modified': None}"
+   "detail": "{'url': 'http://127.0.0.1:38797/t.zip', 'final_url': 'http://127.0.0.1:38797/t.zip', 'status': 200, 'content_length': 496935, 'accept_ranges': 'bytes', 'etag': None, 'last_modified': None}"
   },
   {
    "test": "remote directory equals local directory",

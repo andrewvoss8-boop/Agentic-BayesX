@@ -1,12 +1,12 @@
 {
  "overall": "YELLOW",
- "summary": "12G/4Y/0R",
+ "summary": "14G/4Y/0R",
  "claim_ceiling": "GREEN gates certify tooling, provenance and pre-registration. They do not answer the foundation question, which stays open until NASA's files are fetched (A13, A14).",
  "gates": [
   {
    "gate": "A0_required_artifacts",
    "status": "GREEN",
-   "detail": "31 present"
+   "detail": "33 present"
   },
   {
    "gate": "A1_zip_tools_known_answer",
@@ -36,7 +36,7 @@
   {
    "gate": "A6_pilot_frequency_calibration",
    "status": "GREEN",
-   "detail": "digitised peaks within 0.073 Hz of NASA's listed frequencies (pixel = 0.36 Hz). Pilot is exploratory (2 curves, post hoc)"
+   "detail": "digitised peaks of the three well-separated modes (54, 70, 86 Hz) within 0.073 Hz of NASA's listed frequencies (pixel = 0.36 Hz); the 70/75 Hz test pair and 73/74 Hz FEM pair are not resolved as separate peaks (0.3-0.6 Hz offsets). Pilot is exploratory (2 curves, post hoc)"
   },
   {
    "gate": "A7_binary_probe_known_answer",
@@ -63,12 +63,12 @@
   {
    "gate": "A10_burst_estimator_rehearsal",
    "status": "GREEN",
-   "detail": "H1 median error 0.17 dB, worst peak -0.02 dB at 8 s frames; 2 s frames leak (tail/burst up to 0.49, worst peak -0.55 dB)"
+   "detail": "H1 median error 0.45 dB (2 s frames) vs 0.17 dB (8 s); median |peak error| 0.01 dB at 8 s, range -0.02 to +0.72 dB over 27 modes; tail/burst ratio up to 0.49 at 2 s vs 0.011 at 8 s. Stand-in shakers, 50 % burst, drive-point peaks only"
   },
   {
    "gate": "A11_damping_estimator_coverage",
    "status": "YELLOW",
-   "detail": "half-power damping demonstrated on 2 isolated modes only; 25 of 27 FEM modes in 45-200 Hz are clustered and need a polyreference estimator (not built). Estimator-free resolvability reported instead (lines across half-power width)"
+   "detail": "half-power damping attempted on the 2 isolated modes; only 88 Hz gives an estimate (54.6 Hz never does at the stand-in drive points); 25 of 27 FEM modes in 45-200 Hz are clustered and need a polyreference estimator (not built). Estimator-free resolvability reported instead (lines across half-power width)"
   },
   {
    "gate": "A12_figures_lint_and_legibility",
@@ -76,19 +76,29 @@
    "detail": "tufte_lint: no WARN; legibility review recorded"
   },
   {
+   "gate": "A7b_nasa_punch_parser_known_answer",
+   "status": "GREEN",
+   "detail": "{'points': True, 'n_freq': True, 'mag_rel_err_lt_1e-6': True, 'phase_err_lt_1e-4': True} (synthetic file in the June parser's layout; real files not yet in hand)"
+  },
+  {
+   "gate": "A16_preregistration_lock",
+   "status": "GREEN",
+   "detail": "8 locked files unchanged"
+  },
+  {
    "gate": "A13_nasa_data_gate",
    "status": "YELLOW",
-   "detail": "BLOCKED at 2026-11-17T11:51:16Z: burst files not yet fetched or parsed"
+   "detail": "BLOCKED at 2026-11-17T12:16:11Z: burst files not yet fetched or parsed"
   },
   {
    "gate": "A14_foundation_question",
    "status": "YELLOW",
-   "detail": "OPEN: pre-registered tier-4 test and burst-file parse are staged but not run (network gate)"
+   "detail": "OPEN: pre-registered tier-4 test and burst-file gates F1-F5 are staged but not run (network gate)"
   },
   {
    "gate": "A15_runtime_and_replay",
    "status": "GREEN",
-   "detail": "active 23.0 s <= elapsed 23.1 s; non-zero exits ['digitizer_test', 'nasa_gate'] (expected: ['digitizer_test', 'nasa_gate']); unexpected []"
+   "detail": "active 24.1 s <= elapsed 24.2 s; non-zero exits ['digitizer_test', 'nasa_gate'] (expected: ['digitizer_test', 'nasa_gate']); unexpected []"
   }
  ]
 }

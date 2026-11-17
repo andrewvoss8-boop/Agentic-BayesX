@@ -1,0 +1,14 @@
+{
+ "locked_utc": "2026-11-17",
+ "note": "locked before any tier-4 plot or burst file was seen",
+ "sha256": {
+  "code/tier4_study.py": "0bc21ccad735dc10404b1983df8cdf9271a859559443ba9bf1b024ee45b0ec5c",
+  "code/digitize_frf.py": "d3dd0c7e7f1b9d5c526ab4ad5440c581c2774d2405829d346aefa361cbd363ba",
+  "code/fem_frf.py": "0ddcc3bf86478515d07e915a1f29ec14cbbc7b7570b2679b77c836c204f31a2f",
+  "code/nasa_pch.py": "7abdaeec87d13a3605f12db4bd3b1db2823407b320971ca173c5c996aabbe985",
+  "code/freeze_predictions.py": "3475ce9569229d6d869a725953bf705c92e98deac3c572000c87973b8536e595",
+  "prereg_gated_analysis.md": "20d114916f2c18a624b5ceedcc2d7c7680bb207593bdaf559f7a0a19daec716a",
+  "out/frozen_project_fem_predictions.npz": "34919ba94142ab5b11266245cc16072e74ead77e701d72489059e84cdb27bed2",
+  "prereg_frozen_inputs.json": "42ba99b7c6adc5d7d370e59c485ebac7f60ad6a6e81e4acd65f8436001740a12"
+ }
+}

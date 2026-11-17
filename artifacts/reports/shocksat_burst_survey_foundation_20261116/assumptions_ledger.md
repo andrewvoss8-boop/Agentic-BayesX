@@ -3,7 +3,7 @@
 | ID | Assumption | Value / unit | Source | Sensitivity priority |
 |---|---|---|---|---|
 | A1 | NASA's FEM_and_CAD.zip is unchanged since 2026-06-09 | 2,025,227,962 bytes, ETag "5b4bab6bb79d81:0" | June probe log | high: gated_run.sh refuses to fetch if the size differs |
-| A2 | Digitised curves represent NASA's plotted data | pixel = 0.358 Hz, 0.20 dB | figures in deck slides 16, 17 | measured: metric error <= 0.05 dB (qa/digitizer_known_answer.json) |
+| A2 | Digitised curves represent NASA's plotted data | pixel = 0.358 Hz, 0.20 dB | figures in deck slides 16, 17 | measured: metric error <= 0.05 dB on the pixel grid, <= 0.32 dB after 2.03 Hz averaging (qa/digitizer_known_answer.json) |
 | A3 | Black = test, red = FEM in NASA figures | legend on slides 16-17 | NASA deck | low |
 | A4 | Project FEM damping for predictions | zeta(f) interpolated from 33 impact-survey modes, 0.12 % to 0.89 %; rigid modes undamped | measured_modes.npz (values stored in percent) | medium: sensitivity at zeta 0.003 and 0.01 gave 0.5 to 1.2 dB project-vs-NASA FEM changes below 150 Hz |
 | A5 | Project FEM basis | 80 modes to 321.7 Hz; no residual flexibility | shocksat_fem_remesh_20260618/matrices | high above 260 Hz, so bands stop at 258.4 Hz |

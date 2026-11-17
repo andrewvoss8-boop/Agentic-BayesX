@@ -25,6 +25,7 @@ step digitizer_test        "$PY" code/test_digitize.py
 step pilot                 "$PY" code/frf_wall_pilot.py
 step freeze_verify         "$PY" code/freeze_predictions.py --verify
 step adf_probe_test        "$PY" code/test_adf_probe.py
+step pch_parser_test       "$PY" code/test_nasa_pch.py
 step tier4_dry_run         "$PY" code/tier4_study.py --dry-run
 step rehearsal             env OMP_NUM_THREADS=1 "$PY" code/rehearsal_burst.py
 step figures               "$PY" code/make_figures.py

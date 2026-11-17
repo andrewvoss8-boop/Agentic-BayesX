@@ -1,7 +1,8 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
-- 2026-11-17 **BURST-SURVEY FOUNDATION CHECK STAGED TO THE NETWORK GATE — CHECKER OVERALL YELLOW 12G/4Y/0R.**
+- 2026-11-17 **BURST-SURVEY FOUNDATION CHECK STAGED TO THE NETWORK GATE — CHECKER OVERALL YELLOW 14G/4Y/0R (after independent review, D11).**
+  Prereg is HASH-LOCKED (`prereg_lock.json`); M2 anchors to NASA numeric .pch FEM, SUPPORTED needs M1 and M2 <= 6 dB.
   Workspace `artifacts/reports/shocksat_burst_survey_foundation_20261116/` (`packet.md`; replay `bash run_all.sh`).
   BLOCKER: `mediaex-server.larc.nasa.gov` refused by this cloud environment's network policy (retried 2026-11-17 11:31Z on
   Andrew's 'try again'; still 403). Session environment env_01JWZ89si4Ge3sKLzeqVSNKR. NEXT ACTION once allowed: `bash gated_run.sh`

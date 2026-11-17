@@ -1,0 +1,10 @@
+{
+ "checks": {
+  "points": true,
+  "n_freq": true,
+  "mag_rel_err_lt_1e-6": true,
+  "phase_err_lt_1e-4": true
+ },
+ "all_pass": true,
+ "note": "synthetic layout inferred from the June parser; real files not yet in hand"
+}

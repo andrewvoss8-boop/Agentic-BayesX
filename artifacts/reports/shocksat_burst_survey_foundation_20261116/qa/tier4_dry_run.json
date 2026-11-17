@@ -19,6 +19,7 @@
  ],
  "qa_pass_fraction": 1.0,
  "anchor_pass_fraction": 1.0,
+ "max_digitised_red_vs_numeric_db": 0.14222971673394813,
  "m2_vs_truth_note": "M2 here compares the synthetic test with the frozen FEM at measured damping; reported, not gated",
  "rows": [
   {
@@ -31,18 +32,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.46428571428566556,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 2.4719520653617866,
    "freq_check_err_hz": 1.3328571428571792,
-   "anchor_offset_decades": -2.006522970893109,
-   "anchor_residual_decades": -0.006522970893108937,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.0062182615769997,
+   "anchor_residual_decades": -0.006218261576999673,
+   "digitised_red_vs_nasa_numeric_db": 0.1394262929403023,
    "m2_median_abs_db": 2.574366908451106,
    "m2_corr_log": 0.737079143488302,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.135555539734728,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11101X",
@@ -54,18 +56,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.46428571428566556,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 0.9062101208009099,
    "freq_check_err_hz": 0.975714285714318,
-   "anchor_offset_decades": -2.0065543020644663,
-   "anchor_residual_decades": -0.0065543020644662775,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.005820714561705,
+   "anchor_residual_decades": -0.005820714561704854,
+   "digitised_red_vs_nasa_numeric_db": 0.12279228816756416,
    "m2_median_abs_db": 0.9174290814006018,
    "m2_corr_log": 0.7689278163231934,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.11108312717207638,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11101X",
@@ -77,18 +80,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.42857142857121744,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 10.229283713955653,
    "freq_check_err_hz": 0.975714285714318,
-   "anchor_offset_decades": -2.0033094426918807,
-   "anchor_residual_decades": -0.003309442691880715,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.003544844225037,
+   "anchor_residual_decades": -0.0035448442250372025,
+   "digitised_red_vs_nasa_numeric_db": 0.09656525491240409,
    "m2_median_abs_db": 10.351226928280676,
    "m2_corr_log": 0.6570905051004012,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.15646354294136078,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11101X",
@@ -100,18 +104,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.44761904761901405,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 4.173317108199841,
    "freq_check_err_hz": NaN,
-   "anchor_offset_decades": -2.0031358832811117,
-   "anchor_residual_decades": -0.0031358832811116955,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.001964698625519,
+   "anchor_residual_decades": -0.001964698625518846,
+   "digitised_red_vs_nasa_numeric_db": 0.09775717367952463,
    "m2_median_abs_db": 4.19224250309048,
    "m2_corr_log": 0.643182294270823,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.12763278130452305,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11101X",
@@ -123,18 +128,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.2999999999999545,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 5.13190006290726,
    "freq_check_err_hz": 1.6900000000000333,
-   "anchor_offset_decades": -1.0022507485580567,
-   "anchor_residual_decades": -0.0022507485580567366,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -1.0018660674363287,
+   "anchor_residual_decades": -0.0018660674363286667,
+   "digitised_red_vs_nasa_numeric_db": 0.09063225295076194,
    "m2_median_abs_db": 5.175948841550688,
    "m2_corr_log": 0.7424963621842906,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.1271496445559106,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11101X",
@@ -146,18 +152,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.44761904761901405,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 4.744192172722236,
    "freq_check_err_hz": 0.09571428571425145,
-   "anchor_offset_decades": -2.003211120006489,
-   "anchor_residual_decades": -0.0032111200064890433,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.003030107447112,
+   "anchor_residual_decades": -0.0030301074471119627,
+   "digitised_red_vs_nasa_numeric_db": 0.10075590695299397,
    "m2_median_abs_db": 4.951993804327131,
    "m2_corr_log": 0.6424387874609483,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.12899875619292178,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11110Y",
@@ -169,18 +176,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.46428571428566556,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 2.6133574965789474,
    "freq_check_err_hz": 1.524285714285682,
-   "anchor_offset_decades": -2.006294076490127,
-   "anchor_residual_decades": -0.006294076490127143,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.006277535712176,
+   "anchor_residual_decades": -0.006277535712175819,
+   "digitised_red_vs_nasa_numeric_db": 0.13448361907880235,
    "m2_median_abs_db": 2.533091963412239,
    "m2_corr_log": 0.5129067194671981,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.13567060539464493,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11110Y",
@@ -192,18 +200,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.46428571428566556,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 8.13564952555178,
    "freq_check_err_hz": 0.6185714285714639,
-   "anchor_offset_decades": -3.0065452352471387,
-   "anchor_residual_decades": -0.006545235247138681,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -3.0058097588370734,
+   "anchor_residual_decades": -0.005809758837073353,
+   "digitised_red_vs_nasa_numeric_db": 0.14222971673394813,
    "m2_median_abs_db": 8.012722095569476,
    "m2_corr_log": 0.836006121603669,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.18599731701633482,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11110Y",
@@ -215,18 +224,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.2999999999999545,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 3.2785966532835458,
    "freq_check_err_hz": NaN,
-   "anchor_offset_decades": -2.0026507622649437,
-   "anchor_residual_decades": -0.0026507622649436513,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.0022557737066977,
+   "anchor_residual_decades": -0.002255773706697717,
+   "digitised_red_vs_nasa_numeric_db": 0.07430565484145113,
    "m2_median_abs_db": 3.262031339005871,
    "m2_corr_log": 0.7347728907870568,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.0870834253385877,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11110Y",
@@ -238,18 +248,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.2999999999999545,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 6.802960480172466,
    "freq_check_err_hz": 1.524285714285682,
-   "anchor_offset_decades": -2.0026087393102503,
-   "anchor_residual_decades": -0.0026087393102502965,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.001984065601349,
+   "anchor_residual_decades": -0.0019840656013490054,
+   "digitised_red_vs_nasa_numeric_db": 0.10110793458427914,
    "m2_median_abs_db": 6.790802103134861,
    "m2_corr_log": 0.6052920900305225,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.16498254674711887,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11110Y",
@@ -261,18 +272,19 @@
    "m1_n": 592,
    "calib_resid_px": 0.2999999999999545,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 4.2237913330981005,
    "freq_check_err_hz": 0.8099999999999667,
-   "anchor_offset_decades": -2.0026551894589892,
-   "anchor_residual_decades": -0.0026551894589892377,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.0024006030109325,
+   "anchor_residual_decades": -0.0024006030109324783,
+   "digitised_red_vs_nasa_numeric_db": 0.08014856292290595,
    "m2_median_abs_db": 4.189098271361655,
    "m2_corr_log": 0.6327732913895523,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.13270767501466496,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   },
   {
    "drive": "11110Y",
@@ -284,25 +296,29 @@
    "m1_n": 592,
    "calib_resid_px": 0.44761904761901405,
    "clipped_frac": 0.0,
+   "m1_imputed_median_abs_db": 5.080199508394344,
    "freq_check_err_hz": NaN,
-   "anchor_offset_decades": -2.0037239235310467,
-   "anchor_residual_decades": -0.003723923531046669,
+   "in_frozen_set": true,
+   "anchor_offset_decades": -2.003312475245544,
+   "anchor_residual_decades": -0.003312475245544011,
+   "digitised_red_vs_nasa_numeric_db": 0.08394569941356345,
    "m2_median_abs_db": 5.051180092925696,
    "m2_corr_log": 0.710759238841944,
-   "nasa_fem_vs_project_fem_median_abs_db": 0.061799248193887824,
    "axis_edges_hz": [
     9.999999999999964,
     400.3571428571429
    ],
-   "qa_pass": true,
-   "anchor_pass": true
+   "qa_pass": true
   }
  ],
  "aggregate": {
   "n_plots": 12,
+  "n_unseen": 11,
+  "n_errors": 0,
   "n_confirmatory_after_qa": 11,
   "n_excluded_qa": 0,
   "n_excluded_seen": 1,
+  "exclusion_fraction": 0.0,
   "M1_median_db": 4.744192172722236,
   "M1_ci95_db": [
    3.3904687861617484,
@@ -310,12 +326,18 @@
   ],
   "M1_corr_median": 0.6578110270746377,
   "M2_median_db": 4.951993804327131,
+  "M2_n": 11,
+  "M2_possible": 11,
   "M2_ci95_db": [
    3.3601513358952224,
    5.983375472342774
   ],
-  "M2_n": 11,
-  "nasa_fem_vs_project_fem_median_db": 0.13270767501466496,
-  "verdict": "SUPPORTED"
+  "verdict_primary": "SUPPORTED",
+  "M1_sensitivity": {
+   "clipped_imputed_db": 4.744192172722236,
+   "no_qa_exclusion_db": 4.744192172722236
+  },
+  "verdict": "SUPPORTED",
+  "verdict_reason": "primary rule"
  }
 }

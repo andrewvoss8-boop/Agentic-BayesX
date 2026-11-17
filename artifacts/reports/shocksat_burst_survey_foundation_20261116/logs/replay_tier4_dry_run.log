@@ -19,12 +19,16 @@
  ],
  "qa_pass_fraction": 1.0,
  "anchor_pass_fraction": 1.0,
+ "max_digitised_red_vs_numeric_db": 0.14222971673394813,
  "m2_vs_truth_note": "M2 here compares the synthetic test with the frozen FEM at measured damping; reported, not gated",
  "aggregate": {
   "n_plots": 12,
+  "n_unseen": 11,
+  "n_errors": 0,
   "n_confirmatory_after_qa": 11,
   "n_excluded_qa": 0,
   "n_excluded_seen": 1,
+  "exclusion_fraction": 0.0,
   "M1_median_db": 4.744192172722236,
   "M1_ci95_db": [
    3.3904687861617484,
@@ -32,12 +36,18 @@
   ],
   "M1_corr_median": 0.6578110270746377,
   "M2_median_db": 4.951993804327131,
+  "M2_n": 11,
+  "M2_possible": 11,
   "M2_ci95_db": [
    3.3601513358952224,
    5.983375472342774
   ],
-  "M2_n": 11,
-  "nasa_fem_vs_project_fem_median_db": 0.13270767501466496,
-  "verdict": "SUPPORTED"
+  "verdict_primary": "SUPPORTED",
+  "M1_sensitivity": {
+   "clipped_imputed_db": 4.744192172722236,
+   "no_qa_exclusion_db": 4.744192172722236
+  },
+  "verdict": "SUPPORTED",
+  "verdict_reason": "primary rule"
  }
 }

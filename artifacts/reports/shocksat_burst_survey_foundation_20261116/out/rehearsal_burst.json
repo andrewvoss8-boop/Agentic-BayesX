@@ -86,6 +86,10 @@
    "p95_abs_err_db": 12.54729255836778,
    "peak_err_db_median": 0.0683142894664143,
    "peak_err_db_min": -0.5531670832406035,
+   "peak_err_db_max": 0.54868462764728,
+   "peak_abs_err_db_median": 0.25692608185658156,
+   "n_peaks_scored": 27,
+   "peak_note": "drive point of the best-exciting stand-in shaker, +-0.6 Hz window; weakly excited modes give the large errors",
    "coherence_median": 0.9925458737865244,
    "coherence_p05": 0.7837721051722872,
    "cond_gxx_median": 2.727392614836566,
@@ -116,6 +120,10 @@
    "p95_abs_err_db": 9.840715012705045,
    "peak_err_db_median": 0.017622879650250313,
    "peak_err_db_min": -0.09317345502935238,
+   "peak_err_db_max": 0.29249524742228905,
+   "peak_abs_err_db_median": 0.04580042086323742,
+   "n_peaks_scored": 27,
+   "peak_note": "drive point of the best-exciting stand-in shaker, +-0.6 Hz window; weakly excited modes give the large errors",
    "coherence_median": 0.9988362419902646,
    "coherence_p05": 0.8396973056116886,
    "cond_gxx_median": 2.63537135812686,
@@ -146,6 +154,10 @@
    "p95_abs_err_db": 9.799018382691012,
    "peak_err_db_median": 0.004318317800272961,
    "peak_err_db_min": -0.02027625683457051,
+   "peak_err_db_max": 0.7212110039821782,
+   "peak_abs_err_db_median": 0.007324631025693398,
+   "n_peaks_scored": 27,
+   "peak_note": "drive point of the best-exciting stand-in shaker, +-0.6 Hz window; weakly excited modes give the large errors",
    "coherence_median": 0.999057818397977,
    "coherence_p05": 0.8577484586523975,
    "cond_gxx_median": 2.6568900490597915,
@@ -181,6 +193,10 @@
    "p95_abs_err_db": 9.847657302441375,
    "peak_err_db_median": 0.007371371591065438,
    "peak_err_db_min": -0.033172743575840144,
+   "peak_err_db_max": 0.962007558679632,
+   "peak_abs_err_db_median": 0.012956905888125748,
+   "n_peaks_scored": 27,
+   "peak_note": "drive point of the best-exciting stand-in shaker, +-0.6 Hz window; weakly excited modes give the large errors",
    "coherence_median": 0.9990588989686278,
    "coherence_p05": 0.8554780175776149,
    "cond_gxx_median": 2.6966803559292147,
@@ -278,5 +294,5 @@
    }
   }
  },
- "runtime_s": 4.63665246963501
+ "runtime_s": 4.894186735153198
 }
