@@ -1,0 +1,159 @@
+{
+ "base_url": "https://mediaex-server.larc.nasa.gov/shocksat/",
+ "archives": {
+  "FEM_and_CAD.zip": {
+   "url": "https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip",
+   "size_bytes_logged_2026_06_09": 2025227962,
+   "size_bytes_inferred_from_tail": 2025227962,
+   "slice_sha256": "c7224f90ab72fc87a16e3aab0314ec3e61d24c382d91ed7b927a789ad4b5ffb2",
+   "slice_sha256_matches_provenance": true,
+   "tail_4MiB_sha256": "3ca45dd90ad09d5754fa0611af819910b31c86aae915e7dec49c2549bff038d9",
+   "tail_4MiB_sha256_logged_2026_06_09": "3ca45dd90ad09d5754fa0611af819910b31c86aae915e7dec49c2549bff038d9",
+   "consistency": {
+    "n_entries": 717,
+    "n_files": 694,
+    "sum_usize": 2498175394,
+    "sum_csize": 2025052830,
+    "cd_offset": 2025121743,
+    "cd_size": 106197,
+    "total_size": 2025227962,
+    "zip64": false,
+    "eocd_plus_dir_reaches_eof": true,
+    "first_member_at_zero": true,
+    "max_span_surplus_bytes": 0,
+    "layout_violations": []
+   },
+   "june_full_zip_crosscheck": {
+    "entry_count_june": 717,
+    "entry_count_here": 717,
+    "total_uncompressed_june": 2498175394,
+    "total_uncompressed_here": 2498175394,
+    "entries_compared": 400,
+    "entries_mismatched": 0
+   }
+  },
+  "Test07_ImpactHammer_990x.zip": {
+   "url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test07_ImpactHammer_990x.zip",
+   "size_bytes_logged_2026_06_09": 593859074,
+   "size_bytes_inferred_from_tail": 593859074,
+   "slice_sha256": "826b9daa49b3ae88dde2dfc742bdf8c7d74322b28048e47234fa7bc963729e06",
+   "slice_sha256_matches_provenance": true,
+   "tail_4MiB_sha256": "b46ff03a83fd237d456ef59bdb9f193ea8572583a340a69b280ffbf502dad89e",
+   "tail_4MiB_sha256_logged_2026_06_09": "b46ff03a83fd237d456ef59bdb9f193ea8572583a340a69b280ffbf502dad89e",
+   "consistency": {
+    "n_entries": 462,
+    "n_files": 458,
+    "sum_usize": 1103942578,
+    "sum_csize": 593770748,
+    "cd_offset": 593811204,
+    "cd_size": 47848,
+    "total_size": 593859074,
+    "zip64": false,
+    "eocd_plus_dir_reaches_eof": true,
+    "first_member_at_zero": true,
+    "max_span_surplus_bytes": 0,
+    "layout_violations": []
+   },
+   "june_full_zip_crosscheck": {
+    "entry_count_june": 462,
+    "entry_count_here": 462,
+    "total_uncompressed_june": 1103942578,
+    "total_uncompressed_here": 1103942578,
+    "entries_compared": 400,
+    "entries_mismatched": 0
+   }
+  },
+  "Test08_ImpactHammer_990z.zip": {
+   "url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Impact/Test08_ImpactHammer_990z.zip",
+   "size_bytes_logged_2026_06_09": 656660250,
+   "size_bytes_inferred_from_tail": 656660250,
+   "slice_sha256": "0b36e10c1385f00fbd38d0d8e62ec33bfe96b904aed436b431015d8ed2c26eeb",
+   "slice_sha256_matches_provenance": true,
+   "tail_4MiB_sha256": "29aee8f99ea5516c8f439cf233193d08f473483ac400293186ae40022a0e2367",
+   "tail_4MiB_sha256_logged_2026_06_09": "29aee8f99ea5516c8f439cf233193d08f473483ac400293186ae40022a0e2367",
+   "consistency": {
+    "n_entries": 565,
+    "n_files": 560,
+    "sum_usize": 1373673723,
+    "sum_csize": 656552500,
+    "cd_offset": 656601844,
+    "cd_size": 58384,
+    "total_size": 656660250,
+    "zip64": false,
+    "eocd_plus_dir_reaches_eof": true,
+    "first_member_at_zero": true,
+    "max_span_surplus_bytes": 0,
+    "layout_violations": []
+   }
+  },
+  "Test_Data_Pyro_NSI_NSD.zip": {
+   "url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_NSI_NSD.zip",
+   "size_bytes_logged_2026_06_09": 1517694471,
+   "size_bytes_inferred_from_tail": 1517694471,
+   "slice_sha256": "4abdb6b9163155166d7f9b563ea9d27956ae735293a663e83480d38c31a8beb1",
+   "slice_sha256_matches_provenance": true,
+   "tail_4MiB_sha256": "dc2bb5ecbe4814acf62571f23373168c8e28fecb4bd852d9cc703a2bd6761829",
+   "tail_4MiB_sha256_logged_2026_06_09": "dc2bb5ecbe4814acf62571f23373168c8e28fecb4bd852d9cc703a2bd6761829",
+   "consistency": {
+    "n_entries": 387,
+    "n_files": 371,
+    "sum_usize": 2474002879,
+    "sum_csize": 1517610527,
+    "cd_offset": 1517642426,
+    "cd_size": 52023,
+    "total_size": 1517694471,
+    "zip64": false,
+    "eocd_plus_dir_reaches_eof": true,
+    "first_member_at_zero": true,
+    "max_span_surplus_bytes": 0,
+    "layout_violations": []
+   }
+  },
+  "Test_Data_Parametric.zip": {
+   "url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Parametric.zip",
+   "size_bytes_logged_2026_06_09": 3571448297,
+   "size_bytes_inferred_from_tail": 3571448297,
+   "slice_sha256": "2cbf6e0f50b69c2a9365f04789e8d63ea450d03021c69a64b0159f657a347c77",
+   "slice_sha256_matches_provenance": true,
+   "tail_4MiB_sha256": "510c7d40da01b99a8da00856dffb4195dc11ecb49d9c1a55823bc90d006da9d9",
+   "tail_4MiB_sha256_logged_2026_06_09": "510c7d40da01b99a8da00856dffb4195dc11ecb49d9c1a55823bc90d006da9d9",
+   "consistency": {
+    "n_entries": 21,
+    "n_files": 20,
+    "sum_usize": 7687805440,
+    "sum_csize": 3571443207,
+    "cd_offset": 3571445195,
+    "cd_size": 3080,
+    "total_size": 3571448297,
+    "zip64": false,
+    "eocd_plus_dir_reaches_eof": true,
+    "first_member_at_zero": true,
+    "max_span_surplus_bytes": 0,
+    "layout_violations": []
+   }
+  },
+  "Test_Data_Pyro_Frangible_Joints.zip": {
+   "url": "https://mediaex-server.larc.nasa.gov/shocksat/Test_Data_Pyro_Frangible_Joints.zip",
+   "size_bytes_logged_2026_06_09": 8382986243,
+   "size_bytes_inferred_from_tail": 8382986243,
+   "slice_sha256": "0e0a878c5e6105c4904f738ba322b51239f42fe2c57320bfc0d415008b745030",
+   "slice_sha256_matches_provenance": true,
+   "tail_4MiB_sha256": "3057788bc662a6e7a0585ac0c1b0e31db76a0c9c91bc9134003fb42ee9270b2b",
+   "tail_4MiB_sha256_logged_2026_06_09": "3057788bc662a6e7a0585ac0c1b0e31db76a0c9c91bc9134003fb42ee9270b2b",
+   "consistency": {
+    "n_entries": 251,
+    "n_files": 230,
+    "sum_usize": 10084409554,
+    "sum_csize": 8382922907,
+    "cd_offset": 8382947922,
+    "cd_size": 38223,
+    "total_size": 8382986243,
+    "zip64": true,
+    "eocd_plus_dir_reaches_eof": true,
+    "first_member_at_zero": true,
+    "max_span_surplus_bytes": 0,
+    "layout_violations": []
+   }
+  }
+ }
+}

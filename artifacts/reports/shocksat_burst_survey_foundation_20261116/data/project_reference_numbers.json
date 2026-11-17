@@ -1,0 +1,168 @@
+{
+ "source": {
+  "private_repo": "andrewvoss8-boop/bayesx-disk-backup-2026-10-02",
+  "branch": "claude/ecstatic-carson-c3e4f9",
+  "path": "recovered_text_extract/bayesX/Agentic BayesX/artifacts/reports/shocksat_beck_all_training_frf_capacity_20260723",
+  "per_curve_metrics_sha256": "70352265d8fccd97cdd6e56e4be79ce7aa143e2f5efee5c2e32e77c3aca61aa2",
+  "capacity_metrics_sha256": "17d2b45aea72fd9b836b7fbb3172a6ad6fc9d2e3a924ffe8d39760f7905ce0ba",
+  "checker_overall": "GREEN",
+  "checker_summary": null
+ },
+ "card_h": {
+  "definition": "per-curve median over 105 frequency lines (46.79-258.38 Hz, 2.03 Hz spacing) of |20 log10(measured/model)| dB; model has one fitted scalar gain per drive and zeta = 0.01; in-sample (resubstitution)",
+  "n_curves": 420,
+  "n_response_channels": 84,
+  "n_drive_conditions": 5,
+  "band_hz": [
+   46.79,
+   258.38
+  ],
+  "line_spacing_hz": 2.0345,
+  "n0_nominal_fem_db": {
+   "n": 420,
+   "min": 4.767642300465746,
+   "p05": 6.076036055253988,
+   "q25": 7.95548488645549,
+   "median": 10.021063663394077,
+   "q75": 14.033442399849541,
+   "max": 34.01704890744787
+  },
+  "b1_updated_fem_db": {
+   "n": 420,
+   "min": 4.334250580164597,
+   "p05": 6.527271737760234,
+   "q25": 8.330202127821163,
+   "median": 10.011476883293405,
+   "q75": 13.39134275454852,
+   "max": 27.967416358458177
+  },
+  "drives": {
+   "m_xpos_990x": {
+    "drive_xyz_in": [
+     9.0,
+     7.6,
+     0.6
+    ],
+    "drive_axis": "X",
+    "n_hits_used": 6
+   },
+   "m_zpos_990z": {
+    "drive_xyz_in": [
+     9.0,
+     7.8,
+     0.0
+    ],
+    "drive_axis": "Z",
+    "n_hits_used": 6
+   },
+   "m_xy_990xy": {
+    "drive_xyz_in": [
+     9.0,
+     9.0,
+     1.1
+    ],
+    "drive_axis": "XY",
+    "n_hits_used": 6
+   },
+   "m_zpos_900z": {
+    "drive_xyz_in": [
+     9.0,
+     0.0,
+     0.0
+    ],
+    "drive_axis": "Z",
+    "n_hits_used": 6
+   },
+   "m_ypos_990y": {
+    "drive_xyz_in": [
+     8.5,
+     9.0,
+     1.0
+    ],
+    "drive_axis": "Y",
+    "n_hits_used": 4
+   }
+  },
+  "near_drive": {
+   "sensor_to_drive_distance_in": {
+    "n": 420,
+    "min": 1.3606064824187776,
+    "p05": 3.039343679592577,
+    "q25": 14.449264687173532,
+    "median": 18.498737287988064,
+    "q75": 32.55430319097615,
+    "max": 57.96308227009671
+   },
+   "spearman_distance_vs_n0_error": 0.12618195924337114,
+   "n0_db_by_distance_in": {
+    "0-4": {
+     "n": 28,
+     "min": 5.057329188310761,
+     "p05": 5.304892965067195,
+     "q25": 7.039811987899544,
+     "median": 9.225060915278377,
+     "q75": 12.335828783492063,
+     "max": 21.174943539225573
+    },
+    "4-10": {
+     "n": 41,
+     "min": 5.856813737546975,
+     "p05": 6.39937539407741,
+     "q25": 8.02326727227722,
+     "median": 9.324619622603802,
+     "q75": 17.120256264580817,
+     "max": 34.01704890744787
+    },
+    "10-20": {
+     "n": 163,
+     "min": 4.767642300465746,
+     "p05": 5.799899624909337,
+     "q25": 7.517670458633974,
+     "median": 9.365840473531911,
+     "q75": 12.282418916011995,
+     "max": 29.37278773645241
+    },
+    "20-40": {
+     "n": 114,
+     "min": 5.6154336620433964,
+     "p05": 7.144498613871911,
+     "q25": 9.368608996184378,
+     "median": 11.532343459109791,
+     "q75": 16.792309684536654,
+     "max": 29.68785864046243
+    },
+    "40-80": {
+     "n": 74,
+     "min": 5.969655707072877,
+     "p05": 6.394262444832518,
+     "q25": 8.159136745757966,
+     "median": 10.079686294244734,
+     "q75": 12.946994392738933,
+     "max": 20.69083087351575
+    }
+   },
+   "n0_db_same_axis_as_drive": {
+    "n": 168,
+    "min": 4.767642300465746,
+    "p05": 5.936546597716303,
+    "q25": 7.6062969094925865,
+    "median": 9.44047614570334,
+    "q75": 12.047799394143274,
+    "max": 29.687210958621108
+   },
+   "n0_db_other_axes": {
+    "n": 252,
+    "min": 5.0432997144301215,
+    "p05": 6.185466425419971,
+    "q25": 8.233591493537324,
+    "median": 10.576121497277224,
+    "q75": 15.316558404934712,
+    "max": 34.01704890744787
+   },
+   "closest_sensor": {
+    "distance_in": 1.3606064824187776,
+    "n0_db_same_axis": 8.325037020842345
+   }
+  }
+ }
+}

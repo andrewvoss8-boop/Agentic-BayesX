@@ -1,6 +1,33 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
+- 2026-11-16 **CLOUD SESSION RESTART — HUMAN DIRECTION RECORDED; BURST-SURVEY FOUNDATION CHECK IN PROGRESS.**
+  CONTINUITY GAP (read first): this branch's notes stop at 2026-07-22. The local working copy was deleted on
+  2026-10-02 after a private backup. Work from 2026-07-23 to 2026-08-12 (Cards G, H, I, J, master direction
+  review, shape-field transfer, modal-test standards memo, failure-attribution handoff) was never pushed here.
+  Its text record was recovered on 2026-11-14 and is stored on branch `claude/ecstatic-carson-c3e4f9` of the
+  PRIVATE repo `andrewvoss8-boop/bayesx-disk-backup-2026-10-02` under `recovered_text_extract/`. The newer
+  `notes/memory.md`, `runs.md`, `todo.md`, `lessons-learned.md` and `docs/report/project_log.md` live there, not
+  here. Terminal state of that record (2026-08-12): held-out FRF amplitude science YELLOW; agent selection never
+  beat random; handoff recommended a new high-quality modal campaign before more modeling.
+  HUMAN DIRECTION (Andrew, 2026-11-16, verbatim intent): (1) save the recovered extract; (2) test whether
+  `https://mediaex-server.larc.nasa.gov/shocksat/FEM_and_CAD.zip` is reachable; once reachable, pull only the
+  `Correlation/` folder by byte range and parse the burst-random files, because that step decides whether the
+  plan's foundation is real; (3) continue advancing the research autonomously, without using disk on his
+  computer, storing results and documentation on GitHub or other cloud locations; do not stop to ask for
+  direction; keep going and self-review until a dead end or bottleneck; if impossible, explain.
+  RESULT OF (2): BLOCKED. The cloud environment's network policy refused the host
+  (`mediaex-server.larc.nasa.gov:443`, proxy 403 on CONNECT, 2026-11-16T21:17Z). Fix is Andrew's: add that
+  host under Allowed domains in the cloud environment's network settings. Not routed around.
+  LEAD ASSUMPTIONS (flagged, Andrew may overrule): (a) "the plan" was written in a separate Claude review that
+  is not in either repo; it is reconstructed from Andrew's messages as: use NASA's own burst-random modal
+  survey (time histories for runs 78, 99, 139 and one FRF file), the fixed-base run 139, and the bolt-torque
+  sweep as the higher-quality campaign the August handoff asked for. (b) Recovered private material stays in
+  the private repo; only new work and summary-level pointers are committed to this public repo.
+  NEXT ACTION: workspace `artifacts/reports/shocksat_burst_survey_foundation_20261116/` — verify from evidence
+  already in hand (June zip listings, NASA's correlation summary deck, test log) what the burst files are;
+  stage the byte-range fetch, parser and FRF estimator; pre-register the analysis; then stop at the host gate.
+  OPEN AMBIGUITIES: binary layout of `.ati`/`.afu` is unverified until bytes are in hand.
 - 2026-07-22 **CARD E CODEX UN-SUFFIXED EXECUTION COMPLETE — STOP_SYNTHETIC, CHECKER YELLOW.**
   Workspace `artifacts/reports/shocksat_structured_discrepancy_codex_20260722/`; replay `bash run_all.sh`.
   Immutable checker: **OVERALL YELLOW {GREEN:16, YELLOW:1, RED:0}**. S0 false positives 0/20;

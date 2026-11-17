@@ -1,0 +1,98 @@
+{
+ "source": {
+  "deck_member": "FEM/Correlation/Final_Summary_Documentation_101521_rev1.pptx",
+  "deck_bytes": 74518670,
+  "deck_crc32": "6a9a1c7f",
+  "deck_sha256": "04efa1660b9db0d0aa06d5d0b908f9ff85a3dbc254fe67c0eef241d8b2d4cae9"
+ },
+ "quotes": [
+  {
+   "slide": 1,
+   "key": "configuration_used",
+   "text": "Only utilized the vertical free-free single bungee supported test configuration for modal correlation.",
+   "found_verbatim": true
+  },
+  {
+   "slide": 1,
+   "key": "shaker_data_excluded",
+   "text": "Only utilized impact hammer test data because the blocks used for shaker testing had a significant mass loading impact on the modes and didn’t want to include them in the FEM.",
+   "found_verbatim": true
+  },
+  {
+   "slide": 12,
+   "key": "sensor_set_limit",
+   "text": "Correlation will struggle above 150 Hz and is unlikely to meet requirements above 200 Hz due to instrumentation placement.",
+   "found_verbatim": true
+  },
+  {
+   "slide": 16,
+   "key": "modal_bandwidth",
+   "text": "Comparison stopped at 400 Hz due to sample rate of data acquisition system setting for the modal tests",
+   "found_verbatim": true
+  },
+  {
+   "slide": 18,
+   "key": "impact_location_sensitivity",
+   "text": "the exact location of the impact in the frequency range above 150 Hz is critical",
+   "found_verbatim": true
+  },
+  {
+   "slide": 19,
+   "key": "impact_averaging",
+   "text": "The modal test always averages ~10 impacts together",
+   "found_verbatim": true
+  },
+  {
+   "slide": 46,
+   "key": "modes_from_two_runs",
+   "text": "Every test mode that was included in the correlation was able to be extracted from two different test runs",
+   "found_verbatim": true
+  },
+  {
+   "slide": 9,
+   "key": "bottom_box_unresolved",
+   "text": "The stainless-steel bottom box has been a very difficult part to correlate throughout this process and it is unknown why.",
+   "found_verbatim": true
+  }
+ ],
+ "final_correlation": {
+  "n_test_modes": 25,
+  "f_test_range_hz": [
+   54.19,
+   222.17
+  ],
+  "abs_pct_diff_median": 4.3,
+  "abs_pct_diff_max": 14.6,
+  "n_within_5pct": 16,
+  "xo_best_median_pct": 83,
+  "n_xo_ge_90": 7,
+  "n_xo_ge_80": 15,
+  "below_150hz": {
+   "n": 10,
+   "abs_pct_diff_median": 4.4,
+   "xo_best_median_pct": 93.5
+  },
+  "from_150hz": {
+   "n": 15,
+   "abs_pct_diff_median": 4.0,
+   "xo_best_median_pct": 79
+  },
+  "max_abs_gap_nasa_vs_recomputed_pct_diff": 0.04999999999999982
+ },
+ "pretest_sensor_set": {
+  "n_fem_modes": 24,
+  "pseudo_orthogonality_diag_median_below_150hz": 94.0,
+  "pseudo_orthogonality_diag_median_from_150hz": 59.5,
+  "pseudo_orthogonality_diag_min": 48,
+  "tam_freq_error_median_below_150hz": 1.62,
+  "tam_freq_error_median_from_150hz": 12.72,
+  "tam_freq_error_max": 18.04,
+  "fem_freqs_hz_header_check": []
+ },
+ "test_self_orthogonality": {
+  "n_modes": 33,
+  "offdiag_median_pct": 3.0,
+  "offdiag_max_pct": 69,
+  "n_offdiag_gt_10pct_pairs": 77
+ }
+}

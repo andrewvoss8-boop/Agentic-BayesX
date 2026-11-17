@@ -1,0 +1,112 @@
+{
+ "n_tests": 20,
+ "n_fail": 0,
+ "results": [
+  {
+   "test": "short tail asks for a specific number of bytes",
+   "pass": true,
+   "detail": "516"
+  },
+  {
+   "test": "directory parsed from the minimum tail",
+   "pass": true,
+   "detail": "(8, 8)"
+  },
+  {
+   "test": "names, CRC, sizes, offsets and methods match zipfile for all entries",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "non-ASCII name decoded",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "layout consistency has no violations",
+   "pass": true,
+   "detail": "{'n_entries': 8, 'n_files': 7, 'sum_usize': 1464761, 'sum_csize': 496033, 'cd_offset': 496419, 'cd_size': 494, 'total_size': 496935, 'zip64': False, 'eocd_plus_dir_reaches_eof': True, 'first_member_at_zero': True, 'max_span_surplus_bytes': 20, 'layout_violations': []}"
+  },
+  {
+   "test": "archive size inferred from the tail equals the true size",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "member spans tile [0, directory offset) exactly",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "probe reports size and range support",
+   "pass": true,
+   "detail": "{'url': 'http://127.0.0.1:56033/t.zip', 'final_url': 'http://127.0.0.1:56033/t.zip', 'status': 200, 'content_length': 496935, 'accept_ranges': 'bytes', 'etag': None, 'last_modified': None}"
+  },
+  {
+   "test": "remote directory equals local directory",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "all members fetched by byte range are byte-identical to the originals",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "plan merges adjacent members into one contiguous run",
+   "pass": true,
+   "detail": "[{'start': 32, 'end_exclusive': 72101, 'bytes': 72069}]"
+  },
+  {
+   "test": "server that ignores Range is refused",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "corrupted bytes fail the CRC check",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "streamed archive sets the data-descriptor flag on every member",
+   "pass": true,
+   "detail": "[8, 8]"
+  },
+  {
+   "test": "data-descriptor surplus is 12 to 24 bytes per member",
+   "pass": true,
+   "detail": "[16, 16]"
+  },
+  {
+   "test": "members of a data-descriptor archive fetch byte-identically",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "unreachable host returns exit code 2",
+   "pass": true,
+   "detail": "2"
+  },
+  {
+   "test": "PyPI: sha256 of the full wheel matches the index",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "test": "PyPI: directory read by Range equals zipfile on the full download",
+   "pass": true,
+   "detail": "(6, 6)"
+  },
+  {
+   "test": "PyPI: largest member fetched by Range is byte-identical",
+   "pass": true,
+   "detail": "six.py"
+  },
+  {
+   "network_target": "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl",
+   "member": "six.py",
+   "member_bytes": 34549,
+   "archive_bytes": 11053
+  }
+ ]
+}

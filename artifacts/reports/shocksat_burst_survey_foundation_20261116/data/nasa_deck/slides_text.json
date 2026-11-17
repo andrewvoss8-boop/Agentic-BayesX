@@ -1,0 +1,644 @@
+[
+ {
+  "slide": 1,
+  "texts": [
+   "Test Configuration Used for Modal Correlation",
+   "Only utilized the vertical free-free single bungee supported test configuration for modal correlation.  This was the simplest configuration tested. \nOnly utilized impact hammer test data because the blocks used for shaker testing had a significant mass loading impact on the modes and didn’t want to include them in the FEM."
+  ],
+  "n_pictures": 4
+ },
+ {
+  "slide": 2,
+  "texts": [
+   "Test Mode Shape Self-Orthogonality Report"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 3,
+  "texts": [
+   "Modal Correlation Work Summary (1 of 2)",
+   "Compared each individual component’s geometry in the FEM back to the CAD.  All fastener holes had grids placed at the center.\nAll individual component’s mass values were compared to “as-weighed” values and lined up very well prior to any correlation work being attempted.\nOrganized FEM into separate component include files to simplicity of use later.  Each component has specified numbering range for grids, elements, and properties.    \nReorganized mesh on most components to allow for easier modification of the FEM in the future.  \nLined up modal accelerometers to “actual” placement per pictures.  Created an accelerometer mass CONM2 for each accel to better capture mass loading impacts on panels.  Instrumentation is housed in a separate include file.  All sensors connected to FEM using CBUSH elements."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 4,
+  "texts": [
+   "Modal Correlation Work Summary (2 of 2)",
+   "All fastener joints modeled with RBE2 “spider” on either side with coincident CBUSH connection for compliance tunning.  \nModeled welds as extra shell elements placed at 45-degree angle to the joint corner to better capture weld stiffness.\nUsed CBUSH elements with in-line stiffness values to better capture bearing stiffness due to contact around the rectangular blocks.\nTried this approach elsewhere on the model (i.e angle brackets) but didn’t seem to be as sensitive so it was not kept.   \nDuring correlation, following attempts were made to improve correlation but not kept due to insignificant improvement.\nModeled top brackets and top circular plate as solid elements to allow for better joint connection between parts.\nModeled the bungee support system in attempt to capture mass attached to top plate.\nModeled welds with different element types including solids and RBE2."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 5,
+  "texts": [
+   "Fastener Joint Examples",
+   "All fasteners utilized RBE2 elements with dependent DOF defined 1-3 including grids around a circular area of where the fastener would have its most stiffness influence.\n\nA zero-length CBUSH element connected both sides of the joint. \n\nThe CBUSH K4 rotational stiffness was used to drive how much of the flange contact bearing stiffness should be accounted for.  \n\nThis is not the only way this joint could be defined; it was chosen based on preference and its successful implementation in previous FEM correlation efforts."
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 6,
+  "texts": [
+   "Extra Contact Stiffness",
+   "Even though extra CBUSH elements were initially placed at all the joints to help better account for the bearing stiffness between two components, they only proved to be sensitive in one area, the rectangular masses on the side of the top box.  \n\nA zero length CBUSH with only stiffness defined in the normal direction was used to accomplish this.\n\nIt was initially set to have a stiffness value several orders of magnitude lower than the in-line stiffness assigned to the fastener spring. \n\nIt was then allowed to be changed during the final correlation efforts to better “tune” in all modal frequencies."
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 7,
+  "texts": [
+   "Weld Modeling",
+   "Many different attempts to correctly capture the stiffness of these welds were done, and the approach that was settled on is in no way to be considered the “correct” approach.  \n\nThe welds on the bulkhead plates in each box were defined to be on both sides of the plate. Diagonal shell elements were placed on either side of the bulkhead plate and the height and width was set based on approximations from the pictures of the as-built hardware. \n\nThe welds on the corners of the box were only on the outside so much smaller in size when compared to the bulkhead welds.  A single diagonal shell element was used to connect the two plates and the thickness was allowed to be varied during the correlation.\n\nBoth sets of elements were assigned their own material property cards to allow for better tunning, but it did not prove to be a highly sensitive parameter."
+  ],
+  "n_pictures": 4
+ },
+ {
+  "slide": 8,
+  "texts": [
+   "Stainless Steel Bottom Box",
+   "Correlating the panel modes of this box should in theory be very straight forward,  but it proved to be the most challenging aspect of this correlation effort.  \nThe correlation of the aluminum box was well correlated once all the geometric updates were made to it.\nThroughout the entire correlation effort, consistently found the bulkhead modes to be too soft and the vertical panel modes to be too stiff and not separated in frequency.  \nThe directional separation of mode shapes in the box was also not able to be well duplicated in the FEM.\nThe only variables that impact these shapes are:\nMaterial properties (well understood)\nPanel Thickness (exact)\nJoint Influences of boundary\nWelded Corner\nBend Corner\nWelded Bulkhead\nTried several different modeling approaches for the welds without successfully finding a solution that correctly correlated both frequency and mode shape of all bottom box modes up to 200 Hz."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 9,
+  "texts": [
+   "Important Observations/Forward Work",
+   "The stainless-steel bottom box has been a very difficult part to correlate throughout this process and it is unknown why.  A large variety of things were attempted but nothing was found to solve all its modes.  By contrast, the aluminum top box correlated very well without much effort other than ensuring it was geometrically correct.   \n\nBoth the parameters mentioned below are very critical in driving modal frequencies, but there is no quick way to find the “optimized” values.  If more time was available, these could be better set based on pictures of hardware and trade studies.  \nThe height and width of the “weld” stiffener elements\nThe size of the RBE2 spider elements\n\nAnalytical Modes 12, 15 and 16 are all highly sensitive to the rotational stiffness of the CBUSH elements connecting the top brackets to the top circular plate.  The value was arrived at due to the best “compromise” for all those modes.  The contact stiffness of the rectangular blocks also comes into play for these modes."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 10,
+  "texts": [
+   "Final ShockSat Correlation",
+   "*Note: Blue lines are not significant for the purpose of this plot."
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 11,
+  "texts": [
+   "Final FEM Include Files"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 12,
+  "texts": [
+   "Test Instrumentation Assessment",
+   "Correlation will struggle above 150 Hz and is unlikely to meet requirements above 200 Hz due to instrumentation placement."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 13,
+  "texts": [
+   "Pretest Instrumentation Evaluation (1 of 2)",
+   "Generally, prefer to have greater than 80 on diagonal for good sensor placement to clearly capture each mode shape."
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 14,
+  "texts": [
+   "Pretest Instrumentation Evaluation (2 of 2)",
+   "Prefer to keep diagonals greater than 95 and off diagonals less than 10% in pretest.  \nPrefer to keep frequency difference less than 5% in pretest."
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 15,
+  "texts": [
+   "FRF Verification",
+   "See folders that contain all responses on ShockSat versus different impact locations for all the details."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 16,
+  "texts": [
+   "Test vs FEM – Drive Point Location – 11101X",
+   "Comparison stopped at 400 Hz due to sample rate of data acquisition system setting for the modal tests and the fact that the impact hammer tip used only adequately excited structure up to around 300 Hz.",
+   "Yellow Box: Test modes 14-15 were 9.5% and 7.4%  more flexible than FEM modes.  They also exhibit the frequency separation in the stainless-steel box that couldn’t be matched in the FEM.  \n\nPurple Box: Combination of six Test modes 18-23 are in the same frequency range as six FEM modes.  FEM never could exhibit frequency separation shown in test.\n\nGreen Box: Test mode 25 was 5% stiffer than FEM mode.\n\nNote: Did not visualize mode shapes above 225 Hz."
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 17,
+  "texts": [
+   "Test vs FEM – Drive Point Location – 11110Y+",
+   "Comparison stopped at 400 Hz due to sample rate of data acquisition system setting for the modal tests and the fact that the impact hammer tip used only adequately excited structure up to around 300 Hz."
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 18,
+  "texts": [
+   "Impact Location Variation",
+   "One thing to note is that the exact location of the impact in the frequency range above 150 Hz is critical to matching the frequency FRF’s between test and analysis.\n\nIn a typical modal test, the exact accuracy of the impact location is not usually critical because the purpose is global modes.  \n\nThe modes around 190-200 Hz are not global modes, they are localized to the bottom of the box. \n\nThe exact hammer location could either be on a node line or close to the peak displacement of the mode shape depending on which side of the response accelerometer the test engineers chose to impact.  All would technically meet the test requirement of impacting at 11101X.\n\nThe FEM predictions always place it perfectly at the response accel which could account for some of the magnitude mismatch between the FEM and test.",
+   "N1",
+   "N3",
+   "N2"
+  ],
+  "n_pictures": 3
+ },
+ {
+  "slide": 19,
+  "texts": [
+   "Impact Hammer Operator Variability",
+   "The modal test always averages ~10 impacts together to reduce the “operator” influence in not being able to exactly duplicate the hammer impact each time.   \n\nThe FRF’s of several single impacts were overlayed to understand the variability in the frequency range up to 400 Hz.\n\nThe variability due to the operator does not prove to a be big driver in the data up to 400 Hz."
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 20,
+  "texts": [
+   "Test vs FEM Mode Shape Animations"
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 21,
+  "texts": [
+   "Mode Shape #1",
+   "Test Shape – 54.19 Hz",
+   "Analysis Shape – 54.67 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 22,
+  "texts": [
+   "Mode Shape #2",
+   "Test Shape – 69.98 Hz",
+   "Analysis Shape – 73.51 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 23,
+  "texts": [
+   "Mode Shape #3",
+   "Test Shape – 74.98 Hz",
+   "Analysis Shape – 73.09 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 24,
+  "texts": [
+   "Mode Shape #4",
+   "Test Shape – 85.78 Hz",
+   "Analysis Shape – 87.94 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 25,
+  "texts": [
+   "Mode Shape #5",
+   "Test Shape – 107.03 Hz",
+   "Analysis Shape – 102.23 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 26,
+  "texts": [
+   "Mode Shape #6",
+   "Test Shape – 117.63 Hz",
+   "Analysis Shape – 108.17 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 27,
+  "texts": [
+   "Mode Shape #7",
+   "Test Shape – 118.53 Hz",
+   "Analysis Shape – 113.43 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 28,
+  "texts": [
+   "Mode Shape #8",
+   "Test Shape – 125.0 Hz",
+   "Analysis Shape – 116.9 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 29,
+  "texts": [
+   "Mode Shape #9",
+   "Test Shape – 137.2 Hz",
+   "Analysis Shape – 137.9 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 30,
+  "texts": [
+   "Mode Shape #10",
+   "Test Shape – 142.4 Hz",
+   "Analysis Shape – 154.5 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 31,
+  "texts": [
+   "Mode Shape #11",
+   "Test Shape – 151.2 Hz",
+   "Analysis Shape – 151.8 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 32,
+  "texts": [
+   "Mode Shape #12",
+   "Test Shape – 158.2 Hz",
+   "Analysis Shape – 135.9 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 33,
+  "texts": [
+   "Mode Shape #13",
+   "Test Shape – 165.9 Hz",
+   "Analysis Shape – 160.4 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 34,
+  "texts": [
+   "Mode Shape #14",
+   "Test Shape – 168.0 Hz",
+   "Analysis Shape – 183.4 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 35,
+  "texts": [
+   "Mode Shape #15",
+   "Test Shape – 172.3 Hz",
+   "Analysis Shape – 185.0 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 36,
+  "texts": [
+   "Mode Shape #16",
+   "Test Shape – 174.8 Hz",
+   "Analysis Shape – 164.5 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 37,
+  "texts": [
+   "Mode Shape #17",
+   "Test Shape – 184.4 Hz",
+   "Analysis Shape – 182.7 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 38,
+  "texts": [
+   "Mode Shape #18",
+   "Test Shape – 188.6 Hz",
+   "Analysis Shape – 189.3 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 39,
+  "texts": [
+   "Mode Shape #19",
+   "Test Shape – 190.2 Hz",
+   "Analysis Shape – 191.0 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 40,
+  "texts": [
+   "Mode Shape #20",
+   "Test Shape – 195.7 Hz",
+   "Analysis Shape – 192.6 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 41,
+  "texts": [
+   "Mode Shape #21",
+   "Test Shape – 197.8 Hz",
+   "Analysis Shape – 191.9 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 42,
+  "texts": [
+   "Mode Shape #22",
+   "Test Shape – 198.9 Hz",
+   "Analysis Shape – 193.5 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 43,
+  "texts": [
+   "Mode Shape #23",
+   "Test Shape – 203.0 Hz",
+   "Analysis Shape – 191.4 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 44,
+  "texts": [
+   "Mode Shape #24",
+   "Test Shape – 213.9 Hz",
+   "Analysis Shape – No Good Match"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 45,
+  "texts": [
+   "Mode Shape #25",
+   "Test Shape – 222.1 Hz",
+   "Analysis Shape – 211.1 Hz"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 46,
+  "texts": [
+   "Impact Hammer Modal Extraction Data Fits",
+   "Every test mode that was included in the correlation was able to be extracted from two different test runs to help verify the accuracy of the test shapes."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 47,
+  "texts": [
+   "Test Run 09 – 1101Z"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 48,
+  "texts": [
+   "Test Run 10 – 2101X+"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 49,
+  "texts": [
+   "Test Run 11 – 2104Y+"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 50,
+  "texts": [
+   "Test Run 12 – 11101X-"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 51,
+  "texts": [
+   "Test Run 13 – 11110Y+"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 52,
+  "texts": [
+   "Test Run 35 – 5201Z+"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 53,
+  "texts": [
+   "Test Run 36 – 9201Z+"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 54,
+  "texts": [
+   "Geometric FEM Mass Comparisons",
+   "These are the comparisons using the FEM in the Final_ShockSat_Geometric folder."
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 55,
+  "texts": [
+   "Modal Test Full FEM",
+   "127.89 lbs\nX-CG = 0 in\nY-CG = 0 in\nZ-CG = 28.01 in"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 56,
+  "texts": [
+   "Bottom_Box_100121.blk",
+   "Aligned all bolt hole locations with the grid pattern.  Made new diagonal elements at all weld locations to better capture weld stiffness. Added RBE2 spider at each bolt location.  The thickness of the plate used for this construction was measured at 0.118” Thick.",
+   "Material = 303 Stainless\nProperty  = 101 thru 106",
+   "59.5 lbs"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 57,
+  "texts": [
+   "Top_Box_100121.blk",
+   "Aligned all bolt hole locations with the grid pattern.  Made new diagonal elements at all weld locations to better capture weld stiffness. Added RBE2 spider at each bolt location.  The plate thickness was measured at 0.122” Thick.",
+   "31.16 lbs",
+   "Material = 6061 AL\nProperty  = 201 thru 206"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 58,
+  "texts": [
+   "Angle_Brackets_100121.blk",
+   "Material = 6061 AL\nProperty  = 301 and 302",
+   "Created thicker element to capture the corner radius stiffness, set it to 0.13.  Added diagonal row of elements along the corner to better capture stiffness of the radius of the angle bracket.  Then shifted nodes to center on bolt holes, added another two rows of elements so that there is at least a row of elements between RBE2 and edge.  Added RBE2 spider at each bolt location and deleted elements internal to that.",
+   "0.146 lbs/bracket"
+  ],
+  "n_pictures": 3
+ },
+ {
+  "slide": 59,
+  "texts": [
+   "Cross_Beam_100121.blk",
+   "Material = 6061 AL\nProperty  = 401",
+   "Shifted nodes to center on bolt holes, added one row of elements so that there is at least a row of elements between RBE2 and edge.  Added RBE2 spider at each bolt location and deleted elements internal to that.  Added triangular elements in center to better capture radius.",
+   "1.51 lbs"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 60,
+  "texts": [
+   "Rectangular_Plates_100121.blk",
+   "Material = 6061 AL\nProperty  = 501",
+   "Shifted nodes to center on bolt holes, added several rows of elements so that there is at least a row of elements between RBE2 and edge and the spacing stays relatively consistent.  Added RBE2 spider at each bolt location and deleted elements internal to that.  All parts made at GRC were coming in much lighter than the rest, made the plate thickness 0.777 instead of 0.75” which was verified by exact measurement",
+   "2.66 lbs/bracket"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 61,
+  "texts": [
+   "Top_Brackets_100121.blk",
+   "Material = 6061 AL\nProperty  = 601",
+   "2.31 lbs/bracket",
+   "Shifted nodes to center on bolt holes"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 62,
+  "texts": [
+   "Top_Circular_Plate_100121.blk",
+   "Material = 6061 AL\nProperty  = 701",
+   "All parts manufactured at GRC were coming in much lighter than the rest, switched plate thickness to 0.777” instead of 0.75” which was verified by exact measurement.",
+   "19.37 lbs"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 63,
+  "texts": [
+   "Validation Measurements Obtained",
+   "T = 0.122”",
+   "T = 0.117” - 0.119”",
+   "18”",
+   "17.9375”",
+   "17.9375”",
+   "T = 0.777”",
+   "T = 0.777”",
+   "11.875”",
+   "11.875”",
+   "T = 0.127” - 0.130”\n(Measurement Not Used)",
+   "These were the measurements that were taken during the correlation effort in attempt to track down any sources of error between the FEM and “as-built” configuration.",
+   "The one measurement that was not used in the FEM was the measurement of the corners because it didn’t seem to line up with what happens when a piece of sheet metal is bent.  The corners should be slightly thinner due to the “stretching” of the material in that process."
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 64,
+  "texts": [
+   "Modal Test Sensor Locations"
+  ],
+  "n_pictures": 0
+ },
+ {
+  "slide": 65,
+  "texts": [
+   "ASET,1101,3\nASET,1102,23ASET,1103,13ASET,1104,23ASET,1105,13"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 66,
+  "texts": [
+   "ASET,2101,123\nASET,2102,123\nASET,2103,123\nASET,2104,123"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 67,
+  "texts": [
+   "ASET,3101,123ASET,3102,123ASET,3103,123ASET,3104,123"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 68,
+  "texts": [
+   "ASET,3201,3ASET,3202,3ASET,3203,3ASET,3204,3ASET,3205,3"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 69,
+  "texts": [
+   "ASET,4101,1\nASET,4102,2\nASET,4103,1\nASET,4104,2",
+   "Arrows both going normal into the box"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 70,
+  "texts": [
+   "ASET,5101,123\nASET,5102,123\nASET,5103,123\nASET,5104,123"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 71,
+  "texts": [
+   "ASET,5201,123\nASET,5202,3\nASET,5203,3\nASET,5204,3\nASET,5205,3"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 72,
+  "texts": [
+   "ASET,6101,1ASET,6102,2ASET,6103,1ASET,6104,2",
+   "Arrows both going normal into the box"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 73,
+  "texts": [
+   "ASET,7101,3\nASET,7102,123ASET,7103,3\nASET,7104,123ASET,7105,3\nASET,7106,123ASET,7107,3\nASET,7108,123ASET,8101,3\nASET,8102,123ASET,8103,3\nASET,8104,123ASET,8105,3\nASET,8106,123ASET,8107,3\nASET,8108,123"
+  ],
+  "n_pictures": 4
+ },
+ {
+  "slide": 74,
+  "texts": [
+   "ASET,9101,123ASET,9102,123ASET,9103,123ASET,9104,123"
+  ],
+  "n_pictures": 2
+ },
+ {
+  "slide": 75,
+  "texts": [
+   "ASET,9201,123\nASET,9202,3\nASET,9203,3\nASET,9204,3\nASET,9205,3"
+  ],
+  "n_pictures": 1
+ },
+ {
+  "slide": 76,
+  "texts": [
+   "ASET,10101,1ASET,10102,2ASET,10103,1ASET,10104,2ASET,11101,1ASET,11102,1ASET,11103,2ASET,11104,2ASET,11105,2ASET,11106,1ASET,11107,1ASET,11108,1ASET,11109,2ASET,11110,2ASET,11111,2ASET,11112,1",
+   "Arrows both going normal into the box"
+  ],
+  "n_pictures": 2
+ }
+]
