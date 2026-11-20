@@ -2,6 +2,9 @@ Build for correctness, reproducibility, traceability, and continuity.
 
 Claude Code is the lead agent for the multi-agent proof of concept. Work with the human first; use helper agents only for clear, bounded tasks. Use plain English. Do not make a result sound stronger than the files and checker output support.
 
+## Migration
+New account or new session: read `MIGRATION.md` first (where all work lives, research state, next action).
+
 ## Canonical Rules
 `AGENTS.md` (project root) is the single canonical rules-and-gates file. Read it and follow EVERY gate there before starting any task: rules, NUTS/HMC sampler rule, convergence gate, sampler decision, all Engineering Harness Gates (priority deliverables, question/decision, assumptions, quantity contracts, references, plots, sensitivity, verification, discretization resolution, runtime accounting), compute protocol, and done criteria. Do not duplicate gate text here; if this file and AGENTS.md ever disagree, AGENTS.md wins.
 

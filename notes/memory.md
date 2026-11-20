@@ -1,6 +1,7 @@
 # Memory
 
 ## CURRENT STATE (lead working state — keep short; update before risky steps and after each human decision)
+- 2026-11-20 **MIGRATION TO A NEW CLAUDE ACCOUNT.** Andrew asked for all findings documented for migration: see `MIGRATION.md` (repo root). Next action unchanged: allow the NASA host, then `bash gated_run.sh`.
 - 2026-11-17 **BURST-SURVEY FOUNDATION CHECK STAGED TO THE NETWORK GATE — CHECKER OVERALL YELLOW 14G/4Y/0R (after independent review, D11).**
   Prereg is HASH-LOCKED (`prereg_lock.json`); M2 anchors to NASA numeric .pch FEM, SUPPORTED needs M1 and M2 <= 6 dB.
   Workspace `artifacts/reports/shocksat_burst_survey_foundation_20261116/` (`packet.md`; replay `bash run_all.sh`).
